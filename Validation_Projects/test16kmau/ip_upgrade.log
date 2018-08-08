@@ -1,0 +1,195 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jul 31 00:49:42 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_clk_wiz_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_rst_clk_wiz_100M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jul 31 00:49:42 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clk_wiz_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clk_wiz_0 from xilinx.com:ip:clk_wiz:5.4 (Rev. 1) to xilinx.com:ip:clk_wiz:6.0 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jul 31 00:49:41 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_acc16kmau_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_acc16kmau_0_0 (xilinx.com:hls:acc16kmau:1.0) from (Rev. 1806070056) to (Rev. 1807310048)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_acc16kmau_0_0'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 'alloc_1_addr_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jul 31 00:49:41 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_KWTA16k_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_KWTA16k_0_0 (xilinx.com:hls:Ext_KWTA16k:1.0) from (Rev. 1806070246) to (Rev. 1807310046)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jul 31 00:49:41 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_HTA_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_HTA_0_0 (xilinx.com:hls:Ext_HTA:1.0) from (Rev. 1806071837) to (Rev. 1807302016)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun  7 19:36:21 2018
+| Host         : eelty running 64-bit Ubuntu 16.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_HTA_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_HTA_0_0 (xilinx.com:hls:Ext_HTA:1.0) from (Rev. 1804292155) to (Rev. 1806071837)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun  7 02:48:06 2018
+| Host         : eelty running 64-bit Ubuntu 16.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_KWTA16k_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_KWTA16k_0_0 (xilinx.com:hls:Ext_KWTA16k:1.0) from (Rev. 1806070220) to (Rev. 1806070246)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun  7 02:23:12 2018
+| Host         : eelty running 64-bit Ubuntu 16.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_KWTA16k_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_KWTA16k_0_0 (xilinx.com:hls:Ext_KWTA16k:1.0) from (Rev. 1806070110) to (Rev. 1806070220)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun  7 01:12:18 2018
+| Host         : eelty running 64-bit Ubuntu 16.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Ext_KWTA16k_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Ext_KWTA16k_0_0 (xilinx.com:hls:Ext_KWTA16k:1.0) from (Rev. 1806070051) to (Rev. 1806070110)
+

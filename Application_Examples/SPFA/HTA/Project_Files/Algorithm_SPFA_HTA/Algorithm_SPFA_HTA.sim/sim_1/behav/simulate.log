@@ -1,0 +1,11 @@
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module design_1_wrapper.design_1_i.blk_mem_gen_0.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module design_1_wrapper.design_1_i.blk_mem_gen_1.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module design_1_wrapper.design_1_i.blk_mem_gen_0.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module design_1_wrapper.design_1_i.blk_mem_gen_1.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance design_1_wrapper.design_1_i.clk_wiz.inst.mmcm_adv_inst 

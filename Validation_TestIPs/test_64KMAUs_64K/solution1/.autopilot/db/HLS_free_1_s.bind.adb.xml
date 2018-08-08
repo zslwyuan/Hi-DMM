@@ -1,0 +1,259 @@
+<stg><name>HLS_free<1></name>
+
+
+<trans_list>
+
+<trans id="14" from="1" to="2">
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="14" op_0_bw="14" op_1_bw="14">
+<![CDATA[
+:0  %free_size_read = call i14 @_ssdm_op_Read.ap_auto.i14(i14 %free_size)
+
+]]></Node>
+<StgValue><ssdm name="free_size_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+:1  %free_target_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %free_target)
+
+]]></Node>
+<StgValue><ssdm name="free_target_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="32" op_0_bw="14">
+<![CDATA[
+:2  %free_size_cast = zext i14 %free_size_read to i32
+
+]]></Node>
+<StgValue><ssdm name="free_size_cast"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="32" op_0_bw="16">
+<![CDATA[
+:3  %free_target_cast = zext i16 %free_target_read to i32
+
+]]></Node>
+<StgValue><ssdm name="free_target_cast"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+:5  call void @_ssdm_op_Write.ap_auto.volatile.i8P(i8* %allocator_cmd, i8 3)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:7  call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_size, i32 %free_size_cast)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:8  call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_free_targe, i32 %free_target_cast)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="10" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+:4  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="11" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+:6  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:9  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0">
+<![CDATA[
+:10  ret void
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="15" name="free_target" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="free_target"/></StgValue>
+</port>
+<port id="16" name="free_size" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="free_size"/></StgValue>
+</port>
+<port id="17" name="allocator_size" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="allocator_size"/></StgValue>
+</port>
+<port id="18" name="allocator_free_targe" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="allocator_free_targe"/></StgValue>
+</port>
+<port id="19" name="allocator_cmd" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="allocator_cmd"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="21" from="_ssdm_op_Read.ap_auto.i14" to="free_size_read" fromId="20" toId="3">
+</dataflow>
+<dataflow id="22" from="free_size" to="free_size_read" fromId="16" toId="3">
+</dataflow>
+<dataflow id="24" from="_ssdm_op_Read.ap_auto.i16" to="free_target_read" fromId="23" toId="4">
+</dataflow>
+<dataflow id="25" from="free_target" to="free_target_read" fromId="15" toId="4">
+</dataflow>
+<dataflow id="26" from="free_size_read" to="free_size_cast" fromId="3" toId="5">
+</dataflow>
+<dataflow id="27" from="free_target_read" to="free_target_cast" fromId="4" toId="6">
+</dataflow>
+<dataflow id="29" from="_ssdm_op_Write.ap_auto.volatile.i8P" to="StgValue_7" fromId="28" toId="7">
+</dataflow>
+<dataflow id="30" from="allocator_cmd" to="StgValue_7" fromId="19" toId="7">
+</dataflow>
+<dataflow id="32" from="StgValue_31" to="StgValue_7" fromId="31" toId="7">
+</dataflow>
+<dataflow id="34" from="_ssdm_op_Write.ap_auto.volatile.i32P" to="StgValue_8" fromId="33" toId="8">
+</dataflow>
+<dataflow id="35" from="allocator_size" to="StgValue_8" fromId="17" toId="8">
+</dataflow>
+<dataflow id="36" from="free_size_cast" to="StgValue_8" fromId="5" toId="8">
+</dataflow>
+<dataflow id="37" from="_ssdm_op_Write.ap_auto.volatile.i32P" to="StgValue_9" fromId="33" toId="9">
+</dataflow>
+<dataflow id="38" from="allocator_free_targe" to="StgValue_9" fromId="18" toId="9">
+</dataflow>
+<dataflow id="39" from="free_target_cast" to="StgValue_9" fromId="6" toId="9">
+</dataflow>
+<dataflow id="41" from="_ssdm_op_SpecProtocol" to="StgValue_10" fromId="40" toId="10">
+</dataflow>
+<dataflow id="43" from="StgValue_42" to="StgValue_10" fromId="42" toId="10">
+</dataflow>
+<dataflow id="45" from="p_str1" to="StgValue_10" fromId="44" toId="10">
+</dataflow>
+<dataflow id="46" from="_ssdm_op_SpecProtocol" to="StgValue_11" fromId="40" toId="11">
+</dataflow>
+<dataflow id="47" from="StgValue_42" to="StgValue_11" fromId="42" toId="11">
+</dataflow>
+<dataflow id="48" from="p_str1" to="StgValue_11" fromId="44" toId="11">
+</dataflow>
+<dataflow id="50" from="_ssdm_op_Wait" to="StgValue_12" fromId="49" toId="12">
+</dataflow>
+<dataflow id="51" from="StgValue_42" to="StgValue_12" fromId="42" toId="12">
+</dataflow>
+</dataflows>
+
+
+</stg>

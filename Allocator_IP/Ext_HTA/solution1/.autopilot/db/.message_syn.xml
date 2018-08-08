@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;Ext_HTA/solution1/top.cc&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 16939 ; free virtual = 32062"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 16939 ; free virtual = 32062"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_HTA/solution1/top.cc:74)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_HTA/solution1/top.cc:73)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_HTA/solution1/top.cc:72)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_HTA/solution1/top.cc:71)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 504.590 ; gain = 129.027 ; free physical = 16907 ; free virtual = 32033"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="WARNING" prefix="[SYNCHK 200-23]" key="SYNCHK_VAR_INDEX_RANGE_359" tag="" content="Ext_HTA/solution1/top.cc:246: variable-indexed range selection may cause suboptimal QoR."/>
+	<Message severity="INFO" prefix="[SYNCHK 200-10]" key="SYNCHK_SYNCHK_SUMMARY_377" tag="" content="0 error(s), 1 warning(s)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 504.590 ; gain = 129.027 ; free physical = 16893 ; free virtual = 32021"/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_325" tag="" content="Unrolling loop &apos;Loop-3&apos; (Ext_HTA/solution1/top.cc:335) in function &apos;Ext_HTA&apos; completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;mask.V&apos;  in dimension 1 completely."/>
+	<Message severity="WARNING" prefix="[XFORM 203-105]" key="XFORM_PARTITION_IGNORE_113" tag="SDX_ARRAY" content="Ignore complete array partition directive on &apos;buddy_tree.V&apos;  in dimension 1: conflict with memory core assignment directive.
+."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_HTA/solution1/top.cc:399:9) to (Ext_HTA/solution1/top.cc:404:13) in function &apos;Ext_HTA&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_HTA/solution1/top.cc:428:29) to (Ext_HTA/solution1/top.cc:443:33) in function &apos;Ext_HTA&apos;... converting 7 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_HTA/solution1/top.cc:178:26) to (Ext_HTA/solution1/top.cc:205:8) in function &apos;Ext_HTA&apos;... converting 7 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_HTA/solution1/top.cc:208:32) in function &apos;Ext_HTA&apos;... converting 4 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.10i64P.i4&apos; into &apos;Ext_HTA&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.10i64P.i4&apos; into &apos;Ext_HTA&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;log_2_64bit&apos; (Ext_HTA/solution1/top.cc:42:23)...3 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 504.590 ; gain = 129.027 ; free physical = 16864 ; free virtual = 31995"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 568.414 ; gain = 192.852 ; free physical = 16844 ; free virtual = 31975"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;Ext_HTA&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;log_2_64bit&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 19.29 seconds; current allocated memory: 138.039 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.04 seconds; current allocated memory: 138.377 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Ext_HTA&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="WARNING" prefix="[SCHED 204-32]" key="SCHED_PIPELINE_IN_PROTOCOL_23" tag="SCHEDULE" content="Invalid protocol: Cannot embed pipeline region inside protocol &apos;io_section8&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 3&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-64]" key="SCHED_EXIT_TEST_TOO_LATE_49" tag="SDX_LOOP,SCHEDULE" content="Unable to schedule the loop exit test (&apos;icmp&apos; operation (&apos;tmp_52&apos;, Ext_HTA/solution1/top.cc:404)) in the first pipeline iteration (II = 1 cycles)."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 2, Depth = 2."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 5&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.41 seconds; current allocated memory: 140.160 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[HLS 200-434]" key="HLS 200-434" tag="SDX" content="Only 2 loops out of a total 6 loops have been pipelined in this design."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_690" tag="" content="Starting global binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.51 seconds; current allocated memory: 142.112 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;log_2_64bit&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;log_2_64bit&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.43 seconds; current allocated memory: 142.830 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Ext_HTA&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_HTA/alloc_layer_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_HTA/alloc_target_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_HTA/alloc_allocated_addr_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_HTA/alloc_cmd&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;Ext_HTA&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_buddy_tree_V&apos; to &apos;Ext_HTA_buddy_trebkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_group_tree_V&apos; to &apos;Ext_HTA_group_trecud&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_group_tree_mask_V&apos; to &apos;Ext_HTA_group_tredEe&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_shift_constant_V&apos; to &apos;Ext_HTA_shift_coneOg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_addr_tree_map_V&apos; to &apos;Ext_HTA_addr_treefYi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_HTA_mux_164_64_1_1&apos; to &apos;Ext_HTA_mux_164_6g8j&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Ext_HTA_mux_164_6g8j&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Ext_HTA&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.37 seconds; current allocated memory: 147.935 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;Ext_HTA_buddy_trebkb_ram (RAM_2P_LUTRAM)&apos; using distributed RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;Ext_HTA_group_trecud_ram (RAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_HTA_group_tredEe_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_HTA_shift_coneOg_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;Ext_HTA_addr_treefYi_ram (RAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_HTA_mark_mask_V_rom&apos; using auto ROMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 573.762 ; gain = 198.199 ; free physical = 16798 ; free virtual = 31938"/>
+	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for Ext_HTA."/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for Ext_HTA."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for Ext_HTA."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 22.94 seconds; peak allocated memory: 147.935 MB."/>
+</Messages>

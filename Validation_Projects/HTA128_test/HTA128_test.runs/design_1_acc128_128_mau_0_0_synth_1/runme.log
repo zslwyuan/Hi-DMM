@@ -1,0 +1,451 @@
+
+*** Running vivado
+    with args -log design_1_acc128_128_mau_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_acc128_128_mau_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_acc128_128_mau_0_0.tcl -notrace
+Command: synth_design -top design_1_acc128_128_mau_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12668 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1351.570 ; gain = 80.887 ; free physical = 10512 ; free virtual = 27616
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_acc128_128_mau_0_0' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ip/design_1_acc128_128_mau_0_0/synth/design_1_acc128_128_mau_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'acc128_128_mau' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_state3 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state4 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau.v:70]
+INFO: [Synth 8-6157] synthesizing module 'acc128_128_mau_rebkb' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:43]
+	Parameter DataWidth bound to: 2 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc128_128_mau_rebkb_rom' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:9]
+	Parameter DWIDTH bound to: 2 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 1280 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './acc128_128_mau_rebkb_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'acc128_128_mau_rebkb_rom' (1#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'acc128_128_mau_rebkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:43]
+INFO: [Synth 8-6157] synthesizing module 'acc128_128_mau_recud' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:43]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc128_128_mau_recud_rom' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:9]
+	Parameter DWIDTH bound to: 7 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 1280 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './acc128_128_mau_recud_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'acc128_128_mau_recud_rom' (3#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'acc128_128_mau_recud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:43]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_1_s' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_malloc_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_malloc_1_s.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_1_s' (5#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_malloc_1_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HLS_free_1_s' [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_free_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_free_1_s.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_free_1_s' (6#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/HLS_free_1_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'acc128_128_mau' (7#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_acc128_128_mau_0_0' (8#1) [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ip/design_1_acc128_128_mau_0_0/synth/design_1_acc128_128_mau_0_0.v:58]
+WARNING: [Synth 8-3331] design acc128_128_mau_recud has unconnected port reset
+WARNING: [Synth 8-3331] design acc128_128_mau_rebkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1396.195 ; gain = 125.512 ; free physical = 10467 ; free virtual = 27571
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1396.195 ; gain = 125.512 ; free physical = 10442 ; free virtual = 27546
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1396.195 ; gain = 125.512 ; free physical = 10441 ; free virtual = 27546
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ip/design_1_acc128_128_mau_0_0/constraints/acc128_128_mau_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ip/design_1_acc128_128_mau_0_0/constraints/acc128_128_mau_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/design_1_acc128_128_mau_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/design_1_acc128_128_mau_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1755.438 ; gain = 1.000 ; free physical = 10078 ; free virtual = 27239
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 10179 ; free virtual = 27305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 10179 ; free virtual = 27305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/design_1_acc128_128_mau_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 10169 ; free virtual = 27295
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_rebkb.v:33]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau_recud.v:33]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_4_fu_131_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_3_fu_125_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_1_fu_119_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:40 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 10207 ; free virtual = 27316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module acc128_128_mau_rebkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module acc128_128_mau_recud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module HLS_malloc_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_free_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module acc128_128_mau 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element i_reg_70_reg_rep was removed.  [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau.v:228]
+WARNING: [Synth 8-6014] Unused sequential element i_reg_70_reg_rep was removed.  [/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ipshared/17d5/hdl/verilog/acc128_128_mau.v:228]
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[31]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[30]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[29]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[28]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[27]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[26]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[25]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[24]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[23]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[22]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[21]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[20]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[19]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[18]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[17]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[16]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[15]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[14]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[13]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[12]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_reg_70_reg[11]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[31]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[30]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[29]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[28]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[27]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[26]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[25]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[24]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[23]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[22]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[21]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[20]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[19]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[18]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[17]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[16]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[15]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[14]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[13]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[12]) is unused and will be removed from module acc128_128_mau.
+WARNING: [Synth 8-3332] Sequential element (i_1_reg_167_reg[11]) is unused and will be removed from module acc128_128_mau.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 10160 ; free virtual = 27271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------------+---------------+----------------+
+|Module Name              | RTL Object       | Depth x Width | Implemented As | 
++-------------------------+------------------+---------------+----------------+
+|acc128_128_mau_rebkb_rom | q0_reg           | 2048x2        | Block RAM      | 
+|acc128_128_mau_recud_rom | q0_reg           | 2048x7        | Block RAM      | 
+|acc128_128_mau           | i_reg_70_reg_rep | 2048x2        | Block RAM      | 
+|acc128_128_mau           | i_reg_70_reg_rep | 2048x7        | Block RAM      | 
++-------------------------+------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_2_0/i_reg_70_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_2_1/i_reg_70_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9983 ; free virtual = 27099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9972 ; free virtual = 27088
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9970 ; free virtual = 27086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9965 ; free virtual = 27081
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9965 ; free virtual = 27081
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9969 ; free virtual = 27085
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9962 ; free virtual = 27078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9969 ; free virtual = 27085
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9969 ; free virtual = 27085
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |     3|
+|2     |LUT1       |     1|
+|3     |LUT2       |     7|
+|4     |LUT3       |     2|
+|5     |LUT4       |     9|
+|6     |LUT5       |    13|
+|7     |LUT6       |    40|
+|8     |RAMB18E1_4 |     1|
+|9     |RAMB18E1_5 |     1|
+|10    |FDRE       |   110|
+|11    |FDSE       |     3|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-----------------------------+---------------+------+
+|      |Instance                     |Module         |Cells |
++------+-----------------------------+---------------+------+
+|1     |top                          |               |   190|
+|2     |  inst                       |acc128_128_mau |   190|
+|3     |    grp_HLS_free_1_s_fu_95   |HLS_free_1_s   |    36|
+|4     |    grp_HLS_malloc_1_s_fu_81 |HLS_malloc_1_s |    68|
++------+-----------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 9967 ; free virtual = 27084
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1755.438 ; gain = 125.512 ; free physical = 9994 ; free virtual = 27111
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.445 ; gain = 484.754 ; free physical = 9993 ; free virtual = 27110
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:55 . Memory (MB): peak = 1755.445 ; gain = 496.328 ; free physical = 10036 ; free virtual = 27152
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/design_1_acc128_128_mau_0_0_synth_1/design_1_acc128_128_mau_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.srcs/sources_1/bd/design_1/ip/design_1_acc128_128_mau_0_0/design_1_acc128_128_mau_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/design_1_acc128_128_mau_0_0_synth_1/design_1_acc128_128_mau_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_acc128_128_mau_0_0_utilization_synth.rpt -pb design_1_acc128_128_mau_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1779.449 ; gain = 0.000 ; free physical = 10058 ; free virtual = 27174
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 30 01:27:18 2018...

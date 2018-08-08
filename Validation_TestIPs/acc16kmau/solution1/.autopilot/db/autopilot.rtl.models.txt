@@ -1,0 +1,6 @@
+acc16kmau_req_cmd
+acc16kmau_req_list
+acc16kmau_req_size
+HLS_free_1_s
+HLS_malloc_1_s
+acc16kmau

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="com.autoesl.autopilot.project" name="test2048mau2048" top="acc2048_2048_mau">
+  <files>
+    <file name="test2048mau2048/solution1/top.cc" sc="0" tb="false" cflags=""/>
+  </files>
+  <solutions>
+    <solution name="solution1" status="active"/>
+  </solutions>
+  <includePaths/>
+  <libraryPaths/>
+  <Simulation>
+    <SimFlow name="csim"/>
+  </Simulation>
+</project>

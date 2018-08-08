@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1532849680000">
+  <ports id="1" name="alloc_1_size" type="PortType" originalName="alloc_1.size" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="2" name="alloc_1_addr" type="PortType" originalName="alloc_1.addr" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="alloc_1_free_target" type="PortType" originalName="alloc_1.free_target" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="4" name="alloc_1_cmd" type="PortType" originalName="alloc_1.cmd" bitwidth="8" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="52" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="53" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="64" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="67" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="69" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="71" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="74" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="75" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="76" source_obj="//@ports.1" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="77" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="78" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="79" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="81" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="82" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="85" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="90" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="91" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="92" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="93" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="97" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="100" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="105" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="144" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.5"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges source_obj="//@blocks.4/@node_objs.1" sink_obj="//@ports.4"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <blocks id="16" name="block_16" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="r" originalName="r" bitwidth="32" opcode="alloca" m_display="0">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="node_15" lineNumber="68" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" m_display="0" m_delay="1.76">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="68" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>68</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="26" name="._crit_edge" type="BlockType">
+    <controlInputObjs>block_16</controlInputObjs>
+    <controlInputObjs>._crit_edge.backedge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_43</controlOutputObjs>
+    <controlOutputObjs>block_29</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i" originalName="i" bitwidth="32" opcode="phi" nodeLabel="1.0" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <controlInputObjs>block_16</controlInputObjs>
+      <controlInputObjs>._crit_edge.backedge</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="cmd" lineNumber="70" originalName="cmd" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" bitwidth="2" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="70" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="size" lineNumber="71" originalName="size" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" bitwidth="9" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="71" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_1" lineNumber="72" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="tmp_1_fu_119_p2" contextFuncName="acc512_512_mau" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.95">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="72" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="i_1" lineNumber="68" originalName="i" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="i_1_fu_113_p2" contextFuncName="acc512_512_mau" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.55">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="68" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="node_25" lineNumber="72" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" nodeLabel="2.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="72" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_29</controlInputObjs>
+      <controlInputObjs>block_43</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
+      <validLinenumbers>72</validLinenumbers>
+      <validLinenumbers>68</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="29" name="block_29" type="BlockType">
+    <controlInputObjs>._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_39</controlOutputObjs>
+    <controlOutputObjs>block_32</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_3" lineNumber="76" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="tmp_3_fu_125_p2" contextFuncName="acc512_512_mau" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.95">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="76" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="node_28" lineNumber="76" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" nodeLabel="2.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="76" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_32</controlInputObjs>
+      <controlInputObjs>block_39</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>76</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="32" name="block_32" type="BlockType">
+    <controlInputObjs>block_29</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_35</controlOutputObjs>
+    <controlOutputObjs>._crit_edge.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_4" lineNumber="81" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="tmp_4_fu_131_p2" contextFuncName="acc512_512_mau" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.95">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="81" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="node_31" lineNumber="81" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" nodeLabel="2.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="81" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge.backedge</controlInputObjs>
+      <controlInputObjs>block_35</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>81</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="35" name="block_35" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="r_load" lineNumber="83" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="83" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="node_34" lineNumber="83" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="ret" nodeLabel="2.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="83" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>83</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="39" name="block_39" type="BlockType">
+    <controlInputObjs>block_29</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="node_36" lineNumber="79" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="grp_HLS_free_1_s_fu_95" contextFuncName="acc512_512_mau" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="79" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>alloc_1_size</dataOutputObjs>
+      <dataOutputObjs>alloc_1_free_target</dataOutputObjs>
+      <dataOutputObjs>alloc_1_cmd</dataOutputObjs>
+      <constName>HLS_free_1_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="node_37" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.76">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="node_38" lineNumber="80" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" nodeLabel="3.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="80" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <controlInputObjs>._crit_edge.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>79</validLinenumbers>
+      <validLinenumbers>80</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name="block_43" type="BlockType">
+    <controlInputObjs>._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="r_1" lineNumber="74" originalName="r" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." rtlName="grp_HLS_malloc_1_s_fu_81" contextFuncName="acc512_512_mau" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="74" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>alloc_1_addr</dataInputObjs>
+      <dataOutputObjs>alloc_1_size</dataOutputObjs>
+      <dataOutputObjs>alloc_1_free_target</dataOutputObjs>
+      <dataOutputObjs>alloc_1_cmd</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>HLS_malloc_1_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="node_41" lineNumber="74" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.76">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="74" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="node_42" lineNumber="75" fileName="HTA512_test/solution1/top.cc" fileDirectory=".." contextFuncName="acc512_512_mau" opcode="br" nodeLabel="3.0" m_display="0">
+      <inlineStackInfo fileName="HTA512_test/solution1/top.cc" linenumber="75" fileDirectory="/home/tingyuan/Temporary/vivado-outputs" functionName="acc512_512_mau"/>
+      <controlInputObjs>._crit_edge.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HTA512_test/solution1/top.cc">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>75</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="45" name="._crit_edge.backedge" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlInputObjs>block_39</controlInputObjs>
+    <controlInputObjs>block_43</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="node_44" opcode="br" nodeLabel="3.0" m_display="0">
+      <controlInputObjs>._crit_edge</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="tmp_1_reg_178">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="size_reg_172">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="r_reg_150">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="req_cmd_addr_reg_157">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="req_list_addr_reg_162">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_182">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_70">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="i_1_reg_167">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_4_reg_186">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <expressionNodes realName="req_list_addr_gep_fu_57">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_125">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_119">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="req_cmd_addr_gep_fu_44">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_fu_40">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_107">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_fu_113">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_74">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_131">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_HLS_free_1_s_fu_95">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_HLS_malloc_1_s_fu_81">
+    <nodeIds>40</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="r_load_load_fu_137">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_37_store_fu_145">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_32_store_fu_140">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="req_cmd">
+    <nodeIds>20</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="req_list">
+    <nodeIds>22</nodeIds>
+  </memoryPorts>
+  <ioPorts name="alloc_1_addr">
+    <contents name="call">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="alloc_1_cmd">
+    <contents name="call">
+      <nodeIds>40</nodeIds>
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="alloc_1_free_target">
+    <contents name="call">
+      <nodeIds>40</nodeIds>
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="alloc_1_size">
+    <contents name="call">
+      <nodeIds>40</nodeIds>
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>34</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="2" latency="2"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="2" latency="2"/>
+      <operations id="24" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="22" stage="1" latency="2"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="2" latency="2"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="40" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="36" stage="1" latency="2"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="2"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="20"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="21"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="22"/>
+    </transitions>
+    <transitions inState="4" outState="2">
+      <condition id="28"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="acc512_512_mau" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>26</basicBlocks>
+      <basicBlocks>29</basicBlocks>
+      <basicBlocks>32</basicBlocks>
+      <basicBlocks>39</basicBlocks>
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>45</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>35</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

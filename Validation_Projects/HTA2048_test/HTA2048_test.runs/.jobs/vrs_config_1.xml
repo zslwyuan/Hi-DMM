@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_HTA2048_theta_0_0_synth_1" LaunchDir="/home/tingyuan/HTA2048_test/HTA2048_test.runs/design_1_HTA2048_theta_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_acc2048_2048_mau_0_0_synth_1" LaunchDir="/home/tingyuan/HTA2048_test/HTA2048_test.runs/design_1_acc2048_2048_mau_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

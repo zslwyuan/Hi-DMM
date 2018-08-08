@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.339+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.332+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;3>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.320+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;3>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.311+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;2>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.307+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;2>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.293+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.288+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.285+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.281+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;3>' to 'HLS_malloc_3_s'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.278+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;2>' to 'HLS_malloc_2_s'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.260+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="HLS_MAXHEAP_HTA" solutionName="solution1" date="2018-07-28T19:09:01.247+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

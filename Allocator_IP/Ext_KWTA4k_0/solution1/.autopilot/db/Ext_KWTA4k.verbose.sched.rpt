@@ -1,0 +1,964 @@
+
+
+================================================================
+== Vivado HLS Report for 'Ext_KWTA4k'
+================================================================
+* Date:           Tue Jul 31 01:55:41 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Ext_KWTA4k_0
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.207|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         1|          1|          1|     ?|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 32
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	15  / (!tmp_4 & !tmp_6)
+	4  / (!tmp_4 & tmp_6 & !tmp_s)
+	8  / (!tmp_4 & tmp_6 & tmp_s)
+	16  / (tmp_4 & !tmp_5)
+	26  / (tmp_4 & tmp_5)
+4 --> 
+	5  / true
+5 --> 
+	6  / (!tmp_31)
+	5  / (tmp_31)
+6 --> 
+	7  / true
+7 --> 
+	15  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!tmp_10)
+	13  / (tmp_10)
+11 --> 
+	12  / true
+12 --> 
+	15  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	32  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / (!or_cond)
+	32  / (or_cond)
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	32  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / (!tmp_38 & !tmp_3)
+	30  / (!tmp_38 & tmp_3)
+	32  / (tmp_38)
+28 --> 
+	29  / true
+29 --> 
+	32  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.07>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_size), !map !248"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_free_target), !map !252"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_addr), !map !256"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_cmd), !map !260"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %com_port_layer_V), !map !264"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %com_port_target_V), !map !268"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %com_port_allocated_addr_V), !map !272"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %com_port_cmd), !map !276"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @Ext_KWTA4k_str) nounwind"   --->   Operation 41 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([64 x i32]* @heap_tree_V, [1 x i8]* @p_str, [13 x i8]* @p_str16, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [Ext_KWTA4k_0/solution1/top.cc:137]   --->   Operation 42 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_size, i32* %alloc_free_target, i32* %alloc_addr, i8* %alloc_cmd, [6 x i8]* @p_str17, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:139]   --->   Operation 43 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %com_port_layer_V, i16* %com_port_target_V, i16* %com_port_allocated_addr_V, i8* %com_port_cmd, [6 x i8]* @p_str17, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:140]   --->   Operation 44 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str19)" [Ext_KWTA4k_0/solution1/top.cc:162]   --->   Operation 45 'specregionbegin' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:163]   --->   Operation 46 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%alloc_cmd_read = call i8 @_ssdm_op_Read.ap_hs.volatile.i8P(i8* %alloc_cmd)" [Ext_KWTA4k_0/solution1/top.cc:164]   --->   Operation 47 'read' 'alloc_cmd_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%alloc_size_read = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_size)" [Ext_KWTA4k_0/solution1/top.cc:165]   --->   Operation 48 'read' 'alloc_size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%size_V = trunc i32 %alloc_size_read to i16" [Ext_KWTA4k_0/solution1/top.cc:165]   --->   Operation 49 'trunc' 'size_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%alloc_free_target_re = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_free_target)" [Ext_KWTA4k_0/solution1/top.cc:166]   --->   Operation 50 'read' 'alloc_free_target_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (2.07ns)   --->   "%tmp_size_V = add i16 -1, %size_V" [Ext_KWTA4k_0/solution1/top.cc:167]   --->   Operation 51 'add' 'tmp_size_V' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_Result_8 = call i16 @llvm.part.select.i16(i16 %tmp_size_V, i32 15, i32 0) nounwind" [Ext_KWTA4k_0/solution1/top.cc:168]   --->   Operation 52 'partselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_1)" [Ext_KWTA4k_0/solution1/top.cc:169]   --->   Operation 53 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.29>
+ST_2 : Operation 54 [1/1] (2.42ns)   --->   "%tmp = icmp eq i16 %size_V, 1" [Ext_KWTA4k_0/solution1/top.cc:170]   --->   Operation 54 'icmp' 'tmp' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (2.23ns)   --->   "br i1 %tmp, label %._crit_edge, label %1" [Ext_KWTA4k_0/solution1/top.cc:170]   --->   Operation 55 'br' <Predicate = true> <Delay = 2.23>
+ST_2 : Operation 56 [1/1] (2.07ns)   --->   "%p_s = sub i16 0, %p_Result_8" [Ext_KWTA4k_0/solution1/top.cc:174]   --->   Operation 56 'sub' 'p_s' <Predicate = (!tmp)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.99ns)   --->   "%TMP_1_V = and i16 %p_Result_8, %p_s" [Ext_KWTA4k_0/solution1/top.cc:174]   --->   Operation 57 'and' 'TMP_1_V' <Predicate = (!tmp)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (2.23ns)   --->   "switch i16 %TMP_1_V, label %._crit_edge [
+    i16 -32768, label %16
+    i16 2, label %2
+    i16 4, label %3
+    i16 8, label %4
+    i16 16, label %5
+    i16 32, label %6
+    i16 64, label %7
+    i16 128, label %8
+    i16 256, label %9
+    i16 512, label %10
+    i16 1024, label %11
+    i16 2048, label %12
+    i16 4096, label %13
+    i16 8192, label %14
+    i16 16384, label %15
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 58 'switch' <Predicate = (!tmp)> <Delay = 2.23>
+ST_2 : Operation 59 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 59 'br' <Predicate = (!tmp & TMP_1_V == 16384)> <Delay = 2.23>
+ST_2 : Operation 60 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 60 'br' <Predicate = (!tmp & TMP_1_V == 8192)> <Delay = 2.23>
+ST_2 : Operation 61 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 61 'br' <Predicate = (!tmp & TMP_1_V == 4096)> <Delay = 2.23>
+ST_2 : Operation 62 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 62 'br' <Predicate = (!tmp & TMP_1_V == 2048)> <Delay = 2.23>
+ST_2 : Operation 63 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 63 'br' <Predicate = (!tmp & TMP_1_V == 1024)> <Delay = 2.23>
+ST_2 : Operation 64 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 64 'br' <Predicate = (!tmp & TMP_1_V == 512)> <Delay = 2.23>
+ST_2 : Operation 65 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 65 'br' <Predicate = (!tmp & TMP_1_V == 256)> <Delay = 2.23>
+ST_2 : Operation 66 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 66 'br' <Predicate = (!tmp & TMP_1_V == 128)> <Delay = 2.23>
+ST_2 : Operation 67 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 67 'br' <Predicate = (!tmp & TMP_1_V == 64)> <Delay = 2.23>
+ST_2 : Operation 68 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 68 'br' <Predicate = (!tmp & TMP_1_V == 32)> <Delay = 2.23>
+ST_2 : Operation 69 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 69 'br' <Predicate = (!tmp & TMP_1_V == 16)> <Delay = 2.23>
+ST_2 : Operation 70 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 70 'br' <Predicate = (!tmp & TMP_1_V == 8)> <Delay = 2.23>
+ST_2 : Operation 71 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 71 'br' <Predicate = (!tmp & TMP_1_V == 4)> <Delay = 2.23>
+ST_2 : Operation 72 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 72 'br' <Predicate = (!tmp & TMP_1_V == 2)> <Delay = 2.23>
+ST_2 : Operation 73 [1/1] (2.23ns)   --->   "br label %._crit_edge" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:175]   --->   Operation 73 'br' <Predicate = (!tmp & TMP_1_V == 32768)> <Delay = 2.23>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%layer0_V = phi i5 [ 12, %0 ], [ 11, %16 ], [ 10, %15 ], [ 9, %14 ], [ 8, %13 ], [ 7, %12 ], [ 6, %11 ], [ 5, %10 ], [ 4, %9 ], [ 3, %8 ], [ 2, %7 ], [ 1, %6 ], [ 0, %5 ], [ -1, %4 ], [ -2, %3 ], [ -3, %2 ], [ -4, %1 ]"   --->   Operation 74 'phi' 'layer0_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str20)" [Ext_KWTA4k_0/solution1/top.cc:177]   --->   Operation 75 'specregionbegin' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:178]   --->   Operation 76 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [Ext_KWTA4k_0/solution1/top.cc:181]   --->   Operation 77 'wait' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%empty_51 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str20, i32 %tmp_2)" [Ext_KWTA4k_0/solution1/top.cc:182]   --->   Operation 78 'specregionend' 'empty_51' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.52>
+ST_3 : Operation 79 [1/1] (1.55ns)   --->   "%tmp_4 = icmp eq i8 %alloc_cmd_read, 2" [Ext_KWTA4k_0/solution1/top.cc:192]   --->   Operation 79 'icmp' 'tmp_4' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%p_Val2_5 = load i64* @top_heap_V_0, align 8" [Ext_KWTA4k_0/solution1/top.cc:225]   --->   Operation 80 'load' 'p_Val2_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %17, label %121" [Ext_KWTA4k_0/solution1/top.cc:192]   --->   Operation 81 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (1.55ns)   --->   "%tmp_6 = icmp eq i8 %alloc_cmd_read, 3" [Ext_KWTA4k_0/solution1/top.cc:323]   --->   Operation 82 'icmp' 'tmp_6' <Predicate = (!tmp_4)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br i1 %tmp_6, label %122, label %130" [Ext_KWTA4k_0/solution1/top.cc:323]   --->   Operation 83 'br' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 -1)" [Ext_KWTA4k_0/solution1/top.cc:448]   --->   Operation 84 'write' <Predicate = (!tmp_4 & !tmp_6)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "br label %131"   --->   Operation 85 'br' <Predicate = (!tmp_4 & !tmp_6)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (1.36ns)   --->   "%tmp_s = icmp ult i5 %layer0_V, 12" [Ext_KWTA4k_0/solution1/top.cc:325]   --->   Operation 86 'icmp' 'tmp_s' <Predicate = (!tmp_4 & tmp_6)> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit44, label %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit" [Ext_KWTA4k_0/solution1/top.cc:325]   --->   Operation 87 'br' <Predicate = (!tmp_4 & tmp_6)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%addr_HTA_V_4 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %alloc_free_target_re, i32 1, i32 16)" [Ext_KWTA4k_0/solution1/top.cc:372]   --->   Operation 88 'partselect' 'addr_HTA_V_4' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%loc2_V_2 = call i5 @_ssdm_op_PartSelect.i5.i32.i32.i32(i32 %alloc_free_target_re, i32 1, i32 5)" [Ext_KWTA4k_0/solution1/top.cc:372]   --->   Operation 89 'partselect' 'loc2_V_2' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%loc_in_group_tree_V_1 = trunc i32 %alloc_free_target_re to i1" [Ext_KWTA4k_0/solution1/top.cc:377]   --->   Operation 90 'trunc' 'loc_in_group_tree_V_1' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%phitmp = call i11 @_ssdm_op_PartSelect.i11.i32.i32.i32(i32 %alloc_free_target_re, i32 6, i32 16)" [Ext_KWTA4k_0/solution1/top.cc:389]   --->   Operation 91 'partselect' 'phitmp' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_11 = zext i16 %addr_HTA_V_4 to i64" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 92 'zext' 'tmp_11' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%group_tree_V_addr = getelementptr [2048 x i4]* @group_tree_V, i64 0, i64 %tmp_11" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 93 'getelementptr' 'group_tree_V_addr' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 94 [2/2] (3.25ns)   --->   "%group_tree_V_load = load i4* %group_tree_V_addr, align 1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 94 'load' 'group_tree_V_load' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%r_V = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 -1, i1 %loc_in_group_tree_V_1)" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 95 'bitconcatenate' 'r_V' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_13 = zext i6 %r_V to i64" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 96 'zext' 'tmp_13' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%mark_mask_V_addr = getelementptr [128 x i4]* @mark_mask_V, i64 0, i64 %tmp_13" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 97 'getelementptr' 'mark_mask_V_addr' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 0.00>
+ST_3 : Operation 98 [2/2] (3.25ns)   --->   "%mark_mask_V_load = load i4* %mark_mask_V_addr, align 1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 98 'load' 'mark_mask_V_load' <Predicate = (!tmp_4 & tmp_6 & !tmp_s)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_cmd, i8 3)" [Ext_KWTA4k_0/solution1/top.cc:330]   --->   Operation 99 'write' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%p_2 = zext i5 %layer0_V to i8" [Ext_KWTA4k_0/solution1/top.cc:331]   --->   Operation 100 'zext' 'p_2' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_layer_V, i8 %p_2)" [Ext_KWTA4k_0/solution1/top.cc:331]   --->   Operation 101 'write' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%addr_HTA_V = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %alloc_free_target_re, i32 1, i32 16)" [Ext_KWTA4k_0/solution1/top.cc:334]   --->   Operation 102 'partselect' 'addr_HTA_V' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%loc2_V_1 = call i5 @_ssdm_op_PartSelect.i5.i32.i32.i32(i32 %alloc_free_target_re, i32 1, i32 5)" [Ext_KWTA4k_0/solution1/top.cc:334]   --->   Operation 103 'partselect' 'loc2_V_1' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%phitmp2 = call i11 @_ssdm_op_PartSelect.i11.i32.i32.i32(i32 %alloc_free_target_re, i32 6, i32 16)" [Ext_KWTA4k_0/solution1/top.cc:335]   --->   Operation 104 'partselect' 'phitmp2' <Predicate = (!tmp_4 & tmp_6 & tmp_s)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (1.36ns)   --->   "%tmp_5 = icmp ult i5 %layer0_V, 12" [Ext_KWTA4k_0/solution1/top.cc:194]   --->   Operation 105 'icmp' 'tmp_5' <Predicate = (tmp_4)> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %18, label %22" [Ext_KWTA4k_0/solution1/top.cc:194]   --->   Operation 106 'br' <Predicate = (tmp_4)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (3.52ns)   --->   "%p_not = sub i64 0, %p_Val2_5" [Ext_KWTA4k_0/solution1/top.cc:250]   --->   Operation 107 'sub' 'p_not' <Predicate = (tmp_4 & !tmp_5)> <Delay = 3.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_cmd, i8 2)" [Ext_KWTA4k_0/solution1/top.cc:199]   --->   Operation 108 'write' <Predicate = (tmp_4 & tmp_5)> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%p_1 = zext i5 %layer0_V to i8" [Ext_KWTA4k_0/solution1/top.cc:200]   --->   Operation 109 'zext' 'p_1' <Predicate = (tmp_4 & tmp_5)> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_layer_V, i8 %p_1)" [Ext_KWTA4k_0/solution1/top.cc:200]   --->   Operation 110 'write' <Predicate = (tmp_4 & tmp_5)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.22>
+ST_4 : Operation 111 [1/2] (3.25ns)   --->   "%group_tree_V_load = load i4* %group_tree_V_addr, align 1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 111 'load' 'group_tree_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_12 = zext i4 %group_tree_V_load to i32" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 112 'zext' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.97ns)   --->   "%lhs_V = xor i32 %tmp_12, -1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 113 'xor' 'lhs_V' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [1/2] (3.25ns)   --->   "%mark_mask_V_load = load i4* %mark_mask_V_addr, align 1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 114 'load' 'mark_mask_V_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_4 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node tmp_15)   --->   "%tmp_14 = xor i4 %group_tree_V_load, -1" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 115 'xor' 'tmp_14' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_15 = or i4 %mark_mask_V_load, %tmp_14" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 116 'or' 'tmp_15' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_16 = call i28 @_ssdm_op_PartSelect.i28.i32.i32.i32(i32 %lhs_V, i32 4, i32 31)" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 117 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (0.00ns)   --->   "%r_V_1 = call i32 @_ssdm_op_BitConcatenate.i32.i28.i4(i28 %tmp_16, i4 %tmp_15)" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 118 'bitconcatenate' 'r_V_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%tmp0_V_7 = sext i32 %r_V_1 to i64" [Ext_KWTA4k_0/solution1/top.cc:396]   --->   Operation 119 'sext' 'tmp0_V_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (1.76ns)   --->   "br label %126" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 120 'br' <Predicate = true> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 4.59>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%p_3 = phi i4 [ 0, %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ %now1_V, %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 121 'phi' 'p_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%p_01572_0_in = phi i64 [ %tmp0_V_7, %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ %r_V_11, %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 122 'phi' 'p_01572_0_in' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%loc_in_group_tree_V_2 = phi i16 [ -1, %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ %phitmp3, %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 123 'phi' 'loc_in_group_tree_V_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%p_Val2_12 = phi i64 [ %tmp0_V_7, %_ZrsILi20ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ %p_Result_9, %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 124 'phi' 'p_Val2_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%rec_bits_V = trunc i64 %p_01572_0_in to i2" [Ext_KWTA4k_0/solution1/top.cc:398]   --->   Operation 125 'trunc' 'rec_bits_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] (0.95ns)   --->   "%tmp_30 = icmp eq i2 %rec_bits_V, -1" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 126 'icmp' 'tmp_30' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [1/1] (1.30ns)   --->   "%not_s = icmp ne i4 %p_3, 0" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 127 'icmp' 'not_s' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 128 [1/1] (0.97ns)   --->   "%tmp_31 = and i1 %tmp_30, %not_s" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 128 'and' 'tmp_31' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [1/1] (0.00ns)   --->   "br i1 %tmp_31, label %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit, label %127" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 129 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_33 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str28)" [Ext_KWTA4k_0/solution1/top.cc:406]   --->   Operation 130 'specregionbegin' 'tmp_33' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 131 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:407]   --->   Operation 131 'specpipeline' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%i_assign_2 = zext i16 %loc_in_group_tree_V_2 to i32" [Ext_KWTA4k_0/solution1/top.cc:408]   --->   Operation 132 'zext' 'i_assign_2' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%p_Result_9 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_12, i32 %i_assign_2, i1 true)"   --->   Operation 133 'bitset' 'p_Result_9' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%p_Result_10 = call i16 @_ssdm_op_BitSet.i16.i16.i32.i1(i16 %loc_in_group_tree_V_2, i32 0, i1 false)" [Ext_KWTA4k_0/solution1/top.cc:409]   --->   Operation 134 'bitset' 'p_Result_10' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_34 = zext i16 %p_Result_10 to i64" [Ext_KWTA4k_0/solution1/top.cc:410]   --->   Operation 135 'zext' 'tmp_34' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (4.59ns)   --->   "%r_V_11 = lshr i64 %p_Result_9, %tmp_34" [Ext_KWTA4k_0/solution1/top.cc:410]   --->   Operation 136 'lshr' 'r_V_11' <Predicate = (tmp_31)> <Delay = 4.59> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.44> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 137 [1/1] (0.00ns)   --->   "%empty_55 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str28, i32 %tmp_33)" [Ext_KWTA4k_0/solution1/top.cc:411]   --->   Operation 137 'specregionend' 'empty_55' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (1.73ns)   --->   "%now1_V = add i4 %p_3, -1" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 138 'add' 'now1_V' <Predicate = (tmp_31)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%phitmp1 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %loc_in_group_tree_V_2, i32 1, i32 15)" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 139 'partselect' 'phitmp1' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_35 = zext i15 %phitmp1 to i16" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 140 'zext' 'tmp_35' <Predicate = (tmp_31)> <Delay = 0.00>
+ST_5 : Operation 141 [1/1] (1.94ns)   --->   "%phitmp3 = add i16 %tmp_35, -1" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 141 'add' 'phitmp3' <Predicate = (tmp_31)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 142 [1/1] (0.00ns)   --->   "br label %126" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 142 'br' <Predicate = (tmp_31)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 4.22>
+ST_6 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_70 = trunc i64 %p_Val2_12 to i2" [Ext_KWTA4k_0/solution1/top.cc:405]   --->   Operation 143 'trunc' 'tmp_70' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_71 = trunc i64 %p_Val2_12 to i4" [Ext_KWTA4k_0/solution1/top.cc:414]   --->   Operation 144 'trunc' 'tmp_71' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 145 [1/1] (0.97ns)   --->   "%tmp_36 = xor i4 %tmp_71, -1" [Ext_KWTA4k_0/solution1/top.cc:414]   --->   Operation 145 'xor' 'tmp_36' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 146 [1/1] (3.25ns)   --->   "store i4 %tmp_36, i4* %group_tree_V_addr, align 1" [Ext_KWTA4k_0/solution1/top.cc:414]   --->   Operation 146 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_6 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_37 = zext i11 %phitmp to i64" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 147 'zext' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 148 [1/1] (0.00ns)   --->   "%heap_tree_V_addr_2 = getelementptr [64 x i32]* @heap_tree_V, i64 0, i64 %tmp_37" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 148 'getelementptr' 'heap_tree_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 149 [2/2] (3.25ns)   --->   "%p_Val2_s = load i32* %heap_tree_V_addr_2, align 4" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 149 'load' 'p_Val2_s' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 7 <SV = 6> <Delay = 7.54>
+ST_7 : Operation 150 [1/1] (0.00ns)   --->   "%i_assign_3 = zext i5 %loc2_V_2 to i32" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 150 'zext' 'i_assign_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 151 [1/1] (0.95ns)   --->   "%p_Repl2_2 = icmp ne i2 %tmp_70, 0" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 151 'icmp' 'p_Repl2_2' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 152 [1/2] (3.25ns)   --->   "%p_Val2_s = load i32* %heap_tree_V_addr_2, align 4" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 152 'load' 'p_Val2_s' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "%p_Result_4 = call i32 @_ssdm_op_BitSet.i32.i32.i32.i1(i32 %p_Val2_s, i32 %i_assign_3, i1 %p_Repl2_2)" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 153 'bitset' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (3.25ns)   --->   "store i32 %p_Result_4, i32* %heap_tree_V_addr_2, align 4" [Ext_KWTA4k_0/solution1/top.cc:419]   --->   Operation 154 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 155 [1/1] (0.00ns)   --->   "%i_assign_4 = zext i11 %phitmp to i32" [Ext_KWTA4k_0/solution1/top.cc:420]   --->   Operation 155 'zext' 'i_assign_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 156 [1/1] (2.47ns)   --->   "%p_Repl2_3 = icmp ne i32 %p_Result_4, 0" [Ext_KWTA4k_0/solution1/top.cc:420]   --->   Operation 156 'icmp' 'p_Repl2_3' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 157 [1/1] (0.00ns)   --->   "%p_Result_5 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_5, i32 %i_assign_4, i1 %p_Repl2_3)" [Ext_KWTA4k_0/solution1/top.cc:420]   --->   Operation 157 'bitset' 'p_Result_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 158 [1/1] (1.81ns)   --->   "store i64 %p_Result_5, i64* @top_heap_V_0, align 8" [Ext_KWTA4k_0/solution1/top.cc:420]   --->   Operation 158 'store' <Predicate = true> <Delay = 1.81>
+ST_7 : Operation 159 [1/1] (0.95ns)   --->   "%tmp_39 = icmp eq i2 %tmp_70, -1" [Ext_KWTA4k_0/solution1/top.cc:423]   --->   Operation 159 'icmp' 'tmp_39' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 160 [1/1] (0.00ns)   --->   "br i1 %tmp_39, label %128, label %._crit_edge2570" [Ext_KWTA4k_0/solution1/top.cc:423]   --->   Operation 160 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 161 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_cmd, i8 3)" [Ext_KWTA4k_0/solution1/top.cc:428]   --->   Operation 161 'write' <Predicate = (tmp_39)> <Delay = 0.00>
+ST_7 : Operation 162 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_layer_V, i8 11)" [Ext_KWTA4k_0/solution1/top.cc:429]   --->   Operation 162 'write' <Predicate = (tmp_39)> <Delay = 0.00>
+ST_7 : Operation 163 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i16P(i16* %com_port_target_V, i16 %addr_HTA_V_4)" [Ext_KWTA4k_0/solution1/top.cc:436]   --->   Operation 163 'write' <Predicate = (tmp_39)> <Delay = 0.00>
+ST_7 : Operation 164 [1/1] (0.00ns)   --->   "br label %._crit_edge2570" [Ext_KWTA4k_0/solution1/top.cc:439]   --->   Operation 164 'br' <Predicate = (tmp_39)> <Delay = 0.00>
+ST_7 : Operation 165 [1/1] (0.00ns)   --->   "br label %129"   --->   Operation 165 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 3> <Delay = 0.00>
+ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str27)" [Ext_KWTA4k_0/solution1/top.cc:337]   --->   Operation 166 'specregionbegin' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 167 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:338]   --->   Operation 167 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 168 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i16P(i16* %com_port_target_V, i16 %addr_HTA_V)" [Ext_KWTA4k_0/solution1/top.cc:339]   --->   Operation 168 'write' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 4> <Delay = 0.00>
+ST_9 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [Ext_KWTA4k_0/solution1/top.cc:340]   --->   Operation 169 'wait' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 170 [1/1] (0.00ns)   --->   "%empty_54 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str27, i32 %tmp_8)" [Ext_KWTA4k_0/solution1/top.cc:341]   --->   Operation 170 'specregionend' 'empty_54' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 4.98>
+ST_10 : Operation 171 [1/1] (1.36ns)   --->   "%tmp_10 = icmp ult i5 %layer0_V, 7" [Ext_KWTA4k_0/solution1/top.cc:343]   --->   Operation 171 'icmp' 'tmp_10' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_61 = trunc i5 %layer0_V to i4" [Ext_KWTA4k_0/solution1/top.cc:343]   --->   Operation 172 'trunc' 'tmp_61' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 173 [1/1] (0.00ns)   --->   "br i1 %tmp_10, label %123, label %124" [Ext_KWTA4k_0/solution1/top.cc:343]   --->   Operation 173 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 174 [1/1] (1.73ns)   --->   "%r_V_9 = sub i4 -5, %tmp_61" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 174 'sub' 'r_V_9' <Predicate = (!tmp_10)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_27 = zext i4 %r_V_9 to i64" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 175 'zext' 'tmp_27' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_10 : Operation 176 [1/1] (0.00ns)   --->   "%maintain_mask_V_addr_3 = getelementptr [7 x i33]* @maintain_mask_V, i64 0, i64 %tmp_27" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 176 'getelementptr' 'maintain_mask_V_addr_3' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_10 : Operation 177 [2/2] (3.25ns)   --->   "%maintain_mask_V_load_3 = load i33* %maintain_mask_V_addr_3, align 8" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 177 'load' 'maintain_mask_V_load_3' <Predicate = (!tmp_10)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_10 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_28 = zext i11 %phitmp2 to i64" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 178 'zext' 'tmp_28' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_10 : Operation 179 [1/1] (0.00ns)   --->   "%heap_tree_V_addr_1 = getelementptr [64 x i32]* @heap_tree_V, i64 0, i64 %tmp_28" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 179 'getelementptr' 'heap_tree_V_addr_1' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_10 : Operation 180 [2/2] (3.25ns)   --->   "%heap_tree_V_load_1 = load i32* %heap_tree_V_addr_1, align 4" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 180 'load' 'heap_tree_V_load_1' <Predicate = (!tmp_10)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 181 [1/1] (1.73ns)   --->   "%r_V_7 = sub i4 6, %tmp_61" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 181 'sub' 'r_V_7' <Predicate = (tmp_10)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 182 [1/1] (0.00ns)   --->   "%tmp_24 = zext i4 %r_V_7 to i64" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 182 'zext' 'tmp_24' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_10 : Operation 183 [1/1] (0.00ns)   --->   "%maintain_mask_V_addr_2 = getelementptr [7 x i33]* @maintain_mask_V, i64 0, i64 %tmp_24" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 183 'getelementptr' 'maintain_mask_V_addr_2' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_10 : Operation 184 [2/2] (3.25ns)   --->   "%maintain_mask_V_load_2 = load i33* %maintain_mask_V_addr_2, align 8" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 184 'load' 'maintain_mask_V_load_2' <Predicate = (tmp_10)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+
+State 11 <SV = 6> <Delay = 7.67>
+ST_11 : Operation 185 [1/2] (3.25ns)   --->   "%maintain_mask_V_load_3 = load i33* %maintain_mask_V_addr_3, align 8" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 185 'load' 'maintain_mask_V_load_3' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_11 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node tmp_29)   --->   "%tmp_65 = trunc i33 %maintain_mask_V_load_3 to i32" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 186 'trunc' 'tmp_65' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 187 [1/1] (0.00ns) (grouped into LUT with out node tmp_29)   --->   "%tmp_34_cast = zext i5 %loc2_V_1 to i32" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 187 'zext' 'tmp_34_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node tmp_29)   --->   "%r_V_16 = shl i32 %tmp_65, %tmp_34_cast" [Ext_KWTA4k_0/solution1/top.cc:356]   --->   Operation 188 'shl' 'r_V_16' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.44> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 189 [1/2] (3.25ns)   --->   "%heap_tree_V_load_1 = load i32* %heap_tree_V_addr_1, align 4" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 189 'load' 'heap_tree_V_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_11 : Operation 190 [1/1] (4.42ns) (out node of the LUT)   --->   "%tmp_29 = or i32 %heap_tree_V_load_1, %r_V_16" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 190 'or' 'tmp_29' <Predicate = true> <Delay = 4.42> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 7> <Delay = 3.25>
+ST_12 : Operation 191 [1/1] (3.25ns)   --->   "store i32 %tmp_29, i32* %heap_tree_V_addr_1, align 4" [Ext_KWTA4k_0/solution1/top.cc:361]   --->   Operation 191 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 192 [1/1] (0.00ns)   --->   "%i_assign_1 = zext i11 %phitmp2 to i32" [Ext_KWTA4k_0/solution1/top.cc:362]   --->   Operation 192 'zext' 'i_assign_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 193 [1/1] (2.47ns)   --->   "%p_Repl2_1 = icmp ne i32 %tmp_29, 0" [Ext_KWTA4k_0/solution1/top.cc:362]   --->   Operation 193 'icmp' 'p_Repl2_1' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 194 [1/1] (0.00ns)   --->   "%p_Result_1 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_5, i32 %i_assign_1, i1 %p_Repl2_1)" [Ext_KWTA4k_0/solution1/top.cc:362]   --->   Operation 194 'bitset' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 195 [1/1] (1.76ns)   --->   "br label %125"   --->   Operation 195 'br' <Predicate = true> <Delay = 1.76>
+
+State 13 <SV = 6> <Delay = 3.25>
+ST_13 : Operation 196 [1/2] (3.25ns)   --->   "%maintain_mask_V_load_2 = load i33* %maintain_mask_V_addr_2, align 8" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 196 'load' 'maintain_mask_V_load_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+
+State 14 <SV = 7> <Delay = 4.44>
+ST_14 : Operation 197 [1/1] (0.00ns) (grouped into LUT with out node tmp_26)   --->   "%maintain_mask_V_load_6 = sext i33 %maintain_mask_V_load_2 to i64" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 197 'sext' 'maintain_mask_V_load_6' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 198 [1/1] (0.00ns) (grouped into LUT with out node tmp_26)   --->   "%tmp_25 = zext i11 %phitmp2 to i64" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 198 'zext' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 199 [1/1] (0.00ns) (grouped into LUT with out node tmp_26)   --->   "%r_V_15 = shl i64 %maintain_mask_V_load_6, %tmp_25" [Ext_KWTA4k_0/solution1/top.cc:345]   --->   Operation 199 'shl' 'r_V_15' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.44> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 200 [1/1] (4.44ns) (out node of the LUT)   --->   "%tmp_26 = or i64 %p_Val2_5, %r_V_15" [Ext_KWTA4k_0/solution1/top.cc:350]   --->   Operation 200 'or' 'tmp_26' <Predicate = true> <Delay = 4.44> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 201 [1/1] (1.76ns)   --->   "br label %125" [Ext_KWTA4k_0/solution1/top.cc:353]   --->   Operation 201 'br' <Predicate = true> <Delay = 1.76>
+
+State 15 <SV = 8> <Delay = 1.81>
+ST_15 : Operation 202 [1/1] (0.00ns)   --->   "%storemerge = phi i64 [ %p_Result_1, %124 ], [ %tmp_26, %123 ]"   --->   Operation 202 'phi' 'storemerge' <Predicate = (tmp_6 & tmp_s)> <Delay = 0.00>
+ST_15 : Operation 203 [1/1] (1.81ns)   --->   "store i64 %storemerge, i64* @top_heap_V_0, align 8" [Ext_KWTA4k_0/solution1/top.cc:350]   --->   Operation 203 'store' <Predicate = (tmp_6 & tmp_s)> <Delay = 1.81>
+ST_15 : Operation 204 [1/1] (0.00ns)   --->   "br label %129" [Ext_KWTA4k_0/solution1/top.cc:368]   --->   Operation 204 'br' <Predicate = (tmp_6 & tmp_s)> <Delay = 0.00>
+ST_15 : Operation 205 [1/1] (0.00ns)   --->   "br label %131" [Ext_KWTA4k_0/solution1/top.cc:442]   --->   Operation 205 'br' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_15 : Operation 206 [1/1] (0.00ns)   --->   "br label %132"   --->   Operation 206 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 3> <Delay = 5.65>
+ST_16 : Operation 207 [1/1] (0.99ns)   --->   "%tmp0_V_6 = and i64 %p_Val2_5, %p_not" [Ext_KWTA4k_0/solution1/top.cc:250]   --->   Operation 207 'and' 'tmp0_V_6' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 208 [1/1] (0.00ns)   --->   "%AA_V = trunc i64 %tmp0_V_6 to i16" [Ext_KWTA4k_0/solution1/top.cc:124->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 208 'trunc' 'AA_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 209 [1/1] (0.00ns)   --->   "%BB_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp0_V_6, i32 16, i32 31)" [Ext_KWTA4k_0/solution1/top.cc:124->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 209 'partselect' 'BB_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 210 [1/1] (0.00ns)   --->   "%CC_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp0_V_6, i32 32, i32 47)" [Ext_KWTA4k_0/solution1/top.cc:124->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 210 'partselect' 'CC_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 211 [1/1] (0.00ns)   --->   "%DD_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp0_V_6, i32 48, i32 63)" [Ext_KWTA4k_0/solution1/top.cc:124->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 211 'partselect' 'DD_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 212 [1/1] (2.42ns)   --->   "%tmp_9 = icmp eq i16 %AA_V, 0" [Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 212 'icmp' 'tmp_9' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 213 [1/1] (2.19ns)   --->   "br i1 %tmp_9, label %._crit_edge.i2613, label %23" [Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 213 'br' <Predicate = true> <Delay = 2.19>
+ST_16 : Operation 214 [1/1] (2.19ns)   --->   "switch i16 %AA_V, label %._crit_edge.i2613 [
+    i16 -32768, label %38
+    i16 2, label %24
+    i16 4, label %25
+    i16 8, label %26
+    i16 16, label %27
+    i16 32, label %28
+    i16 64, label %29
+    i16 128, label %30
+    i16 256, label %31
+    i16 512, label %32
+    i16 1024, label %33
+    i16 2048, label %34
+    i16 4096, label %35
+    i16 8192, label %36
+    i16 16384, label %37
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 214 'switch' <Predicate = (!tmp_9)> <Delay = 2.19>
+ST_16 : Operation 215 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 215 'br' <Predicate = (!tmp_9 & AA_V == 16384)> <Delay = 2.19>
+ST_16 : Operation 216 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 216 'br' <Predicate = (!tmp_9 & AA_V == 8192)> <Delay = 2.19>
+ST_16 : Operation 217 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 217 'br' <Predicate = (!tmp_9 & AA_V == 4096)> <Delay = 2.19>
+ST_16 : Operation 218 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 218 'br' <Predicate = (!tmp_9 & AA_V == 2048)> <Delay = 2.19>
+ST_16 : Operation 219 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 219 'br' <Predicate = (!tmp_9 & AA_V == 1024)> <Delay = 2.19>
+ST_16 : Operation 220 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 220 'br' <Predicate = (!tmp_9 & AA_V == 512)> <Delay = 2.19>
+ST_16 : Operation 221 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 221 'br' <Predicate = (!tmp_9 & AA_V == 256)> <Delay = 2.19>
+ST_16 : Operation 222 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 222 'br' <Predicate = (!tmp_9 & AA_V == 128)> <Delay = 2.19>
+ST_16 : Operation 223 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 223 'br' <Predicate = (!tmp_9 & AA_V == 64)> <Delay = 2.19>
+ST_16 : Operation 224 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 224 'br' <Predicate = (!tmp_9 & AA_V == 32)> <Delay = 2.19>
+ST_16 : Operation 225 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 225 'br' <Predicate = (!tmp_9 & AA_V == 16)> <Delay = 2.19>
+ST_16 : Operation 226 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 226 'br' <Predicate = (!tmp_9 & AA_V == 8)> <Delay = 2.19>
+ST_16 : Operation 227 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 227 'br' <Predicate = (!tmp_9 & AA_V == 4)> <Delay = 2.19>
+ST_16 : Operation 228 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 228 'br' <Predicate = (!tmp_9 & AA_V == 2)> <Delay = 2.19>
+ST_16 : Operation 229 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2613" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 229 'br' <Predicate = (!tmp_9 & AA_V == 32768)> <Delay = 2.19>
+ST_16 : Operation 230 [1/1] (0.00ns)   --->   "%p_0167_0_i1 = phi i4 [ 0, %22 ], [ -1, %38 ], [ -2, %37 ], [ -3, %36 ], [ -4, %35 ], [ -5, %34 ], [ -6, %33 ], [ -7, %32 ], [ -8, %31 ], [ 7, %30 ], [ 6, %29 ], [ 5, %28 ], [ 4, %27 ], [ 3, %26 ], [ 2, %25 ], [ 1, %24 ], [ 0, %23 ]"   --->   Operation 230 'phi' 'p_0167_0_i1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 231 [1/1] (0.00ns)   --->   "%p_0167_0_i1_cast = zext i4 %p_0167_0_i1 to i6" [Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 231 'zext' 'p_0167_0_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 232 [1/1] (2.42ns)   --->   "%tmp_32 = icmp eq i16 %BB_V, 0" [Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 232 'icmp' 'tmp_32' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 233 [1/1] (2.23ns)   --->   "br i1 %tmp_32, label %._crit_edge355.i2618, label %39" [Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 233 'br' <Predicate = true> <Delay = 2.23>
+ST_16 : Operation 234 [1/1] (2.23ns)   --->   "switch i16 %BB_V, label %._crit_edge355.i2618 [
+    i16 -32768, label %54
+    i16 2, label %40
+    i16 4, label %41
+    i16 8, label %42
+    i16 16, label %43
+    i16 32, label %44
+    i16 64, label %45
+    i16 128, label %46
+    i16 256, label %47
+    i16 512, label %48
+    i16 1024, label %49
+    i16 2048, label %50
+    i16 4096, label %51
+    i16 8192, label %52
+    i16 16384, label %53
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 234 'switch' <Predicate = (!tmp_32)> <Delay = 2.23>
+ST_16 : Operation 235 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 235 'br' <Predicate = (!tmp_32 & BB_V == 16384)> <Delay = 2.23>
+ST_16 : Operation 236 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 236 'br' <Predicate = (!tmp_32 & BB_V == 8192)> <Delay = 2.23>
+ST_16 : Operation 237 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 237 'br' <Predicate = (!tmp_32 & BB_V == 4096)> <Delay = 2.23>
+ST_16 : Operation 238 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 238 'br' <Predicate = (!tmp_32 & BB_V == 2048)> <Delay = 2.23>
+ST_16 : Operation 239 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 239 'br' <Predicate = (!tmp_32 & BB_V == 1024)> <Delay = 2.23>
+ST_16 : Operation 240 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 240 'br' <Predicate = (!tmp_32 & BB_V == 512)> <Delay = 2.23>
+ST_16 : Operation 241 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 241 'br' <Predicate = (!tmp_32 & BB_V == 256)> <Delay = 2.23>
+ST_16 : Operation 242 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 242 'br' <Predicate = (!tmp_32 & BB_V == 128)> <Delay = 2.23>
+ST_16 : Operation 243 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 243 'br' <Predicate = (!tmp_32 & BB_V == 64)> <Delay = 2.23>
+ST_16 : Operation 244 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 244 'br' <Predicate = (!tmp_32 & BB_V == 32)> <Delay = 2.23>
+ST_16 : Operation 245 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 245 'br' <Predicate = (!tmp_32 & BB_V == 16)> <Delay = 2.23>
+ST_16 : Operation 246 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 246 'br' <Predicate = (!tmp_32 & BB_V == 8)> <Delay = 2.23>
+ST_16 : Operation 247 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 247 'br' <Predicate = (!tmp_32 & BB_V == 4)> <Delay = 2.23>
+ST_16 : Operation 248 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 248 'br' <Predicate = (!tmp_32 & BB_V == 2)> <Delay = 2.23>
+ST_16 : Operation 249 [1/1] (2.23ns)   --->   "br label %._crit_edge355.i2618" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:126->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 249 'br' <Predicate = (!tmp_32 & BB_V == 32768)> <Delay = 2.23>
+ST_16 : Operation 250 [1/1] (0.00ns)   --->   "%p_0252_0_i1 = phi i5 [ 0, %._crit_edge.i2613 ], [ -1, %54 ], [ -2, %53 ], [ -3, %52 ], [ -4, %51 ], [ -5, %50 ], [ -6, %49 ], [ -7, %48 ], [ -8, %47 ], [ -9, %46 ], [ -10, %45 ], [ -11, %44 ], [ -12, %43 ], [ -13, %42 ], [ -14, %41 ], [ -15, %40 ], [ -16, %39 ]"   --->   Operation 250 'phi' 'p_0252_0_i1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 251 [1/1] (0.00ns)   --->   "%p_0252_0_i1_cast = zext i5 %p_0252_0_i1 to i7" [Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 251 'zext' 'p_0252_0_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 252 [1/1] (2.42ns)   --->   "%tmp_40 = icmp eq i16 %CC_V, 0" [Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 252 'icmp' 'tmp_40' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 253 [1/1] (2.23ns)   --->   "br i1 %tmp_40, label %._crit_edge356.i2623, label %55" [Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 253 'br' <Predicate = true> <Delay = 2.23>
+ST_16 : Operation 254 [1/1] (2.23ns)   --->   "switch i16 %CC_V, label %._crit_edge356.i2623 [
+    i16 -32768, label %70
+    i16 2, label %56
+    i16 4, label %57
+    i16 8, label %58
+    i16 16, label %59
+    i16 32, label %60
+    i16 64, label %61
+    i16 128, label %62
+    i16 256, label %63
+    i16 512, label %64
+    i16 1024, label %65
+    i16 2048, label %66
+    i16 4096, label %67
+    i16 8192, label %68
+    i16 16384, label %69
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 254 'switch' <Predicate = (!tmp_40)> <Delay = 2.23>
+ST_16 : Operation 255 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 255 'br' <Predicate = (!tmp_40 & CC_V == 16384)> <Delay = 2.23>
+ST_16 : Operation 256 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 256 'br' <Predicate = (!tmp_40 & CC_V == 8192)> <Delay = 2.23>
+ST_16 : Operation 257 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 257 'br' <Predicate = (!tmp_40 & CC_V == 4096)> <Delay = 2.23>
+ST_16 : Operation 258 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 258 'br' <Predicate = (!tmp_40 & CC_V == 2048)> <Delay = 2.23>
+ST_16 : Operation 259 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 259 'br' <Predicate = (!tmp_40 & CC_V == 1024)> <Delay = 2.23>
+ST_16 : Operation 260 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 260 'br' <Predicate = (!tmp_40 & CC_V == 512)> <Delay = 2.23>
+ST_16 : Operation 261 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 261 'br' <Predicate = (!tmp_40 & CC_V == 256)> <Delay = 2.23>
+ST_16 : Operation 262 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 262 'br' <Predicate = (!tmp_40 & CC_V == 128)> <Delay = 2.23>
+ST_16 : Operation 263 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 263 'br' <Predicate = (!tmp_40 & CC_V == 64)> <Delay = 2.23>
+ST_16 : Operation 264 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 264 'br' <Predicate = (!tmp_40 & CC_V == 32)> <Delay = 2.23>
+ST_16 : Operation 265 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 265 'br' <Predicate = (!tmp_40 & CC_V == 16)> <Delay = 2.23>
+ST_16 : Operation 266 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 266 'br' <Predicate = (!tmp_40 & CC_V == 8)> <Delay = 2.23>
+ST_16 : Operation 267 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 267 'br' <Predicate = (!tmp_40 & CC_V == 4)> <Delay = 2.23>
+ST_16 : Operation 268 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 268 'br' <Predicate = (!tmp_40 & CC_V == 2)> <Delay = 2.23>
+ST_16 : Operation 269 [1/1] (2.23ns)   --->   "br label %._crit_edge356.i2623" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 269 'br' <Predicate = (!tmp_40 & CC_V == 32768)> <Delay = 2.23>
+ST_16 : Operation 270 [1/1] (0.00ns)   --->   "%p_0248_0_i1 = phi i6 [ 0, %._crit_edge355.i2618 ], [ -17, %70 ], [ -18, %69 ], [ -19, %68 ], [ -20, %67 ], [ -21, %66 ], [ -22, %65 ], [ -23, %64 ], [ -24, %63 ], [ -25, %62 ], [ -26, %61 ], [ -27, %60 ], [ -28, %59 ], [ -29, %58 ], [ -30, %57 ], [ -31, %56 ], [ -32, %55 ]"   --->   Operation 270 'phi' 'p_0248_0_i1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 271 [1/1] (2.42ns)   --->   "%tmp_41 = icmp eq i16 %DD_V, 0" [Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 271 'icmp' 'tmp_41' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 272 [1/1] (2.23ns)   --->   "br i1 %tmp_41, label %log_2_64bit.exit2628, label %71" [Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 272 'br' <Predicate = true> <Delay = 2.23>
+ST_16 : Operation 273 [1/1] (2.23ns)   --->   "switch i16 %DD_V, label %log_2_64bit.exit2628 [
+    i16 -32768, label %86
+    i16 2, label %72
+    i16 4, label %73
+    i16 8, label %74
+    i16 16, label %75
+    i16 32, label %76
+    i16 64, label %77
+    i16 128, label %78
+    i16 256, label %79
+    i16 512, label %80
+    i16 1024, label %81
+    i16 2048, label %82
+    i16 4096, label %83
+    i16 8192, label %84
+    i16 16384, label %85
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 273 'switch' <Predicate = (!tmp_41)> <Delay = 2.23>
+ST_16 : Operation 274 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 274 'br' <Predicate = (!tmp_41 & DD_V == 16384)> <Delay = 2.23>
+ST_16 : Operation 275 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 275 'br' <Predicate = (!tmp_41 & DD_V == 8192)> <Delay = 2.23>
+ST_16 : Operation 276 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 276 'br' <Predicate = (!tmp_41 & DD_V == 4096)> <Delay = 2.23>
+ST_16 : Operation 277 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 277 'br' <Predicate = (!tmp_41 & DD_V == 2048)> <Delay = 2.23>
+ST_16 : Operation 278 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 278 'br' <Predicate = (!tmp_41 & DD_V == 1024)> <Delay = 2.23>
+ST_16 : Operation 279 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 279 'br' <Predicate = (!tmp_41 & DD_V == 512)> <Delay = 2.23>
+ST_16 : Operation 280 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 280 'br' <Predicate = (!tmp_41 & DD_V == 256)> <Delay = 2.23>
+ST_16 : Operation 281 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 281 'br' <Predicate = (!tmp_41 & DD_V == 128)> <Delay = 2.23>
+ST_16 : Operation 282 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 282 'br' <Predicate = (!tmp_41 & DD_V == 64)> <Delay = 2.23>
+ST_16 : Operation 283 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 283 'br' <Predicate = (!tmp_41 & DD_V == 32)> <Delay = 2.23>
+ST_16 : Operation 284 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 284 'br' <Predicate = (!tmp_41 & DD_V == 16)> <Delay = 2.23>
+ST_16 : Operation 285 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 285 'br' <Predicate = (!tmp_41 & DD_V == 8)> <Delay = 2.23>
+ST_16 : Operation 286 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 286 'br' <Predicate = (!tmp_41 & DD_V == 4)> <Delay = 2.23>
+ST_16 : Operation 287 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 287 'br' <Predicate = (!tmp_41 & DD_V == 2)> <Delay = 2.23>
+ST_16 : Operation 288 [1/1] (2.23ns)   --->   "br label %log_2_64bit.exit2628" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:128->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 288 'br' <Predicate = (!tmp_41 & DD_V == 32768)> <Delay = 2.23>
+
+State 17 <SV = 4> <Delay = 6.94>
+ST_17 : Operation 289 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%p_0244_0_i1 = phi i5 [ 0, %._crit_edge356.i2623 ], [ -1, %86 ], [ -2, %85 ], [ -3, %84 ], [ -4, %83 ], [ -5, %82 ], [ -6, %81 ], [ -7, %80 ], [ -8, %79 ], [ -9, %78 ], [ -10, %77 ], [ -11, %76 ], [ -12, %75 ], [ -13, %74 ], [ -14, %73 ], [ -15, %72 ], [ -16, %71 ]"   --->   Operation 289 'phi' 'p_0244_0_i1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 290 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%p_0244_0_i1_cast9 = sext i5 %p_0244_0_i1 to i6" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 290 'sext' 'p_0244_0_i1_cast9' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 291 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%p_0244_0_i1_cast = zext i6 %p_0244_0_i1_cast9 to i7" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 291 'zext' 'p_0244_0_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 292 [1/1] (1.82ns)   --->   "%tmp2 = add i6 %p_0248_0_i1, %p_0167_0_i1_cast" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 292 'add' 'tmp2' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 293 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i6 %tmp2 to i8" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 293 'zext' 'tmp2_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 294 [1/1] (1.82ns) (out node of the LUT)   --->   "%tmp3 = add i7 %p_0244_0_i1_cast, %p_0252_0_i1_cast" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 294 'add' 'tmp3' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 295 [1/1] (0.00ns)   --->   "%tmp3_cast = zext i7 %tmp3 to i8" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 295 'zext' 'tmp3_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 296 [1/1] (1.87ns)   --->   "%tmp_42 = add i8 %tmp2_cast, %tmp3_cast" [Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251]   --->   Operation 296 'add' 'tmp_42' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 297 [1/1] (0.00ns)   --->   "%tmp_43 = zext i8 %tmp_42 to i64" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 297 'zext' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 298 [1/1] (0.00ns)   --->   "%heap_tree_V_addr_3 = getelementptr [64 x i32]* @heap_tree_V, i64 0, i64 %tmp_43" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 298 'getelementptr' 'heap_tree_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 299 [2/2] (3.25ns)   --->   "%p_Val2_11 = load i32* %heap_tree_V_addr_3, align 4" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 299 'load' 'p_Val2_11' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 18 <SV = 5> <Delay = 5.80>
+ST_18 : Operation 300 [1/2] (3.25ns)   --->   "%p_Val2_11 = load i32* %heap_tree_V_addr_3, align 4" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 300 'load' 'p_Val2_11' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_18 : Operation 301 [1/1] (2.55ns)   --->   "%tmp_44 = add i32 -1, %p_Val2_11" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 301 'add' 'tmp_44' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 6> <Delay = 8.20>
+ST_19 : Operation 302 [1/1] (0.99ns)   --->   "%tmp_45 = and i32 %p_Val2_11, %tmp_44" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 302 'and' 'tmp_45' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 303 [1/1] (2.55ns)   --->   "%tmp1_V = sub i32 %p_Val2_11, %tmp_45" [Ext_KWTA4k_0/solution1/top.cc:260]   --->   Operation 303 'sub' 'tmp1_V' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 304 [1/1] (0.00ns)   --->   "%AA_V_1 = trunc i32 %tmp1_V to i16" [Ext_KWTA4k_0/solution1/top.cc:113->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 304 'trunc' 'AA_V_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 305 [1/1] (0.00ns)   --->   "%BB_V_1 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp1_V, i32 16, i32 31)" [Ext_KWTA4k_0/solution1/top.cc:113->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 305 'partselect' 'BB_V_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 306 [1/1] (2.42ns)   --->   "%tmp_46 = icmp eq i16 %AA_V_1, 0" [Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 306 'icmp' 'tmp_46' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 307 [1/1] (2.19ns)   --->   "br i1 %tmp_46, label %._crit_edge.i2630, label %87" [Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 307 'br' <Predicate = true> <Delay = 2.19>
+ST_19 : Operation 308 [1/1] (2.19ns)   --->   "switch i16 %AA_V_1, label %._crit_edge.i2630 [
+    i16 -32768, label %102
+    i16 2, label %88
+    i16 4, label %89
+    i16 8, label %90
+    i16 16, label %91
+    i16 32, label %92
+    i16 64, label %93
+    i16 128, label %94
+    i16 256, label %95
+    i16 512, label %96
+    i16 1024, label %97
+    i16 2048, label %98
+    i16 4096, label %99
+    i16 8192, label %100
+    i16 16384, label %101
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 308 'switch' <Predicate = (!tmp_46)> <Delay = 2.19>
+ST_19 : Operation 309 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 309 'br' <Predicate = (!tmp_46 & AA_V_1 == 16384)> <Delay = 2.19>
+ST_19 : Operation 310 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 310 'br' <Predicate = (!tmp_46 & AA_V_1 == 8192)> <Delay = 2.19>
+ST_19 : Operation 311 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 311 'br' <Predicate = (!tmp_46 & AA_V_1 == 4096)> <Delay = 2.19>
+ST_19 : Operation 312 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 312 'br' <Predicate = (!tmp_46 & AA_V_1 == 2048)> <Delay = 2.19>
+ST_19 : Operation 313 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 313 'br' <Predicate = (!tmp_46 & AA_V_1 == 1024)> <Delay = 2.19>
+ST_19 : Operation 314 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 314 'br' <Predicate = (!tmp_46 & AA_V_1 == 512)> <Delay = 2.19>
+ST_19 : Operation 315 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 315 'br' <Predicate = (!tmp_46 & AA_V_1 == 256)> <Delay = 2.19>
+ST_19 : Operation 316 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 316 'br' <Predicate = (!tmp_46 & AA_V_1 == 128)> <Delay = 2.19>
+ST_19 : Operation 317 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 317 'br' <Predicate = (!tmp_46 & AA_V_1 == 64)> <Delay = 2.19>
+ST_19 : Operation 318 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 318 'br' <Predicate = (!tmp_46 & AA_V_1 == 32)> <Delay = 2.19>
+ST_19 : Operation 319 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 319 'br' <Predicate = (!tmp_46 & AA_V_1 == 16)> <Delay = 2.19>
+ST_19 : Operation 320 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 320 'br' <Predicate = (!tmp_46 & AA_V_1 == 8)> <Delay = 2.19>
+ST_19 : Operation 321 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 321 'br' <Predicate = (!tmp_46 & AA_V_1 == 4)> <Delay = 2.19>
+ST_19 : Operation 322 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 322 'br' <Predicate = (!tmp_46 & AA_V_1 == 2)> <Delay = 2.19>
+ST_19 : Operation 323 [1/1] (2.19ns)   --->   "br label %._crit_edge.i2630" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:114->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 323 'br' <Predicate = (!tmp_46 & AA_V_1 == 32768)> <Delay = 2.19>
+ST_19 : Operation 324 [1/1] (0.00ns)   --->   "%p_061_0_i = phi i4 [ 0, %log_2_64bit.exit2628 ], [ -1, %102 ], [ -2, %101 ], [ -3, %100 ], [ -4, %99 ], [ -5, %98 ], [ -6, %97 ], [ -7, %96 ], [ -8, %95 ], [ 7, %94 ], [ 6, %93 ], [ 5, %92 ], [ 4, %91 ], [ 3, %90 ], [ 2, %89 ], [ 1, %88 ], [ 0, %87 ]"   --->   Operation 324 'phi' 'p_061_0_i' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 325 [1/1] (0.00ns)   --->   "%p_061_0_i_cast = zext i4 %p_061_0_i to i6" [Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 325 'zext' 'p_061_0_i_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 326 [1/1] (2.42ns)   --->   "%tmp_47 = icmp eq i16 %BB_V_1, 0" [Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 326 'icmp' 'tmp_47' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 327 [1/1] (2.23ns)   --->   "br i1 %tmp_47, label %log_2_32bit.exit, label %103" [Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 327 'br' <Predicate = true> <Delay = 2.23>
+ST_19 : Operation 328 [1/1] (2.23ns)   --->   "switch i16 %BB_V_1, label %log_2_32bit.exit [
+    i16 -32768, label %118
+    i16 2, label %104
+    i16 4, label %105
+    i16 8, label %106
+    i16 16, label %107
+    i16 32, label %108
+    i16 64, label %109
+    i16 128, label %110
+    i16 256, label %111
+    i16 512, label %112
+    i16 1024, label %113
+    i16 2048, label %114
+    i16 4096, label %115
+    i16 8192, label %116
+    i16 16384, label %117
+  ]" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 328 'switch' <Predicate = (!tmp_47)> <Delay = 2.23>
+ST_19 : Operation 329 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:59->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 329 'br' <Predicate = (!tmp_47 & BB_V_1 == 16384)> <Delay = 2.23>
+ST_19 : Operation 330 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:58->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 330 'br' <Predicate = (!tmp_47 & BB_V_1 == 8192)> <Delay = 2.23>
+ST_19 : Operation 331 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:57->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 331 'br' <Predicate = (!tmp_47 & BB_V_1 == 4096)> <Delay = 2.23>
+ST_19 : Operation 332 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:56->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 332 'br' <Predicate = (!tmp_47 & BB_V_1 == 2048)> <Delay = 2.23>
+ST_19 : Operation 333 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:55->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 333 'br' <Predicate = (!tmp_47 & BB_V_1 == 1024)> <Delay = 2.23>
+ST_19 : Operation 334 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:54->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 334 'br' <Predicate = (!tmp_47 & BB_V_1 == 512)> <Delay = 2.23>
+ST_19 : Operation 335 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:53->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 335 'br' <Predicate = (!tmp_47 & BB_V_1 == 256)> <Delay = 2.23>
+ST_19 : Operation 336 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:52->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 336 'br' <Predicate = (!tmp_47 & BB_V_1 == 128)> <Delay = 2.23>
+ST_19 : Operation 337 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:51->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 337 'br' <Predicate = (!tmp_47 & BB_V_1 == 64)> <Delay = 2.23>
+ST_19 : Operation 338 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:50->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 338 'br' <Predicate = (!tmp_47 & BB_V_1 == 32)> <Delay = 2.23>
+ST_19 : Operation 339 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:49->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 339 'br' <Predicate = (!tmp_47 & BB_V_1 == 16)> <Delay = 2.23>
+ST_19 : Operation 340 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:48->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 340 'br' <Predicate = (!tmp_47 & BB_V_1 == 8)> <Delay = 2.23>
+ST_19 : Operation 341 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:47->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 341 'br' <Predicate = (!tmp_47 & BB_V_1 == 4)> <Delay = 2.23>
+ST_19 : Operation 342 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:46->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 342 'br' <Predicate = (!tmp_47 & BB_V_1 == 2)> <Delay = 2.23>
+ST_19 : Operation 343 [1/1] (2.23ns)   --->   "br label %log_2_32bit.exit" [Ext_KWTA4k_0/solution1/top.cc:60->Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 343 'br' <Predicate = (!tmp_47 & BB_V_1 == 32768)> <Delay = 2.23>
+
+State 20 <SV = 7> <Delay = 6.71>
+ST_20 : Operation 344 [1/1] (0.00ns) (grouped into LUT with out node tmp_48)   --->   "%p_0102_0_i = phi i5 [ 0, %._crit_edge.i2630 ], [ -1, %118 ], [ -2, %117 ], [ -3, %116 ], [ -4, %115 ], [ -5, %114 ], [ -6, %113 ], [ -7, %112 ], [ -8, %111 ], [ -9, %110 ], [ -10, %109 ], [ -11, %108 ], [ -12, %107 ], [ -13, %106 ], [ -14, %105 ], [ -15, %104 ], [ -16, %103 ]"   --->   Operation 344 'phi' 'p_0102_0_i' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 345 [1/1] (0.00ns) (grouped into LUT with out node tmp_48)   --->   "%p_0102_0_i_cast = zext i5 %p_0102_0_i to i6" [Ext_KWTA4k_0/solution1/top.cc:116->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 345 'zext' 'p_0102_0_i_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 346 [1/1] (1.78ns) (out node of the LUT)   --->   "%tmp_48 = add i6 %p_0102_0_i_cast, %p_061_0_i_cast" [Ext_KWTA4k_0/solution1/top.cc:116->Ext_KWTA4k_0/solution1/top.cc:261]   --->   Operation 346 'add' 'tmp_48' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 347 [1/1] (2.77ns)   --->   "%tmp_49 = icmp eq i64 %tmp0_V_6, 0" [Ext_KWTA4k_0/solution1/top.cc:270]   --->   Operation 347 'icmp' 'tmp_49' <Predicate = true> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 348 [1/1] (2.47ns)   --->   "%tmp_50 = icmp eq i32 %p_Val2_11, %tmp_45" [Ext_KWTA4k_0/solution1/top.cc:270]   --->   Operation 348 'icmp' 'tmp_50' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 349 [1/1] (0.97ns)   --->   "%or_cond = or i1 %tmp_49, %tmp_50" [Ext_KWTA4k_0/solution1/top.cc:270]   --->   Operation 349 'or' 'or_cond' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 350 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %119, label %_ZlsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit" [Ext_KWTA4k_0/solution1/top.cc:270]   --->   Operation 350 'br' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 351 [1/1] (0.00ns)   --->   "%r_V_12 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_42, i5 0)" [Ext_KWTA4k_0/solution1/top.cc:275]   --->   Operation 351 'bitconcatenate' 'r_V_12' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_20 : Operation 352 [1/1] (0.00ns)   --->   "%tmp_65_cast = zext i6 %tmp_48 to i13" [Ext_KWTA4k_0/solution1/top.cc:275]   --->   Operation 352 'zext' 'tmp_65_cast' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_20 : Operation 353 [1/1] (1.67ns)   --->   "%tree_offset_V = add i13 %r_V_12, %tmp_65_cast" [Ext_KWTA4k_0/solution1/top.cc:275]   --->   Operation 353 'add' 'tree_offset_V' <Predicate = (!or_cond)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 354 [1/1] (0.00ns)   --->   "%tmp_51 = zext i13 %tree_offset_V to i64" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 354 'zext' 'tmp_51' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_20 : Operation 355 [1/1] (0.00ns)   --->   "%group_tree_V_addr_1 = getelementptr [2048 x i4]* @group_tree_V, i64 0, i64 %tmp_51" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 355 'getelementptr' 'group_tree_V_addr_1' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_20 : Operation 356 [2/2] (3.25ns)   --->   "%lhs_V_1 = load i4* %group_tree_V_addr_1, align 1" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 356 'load' 'lhs_V_1' <Predicate = (!or_cond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_20 : Operation 357 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 -1)" [Ext_KWTA4k_0/solution1/top.cc:272]   --->   Operation 357 'write' <Predicate = (or_cond)> <Delay = 0.00>
+ST_20 : Operation 358 [1/1] (0.00ns)   --->   "br label %133" [Ext_KWTA4k_0/solution1/top.cc:273]   --->   Operation 358 'br' <Predicate = (or_cond)> <Delay = 0.00>
+
+State 21 <SV = 8> <Delay = 5.79>
+ST_21 : Operation 359 [1/1] (0.00ns)   --->   "%tree_offset_V_cast = zext i13 %tree_offset_V to i16" [Ext_KWTA4k_0/solution1/top.cc:275]   --->   Operation 359 'zext' 'tree_offset_V_cast' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 360 [1/2] (3.25ns)   --->   "%lhs_V_1 = load i4* %group_tree_V_addr_1, align 1" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 360 'load' 'lhs_V_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_21 : Operation 361 [1/1] (0.00ns)   --->   "%tmp_75 = trunc i4 %lhs_V_1 to i2" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 361 'trunc' 'tmp_75' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 362 [1/1] (0.00ns) (grouped into LUT with out node cond)   --->   "%group_tree_tmp_V = xor i2 %tmp_75, -1" [Ext_KWTA4k_0/solution1/top.cc:280]   --->   Operation 362 'xor' 'group_tree_tmp_V' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 363 [1/1] (1.56ns)   --->   "%tmp_52 = add i2 1, %tmp_75" [Ext_KWTA4k_0/solution1/top.cc:284]   --->   Operation 363 'add' 'tmp_52' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 364 [1/1] (0.00ns) (grouped into LUT with out node cond)   --->   "%group_tree_tmp_maske = and i2 %tmp_52, %group_tree_tmp_V" [Ext_KWTA4k_0/solution1/top.cc:284]   --->   Operation 364 'and' 'group_tree_tmp_maske' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 365 [1/1] (0.97ns) (out node of the LUT)   --->   "%cond = icmp eq i2 %group_tree_tmp_maske, -2" [Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:285]   --->   Operation 365 'icmp' 'cond' <Predicate = true> <Delay = 0.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 366 [1/1] (0.00ns)   --->   "%r_V_13 = call i14 @_ssdm_op_BitConcatenate.i14.i13.i1(i13 %tree_offset_V, i1 %cond)" [Ext_KWTA4k_0/solution1/top.cc:288]   --->   Operation 366 'bitconcatenate' 'r_V_13' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 367 [1/1] (0.00ns)   --->   "%tmp_53 = zext i14 %r_V_13 to i32" [Ext_KWTA4k_0/solution1/top.cc:292]   --->   Operation 367 'zext' 'tmp_53' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 368 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 %tmp_53)" [Ext_KWTA4k_0/solution1/top.cc:292]   --->   Operation 368 'write' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 369 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_cmd, i8 4)" [Ext_KWTA4k_0/solution1/top.cc:297]   --->   Operation 369 'write' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 370 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %com_port_layer_V, i8 11)" [Ext_KWTA4k_0/solution1/top.cc:298]   --->   Operation 370 'write' <Predicate = true> <Delay = 0.00>
+
+State 22 <SV = 9> <Delay = 0.00>
+ST_22 : Operation 371 [1/1] (0.00ns)   --->   "%tmp_54 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str25)" [Ext_KWTA4k_0/solution1/top.cc:302]   --->   Operation 371 'specregionbegin' 'tmp_54' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 372 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:303]   --->   Operation 372 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 373 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i16P(i16* %com_port_target_V, i16 %tree_offset_V_cast)" [Ext_KWTA4k_0/solution1/top.cc:304]   --->   Operation 373 'write' <Predicate = true> <Delay = 0.00>
+
+State 23 <SV = 10> <Delay = 0.00>
+ST_23 : Operation 374 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [Ext_KWTA4k_0/solution1/top.cc:305]   --->   Operation 374 'wait' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 375 [1/1] (0.00ns)   --->   "%empty_53 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str25, i32 %tmp_54)" [Ext_KWTA4k_0/solution1/top.cc:306]   --->   Operation 375 'specregionend' 'empty_53' <Predicate = true> <Delay = 0.00>
+
+State 24 <SV = 11> <Delay = 3.25>
+ST_24 : Operation 376 [1/1] (0.00ns)   --->   "%tmp_55 = zext i1 %cond to i64" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 376 'zext' 'tmp_55' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 377 [1/1] (0.00ns)   --->   "%mark_mask_V_addr_1 = getelementptr [128 x i4]* @mark_mask_V, i64 0, i64 %tmp_55" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 377 'getelementptr' 'mark_mask_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 378 [2/2] (3.25ns)   --->   "%rhs_V = load i4* %mark_mask_V_addr_1, align 1" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 378 'load' 'rhs_V' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+
+State 25 <SV = 12> <Delay = 7.48>
+ST_25 : Operation 379 [1/2] (3.25ns)   --->   "%rhs_V = load i4* %mark_mask_V_addr_1, align 1" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 379 'load' 'rhs_V' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_25 : Operation 380 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_4)   --->   "%tmp_76 = trunc i4 %rhs_V to i2" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 380 'trunc' 'tmp_76' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 381 [1/1] (0.97ns)   --->   "%r_V_14 = or i4 %rhs_V, %lhs_V_1" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 381 'or' 'r_V_14' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 382 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_4)   --->   "%r_V_17_cast = or i2 %tmp_76, %tmp_75" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 382 'or' 'r_V_17_cast' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 383 [1/1] (3.25ns)   --->   "store i4 %r_V_14, i4* %group_tree_V_addr_1, align 1" [Ext_KWTA4k_0/solution1/top.cc:307]   --->   Operation 383 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 2048> <RAM>
+ST_25 : Operation 384 [1/1] (0.00ns)   --->   "%i_assign_5 = zext i6 %tmp_48 to i32" [Ext_KWTA4k_0/solution1/top.cc:314]   --->   Operation 384 'zext' 'i_assign_5' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 385 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_Repl2_4 = icmp ne i2 %r_V_17_cast, -1" [Ext_KWTA4k_0/solution1/top.cc:314]   --->   Operation 385 'icmp' 'p_Repl2_4' <Predicate = true> <Delay = 0.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 386 [1/1] (0.00ns)   --->   "%p_Result_6 = call i32 @_ssdm_op_BitSet.i32.i32.i32.i1(i32 %p_Val2_11, i32 %i_assign_5, i1 %p_Repl2_4)" [Ext_KWTA4k_0/solution1/top.cc:314]   --->   Operation 386 'bitset' 'p_Result_6' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 387 [1/1] (3.25ns)   --->   "store i32 %p_Result_6, i32* %heap_tree_V_addr_3, align 4" [Ext_KWTA4k_0/solution1/top.cc:314]   --->   Operation 387 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_25 : Operation 388 [1/1] (0.00ns)   --->   "%i_assign_6 = zext i8 %tmp_42 to i32" [Ext_KWTA4k_0/solution1/top.cc:315]   --->   Operation 388 'zext' 'i_assign_6' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 389 [1/1] (2.47ns)   --->   "%p_Repl2_5 = icmp ne i32 %p_Result_6, 0" [Ext_KWTA4k_0/solution1/top.cc:315]   --->   Operation 389 'icmp' 'p_Repl2_5' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 390 [1/1] (0.00ns)   --->   "%p_Result_7 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_5, i32 %i_assign_6, i1 %p_Repl2_5)" [Ext_KWTA4k_0/solution1/top.cc:315]   --->   Operation 390 'bitset' 'p_Result_7' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 391 [1/1] (1.81ns)   --->   "br label %120"   --->   Operation 391 'br' <Predicate = true> <Delay = 1.81>
+
+State 26 <SV = 3> <Delay = 0.00>
+ST_26 : Operation 392 [1/1] (0.00ns)   --->   "%tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str22)" [Ext_KWTA4k_0/solution1/top.cc:204]   --->   Operation 392 'specregionbegin' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 393 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [Ext_KWTA4k_0/solution1/top.cc:205]   --->   Operation 393 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 394 [1/1] (0.00ns)   --->   "%addr_HTA_V_3 = call i16 @_ssdm_op_Read.ap_hs.volatile.i16P(i16* %com_port_allocated_addr_V)" [Ext_KWTA4k_0/solution1/top.cc:206]   --->   Operation 394 'read' 'addr_HTA_V_3' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 395 [1/1] (0.00ns)   --->   "%loc2_V = trunc i16 %addr_HTA_V_3 to i5" [Ext_KWTA4k_0/solution1/top.cc:206]   --->   Operation 395 'trunc' 'loc2_V' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 396 [1/1] (0.00ns)   --->   "%empty_52 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str22, i32 %tmp_7)" [Ext_KWTA4k_0/solution1/top.cc:208]   --->   Operation 396 'specregionend' 'empty_52' <Predicate = true> <Delay = 0.00>
+
+State 27 <SV = 4> <Delay = 4.98>
+ST_27 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_38 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %addr_HTA_V_3, i32 15)" [Ext_KWTA4k_0/solution1/top.cc:209]   --->   Operation 397 'bitselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 398 [1/1] (0.00ns)   --->   "br i1 %tmp_38, label %19, label %_ZrsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit101" [Ext_KWTA4k_0/solution1/top.cc:209]   --->   Operation 398 'br' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 399 [1/1] (0.00ns)   --->   "%tmp_59 = shl i16 %addr_HTA_V_3, 1" [Ext_KWTA4k_0/solution1/top.cc:216]   --->   Operation 399 'shl' 'tmp_59' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 400 [1/1] (0.00ns)   --->   "%tmp_8_cast = zext i16 %tmp_59 to i32" [Ext_KWTA4k_0/solution1/top.cc:216]   --->   Operation 400 'zext' 'tmp_8_cast' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 401 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 %tmp_8_cast)" [Ext_KWTA4k_0/solution1/top.cc:216]   --->   Operation 401 'write' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 402 [1/1] (0.00ns)   --->   "%r_V_s = call i11 @_ssdm_op_PartSelect.i11.i16.i32.i32(i16 %addr_HTA_V_3, i32 5, i32 15)" [Ext_KWTA4k_0/solution1/top.cc:218]   --->   Operation 402 'partselect' 'r_V_s' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 403 [1/1] (1.36ns)   --->   "%tmp_3 = icmp ult i5 %layer0_V, 7" [Ext_KWTA4k_0/solution1/top.cc:220]   --->   Operation 403 'icmp' 'tmp_3' <Predicate = (!tmp_38)> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 404 [1/1] (0.00ns)   --->   "%tmp_60 = trunc i5 %layer0_V to i4" [Ext_KWTA4k_0/solution1/top.cc:220]   --->   Operation 404 'trunc' 'tmp_60' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 405 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %20, label %21" [Ext_KWTA4k_0/solution1/top.cc:220]   --->   Operation 405 'br' <Predicate = (!tmp_38)> <Delay = 0.00>
+ST_27 : Operation 406 [1/1] (1.73ns)   --->   "%r_V_5 = sub i4 -5, %tmp_60" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 406 'sub' 'r_V_5' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 407 [1/1] (0.00ns)   --->   "%tmp_20 = zext i4 %r_V_5 to i64" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 407 'zext' 'tmp_20' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 0.00>
+ST_27 : Operation 408 [1/1] (0.00ns)   --->   "%maintain_mask_V_addr_1 = getelementptr [7 x i33]* @maintain_mask_V, i64 0, i64 %tmp_20" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 408 'getelementptr' 'maintain_mask_V_addr_1' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 0.00>
+ST_27 : Operation 409 [2/2] (3.25ns)   --->   "%maintain_mask_V_load_1 = load i33* %maintain_mask_V_addr_1, align 8" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 409 'load' 'maintain_mask_V_load_1' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_27 : Operation 410 [1/1] (0.00ns)   --->   "%tmp_21 = zext i11 %r_V_s to i64" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 410 'zext' 'tmp_21' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 0.00>
+ST_27 : Operation 411 [1/1] (0.00ns)   --->   "%heap_tree_V_addr = getelementptr [64 x i32]* @heap_tree_V, i64 0, i64 %tmp_21" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 411 'getelementptr' 'heap_tree_V_addr' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 0.00>
+ST_27 : Operation 412 [2/2] (3.25ns)   --->   "%heap_tree_V_load = load i32* %heap_tree_V_addr, align 4" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 412 'load' 'heap_tree_V_load' <Predicate = (!tmp_38 & !tmp_3)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_27 : Operation 413 [1/1] (1.73ns)   --->   "%r_V_3 = sub i4 6, %tmp_60" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 413 'sub' 'r_V_3' <Predicate = (!tmp_38 & tmp_3)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 414 [1/1] (0.00ns)   --->   "%tmp_17 = zext i4 %r_V_3 to i64" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 414 'zext' 'tmp_17' <Predicate = (!tmp_38 & tmp_3)> <Delay = 0.00>
+ST_27 : Operation 415 [1/1] (0.00ns)   --->   "%maintain_mask_V_addr = getelementptr [7 x i33]* @maintain_mask_V, i64 0, i64 %tmp_17" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 415 'getelementptr' 'maintain_mask_V_addr' <Predicate = (!tmp_38 & tmp_3)> <Delay = 0.00>
+ST_27 : Operation 416 [2/2] (3.25ns)   --->   "%maintain_mask_V_load = load i33* %maintain_mask_V_addr, align 8" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 416 'load' 'maintain_mask_V_load' <Predicate = (!tmp_38 & tmp_3)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_27 : Operation 417 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 -1)" [Ext_KWTA4k_0/solution1/top.cc:211]   --->   Operation 417 'write' <Predicate = (tmp_38)> <Delay = 0.00>
+ST_27 : Operation 418 [1/1] (0.00ns)   --->   "br label %133" [Ext_KWTA4k_0/solution1/top.cc:212]   --->   Operation 418 'br' <Predicate = (tmp_38)> <Delay = 0.00>
+
+State 28 <SV = 5> <Delay = 7.67>
+ST_28 : Operation 419 [1/2] (3.25ns)   --->   "%maintain_mask_V_load_1 = load i33* %maintain_mask_V_addr_1, align 8" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 419 'load' 'maintain_mask_V_load_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+ST_28 : Operation 420 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_63 = trunc i33 %maintain_mask_V_load_1 to i32" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 420 'trunc' 'tmp_63' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 421 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_25_cast = zext i5 %loc2_V to i32" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 421 'zext' 'tmp_25_cast' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 422 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%r_V_6 = shl i32 %tmp_63, %tmp_25_cast" [Ext_KWTA4k_0/solution1/top.cc:231]   --->   Operation 422 'shl' 'r_V_6' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.44> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 423 [1/2] (3.25ns)   --->   "%heap_tree_V_load = load i32* %heap_tree_V_addr, align 4" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 423 'load' 'heap_tree_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_28 : Operation 424 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_22 = xor i32 %r_V_6, -1" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 424 'xor' 'tmp_22' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 425 [1/1] (4.42ns) (out node of the LUT)   --->   "%tmp_23 = and i32 %heap_tree_V_load, %tmp_22" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 425 'and' 'tmp_23' <Predicate = true> <Delay = 4.42> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 6> <Delay = 3.25>
+ST_29 : Operation 426 [1/1] (3.25ns)   --->   "store i32 %tmp_23, i32* %heap_tree_V_addr, align 4" [Ext_KWTA4k_0/solution1/top.cc:237]   --->   Operation 426 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_29 : Operation 427 [1/1] (0.00ns)   --->   "%i_assign = zext i11 %r_V_s to i32" [Ext_KWTA4k_0/solution1/top.cc:238]   --->   Operation 427 'zext' 'i_assign' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 428 [1/1] (2.47ns)   --->   "%p_Repl2_s = icmp ne i32 %tmp_23, 0" [Ext_KWTA4k_0/solution1/top.cc:238]   --->   Operation 428 'icmp' 'p_Repl2_s' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 429 [1/1] (0.00ns)   --->   "%p_Result_s = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_5, i32 %i_assign, i1 %p_Repl2_s)" [Ext_KWTA4k_0/solution1/top.cc:238]   --->   Operation 429 'bitset' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 430 [1/1] (1.81ns)   --->   "br label %120"   --->   Operation 430 'br' <Predicate = true> <Delay = 1.81>
+
+State 30 <SV = 5> <Delay = 3.25>
+ST_30 : Operation 431 [1/2] (3.25ns)   --->   "%maintain_mask_V_load = load i33* %maintain_mask_V_addr, align 8" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 431 'load' 'maintain_mask_V_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 33> <Depth = 7> <ROM>
+
+State 31 <SV = 6> <Delay = 4.44>
+ST_31 : Operation 432 [1/1] (0.00ns) (grouped into LUT with out node tmp_19)   --->   "%maintain_mask_V_load_4 = sext i33 %maintain_mask_V_load to i64" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 432 'sext' 'maintain_mask_V_load_4' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 433 [1/1] (0.00ns) (grouped into LUT with out node tmp_19)   --->   "%tmp_18 = zext i11 %r_V_s to i64" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 433 'zext' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 434 [1/1] (0.00ns) (grouped into LUT with out node tmp_19)   --->   "%r_V_4 = shl i64 %maintain_mask_V_load_4, %tmp_18" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 434 'shl' 'r_V_4' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.44> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 435 [1/1] (0.00ns) (grouped into LUT with out node tmp_19)   --->   "%tmp0_V = xor i64 %r_V_4, -1" [Ext_KWTA4k_0/solution1/top.cc:222]   --->   Operation 435 'xor' 'tmp0_V' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 436 [1/1] (4.44ns) (out node of the LUT)   --->   "%tmp_19 = and i64 %p_Val2_5, %tmp0_V" [Ext_KWTA4k_0/solution1/top.cc:225]   --->   Operation 436 'and' 'tmp_19' <Predicate = true> <Delay = 4.44> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 437 [1/1] (1.81ns)   --->   "br label %120" [Ext_KWTA4k_0/solution1/top.cc:228]   --->   Operation 437 'br' <Predicate = true> <Delay = 1.81>
+
+State 32 <SV = 13> <Delay = 1.81>
+ST_32 : Operation 438 [1/1] (0.00ns)   --->   "%storemerge1 = phi i64 [ %p_Result_7, %_ZlsILi16ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ %p_Result_s, %21 ], [ %tmp_19, %20 ]"   --->   Operation 438 'phi' 'storemerge1' <Predicate = (tmp_4 & !tmp_5 & !or_cond) | (tmp_4 & tmp_5 & !tmp_38)> <Delay = 0.00>
+ST_32 : Operation 439 [1/1] (1.81ns)   --->   "store i64 %storemerge1, i64* @top_heap_V_0, align 8" [Ext_KWTA4k_0/solution1/top.cc:315]   --->   Operation 439 'store' <Predicate = (tmp_4 & !tmp_5 & !or_cond) | (tmp_4 & tmp_5 & !tmp_38)> <Delay = 1.81>
+ST_32 : Operation 440 [1/1] (0.00ns)   --->   "br label %132" [Ext_KWTA4k_0/solution1/top.cc:322]   --->   Operation 440 'br' <Predicate = (tmp_4 & !tmp_5 & !or_cond) | (tmp_4 & tmp_5 & !tmp_38)> <Delay = 0.00>
+ST_32 : Operation 441 [1/1] (0.00ns)   --->   "br label %133" [Ext_KWTA4k_0/solution1/top.cc:455]   --->   Operation 441 'br' <Predicate = (!tmp_4) | (!tmp_5 & !or_cond) | (tmp_5 & !tmp_38)> <Delay = 0.00>
+ST_32 : Operation 442 [1/1] (0.00ns)   --->   "ret void" [Ext_KWTA4k_0/solution1/top.cc:455]   --->   Operation 442 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.08ns
+The critical path consists of the following:
+	wire read on port 'alloc_size' (Ext_KWTA4k_0/solution1/top.cc:165) [29]  (0 ns)
+	'add' operation ('tmp_size.V', Ext_KWTA4k_0/solution1/top.cc:167) [32]  (2.08 ns)
+
+ <State 2>: 5.3ns
+The critical path consists of the following:
+	'sub' operation ('p_s', Ext_KWTA4k_0/solution1/top.cc:174) [38]  (2.08 ns)
+	'and' operation ('TMP_1.V', Ext_KWTA4k_0/solution1/top.cc:174) [39]  (0.99 ns)
+	multiplexor before 'phi' operation ('layer0.V') [72]  (2.23 ns)
+
+ <State 3>: 3.52ns
+The critical path consists of the following:
+	'load' operation ('__Val2__', Ext_KWTA4k_0/solution1/top.cc:225) on static variable 'top_heap_V_0' [78]  (0 ns)
+	'sub' operation ('p_not', Ext_KWTA4k_0/solution1/top.cc:250) [212]  (3.52 ns)
+
+ <State 4>: 4.23ns
+The critical path consists of the following:
+	'load' operation ('group_tree_V_load', Ext_KWTA4k_0/solution1/top.cc:396) on array 'group_tree_V' [96]  (3.25 ns)
+	'xor' operation ('tmp_14', Ext_KWTA4k_0/solution1/top.cc:396) [103]  (0 ns)
+	'or' operation ('tmp_15', Ext_KWTA4k_0/solution1/top.cc:396) [104]  (0.975 ns)
+
+ <State 5>: 4.59ns
+The critical path consists of the following:
+	'phi' operation ('loc_in_group_tree.V', Ext_KWTA4k_0/solution1/top.cc:405) with incoming values : ('phitmp3', Ext_KWTA4k_0/solution1/top.cc:405) [112]  (0 ns)
+	'lshr' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:410) [126]  (4.59 ns)
+
+ <State 6>: 4.23ns
+The critical path consists of the following:
+	'xor' operation ('tmp_36', Ext_KWTA4k_0/solution1/top.cc:414) [136]  (0.975 ns)
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:414) of variable 'tmp_36', Ext_KWTA4k_0/solution1/top.cc:414 on array 'group_tree_V' [137]  (3.25 ns)
+
+ <State 7>: 7.54ns
+The critical path consists of the following:
+	'load' operation ('__Val2__', Ext_KWTA4k_0/solution1/top.cc:419) on array 'heap_tree_V' [142]  (3.25 ns)
+	'icmp' operation ('v', Ext_KWTA4k_0/solution1/top.cc:420) [146]  (2.47 ns)
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:420) of variable '__Result__', Ext_KWTA4k_0/solution1/top.cc:420 on static variable 'top_heap_V_0' [148]  (1.81 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 4.99ns
+The critical path consists of the following:
+	'sub' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:345) [191]  (1.74 ns)
+	'getelementptr' operation ('maintain_mask_V_addr_2', Ext_KWTA4k_0/solution1/top.cc:345) [193]  (0 ns)
+	'load' operation ('maintain_mask_V_load_2', Ext_KWTA4k_0/solution1/top.cc:345) on array 'maintain_mask_V' [194]  (3.25 ns)
+
+ <State 11>: 7.67ns
+The critical path consists of the following:
+	'load' operation ('maintain_mask_V_load_3', Ext_KWTA4k_0/solution1/top.cc:356) on array 'maintain_mask_V' [177]  (3.25 ns)
+	'shl' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:356) [180]  (0 ns)
+	'or' operation ('tmp_29', Ext_KWTA4k_0/solution1/top.cc:361) [184]  (4.42 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:361) of variable 'tmp_29', Ext_KWTA4k_0/solution1/top.cc:361 on array 'heap_tree_V' [185]  (3.25 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('maintain_mask_V_load_2', Ext_KWTA4k_0/solution1/top.cc:345) on array 'maintain_mask_V' [194]  (3.25 ns)
+
+ <State 14>: 4.45ns
+The critical path consists of the following:
+	'shl' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:345) [197]  (0 ns)
+	'or' operation ('tmp_26', Ext_KWTA4k_0/solution1/top.cc:350) [198]  (4.45 ns)
+
+ <State 15>: 1.81ns
+The critical path consists of the following:
+	'phi' operation ('__Result__') with incoming values : ('__Result__', Ext_KWTA4k_0/solution1/top.cc:362) ('tmp_26', Ext_KWTA4k_0/solution1/top.cc:350) [201]  (0 ns)
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:350) of variable '__Result__' on static variable 'top_heap_V_0' [202]  (1.81 ns)
+
+ <State 16>: 5.65ns
+The critical path consists of the following:
+	'and' operation ('tmp0.V', Ext_KWTA4k_0/solution1/top.cc:250) [213]  (0.99 ns)
+	'icmp' operation ('tmp_40', Ext_KWTA4k_0/solution1/top.cc:127->Ext_KWTA4k_0/solution1/top.cc:251) [292]  (2.43 ns)
+	multiplexor before 'phi' operation ('p_0248_0_i1') [327]  (2.23 ns)
+	'phi' operation ('p_0248_0_i1') [327]  (0 ns)
+
+ <State 17>: 6.95ns
+The critical path consists of the following:
+	'phi' operation ('p_0244_0_i1') [363]  (0 ns)
+	'add' operation ('tmp3', Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251) [368]  (1.83 ns)
+	'add' operation ('tmp_42', Ext_KWTA4k_0/solution1/top.cc:129->Ext_KWTA4k_0/solution1/top.cc:251) [370]  (1.87 ns)
+	'getelementptr' operation ('heap_tree_V_addr_3', Ext_KWTA4k_0/solution1/top.cc:260) [372]  (0 ns)
+	'load' operation ('__Val2__', Ext_KWTA4k_0/solution1/top.cc:260) on array 'heap_tree_V' [373]  (3.25 ns)
+
+ <State 18>: 5.81ns
+The critical path consists of the following:
+	'load' operation ('__Val2__', Ext_KWTA4k_0/solution1/top.cc:260) on array 'heap_tree_V' [373]  (3.25 ns)
+	'add' operation ('tmp_44', Ext_KWTA4k_0/solution1/top.cc:260) [374]  (2.55 ns)
+
+ <State 19>: 8.21ns
+The critical path consists of the following:
+	'and' operation ('tmp_45', Ext_KWTA4k_0/solution1/top.cc:260) [375]  (0.993 ns)
+	'sub' operation ('tmp1.V', Ext_KWTA4k_0/solution1/top.cc:260) [376]  (2.55 ns)
+	'icmp' operation ('tmp_47', Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261) [416]  (2.43 ns)
+	multiplexor before 'phi' operation ('p_0102_0_i') [451]  (2.23 ns)
+
+ <State 20>: 6.71ns
+The critical path consists of the following:
+	'phi' operation ('p_0102_0_i') [451]  (0 ns)
+	'add' operation ('tmp_48', Ext_KWTA4k_0/solution1/top.cc:116->Ext_KWTA4k_0/solution1/top.cc:261) [453]  (1.78 ns)
+	'add' operation ('tree_offset.V', Ext_KWTA4k_0/solution1/top.cc:275) [461]  (1.68 ns)
+	'getelementptr' operation ('group_tree_V_addr_1', Ext_KWTA4k_0/solution1/top.cc:280) [464]  (0 ns)
+	'load' operation ('lhs.V', Ext_KWTA4k_0/solution1/top.cc:280) on array 'group_tree_V' [465]  (3.25 ns)
+
+ <State 21>: 5.8ns
+The critical path consists of the following:
+	'load' operation ('lhs.V', Ext_KWTA4k_0/solution1/top.cc:280) on array 'group_tree_V' [465]  (3.25 ns)
+	'add' operation ('tmp_52', Ext_KWTA4k_0/solution1/top.cc:284) [468]  (1.56 ns)
+	'and' operation ('group_tree_tmp_masked.V', Ext_KWTA4k_0/solution1/top.cc:284) [469]  (0 ns)
+	'icmp' operation ('cond', Ext_KWTA4k_0/solution1/top.cc:43->Ext_KWTA4k_0/solution1/top.cc:125->Ext_KWTA4k_0/solution1/top.cc:285) [470]  (0.978 ns)
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+ <State 24>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('mark_mask_V_addr_1', Ext_KWTA4k_0/solution1/top.cc:307) [482]  (0 ns)
+	'load' operation ('rhs.V', Ext_KWTA4k_0/solution1/top.cc:307) on array 'mark_mask_V' [483]  (3.25 ns)
+
+ <State 25>: 7.49ns
+The critical path consists of the following:
+	'load' operation ('rhs.V', Ext_KWTA4k_0/solution1/top.cc:307) on array 'mark_mask_V' [483]  (3.25 ns)
+	'or' operation ('r_V_17_cast', Ext_KWTA4k_0/solution1/top.cc:307) [486]  (0 ns)
+	'icmp' operation ('v', Ext_KWTA4k_0/solution1/top.cc:314) [489]  (0.978 ns)
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:314) of variable '__Result__', Ext_KWTA4k_0/solution1/top.cc:314 on array 'heap_tree_V' [491]  (3.25 ns)
+
+ <State 26>: 0ns
+The critical path consists of the following:
+
+ <State 27>: 4.99ns
+The critical path consists of the following:
+	'sub' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:231) [519]  (1.74 ns)
+	'getelementptr' operation ('maintain_mask_V_addr_1', Ext_KWTA4k_0/solution1/top.cc:231) [521]  (0 ns)
+	'load' operation ('maintain_mask_V_load_1', Ext_KWTA4k_0/solution1/top.cc:231) on array 'maintain_mask_V' [522]  (3.25 ns)
+
+ <State 28>: 7.67ns
+The critical path consists of the following:
+	'load' operation ('maintain_mask_V_load_1', Ext_KWTA4k_0/solution1/top.cc:231) on array 'maintain_mask_V' [522]  (3.25 ns)
+	'shl' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:231) [525]  (0 ns)
+	'xor' operation ('tmp_22', Ext_KWTA4k_0/solution1/top.cc:237) [529]  (0 ns)
+	'and' operation ('tmp_23', Ext_KWTA4k_0/solution1/top.cc:237) [530]  (4.42 ns)
+
+ <State 29>: 3.25ns
+The critical path consists of the following:
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:237) of variable 'tmp_23', Ext_KWTA4k_0/solution1/top.cc:237 on array 'heap_tree_V' [531]  (3.25 ns)
+
+ <State 30>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('maintain_mask_V_load', Ext_KWTA4k_0/solution1/top.cc:222) on array 'maintain_mask_V' [540]  (3.25 ns)
+
+ <State 31>: 4.45ns
+The critical path consists of the following:
+	'shl' operation ('r.V', Ext_KWTA4k_0/solution1/top.cc:222) [543]  (0 ns)
+	'xor' operation ('val', Ext_KWTA4k_0/solution1/top.cc:222) [544]  (0 ns)
+	'and' operation ('tmp_19', Ext_KWTA4k_0/solution1/top.cc:225) [545]  (4.45 ns)
+
+ <State 32>: 1.81ns
+The critical path consists of the following:
+	'phi' operation ('__Result__') with incoming values : ('__Result__', Ext_KWTA4k_0/solution1/top.cc:315) ('__Result__', Ext_KWTA4k_0/solution1/top.cc:238) ('tmp_19', Ext_KWTA4k_0/solution1/top.cc:225) [548]  (0 ns)
+	'store' operation (Ext_KWTA4k_0/solution1/top.cc:315) of variable '__Result__' on static variable 'top_heap_V_0' [549]  (1.81 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

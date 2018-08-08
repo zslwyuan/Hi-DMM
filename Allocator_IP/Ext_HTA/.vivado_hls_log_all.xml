@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:53.603+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:52.784+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:52.780+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:52.641+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:52.638+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:52.405+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:51.665+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:51.236+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 5 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:50.734+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 3 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:50.731+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-64] Unable to schedule the loop exit test ('icmp' operation ('tmp_52', Ext_HTA/solution1/top.cc:404)) in the first pipeline iteration (II = 1 cycles)." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:50.602+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section8'." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:50.593+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-105] Ignore complete array partition directive on 'buddy_tree.V'  in dimension 1: conflict with memory core assignment directive.&#xA;." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:49.400+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] Ext_HTA/solution1/top.cc:246: variable-indexed range selection may cause suboptimal QoR." projectName="Ext_HTA" solutionName="solution1" date="2018-07-30T20:15:48.862+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

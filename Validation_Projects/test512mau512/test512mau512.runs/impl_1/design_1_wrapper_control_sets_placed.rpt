@@ -1,0 +1,141 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Jul 29 15:06:40 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    71 |
+| Unused register locations in slices containing registers |   162 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |           10 |
+|     10 |            3 |
+|     12 |            4 |
+|     14 |            1 |
+|    16+ |           51 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             260 |           74 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             132 |           34 |
+| Yes          | No                    | No                     |            2504 |          534 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             566 |           78 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+----------------+
+|            Clock Signal           |                                            Enable Signal                                            |                                        Set/Reset Signal                                        | Slice Load Count | Bel Load Count |
++-----------------------------------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/cmd_fu_286[7]_i_2_n_0                                                | design_1_i/HTA512_theta_0/inst/cmd_fu_286[7]_i_1_n_0                                           |                1 |              4 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/addr_layer_map_V_U/HTA512_theta_addrhbi_ram_U/ap_CS_fsm_reg[13][0]   |                                                                                                |                1 |              6 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state13                                                    | design_1_i/HTA512_theta_0/inst/op2_assign_3_reg_961[0]_i_1_n_0                                 |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state5                                                     |                                                                                                |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/tmp_141_reg_38410                                                    |                                                                                                |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_03414_2_in_reg_933                                                 | design_1_i/HTA512_theta_0/inst/p_03398_3_in_reg_942[11]_i_1_n_0                                |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/reg_12620                                                            |                                                                                                |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/shift_constant_V_U/HTA512_theta_shifeOg_rom_U/shift_constant_V_ce0   |                                                                                                |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                     | design_1_i/rst_clk_wiz_100M/U0/EXT_LPF/lpf_int                                                 |                3 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state23                                                    | design_1_i/HTA512_theta_0/inst/clear                                                           |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/buddy_tree_V_1_U/HTA512_theta_buddfYi_ram_U/sel                      | design_1_i/HTA512_theta_0/inst/loc2_V_fu_298[9]                                                |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/buddy_tree_V_0_U/HTA512_theta_buddg8j_ram_U/tmp_72_reg_31960         |                                                                                                |                3 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/buddy_tree_V_0_U/HTA512_theta_buddg8j_ram_U/now2_V_s_reg_3916_reg[2] |                                                                                                |                3 |             10 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[44]                                                        |                                                                                                |                2 |             10 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/buddy_tree_V_1_U/HTA512_theta_buddfYi_ram_U/E[0]                     | design_1_i/HTA512_theta_0/inst/buddy_tree_V_1_U/HTA512_theta_buddfYi_ram_U/ap_NS_fsm139_out    |                2 |             10 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_reg_n_0_[35]                                               |                                                                                                |                2 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/rec_bits_V_3_reg_3506[1]_i_1_n_0                                     |                                                                                                |                2 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/rst_clk_wiz_100M/U0/SEQ/seq_cnt_en                                                       | design_1_i/rst_clk_wiz_100M/U0/SEQ/SEQ_COUNTER/clear                                           |                1 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[43]                                                        |                                                                                                |                1 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/loc1_V_7_fu_302[6]_i_1_n_0                                           |                                                                                                |                3 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state14                                                    | design_1_i/HTA512_theta_0/inst/r_V_2_reg_3445[7]_i_1_n_0                                       |                2 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_3_reg_1135[3]_i_1_n_0                                              |                                                                                                |                3 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/reg_1054[7]_i_2_n_0                                                  | design_1_i/HTA512_theta_0/inst/buddy_tree_V_1_U/HTA512_theta_buddfYi_ram_U/reg_1054_reg[0]_rep |                4 |             18 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_8_reg_1107[8]_i_1_n_0                                              |                                                                                                |                3 |             18 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state33                                                    |                                                                                                |                5 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[19]                                                        |                                                                                                |                4 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/ap_CS_fsm_state3                                                 |                                                                                                |                6 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/ap_CS_fsm_state2                                                 |                                                                                                |                4 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[7]                                                         |                                                                                                |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[11]                                                        |                                                                                                |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/E[0]                                    | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_free_1_s_fu_95/SR[0]                                |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state8                                                     |                                                                                                |                4 |             26 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/mark_mask_V_U/HTA512_theta_markjbC_rom_U/mark_mask_V_ce0             |                                                                                                |                2 |             28 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state45                                                    |                                                                                                |                6 |             28 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/rhs_V_3_reg_1066[63]_i_2_n_0                                         |                                                                                                |                3 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/addr_tree_map_V_U/HTA512_theta_addribs_ram_U/q0_reg[1]               |                                                                                                |                4 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/addr_tree_map_V_U/HTA512_theta_addribs_ram_U/q0_reg[1]_2             |                                                                                                |                4 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/addr_tree_map_V_U/HTA512_theta_addribs_ram_U/q0_reg[1]_1             |                                                                                                |                4 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state20                                                    |                                                                                                |                3 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/addr_tree_map_V_U/HTA512_theta_addribs_ram_U/q0_reg[1]_0             |                                                                                                |                4 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state11                                                    |                                                                                                |                7 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state16                                                    |                                                                                                |                7 |             34 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state15                                                    |                                                                                                |                6 |             36 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state38                                                    |                                                                                                |                6 |             36 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state14                                                    |                                                                                                |                9 |             36 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state36                                                    |                                                                                                |               11 |             44 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/group_tree_V_1_U/HTA512_theta_groubkb_ram_U/ap_NS_fsm138_out         |                                                                                                |               13 |             50 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_free_1_s_fu_95/r_fu_40_reg[1]                            | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/r_fu_40_reg[1]                     |                8 |             62 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state9                                                     |                                                                                                |               16 |             62 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state22                                                    |                                                                                                |               14 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/ap_NS_fsm[2]                            |                                                                                                |               15 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/group_tree_V_1_U/HTA512_theta_groubkb_ram_U/E[0]                     |                                                                                                |                9 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state34                                                    |                                                                                                |               12 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state22                                                    | design_1_i/HTA512_theta_0/inst/tmp_62_reg_3565[63]_i_1_n_0                                     |               12 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/TMP_0_V_3_reg_35150                                                  | design_1_i/HTA512_theta_0/inst/TMP_0_V_3_reg_3515[63]_i_1_n_0                                  |                6 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state9                                                     | design_1_i/HTA512_theta_0/inst/tmp_40_reg_3351[63]_i_1_n_0                                     |               11 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_03418_2_in_reg_986[3]_i_1_n_0                                      |                                                                                                |                9 |             68 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/alloc_size_ap_ack                                                    |                                                                                                |               11 |             72 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/TMP_0_V_3_reg_35150                                                  |                                                                                                |               14 |             86 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/rhs_V_3_reg_1066[63]_i_2_n_0                                         | design_1_i/HTA512_theta_0/inst/rhs_V_3_reg_1066[63]                                            |               16 |             96 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_03418_2_in_reg_986[3]_i_1_n_0                                      | design_1_i/HTA512_theta_0/inst/p_03366_3_reg_1013[33]                                          |                8 |             96 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                     | design_1_i/rst_clk_wiz_100M/U0/peripheral_reset[0]                                             |               31 |            124 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/storemerge_reg_1077[63]_i_1_n_0                                      |                                                                                                |               62 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_NS_fsm[28]                                                        |                                                                                                |               28 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state30                                                    |                                                                                                |               37 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/rhs_V_5_reg_38150                                                    |                                                                                                |               26 |            134 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/rhs_V_2_fu_294                                                       |                                                                                                |               57 |            148 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/p_03414_2_in_reg_933                                                 |                                                                                                |               14 |            152 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state6                                                     |                                                                                                |               36 |            192 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA512_theta_0/inst/ap_CS_fsm_state12                                                    |                                                                                                |               44 |            256 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                     |                                                                                                |               75 |            262 |
++-----------------------------------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

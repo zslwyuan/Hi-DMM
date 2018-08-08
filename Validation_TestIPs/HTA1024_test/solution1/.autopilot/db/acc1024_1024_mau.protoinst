@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"acc1024_1024_mau": {
+			"proto_instances": {
+			}
+		}
+	}
+}

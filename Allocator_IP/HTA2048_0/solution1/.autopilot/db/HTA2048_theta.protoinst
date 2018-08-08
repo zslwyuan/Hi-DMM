@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"HTA2048_theta": {
+			"proto_instances": {
+			}
+		}
+	}
+}

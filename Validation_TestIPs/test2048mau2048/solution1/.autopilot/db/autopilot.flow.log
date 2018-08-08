@@ -1,0 +1,731 @@
+INFO-FLOW: Workspace /home/tingyuan/test2048mau2048/solution1 opened at Mon Jul 30 17:25:53 CST 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.2 sec.
+Execute   set_part xc7z020clg484-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'test2048mau2048/solution1/top.cc' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test2048mau2048/solution1/top.cc as C++
+Execute       get_default_platform 
+Execute       is_encrypted test2048mau2048/solution1/top.cc 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "test2048mau2048/solution1/top.cc"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E test2048mau2048/solution1/top.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc
+Command       clang done; 1.26 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc"  -o "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.78 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc std=gnu++98 -directive=/home/tingyuan/test2048mau2048/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tingyuan/test2048mau2048/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc std=gnu++98 -directive=/home/tingyuan/test2048mau2048/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tingyuan/test2048mau2048/solution1/solution1.json -quiet -fix-errors /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.03 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tingyuan/test2048mau2048/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cc.diag.yml /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tingyuan/test2048mau2048/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cc.out.log 2> /home/tingyuan/test2048mau2048/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cc.err.log 
+Command       ap_eval done; 0.78 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.15 sec.
+INFO-FLOW: tidy-3.1 time 3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.1.cc std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.1.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.63 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.1.cc"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.2.cc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.1.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.2.cc
+Command       clang done; 1.23 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.2.cc  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.2.cc"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.pragma.2.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.bc
+Command       clang done; 1.87 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/tingyuan/test2048mau2048/solution1/.autopilot/db/top.g.bc -hls-opt -except-internalize acc2048_2048_mau -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.64 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 375.672 ; gain = 0.113 ; free physical = 12668 ; free virtual = 32347
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 375.672 ; gain = 0.113 ; free physical = 12668 ; free virtual = 32347
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.pp.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lfloatconversion -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.64 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top acc2048_2048_mau -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.0.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 375.699 ; gain = 0.141 ; free physical = 12639 ; free virtual = 32318
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.1.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 375.703 ; gain = 0.145 ; free physical = 12653 ; free virtual = 32332
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.g.1.bc to /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/tingyuan/test2048mau2048/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.1.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 12630 ; free virtual = 32310
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.2.bc -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 12602 ; free virtual = 32283
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.91 sec.
+Command     elaborate done; 14.65 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'acc2048_2048_mau' ...
+Execute       ap_set_top_model acc2048_2048_mau 
+WARNING: [SYN 201-103] Legalizing function name 'HLS_free<1>' to 'HLS_free_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc<1>' to 'HLS_malloc_1_s'.
+Execute       get_model_list acc2048_2048_mau -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model acc2048_2048_mau 
+Execute       preproc_iomode -model HLS_malloc<1> 
+Execute       preproc_iomode -model HLS_free<1> 
+Execute       get_model_list acc2048_2048_mau -filter all-wo-channel 
+INFO-FLOW: Model list for configure: HLS_free<1> HLS_malloc<1> acc2048_2048_mau
+INFO-FLOW: Configuring Module : HLS_free<1> ...
+Execute       set_default_model HLS_free<1> 
+Execute       apply_spec_resource_limit HLS_free<1> 
+INFO-FLOW: Configuring Module : HLS_malloc<1> ...
+Execute       set_default_model HLS_malloc<1> 
+Execute       apply_spec_resource_limit HLS_malloc<1> 
+INFO-FLOW: Configuring Module : acc2048_2048_mau ...
+Execute       set_default_model acc2048_2048_mau 
+Execute       apply_spec_resource_limit acc2048_2048_mau 
+INFO-FLOW: Model list for preprocess: HLS_free<1> HLS_malloc<1> acc2048_2048_mau
+INFO-FLOW: Preprocessing Module: HLS_free<1> ...
+Execute       set_default_model HLS_free<1> 
+Execute       cdfg_preprocess -model HLS_free<1> 
+Execute       rtl_gen_preprocess HLS_free<1> 
+INFO-FLOW: Preprocessing Module: HLS_malloc<1> ...
+Execute       set_default_model HLS_malloc<1> 
+Execute       cdfg_preprocess -model HLS_malloc<1> 
+Execute       rtl_gen_preprocess HLS_malloc<1> 
+INFO-FLOW: Preprocessing Module: acc2048_2048_mau ...
+Execute       set_default_model acc2048_2048_mau 
+Execute       cdfg_preprocess -model acc2048_2048_mau 
+Execute       rtl_gen_preprocess acc2048_2048_mau 
+INFO-FLOW: Model list for synthesis: HLS_free<1> HLS_malloc<1> acc2048_2048_mau
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'HLS_free_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model HLS_free<1> 
+Execute       schedule -model HLS_free<1> 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free<1>'.
+WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free<1>'.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.15 seconds; current allocated memory: 89.198 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.sched.adb -f 
+INFO-FLOW: Finish scheduling HLS_free<1>.
+Execute       set_default_model HLS_free<1> 
+Execute       bind -model HLS_free<1> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=HLS_free<1>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 89.246 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.bind.adb -f 
+INFO-FLOW: Finish binding HLS_free<1>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'HLS_malloc_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model HLS_malloc<1> 
+Execute       schedule -model HLS_malloc<1> 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc<1>'.
+WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc<1>'.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 89.344 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.sched.adb -f 
+INFO-FLOW: Finish scheduling HLS_malloc<1>.
+Execute       set_default_model HLS_malloc<1> 
+Execute       bind -model HLS_malloc<1> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=HLS_malloc<1>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 89.395 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.bind.adb -f 
+INFO-FLOW: Finish binding HLS_malloc<1>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'acc2048_2048_mau' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model acc2048_2048_mau 
+Execute       schedule -model acc2048_2048_mau 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 89.692 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.sched.adb -f 
+INFO-FLOW: Finish scheduling acc2048_2048_mau.
+Execute       set_default_model acc2048_2048_mau 
+Execute       bind -model acc2048_2048_mau 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=acc2048_2048_mau
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 89.830 MB.
+Execute       report -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.bind.adb -f 
+INFO-FLOW: Finish binding acc2048_2048_mau.
+Execute       get_model_list acc2048_2048_mau -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess HLS_free<1> 
+Execute       rtl_gen_preprocess HLS_malloc<1> 
+Execute       rtl_gen_preprocess acc2048_2048_mau 
+INFO-FLOW: Model list for RTL generation: HLS_free<1> HLS_malloc<1> acc2048_2048_mau
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'HLS_free_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model HLS_free<1> -vendor xilinx -mg_file /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'HLS_free_1_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 89.981 MB.
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       gen_rtl HLS_free<1> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tingyuan/test2048mau2048/solution1/syn/systemc/HLS_free_1_s -synmodules HLS_free<1> HLS_malloc<1> acc2048_2048_mau 
+Execute       gen_rtl HLS_free<1> -style xilinx -f -lang vhdl -o /home/tingyuan/test2048mau2048/solution1/syn/vhdl/HLS_free_1_s 
+Execute       gen_rtl HLS_free<1> -style xilinx -f -lang vlog -o /home/tingyuan/test2048mau2048/solution1/syn/verilog/HLS_free_1_s 
+Execute       gen_tb_info HLS_free<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s -p /home/tingyuan/test2048mau2048/solution1/.autopilot/db 
+Execute       report -model HLS_free<1> -o /home/tingyuan/test2048mau2048/solution1/syn/report/HLS_free_1_s_csynth.rpt -f 
+Execute       report -model HLS_free<1> -o /home/tingyuan/test2048mau2048/solution1/syn/report/HLS_free_1_s_csynth.xml -f -x 
+Execute       report -model HLS_free<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.verbose.rpt -verbose -f 
+Execute       db_write -model HLS_free<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'HLS_malloc_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model HLS_malloc<1> -vendor xilinx -mg_file /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'HLS_malloc_1_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 90.448 MB.
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       gen_rtl HLS_malloc<1> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tingyuan/test2048mau2048/solution1/syn/systemc/HLS_malloc_1_s -synmodules HLS_free<1> HLS_malloc<1> acc2048_2048_mau 
+Execute       gen_rtl HLS_malloc<1> -style xilinx -f -lang vhdl -o /home/tingyuan/test2048mau2048/solution1/syn/vhdl/HLS_malloc_1_s 
+Execute       gen_rtl HLS_malloc<1> -style xilinx -f -lang vlog -o /home/tingyuan/test2048mau2048/solution1/syn/verilog/HLS_malloc_1_s 
+Execute       gen_tb_info HLS_malloc<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s -p /home/tingyuan/test2048mau2048/solution1/.autopilot/db 
+Execute       report -model HLS_malloc<1> -o /home/tingyuan/test2048mau2048/solution1/syn/report/HLS_malloc_1_s_csynth.rpt -f 
+Execute       report -model HLS_malloc<1> -o /home/tingyuan/test2048mau2048/solution1/syn/report/HLS_malloc_1_s_csynth.xml -f -x 
+Execute       report -model HLS_malloc<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.verbose.rpt -verbose -f 
+Execute       db_write -model HLS_malloc<1> -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'acc2048_2048_mau' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model acc2048_2048_mau -vendor xilinx -mg_file /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'acc2048_2048_mau/alloc_1_size' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'acc2048_2048_mau/alloc_1_addr' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'acc2048_2048_mau/alloc_1_free_target' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'acc2048_2048_mau/alloc_1_cmd' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'acc2048_2048_mau' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'acc2048_2048_mau_req_cmd' to 'acc2048_2048_mau_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'acc2048_2048_mau_req_list' to 'acc2048_2048_mau_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'acc2048_2048_mau'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 91.068 MB.
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       gen_rtl acc2048_2048_mau -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tingyuan/test2048mau2048/solution1/syn/systemc/acc2048_2048_mau -synmodules HLS_free<1> HLS_malloc<1> acc2048_2048_mau 
+Execute       gen_rtl acc2048_2048_mau -istop -style xilinx -f -lang vhdl -o /home/tingyuan/test2048mau2048/solution1/syn/vhdl/acc2048_2048_mau 
+Execute       gen_rtl acc2048_2048_mau -istop -style xilinx -f -lang vlog -o /home/tingyuan/test2048mau2048/solution1/syn/verilog/acc2048_2048_mau 
+Execute       export_constraint_db -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl -f -tool general 
+Execute       report -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.design.xml -verbose -f -dv 
+Execute       report -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau -p /home/tingyuan/test2048mau2048/solution1/.autopilot/db 
+Execute       report -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/syn/report/acc2048_2048_mau_csynth.rpt -f 
+Execute       report -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/syn/report/acc2048_2048_mau_csynth.xml -f -x 
+Execute       report -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.verbose.rpt -verbose -f 
+Execute       db_write -model acc2048_2048_mau -o /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.adb -f 
+Execute       sc_get_clocks acc2048_2048_mau 
+Execute       sc_get_portdomain acc2048_2048_mau 
+INFO-FLOW: Model list for RTL component generation: HLS_free<1> HLS_malloc<1> acc2048_2048_mau
+INFO-FLOW: Handling components in module [HLS_free_1_s] ... 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+INFO-FLOW: Handling components in module [HLS_malloc_1_s] ... 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+INFO-FLOW: Handling components in module [acc2048_2048_mau] ... 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+INFO-FLOW: Found component acc2048_2048_mau_bkb.
+INFO-FLOW: Append model acc2048_2048_mau_bkb
+INFO-FLOW: Found component acc2048_2048_mau_cud.
+INFO-FLOW: Append model acc2048_2048_mau_cud
+INFO-FLOW: Append model HLS_free_1_s
+INFO-FLOW: Append model HLS_malloc_1_s
+INFO-FLOW: Append model acc2048_2048_mau
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: acc2048_2048_mau_bkb acc2048_2048_mau_cud HLS_free_1_s HLS_malloc_1_s acc2048_2048_mau
+INFO-FLOW: To file: write model acc2048_2048_mau_bkb
+INFO-FLOW: To file: write model acc2048_2048_mau_cud
+INFO-FLOW: To file: write model HLS_free_1_s
+INFO-FLOW: To file: write model HLS_malloc_1_s
+INFO-FLOW: To file: write model acc2048_2048_mau
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'acc2048_2048_mau_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'acc2048_2048_mau_cud_rom' using auto ROMs.
+Execute       get_config_sdx -target 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute       sc_get_clocks acc2048_2048_mau 
+Execute       source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 12600 ; free virtual = 32282
+INFO: [SYSC 207-301] Generating SystemC RTL for acc2048_2048_mau.
+INFO: [VHDL 208-304] Generating VHDL RTL for acc2048_2048_mau.
+INFO: [VLOG 209-307] Generating Verilog RTL for acc2048_2048_mau.
+Command     autosyn done; 0.85 sec.
+Command   csynth_design done; 15.51 sec.
+Command ap_source done; 15.75 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/tingyuan/test2048mau2048/solution1 opened at Mon Jul 30 17:26:20 CST 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.23 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.14 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_free_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/HLS_malloc_1_s.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.compgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.rtl_wrap.cfg.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.constraint.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/acc2048_2048_mau.tbgen.tcl 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tingyuan/test2048mau2048/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 11.66 sec.
+Command ap_source done; 11.9 sec.
+Execute cleanup_all 

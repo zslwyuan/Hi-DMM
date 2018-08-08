@@ -1,0 +1,87 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.2/bin/unwrapped/lnx64.o/xelab -wto efd16813d58b4334832da6e4e0cc75b9 --debug typical --relax --mt 8 -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_11 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling module xil_defaultlib.Ext_HTA_buddy_trebkb_ram
+Compiling module xil_defaultlib.Ext_HTA_buddy_trebkb(DataWidth=6...
+Compiling module xil_defaultlib.Ext_HTA_group_trecud_ram
+Compiling module xil_defaultlib.Ext_HTA_group_trecud(DataWidth=6...
+Compiling module xil_defaultlib.Ext_HTA_group_tredEe_rom
+Compiling module xil_defaultlib.Ext_HTA_group_tredEe(DataWidth=3...
+Compiling module xil_defaultlib.Ext_HTA_shift_coneOg_rom
+Compiling module xil_defaultlib.Ext_HTA_shift_coneOg(DataWidth=5...
+Compiling module xil_defaultlib.Ext_HTA_addr_treefYi_ram
+Compiling module xil_defaultlib.Ext_HTA_addr_treefYi(DataWidth=8...
+Compiling module xil_defaultlib.Ext_HTA_mark_mask_V_rom
+Compiling module xil_defaultlib.Ext_HTA_mark_mask_V(DataWidth=62...
+Compiling module xil_defaultlib.log_2_64bit
+Compiling module xil_defaultlib.Ext_HTA_mux_104_6g8j(ID=1,din1_W...
+Compiling module xil_defaultlib.Ext_HTA
+Compiling module xil_defaultlib.design_1_Ext_HTA_0_0
+Compiling module xil_defaultlib.Ext_KWTA32k_maintbkb_rom
+Compiling module xil_defaultlib.Ext_KWTA32k_maintbkb(DataWidth=3...
+Compiling module xil_defaultlib.Ext_KWTA32k_heap_cud_ram
+Compiling module xil_defaultlib.Ext_KWTA32k_heap_cud(DataWidth=3...
+Compiling module xil_defaultlib.Ext_KWTA32k_groupg8j_ram
+Compiling module xil_defaultlib.Ext_KWTA32k_groupg8j(DataWidth=3...
+Compiling module xil_defaultlib.Ext_KWTA32k_grouphbi_rom
+Compiling module xil_defaultlib.Ext_KWTA32k_grouphbi(DataWidth=3...
+Compiling module xil_defaultlib.Ext_KWTA32k_shiftibs_rom
+Compiling module xil_defaultlib.Ext_KWTA32k_shiftibs(DataWidth=5...
+Compiling module xil_defaultlib.Ext_KWTA32k_mark_jbC_rom
+Compiling module xil_defaultlib.Ext_KWTA32k_mark_jbC(DataWidth=3...
+Compiling module xil_defaultlib.Ext_KWTA32k_extrakbM_rom
+Compiling module xil_defaultlib.Ext_KWTA32k_extrakbM(DataWidth=5...
+Compiling module xil_defaultlib.Ext_KWTA32k_mux_4lbW(ID=1,din1_W...
+Compiling module xil_defaultlib.Ext_KWTA32k_mux_4mb6(ID=1,din5_W...
+Compiling module xil_defaultlib.Ext_KWTA32k_mux_4ncg(ID=1,din5_W...
+Compiling module xil_defaultlib.Ext_KWTA32k_mux_4ocq(ID=1,din5_W...
+Compiling module xil_defaultlib.Ext_KWTA32k
+Compiling module xil_defaultlib.design_1_Ext_KWTA32k_0_0
+Compiling module xil_defaultlib.acc32kmau_req_cmd_rom
+Compiling module xil_defaultlib.acc32kmau_req_cmd(DataWidth=2,Ad...
+Compiling module xil_defaultlib.acc32kmau_req_list_rom
+Compiling module xil_defaultlib.acc32kmau_req_list(DataWidth=15,...
+Compiling module xil_defaultlib.acc32kmau_req_addbkb_ram
+Compiling module xil_defaultlib.acc32kmau_req_addbkb(DataWidth=3...
+Compiling module xil_defaultlib.acc32kmau_req_size_rom
+Compiling module xil_defaultlib.acc32kmau_req_size(DataWidth=12,...
+Compiling module xil_defaultlib.HLS_malloc_1_s
+Compiling module xil_defaultlib.HLS_free_1_s
+Compiling module xil_defaultlib.acc32kmau
+Compiling module xil_defaultlib.design_1_acc32kmau_0_0
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.design_1_clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.design_1_clk_wiz_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_11.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_11.upcnt_n [\upcnt_n(c_size=6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_11.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_11.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture design_1_rst_clk_wiz_100m_0_arch of entity xil_defaultlib.design_1_rst_clk_wiz_100M_0 [design_1_rst_clk_wiz_100m_0_defa...]
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot design_1_wrapper_behav

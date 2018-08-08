@@ -1,0 +1,106 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Jul 29 16:43:05 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    36 |
+| Unused register locations in slices containing registers |    60 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            6 |
+|     10 |            1 |
+|     12 |            2 |
+|     14 |            3 |
+|    16+ |           22 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             128 |           28 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              72 |           12 |
+| Yes          | No                    | No                     |            1550 |          262 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             222 |           37 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+|            Clock Signal           |                                             Enable Signal                                             |                                  Set/Reset Signal                                  | Slice Load Count | Bel Load Count |
++-----------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/cmd_fu_172[7]_i_2_n_0                                                  | design_1_i/FBTA64_theta_0/inst/cmd_fu_172[7]_i_1_n_0                               |                1 |              4 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/buddy_tree_V_0_U/FBTA64_theta_buddcud_ram_U/cnt_1_fu_1760              | design_1_i/FBTA64_theta_0/inst/cnt_1_fu_176                                        |                1 |              6 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state5                                                       |                                                                                    |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_NS_fsm[11]                                                          |                                                                                    |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state15                                                      |                                                                                    |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/addr_layer_map_V_U/FBTA64_theta_addrdEe_ram_U/addr_layer_map_V_ce0     |                                                                                    |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/p_5_reg_512                                                            | design_1_i/FBTA64_theta_0/inst/p_5_reg_512[7]_i_1_n_0                              |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                       | design_1_i/rst_clk_wiz_100M/U0/EXT_LPF/lpf_int                                     |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_pp0_stage0                                                   |                                                                                    |                3 |             10 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/op2_assign_5_reg_4910                                                  |                                                                                    |                3 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/rst_clk_wiz_100M/U0/SEQ/seq_cnt_en                                                         | design_1_i/rst_clk_wiz_100M/U0/SEQ/SEQ_COUNTER/clear                               |                1 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/loc1_V_6_fu_184[6]_i_1_n_0                                             |                                                                                    |                2 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/loc1_V_reg_16580                                                       |                                                                                    |                3 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/loc2_V_2_fu_180[7]_i_1_n_0                                             |                                                                                    |                2 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/p_01598_1_in_reg_454[7]_i_1_n_0                                        |                                                                                    |                3 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/buddy_tree_V_0_U/FBTA64_theta_buddcud_ram_U/p_Repl2_2_reg_1684_reg[0]  |                                                                                    |                5 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/buddy_tree_V_0_U/FBTA64_theta_buddcud_ram_U/E[0]                       |                                                                                    |                3 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc64_64_mau_0/inst/ce0                                                                    |                                                                                    |                4 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/addr_layer_map_V_U/FBTA64_theta_addrdEe_ram_U/p_0_in                   |                                                                                    |                2 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/p_01606_0_in_reg_444                                                   |                                                                                    |                3 |             18 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state18                                                      |                                                                                    |                3 |             18 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/p_5_reg_512                                                            |                                                                                    |                5 |             24 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/alloc_cmd_ap_ack                                                       |                                                                                    |                5 |             40 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc64_64_mau_0/inst/req_cmd_U/acc64_64_mau_req_bkb_rom_U/r_fu_42_reg[1]_1                  | design_1_i/acc64_64_mau_0/inst/req_cmd_U/acc64_64_mau_req_bkb_rom_U/r_fu_42_reg[1] |                9 |             62 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc64_64_mau_0/inst/grp_HLS_malloc_1_s_fu_84/ap_NS_fsm[2]                                  |                                                                                    |               12 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                       | design_1_i/rst_clk_wiz_100M/U0/peripheral_reset[0]                                 |               11 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc64_64_mau_0/inst/grp_HLS_malloc_1_s_fu_84/ap_NS_fsm1                                    | design_1_i/acc64_64_mau_0/inst/grp_HLS_malloc_1_s_fu_84/SR[0]                      |                9 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state6                                                       | design_1_i/FBTA64_theta_0/inst/tmp_17_reg_1611[63]_i_1_n_0                         |               14 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/rhs_V_reg_18560                                                        |                                                                                    |               17 |             70 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/r_V_13_reg_17030                                                       |                                                                                    |               19 |             70 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc64_64_mau_0/inst/ap_CS_fsm_state3                                                       |                                                                                    |               11 |             78 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state6                                                       |                                                                                    |               26 |             86 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                       |                                                                                    |               29 |            130 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state16                                                      |                                                                                    |               33 |            256 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/buddy_tree_V_0_U/FBTA64_theta_buddcud_ram_U/p_Result_3_reg_1673_reg[1] |                                                                                    |               52 |            268 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/FBTA64_theta_0/inst/ap_CS_fsm_state17                                                      |                                                                                    |               41 |            398 |
++-----------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+
+

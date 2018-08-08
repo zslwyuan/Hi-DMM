@@ -1,0 +1,517 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date             : Sat Jul 28 19:52:01 2018
+| Host             : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.284        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.176        |
+| Device Static (W)        | 0.109        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 81.7         |
+| Junction Temperature (C) | 28.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.011 |        5 |       --- |             --- |
+| Slice Logic              |     0.018 |    11648 |       --- |             --- |
+|   LUT as Logic           |     0.015 |     6545 |     53200 |           12.30 |
+|   LUT as Distributed RAM |     0.003 |      256 |     17400 |            1.47 |
+|   Register               |    <0.001 |     3276 |    106400 |            3.08 |
+|   CARRY4                 |    <0.001 |      129 |     13300 |            0.97 |
+|   F7/F8 Muxes            |    <0.001 |      119 |     53200 |            0.22 |
+|   Others                 |     0.000 |      121 |       --- |             --- |
+|   LUT as Shift Register  |     0.000 |        1 |     17400 |           <0.01 |
+| Signals                  |     0.026 |     9257 |       --- |             --- |
+| Block RAM                |     0.005 |     25.5 |       140 |           18.21 |
+| MMCM                     |     0.106 |        1 |         4 |           25.00 |
+| I/O                      |     0.010 |       77 |       200 |           38.50 |
+| Static Power             |     0.109 |          |           |                 |
+| Total                    |     0.284 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.069 |       0.060 |      0.009 |
+| Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.006 |       0.005 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------+-----------------------------------------------------+-----------------+
+| Clock                       | Domain                                              | Constraint (ns) |
++-----------------------------+-----------------------------------------------------+-----------------+
+| clk_in1                     | clk_in1                                             |            10.0 |
+| clk_out1_design_1_clk_wiz_1 | design_1_i/clk_wiz/inst/clk_out1_design_1_clk_wiz_1 |            10.0 |
+| clkfbout_design_1_clk_wiz_1 | design_1_i/clk_wiz/inst/clkfbout_design_1_clk_wiz_1 |            10.0 |
++-----------------------------+-----------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------+-----------+
+| Name                                           | Power (W) |
++------------------------------------------------+-----------+
+| design_1_wrapper                               |     0.176 |
+|   design_1_i                                   |     0.165 |
+|     HLS_MAXHEAP_HTA_0                          |     0.013 |
+|       inst                                     |     0.013 |
+|         HTA_heap_0_U                           |     0.006 |
+|           HLS_MAXHEAP_HTA_Hbkb_ram_U           |     0.006 |
+|         HTA_heap_1_U                           |     0.004 |
+|           HLS_MAXHEAP_HTA_Hbkb_ram_U           |     0.004 |
+|         grp_HLS_free_1_s_fu_687                |    <0.001 |
+|         grp_HLS_malloc_1_s_fu_673              |    <0.001 |
+|         grp_HLS_malloc_2_s_fu_649              |    <0.001 |
+|         grp_HLS_malloc_3_s_fu_661              |    <0.001 |
+|     HTA_theta_0                                |     0.045 |
+|       inst                                     |     0.045 |
+|         HTA_theta_mux_44_mb6_U11               |    <0.001 |
+|         HTA_theta_mux_44_mb6_U12               |     0.002 |
+|         HTA_theta_mux_44_mb6_U2                |     0.001 |
+|         HTA_theta_mux_44_mb6_U4                |    <0.001 |
+|         HTA_theta_mux_44_mb6_U7                |    <0.001 |
+|         HTA_theta_mux_44_mb6_U8                |    <0.001 |
+|         HTA_theta_mux_48_ncg_U3                |    <0.001 |
+|         addr_layer_map_V_U                     |    <0.001 |
+|           HTA_theta_addr_lajbC_ram_U           |    <0.001 |
+|         addr_tree_map_V_U                      |     0.002 |
+|           HTA_theta_addr_trkbM_ram_U           |     0.002 |
+|         buddy_tree_V_0_U                       |     0.007 |
+|           HTA_theta_buddy_tbkb_ram_U           |     0.007 |
+|             ram_reg_0_3_0_0                    |    <0.001 |
+|             ram_reg_0_3_10_10                  |    <0.001 |
+|             ram_reg_0_3_11_11                  |    <0.001 |
+|             ram_reg_0_3_12_12                  |    <0.001 |
+|             ram_reg_0_3_13_13                  |    <0.001 |
+|             ram_reg_0_3_14_14                  |    <0.001 |
+|             ram_reg_0_3_15_15                  |    <0.001 |
+|             ram_reg_0_3_16_16                  |    <0.001 |
+|             ram_reg_0_3_17_17                  |    <0.001 |
+|             ram_reg_0_3_18_18                  |    <0.001 |
+|             ram_reg_0_3_19_19                  |    <0.001 |
+|             ram_reg_0_3_1_1                    |    <0.001 |
+|             ram_reg_0_3_20_20                  |    <0.001 |
+|             ram_reg_0_3_21_21                  |    <0.001 |
+|             ram_reg_0_3_22_22                  |    <0.001 |
+|             ram_reg_0_3_23_23                  |    <0.001 |
+|             ram_reg_0_3_24_24                  |    <0.001 |
+|             ram_reg_0_3_25_25                  |    <0.001 |
+|             ram_reg_0_3_26_26                  |    <0.001 |
+|             ram_reg_0_3_27_27                  |    <0.001 |
+|             ram_reg_0_3_28_28                  |    <0.001 |
+|             ram_reg_0_3_29_29                  |    <0.001 |
+|             ram_reg_0_3_2_2                    |    <0.001 |
+|             ram_reg_0_3_30_30                  |    <0.001 |
+|             ram_reg_0_3_31_31                  |    <0.001 |
+|             ram_reg_0_3_32_32                  |    <0.001 |
+|             ram_reg_0_3_33_33                  |    <0.001 |
+|             ram_reg_0_3_34_34                  |    <0.001 |
+|             ram_reg_0_3_35_35                  |    <0.001 |
+|             ram_reg_0_3_36_36                  |    <0.001 |
+|             ram_reg_0_3_37_37                  |    <0.001 |
+|             ram_reg_0_3_38_38                  |    <0.001 |
+|             ram_reg_0_3_39_39                  |    <0.001 |
+|             ram_reg_0_3_3_3                    |    <0.001 |
+|             ram_reg_0_3_40_40                  |    <0.001 |
+|             ram_reg_0_3_41_41                  |    <0.001 |
+|             ram_reg_0_3_42_42                  |    <0.001 |
+|             ram_reg_0_3_43_43                  |    <0.001 |
+|             ram_reg_0_3_44_44                  |    <0.001 |
+|             ram_reg_0_3_45_45                  |    <0.001 |
+|             ram_reg_0_3_46_46                  |    <0.001 |
+|             ram_reg_0_3_47_47                  |    <0.001 |
+|             ram_reg_0_3_48_48                  |    <0.001 |
+|             ram_reg_0_3_49_49                  |    <0.001 |
+|             ram_reg_0_3_4_4                    |    <0.001 |
+|             ram_reg_0_3_50_50                  |    <0.001 |
+|             ram_reg_0_3_51_51                  |    <0.001 |
+|             ram_reg_0_3_52_52                  |    <0.001 |
+|             ram_reg_0_3_53_53                  |    <0.001 |
+|             ram_reg_0_3_54_54                  |    <0.001 |
+|             ram_reg_0_3_55_55                  |    <0.001 |
+|             ram_reg_0_3_56_56                  |    <0.001 |
+|             ram_reg_0_3_57_57                  |    <0.001 |
+|             ram_reg_0_3_58_58                  |    <0.001 |
+|             ram_reg_0_3_59_59                  |    <0.001 |
+|             ram_reg_0_3_5_5                    |    <0.001 |
+|             ram_reg_0_3_60_60                  |    <0.001 |
+|             ram_reg_0_3_61_61                  |    <0.001 |
+|             ram_reg_0_3_62_62                  |    <0.001 |
+|             ram_reg_0_3_63_63                  |    <0.001 |
+|             ram_reg_0_3_6_6                    |    <0.001 |
+|             ram_reg_0_3_7_7                    |    <0.001 |
+|             ram_reg_0_3_8_8                    |    <0.001 |
+|             ram_reg_0_3_9_9                    |    <0.001 |
+|         buddy_tree_V_1_U                       |     0.005 |
+|           HTA_theta_buddy_tcud_ram_U           |     0.005 |
+|             ram_reg_0_3_0_0                    |    <0.001 |
+|             ram_reg_0_3_10_10                  |    <0.001 |
+|             ram_reg_0_3_11_11                  |    <0.001 |
+|             ram_reg_0_3_12_12                  |    <0.001 |
+|             ram_reg_0_3_13_13                  |    <0.001 |
+|             ram_reg_0_3_14_14                  |    <0.001 |
+|             ram_reg_0_3_15_15                  |    <0.001 |
+|             ram_reg_0_3_16_16                  |    <0.001 |
+|             ram_reg_0_3_17_17                  |    <0.001 |
+|             ram_reg_0_3_18_18                  |    <0.001 |
+|             ram_reg_0_3_19_19                  |    <0.001 |
+|             ram_reg_0_3_1_1                    |    <0.001 |
+|             ram_reg_0_3_20_20                  |    <0.001 |
+|             ram_reg_0_3_21_21                  |    <0.001 |
+|             ram_reg_0_3_22_22                  |    <0.001 |
+|             ram_reg_0_3_23_23                  |    <0.001 |
+|             ram_reg_0_3_24_24                  |    <0.001 |
+|             ram_reg_0_3_25_25                  |    <0.001 |
+|             ram_reg_0_3_26_26                  |    <0.001 |
+|             ram_reg_0_3_27_27                  |    <0.001 |
+|             ram_reg_0_3_28_28                  |    <0.001 |
+|             ram_reg_0_3_29_29                  |    <0.001 |
+|             ram_reg_0_3_2_2                    |    <0.001 |
+|             ram_reg_0_3_30_30                  |    <0.001 |
+|             ram_reg_0_3_31_31                  |    <0.001 |
+|             ram_reg_0_3_32_32                  |    <0.001 |
+|             ram_reg_0_3_33_33                  |    <0.001 |
+|             ram_reg_0_3_34_34                  |    <0.001 |
+|             ram_reg_0_3_35_35                  |    <0.001 |
+|             ram_reg_0_3_36_36                  |    <0.001 |
+|             ram_reg_0_3_37_37                  |    <0.001 |
+|             ram_reg_0_3_38_38                  |    <0.001 |
+|             ram_reg_0_3_39_39                  |    <0.001 |
+|             ram_reg_0_3_3_3                    |    <0.001 |
+|             ram_reg_0_3_40_40                  |    <0.001 |
+|             ram_reg_0_3_41_41                  |    <0.001 |
+|             ram_reg_0_3_42_42                  |    <0.001 |
+|             ram_reg_0_3_43_43                  |    <0.001 |
+|             ram_reg_0_3_44_44                  |    <0.001 |
+|             ram_reg_0_3_45_45                  |    <0.001 |
+|             ram_reg_0_3_46_46                  |    <0.001 |
+|             ram_reg_0_3_47_47                  |    <0.001 |
+|             ram_reg_0_3_48_48                  |    <0.001 |
+|             ram_reg_0_3_49_49                  |    <0.001 |
+|             ram_reg_0_3_4_4                    |    <0.001 |
+|             ram_reg_0_3_50_50                  |    <0.001 |
+|             ram_reg_0_3_51_51                  |    <0.001 |
+|             ram_reg_0_3_52_52                  |    <0.001 |
+|             ram_reg_0_3_53_53                  |    <0.001 |
+|             ram_reg_0_3_54_54                  |    <0.001 |
+|             ram_reg_0_3_55_55                  |    <0.001 |
+|             ram_reg_0_3_56_56                  |    <0.001 |
+|             ram_reg_0_3_57_57                  |    <0.001 |
+|             ram_reg_0_3_58_58                  |    <0.001 |
+|             ram_reg_0_3_59_59                  |    <0.001 |
+|             ram_reg_0_3_5_5                    |    <0.001 |
+|             ram_reg_0_3_60_60                  |    <0.001 |
+|             ram_reg_0_3_61_61                  |    <0.001 |
+|             ram_reg_0_3_62_62                  |    <0.001 |
+|             ram_reg_0_3_63_63                  |    <0.001 |
+|             ram_reg_0_3_6_6                    |    <0.001 |
+|             ram_reg_0_3_7_7                    |    <0.001 |
+|             ram_reg_0_3_8_8                    |    <0.001 |
+|             ram_reg_0_3_9_9                    |    <0.001 |
+|         buddy_tree_V_2_U                       |     0.006 |
+|           HTA_theta_buddy_tdEe_ram_U           |     0.006 |
+|             ram_reg_0_3_0_0                    |    <0.001 |
+|             ram_reg_0_3_10_10                  |    <0.001 |
+|             ram_reg_0_3_11_11                  |    <0.001 |
+|             ram_reg_0_3_12_12                  |    <0.001 |
+|             ram_reg_0_3_13_13                  |    <0.001 |
+|             ram_reg_0_3_14_14                  |    <0.001 |
+|             ram_reg_0_3_15_15                  |    <0.001 |
+|             ram_reg_0_3_16_16                  |    <0.001 |
+|             ram_reg_0_3_17_17                  |    <0.001 |
+|             ram_reg_0_3_18_18                  |    <0.001 |
+|             ram_reg_0_3_19_19                  |    <0.001 |
+|             ram_reg_0_3_1_1                    |    <0.001 |
+|             ram_reg_0_3_20_20                  |    <0.001 |
+|             ram_reg_0_3_21_21                  |    <0.001 |
+|             ram_reg_0_3_22_22                  |    <0.001 |
+|             ram_reg_0_3_23_23                  |    <0.001 |
+|             ram_reg_0_3_24_24                  |    <0.001 |
+|             ram_reg_0_3_25_25                  |    <0.001 |
+|             ram_reg_0_3_26_26                  |    <0.001 |
+|             ram_reg_0_3_27_27                  |    <0.001 |
+|             ram_reg_0_3_28_28                  |    <0.001 |
+|             ram_reg_0_3_29_29                  |    <0.001 |
+|             ram_reg_0_3_2_2                    |    <0.001 |
+|             ram_reg_0_3_30_30                  |    <0.001 |
+|             ram_reg_0_3_31_31                  |    <0.001 |
+|             ram_reg_0_3_32_32                  |    <0.001 |
+|             ram_reg_0_3_33_33                  |    <0.001 |
+|             ram_reg_0_3_34_34                  |    <0.001 |
+|             ram_reg_0_3_35_35                  |    <0.001 |
+|             ram_reg_0_3_36_36                  |    <0.001 |
+|             ram_reg_0_3_37_37                  |    <0.001 |
+|             ram_reg_0_3_38_38                  |    <0.001 |
+|             ram_reg_0_3_39_39                  |    <0.001 |
+|             ram_reg_0_3_3_3                    |    <0.001 |
+|             ram_reg_0_3_40_40                  |    <0.001 |
+|             ram_reg_0_3_41_41                  |    <0.001 |
+|             ram_reg_0_3_42_42                  |    <0.001 |
+|             ram_reg_0_3_43_43                  |    <0.001 |
+|             ram_reg_0_3_44_44                  |    <0.001 |
+|             ram_reg_0_3_45_45                  |    <0.001 |
+|             ram_reg_0_3_46_46                  |    <0.001 |
+|             ram_reg_0_3_47_47                  |    <0.001 |
+|             ram_reg_0_3_48_48                  |    <0.001 |
+|             ram_reg_0_3_49_49                  |    <0.001 |
+|             ram_reg_0_3_4_4                    |    <0.001 |
+|             ram_reg_0_3_50_50                  |    <0.001 |
+|             ram_reg_0_3_51_51                  |    <0.001 |
+|             ram_reg_0_3_52_52                  |    <0.001 |
+|             ram_reg_0_3_53_53                  |    <0.001 |
+|             ram_reg_0_3_54_54                  |    <0.001 |
+|             ram_reg_0_3_55_55                  |    <0.001 |
+|             ram_reg_0_3_56_56                  |    <0.001 |
+|             ram_reg_0_3_57_57                  |    <0.001 |
+|             ram_reg_0_3_58_58                  |    <0.001 |
+|             ram_reg_0_3_59_59                  |    <0.001 |
+|             ram_reg_0_3_5_5                    |    <0.001 |
+|             ram_reg_0_3_60_60                  |    <0.001 |
+|             ram_reg_0_3_61_61                  |    <0.001 |
+|             ram_reg_0_3_62_62                  |    <0.001 |
+|             ram_reg_0_3_63_63                  |    <0.001 |
+|             ram_reg_0_3_6_6                    |    <0.001 |
+|             ram_reg_0_3_7_7                    |    <0.001 |
+|             ram_reg_0_3_8_8                    |    <0.001 |
+|             ram_reg_0_3_9_9                    |    <0.001 |
+|         buddy_tree_V_3_U                       |     0.008 |
+|           HTA_theta_buddy_teOg_ram_U           |     0.008 |
+|             ram_reg_0_3_0_0                    |    <0.001 |
+|             ram_reg_0_3_10_10                  |    <0.001 |
+|             ram_reg_0_3_11_11                  |    <0.001 |
+|             ram_reg_0_3_12_12                  |    <0.001 |
+|             ram_reg_0_3_13_13                  |    <0.001 |
+|             ram_reg_0_3_14_14                  |    <0.001 |
+|             ram_reg_0_3_15_15                  |    <0.001 |
+|             ram_reg_0_3_16_16                  |    <0.001 |
+|             ram_reg_0_3_17_17                  |    <0.001 |
+|             ram_reg_0_3_18_18                  |    <0.001 |
+|             ram_reg_0_3_19_19                  |    <0.001 |
+|             ram_reg_0_3_1_1                    |    <0.001 |
+|             ram_reg_0_3_20_20                  |    <0.001 |
+|             ram_reg_0_3_21_21                  |    <0.001 |
+|             ram_reg_0_3_22_22                  |    <0.001 |
+|             ram_reg_0_3_23_23                  |    <0.001 |
+|             ram_reg_0_3_24_24                  |    <0.001 |
+|             ram_reg_0_3_25_25                  |    <0.001 |
+|             ram_reg_0_3_26_26                  |    <0.001 |
+|             ram_reg_0_3_27_27                  |    <0.001 |
+|             ram_reg_0_3_28_28                  |    <0.001 |
+|             ram_reg_0_3_29_29                  |    <0.001 |
+|             ram_reg_0_3_2_2                    |    <0.001 |
+|             ram_reg_0_3_30_30                  |    <0.001 |
+|             ram_reg_0_3_31_31                  |    <0.001 |
+|             ram_reg_0_3_32_32                  |    <0.001 |
+|             ram_reg_0_3_33_33                  |    <0.001 |
+|             ram_reg_0_3_34_34                  |    <0.001 |
+|             ram_reg_0_3_35_35                  |    <0.001 |
+|             ram_reg_0_3_36_36                  |    <0.001 |
+|             ram_reg_0_3_37_37                  |    <0.001 |
+|             ram_reg_0_3_38_38                  |    <0.001 |
+|             ram_reg_0_3_39_39                  |    <0.001 |
+|             ram_reg_0_3_3_3                    |    <0.001 |
+|             ram_reg_0_3_40_40                  |    <0.001 |
+|             ram_reg_0_3_41_41                  |    <0.001 |
+|             ram_reg_0_3_42_42                  |    <0.001 |
+|             ram_reg_0_3_43_43                  |    <0.001 |
+|             ram_reg_0_3_44_44                  |    <0.001 |
+|             ram_reg_0_3_45_45                  |    <0.001 |
+|             ram_reg_0_3_46_46                  |    <0.001 |
+|             ram_reg_0_3_47_47                  |    <0.001 |
+|             ram_reg_0_3_48_48                  |    <0.001 |
+|             ram_reg_0_3_49_49                  |    <0.001 |
+|             ram_reg_0_3_4_4                    |    <0.001 |
+|             ram_reg_0_3_50_50                  |    <0.001 |
+|             ram_reg_0_3_51_51                  |    <0.001 |
+|             ram_reg_0_3_52_52                  |    <0.001 |
+|             ram_reg_0_3_53_53                  |    <0.001 |
+|             ram_reg_0_3_54_54                  |    <0.001 |
+|             ram_reg_0_3_55_55                  |    <0.001 |
+|             ram_reg_0_3_56_56                  |    <0.001 |
+|             ram_reg_0_3_57_57                  |    <0.001 |
+|             ram_reg_0_3_58_58                  |    <0.001 |
+|             ram_reg_0_3_59_59                  |    <0.001 |
+|             ram_reg_0_3_5_5                    |    <0.001 |
+|             ram_reg_0_3_60_60                  |    <0.001 |
+|             ram_reg_0_3_61_61                  |    <0.001 |
+|             ram_reg_0_3_62_62                  |    <0.001 |
+|             ram_reg_0_3_63_63                  |    <0.001 |
+|             ram_reg_0_3_6_6                    |    <0.001 |
+|             ram_reg_0_3_7_7                    |    <0.001 |
+|             ram_reg_0_3_8_8                    |    <0.001 |
+|             ram_reg_0_3_9_9                    |    <0.001 |
+|         group_tree_V_0_U                       |    <0.001 |
+|           HTA_theta_group_tfYi_ram_U           |    <0.001 |
+|         group_tree_V_1_U                       |    <0.001 |
+|           HTA_theta_group_tfYi_ram_U           |    <0.001 |
+|         group_tree_mask_V_U                    |    <0.001 |
+|           HTA_theta_group_thbi_rom_U           |    <0.001 |
+|         mark_mask_V_U                          |    <0.001 |
+|           HTA_theta_mark_malbW_rom_U           |    <0.001 |
+|         shift_constant_V_U                     |    <0.001 |
+|           HTA_theta_shift_cibs_rom_U           |    <0.001 |
+|     blk_mem_gen_0                              |    <0.001 |
+|       U0                                       |    <0.001 |
+|         inst_blk_mem_gen                       |    <0.001 |
+|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|             valid.cstr                         |    <0.001 |
+|               bindec_a.bindec_inst_a           |    <0.001 |
+|               bindec_b.bindec_inst_b           |     0.000 |
+|               has_mux_a.A                      |    <0.001 |
+|               ramloop[0].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[10].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[11].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[12].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[13].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[14].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[15].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[16].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[17].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[18].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[19].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[1].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[20].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[2].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[3].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[4].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[5].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[6].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[7].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[8].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[9].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|     clk_wiz                                    |     0.106 |
+|       inst                                     |     0.106 |
+|     rst_clk_wiz_100M                           |    <0.001 |
+|       U0                                       |    <0.001 |
+|         EXT_LPF                                |    <0.001 |
+|           ACTIVE_LOW_AUX.ACT_LO_AUX            |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT            |    <0.001 |
+|         SEQ                                    |    <0.001 |
+|           SEQ_COUNTER                          |    <0.001 |
++------------------------------------------------+-----------+
+
+

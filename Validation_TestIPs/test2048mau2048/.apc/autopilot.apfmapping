@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.cc" path="/home/tingyuan/Temporary/vivado-outputs/test2048mau2048/solution1/top.cc"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

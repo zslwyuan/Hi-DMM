@@ -1,0 +1,823 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_MAXHEAP_HTA'
+================================================================
+* Date:           Sat Jul 28 19:09:01 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HLS_MAXHEAP_HTA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.683|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|         5|          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 2.1  |    ?|    ?|         7|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 31
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / (tmp_3)
+	18  / (!tmp_3)
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / (!tmp_30)
+	13  / (tmp_30)
+12 --> 
+	14  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	17  / (tmp_12) | (tmp_13)
+	16  / (!tmp_12 & !tmp_13)
+16 --> 
+	11  / true
+17 --> 
+	6  / true
+18 --> 
+	19  / (tmp_5)
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / (!tmp_14) | (!tmp_15)
+	30  / (tmp_14 & tmp_15)
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / (!tmp_14 & or_cond) | (!tmp_14 & tmp_20) | (!tmp_15 & or_cond) | (!tmp_15 & tmp_20)
+	18  / (tmp_14 & tmp_15) | (!or_cond & !tmp_20)
+31 --> 
+	25  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%n_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %n)"   --->   Operation 32 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%HTA_heap_0 = alloca [2000 x i32], align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:68]   --->   Operation 33 'alloca' 'HTA_heap_0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%HTA_heap_1 = alloca [2000 x i32], align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:68]   --->   Operation 34 'alloca' 'HTA_heap_1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_1 : Operation 35 [2/2] (0.00ns)   --->   "call fastcc void @"HLS_malloc<1>"(i32 %n_read, i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:76]   --->   Operation 35 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 36 [1/2] (0.00ns)   --->   "call fastcc void @"HLS_malloc<1>"(i32 %n_read, i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:76]   --->   Operation 36 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%data_addr = getelementptr [20000 x i32]* %data, i64 0, i64 0"   --->   Operation 37 'getelementptr' 'data_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [2/2] (0.00ns)   --->   "%tmp = call fastcc i32 @"HLS_malloc<2>"(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 38 'call' 'tmp' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 39 [2/2] (3.25ns)   --->   "%data_load = load i32* %data_addr, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:82]   --->   Operation 39 'load' 'data_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+
+State 4 <SV = 3> <Delay = 6.50>
+ST_4 : Operation 40 [1/2] (0.00ns)   --->   "%tmp = call fastcc i32 @"HLS_malloc<2>"(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 40 'call' 'tmp' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_1 = call i13 @_ssdm_op_PartSelect.i13.i32.i32.i32(i32 %tmp, i32 3, i32 15)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 41 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%newIndex1 = call i15 @_ssdm_op_BitConcatenate.i15.i13.i2(i13 %tmp_1, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 42 'bitconcatenate' 'newIndex1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%newIndex2 = zext i15 %newIndex1 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 43 'zext' 'newIndex2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex2" [HLS_MAXHEAP_HTA/solution1/top.cc:81]   --->   Operation 44 'getelementptr' 'HTA_heap_0_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/2] (3.25ns)   --->   "%data_load = load i32* %data_addr, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:82]   --->   Operation 45 'load' 'data_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_4 : Operation 46 [1/1] (3.25ns)   --->   "store i32 %data_load, i32* %HTA_heap_0_addr, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:82]   --->   Operation 46 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_2 = call i10 @_ssdm_op_PartSelect.i10.i32.i32.i32(i32 %tmp, i32 3, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 47 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%newIndex3 = call i13 @_ssdm_op_BitConcatenate.i13.i1.i10.i2(i1 false, i10 %tmp_2, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 48 'bitconcatenate' 'newIndex3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%newIndex3_cast1 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_2, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 49 'bitconcatenate' 'newIndex3_cast1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%newIndex3_cast = zext i13 %newIndex3 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 50 'zext' 'newIndex3_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex3_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:83]   --->   Operation 51 'getelementptr' 'HTA_heap_1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:83]   --->   Operation 52 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%newIndex4 = or i12 %newIndex3_cast1, 1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 53 'or' 'newIndex4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%newIndex4_cast = zext i12 %newIndex4 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 54 'zext' 'newIndex4_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_1 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex4_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:84]   --->   Operation 55 'getelementptr' 'HTA_heap_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_1, align 8" [HLS_MAXHEAP_HTA/solution1/top.cc:84]   --->   Operation 56 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %n), !map !32"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([20000 x i32]* %data), !map !38"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([200 x i32]* %dis_output), !map !44"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_size), !map !50"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_free_target), !map !54"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_addr), !map !58"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_HTA_cmd), !map !62"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @HLS_MAXHEAP_HTA_str) nounwind"   --->   Operation 64 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([20000 x i32]* %data, [1 x i8]* @p_str, [12 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 65 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [HLS_MAXHEAP_HTA/solution1/top.cc:65]   --->   Operation 66 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%offset_head = call i16 @_ssdm_op_BitConcatenate.i16.i13.i3(i13 %tmp_1, i3 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 67 'bitconcatenate' 'offset_head' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%offset_head_cast = zext i16 %offset_head to i32" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 68 'zext' 'offset_head_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%newIndex6 = or i12 %newIndex3_cast1, 2" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 69 'or' 'newIndex6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%newIndex6_cast = zext i12 %newIndex6 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 70 'zext' 'newIndex6_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_1 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex6_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:85]   --->   Operation 71 'getelementptr' 'HTA_heap_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 72 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_1, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:85]   --->   Operation 72 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_5 : Operation 73 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_2 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex4_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:86]   --->   Operation 73 'getelementptr' 'HTA_heap_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 74 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_2, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:86]   --->   Operation 74 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_2 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex6_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:87]   --->   Operation 75 'getelementptr' 'HTA_heap_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_2, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:87]   --->   Operation 76 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%newIndex7 = or i12 %newIndex3_cast1, 3" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 77 'or' 'newIndex7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%newIndex7_cast = zext i12 %newIndex7 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 78 'zext' 'newIndex7_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_3 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex7_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:88]   --->   Operation 79 'getelementptr' 'HTA_heap_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_3, align 8" [HLS_MAXHEAP_HTA/solution1/top.cc:88]   --->   Operation 80 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_5 : Operation 81 [1/1] (1.76ns)   --->   "br label %0" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 81 'br' <Predicate = true> <Delay = 1.76>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%offset_last_parent1 = phi i32 [ %offset_head_cast, %branch84 ], [ %offset_last_parent_1, %.loopexit31_ifconv ]" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 82 'phi' 'offset_last_parent1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%offset_tail = phi i16 [ %offset_head, %branch84 ], [ %offset_new_node, %.loopexit31_ifconv ]"   --->   Operation 83 'phi' 'offset_tail' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%cnt_insert = phi i31 [ 1, %branch84 ], [ %i, %.loopexit31_ifconv ]"   --->   Operation 84 'phi' 'cnt_insert' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%offset_tail_cast = zext i16 %offset_tail to i32" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 85 'zext' 'offset_tail_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%cnt_insert_cast = zext i31 %cnt_insert to i32" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 86 'zext' 'cnt_insert_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (2.47ns)   --->   "%tmp_3 = icmp slt i32 %cnt_insert_cast, %n_read" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 87 'icmp' 'tmp_3' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %branch66, label %.preheader.preheader" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 88 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 89 [2/2] (0.00ns)   --->   "%tmp_4 = call fastcc i32 @"HLS_malloc<3>"(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 89 'call' 'tmp_4' <Predicate = (tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_7 = zext i31 %cnt_insert to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:110]   --->   Operation 90 'zext' 'tmp_7' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%data_addr_1 = getelementptr [20000 x i32]* %data, i64 0, i64 %tmp_7" [HLS_MAXHEAP_HTA/solution1/top.cc:110]   --->   Operation 91 'getelementptr' 'data_addr_1' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_6 : Operation 92 [2/2] (3.25ns)   --->   "%data_load_1 = load i32* %data_addr_1, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:110]   --->   Operation 92 'load' 'data_load_1' <Predicate = (tmp_3)> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%newIndex14 = call i12 @_ssdm_op_PartSelect.i12.i16.i32.i32(i16 %offset_tail, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 93 'partselect' 'newIndex14' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_6 : Operation 94 [1/1] (1.76ns)   --->   "br label %.preheader" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 94 'br' <Predicate = (!tmp_3)> <Delay = 1.76>
+
+State 7 <SV = 6> <Delay = 6.50>
+ST_7 : Operation 95 [1/2] (0.00ns)   --->   "%tmp_4 = call fastcc i32 @"HLS_malloc<3>"(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 95 'call' 'tmp_4' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_8 = call i13 @_ssdm_op_PartSelect.i13.i32.i32.i32(i32 %tmp_4, i32 3, i32 15)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 96 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%newIndex8 = call i15 @_ssdm_op_BitConcatenate.i15.i13.i2(i13 %tmp_8, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 97 'bitconcatenate' 'newIndex8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%newIndex9 = zext i15 %newIndex8 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 98 'zext' 'newIndex9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_4 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex9" [HLS_MAXHEAP_HTA/solution1/top.cc:109]   --->   Operation 99 'getelementptr' 'HTA_heap_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 100 [1/2] (3.25ns)   --->   "%data_load_1 = load i32* %data_addr_1, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:110]   --->   Operation 100 'load' 'data_load_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_7 : Operation 101 [1/1] (3.25ns)   --->   "store i32 %data_load_1, i32* %HTA_heap_0_addr_4, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:110]   --->   Operation 101 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_7 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_9 = call i10 @_ssdm_op_PartSelect.i10.i32.i32.i32(i32 %tmp_4, i32 3, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 102 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%newIndex10 = call i13 @_ssdm_op_BitConcatenate.i13.i1.i10.i2(i1 false, i10 %tmp_9, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 103 'bitconcatenate' 'newIndex10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_10 = call i9 @_ssdm_op_PartSelect.i9.i32.i32.i32(i32 %tmp_4, i32 3, i32 11)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 104 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%newIndex10_cast = zext i13 %newIndex10 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 105 'zext' 'newIndex10_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_3 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex10_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:111]   --->   Operation 106 'getelementptr' 'HTA_heap_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 107 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_3, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:111]   --->   Operation 107 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "%newIndex10_cast2 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_9, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 108 'bitconcatenate' 'newIndex10_cast2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 109 [1/1] (0.00ns)   --->   "%newIndex11 = or i12 %newIndex10_cast2, 2" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 109 'or' 'newIndex11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "%newIndex11_cast = zext i12 %newIndex11 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 110 'zext' 'newIndex11_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_4 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex11_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:112]   --->   Operation 111 'getelementptr' 'HTA_heap_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 112 [1/1] (3.25ns)   --->   "store i32 %offset_last_parent1, i32* %HTA_heap_1_addr_4, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:112]   --->   Operation 112 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_8 : Operation 113 [1/1] (0.00ns)   --->   "%newIndex13 = or i12 %newIndex10_cast2, 1" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 113 'or' 'newIndex13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "%newIndex13_cast = zext i12 %newIndex13 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 114 'zext' 'newIndex13_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 115 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_5 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex13_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:113]   --->   Operation 115 'getelementptr' 'HTA_heap_0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 116 [1/1] (3.25ns)   --->   "store i32 %offset_tail_cast, i32* %HTA_heap_0_addr_5, align 8" [HLS_MAXHEAP_HTA/solution1/top.cc:113]   --->   Operation 116 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_8 : Operation 117 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_5 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex13_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:114]   --->   Operation 117 'getelementptr' 'HTA_heap_1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 118 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_5, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:114]   --->   Operation 118 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_6 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex11_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:115]   --->   Operation 119 'getelementptr' 'HTA_heap_0_addr_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 120 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_6, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:115]   --->   Operation 120 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 9 <SV = 8> <Delay = 4.93>
+ST_9 : Operation 121 [1/1] (0.00ns)   --->   "%offset_new_node = call i16 @_ssdm_op_BitConcatenate.i16.i13.i3(i13 %tmp_8, i3 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 121 'bitconcatenate' 'offset_new_node' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 122 [1/1] (0.00ns)   --->   "%offset_new_node_cast = zext i16 %offset_new_node to i32" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 122 'zext' 'offset_new_node_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "%newIndex10_cast1 = call i11 @_ssdm_op_BitConcatenate.i11.i9.i2(i9 %tmp_10, i2 0)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 123 'bitconcatenate' 'newIndex10_cast1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%newIndex14_cast = zext i12 %newIndex14 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 124 'zext' 'newIndex14_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_6 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex14_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:118]   --->   Operation 125 'getelementptr' 'HTA_heap_1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (3.25ns)   --->   "store i32 %offset_new_node_cast, i32* %HTA_heap_1_addr_6, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:118]   --->   Operation 126 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_21 = trunc i31 %cnt_insert to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 127 'trunc' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (0.97ns)   --->   "%tmp_s = xor i1 %tmp_21, true" [HLS_MAXHEAP_HTA/solution1/top.cc:133]   --->   Operation 128 'xor' 'tmp_s' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_22 = trunc i32 %offset_last_parent1 to i13" [HLS_MAXHEAP_HTA/solution1/top.cc:133]   --->   Operation 129 'trunc' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 130 [1/1] (0.00ns)   --->   "br i1 %tmp_21, label %1, label %2" [HLS_MAXHEAP_HTA/solution1/top.cc:133]   --->   Operation 130 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 131 [1/1] (1.67ns)   --->   "%p_sum1 = add i13 4, %tmp_22" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 131 'add' 'p_sum1' <Predicate = (!tmp_21)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i32 %offset_last_parent1 to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 132 'trunc' 'tmp_24' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%newIndex15 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum1, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 133 'partselect' 'newIndex15' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%newIndex15_cast = zext i12 %newIndex15 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 134 'zext' 'newIndex15_cast' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_7 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex15_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 135 'getelementptr' 'HTA_heap_0_addr_7' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_7 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex15_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 136 'getelementptr' 'HTA_heap_1_addr_7' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (0.00ns)   --->   "br i1 %tmp_24, label %branch49, label %branch48" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 137 'br' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_9 : Operation 138 [1/1] (3.25ns)   --->   "store i32 %offset_new_node_cast, i32* %HTA_heap_0_addr_7, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 138 'store' <Predicate = (!tmp_21 & !tmp_24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "br label %branch46" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 139 'br' <Predicate = (!tmp_21 & !tmp_24)> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (1.67ns)   --->   "%p_sum2 = add i13 3, %tmp_22" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 140 'add' 'p_sum2' <Predicate = (tmp_21)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %offset_last_parent1 to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 141 'trunc' 'tmp_23' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 142 [1/1] (0.00ns)   --->   "%newIndex16 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum2, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 142 'partselect' 'newIndex16' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "%newIndex16_cast = zext i12 %newIndex16 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 143 'zext' 'newIndex16_cast' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_8 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex16_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 144 'getelementptr' 'HTA_heap_1_addr_8' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_8 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex16_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 145 'getelementptr' 'HTA_heap_0_addr_8' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (0.00ns)   --->   "br i1 %tmp_23, label %branch53, label %branch52" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 146 'br' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_9 : Operation 147 [1/1] (3.25ns)   --->   "store i32 %offset_new_node_cast, i32* %HTA_heap_0_addr_8, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 147 'store' <Predicate = (tmp_21 & tmp_23)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_9 : Operation 148 [1/1] (0.00ns)   --->   "br label %branch50" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 148 'br' <Predicate = (tmp_21 & tmp_23)> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 149 [1/1] (3.25ns)   --->   "store i32 %offset_new_node_cast, i32* %HTA_heap_1_addr_7, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 149 'store' <Predicate = (!tmp_21 & tmp_24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "br label %branch46" [HLS_MAXHEAP_HTA/solution1/top.cc:148]   --->   Operation 150 'br' <Predicate = (!tmp_21 & tmp_24)> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (0.00ns)   --->   "%newIndex19 = or i11 %newIndex10_cast1, 3" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 151 'or' 'newIndex19' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%newIndex19_cast = zext i11 %newIndex19 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 152 'zext' 'newIndex19_cast' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_10 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex19_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:149]   --->   Operation 153 'getelementptr' 'HTA_heap_0_addr_10' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_10 : Operation 154 [1/1] (3.25ns)   --->   "store i32 0, i32* %HTA_heap_0_addr_10, align 8" [HLS_MAXHEAP_HTA/solution1/top.cc:149]   --->   Operation 154 'store' <Predicate = (!tmp_21)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "br label %3"   --->   Operation 155 'br' <Predicate = (!tmp_21)> <Delay = 0.00>
+ST_10 : Operation 156 [1/1] (3.25ns)   --->   "store i32 %offset_new_node_cast, i32* %HTA_heap_1_addr_8, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 156 'store' <Predicate = (tmp_21 & !tmp_23)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "br label %branch50" [HLS_MAXHEAP_HTA/solution1/top.cc:139]   --->   Operation 157 'br' <Predicate = (tmp_21 & !tmp_23)> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%newIndex21 = or i11 %newIndex10_cast1, 3" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 158 'or' 'newIndex21' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_10 : Operation 159 [1/1] (0.00ns)   --->   "%newIndex21_cast = zext i11 %newIndex21 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 159 'zext' 'newIndex21_cast' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_10 : Operation 160 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_11 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex21_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:140]   --->   Operation 160 'getelementptr' 'HTA_heap_0_addr_11' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_10 : Operation 161 [1/1] (3.25ns)   --->   "store i32 1, i32* %HTA_heap_0_addr_11, align 8" [HLS_MAXHEAP_HTA/solution1/top.cc:140]   --->   Operation 161 'store' <Predicate = (tmp_21)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_10 : Operation 162 [1/1] (0.00ns)   --->   "br label %3" [HLS_MAXHEAP_HTA/solution1/top.cc:141]   --->   Operation 162 'br' <Predicate = (tmp_21)> <Delay = 0.00>
+ST_10 : Operation 163 [1/1] (1.76ns)   --->   "br label %4" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 163 'br' <Predicate = true> <Delay = 1.76>
+
+State 11 <SV = 10> <Delay = 4.93>
+ST_11 : Operation 164 [1/1] (0.00ns)   --->   "%p_pn1 = phi i32 [ %offset_new_node_cast, %3 ], [ %offset_parent, %8 ]"   --->   Operation 164 'phi' 'p_pn1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 165 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i32 %p_pn1 to i13" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 165 'trunc' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i32 %p_pn1 to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 166 'trunc' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 167 [1/1] (0.00ns)   --->   "%newIndex23 = call i12 @_ssdm_op_PartSelect.i12.i32.i32.i32(i32 %p_pn1, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 167 'partselect' 'newIndex23' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 168 [1/1] (0.00ns)   --->   "%newIndex23_cast = zext i12 %newIndex23 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:108]   --->   Operation 168 'zext' 'newIndex23_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 169 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_13 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex23_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:153]   --->   Operation 169 'getelementptr' 'HTA_heap_0_addr_13' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 170 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_11 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex23_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:153]   --->   Operation 170 'getelementptr' 'HTA_heap_1_addr_11' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 171 [1/1] (1.67ns)   --->   "%now_0_sum = add i13 5, %tmp_29" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 171 'add' 'now_0_sum' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 172 [1/1] (0.00ns)   --->   "%newIndex24 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %now_0_sum, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 172 'partselect' 'newIndex24' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 173 [1/1] (0.00ns)   --->   "%newIndex24_cast = zext i12 %newIndex24 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 173 'zext' 'newIndex24_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 174 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_12 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex24_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 174 'getelementptr' 'HTA_heap_1_addr_12' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 175 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_14 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex24_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 175 'getelementptr' 'HTA_heap_0_addr_14' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 176 [1/1] (0.00ns)   --->   "br i1 %tmp_30, label %branch41, label %branch40" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 176 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 177 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_2 = load i32* %HTA_heap_1_addr_12, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 177 'load' 'HTA_heap_1_load_2' <Predicate = (!tmp_30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_11 : Operation 178 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_3 = load i32* %HTA_heap_0_addr_14, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 178 'load' 'HTA_heap_0_load_3' <Predicate = (tmp_30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 12 <SV = 11> <Delay = 3.25>
+ST_12 : Operation 179 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_2 = load i32* %HTA_heap_1_addr_12, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 179 'load' 'HTA_heap_1_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_12 : Operation 180 [1/1] (1.76ns)   --->   "br label %5" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 180 'br' <Predicate = true> <Delay = 1.76>
+
+State 13 <SV = 11> <Delay = 3.25>
+ST_13 : Operation 181 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_3 = load i32* %HTA_heap_0_addr_14, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 181 'load' 'HTA_heap_0_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_13 : Operation 182 [1/1] (1.76ns)   --->   "br label %5" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 182 'br' <Predicate = true> <Delay = 1.76>
+
+State 14 <SV = 12> <Delay = 3.25>
+ST_14 : Operation 183 [1/1] (0.00ns)   --->   "%offset_parent = phi i32 [ %HTA_heap_1_load_2, %branch40 ], [ %HTA_heap_0_load_3, %branch41 ]" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 183 'phi' 'offset_parent' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 184 [1/1] (2.47ns)   --->   "%tmp_12 = icmp eq i32 %offset_parent, -1" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 184 'icmp' 'tmp_12' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 185 [1/1] (0.00ns)   --->   "br i1 %tmp_12, label %.loopexit31_ifconv, label %_ifconv" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 185 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 186 [1/1] (0.00ns)   --->   "%tmp_33 = trunc i32 %offset_parent to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 186 'trunc' 'tmp_33' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_14 : Operation 187 [1/1] (0.00ns)   --->   "%newIndex26 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %offset_parent, i32 1, i32 31)" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 187 'partselect' 'newIndex26' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_14 : Operation 188 [1/1] (0.00ns)   --->   "%newIndex27 = zext i31 %newIndex26 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:156]   --->   Operation 188 'zext' 'newIndex27' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_14 : Operation 189 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_16 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex27" [HLS_MAXHEAP_HTA/solution1/top.cc:161]   --->   Operation 189 'getelementptr' 'HTA_heap_0_addr_16' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_14 : Operation 190 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_14 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex27" [HLS_MAXHEAP_HTA/solution1/top.cc:161]   --->   Operation 190 'getelementptr' 'HTA_heap_1_addr_14' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_14 : Operation 191 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_4 = load i32* %HTA_heap_1_addr_14, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 191 'load' 'HTA_heap_1_load_4' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_14 : Operation 192 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_5 = load i32* %HTA_heap_0_addr_16, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 192 'load' 'HTA_heap_0_load_5' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_14 : Operation 193 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_5 = load i32* %HTA_heap_1_addr_11, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 193 'load' 'HTA_heap_1_load_5' <Predicate = (tmp_30 & !tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_14 : Operation 194 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_6 = load i32* %HTA_heap_0_addr_13, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 194 'load' 'HTA_heap_0_load_6' <Predicate = (!tmp_30 & !tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 15 <SV = 13> <Delay = 7.20>
+ST_15 : Operation 195 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_4 = load i32* %HTA_heap_1_addr_14, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 195 'load' 'HTA_heap_1_load_4' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 196 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_5 = load i32* %HTA_heap_0_addr_16, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 196 'load' 'HTA_heap_0_load_5' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 197 [1/1] (0.69ns)   --->   "%swap_tmp = select i1 %tmp_33, i32 %HTA_heap_1_load_4, i32 %HTA_heap_0_load_5" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 197 'select' 'swap_tmp' <Predicate = (!tmp_12)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 198 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_5 = load i32* %HTA_heap_1_addr_11, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 198 'load' 'HTA_heap_1_load_5' <Predicate = (tmp_30 & !tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 199 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_6 = load i32* %HTA_heap_0_addr_13, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 199 'load' 'HTA_heap_0_load_6' <Predicate = (!tmp_30 & !tmp_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 200 [1/1] (0.69ns)   --->   "%now_load_phi = select i1 %tmp_30, i32 %HTA_heap_1_load_5, i32 %HTA_heap_0_load_6" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 200 'select' 'now_load_phi' <Predicate = (!tmp_12)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 201 [1/1] (2.47ns)   --->   "%tmp_13 = icmp sgt i32 %swap_tmp, %now_load_phi" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 201 'icmp' 'tmp_13' <Predicate = (!tmp_12)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 202 [1/1] (0.00ns)   --->   "br i1 %tmp_13, label %.loopexit31_ifconv, label %6" [HLS_MAXHEAP_HTA/solution1/top.cc:174]   --->   Operation 202 'br' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_15 : Operation 203 [1/1] (0.00ns)   --->   "br i1 %tmp_33, label %branch37, label %branch36" [HLS_MAXHEAP_HTA/solution1/top.cc:181]   --->   Operation 203 'br' <Predicate = (!tmp_12 & !tmp_13)> <Delay = 0.00>
+ST_15 : Operation 204 [1/1] (3.25ns)   --->   "store i32 %now_load_phi, i32* %HTA_heap_0_addr_16, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:181]   --->   Operation 204 'store' <Predicate = (!tmp_12 & !tmp_13 & !tmp_33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 205 [1/1] (0.00ns)   --->   "br label %7" [HLS_MAXHEAP_HTA/solution1/top.cc:181]   --->   Operation 205 'br' <Predicate = (!tmp_12 & !tmp_13 & !tmp_33)> <Delay = 0.00>
+ST_15 : Operation 206 [1/1] (3.25ns)   --->   "store i32 %now_load_phi, i32* %HTA_heap_1_addr_14, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:181]   --->   Operation 206 'store' <Predicate = (!tmp_12 & !tmp_13 & tmp_33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 207 [1/1] (0.00ns)   --->   "br label %7" [HLS_MAXHEAP_HTA/solution1/top.cc:181]   --->   Operation 207 'br' <Predicate = (!tmp_12 & !tmp_13 & tmp_33)> <Delay = 0.00>
+ST_15 : Operation 208 [1/1] (0.00ns)   --->   "br i1 %tmp_30, label %branch43, label %branch42" [HLS_MAXHEAP_HTA/solution1/top.cc:182]   --->   Operation 208 'br' <Predicate = (!tmp_12 & !tmp_13)> <Delay = 0.00>
+ST_15 : Operation 209 [1/1] (1.67ns)   --->   "%p_sum4 = add i13 1, %tmp_22" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 209 'add' 'p_sum4' <Predicate = (tmp_12) | (tmp_13)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 210 [1/1] (0.00ns)   --->   "%newIndex32 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum4, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 210 'partselect' 'newIndex32' <Predicate = (tmp_12) | (tmp_13)> <Delay = 0.00>
+ST_15 : Operation 211 [1/1] (0.00ns)   --->   "%newIndex32_cast = zext i12 %newIndex32 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 211 'zext' 'newIndex32_cast' <Predicate = (tmp_12) | (tmp_13)> <Delay = 0.00>
+ST_15 : Operation 212 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_18 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex32_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 212 'getelementptr' 'HTA_heap_1_addr_18' <Predicate = (!tmp_21 & tmp_12) | (!tmp_21 & tmp_13)> <Delay = 0.00>
+ST_15 : Operation 213 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_20 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex32_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 213 'getelementptr' 'HTA_heap_0_addr_20' <Predicate = (tmp_12) | (tmp_13)> <Delay = 0.00>
+ST_15 : Operation 214 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_8 = load i32* %HTA_heap_0_addr_20, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 214 'load' 'HTA_heap_0_load_8' <Predicate = (tmp_12) | (tmp_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 215 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_7 = load i32* %HTA_heap_1_addr_18, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 215 'load' 'HTA_heap_1_load_7' <Predicate = (!tmp_21 & tmp_12) | (!tmp_21 & tmp_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_15 : Operation 216 [1/1] (2.52ns)   --->   "%i = add i31 1, %cnt_insert" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 216 'add' 'i' <Predicate = (tmp_12) | (tmp_13)> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 14> <Delay = 3.25>
+ST_16 : Operation 217 [1/1] (3.25ns)   --->   "store i32 %swap_tmp, i32* %HTA_heap_0_addr_13, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:182]   --->   Operation 217 'store' <Predicate = (!tmp_30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_16 : Operation 218 [1/1] (0.00ns)   --->   "br label %8" [HLS_MAXHEAP_HTA/solution1/top.cc:182]   --->   Operation 218 'br' <Predicate = (!tmp_30)> <Delay = 0.00>
+ST_16 : Operation 219 [1/1] (3.25ns)   --->   "store i32 %swap_tmp, i32* %HTA_heap_1_addr_11, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:182]   --->   Operation 219 'store' <Predicate = (tmp_30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_16 : Operation 220 [1/1] (0.00ns)   --->   "br label %8" [HLS_MAXHEAP_HTA/solution1/top.cc:182]   --->   Operation 220 'br' <Predicate = (tmp_30)> <Delay = 0.00>
+ST_16 : Operation 221 [1/1] (0.00ns)   --->   "br label %4" [HLS_MAXHEAP_HTA/solution1/top.cc:186]   --->   Operation 221 'br' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 14> <Delay = 4.23>
+ST_17 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node offset_last_parent_1)   --->   "%tmp_34 = trunc i32 %offset_last_parent1 to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 222 'trunc' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 223 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_8 = load i32* %HTA_heap_0_addr_20, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 223 'load' 'HTA_heap_0_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_17 : Operation 224 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_7 = load i32* %HTA_heap_1_addr_18, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:194]   --->   Operation 224 'load' 'HTA_heap_1_load_7' <Predicate = (!tmp_21)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_17 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node offset_last_parent_1)   --->   "%sel_tmp1 = select i1 %tmp_21, i32 %offset_last_parent1, i32 %HTA_heap_1_load_7" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 225 'select' 'sel_tmp1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node offset_last_parent_1)   --->   "%sel_tmp2 = and i1 %tmp_34, %tmp_s" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 226 'and' 'sel_tmp2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 227 [1/1] (0.97ns) (out node of the LUT)   --->   "%offset_last_parent_1 = select i1 %sel_tmp2, i32 %HTA_heap_0_load_8, i32 %sel_tmp1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 227 'select' 'offset_last_parent_1' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 228 [1/1] (0.00ns)   --->   "br label %0" [HLS_MAXHEAP_HTA/solution1/top.cc:100]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 6> <Delay = 3.25>
+ST_18 : Operation 229 [1/1] (0.00ns)   --->   "%offset_now = phi i32 [ %offset_tail_3, %.loopexit ], [ %offset_tail_cast, %.preheader.preheader ]"   --->   Operation 229 'phi' 'offset_now' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 230 [1/1] (0.00ns)   --->   "%i_1 = phi i31 [ %i_2, %.loopexit ], [ 0, %.preheader.preheader ]"   --->   Operation 230 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 231 [1/1] (0.00ns)   --->   "%i_1_cast = zext i31 %i_1 to i32" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 231 'zext' 'i_1_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 232 [1/1] (2.47ns)   --->   "%tmp_5 = icmp slt i32 %i_1_cast, %n_read" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 232 'icmp' 'tmp_5' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 233 [1/1] (2.52ns)   --->   "%i_2 = add i31 %i_1, 1" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 233 'add' 'i_2' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 234 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %branch82_ifconv, label %21" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 234 'br' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 235 [1/1] (0.00ns)   --->   "%newIndex17 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %offset_now, i32 1, i32 31)" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 235 'partselect' 'newIndex17' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_18 : Operation 236 [1/1] (0.00ns)   --->   "%newIndex18 = zext i31 %newIndex17 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 236 'zext' 'newIndex18' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_18 : Operation 237 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_9 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex18" [HLS_MAXHEAP_HTA/solution1/top.cc:208]   --->   Operation 237 'getelementptr' 'HTA_heap_0_addr_9' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_18 : Operation 238 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_9 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex18" [HLS_MAXHEAP_HTA/solution1/top.cc:208]   --->   Operation 238 'getelementptr' 'HTA_heap_1_addr_9' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_18 : Operation 239 [2/2] (3.25ns)   --->   "%HTA_heap_0_load = load i32* %HTA_heap_0_addr, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:209]   --->   Operation 239 'load' 'HTA_heap_0_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_18 : Operation 240 [2/2] (3.25ns)   --->   "%HTA_heap_1_load = load i32* %HTA_heap_1_addr_9, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 240 'load' 'HTA_heap_1_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_18 : Operation 241 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_1 = load i32* %HTA_heap_0_addr_9, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 241 'load' 'HTA_heap_0_load_1' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_18 : Operation 242 [1/1] (0.00ns)   --->   "ret void" [HLS_MAXHEAP_HTA/solution1/top.cc:324]   --->   Operation 242 'ret' <Predicate = (!tmp_5)> <Delay = 0.00>
+
+State 19 <SV = 7> <Delay = 7.20>
+ST_19 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_26 = trunc i32 %offset_now to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 243 'trunc' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 244 [1/2] (3.25ns)   --->   "%HTA_heap_0_load = load i32* %HTA_heap_0_addr, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:209]   --->   Operation 244 'load' 'HTA_heap_0_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_19 : Operation 245 [1/1] (0.00ns)   --->   "%tmp_6 = zext i31 %i_1 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:209]   --->   Operation 245 'zext' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 246 [1/1] (0.00ns)   --->   "%dis_output_addr = getelementptr [200 x i32]* %dis_output, i64 0, i64 %tmp_6" [HLS_MAXHEAP_HTA/solution1/top.cc:209]   --->   Operation 246 'getelementptr' 'dis_output_addr' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 247 [1/1] (3.25ns)   --->   "store i32 %HTA_heap_0_load, i32* %dis_output_addr, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:209]   --->   Operation 247 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_19 : Operation 248 [1/2] (3.25ns)   --->   "%HTA_heap_1_load = load i32* %HTA_heap_1_addr_9, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 248 'load' 'HTA_heap_1_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_19 : Operation 249 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_1 = load i32* %HTA_heap_0_addr_9, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 249 'load' 'HTA_heap_0_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_19 : Operation 250 [1/1] (0.69ns)   --->   "%tail_load_phi = select i1 %tmp_26, i32 %HTA_heap_1_load, i32 %HTA_heap_0_load_1" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 250 'select' 'tail_load_phi' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_19 : Operation 251 [1/1] (3.25ns)   --->   "store i32 %tail_load_phi, i32* %HTA_heap_0_addr, align 16" [HLS_MAXHEAP_HTA/solution1/top.cc:211]   --->   Operation 251 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 20 <SV = 8> <Delay = 4.93>
+ST_20 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_25 = trunc i32 %offset_now to i13" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 252 'trunc' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 253 [1/1] (1.67ns)   --->   "%p_sum = add i13 5, %tmp_25" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 253 'add' 'p_sum' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 254 [1/1] (0.00ns)   --->   "%newIndex22 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 254 'partselect' 'newIndex22' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 255 [1/1] (0.00ns)   --->   "%newIndex22_cast = zext i12 %newIndex22 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 255 'zext' 'newIndex22_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 256 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_10 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex22_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 256 'getelementptr' 'HTA_heap_1_addr_10' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_20 : Operation 257 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_12 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex22_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 257 'getelementptr' 'HTA_heap_0_addr_12' <Predicate = (tmp_26)> <Delay = 0.00>
+ST_20 : Operation 258 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_2 = load i32* %HTA_heap_0_addr_12, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 258 'load' 'HTA_heap_0_load_2' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_20 : Operation 259 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_1 = load i32* %HTA_heap_1_addr_10, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 259 'load' 'HTA_heap_1_load_1' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_20 : Operation 260 [1/1] (1.67ns)   --->   "%p_sum7 = add i13 6, %tmp_25" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 260 'add' 'p_sum7' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 261 [1/1] (0.00ns)   --->   "%newIndex25 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum7, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 261 'partselect' 'newIndex25' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 262 [1/1] (0.00ns)   --->   "%newIndex25_cast = zext i12 %newIndex25 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 262 'zext' 'newIndex25_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 263 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_15 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex25_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 263 'getelementptr' 'HTA_heap_0_addr_15' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_20 : Operation 264 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_13 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex25_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 264 'getelementptr' 'HTA_heap_1_addr_13' <Predicate = (tmp_26)> <Delay = 0.00>
+ST_20 : Operation 265 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_3 = load i32* %HTA_heap_1_addr_13, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 265 'load' 'HTA_heap_1_load_3' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_20 : Operation 266 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_4 = load i32* %HTA_heap_0_addr_15, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 266 'load' 'HTA_heap_0_load_4' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 21 <SV = 9> <Delay = 5.72>
+ST_21 : Operation 267 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_2 = load i32* %HTA_heap_0_addr_12, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 267 'load' 'HTA_heap_0_load_2' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_21 : Operation 268 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_1 = load i32* %HTA_heap_1_addr_10, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 268 'load' 'HTA_heap_1_load_1' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_21 : Operation 269 [1/1] (0.69ns)   --->   "%p_v = select i1 %tmp_26, i32 %HTA_heap_0_load_2, i32 %HTA_heap_1_load_1" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 269 'select' 'p_v' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 270 [1/1] (0.00ns)   --->   "%tmp_27 = trunc i32 %p_v to i13" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 270 'trunc' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 271 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i32 %p_v to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:226]   --->   Operation 271 'trunc' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 272 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_3 = load i32* %HTA_heap_1_addr_13, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 272 'load' 'HTA_heap_1_load_3' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_21 : Operation 273 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_4 = load i32* %HTA_heap_0_addr_15, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 273 'load' 'HTA_heap_0_load_4' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_21 : Operation 274 [1/1] (0.00ns) (grouped into LUT with out node tmp_11)   --->   "%HTA_heap_load_phi = select i1 %tmp_26, i32 %HTA_heap_1_load_3, i32 %HTA_heap_0_load_4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 274 'select' 'HTA_heap_load_phi' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 275 [1/1] (2.47ns) (out node of the LUT)   --->   "%tmp_11 = icmp eq i32 %HTA_heap_load_phi, 1" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 275 'icmp' 'tmp_11' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 276 [1/1] (0.00ns)   --->   "br i1 %tmp_11, label %9, label %11" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 276 'br' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 277 [1/1] (1.67ns)   --->   "%p_sum8 = add i13 %tmp_27, 4" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 277 'add' 'p_sum8' <Predicate = (!tmp_11)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 278 [1/1] (0.00ns)   --->   "%newIndex29 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum8, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 278 'partselect' 'newIndex29' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_21 : Operation 279 [1/1] (0.00ns)   --->   "%newIndex30_cast = zext i12 %newIndex29 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 279 'zext' 'newIndex30_cast' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_21 : Operation 280 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_18 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex30_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 280 'getelementptr' 'HTA_heap_0_addr_18' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_21 : Operation 281 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_16 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex30_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 281 'getelementptr' 'HTA_heap_1_addr_16' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_21 : Operation 282 [1/1] (0.00ns)   --->   "br i1 %tmp_28, label %branch25, label %branch24" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 282 'br' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_21 : Operation 283 [1/1] (1.67ns)   --->   "%p_sum3 = add i13 %tmp_27, 3" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 283 'add' 'p_sum3' <Predicate = (tmp_11)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 284 [1/1] (0.00ns)   --->   "%newIndex28 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum3, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 284 'partselect' 'newIndex28' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_21 : Operation 285 [1/1] (0.00ns)   --->   "%newIndex29_cast = zext i12 %newIndex28 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 285 'zext' 'newIndex29_cast' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_21 : Operation 286 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_15 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex29_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 286 'getelementptr' 'HTA_heap_1_addr_15' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_21 : Operation 287 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_17 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex29_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 287 'getelementptr' 'HTA_heap_0_addr_17' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_21 : Operation 288 [1/1] (0.00ns)   --->   "br i1 %tmp_28, label %branch27, label %branch26" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 288 'br' <Predicate = (tmp_11)> <Delay = 0.00>
+
+State 22 <SV = 10> <Delay = 3.25>
+ST_22 : Operation 289 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_18, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 289 'store' <Predicate = (!tmp_11 & !tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_22 : Operation 290 [1/1] (0.00ns)   --->   "br label %12" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 290 'br' <Predicate = (!tmp_11 & !tmp_28)> <Delay = 0.00>
+ST_22 : Operation 291 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_16, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 291 'store' <Predicate = (!tmp_11 & tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_22 : Operation 292 [1/1] (0.00ns)   --->   "br label %12" [HLS_MAXHEAP_HTA/solution1/top.cc:230]   --->   Operation 292 'br' <Predicate = (!tmp_11 & tmp_28)> <Delay = 0.00>
+ST_22 : Operation 293 [1/1] (0.00ns)   --->   "br label %_ifconv20"   --->   Operation 293 'br' <Predicate = (!tmp_11)> <Delay = 0.00>
+ST_22 : Operation 294 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_15, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 294 'store' <Predicate = (tmp_11 & !tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_22 : Operation 295 [1/1] (0.00ns)   --->   "br label %10" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 295 'br' <Predicate = (tmp_11 & !tmp_28)> <Delay = 0.00>
+ST_22 : Operation 296 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_0_addr_17, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 296 'store' <Predicate = (tmp_11 & tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_22 : Operation 297 [1/1] (0.00ns)   --->   "br label %10" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 297 'br' <Predicate = (tmp_11 & tmp_28)> <Delay = 0.00>
+ST_22 : Operation 298 [1/1] (0.00ns)   --->   "br label %_ifconv20" [HLS_MAXHEAP_HTA/solution1/top.cc:229]   --->   Operation 298 'br' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_22 : Operation 299 [1/1] (1.67ns)   --->   "%p_sum9 = add i13 %tmp_25, 2" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 299 'add' 'p_sum9' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 300 [1/1] (0.00ns)   --->   "%newIndex30 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum9, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 300 'partselect' 'newIndex30' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 301 [2/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i32 %offset_now, i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:235]   --->   Operation 301 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 11> <Delay = 3.25>
+ST_23 : Operation 302 [1/1] (0.00ns)   --->   "%newIndex31_cast = zext i12 %newIndex30 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 302 'zext' 'newIndex31_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 303 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_19 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex31_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 303 'getelementptr' 'HTA_heap_0_addr_19' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_23 : Operation 304 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_17 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex31_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 304 'getelementptr' 'HTA_heap_1_addr_17' <Predicate = (tmp_26)> <Delay = 0.00>
+ST_23 : Operation 305 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_6 = load i32* %HTA_heap_1_addr_17, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 305 'load' 'HTA_heap_1_load_6' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_23 : Operation 306 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_7 = load i32* %HTA_heap_0_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 306 'load' 'HTA_heap_0_load_7' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_23 : Operation 307 [1/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i32 %offset_now, i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i8* %alloc_HTA_cmd)" [HLS_MAXHEAP_HTA/solution1/top.cc:235]   --->   Operation 307 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 12> <Delay = 3.95>
+ST_24 : Operation 308 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_6 = load i32* %HTA_heap_1_addr_17, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 308 'load' 'HTA_heap_1_load_6' <Predicate = (tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_24 : Operation 309 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_7 = load i32* %HTA_heap_0_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 309 'load' 'HTA_heap_0_load_7' <Predicate = (!tmp_26)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_24 : Operation 310 [1/1] (0.69ns)   --->   "%offset_tail_3 = select i1 %tmp_26, i32 %HTA_heap_1_load_6, i32 %HTA_heap_0_load_7" [HLS_MAXHEAP_HTA/solution1/top.cc:232]   --->   Operation 310 'select' 'offset_tail_3' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 311 [1/1] (1.76ns)   --->   "br label %.backedge" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 311 'br' <Predicate = true> <Delay = 1.76>
+
+State 25 <SV = 13> <Delay = 4.93>
+ST_25 : Operation 312 [1/1] (0.00ns)   --->   "%p_pn2 = phi i32 [ %offset_head_cast, %_ifconv20 ], [ %p_pn2_be, %.backedge.backedge ]" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 312 'phi' 'p_pn2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i32 %p_pn2 to i13" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 313 'trunc' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 314 [1/1] (1.67ns)   --->   "%now_1_sum1 = add i13 3, %tmp_31" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 314 'add' 'now_1_sum1' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 315 [1/1] (0.00ns)   --->   "%tmp_32 = trunc i32 %p_pn2 to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 315 'trunc' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 316 [1/1] (0.00ns)   --->   "%newIndex31 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %now_1_sum1, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 316 'partselect' 'newIndex31' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 317 [1/1] (0.00ns)   --->   "%newIndex33_cast = zext i12 %newIndex31 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 317 'zext' 'newIndex33_cast' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 318 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_19 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex33_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 318 'getelementptr' 'HTA_heap_1_addr_19' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 319 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_21 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex33_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 319 'getelementptr' 'HTA_heap_0_addr_21' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 320 [1/1] (0.00ns)   --->   "br i1 %tmp_32, label %branch21, label %branch20" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 320 'br' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 321 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_8 = load i32* %HTA_heap_1_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 321 'load' 'HTA_heap_1_load_8' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_25 : Operation 322 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_9 = load i32* %HTA_heap_0_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 322 'load' 'HTA_heap_0_load_9' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 26 <SV = 14> <Delay = 7.49>
+ST_26 : Operation 323 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_8 = load i32* %HTA_heap_1_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 323 'load' 'HTA_heap_1_load_8' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_26 : Operation 324 [1/1] (1.76ns)   --->   "br label %13" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 324 'br' <Predicate = (!tmp_32)> <Delay = 1.76>
+ST_26 : Operation 325 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_9 = load i32* %HTA_heap_0_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 325 'load' 'HTA_heap_0_load_9' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_26 : Operation 326 [1/1] (1.76ns)   --->   "br label %13" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 326 'br' <Predicate = (tmp_32)> <Delay = 1.76>
+ST_26 : Operation 327 [1/1] (0.00ns) (grouped into LUT with out node tmp_14)   --->   "%HTA_heap_load_3_phi = phi i32 [ %HTA_heap_1_load_8, %branch20 ], [ %HTA_heap_0_load_9, %branch21 ]" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 327 'phi' 'HTA_heap_load_3_phi' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 328 [1/1] (2.47ns) (out node of the LUT)   --->   "%tmp_14 = icmp eq i32 %HTA_heap_load_3_phi, -1" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 328 'icmp' 'tmp_14' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 329 [1/1] (0.00ns)   --->   "br i1 %tmp_14, label %_ifconv4, label %.critedge_ifconv" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 329 'br' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 330 [1/1] (1.67ns)   --->   "%now_1_sum = add i13 %tmp_31, 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 330 'add' 'now_1_sum' <Predicate = (tmp_14)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 331 [1/1] (0.00ns)   --->   "%newIndex33 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %now_1_sum, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 331 'partselect' 'newIndex33' <Predicate = (tmp_14)> <Delay = 0.00>
+ST_26 : Operation 332 [1/1] (0.00ns)   --->   "%newIndex34_cast = zext i12 %newIndex33 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 332 'zext' 'newIndex34_cast' <Predicate = (tmp_14)> <Delay = 0.00>
+ST_26 : Operation 333 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_22 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex34_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 333 'getelementptr' 'HTA_heap_0_addr_22' <Predicate = (!tmp_32 & tmp_14)> <Delay = 0.00>
+ST_26 : Operation 334 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_20 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex34_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 334 'getelementptr' 'HTA_heap_1_addr_20' <Predicate = (tmp_32 & tmp_14)> <Delay = 0.00>
+ST_26 : Operation 335 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_9 = load i32* %HTA_heap_1_addr_20, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 335 'load' 'HTA_heap_1_load_9' <Predicate = (tmp_32 & tmp_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_26 : Operation 336 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_10 = load i32* %HTA_heap_0_addr_22, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 336 'load' 'HTA_heap_0_load_10' <Predicate = (!tmp_32 & tmp_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 27 <SV = 15> <Delay = 5.72>
+ST_27 : Operation 337 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_9 = load i32* %HTA_heap_1_addr_20, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 337 'load' 'HTA_heap_1_load_9' <Predicate = (tmp_32 & tmp_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_27 : Operation 338 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_10 = load i32* %HTA_heap_0_addr_22, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 338 'load' 'HTA_heap_0_load_10' <Predicate = (!tmp_32 & tmp_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_27 : Operation 339 [1/1] (0.00ns) (grouped into LUT with out node tmp_15)   --->   "%HTA_heap_load_5_phi = select i1 %tmp_32, i32 %HTA_heap_1_load_9, i32 %HTA_heap_0_load_10" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 339 'select' 'HTA_heap_load_5_phi' <Predicate = (tmp_14)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 340 [1/1] (2.47ns) (out node of the LUT)   --->   "%tmp_15 = icmp eq i32 %HTA_heap_load_5_phi, -1" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 340 'icmp' 'tmp_15' <Predicate = (tmp_14)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 341 [1/1] (0.00ns)   --->   "br i1 %tmp_15, label %.loopexit, label %.critedge_ifconv" [HLS_MAXHEAP_HTA/solution1/top.cc:248]   --->   Operation 341 'br' <Predicate = (tmp_14)> <Delay = 0.00>
+ST_27 : Operation 342 [1/1] (0.00ns)   --->   "%newIndex34 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_pn2, i32 1, i32 31)" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 342 'partselect' 'newIndex34' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+ST_27 : Operation 343 [1/1] (0.00ns)   --->   "%newIndex35 = zext i31 %newIndex34 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:80]   --->   Operation 343 'zext' 'newIndex35' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+ST_27 : Operation 344 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_23 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex35" [HLS_MAXHEAP_HTA/solution1/top.cc:253]   --->   Operation 344 'getelementptr' 'HTA_heap_0_addr_23' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+ST_27 : Operation 345 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_21 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex35" [HLS_MAXHEAP_HTA/solution1/top.cc:253]   --->   Operation 345 'getelementptr' 'HTA_heap_1_addr_21' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+ST_27 : Operation 346 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_11 = load i32* %HTA_heap_0_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 346 'load' 'HTA_heap_0_load_11' <Predicate = (tmp_32 & !tmp_14) | (tmp_32 & !tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_27 : Operation 347 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_10 = load i32* %HTA_heap_1_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 347 'load' 'HTA_heap_1_load_10' <Predicate = (!tmp_32 & !tmp_14) | (!tmp_32 & !tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_27 : Operation 348 [1/1] (1.67ns)   --->   "%p_sum6 = add i13 4, %tmp_31" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 348 'add' 'p_sum6' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 349 [1/1] (0.00ns)   --->   "%newIndex12 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum6, i32 1, i32 12)" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 349 'partselect' 'newIndex12' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+
+State 28 <SV = 16> <Delay = 3.95>
+ST_28 : Operation 350 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_11 = load i32* %HTA_heap_0_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 350 'load' 'HTA_heap_0_load_11' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_28 : Operation 351 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_10 = load i32* %HTA_heap_1_addr_19, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 351 'load' 'HTA_heap_1_load_10' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_28 : Operation 352 [1/1] (0.69ns)   --->   "%offset_left = select i1 %tmp_32, i32 %HTA_heap_0_load_11, i32 %HTA_heap_1_load_10" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 352 'select' 'offset_left' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_28 : Operation 353 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i32 %offset_left to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 353 'trunc' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 354 [1/1] (0.00ns)   --->   "%newIndex20 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %offset_left, i32 1, i32 31)" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 354 'partselect' 'newIndex20' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 355 [1/1] (0.00ns)   --->   "%newIndex36 = zext i31 %newIndex20 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 355 'zext' 'newIndex36' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 356 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_24 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex36" [HLS_MAXHEAP_HTA/solution1/top.cc:255]   --->   Operation 356 'getelementptr' 'HTA_heap_0_addr_24' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 357 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_22 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex36" [HLS_MAXHEAP_HTA/solution1/top.cc:255]   --->   Operation 357 'getelementptr' 'HTA_heap_1_addr_22' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 358 [1/1] (0.00ns)   --->   "%newIndex12_cast = zext i12 %newIndex12 to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 358 'zext' 'newIndex12_cast' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 359 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_25 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex12_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 359 'getelementptr' 'HTA_heap_0_addr_25' <Predicate = (!tmp_32)> <Delay = 0.00>
+ST_28 : Operation 360 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_23 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex12_cast" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 360 'getelementptr' 'HTA_heap_1_addr_23' <Predicate = (tmp_32)> <Delay = 0.00>
+ST_28 : Operation 361 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_11 = load i32* %HTA_heap_1_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 361 'load' 'HTA_heap_1_load_11' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_28 : Operation 362 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_12 = load i32* %HTA_heap_0_addr_25, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 362 'load' 'HTA_heap_0_load_12' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_28 : Operation 363 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_12 = load i32* %HTA_heap_1_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:258]   --->   Operation 363 'load' 'HTA_heap_1_load_12' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_28 : Operation 364 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_13 = load i32* %HTA_heap_0_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:258]   --->   Operation 364 'load' 'HTA_heap_0_load_13' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 29 <SV = 17> <Delay = 7.20>
+ST_29 : Operation 365 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_11 = load i32* %HTA_heap_1_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 365 'load' 'HTA_heap_1_load_11' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 366 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_12 = load i32* %HTA_heap_0_addr_25, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 366 'load' 'HTA_heap_0_load_12' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 367 [1/1] (0.69ns)   --->   "%offset_right = select i1 %tmp_32, i32 %HTA_heap_1_load_11, i32 %HTA_heap_0_load_12" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 367 'select' 'offset_right' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_29 : Operation 368 [1/1] (0.00ns)   --->   "%tmp_36 = trunc i32 %offset_right to i1" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 368 'trunc' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 369 [1/1] (0.00ns)   --->   "%newIndex = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %offset_right, i32 1, i32 31)" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 369 'partselect' 'newIndex' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 370 [1/1] (0.00ns)   --->   "%newIndex5 = zext i31 %newIndex to i64" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 370 'zext' 'newIndex5' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 371 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_26 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex5" [HLS_MAXHEAP_HTA/solution1/top.cc:257]   --->   Operation 371 'getelementptr' 'HTA_heap_0_addr_26' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 372 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_24 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex5" [HLS_MAXHEAP_HTA/solution1/top.cc:257]   --->   Operation 372 'getelementptr' 'HTA_heap_1_addr_24' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 373 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_12 = load i32* %HTA_heap_1_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:258]   --->   Operation 373 'load' 'HTA_heap_1_load_12' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 374 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_13 = load i32* %HTA_heap_0_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:258]   --->   Operation 374 'load' 'HTA_heap_0_load_13' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 375 [1/1] (0.69ns)   --->   "%swap_tmp1 = select i1 %tmp_32, i32 %HTA_heap_1_load_12, i32 %HTA_heap_0_load_13" [HLS_MAXHEAP_HTA/solution1/top.cc:258]   --->   Operation 375 'select' 'swap_tmp1' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_29 : Operation 376 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_13 = load i32* %HTA_heap_1_addr_22, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:261]   --->   Operation 376 'load' 'HTA_heap_1_load_13' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 377 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_14 = load i32* %HTA_heap_0_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:261]   --->   Operation 377 'load' 'HTA_heap_0_load_14' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 378 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_14 = load i32* %HTA_heap_1_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:266]   --->   Operation 378 'load' 'HTA_heap_1_load_14' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_29 : Operation 379 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_15 = load i32* %HTA_heap_0_addr_26, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:266]   --->   Operation 379 'load' 'HTA_heap_0_load_15' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+
+State 30 <SV = 18> <Delay = 7.68>
+ST_30 : Operation 380 [1/1] (2.47ns)   --->   "%tmp_16 = icmp eq i32 %offset_left, -1" [HLS_MAXHEAP_HTA/solution1/top.cc:260]   --->   Operation 380 'icmp' 'tmp_16' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 381 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_13 = load i32* %HTA_heap_1_addr_22, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:261]   --->   Operation 381 'load' 'HTA_heap_1_load_13' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 382 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_14 = load i32* %HTA_heap_0_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:261]   --->   Operation 382 'load' 'HTA_heap_0_load_14' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 383 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp2)   --->   "%sel_tmp9 = select i1 %tmp_16, i32 -1, i32 %HTA_heap_0_load_14" [HLS_MAXHEAP_HTA/solution1/top.cc:260]   --->   Operation 383 'select' 'sel_tmp9' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 384 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp2)   --->   "%sel_tmp = xor i1 %tmp_16, true" [HLS_MAXHEAP_HTA/solution1/top.cc:260]   --->   Operation 384 'xor' 'sel_tmp' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 385 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp2)   --->   "%sel_tmp3 = and i1 %tmp_35, %sel_tmp" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 385 'and' 'sel_tmp3' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 386 [1/1] (0.97ns) (out node of the LUT)   --->   "%swap_tmp2 = select i1 %sel_tmp3, i32 %HTA_heap_1_load_13, i32 %sel_tmp9" [HLS_MAXHEAP_HTA/solution1/top.cc:254]   --->   Operation 386 'select' 'swap_tmp2' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 387 [1/1] (2.47ns)   --->   "%tmp_17 = icmp eq i32 %offset_right, -1" [HLS_MAXHEAP_HTA/solution1/top.cc:265]   --->   Operation 387 'icmp' 'tmp_17' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 388 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_14 = load i32* %HTA_heap_1_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:266]   --->   Operation 388 'load' 'HTA_heap_1_load_14' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 389 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_15 = load i32* %HTA_heap_0_addr_26, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:266]   --->   Operation 389 'load' 'HTA_heap_0_load_15' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 390 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp3)   --->   "%sel_tmp4 = select i1 %tmp_17, i32 -1, i32 %HTA_heap_0_load_15" [HLS_MAXHEAP_HTA/solution1/top.cc:265]   --->   Operation 390 'select' 'sel_tmp4' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 391 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp3)   --->   "%sel_tmp5 = xor i1 %tmp_17, true" [HLS_MAXHEAP_HTA/solution1/top.cc:265]   --->   Operation 391 'xor' 'sel_tmp5' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 392 [1/1] (0.00ns) (grouped into LUT with out node swap_tmp3)   --->   "%sel_tmp6 = and i1 %tmp_36, %sel_tmp5" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 392 'and' 'sel_tmp6' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 393 [1/1] (0.97ns) (out node of the LUT)   --->   "%swap_tmp3 = select i1 %sel_tmp6, i32 %HTA_heap_1_load_14, i32 %sel_tmp4" [HLS_MAXHEAP_HTA/solution1/top.cc:256]   --->   Operation 393 'select' 'swap_tmp3' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 394 [1/1] (2.47ns)   --->   "%tmp_18 = icmp sgt i32 %swap_tmp2, %swap_tmp1" [HLS_MAXHEAP_HTA/solution1/top.cc:271]   --->   Operation 394 'icmp' 'tmp_18' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 395 [1/1] (2.47ns)   --->   "%tmp_19 = icmp sgt i32 %swap_tmp2, %swap_tmp3" [HLS_MAXHEAP_HTA/solution1/top.cc:271]   --->   Operation 395 'icmp' 'tmp_19' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 396 [1/1] (0.97ns)   --->   "%or_cond = and i1 %tmp_18, %tmp_19" [HLS_MAXHEAP_HTA/solution1/top.cc:271]   --->   Operation 396 'and' 'or_cond' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 397 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %14, label %17" [HLS_MAXHEAP_HTA/solution1/top.cc:271]   --->   Operation 397 'br' <Predicate = (!tmp_14) | (!tmp_15)> <Delay = 0.00>
+ST_30 : Operation 398 [1/1] (2.47ns)   --->   "%tmp_20 = icmp sgt i32 %swap_tmp3, %swap_tmp1" [HLS_MAXHEAP_HTA/solution1/top.cc:296]   --->   Operation 398 'icmp' 'tmp_20' <Predicate = (!tmp_14 & !or_cond) | (!tmp_15 & !or_cond)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 399 [1/1] (0.00ns)   --->   "br i1 %tmp_20, label %18, label %.loopexit" [HLS_MAXHEAP_HTA/solution1/top.cc:296]   --->   Operation 399 'br' <Predicate = (!tmp_14 & !or_cond) | (!tmp_15 & !or_cond)> <Delay = 0.00>
+ST_30 : Operation 400 [1/1] (0.00ns)   --->   "br i1 %tmp_32, label %branch13, label %branch12" [HLS_MAXHEAP_HTA/solution1/top.cc:316]   --->   Operation 400 'br' <Predicate = (!tmp_14 & !or_cond & tmp_20) | (!tmp_15 & !or_cond & tmp_20)> <Delay = 0.00>
+ST_30 : Operation 401 [1/1] (3.25ns)   --->   "store i32 %swap_tmp3, i32* %HTA_heap_0_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:316]   --->   Operation 401 'store' <Predicate = (!tmp_32 & !tmp_14 & !or_cond & tmp_20) | (!tmp_32 & !tmp_15 & !or_cond & tmp_20)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 402 [1/1] (0.00ns)   --->   "br label %19" [HLS_MAXHEAP_HTA/solution1/top.cc:316]   --->   Operation 402 'br' <Predicate = (!tmp_32 & !tmp_14 & !or_cond & tmp_20) | (!tmp_32 & !tmp_15 & !or_cond & tmp_20)> <Delay = 0.00>
+ST_30 : Operation 403 [1/1] (3.25ns)   --->   "store i32 %swap_tmp3, i32* %HTA_heap_1_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:316]   --->   Operation 403 'store' <Predicate = (tmp_32 & !tmp_14 & !or_cond & tmp_20) | (tmp_32 & !tmp_15 & !or_cond & tmp_20)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 404 [1/1] (0.00ns)   --->   "br label %19" [HLS_MAXHEAP_HTA/solution1/top.cc:316]   --->   Operation 404 'br' <Predicate = (tmp_32 & !tmp_14 & !or_cond & tmp_20) | (tmp_32 & !tmp_15 & !or_cond & tmp_20)> <Delay = 0.00>
+ST_30 : Operation 405 [1/1] (0.00ns)   --->   "br i1 %tmp_36, label %branch1, label %branch0" [HLS_MAXHEAP_HTA/solution1/top.cc:317]   --->   Operation 405 'br' <Predicate = (!tmp_14 & !or_cond & tmp_20) | (!tmp_15 & !or_cond & tmp_20)> <Delay = 0.00>
+ST_30 : Operation 406 [1/1] (0.00ns)   --->   "br i1 %tmp_32, label %branch15, label %branch14" [HLS_MAXHEAP_HTA/solution1/top.cc:291]   --->   Operation 406 'br' <Predicate = (!tmp_14 & or_cond) | (!tmp_15 & or_cond)> <Delay = 0.00>
+ST_30 : Operation 407 [1/1] (3.25ns)   --->   "store i32 %swap_tmp2, i32* %HTA_heap_0_addr_23, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:291]   --->   Operation 407 'store' <Predicate = (!tmp_32 & !tmp_14 & or_cond) | (!tmp_32 & !tmp_15 & or_cond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 408 [1/1] (0.00ns)   --->   "br label %15" [HLS_MAXHEAP_HTA/solution1/top.cc:291]   --->   Operation 408 'br' <Predicate = (!tmp_32 & !tmp_14 & or_cond) | (!tmp_32 & !tmp_15 & or_cond)> <Delay = 0.00>
+ST_30 : Operation 409 [1/1] (3.25ns)   --->   "store i32 %swap_tmp2, i32* %HTA_heap_1_addr_21, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:291]   --->   Operation 409 'store' <Predicate = (tmp_32 & !tmp_14 & or_cond) | (tmp_32 & !tmp_15 & or_cond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_30 : Operation 410 [1/1] (0.00ns)   --->   "br label %15" [HLS_MAXHEAP_HTA/solution1/top.cc:291]   --->   Operation 410 'br' <Predicate = (tmp_32 & !tmp_14 & or_cond) | (tmp_32 & !tmp_15 & or_cond)> <Delay = 0.00>
+ST_30 : Operation 411 [1/1] (0.00ns)   --->   "br i1 %tmp_35, label %branch7, label %branch6" [HLS_MAXHEAP_HTA/solution1/top.cc:292]   --->   Operation 411 'br' <Predicate = (!tmp_14 & or_cond) | (!tmp_15 & or_cond)> <Delay = 0.00>
+ST_30 : Operation 412 [1/1] (0.00ns)   --->   "br label %.preheader" [HLS_MAXHEAP_HTA/solution1/top.cc:203]   --->   Operation 412 'br' <Predicate = (tmp_14 & tmp_15) | (!or_cond & !tmp_20)> <Delay = 0.00>
+
+State 31 <SV = 19> <Delay = 3.25>
+ST_31 : Operation 413 [1/1] (3.25ns)   --->   "store i32 %swap_tmp1, i32* %HTA_heap_0_addr_26, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:317]   --->   Operation 413 'store' <Predicate = (!or_cond & !tmp_36)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_31 : Operation 414 [1/1] (0.00ns)   --->   "br label %20" [HLS_MAXHEAP_HTA/solution1/top.cc:317]   --->   Operation 414 'br' <Predicate = (!or_cond & !tmp_36)> <Delay = 0.00>
+ST_31 : Operation 415 [1/1] (3.25ns)   --->   "store i32 %swap_tmp1, i32* %HTA_heap_1_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:317]   --->   Operation 415 'store' <Predicate = (!or_cond & tmp_36)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_31 : Operation 416 [1/1] (0.00ns)   --->   "br label %20" [HLS_MAXHEAP_HTA/solution1/top.cc:317]   --->   Operation 416 'br' <Predicate = (!or_cond & tmp_36)> <Delay = 0.00>
+ST_31 : Operation 417 [1/1] (1.76ns)   --->   "br label %.backedge.backedge"   --->   Operation 417 'br' <Predicate = (!or_cond)> <Delay = 1.76>
+ST_31 : Operation 418 [1/1] (3.25ns)   --->   "store i32 %swap_tmp1, i32* %HTA_heap_0_addr_24, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:292]   --->   Operation 418 'store' <Predicate = (or_cond & !tmp_35)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_31 : Operation 419 [1/1] (0.00ns)   --->   "br label %16" [HLS_MAXHEAP_HTA/solution1/top.cc:292]   --->   Operation 419 'br' <Predicate = (or_cond & !tmp_35)> <Delay = 0.00>
+ST_31 : Operation 420 [1/1] (3.25ns)   --->   "store i32 %swap_tmp1, i32* %HTA_heap_1_addr_22, align 4" [HLS_MAXHEAP_HTA/solution1/top.cc:292]   --->   Operation 420 'store' <Predicate = (or_cond & tmp_35)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2000> <RAM>
+ST_31 : Operation 421 [1/1] (0.00ns)   --->   "br label %16" [HLS_MAXHEAP_HTA/solution1/top.cc:292]   --->   Operation 421 'br' <Predicate = (or_cond & tmp_35)> <Delay = 0.00>
+ST_31 : Operation 422 [1/1] (1.76ns)   --->   "br label %.backedge.backedge" [HLS_MAXHEAP_HTA/solution1/top.cc:295]   --->   Operation 422 'br' <Predicate = (or_cond)> <Delay = 1.76>
+ST_31 : Operation 423 [1/1] (0.00ns)   --->   "%p_pn2_be = phi i32 [ %offset_left, %16 ], [ %offset_right, %20 ]"   --->   Operation 423 'phi' 'p_pn2_be' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 424 [1/1] (0.00ns)   --->   "br label %.backedge"   --->   Operation 424 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('data_addr') [16]  (0 ns)
+	'load' operation ('data_load', HLS_MAXHEAP_HTA/solution1/top.cc:82) on array 'data' [30]  (3.25 ns)
+
+ <State 4>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('data_load', HLS_MAXHEAP_HTA/solution1/top.cc:82) on array 'data' [30]  (3.25 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:82) of variable 'data_load', HLS_MAXHEAP_HTA/solution1/top.cc:82 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [31]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'or' operation ('newIndex6', HLS_MAXHEAP_HTA/solution1/top.cc:80) [42]  (0 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_1', HLS_MAXHEAP_HTA/solution1/top.cc:85) [44]  (0 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:85) of constant 4294967295 on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [45]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_MAXHEAP_HTA/solution1/top.cc:100) [58]  (0 ns)
+	'getelementptr' operation ('data_addr_1', HLS_MAXHEAP_HTA/solution1/top.cc:110) [72]  (0 ns)
+	'load' operation ('data_load_1', HLS_MAXHEAP_HTA/solution1/top.cc:110) on array 'data' [73]  (3.25 ns)
+
+ <State 7>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('data_load_1', HLS_MAXHEAP_HTA/solution1/top.cc:110) on array 'data' [73]  (3.25 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:110) of variable 'data_load_1', HLS_MAXHEAP_HTA/solution1/top.cc:110 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [74]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'or' operation ('newIndex13', HLS_MAXHEAP_HTA/solution1/top.cc:108) [87]  (0 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_5', HLS_MAXHEAP_HTA/solution1/top.cc:114) [91]  (0 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:114) of constant 4294967295 on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [92]  (3.25 ns)
+
+ <State 9>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum2', HLS_MAXHEAP_HTA/solution1/top.cc:139) [124]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_0_addr_8', HLS_MAXHEAP_HTA/solution1/top.cc:139) [129]  (0 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:139) of variable 'offset_new_node_cast', HLS_MAXHEAP_HTA/solution1/top.cc:108 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [135]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:148) of variable 'offset_new_node_cast', HLS_MAXHEAP_HTA/solution1/top.cc:108 on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [115]  (3.25 ns)
+
+ <State 11>: 4.93ns
+The critical path consists of the following:
+	'phi' operation ('offset_now') with incoming values : ('offset_new_node_cast', HLS_MAXHEAP_HTA/solution1/top.cc:108) ('HTA_heap_1_load_2', HLS_MAXHEAP_HTA/solution1/top.cc:156) ('HTA_heap_0_load_3', HLS_MAXHEAP_HTA/solution1/top.cc:156) [146]  (0 ns)
+	'add' operation ('now_0_sum', HLS_MAXHEAP_HTA/solution1/top.cc:156) [153]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_12', HLS_MAXHEAP_HTA/solution1/top.cc:156) [156]  (0 ns)
+	'load' operation ('HTA_heap_1_load_2', HLS_MAXHEAP_HTA/solution1/top.cc:156) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [160]  (3.25 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_2', HLS_MAXHEAP_HTA/solution1/top.cc:156) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [160]  (3.25 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_0_load_3', HLS_MAXHEAP_HTA/solution1/top.cc:156) on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [163]  (3.25 ns)
+
+ <State 14>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('offset_parent', HLS_MAXHEAP_HTA/solution1/top.cc:156) with incoming values : ('HTA_heap_1_load_2', HLS_MAXHEAP_HTA/solution1/top.cc:156) ('HTA_heap_0_load_3', HLS_MAXHEAP_HTA/solution1/top.cc:156) [166]  (0 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_14', HLS_MAXHEAP_HTA/solution1/top.cc:161) [174]  (0 ns)
+	'load' operation ('HTA_heap_1_load_4', HLS_MAXHEAP_HTA/solution1/top.cc:174) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [175]  (3.25 ns)
+
+ <State 15>: 7.21ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_5', HLS_MAXHEAP_HTA/solution1/top.cc:174) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [178]  (3.25 ns)
+	'select' operation ('now_load_phi', HLS_MAXHEAP_HTA/solution1/top.cc:174) [180]  (0.698 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:181) of variable 'now_load_phi', HLS_MAXHEAP_HTA/solution1/top.cc:174 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [186]  (3.25 ns)
+
+ <State 16>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:182) of variable 'swap_tmp', HLS_MAXHEAP_HTA/solution1/top.cc:174 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [194]  (3.25 ns)
+
+ <State 17>: 4.23ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_0_load_8', HLS_MAXHEAP_HTA/solution1/top.cc:194) on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [208]  (3.25 ns)
+	'select' operation ('offset_last_parent_1', HLS_MAXHEAP_HTA/solution1/top.cc:80) [212]  (0.978 ns)
+
+ <State 18>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('offset_tail') with incoming values : ('offset_tail_cast', HLS_MAXHEAP_HTA/solution1/top.cc:100) ('offset_tail', HLS_MAXHEAP_HTA/solution1/top.cc:232) [218]  (0 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_9', HLS_MAXHEAP_HTA/solution1/top.cc:208) [230]  (0 ns)
+	'load' operation ('HTA_heap_1_load', HLS_MAXHEAP_HTA/solution1/top.cc:211) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [235]  (3.25 ns)
+
+ <State 19>: 7.21ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load', HLS_MAXHEAP_HTA/solution1/top.cc:211) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [235]  (3.25 ns)
+	'select' operation ('tail_load_phi', HLS_MAXHEAP_HTA/solution1/top.cc:211) [237]  (0.698 ns)
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:211) of variable 'tail_load_phi', HLS_MAXHEAP_HTA/solution1/top.cc:211 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [238]  (3.25 ns)
+
+ <State 20>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum', HLS_MAXHEAP_HTA/solution1/top.cc:226) [239]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_0_addr_12', HLS_MAXHEAP_HTA/solution1/top.cc:226) [243]  (0 ns)
+	'load' operation ('HTA_heap_0_load_2', HLS_MAXHEAP_HTA/solution1/top.cc:226) on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [244]  (3.25 ns)
+
+ <State 21>: 5.73ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_3', HLS_MAXHEAP_HTA/solution1/top.cc:229) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [254]  (3.25 ns)
+	'select' operation ('HTA_heap_load_phi', HLS_MAXHEAP_HTA/solution1/top.cc:229) [256]  (0 ns)
+	'icmp' operation ('tmp_11', HLS_MAXHEAP_HTA/solution1/top.cc:229) [257]  (2.47 ns)
+
+ <State 22>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:230) of constant 4294967295 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [267]  (3.25 ns)
+
+ <State 23>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('HTA_heap_1_addr_17', HLS_MAXHEAP_HTA/solution1/top.cc:232) [294]  (0 ns)
+	'load' operation ('HTA_heap_1_load_6', HLS_MAXHEAP_HTA/solution1/top.cc:232) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [295]  (3.25 ns)
+
+ <State 24>: 3.95ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_6', HLS_MAXHEAP_HTA/solution1/top.cc:232) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [295]  (3.25 ns)
+	'select' operation ('offset_tail', HLS_MAXHEAP_HTA/solution1/top.cc:232) [297]  (0.698 ns)
+
+ <State 25>: 4.93ns
+The critical path consists of the following:
+	'phi' operation ('p_pn2', HLS_MAXHEAP_HTA/solution1/top.cc:80) with incoming values : ('offset_head_cast', HLS_MAXHEAP_HTA/solution1/top.cc:80) ('offset_left', HLS_MAXHEAP_HTA/solution1/top.cc:254) ('offset_right', HLS_MAXHEAP_HTA/solution1/top.cc:256) [301]  (0 ns)
+	'add' operation ('now_1_sum1', HLS_MAXHEAP_HTA/solution1/top.cc:248) [303]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_19', HLS_MAXHEAP_HTA/solution1/top.cc:248) [307]  (0 ns)
+	'load' operation ('HTA_heap_1_load_8', HLS_MAXHEAP_HTA/solution1/top.cc:248) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [311]  (3.25 ns)
+
+ <State 26>: 7.5ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_8', HLS_MAXHEAP_HTA/solution1/top.cc:248) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [311]  (3.25 ns)
+	multiplexor before 'phi' operation ('HTA_heap_load_3_phi', HLS_MAXHEAP_HTA/solution1/top.cc:248) with incoming values : ('HTA_heap_1_load_8', HLS_MAXHEAP_HTA/solution1/top.cc:248) ('HTA_heap_0_load_9', HLS_MAXHEAP_HTA/solution1/top.cc:248) [317]  (1.77 ns)
+	'phi' operation ('HTA_heap_load_3_phi', HLS_MAXHEAP_HTA/solution1/top.cc:248) with incoming values : ('HTA_heap_1_load_8', HLS_MAXHEAP_HTA/solution1/top.cc:248) ('HTA_heap_0_load_9', HLS_MAXHEAP_HTA/solution1/top.cc:248) [317]  (0 ns)
+	'icmp' operation ('tmp_14', HLS_MAXHEAP_HTA/solution1/top.cc:248) [318]  (2.47 ns)
+
+ <State 27>: 5.73ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_9', HLS_MAXHEAP_HTA/solution1/top.cc:248) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [326]  (3.25 ns)
+	'select' operation ('HTA_heap_load_5_phi', HLS_MAXHEAP_HTA/solution1/top.cc:248) [328]  (0 ns)
+	'icmp' operation ('tmp_15', HLS_MAXHEAP_HTA/solution1/top.cc:248) [329]  (2.47 ns)
+
+ <State 28>: 3.95ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_0_load_11', HLS_MAXHEAP_HTA/solution1/top.cc:254) on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [336]  (3.25 ns)
+	'select' operation ('offset_left', HLS_MAXHEAP_HTA/solution1/top.cc:254) [338]  (0.698 ns)
+
+ <State 29>: 7.21ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_11', HLS_MAXHEAP_HTA/solution1/top.cc:256) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [349]  (3.25 ns)
+	'select' operation ('offset_right', HLS_MAXHEAP_HTA/solution1/top.cc:256) [351]  (0.698 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_24', HLS_MAXHEAP_HTA/solution1/top.cc:257) [356]  (0 ns)
+	'load' operation ('HTA_heap_1_load_14', HLS_MAXHEAP_HTA/solution1/top.cc:266) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [368]  (3.25 ns)
+
+ <State 30>: 7.68ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_13', HLS_MAXHEAP_HTA/solution1/top.cc:261) on array 'HTA_heap[1]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [361]  (3.25 ns)
+	'select' operation ('swap_tmp2', HLS_MAXHEAP_HTA/solution1/top.cc:254) [366]  (0.978 ns)
+	'icmp' operation ('tmp_18', HLS_MAXHEAP_HTA/solution1/top.cc:271) [374]  (2.47 ns)
+	'and' operation ('or_cond', HLS_MAXHEAP_HTA/solution1/top.cc:271) [376]  (0.978 ns)
+
+ <State 31>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_MAXHEAP_HTA/solution1/top.cc:317) of variable 'swap_tmp1', HLS_MAXHEAP_HTA/solution1/top.cc:258 on array 'HTA_heap[0]', HLS_MAXHEAP_HTA/solution1/top.cc:68 [392]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

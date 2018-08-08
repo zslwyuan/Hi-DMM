@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sun Jul 29 07:03:12 UTC 2018
+VLNV: xilinx.com:hls:HTA512_theta:1.0
+SynthRuntime: 82

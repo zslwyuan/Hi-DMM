@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:46.113+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:45.071+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:44.874+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:43.674+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:42.599+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation (HTA512_0/solution1/top.cc:211) of variable 'r.V', HTA512_0/solution1/top.cc:211 on array 'buddy_tree_V_0' and 'load' operation ('buddy_tree_V_0_load_12', HTA512_0/solution1/top.cc:211) on array 'buddy_tree_V_0'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:42.441+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section4'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:42.420+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section8'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:42.417+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section0'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:42.413+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buddy_tree.V.0'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:41.847+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buddy_tree.V.1'." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:41.482+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] HTA512_0/solution1/top.cc:217: variable-indexed range selection may cause suboptimal QoR." projectName="HTA512_0" solutionName="solution1" date="2018-07-29T15:50:40.477+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

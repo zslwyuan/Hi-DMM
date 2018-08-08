@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_Ext_KWTA_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_KWTA_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Ext_HTA_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_HTA_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_acc64mau_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc64mau_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

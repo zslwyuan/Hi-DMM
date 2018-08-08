@@ -1,0 +1,52 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port ap_start_0 -pg 1 -y 60 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 340 -defaultsOSRD
+preplace port clka -pg 1 -y -340 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -y 280 -defaultsOSRD
+preplace port reset -pg 1 -y 320 -defaultsOSRD
+preplace portBus dis_output_d0_0 -pg 1 -y 240 -defaultsOSRD
+preplace portBus dis_output_address0_0 -pg 1 -y 220 -defaultsOSRD
+preplace portBus n -pg 1 -y -150 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 560 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -y -610 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 2 -y -280 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -y 380 -defaultsOSRD
+preplace inst HLS_MAXHEAP_HTA_0 -pg 1 -lvl 1 -y 260 -defaultsOSRD
+preplace inst HTA2048_theta_0 -pg 1 -lvl 1 -y -230 -defaultsOSRD
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_free_target_ap_vld 1 0 2 140 -430 1100
+preplace netloc clk_wiz_locked 1 1 1 1240
+preplace netloc HTA2048_theta_0_alloc_free_target_ap_ack 1 0 2 50 -510 1130
+preplace netloc HTA2048_theta_0_alloc_addr 1 0 2 60 -450 1110
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_free_target 1 0 2 140 10 1110
+preplace netloc HTA2048_theta_0_alloc_cmd_ap_ack 1 0 2 90 -440 1080
+preplace netloc clk_in1_1 1 0 1 -10J
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_addr_ap_ack 1 0 2 130 -490 1160
+preplace netloc HLS_MAXHEAP_HTA_0_dis_output_address0 1 1 2 1220J 220 NJ
+preplace netloc HTA2048_theta_0_alloc_size_ap_ack 1 0 2 70 -500 1120
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_size 1 0 2 120 -470 1140
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_size_ap_vld 1 0 2 150 -420 1070
+preplace netloc n_1 1 0 1 10
+preplace netloc HLS_MAXHEAP_HTA_0_dis_output_ce0 1 1 1 1210
+preplace netloc HLS_MAXHEAP_HTA_0_data_address0 1 1 1 1180
+preplace netloc clka_1 1 0 2 10J -520 1240J
+preplace netloc ext_reset_in_1 1 0 2 20J 80 1200J
+preplace netloc ap_start_0_1 1 0 1 30
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 3 110J 60 NJ 60 1620
+preplace netloc blk_mem_gen_0_douta 1 0 2 40J -600 NJ
+preplace netloc HLS_MAXHEAP_HTA_0_dis_output_we0 1 1 1 1230
+preplace netloc HLS_MAXHEAP_HTA_0_data_ce0 1 1 1 1170
+preplace netloc HLS_MAXHEAP_HTA_0_dis_output_d0 1 1 2 1240J 240 NJ
+preplace netloc reset_1 1 0 1 0J
+preplace netloc HTA2048_theta_0_alloc_addr_ap_vld 1 0 2 80 -460 1090
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_cmd 1 0 2 150 0 1120
+preplace netloc HLS_MAXHEAP_HTA_0_alloc_HTA_cmd_ap_vld 1 0 2 110 -480 1150
+preplace netloc clk_wiz_clk_out1 1 0 2 100 70 1190
+levelinfo -pg 1 -30 810 1440 1640 -top -1100 -bot 860
+",
+}
+{
+   da_clkrst_cnt: "3",
+}

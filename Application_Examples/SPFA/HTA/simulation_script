@@ -1,0 +1,14 @@
+restart
+add_wave {{/design_1_wrapper/design_1_i/HLS_SPFA_0}} 
+add_force {/design_1_wrapper/ap_ctrl_start} -radix hex {0 0ns}
+add_force {/design_1_wrapper/ap_ctrl_1_start} -radix hex {0 0ns}
+add_force {/design_1_wrapper/reset} -radix hex {0 0ns}
+add_force {/design_1_wrapper/ext_reset_in} -radix hex {1 0ns}
+add_force {/design_1_wrapper/clk_in1} -radix hex {1 0ns} {0 10000ps} -repeat_every 20000ps
+add_force {/design_1_wrapper/clka} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/design_1_wrapper/n} -radix unsigned {100 0ns}
+run 1 us
+add_force {/design_1_wrapper/ap_ctrl_start} -radix hex {1 0ns}
+add_force {/design_1_wrapper/ap_ctrl_1_start} -radix hex {1 0ns}
+run 1500 ns
+run 350 us

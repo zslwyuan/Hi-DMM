@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Jul 30 18:07:27 UTC 2018
+VLNV: xilinx.com:hls:Ext_KWTA4k:1.0
+SynthRuntime: 77

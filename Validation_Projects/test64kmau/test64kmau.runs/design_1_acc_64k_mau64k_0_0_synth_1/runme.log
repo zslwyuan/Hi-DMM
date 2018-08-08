@@ -1,0 +1,442 @@
+
+*** Running vivado
+    with args -log design_1_acc_64k_mau64k_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_acc_64k_mau64k_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_acc_64k_mau64k_0_0.tcl -notrace
+Command: synth_design -top design_1_acc_64k_mau64k_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4013 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1350.562 ; gain = 79.887 ; free physical = 18298 ; free virtual = 32350
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_acc_64k_mau64k_0_0' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_acc_64k_mau64k_0_0_2/synth/design_1_acc_64k_mau64k_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 6'b000001 
+	Parameter ap_ST_fsm_state2 bound to: 6'b000010 
+	Parameter ap_ST_fsm_state3 bound to: 6'b000100 
+	Parameter ap_ST_fsm_state4 bound to: 6'b001000 
+	Parameter ap_ST_fsm_state5 bound to: 6'b010000 
+	Parameter ap_ST_fsm_state6 bound to: 6'b100000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:72]
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_rebkb' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:43]
+	Parameter DataWidth bound to: 2 - type: integer 
+	Parameter AddressRange bound to: 1024 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_rebkb_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:9]
+	Parameter DWIDTH bound to: 2 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 1024 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './acc_64k_mau64k_rebkb_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_rebkb_rom' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_rebkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:43]
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_recud' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:43]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 1024 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_recud_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 1024 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './acc_64k_mau64k_recud_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_recud_rom' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_recud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:43]
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_redEe' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:43]
+	Parameter DataWidth bound to: 14 - type: integer 
+	Parameter AddressRange bound to: 1024 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc_64k_mau64k_redEe_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:9]
+	Parameter DWIDTH bound to: 14 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 1024 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './acc_64k_mau64k_redEe_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_redEe_rom' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k_redEe' (6#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:43]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_1_s' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_malloc_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_malloc_1_s.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_1_s' (7#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_malloc_1_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HLS_free_1_s' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_free_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_free_1_s.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_free_1_s' (8#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/HLS_free_1_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'acc_64k_mau64k' (9#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_acc_64k_mau64k_0_0' (10#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_acc_64k_mau64k_0_0_2/synth/design_1_acc_64k_mau64k_0_0.v:58]
+WARNING: [Synth 8-3331] design acc_64k_mau64k_redEe has unconnected port reset
+WARNING: [Synth 8-3331] design acc_64k_mau64k_recud has unconnected port reset
+WARNING: [Synth 8-3331] design acc_64k_mau64k_rebkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.188 ; gain = 124.512 ; free physical = 18322 ; free virtual = 32382
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.188 ; gain = 124.512 ; free physical = 18276 ; free virtual = 32336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.188 ; gain = 124.512 ; free physical = 18276 ; free virtual = 32336
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_acc_64k_mau64k_0_0_2/constraints/acc_64k_mau64k_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_acc_64k_mau64k_0_0_2/constraints/acc_64k_mau64k_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc_64k_mau64k_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc_64k_mau64k_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1755.430 ; gain = 1.000 ; free physical = 17309 ; free virtual = 31497
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17412 ; free virtual = 31602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17412 ; free virtual = 31601
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc_64k_mau64k_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17425 ; free virtual = 31615
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_rebkb.v:33]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_recud.v:33]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k_redEe.v:33]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_3_fu_148_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_1_fu_136_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17356 ; free virtual = 31554
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module acc_64k_mau64k_rebkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module acc_64k_mau64k_recud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module acc_64k_mau64k_redEe_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module HLS_malloc_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_free_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module acc_64k_mau64k 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg_186_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:294]
+WARNING: [Synth 8-6014] Unused sequential element i_reg_87_reg_rep was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:252]
+WARNING: [Synth 8-6014] Unused sequential element i_reg_87_reg_rep was removed.  [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/2b9d/hdl/verilog/acc_64k_mau64k.v:252]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:43 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17305 ; free virtual = 31508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------------+---------------+----------------+
+|Module Name              | RTL Object       | Depth x Width | Implemented As | 
++-------------------------+------------------+---------------+----------------+
+|acc_64k_mau64k_rebkb_rom | q0_reg           | 1024x2        | Block RAM      | 
+|acc_64k_mau64k_recud_rom | q0_reg           | 1024x16       | Block RAM      | 
+|acc_64k_mau64k_redEe_rom | q0_reg           | 1024x14       | Block RAM      | 
+|acc_64k_mau64k           | i_reg_87_reg_rep | 1024x2        | Block RAM      | 
+|acc_64k_mau64k           | i_reg_87_reg_rep | 1024x16       | Block RAM      | 
+|acc_64k_mau64k           | tmp_reg_186_reg  | 1024x14       | Block RAM      | 
++-------------------------+------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_2_0/i_reg_87_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_2_1/i_reg_87_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_2_2/tmp_reg_186_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17124 ; free virtual = 31346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17097 ; free virtual = 31320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17100 ; free virtual = 31323
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17154 ; free virtual = 31375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17160 ; free virtual = 31381
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17169 ; free virtual = 31390
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17171 ; free virtual = 31392
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17178 ; free virtual = 31399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17196 ; free virtual = 31417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    16|
+|2     |LUT1       |    25|
+|3     |LUT2       |    23|
+|4     |LUT3       |    22|
+|5     |LUT4       |    10|
+|6     |LUT5       |    15|
+|7     |LUT6       |    26|
+|8     |RAMB18E1_3 |     1|
+|9     |RAMB18E1_4 |     1|
+|10    |RAMB18E1_5 |     1|
+|11    |FDRE       |   177|
+|12    |FDSE       |     3|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-----------------------------+---------------+------+
+|      |Instance                     |Module         |Cells |
++------+-----------------------------+---------------+------+
+|1     |top                          |               |   320|
+|2     |  inst                       |acc_64k_mau64k |   320|
+|3     |    grp_HLS_free_1_s_fu_113  |HLS_free_1_s   |    66|
+|4     |    grp_HLS_malloc_1_s_fu_99 |HLS_malloc_1_s |    56|
++------+-----------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.430 ; gain = 484.754 ; free physical = 17190 ; free virtual = 31411
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1755.430 ; gain = 124.512 ; free physical = 17780 ; free virtual = 32001
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 1755.438 ; gain = 484.754 ; free physical = 17799 ; free virtual = 32020
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1755.438 ; gain = 496.328 ; free physical = 17777 ; free virtual = 31998
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc_64k_mau64k_0_0_synth_1/design_1_acc_64k_mau64k_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_acc_64k_mau64k_0_0_2/design_1_acc_64k_mau64k_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_acc_64k_mau64k_0_0_synth_1/design_1_acc_64k_mau64k_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_acc_64k_mau64k_0_0_utilization_synth.rpt -pb design_1_acc_64k_mau64k_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1779.441 ; gain = 0.000 ; free physical = 17811 ; free virtual = 32033
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 30 22:41:56 2018...

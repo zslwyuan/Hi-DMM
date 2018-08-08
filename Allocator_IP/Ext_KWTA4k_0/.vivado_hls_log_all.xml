@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:43.264+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:42.739+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:42.644+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V_0' is power-on initialization." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:42.144+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:42.135+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:41.846+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-105] Cannot partition array 'heap_tree.V' : incorrect partition factor 1." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:40.314+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] Ext_KWTA4k_0/solution1/top.cc:238: variable-indexed range selection may cause suboptimal QoR." projectName="Ext_KWTA4k_0" solutionName="solution1" date="2018-07-31T01:55:39.987+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

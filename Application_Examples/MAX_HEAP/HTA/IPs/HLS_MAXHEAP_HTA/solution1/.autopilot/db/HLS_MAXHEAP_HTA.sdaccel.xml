@@ -1,0 +1,304 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'HLS_MAXHEAP_HTA'" level="0">
+<item name = "Date">Sat Jul 28 19:09:02 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">HLS_MAXHEAP_HTA</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">7.683</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_HLS_malloc_2_s_fu_649">HLS_malloc_2_s, 2, 2, 2, 2, none</column>
+<column name="grp_HLS_malloc_3_s_fu_661">HLS_malloc_3_s, 2, 2, 2, 2, none</column>
+<column name="grp_HLS_malloc_1_s_fu_673">HLS_malloc_1_s, 2, 2, 2, 2, none</column>
+<column name="grp_HLS_free_1_s_fu_687">HLS_free_1_s, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, ?, -, -, ?, no</column>
+<column name=" + Loop 1.1">?, ?, 5, -, -, ?, no</column>
+<column name="- Loop 2">?, ?, ?, -, -, ?, no</column>
+<column name=" + Loop 2.1">?, ?, 7, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 1093</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 87, 329</column>
+<column name="Memory">8, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 893</column>
+<column name="Register">-, -, 914, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, 4</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_HLS_free_1_s_fu_687">HLS_free_1_s, 0, 0, 5, 71</column>
+<column name="grp_HLS_malloc_1_s_fu_673">HLS_malloc_1_s, 0, 0, 6, 86</column>
+<column name="grp_HLS_malloc_2_s_fu_649">HLS_malloc_2_s, 0, 0, 38, 86</column>
+<column name="grp_HLS_malloc_3_s_fu_661">HLS_malloc_3_s, 0, 0, 38, 86</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="HTA_heap_0_U">HLS_MAXHEAP_HTA_Hbkb, 4, 0, 0, 2000, 32, 1, 64000</column>
+<column name="HTA_heap_1_U">HLS_MAXHEAP_HTA_Hbkb, 4, 0, 0, 2000, 32, 1, 64000</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_1174_p2">+, 0, 0, 38, 31, 1</column>
+<column name="i_fu_1135_p2">+, 0, 0, 38, 1, 31</column>
+<column name="now_0_sum_fu_1044_p2">+, 0, 0, 17, 3, 13</column>
+<column name="now_1_sum1_fu_1365_p2">+, 0, 0, 17, 2, 13</column>
+<column name="now_1_sum_fu_1397_p2">+, 0, 0, 17, 13, 3</column>
+<column name="p_sum1_fu_958_p2">+, 0, 0, 17, 3, 13</column>
+<column name="p_sum2_fu_984_p2">+, 0, 0, 17, 2, 13</column>
+<column name="p_sum3_fu_1312_p2">+, 0, 0, 17, 13, 2</column>
+<column name="p_sum4_fu_1114_p2">+, 0, 0, 17, 1, 13</column>
+<column name="p_sum6_fu_1447_p2">+, 0, 0, 17, 3, 13</column>
+<column name="p_sum7_fu_1240_p2">+, 0, 0, 17, 3, 13</column>
+<column name="p_sum8_fu_1290_p2">+, 0, 0, 17, 13, 3</column>
+<column name="p_sum9_fu_1334_p2">+, 0, 0, 17, 13, 2</column>
+<column name="p_sum_fu_1218_p2">+, 0, 0, 17, 3, 13</column>
+<column name="or_cond_fu_1607_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp2_fu_1152_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp3_fu_1547_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp6_fu_1581_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_11_fu_1284_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="tmp_12_fu_1066_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="tmp_13_fu_1108_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_14_fu_1391_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="tmp_15_fu_1425_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="tmp_16_fu_1528_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="tmp_17_fu_1562_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="tmp_18_fu_1596_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_19_fu_1601_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_20_fu_1613_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_3_fu_811_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_5_fu_1169_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="grp_fu_699_p2">or, 0, 0, 11, 11, 2</column>
+<column name="newIndex11_fu_896_p2">or, 0, 0, 12, 12, 2</column>
+<column name="newIndex13_fu_908_p2">or, 0, 0, 12, 12, 1</column>
+<column name="newIndex4_fu_760_p2">or, 0, 0, 12, 12, 1</column>
+<column name="newIndex6_fu_782_p2">or, 0, 0, 12, 12, 2</column>
+<column name="newIndex7_fu_793_p2">or, 0, 0, 12, 12, 2</column>
+<column name="HTA_heap_load_5_phi_fu_1418_p3">select, 0, 0, 32, 1, 32</column>
+<column name="HTA_heap_load_phi_fu_1277_p3">select, 0, 0, 32, 1, 32</column>
+<column name="now_load_phi_fu_1099_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_last_parent_1_fu_1157_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_left_fu_1462_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_right_fu_1494_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_tail_3_fu_1354_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_v_fu_1262_p3">select, 0, 0, 32, 1, 32</column>
+<column name="sel_tmp1_fu_1145_p3">select, 0, 0, 32, 1, 32</column>
+<column name="sel_tmp4_fu_1567_p3">select, 0, 0, 32, 1, 2</column>
+<column name="sel_tmp9_fu_1533_p3">select, 0, 0, 32, 1, 2</column>
+<column name="swap_tmp1_fu_1521_p3">select, 0, 0, 32, 1, 32</column>
+<column name="swap_tmp2_fu_1552_p3">select, 0, 0, 32, 1, 32</column>
+<column name="swap_tmp3_fu_1586_p3">select, 0, 0, 32, 1, 32</column>
+<column name="swap_tmp_fu_1092_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tail_load_phi_fu_1205_p3">select, 0, 0, 32, 1, 32</column>
+<column name="sel_tmp5_fu_1575_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="sel_tmp_fu_1541_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="tmp_s_fu_948_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="HTA_heap_0_address0">89, 18, 11, 198</column>
+<column name="HTA_heap_0_address1">85, 17, 11, 187</column>
+<column name="HTA_heap_0_d0">41, 8, 32, 256</column>
+<column name="HTA_heap_0_d1">38, 7, 32, 224</column>
+<column name="HTA_heap_1_address0">65, 16, 11, 176</column>
+<column name="HTA_heap_1_address1">65, 16, 11, 176</column>
+<column name="HTA_heap_1_d0">38, 7, 32, 224</column>
+<column name="HTA_heap_1_d1">27, 5, 32, 160</column>
+<column name="alloc_HTA_addr_ap_ack">21, 4, 1, 4</column>
+<column name="alloc_HTA_cmd">27, 5, 8, 40</column>
+<column name="alloc_HTA_cmd_ap_vld">27, 5, 1, 5</column>
+<column name="alloc_HTA_free_target">27, 5, 32, 160</column>
+<column name="alloc_HTA_free_target_ap_vld">27, 5, 1, 5</column>
+<column name="alloc_HTA_size">27, 5, 32, 160</column>
+<column name="alloc_HTA_size_ap_vld">27, 5, 1, 5</column>
+<column name="ap_NS_fsm">145, 32, 1, 32</column>
+<column name="ap_phi_mux_HTA_heap_load_3_phi_phi_fu_630_p4">15, 3, 32, 96</column>
+<column name="ap_phi_mux_p_pn2_be_phi_fu_642_p4">15, 3, 32, 96</column>
+<column name="cnt_insert_reg_563">9, 2, 31, 62</column>
+<column name="data_address0">15, 3, 15, 45</column>
+<column name="i_1_reg_605">9, 2, 31, 62</column>
+<column name="offset_last_parent1_reg_543">9, 2, 32, 64</column>
+<column name="offset_now_reg_595">9, 2, 32, 64</column>
+<column name="offset_parent_reg_584">9, 2, 32, 64</column>
+<column name="offset_tail_reg_554">9, 2, 13, 26</column>
+<column name="p_pn1_reg_575">9, 2, 32, 64</column>
+<column name="p_pn2_reg_617">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="HTA_heap_0_addr_13_reg_1750">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_16_reg_1789">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_17_reg_1901">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_18_reg_1886">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_21_reg_1945">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_23_reg_1968">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_24_reg_1996">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_26_reg_2029">11, 0, 11, 0</column>
+<column name="HTA_heap_0_addr_reg_1635">9, 0, 11, 2</column>
+<column name="HTA_heap_1_addr_11_reg_1755">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_14_reg_1794">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_15_reg_1896">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_16_reg_1891">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_19_reg_1940">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_21_reg_1974">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_22_reg_2002">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_24_reg_2034">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_7_reg_1731">11, 0, 11, 0</column>
+<column name="HTA_heap_1_addr_8_reg_1740">11, 0, 11, 0</column>
+<column name="ap_CS_fsm">31, 0, 31, 0</column>
+<column name="cnt_insert_reg_563">31, 0, 31, 0</column>
+<column name="grp_HLS_free_1_s_fu_687_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_HLS_malloc_1_s_fu_673_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_HLS_malloc_2_s_fu_649_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_HLS_malloc_3_s_fu_661_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_605">31, 0, 31, 0</column>
+<column name="i_2_reg_1831">31, 0, 31, 0</column>
+<column name="i_reg_1818">31, 0, 31, 0</column>
+<column name="newIndex10_cast1_reg_1707">9, 0, 11, 2</column>
+<column name="newIndex12_reg_1980">12, 0, 12, 0</column>
+<column name="newIndex14_reg_1676">10, 0, 12, 2</column>
+<column name="newIndex30_reg_1906">12, 0, 12, 0</column>
+<column name="newIndex3_cast1_reg_1640">10, 0, 12, 2</column>
+<column name="newIndex4_cast_reg_1646">10, 0, 64, 54</column>
+<column name="offset_head_cast_reg_1656">13, 0, 32, 19</column>
+<column name="offset_last_parent1_reg_543">32, 0, 32, 0</column>
+<column name="offset_left_reg_1985">32, 0, 32, 0</column>
+<column name="offset_new_node_cast_reg_1701">13, 0, 32, 19</column>
+<column name="offset_new_node_reg_1696">13, 0, 16, 3</column>
+<column name="offset_now_reg_595">32, 0, 32, 0</column>
+<column name="offset_parent_reg_584">32, 0, 32, 0</column>
+<column name="offset_right_reg_2018">32, 0, 32, 0</column>
+<column name="offset_tail_3_reg_1921">32, 0, 32, 0</column>
+<column name="offset_tail_cast_reg_1662">13, 0, 32, 19</column>
+<column name="offset_tail_reg_554">13, 0, 16, 3</column>
+<column name="or_cond_reg_2047">1, 0, 1, 0</column>
+<column name="p_pn1_reg_575">32, 0, 32, 0</column>
+<column name="p_pn2_reg_617">32, 0, 32, 0</column>
+<column name="swap_tmp1_reg_2039">32, 0, 32, 0</column>
+<column name="swap_tmp_reg_1799">32, 0, 32, 0</column>
+<column name="tmp_10_reg_1691">9, 0, 9, 0</column>
+<column name="tmp_11_reg_1882">1, 0, 1, 0</column>
+<column name="tmp_12_reg_1780">1, 0, 1, 0</column>
+<column name="tmp_14_reg_1950">1, 0, 1, 0</column>
+<column name="tmp_15_reg_1964">1, 0, 1, 0</column>
+<column name="tmp_1_reg_1630">13, 0, 13, 0</column>
+<column name="tmp_21_reg_1712">1, 0, 1, 0</column>
+<column name="tmp_22_reg_1722">13, 0, 13, 0</column>
+<column name="tmp_23_reg_1736">1, 0, 1, 0</column>
+<column name="tmp_24_reg_1727">1, 0, 1, 0</column>
+<column name="tmp_25_reg_1853">13, 0, 13, 0</column>
+<column name="tmp_26_reg_1846">1, 0, 1, 0</column>
+<column name="tmp_28_reg_1878">1, 0, 1, 0</column>
+<column name="tmp_30_reg_1745">1, 0, 1, 0</column>
+<column name="tmp_31_reg_1926">13, 0, 13, 0</column>
+<column name="tmp_32_reg_1932">1, 0, 1, 0</column>
+<column name="tmp_33_reg_1784">1, 0, 1, 0</column>
+<column name="tmp_35_reg_1991">1, 0, 1, 0</column>
+<column name="tmp_36_reg_2024">1, 0, 1, 0</column>
+<column name="tmp_8_reg_1681">13, 0, 13, 0</column>
+<column name="tmp_9_reg_1686">10, 0, 10, 0</column>
+<column name="tmp_s_reg_1717">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, HLS_MAXHEAP_HTA, return value</column>
+<column name="n">in, 32, ap_none, n, scalar</column>
+<column name="data_address0">out, 15, ap_memory, data, array</column>
+<column name="data_ce0">out, 1, ap_memory, data, array</column>
+<column name="data_q0">in, 32, ap_memory, data, array</column>
+<column name="dis_output_address0">out, 8, ap_memory, dis_output, array</column>
+<column name="dis_output_ce0">out, 1, ap_memory, dis_output, array</column>
+<column name="dis_output_we0">out, 1, ap_memory, dis_output, array</column>
+<column name="dis_output_d0">out, 32, ap_memory, dis_output, array</column>
+<column name="alloc_HTA_size">out, 32, ap_hs, alloc_HTA_size, pointer</column>
+<column name="alloc_HTA_size_ap_vld">out, 1, ap_hs, alloc_HTA_size, pointer</column>
+<column name="alloc_HTA_size_ap_ack">in, 1, ap_hs, alloc_HTA_size, pointer</column>
+<column name="alloc_HTA_free_target">out, 32, ap_hs, alloc_HTA_free_target, pointer</column>
+<column name="alloc_HTA_free_target_ap_vld">out, 1, ap_hs, alloc_HTA_free_target, pointer</column>
+<column name="alloc_HTA_free_target_ap_ack">in, 1, ap_hs, alloc_HTA_free_target, pointer</column>
+<column name="alloc_HTA_addr">in, 32, ap_hs, alloc_HTA_addr, pointer</column>
+<column name="alloc_HTA_addr_ap_vld">in, 1, ap_hs, alloc_HTA_addr, pointer</column>
+<column name="alloc_HTA_addr_ap_ack">out, 1, ap_hs, alloc_HTA_addr, pointer</column>
+<column name="alloc_HTA_cmd">out, 8, ap_hs, alloc_HTA_cmd, pointer</column>
+<column name="alloc_HTA_cmd_ap_vld">out, 1, ap_hs, alloc_HTA_cmd, pointer</column>
+<column name="alloc_HTA_cmd_ap_ack">in, 1, ap_hs, alloc_HTA_cmd, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">7.68</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'HTA_heap_1_load_13', HLS_MAXHEAP_HTA/solution1/top.cc:261">load, 3.25, 3.25, -, -, -, -, -, -, &apos;HTA_heap[1]&apos;, HLS_MAXHEAP_HTA/solution1/top.cc:68, -, -, -, -</column>
+<column name="'swap_tmp2', HLS_MAXHEAP_HTA/solution1/top.cc:254">select, 0.98, 4.23, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_18', HLS_MAXHEAP_HTA/solution1/top.cc:271">icmp, 2.47, 6.71, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'or_cond', HLS_MAXHEAP_HTA/solution1/top.cc:271">and, 0.98, 7.68, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

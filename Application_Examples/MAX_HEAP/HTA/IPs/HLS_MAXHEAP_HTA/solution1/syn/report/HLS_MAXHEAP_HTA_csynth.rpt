@@ -1,0 +1,325 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_MAXHEAP_HTA'
+================================================================
+* Date:           Sat Jul 28 19:09:02 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HLS_MAXHEAP_HTA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.683|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+-----+-----+-----+-----+---------+
+        |                           |                |  Latency  |  Interval | Pipeline|
+        |          Instance         |     Module     | min | max | min | max |   Type  |
+        +---------------------------+----------------+-----+-----+-----+-----+---------+
+        |grp_HLS_malloc_2_s_fu_649  |HLS_malloc_2_s  |    2|    2|    2|    2|   none  |
+        |grp_HLS_malloc_3_s_fu_661  |HLS_malloc_3_s  |    2|    2|    2|    2|   none  |
+        |grp_HLS_malloc_1_s_fu_673  |HLS_malloc_1_s  |    2|    2|    2|    2|   none  |
+        |grp_HLS_free_1_s_fu_687    |HLS_free_1_s    |    1|    1|    1|    1|   none  |
+        +---------------------------+----------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|         5|          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 2.1  |    ?|    ?|         7|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|   1093|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|      87|    329|
+|Memory           |        8|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|    893|
+|Register         |        -|      -|     914|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        8|      0|    1001|   2315|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        2|      0|   ~0   |      4|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------+---------+-------+----+----+
+    |          Instance         |     Module     | BRAM_18K| DSP48E| FF | LUT|
+    +---------------------------+----------------+---------+-------+----+----+
+    |grp_HLS_free_1_s_fu_687    |HLS_free_1_s    |        0|      0|   5|  71|
+    |grp_HLS_malloc_1_s_fu_673  |HLS_malloc_1_s  |        0|      0|   6|  86|
+    |grp_HLS_malloc_2_s_fu_649  |HLS_malloc_2_s  |        0|      0|  38|  86|
+    |grp_HLS_malloc_3_s_fu_661  |HLS_malloc_3_s  |        0|      0|  38|  86|
+    +---------------------------+----------------+---------+-------+----+----+
+    |Total                      |                |        0|      0|  87| 329|
+    +---------------------------+----------------+---------+-------+----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |    Memory    |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |HTA_heap_0_U  |HLS_MAXHEAP_HTA_Hbkb  |        4|  0|   0|  2000|   32|     1|        64000|
+    |HTA_heap_1_U  |HLS_MAXHEAP_HTA_Hbkb  |        4|  0|   0|  2000|   32|     1|        64000|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total         |                      |        8|  0|   0|  4000|   64|     2|       128000|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |i_2_fu_1174_p2                   |     +    |      0|  0|  38|          31|           1|
+    |i_fu_1135_p2                     |     +    |      0|  0|  38|           1|          31|
+    |now_0_sum_fu_1044_p2             |     +    |      0|  0|  17|           3|          13|
+    |now_1_sum1_fu_1365_p2            |     +    |      0|  0|  17|           2|          13|
+    |now_1_sum_fu_1397_p2             |     +    |      0|  0|  17|          13|           3|
+    |p_sum1_fu_958_p2                 |     +    |      0|  0|  17|           3|          13|
+    |p_sum2_fu_984_p2                 |     +    |      0|  0|  17|           2|          13|
+    |p_sum3_fu_1312_p2                |     +    |      0|  0|  17|          13|           2|
+    |p_sum4_fu_1114_p2                |     +    |      0|  0|  17|           1|          13|
+    |p_sum6_fu_1447_p2                |     +    |      0|  0|  17|           3|          13|
+    |p_sum7_fu_1240_p2                |     +    |      0|  0|  17|           3|          13|
+    |p_sum8_fu_1290_p2                |     +    |      0|  0|  17|          13|           3|
+    |p_sum9_fu_1334_p2                |     +    |      0|  0|  17|          13|           2|
+    |p_sum_fu_1218_p2                 |     +    |      0|  0|  17|           3|          13|
+    |or_cond_fu_1607_p2               |    and   |      0|  0|   2|           1|           1|
+    |sel_tmp2_fu_1152_p2              |    and   |      0|  0|   2|           1|           1|
+    |sel_tmp3_fu_1547_p2              |    and   |      0|  0|   2|           1|           1|
+    |sel_tmp6_fu_1581_p2              |    and   |      0|  0|   2|           1|           1|
+    |tmp_11_fu_1284_p2                |   icmp   |      0|  0|  18|          32|           1|
+    |tmp_12_fu_1066_p2                |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_13_fu_1108_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_14_fu_1391_p2                |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_15_fu_1425_p2                |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_16_fu_1528_p2                |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_17_fu_1562_p2                |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_18_fu_1596_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_19_fu_1601_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_20_fu_1613_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_3_fu_811_p2                  |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_5_fu_1169_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |grp_fu_699_p2                    |    or    |      0|  0|  11|          11|           2|
+    |newIndex11_fu_896_p2             |    or    |      0|  0|  12|          12|           2|
+    |newIndex13_fu_908_p2             |    or    |      0|  0|  12|          12|           1|
+    |newIndex4_fu_760_p2              |    or    |      0|  0|  12|          12|           1|
+    |newIndex6_fu_782_p2              |    or    |      0|  0|  12|          12|           2|
+    |newIndex7_fu_793_p2              |    or    |      0|  0|  12|          12|           2|
+    |HTA_heap_load_5_phi_fu_1418_p3   |  select  |      0|  0|  32|           1|          32|
+    |HTA_heap_load_phi_fu_1277_p3     |  select  |      0|  0|  32|           1|          32|
+    |now_load_phi_fu_1099_p3          |  select  |      0|  0|  32|           1|          32|
+    |offset_last_parent_1_fu_1157_p3  |  select  |      0|  0|  32|           1|          32|
+    |offset_left_fu_1462_p3           |  select  |      0|  0|  32|           1|          32|
+    |offset_right_fu_1494_p3          |  select  |      0|  0|  32|           1|          32|
+    |offset_tail_3_fu_1354_p3         |  select  |      0|  0|  32|           1|          32|
+    |p_v_fu_1262_p3                   |  select  |      0|  0|  32|           1|          32|
+    |sel_tmp1_fu_1145_p3              |  select  |      0|  0|  32|           1|          32|
+    |sel_tmp4_fu_1567_p3              |  select  |      0|  0|  32|           1|           2|
+    |sel_tmp9_fu_1533_p3              |  select  |      0|  0|  32|           1|           2|
+    |swap_tmp1_fu_1521_p3             |  select  |      0|  0|  32|           1|          32|
+    |swap_tmp2_fu_1552_p3             |  select  |      0|  0|  32|           1|          32|
+    |swap_tmp3_fu_1586_p3             |  select  |      0|  0|  32|           1|          32|
+    |swap_tmp_fu_1092_p3              |  select  |      0|  0|  32|           1|          32|
+    |tail_load_phi_fu_1205_p3         |  select  |      0|  0|  32|           1|          32|
+    |sel_tmp5_fu_1575_p2              |    xor   |      0|  0|   2|           1|           2|
+    |sel_tmp_fu_1541_p2               |    xor   |      0|  0|   2|           1|           2|
+    |tmp_s_fu_948_p2                  |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0|1093|         582|         821|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |                     Name                     | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |HTA_heap_0_address0                           |   89|         18|   11|        198|
+    |HTA_heap_0_address1                           |   85|         17|   11|        187|
+    |HTA_heap_0_d0                                 |   41|          8|   32|        256|
+    |HTA_heap_0_d1                                 |   38|          7|   32|        224|
+    |HTA_heap_1_address0                           |   65|         16|   11|        176|
+    |HTA_heap_1_address1                           |   65|         16|   11|        176|
+    |HTA_heap_1_d0                                 |   38|          7|   32|        224|
+    |HTA_heap_1_d1                                 |   27|          5|   32|        160|
+    |alloc_HTA_addr_ap_ack                         |   21|          4|    1|          4|
+    |alloc_HTA_cmd                                 |   27|          5|    8|         40|
+    |alloc_HTA_cmd_ap_vld                          |   27|          5|    1|          5|
+    |alloc_HTA_free_target                         |   27|          5|   32|        160|
+    |alloc_HTA_free_target_ap_vld                  |   27|          5|    1|          5|
+    |alloc_HTA_size                                |   27|          5|   32|        160|
+    |alloc_HTA_size_ap_vld                         |   27|          5|    1|          5|
+    |ap_NS_fsm                                     |  145|         32|    1|         32|
+    |ap_phi_mux_HTA_heap_load_3_phi_phi_fu_630_p4  |   15|          3|   32|         96|
+    |ap_phi_mux_p_pn2_be_phi_fu_642_p4             |   15|          3|   32|         96|
+    |cnt_insert_reg_563                            |    9|          2|   31|         62|
+    |data_address0                                 |   15|          3|   15|         45|
+    |i_1_reg_605                                   |    9|          2|   31|         62|
+    |offset_last_parent1_reg_543                   |    9|          2|   32|         64|
+    |offset_now_reg_595                            |    9|          2|   32|         64|
+    |offset_parent_reg_584                         |    9|          2|   32|         64|
+    |offset_tail_reg_554                           |    9|          2|   13|         26|
+    |p_pn1_reg_575                                 |    9|          2|   32|         64|
+    |p_pn2_reg_617                                 |    9|          2|   32|         64|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                         |  893|        185|  563|       2719|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |HTA_heap_0_addr_13_reg_1750             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_16_reg_1789             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_17_reg_1901             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_18_reg_1886             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_21_reg_1945             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_23_reg_1968             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_24_reg_1996             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_26_reg_2029             |  11|   0|   11|          0|
+    |HTA_heap_0_addr_reg_1635                |   9|   0|   11|          2|
+    |HTA_heap_1_addr_11_reg_1755             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_14_reg_1794             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_15_reg_1896             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_16_reg_1891             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_19_reg_1940             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_21_reg_1974             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_22_reg_2002             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_24_reg_2034             |  11|   0|   11|          0|
+    |HTA_heap_1_addr_7_reg_1731              |  11|   0|   11|          0|
+    |HTA_heap_1_addr_8_reg_1740              |  11|   0|   11|          0|
+    |ap_CS_fsm                               |  31|   0|   31|          0|
+    |cnt_insert_reg_563                      |  31|   0|   31|          0|
+    |grp_HLS_free_1_s_fu_687_ap_start_reg    |   1|   0|    1|          0|
+    |grp_HLS_malloc_1_s_fu_673_ap_start_reg  |   1|   0|    1|          0|
+    |grp_HLS_malloc_2_s_fu_649_ap_start_reg  |   1|   0|    1|          0|
+    |grp_HLS_malloc_3_s_fu_661_ap_start_reg  |   1|   0|    1|          0|
+    |i_1_reg_605                             |  31|   0|   31|          0|
+    |i_2_reg_1831                            |  31|   0|   31|          0|
+    |i_reg_1818                              |  31|   0|   31|          0|
+    |newIndex10_cast1_reg_1707               |   9|   0|   11|          2|
+    |newIndex12_reg_1980                     |  12|   0|   12|          0|
+    |newIndex14_reg_1676                     |  10|   0|   12|          2|
+    |newIndex30_reg_1906                     |  12|   0|   12|          0|
+    |newIndex3_cast1_reg_1640                |  10|   0|   12|          2|
+    |newIndex4_cast_reg_1646                 |  10|   0|   64|         54|
+    |offset_head_cast_reg_1656               |  13|   0|   32|         19|
+    |offset_last_parent1_reg_543             |  32|   0|   32|          0|
+    |offset_left_reg_1985                    |  32|   0|   32|          0|
+    |offset_new_node_cast_reg_1701           |  13|   0|   32|         19|
+    |offset_new_node_reg_1696                |  13|   0|   16|          3|
+    |offset_now_reg_595                      |  32|   0|   32|          0|
+    |offset_parent_reg_584                   |  32|   0|   32|          0|
+    |offset_right_reg_2018                   |  32|   0|   32|          0|
+    |offset_tail_3_reg_1921                  |  32|   0|   32|          0|
+    |offset_tail_cast_reg_1662               |  13|   0|   32|         19|
+    |offset_tail_reg_554                     |  13|   0|   16|          3|
+    |or_cond_reg_2047                        |   1|   0|    1|          0|
+    |p_pn1_reg_575                           |  32|   0|   32|          0|
+    |p_pn2_reg_617                           |  32|   0|   32|          0|
+    |swap_tmp1_reg_2039                      |  32|   0|   32|          0|
+    |swap_tmp_reg_1799                       |  32|   0|   32|          0|
+    |tmp_10_reg_1691                         |   9|   0|    9|          0|
+    |tmp_11_reg_1882                         |   1|   0|    1|          0|
+    |tmp_12_reg_1780                         |   1|   0|    1|          0|
+    |tmp_14_reg_1950                         |   1|   0|    1|          0|
+    |tmp_15_reg_1964                         |   1|   0|    1|          0|
+    |tmp_1_reg_1630                          |  13|   0|   13|          0|
+    |tmp_21_reg_1712                         |   1|   0|    1|          0|
+    |tmp_22_reg_1722                         |  13|   0|   13|          0|
+    |tmp_23_reg_1736                         |   1|   0|    1|          0|
+    |tmp_24_reg_1727                         |   1|   0|    1|          0|
+    |tmp_25_reg_1853                         |  13|   0|   13|          0|
+    |tmp_26_reg_1846                         |   1|   0|    1|          0|
+    |tmp_28_reg_1878                         |   1|   0|    1|          0|
+    |tmp_30_reg_1745                         |   1|   0|    1|          0|
+    |tmp_31_reg_1926                         |  13|   0|   13|          0|
+    |tmp_32_reg_1932                         |   1|   0|    1|          0|
+    |tmp_33_reg_1784                         |   1|   0|    1|          0|
+    |tmp_35_reg_1991                         |   1|   0|    1|          0|
+    |tmp_36_reg_2024                         |   1|   0|    1|          0|
+    |tmp_8_reg_1681                          |  13|   0|   13|          0|
+    |tmp_9_reg_1686                          |  10|   0|   10|          0|
+    |tmp_s_reg_1717                          |   1|   0|    1|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   | 914|   0| 1039|        125|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-----------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|ap_start                      |  in |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|ap_done                       | out |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|ap_idle                       | out |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|ap_ready                      | out |    1| ap_ctrl_hs |    HLS_MAXHEAP_HTA    | return value |
+|n                             |  in |   32|   ap_none  |           n           |    scalar    |
+|data_address0                 | out |   15|  ap_memory |          data         |     array    |
+|data_ce0                      | out |    1|  ap_memory |          data         |     array    |
+|data_q0                       |  in |   32|  ap_memory |          data         |     array    |
+|dis_output_address0           | out |    8|  ap_memory |       dis_output      |     array    |
+|dis_output_ce0                | out |    1|  ap_memory |       dis_output      |     array    |
+|dis_output_we0                | out |    1|  ap_memory |       dis_output      |     array    |
+|dis_output_d0                 | out |   32|  ap_memory |       dis_output      |     array    |
+|alloc_HTA_size                | out |   32|    ap_hs   |     alloc_HTA_size    |    pointer   |
+|alloc_HTA_size_ap_vld         | out |    1|    ap_hs   |     alloc_HTA_size    |    pointer   |
+|alloc_HTA_size_ap_ack         |  in |    1|    ap_hs   |     alloc_HTA_size    |    pointer   |
+|alloc_HTA_free_target         | out |   32|    ap_hs   | alloc_HTA_free_target |    pointer   |
+|alloc_HTA_free_target_ap_vld  | out |    1|    ap_hs   | alloc_HTA_free_target |    pointer   |
+|alloc_HTA_free_target_ap_ack  |  in |    1|    ap_hs   | alloc_HTA_free_target |    pointer   |
+|alloc_HTA_addr                |  in |   32|    ap_hs   |     alloc_HTA_addr    |    pointer   |
+|alloc_HTA_addr_ap_vld         |  in |    1|    ap_hs   |     alloc_HTA_addr    |    pointer   |
+|alloc_HTA_addr_ap_ack         | out |    1|    ap_hs   |     alloc_HTA_addr    |    pointer   |
+|alloc_HTA_cmd                 | out |    8|    ap_hs   |     alloc_HTA_cmd     |    pointer   |
+|alloc_HTA_cmd_ap_vld          | out |    1|    ap_hs   |     alloc_HTA_cmd     |    pointer   |
+|alloc_HTA_cmd_ap_ack          |  in |    1|    ap_hs   |     alloc_HTA_cmd     |    pointer   |
++------------------------------+-----+-----+------------+-----------------------+--------------+
+

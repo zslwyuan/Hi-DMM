@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"acc_64k_mau64k": {
+			"proto_instances": {
+			}
+		}
+	}
+}

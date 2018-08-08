@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_HLS_SPFA_KWTA_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_HTA2048_theta_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HTA2048_theta_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_KWTA_theta_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_KWTA_theta_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_wiz_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_rst_clk_wiz_100M_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_rst_clk_wiz_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_blk_mem_gen_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_blk_mem_gen_1_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_blk_mem_gen_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

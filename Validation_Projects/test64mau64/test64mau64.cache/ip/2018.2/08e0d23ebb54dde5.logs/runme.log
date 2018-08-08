@@ -1,0 +1,797 @@
+
+*** Running vivado
+    with args -log design_1_FBTA64_theta_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_FBTA64_theta_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_FBTA64_theta_0_0.tcl -notrace
+Command: synth_design -top design_1_FBTA64_theta_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8258 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1351.574 ; gain = 81.887 ; free physical = 16422 ; free virtual = 31110
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_FBTA64_theta_0_0' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ip/design_1_FBTA64_theta_0_0/synth/design_1_FBTA64_theta_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 20'b00000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 20'b00000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 20'b00000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 20'b00000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 20'b00000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 20'b00000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 20'b00000000000001000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 20'b00000000000010000000 
+	Parameter ap_ST_fsm_state11 bound to: 20'b00000000000100000000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 20'b00000000001000000000 
+	Parameter ap_ST_fsm_state15 bound to: 20'b00000000010000000000 
+	Parameter ap_ST_fsm_state16 bound to: 20'b00000000100000000000 
+	Parameter ap_ST_fsm_state17 bound to: 20'b00000001000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 20'b00000010000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 20'b00000100000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 20'b00001000000000000000 
+	Parameter ap_ST_fsm_pp2_stage0 bound to: 20'b00010000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 20'b00100000000000000000 
+	Parameter ap_ST_fsm_pp3_stage0 bound to: 20'b01000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 20'b10000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:81]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddbkb' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 2 - type: integer 
+	Parameter AddressWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddbkb_ram' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter MEM_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:25]
+INFO: [Synth 8-3876] $readmem data file './FBTA64_theta_buddbkb_ram.dat' is read successfully [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddbkb_ram' (1#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddbkb' (2#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddbkb.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddcud' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 2 - type: integer 
+	Parameter AddressWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddcud_ram' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter MEM_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:25]
+INFO: [Synth 8-3876] $readmem data file './FBTA64_theta_buddcud_ram.dat' is read successfully [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddcud_ram' (3#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddcud' (4#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddcud.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_budddEe' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 2 - type: integer 
+	Parameter AddressWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_budddEe_ram' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter MEM_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:25]
+INFO: [Synth 8-3876] $readmem data file './FBTA64_theta_budddEe_ram.dat' is read successfully [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_budddEe_ram' (5#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_budddEe' (6#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_budddEe.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddeOg' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 2 - type: integer 
+	Parameter AddressWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_buddeOg_ram' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter MEM_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:25]
+INFO: [Synth 8-3876] $readmem data file './FBTA64_theta_buddeOg_ram.dat' is read successfully [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddeOg_ram' (7#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_buddeOg' (8#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_buddeOg.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_addrfYi' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:49]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_addrfYi_ram' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:9]
+	Parameter DWIDTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:22]
+INFO: [Synth 8-3876] $readmem data file './FBTA64_theta_addrfYi_ram.dat' is read successfully [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_addrfYi_ram' (9#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_addrfYi' (10#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_addrfYi.v:49]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_mux_g8j' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_mux_g8j.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_mux_g8j' (11#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_mux_g8j.v:11]
+INFO: [Synth 8-6157] synthesizing module 'FBTA64_theta_mux_hbi' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_mux_hbi.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 64 - type: integer 
+	Parameter din5_WIDTH bound to: 64 - type: integer 
+	Parameter din6_WIDTH bound to: 64 - type: integer 
+	Parameter din7_WIDTH bound to: 64 - type: integer 
+	Parameter din8_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta_mux_hbi' (12#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta_mux_hbi.v:11]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2547]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2549]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2551]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2553]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2555]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2557]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2567]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2650]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2674]
+INFO: [Synth 8-6155] done synthesizing module 'FBTA64_theta' (13#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_FBTA64_theta_0_0' (14#1) [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ip/design_1_FBTA64_theta_0_0/synth/design_1_FBTA64_theta_0_0.v:58]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_hbi has unconnected port din8[3]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[7]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[6]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[5]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[4]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[3]
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_g8j has unconnected port din4[2]
+WARNING: [Synth 8-3331] design FBTA64_theta_addrfYi has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_buddeOg has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_budddEe has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_buddcud has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_buddbkb has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[16]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[15]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[14]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[13]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[12]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[11]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[10]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[9]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[8]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[31]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[30]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[29]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[28]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[27]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[26]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[25]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[24]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[23]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[22]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[21]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[20]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[19]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[18]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[17]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[16]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[15]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[14]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[13]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[12]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[11]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[10]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[9]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1406.199 ; gain = 136.512 ; free physical = 16437 ; free virtual = 31125
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1406.199 ; gain = 136.512 ; free physical = 16424 ; free virtual = 31113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1406.199 ; gain = 136.512 ; free physical = 16424 ; free virtual = 31113
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ip/design_1_FBTA64_theta_0_0/constraints/FBTA64_theta_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ip/design_1_FBTA64_theta_0_0/constraints/FBTA64_theta_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/design_1_FBTA64_theta_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/design_1_FBTA64_theta_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1772.410 ; gain = 0.000 ; free physical = 16137 ; free virtual = 30825
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:32 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16230 ; free virtual = 30918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:32 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16230 ; free virtual = 30918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/design_1_FBTA64_theta_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:32 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16231 ; free virtual = 30919
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'now1_V_cast_reg_2724_reg[3:0]' into 'now1_V_cast1_reg_2719_reg[3:0]' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1370]
+INFO: [Synth 8-4471] merging register 'now1_V_cast1_reg_2719_reg[7:4]' into 'ans_V_2_reg_2516_reg[7:4]' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2838]
+INFO: [Synth 8-4471] merging register 'p_1_cast_reg_2752_reg[6:5]' into 'p_cast_reg_2744_reg[5:4]' [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:2696]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_02024_0_in_reg_824_reg' and it is trimmed from '64' to '2' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1050]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex6_reg_2561_pp0_iter1_reg_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1271]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex6_reg_2561_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1327]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex9_reg_2624_pp1_iter1_reg_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1348]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex9_reg_2624_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1341]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex2_reg_2488_reg' and it is trimmed from '2' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1217]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex_reg_2806_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1304]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex4_reg_2691_reg' and it is trimmed from '2' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1318]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cnt1_reg_1174_pp3_iter1_reg_reg' and it is trimmed from '4' to '3' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1245]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex7_reg_2848_pp3_iter1_reg_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1248]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex7_reg_2848_reg' and it is trimmed from '6' to '1' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:1334]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_1318_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_5_fu_1383_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp1_fu_1546_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_2142_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_2033_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_42_fu_2039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_43_fu_2077_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_21_fu_2013_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_23_fu_2023_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp1_fu_1371_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp3_fu_1347_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp4_fu_1377_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp5_fu_1353_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp7_fu_1359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp9_fu_1365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp_fu_1341_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1324_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_1318_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_5_fu_1383_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp1_fu_1546_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_2142_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_2033_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_42_fu_2039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_43_fu_2077_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_21_fu_2013_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_23_fu_2023_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp1_fu_1371_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp3_fu_1347_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp4_fu_1377_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp5_fu_1353_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp7_fu_1359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp9_fu_1365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp_fu_1341_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1324_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_02008_1_in_reg_1146" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_02008_4_in_reg_843" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_2_reg_996" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "newSel_cast_cast_fu_1809_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "newSel_fu_1820_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "newSel1_fu_1831_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_Result_3_reg_2599" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16223 ; free virtual = 30912
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 8     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     64 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 21    
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 37    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 43    
+	   2 Input     20 Bit        Muxes := 1     
+	   3 Input     20 Bit        Muxes := 1     
+	   3 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      6 Bit        Muxes := 1     
+	  19 Input      6 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 6     
+	  15 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 37    
+	  17 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FBTA64_theta_buddbkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module FBTA64_theta_buddcud_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module FBTA64_theta_budddEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module FBTA64_theta_buddeOg_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module FBTA64_theta_addrfYi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module FBTA64_theta_mux_g8j 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+Module FBTA64_theta_mux_hbi 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 7     
+Module FBTA64_theta 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 8     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     64 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 13    
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 37    
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   3 Input     20 Bit        Muxes := 1     
+	   3 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      6 Bit        Muxes := 1     
+	  19 Input      6 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 5     
+	  15 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 37    
+	  17 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_02004_2_in_reg_862_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:994]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_02004_0_in_reg_1164_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.srcs/sources_1/bd/design_1/ipshared/33ab/hdl/verilog/FBTA64_theta.v:986]
+INFO: [Synth 8-5546] ROM "icmp1_fu_1546_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_43_fu_2077_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "icmp_fu_2142_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data81" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1318_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_5_fu_1383_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1324_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp3_fu_1347_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp5_fu_1353_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp_fu_1341_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp4_fu_1377_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp9_fu_1365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp1_fu_1371_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp7_fu_1359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_2013_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_42_fu_2039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_23_fu_2023_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_2033_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_43_fu_2077_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "data81" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1318_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_5_fu_1383_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1324_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp3_fu_1347_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp5_fu_1353_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp_fu_1341_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp4_fu_1377_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp9_fu_1365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp1_fu_1371_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp7_fu_1359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_2013_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_42_fu_2039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_23_fu_2023_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_2033_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design FBTA64_theta_mux_hbi has unconnected port din8[3]
+WARNING: [Synth 8-3331] design FBTA64_theta_buddeOg has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_budddEe has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_buddcud has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta_buddbkb has unconnected port reset
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[16]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[15]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[14]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[13]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[12]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[11]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[10]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[9]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_size[8]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[31]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[30]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[29]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[28]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[27]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[26]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[25]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[24]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[23]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[22]
+WARNING: [Synth 8-3331] design FBTA64_theta has unconnected port alloc_free_target[21]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Result_3_reg_2599_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Result_3_reg_2599_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/newIndex2_reg_2488_reg[0]' (FDE) to 'inst/addr_layer_map_V_loa_reg_2477_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_reg_2691_reg[0]' (FDE) to 'inst/now1_V_reg_2667_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_45_reg_2483_reg[1]' (FDE) to 'inst/addr_layer_map_V_loa_reg_2477_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_45_reg_2483_reg[0]' (FDE) to 'inst/addr_layer_map_V_loa_reg_2477_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ans_V_2_reg_2516_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ans_V_2_reg_2516_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ans_V_2_reg_2516_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ans_V_2_reg_2516_reg[5] )
+INFO: [Synth 8-3886] merging instance 'inst/tmp_22_reg_2676_reg[1]' (FDE) to 'inst/now1_V_reg_2667_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_22_reg_2676_reg[0]' (FDE) to 'inst/now1_V_reg_2667_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_2_reg_996_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_cast_reg_2744_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_cast_reg_2744_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[8]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[0]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[1]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[2]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[3]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[4]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[5]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[6]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Val2_5_reg_1126_reg[7]' (FDE) to 'inst/p_Val2_6_cast_reg_2772_reg[7]'
+WARNING: [Synth 8-3332] Sequential element (p_2_reg_996_reg[4]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (ap_reg_ioackin_alloc_addr_ap_ack_reg) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_02012_0_in_reg_1155_reg[4]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_02012_0_in_reg_1155_reg[3]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_02008_1_in_reg_1146_reg[0]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_02008_4_in_reg_843_reg[0]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_Result_3_reg_2599_reg[7]) is unused and will be removed from module FBTA64_theta.
+WARNING: [Synth 8-3332] Sequential element (p_Result_3_reg_2599_reg[0]) is unused and will be removed from module FBTA64_theta.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:45 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16189 ; free virtual = 30882
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+|Module Name           | RTL Object                                            | Inference      | Size (Depth x Width) | Primitives      | 
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_0_U | FBTA64_theta_buddbkb_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_1_U | FBTA64_theta_buddcud_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_2_U | FBTA64_theta_budddEe_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_3_U | FBTA64_theta_buddeOg_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst                  | addr_layer_map_V_U/FBTA64_theta_addrfYi_ram_U/ram_reg | User Attribute | 64 x 4               | RAM64X1S x 4    | 
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 1772.410 ; gain = 502.723 ; free physical = 16065 ; free virtual = 30758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 1845.504 ; gain = 575.816 ; free physical = 15996 ; free virtual = 30690
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+|Module Name           | RTL Object                                            | Inference      | Size (Depth x Width) | Primitives      | 
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_0_U | FBTA64_theta_buddbkb_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_1_U | FBTA64_theta_buddcud_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_2_U | FBTA64_theta_budddEe_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_3_U | FBTA64_theta_buddeOg_ram_U/ram_reg                    | User Attribute | 2 x 64               | RAM16X1D x 64   | 
+|inst                  | addr_layer_map_V_U/FBTA64_theta_addrfYi_ram_U/ram_reg | User Attribute | 64 x 4               | RAM64X1S x 4    | 
++----------------------+-------------------------------------------------------+----------------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30682
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30683
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30683
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30682
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30682
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30683
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30683
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   134|
+|2     |LUT1     |   507|
+|3     |LUT2     |   566|
+|4     |LUT3     |   154|
+|5     |LUT4     |    97|
+|6     |LUT5     |   414|
+|7     |LUT6     |  1244|
+|8     |MUXF7    |    80|
+|9     |MUXF8    |     8|
+|10    |RAM16X1D |   256|
+|11    |RAM64X1S |     4|
+|12    |FDRE     |  1574|
+|13    |FDSE     |    43|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------+-------------------------+------+
+|      |Instance                         |Module                   |Cells |
++------+---------------------------------+-------------------------+------+
+|1     |top                              |                         |  5081|
+|2     |  inst                           |FBTA64_theta             |  5081|
+|3     |    FBTA64_theta_mux_hbi_U5      |FBTA64_theta_mux_hbi     |   199|
+|4     |    addr_layer_map_V_U           |FBTA64_theta_addrfYi     |    22|
+|5     |      FBTA64_theta_addrfYi_ram_U |FBTA64_theta_addrfYi_ram |    22|
+|6     |    buddy_tree_V_0_U             |FBTA64_theta_buddbkb     |  1262|
+|7     |      FBTA64_theta_buddbkb_ram_U |FBTA64_theta_buddbkb_ram |  1262|
+|8     |    buddy_tree_V_1_U             |FBTA64_theta_buddcud     |   483|
+|9     |      FBTA64_theta_buddcud_ram_U |FBTA64_theta_buddcud_ram |   483|
+|10    |    buddy_tree_V_2_U             |FBTA64_theta_budddEe     |   483|
+|11    |      FBTA64_theta_budddEe_ram_U |FBTA64_theta_budddEe_ram |   483|
+|12    |    buddy_tree_V_3_U             |FBTA64_theta_buddeOg     |   975|
+|13    |      FBTA64_theta_buddeOg_ram_U |FBTA64_theta_buddeOg_ram |   975|
++------+---------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1861.520 ; gain = 591.832 ; free physical = 15989 ; free virtual = 30683
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1861.520 ; gain = 225.621 ; free physical = 16047 ; free virtual = 30740
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1861.527 ; gain = 591.832 ; free physical = 16047 ; free virtual = 30740
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 482 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 260 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 256 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+164 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:09 . Memory (MB): peak = 1861.527 ; gain = 603.406 ; free physical = 16090 ; free virtual = 30783
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/design_1_FBTA64_theta_0_0_synth_1/design_1_FBTA64_theta_0_0.dcp' has been generated.

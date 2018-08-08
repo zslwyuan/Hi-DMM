@@ -1,0 +1,767 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jul 31 02:06:03 2018
+# Process ID: 32367
+# Current directory: /home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1
+# Command line: vivado -log design_1_Ext_KWTA4k_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Ext_KWTA4k_0_0.tcl
+# Log file: /home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/design_1_Ext_KWTA4k_0_0.vds
+# Journal file: /home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_Ext_KWTA4k_0_0.tcl -notrace
+Command: synth_design -top design_1_Ext_KWTA4k_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 32450 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1351.570 ; gain = 81.887 ; free physical = 11342 ; free virtual = 28640
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_Ext_KWTA4k_0_0' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA4k_0_0/synth/design_1_Ext_KWTA4k_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 1 - type: integer 
+	Parameter ap_ST_fsm_state2 bound to: 2 - type: integer 
+	Parameter ap_ST_fsm_state3 bound to: 4 - type: integer 
+	Parameter ap_ST_fsm_state4 bound to: 8 - type: integer 
+	Parameter ap_ST_fsm_state5 bound to: 16 - type: integer 
+	Parameter ap_ST_fsm_state6 bound to: 32 - type: integer 
+	Parameter ap_ST_fsm_state7 bound to: 64 - type: integer 
+	Parameter ap_ST_fsm_state8 bound to: 128 - type: integer 
+	Parameter ap_ST_fsm_state9 bound to: 256 - type: integer 
+	Parameter ap_ST_fsm_state10 bound to: 512 - type: integer 
+	Parameter ap_ST_fsm_state11 bound to: 1024 - type: integer 
+	Parameter ap_ST_fsm_state12 bound to: 2048 - type: integer 
+	Parameter ap_ST_fsm_state13 bound to: 4096 - type: integer 
+	Parameter ap_ST_fsm_state14 bound to: 8192 - type: integer 
+	Parameter ap_ST_fsm_state15 bound to: 16384 - type: integer 
+	Parameter ap_ST_fsm_state16 bound to: 32768 - type: integer 
+	Parameter ap_ST_fsm_state17 bound to: 65536 - type: integer 
+	Parameter ap_ST_fsm_state18 bound to: 131072 - type: integer 
+	Parameter ap_ST_fsm_state19 bound to: 262144 - type: integer 
+	Parameter ap_ST_fsm_state20 bound to: 524288 - type: integer 
+	Parameter ap_ST_fsm_state21 bound to: 1048576 - type: integer 
+	Parameter ap_ST_fsm_state22 bound to: 2097152 - type: integer 
+	Parameter ap_ST_fsm_state23 bound to: 4194304 - type: integer 
+	Parameter ap_ST_fsm_state24 bound to: 8388608 - type: integer 
+	Parameter ap_ST_fsm_state25 bound to: 16777216 - type: integer 
+	Parameter ap_ST_fsm_state26 bound to: 33554432 - type: integer 
+	Parameter ap_ST_fsm_state27 bound to: 67108864 - type: integer 
+	Parameter ap_ST_fsm_state28 bound to: 134217728 - type: integer 
+	Parameter ap_ST_fsm_state29 bound to: 268435456 - type: integer 
+	Parameter ap_ST_fsm_state30 bound to: 536870912 - type: integer 
+	Parameter ap_ST_fsm_state31 bound to: 1073741824 - type: integer 
+	Parameter ap_ST_fsm_state32 bound to: -2147483648 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:125]
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_maintabkb' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:43]
+	Parameter DataWidth bound to: 33 - type: integer 
+	Parameter AddressRange bound to: 7 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_maintabkb_rom' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:9]
+	Parameter DWIDTH bound to: 33 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:21]
+INFO: [Synth 8-3876] $readmem data file './Ext_KWTA4k_maintabkb_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_maintabkb_rom' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_maintabkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_maintabkb.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_heap_tcud' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:49]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_heap_tcud_ram' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:9]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:22]
+INFO: [Synth 8-3876] $readmem data file './Ext_KWTA4k_heap_tcud_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_heap_tcud_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_heap_tcud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_heap_tcud.v:49]
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_group_dEe' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:49]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 2048 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_group_dEe_ram' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:9]
+	Parameter DWIDTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:22]
+INFO: [Synth 8-3876] $readmem data file './Ext_KWTA4k_group_dEe_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_group_dEe_ram' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_group_dEe' (6#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_group_dEe.v:49]
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_mark_meOg' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:43]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 128 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_KWTA4k_mark_meOg_rom' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:9]
+	Parameter DWIDTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:21]
+INFO: [Synth 8-3876] $readmem data file './Ext_KWTA4k_mark_meOg_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_mark_meOg_rom' (7#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k_mark_meOg' (8#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k_mark_meOg.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_KWTA4k' (9#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Ext_KWTA4k_0_0' (10#1) [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA4k_0_0/synth/design_1_Ext_KWTA4k_0_0.v:58]
+WARNING: [Synth 8-3331] design Ext_KWTA4k_mark_meOg has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_KWTA4k_group_dEe has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_KWTA4k_heap_tcud has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_KWTA4k_maintabkb has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[16]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.195 ; gain = 132.512 ; free physical = 11321 ; free virtual = 28621
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.195 ; gain = 132.512 ; free physical = 11303 ; free virtual = 28602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.195 ; gain = 132.512 ; free physical = 11303 ; free virtual = 28602
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA4k_0_0/constraints/Ext_KWTA4k_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA4k_0_0/constraints/Ext_KWTA4k_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1769.414 ; gain = 0.000 ; free physical = 10859 ; free virtual = 28161
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 10942 ; free virtual = 28247
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 10942 ; free virtual = 28247
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 10944 ; free virtual = 28248
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-4471] merging register 'p_0252_0_i1_cast_reg_2020_reg[6:5]' into 'p_0167_0_i1_cast_reg_2012_reg[5:4]' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:1926]
+INFO: [Synth 8-4471] merging register 'p_061_0_i_cast_reg_2069_reg[5:4]' into 'p_0167_0_i1_cast_reg_2012_reg[5:4]' [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:2004]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_01572_0_in_reg_559_reg' and it is trimmed from '64' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:612]
+WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_free_target_re_reg_1853_reg' and it is trimmed from '32' to '17' bits. [/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ipshared/5b92/hdl/verilog/Ext_KWTA4k.v:820]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "cond_fu_1635_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1071_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1080_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_49_fu_1573_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_39_fu_1313_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_30_fu_1170_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1056_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_47_fu_1558_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_41_fu_1476_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_1470_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_9_fu_1450_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_32_fu_1460_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_46_fu_1548_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cond_fu_1635_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1071_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1080_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_49_fu_1573_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_39_fu_1313_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_30_fu_1170_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1056_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_47_fu_1558_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_41_fu_1476_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_40_fu_1470_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_9_fu_1450_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_32_fu_1460_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_46_fu_1548_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "com_port_cmd" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 10920 ; free virtual = 28225
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input      4 Bit         XORs := 2     
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 7     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 7     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	               13 Bit    Registers := 2     
+	               11 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 11    
++---RAMs : 
+	               8K Bit         RAMs := 1     
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 7     
+	  33 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	  15 Input      6 Bit        Muxes := 1     
+	  19 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  18 Input      5 Bit        Muxes := 1     
+	  16 Input      5 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 25    
+	  18 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Ext_KWTA4k_maintabkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
+Module Ext_KWTA4k_heap_tcud_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module Ext_KWTA4k_group_dEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module Ext_KWTA4k_mark_meOg_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Ext_KWTA4k 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input      4 Bit         XORs := 2     
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 7     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	               13 Bit    Registers := 2     
+	               11 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 7     
+	  33 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	  15 Input      6 Bit        Muxes := 1     
+	  19 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  18 Input      5 Bit        Muxes := 1     
+	  16 Input      5 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 25    
+	  18 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "tmp_4_fu_1071_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1080_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_1056_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_32_fu_1460_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_41_fu_1476_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_9_fu_1450_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_46_fu_1548_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_47_fu_1558_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_49_fu_1573_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_40_fu_1470_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_size[16]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[31]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[30]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[29]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[28]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[27]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[26]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[25]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[24]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[23]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[22]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[21]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[20]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[19]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[18]
+WARNING: [Synth 8-3331] design Ext_KWTA4k has unconnected port alloc_free_target[17]
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[6]' (FDE) to 'inst/reg_1019_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[7]' (FDE) to 'inst/reg_1019_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[8]' (FDE) to 'inst/reg_1019_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[9]' (FDE) to 'inst/reg_1019_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[10]' (FDE) to 'inst/reg_1019_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[16]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[24]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[20]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[28]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[18]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[26]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[22]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[30]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[17]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[25]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[21]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[29]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[19]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[27]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[23]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/loc2_V_reg_2134_reg[4]' (FDE) to 'inst/addr_HTA_V_3_reg_2127_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/loc2_V_reg_2134_reg[3]' (FDE) to 'inst/addr_HTA_V_3_reg_2127_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/loc2_V_reg_2134_reg[2]' (FDE) to 'inst/addr_HTA_V_3_reg_2127_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/loc2_V_reg_2134_reg[1]' (FDE) to 'inst/addr_HTA_V_3_reg_2127_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/loc2_V_reg_2134_reg[0]' (FDE) to 'inst/addr_HTA_V_3_reg_2127_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[8]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[4]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[12]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[2]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[10]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[6]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[14]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[9]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[5]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[13]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[11]' (FDE) to 'inst/maintain_mask_V_U/Ext_KWTA4k_maintabkb_rom_U/q0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_75_reg_2107_reg[1]' (FDE) to 'inst/lhs_V_1_reg_2102_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_75_reg_2107_reg[0]' (FDE) to 'inst/lhs_V_1_reg_2102_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1024_reg[4]' (FDE) to 'inst/reg_1019_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1024_reg[3]' (FDE) to 'inst/reg_1019_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1024_reg[2]' (FDE) to 'inst/reg_1019_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1024_reg[1]' (FDE) to 'inst/reg_1019_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1024_reg[0]' (FDE) to 'inst/reg_1019_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[0]' (FDE) to 'inst/reg_1019_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[0]' (FDE) to 'inst/tmp_42_reg_2031_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[1]' (FDE) to 'inst/reg_1019_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[1]' (FDE) to 'inst/tmp_42_reg_2031_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[2]' (FDE) to 'inst/reg_1019_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[2]' (FDE) to 'inst/tmp_42_reg_2031_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[3]' (FDE) to 'inst/reg_1019_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[3]' (FDE) to 'inst/tmp_42_reg_2031_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[4]' (FDE) to 'inst/reg_1019_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[4]' (FDE) to 'inst/tmp_42_reg_2031_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1028_reg[5]' (FDE) to 'inst/reg_1019_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_0248_0_i1_reg_710_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/heap_tree_V_addr_3_reg_2037_reg[5]' (FDE) to 'inst/tmp_42_reg_2031_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[0]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[1]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[2]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[3]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[4]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[5]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[6]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[7]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[8]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[9]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_1_reg_2092_reg[10]' (FDE) to 'inst/tree_offset_V_reg_2086_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/p_0167_0_i1_cast_reg_2012_reg[4]' (FD) to 'inst/p_0167_0_i1_cast_reg_2012_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/p_0167_0_i1_cast_reg_2012_reg[5]' (FD) to 'inst/tree_offset_V_cast_reg_2097_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/tree_offset_V_cast_reg_2097_reg[13]' (FD) to 'inst/tree_offset_V_cast_reg_2097_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/tree_offset_V_cast_reg_2097_reg[14]' (FD) to 'inst/tree_offset_V_cast_reg_2097_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tree_offset_V_cast_reg_2097_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[31]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[30]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[29]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[28]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[27]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[26]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[25]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[24]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[23]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[22]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[21]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[20]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[19]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[18]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[17]' (FDE) to 'inst/reg_1032_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[15]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[14]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[13]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[12]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[11]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[10]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[9]' (FDE) to 'inst/reg_1032_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[7]' (FDE) to 'inst/reg_1032_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[6]' (FDE) to 'inst/reg_1032_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[5]' (FDE) to 'inst/reg_1032_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_1032_reg[3]' (FDE) to 'inst/reg_1032_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (p_0248_0_i1_reg_710_reg[4]) is unused and will be removed from module Ext_KWTA4k.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:47 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 11451 ; free virtual = 28758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|Ext_KWTA4k_maintabkb_rom | p_0_out    | 8x33          | LUT            | 
+|Ext_KWTA4k_mark_meOg_rom | p_0_out    | 128x4         | LUT            | 
+|Ext_KWTA4k               | p_0_out    | 8x33          | LUT            | 
+|Ext_KWTA4k               | p_0_out    | 128x4         | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Ext_KWTA4k_heap_tcud_ram: | ram_reg    | 64 x 32(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|Ext_KWTA4k_group_dEe_ram: | ram_reg    | 2 K x 4(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/heap_tree_V_U/Ext_KWTA4k_heap_tcud_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/heap_tree_V_U/Ext_KWTA4k_heap_tcud_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_1/group_tree_V_U/Ext_KWTA4k_group_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 1769.414 ; gain = 499.730 ; free physical = 11322 ; free virtual = 28630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 1848.016 ; gain = 578.332 ; free physical = 11245 ; free virtual = 28555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Ext_KWTA4k_heap_tcud_ram: | ram_reg    | 64 x 32(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|Ext_KWTA4k_group_dEe_ram: | ram_reg    | 2 K x 4(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/heap_tree_V_U/Ext_KWTA4k_heap_tcud_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/heap_tree_V_U/Ext_KWTA4k_heap_tcud_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_U/Ext_KWTA4k_group_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:08 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11235 ; free virtual = 28544
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11235 ; free virtual = 28545
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11236 ; free virtual = 28546
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11232 ; free virtual = 28542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11232 ; free virtual = 28542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11232 ; free virtual = 28542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11232 ; free virtual = 28542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    56|
+|2     |LUT1       |   148|
+|3     |LUT2       |   207|
+|4     |LUT3       |   186|
+|5     |LUT4       |   159|
+|6     |LUT5       |   580|
+|7     |LUT6       |   880|
+|8     |MUXF7      |    49|
+|9     |RAMB18E1   |     1|
+|10    |RAMB18E1_1 |     1|
+|11    |FDRE       |   882|
+|12    |FDSE       |    17|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------------------+-------------------------+------+
+|      |Instance                         |Module                   |Cells |
++------+---------------------------------+-------------------------+------+
+|1     |top                              |                         |  3166|
+|2     |  inst                           |Ext_KWTA4k               |  3166|
+|3     |    group_tree_V_U               |Ext_KWTA4k_group_dEe     |    59|
+|4     |      Ext_KWTA4k_group_dEe_ram_U |Ext_KWTA4k_group_dEe_ram |    59|
+|5     |    heap_tree_V_U                |Ext_KWTA4k_heap_tcud     |   277|
+|6     |      Ext_KWTA4k_heap_tcud_ram_U |Ext_KWTA4k_heap_tcud_ram |   277|
+|7     |    maintain_mask_V_U            |Ext_KWTA4k_maintabkb     |   175|
+|8     |      Ext_KWTA4k_maintabkb_rom_U |Ext_KWTA4k_maintabkb_rom |   175|
+|9     |    mark_mask_V_U                |Ext_KWTA4k_mark_meOg     |   223|
+|10    |      Ext_KWTA4k_mark_meOg_rom_U |Ext_KWTA4k_mark_meOg_rom |   223|
++------+---------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.023 ; gain = 586.340 ; free physical = 11232 ; free virtual = 28542
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1856.023 ; gain = 219.121 ; free physical = 11299 ; free virtual = 28609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:09 . Memory (MB): peak = 1856.031 ; gain = 586.340 ; free physical = 11291 ; free virtual = 28601
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+199 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:11 . Memory (MB): peak = 1856.031 ; gain = 597.914 ; free physical = 11338 ; free virtual = 28648
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/design_1_Ext_KWTA4k_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA4k_0_0/design_1_Ext_KWTA4k_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test4kmau/test4kmau.runs/design_1_Ext_KWTA4k_0_0_synth_1/design_1_Ext_KWTA4k_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_Ext_KWTA4k_0_0_utilization_synth.rpt -pb design_1_Ext_KWTA4k_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1880.035 ; gain = 0.000 ; free physical = 11340 ; free virtual = 28653
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 31 02:07:28 2018...

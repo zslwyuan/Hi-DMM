@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;Ext_KWTA32k_0/solution1/top.cc&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 13898 ; free virtual = 29885"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 13898 ; free virtual = 29885"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;Ext_KWTA32k&apos; (Ext_KWTA32k_0/solution1/top.cc:202)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_KWTA32k_0/solution1/top.cc:155)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_KWTA32k_0/solution1/top.cc:154)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_KWTA32k_0/solution1/top.cc:153)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (Ext_KWTA32k_0/solution1/top.cc:152)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_32bit&apos; (Ext_KWTA32k_0/solution1/top.cc:142)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_32bit&apos; (Ext_KWTA32k_0/solution1/top.cc:141)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_64bit&apos; into &apos;Ext_KWTA32k&apos; (Ext_KWTA32k_0/solution1/top.cc:341)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_64bit&apos; into &apos;Ext_KWTA32k&apos; (Ext_KWTA32k_0/solution1/top.cc:307)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_32bit&apos; into &apos;Ext_KWTA32k&apos; (Ext_KWTA32k_0/solution1/top.cc:317)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 504.508 ; gain = 128.945 ; free physical = 13867 ; free virtual = 29857"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="WARNING" prefix="[SYNCHK 200-23]" key="SYNCHK_VAR_INDEX_RANGE_359" tag="" content="Ext_KWTA32k_0/solution1/top.cc:274: variable-indexed range selection may cause suboptimal QoR."/>
+	<Message severity="INFO" prefix="[SYNCHK 200-10]" key="SYNCHK_SYNCHK_SUMMARY_377" tag="" content="0 error(s), 1 warning(s)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 504.508 ; gain = 128.945 ; free physical = 13854 ; free virtual = 29846"/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;top_heap.V&apos;  in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_111" tag="" content="Partitioning array &apos;heap_tree.V&apos;  in dimension 1 with a block factor 4."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock to (Ext_KWTA32k_0/solution1/top.cc:509:46) in function &apos;Ext_KWTA32k&apos;... converting 7 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:274:27) to (Ext_KWTA32k_0/solution1/top.cc:280:17) in function &apos;Ext_KWTA32k&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:448:27) to (Ext_KWTA32k_0/solution1/top.cc:453:17) in function &apos;Ext_KWTA32k&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:281:43) to (Ext_KWTA32k_0/solution1/top.cc:287:17) in function &apos;Ext_KWTA32k&apos;... converting 4 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:454:43) to (Ext_KWTA32k_0/solution1/top.cc:459:17) in function &apos;Ext_KWTA32k&apos;... converting 4 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:524:26) to (Ext_KWTA32k_0/solution1/top.cc:526:46) in function &apos;Ext_KWTA32k&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:527:42) to (Ext_KWTA32k_0/solution1/top.cc:529:47) in function &apos;Ext_KWTA32k&apos;... converting 4 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:344:54) to (Ext_KWTA32k_0/solution1/top.cc:370:43) in function &apos;Ext_KWTA32k&apos;... converting 8 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:371:26) to (Ext_KWTA32k_0/solution1/top.cc:377:46) in function &apos;Ext_KWTA32k&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (Ext_KWTA32k_0/solution1/top.cc:378:42) to (Ext_KWTA32k_0/solution1/top.cc:384:47) in function &apos;Ext_KWTA32k&apos;... converting 4 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.4i64P.i2&apos; into &apos;Ext_KWTA32k&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;Ext_KWTA32k&apos; (Ext_KWTA32k_0/solution1/top.cc:159)...9 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 504.508 ; gain = 128.945 ; free physical = 13816 ; free virtual = 29810"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 568.320 ; gain = 192.758 ; free physical = 13809 ; free virtual = 29804"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;Ext_KWTA32k&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Ext_KWTA32k&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 20.66 seconds; current allocated memory: 132.078 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.58 seconds; current allocated memory: 135.169 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Ext_KWTA32k&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/alloc_size&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/alloc_free_target&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/alloc_addr&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/alloc_cmd&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/com_port_layer_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/com_port_target_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/com_port_allocated_addr_V&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Ext_KWTA32k/com_port_cmd&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;Ext_KWTA32k&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_maintain_mask_V&apos; to &apos;Ext_KWTA32k_maintbkb&apos; due to the length limit 20"/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;top_heap_V_0&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;top_heap_V_1&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;top_heap_V_2&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;top_heap_V_3&apos; is power-on initialization."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_heap_tree_V_0&apos; to &apos;Ext_KWTA32k_heap_cud&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_heap_tree_V_1&apos; to &apos;Ext_KWTA32k_heap_dEe&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_heap_tree_V_2&apos; to &apos;Ext_KWTA32k_heap_eOg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_heap_tree_V_3&apos; to &apos;Ext_KWTA32k_heap_fYi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_group_tree_V&apos; to &apos;Ext_KWTA32k_groupg8j&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_group_tree_mask_V&apos; to &apos;Ext_KWTA32k_grouphbi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_shift_constant_V&apos; to &apos;Ext_KWTA32k_shiftibs&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_mark_mask_V&apos; to &apos;Ext_KWTA32k_mark_jbC&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_extra_mask_V&apos; to &apos;Ext_KWTA32k_extrakbM&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_mux_416_32_1_1&apos; to &apos;Ext_KWTA32k_mux_4lbW&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Ext_KWTA32k_mux_420_32_1_1&apos; to &apos;Ext_KWTA32k_mux_4mb6&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Ext_KWTA32k_mux_4lbW&apos;: 3 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Ext_KWTA32k_mux_4mb6&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Ext_KWTA32k&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.85 seconds; current allocated memory: 140.480 MB."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="WARNING" prefix="[HLS 200-433]" key="HLS 200-433" tag="SDX" content="Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_KWTA32k_maintbkb_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;Ext_KWTA32k_heap_cud_ram (RAM_T2P_BRAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;Ext_KWTA32k_groupg8j_ram (RAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_KWTA32k_grouphbi_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_KWTA32k_shiftibs_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_KWTA32k_mark_jbC_rom&apos; using auto ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;Ext_KWTA32k_extrakbM_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 568.320 ; gain = 192.758 ; free physical = 13746 ; free virtual = 29752"/>
+	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for Ext_KWTA32k."/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for Ext_KWTA32k."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for Ext_KWTA32k."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 24.87 seconds; peak allocated memory: 140.480 MB."/>
+</Messages>

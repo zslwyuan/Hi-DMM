@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sun Jul 29 16:42:24 UTC 2018
+VLNV: xilinx.com:hls:acc256_256_mau:1.0
+SynthRuntime: 51

@@ -1,0 +1,801 @@
+
+*** Running vivado
+    with args -log design_1_HLS_MAXHEAP_HTA_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_HLS_MAXHEAP_HTA_0_1.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_HLS_MAXHEAP_HTA_0_1.tcl -notrace
+Command: synth_design -top design_1_HLS_MAXHEAP_HTA_0_1 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7922 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1353.562 ; gain = 83.887 ; free physical = 14652 ; free virtual = 29862
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_HLS_MAXHEAP_HTA_0_1' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ip/design_1_HLS_MAXHEAP_HTA_0_1/synth/design_1_HLS_MAXHEAP_HTA_0_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HLS_MAXHEAP_HTA' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 31'b0000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 31'b0000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 31'b0000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 31'b0000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 31'b0000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 31'b0000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 31'b0000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 31'b0000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 31'b0000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 31'b0000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 31'b0000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 31'b0000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 31'b0000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 31'b0000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 31'b0000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 31'b0000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 31'b0000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 31'b0000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 31'b0000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 31'b0000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 31'b0000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 31'b0000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 31'b0000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 31'b0000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 31'b0000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 31'b0000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 31'b0000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 31'b0001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 31'b0010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 31'b0100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 31'b1000000000000000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:115]
+INFO: [Synth 8-6157] synthesizing module 'HLS_MAXHEAP_HTA_Hbkb' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA_Hbkb.v:66]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 2000 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_MAXHEAP_HTA_Hbkb_ram' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA_Hbkb.v:9]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2000 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA_Hbkb.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_MAXHEAP_HTA_Hbkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA_Hbkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_MAXHEAP_HTA_Hbkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA_Hbkb.v:66]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_2_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_2_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_2_s.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_2_s' (3#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_2_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_3_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_3_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_3_s.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_3_s' (4#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_3_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_1_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_1_s.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_1_s' (5#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_malloc_1_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HLS_free_1_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_free_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_free_1_s.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_free_1_s' (6#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_free_1_s.v:10]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1486]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1488]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1696]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1702]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1704]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1710]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1712]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1736]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1738]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1744]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1750]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1754]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1756]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1758]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1760]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1762]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_MAXHEAP_HTA' (7#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_HLS_MAXHEAP_HTA_0_1' (8#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ip/design_1_HLS_MAXHEAP_HTA_0_1/synth/design_1_HLS_MAXHEAP_HTA_0_1.v:58]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[31]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[30]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[29]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[28]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[27]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[26]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[25]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[24]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[23]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[22]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[21]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[20]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[19]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[18]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[17]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[16]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[15]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[14]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[13]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[12]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[11]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[10]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[9]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[8]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[7]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[6]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[5]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[4]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[3]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[2]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[1]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[0]
+WARNING: [Synth 8-3331] design HLS_MAXHEAP_HTA_Hbkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.188 ; gain = 132.512 ; free physical = 14674 ; free virtual = 29884
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.188 ; gain = 132.512 ; free physical = 14658 ; free virtual = 29868
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.188 ; gain = 132.512 ; free physical = 14658 ; free virtual = 29868
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ip/design_1_HLS_MAXHEAP_HTA_0_1/constraints/HLS_MAXHEAP_HTA_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ip/design_1_HLS_MAXHEAP_HTA_0_1/constraints/HLS_MAXHEAP_HTA_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.runs/design_1_HLS_MAXHEAP_HTA_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.runs/design_1_HLS_MAXHEAP_HTA_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1764.438 ; gain = 0.000 ; free physical = 14225 ; free virtual = 29474
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14314 ; free virtual = 29563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14314 ; free virtual = 29563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.runs/design_1_HLS_MAXHEAP_HTA_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14315 ; free virtual = 29564
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_11_reg_1755_reg[10:0]' into 'HTA_heap_0_addr_13_reg_1750_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:679]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_14_reg_1794_reg[10:0]' into 'HTA_heap_0_addr_16_reg_1789_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:687]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_15_reg_1896_reg[10:0]' into 'HTA_heap_0_addr_17_reg_1901_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:695]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_16_reg_1891_reg[10:0]' into 'HTA_heap_0_addr_18_reg_1886_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:702]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_19_reg_1940_reg[10:0]' into 'HTA_heap_0_addr_21_reg_1945_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:709]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_21_reg_1974_reg[10:0]' into 'HTA_heap_0_addr_23_reg_1968_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:718]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_22_reg_2002_reg[10:0]' into 'HTA_heap_0_addr_24_reg_1996_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:726]
+INFO: [Synth 8-4471] merging register 'HTA_heap_1_addr_24_reg_2034_reg[10:0]' into 'HTA_heap_0_addr_26_reg_2029_reg[10:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:735]
+INFO: [Synth 8-4471] merging register 'newIndex3_cast1_reg_1640_reg[1:0]' into 'HTA_heap_0_addr_reg_1635_reg[1:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1678]
+INFO: [Synth 8-4471] merging register 'newIndex10_cast1_reg_1707_reg[1:0]' into 'HTA_heap_0_addr_reg_1635_reg[1:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:1566]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_11_reg_1755_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:679]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_14_reg_1794_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:687]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_15_reg_1896_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:695]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_16_reg_1891_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:702]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_19_reg_1940_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:709]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_21_reg_1974_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:718]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_22_reg_2002_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:726]
+WARNING: [Synth 8-6014] Unused sequential element HTA_heap_1_addr_24_reg_2034_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:735]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_pn1_reg_575_reg' and it is trimmed from '32' to '13' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:662]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex12_reg_1980_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:719]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex14_reg_1676_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:790]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_9_reg_1686_reg' and it is trimmed from '10' to '9' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:834]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex30_reg_1906_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:796]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex3_cast1_reg_1640_reg' and it is trimmed from '10' to '9' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:745]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1528_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_17_fu_1562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_15_fu_1425_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_12_fu_1066_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_11_fu_1284_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1391_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1528_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_17_fu_1562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_15_fu_1425_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_12_fu_1066_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_11_fu_1284_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1391_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "offset_now_reg_595" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14305 ; free virtual = 29555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 11    
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               31 Bit    Registers := 5     
+	               13 Bit    Registers := 8     
+	               11 Bit    Registers := 13    
+	                9 Bit    Registers := 5     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 32    
++---RAMs : 
+	              62K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 31    
+	   2 Input     31 Bit        Muxes := 1     
+	  32 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 44    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HLS_MAXHEAP_HTA_Hbkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	              62K Bit         RAMs := 1     
+Module HLS_malloc_2_s 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_malloc_3_s 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_malloc_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_free_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_MAXHEAP_HTA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 11    
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               31 Bit    Registers := 5     
+	               13 Bit    Registers := 8     
+	               11 Bit    Registers := 13    
+	                9 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 31    
+	   2 Input     31 Bit        Muxes := 1     
+	  32 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 28    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'tmp_10_reg_1691_reg[8:0]' into 'tmp_9_reg_1686_reg[8:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:832]
+INFO: [Synth 8-4471] merging register 'HTA_heap_0_addr_reg_1635_reg[10:2]' into 'newIndex3_cast1_reg_1640_reg[10:2]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:744]
+WARNING: [Synth 8-6014] Unused sequential element tmp_10_reg_1691_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:832]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_31_reg_1926_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:710]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_pn2_reg_617_reg' and it is trimmed from '32' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:670]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_25_reg_1853_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:865]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_22_reg_1722_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:783]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_pn1_reg_575_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.srcs/sources_1/bd/design_1/ipshared/d952/hdl/verilog/HLS_MAXHEAP_HTA.v:662]
+INFO: [Synth 8-5545] ROM "tmp_12_fu_1066_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1391_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_17_fu_1562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1528_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_15_fu_1425_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_11_fu_1284_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[31]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[30]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[29]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[28]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[27]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[26]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[25]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[24]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[23]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[22]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[21]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[20]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[19]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[18]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[17]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[16]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[15]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[14]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[13]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[12]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[11]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[10]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[9]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[8]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[7]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[6]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[5]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[4]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[3]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[2]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[1]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[0]
+INFO: [Synth 8-3971] The signal HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[3]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[4]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[5]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[6]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[7]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[8]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[9]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[10]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[11]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[12]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[11]' (FDE) to 'inst/tmp_1_reg_1630_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[13]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[14]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_reg_1696_reg[15]' (FDE) to 'inst/offset_new_node_cast_reg_1701_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[0]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[1]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[2]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[3]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[4]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[5]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[6]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[7]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_1_reg_1630_reg[8]' (FDE) to 'inst/newIndex3_cast1_reg_1640_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[0]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[1]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[2]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[16]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[63]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[62]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[61]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[60]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[59]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[58]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[57]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[56]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[55]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[54]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[53]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[52]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[51]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[50]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[49]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[48]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[47]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[46]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[45]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[44]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[43]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[42]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[41]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[40]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[39]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[38]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[37]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[36]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[35]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[34]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[33]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[32]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[31]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[30]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[29]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[28]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[27]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[26]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[25]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[24]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[23]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[22]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[21]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[20]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[19]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[18]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[17]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[16]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[15]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[14]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[13]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex4_cast_reg_1646_reg[12]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[31]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[30]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[29]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[28]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[27]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[26]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[25]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[24]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[23]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[22]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[21]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[20]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[19]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[18]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[17]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_head_cast_reg_1656_reg[16]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[17]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[0]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[1]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[2]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/offset_new_node_cast_reg_1701_reg[18]' (FDR) to 'inst/offset_tail_cast_reg_1662_reg[31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\newIndex4_cast_reg_1646_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\offset_tail_cast_reg_1662_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\offset_tail_cast_reg_1662_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\HTA_heap_0_addr_reg_1635_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\newIndex14_reg_1676_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[31]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[30]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[29]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[28]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[27]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[26]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[25]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[24]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[23]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[22]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[21]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[20]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[19]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[18]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[17]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[16]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[2]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[1]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[0]) is unused and will be removed from module HLS_malloc_2_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[31]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[30]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[29]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[28]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[27]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[26]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[25]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[24]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[23]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[22]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[21]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[20]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[19]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[18]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[17]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[16]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[2]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[1]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (status_reg_58_reg[0]) is unused and will be removed from module HLS_malloc_3_s.
+WARNING: [Synth 8-3332] Sequential element (offset_head_cast_reg_1656_reg[15]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (offset_head_cast_reg_1656_reg[14]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (offset_head_cast_reg_1656_reg[13]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (offset_head_cast_reg_1656_reg[12]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (newIndex4_cast_reg_1646_reg[0]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (newIndex14_reg_1676_reg[1]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (offset_tail_cast_reg_1662_reg[2]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+WARNING: [Synth 8-3332] Sequential element (offset_tail_cast_reg_1662_reg[31]) is unused and will be removed from module HLS_MAXHEAP_HTA.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14265 ; free virtual = 29518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HLS_MAXHEAP_HTA_Hbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
+|HLS_MAXHEAP_HTA_Hbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_0/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_0/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_0/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_0/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_1/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_1/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_1/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_3_1/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:49 . Memory (MB): peak = 1764.438 ; gain = 494.762 ; free physical = 14368 ; free virtual = 29622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1848.109 ; gain = 578.434 ; free physical = 14008 ; free virtual = 29255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HLS_MAXHEAP_HTA_Hbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
+|HLS_MAXHEAP_HTA_Hbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_MAXHEAP_HTA_Hbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:01:00 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 13983 ; free virtual = 29231
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 13996 ; free virtual = 29246
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 13979 ; free virtual = 29229
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 14291 ; free virtual = 29540
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 14273 ; free virtual = 29523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 14273 ; free virtual = 29523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 14272 ; free virtual = 29522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    73|
+|2     |LUT1     |    11|
+|3     |LUT2     |    93|
+|4     |LUT3     |   326|
+|5     |LUT4     |   412|
+|6     |LUT5     |   277|
+|7     |LUT6     |   556|
+|8     |MUXF7    |     7|
+|9     |RAMB36E1 |     4|
+|10    |FDRE     |   724|
+|11    |FDSE     |     6|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------+---------------------------+------+
+|      |Instance                         |Module                     |Cells |
++------+---------------------------------+---------------------------+------+
+|1     |top                              |                           |  2489|
+|2     |  inst                           |HLS_MAXHEAP_HTA            |  2489|
+|3     |    HTA_heap_0_U                 |HLS_MAXHEAP_HTA_Hbkb       |   772|
+|4     |      HLS_MAXHEAP_HTA_Hbkb_ram_U |HLS_MAXHEAP_HTA_Hbkb_ram_1 |   772|
+|5     |    HTA_heap_1_U                 |HLS_MAXHEAP_HTA_Hbkb_0     |   581|
+|6     |      HLS_MAXHEAP_HTA_Hbkb_ram_U |HLS_MAXHEAP_HTA_Hbkb_ram   |   581|
+|7     |    grp_HLS_free_1_s_fu_687      |HLS_free_1_s               |    50|
+|8     |    grp_HLS_malloc_1_s_fu_673    |HLS_malloc_1_s             |    56|
+|9     |    grp_HLS_malloc_2_s_fu_649    |HLS_malloc_2_s             |    62|
+|10    |    grp_HLS_malloc_3_s_fu_661    |HLS_malloc_3_s             |    61|
++------+---------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.117 ; gain = 586.441 ; free physical = 14271 ; free virtual = 29520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 98 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1856.117 ; gain = 224.191 ; free physical = 14335 ; free virtual = 29585
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1856.125 ; gain = 586.441 ; free physical = 14336 ; free virtual = 29585
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+205 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:03 . Memory (MB): peak = 1856.125 ; gain = 598.016 ; free physical = 14389 ; free virtual = 29638
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/Algorithm_MAXHEAP_HTA/Algorithm_MAXHEAP_HTA.runs/design_1_HLS_MAXHEAP_HTA_0_1_synth_1/design_1_HLS_MAXHEAP_HTA_0_1.dcp' has been generated.

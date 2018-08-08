@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b65a" \
+"../../../../HTA2048_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v" \
+"../../../../HTA2048_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v" \
+"../../../../HTA2048_test.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_addhbi.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_addibs.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_budfYi.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_budg8j.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_grobkb.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_grodEe.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_marjbC.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_muxkbM.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_shieOg.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/log_2_64bit.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta.v" \
+"../../../../../Temporary/vivado-outputs/HTA256_test/HTA256_test.srcs/sources_1/bd/design_1/ip/design_1_HTA2048_theta_0_0/sim/design_1_HTA2048_theta_0_0.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b0da/hdl/verilog/acc2048_2048_mau_bkb.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b0da/hdl/verilog/acc2048_2048_mau_cud.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b0da/hdl/verilog/HLS_free_1_s.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b0da/hdl/verilog/HLS_malloc_1_s.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/ipshared/b0da/hdl/verilog/acc2048_2048_mau.v" \
+"../../../../HTA2048_test.ip_user_files/bd/design_1/ip/design_1_acc2048_2048_mau_0_0/sim/design_1_acc2048_2048_mau_0_0.v" \
+"../../../../HTA2048_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

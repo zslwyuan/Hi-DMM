@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sun Jul 29 07:40:09 UTC 2018
+VLNV: xilinx.com:hls:acc512_512_mau:1.0
+SynthRuntime: 50

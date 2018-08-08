@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Jul 30 10:48:18 UTC 2018
+VLNV: xilinx.com:hls:HTA2048_theta:1.0
+SynthRuntime: 91

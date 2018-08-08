@@ -1,0 +1,64 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_addhbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_addhbi_ram
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_addhbi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_addibs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_addibs_ram
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_addibs
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_budfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_budfYi_ram
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_budfYi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_budg8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_budg8j_ram
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_budg8j
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_grobkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_grobkb_ram
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_grobkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_grodEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_grodEe_rom
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_grodEe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_marjbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_marjbC_rom
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_marjbC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_muxkbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_muxkbM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta_shieOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_shieOg_rom
+INFO: [VRFC 10-311] analyzing module HTA2048_theta_shieOg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/log_2_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_2_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/9196/hdl/verilog/HTA2048_theta.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA2048_theta
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_HTA2048_theta_0_0/sim/design_1_HTA2048_theta_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_HTA2048_theta_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_1_0/sim/design_1_blk_mem_gen_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/0510/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_KWTA_HTAbkb_ram
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_KWTA_HTAbkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/0510/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_KWTA_in_dEe_ram
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_KWTA_in_dEe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/0510/hdl/verilog/HLS_SPFA_KWTA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_KWTA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/sim/design_1_HLS_SPFA_KWTA_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_HLS_SPFA_KWTA_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/383f/hdl/verilog/KWTA_theta_heap_tcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KWTA_theta_heap_tcud_ram
+INFO: [VRFC 10-311] analyzing module KWTA_theta_heap_tcud
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/383f/hdl/verilog/KWTA_theta_used_fbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KWTA_theta_used_fbkb_ram
+INFO: [VRFC 10-311] analyzing module KWTA_theta_used_fbkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/383f/hdl/verilog/KWTA_theta.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KWTA_theta
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.ip_user_files/bd/design_1/ip/design_1_KWTA_theta_0_0/sim/design_1_KWTA_theta_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_KWTA_theta_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper

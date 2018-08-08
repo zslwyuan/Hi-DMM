@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Jul 30 18:07:00 UTC 2018
+VLNV: xilinx.com:hls:acc4kmau:1.0
+SynthRuntime: 50

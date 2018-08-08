@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:59.299+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:58.768+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:58.670+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:58.053+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.739+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation (FBTA64_0/top.cc:198) of variable 'r.V', FBTA64_0/top.cc:198 on array 'buddy_tree_V_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'buddy_tree_V_0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.564+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section4'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.553+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section8'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.550+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.535+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:57.094+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.1'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.916+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.912+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.1'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.900+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.898+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buddy_tree.V.1'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.896+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buddy_tree.V.0'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.894+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buddy_tree.V.1'." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.892+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] FBTA64_0/top.cc:204: variable-indexed range selection may cause suboptimal QoR." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.285+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-604] Allocation directive (FBTA64_0/top.cc:92) on function 'log_2_16bit'' (FBTA64_0/top.cc:37) will be discarded since the function is inlined." projectName="FBTA64_0" solutionName="solution1" date="2018-07-29T16:37:56.119+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

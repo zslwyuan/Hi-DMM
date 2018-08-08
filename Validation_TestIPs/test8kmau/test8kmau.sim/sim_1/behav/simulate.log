@@ -1,0 +1,3 @@
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance design_1_wrapper.design_1_i.clk_wiz.inst.mmcm_adv_inst 

@@ -1,0 +1,272 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date             : Tue Jul 31 01:41:51 2018
+| Host             : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.254        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.147        |
+| Device Static (W)        | 0.107        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 82.1         |
+| Junction Temperature (C) | 27.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.014 |        5 |       --- |             --- |
+| Slice Logic              |     0.010 |    15269 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     8250 |     53200 |           15.51 |
+|   LUT as Distributed RAM |    <0.001 |       64 |     17400 |            0.37 |
+|   CARRY4                 |    <0.001 |      147 |     13300 |            1.11 |
+|   Register               |    <0.001 |     5120 |    106400 |            4.81 |
+|   F7/F8 Muxes            |    <0.001 |      113 |     53200 |            0.21 |
+|   Others                 |     0.000 |       53 |       --- |             --- |
+|   LUT as Shift Register  |     0.000 |        1 |     17400 |           <0.01 |
+| Signals                  |     0.015 |    12134 |       --- |             --- |
+| Block RAM                |     0.002 |      4.5 |       140 |            3.21 |
+| MMCM                     |     0.106 |        1 |         4 |           25.00 |
+| I/O                      |    <0.001 |       36 |       200 |           18.00 |
+| Static Power             |     0.107 |          |           |                 |
+| Total                    |     0.254 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.049 |       0.041 |      0.008 |
+| Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------+-----------------------------------------------------+-----------------+
+| Clock                       | Domain                                              | Constraint (ns) |
++-----------------------------+-----------------------------------------------------+-----------------+
+| clk_in1                     | clk_in1                                             |            10.0 |
+| clk_out1_design_1_clk_wiz_1 | design_1_i/clk_wiz/inst/clk_out1_design_1_clk_wiz_1 |            10.0 |
+| clkfbout_design_1_clk_wiz_1 | design_1_i/clk_wiz/inst/clkfbout_design_1_clk_wiz_1 |            10.0 |
++-----------------------------+-----------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------+-----------+
+| Name                                 | Power (W) |
++--------------------------------------+-----------+
+| design_1_wrapper                     |     0.147 |
+|   design_1_i                         |     0.146 |
+|     Ext_HTA_0                        |     0.029 |
+|       inst                           |     0.029 |
+|         Ext_HTA_mux_164_6g8j_U2      |    <0.001 |
+|         Ext_HTA_mux_164_6g8j_U3      |    <0.001 |
+|         addr_tree_map_V_U            |    <0.001 |
+|           Ext_HTA_addr_treefYi_ram_U |    <0.001 |
+|         buddy_tree_V_U               |     0.018 |
+|           Ext_HTA_buddy_trebkb_ram_U |     0.018 |
+|             ram_reg_0_15_0_0         |    <0.001 |
+|             ram_reg_0_15_10_10       |    <0.001 |
+|             ram_reg_0_15_11_11       |    <0.001 |
+|             ram_reg_0_15_12_12       |    <0.001 |
+|             ram_reg_0_15_13_13       |    <0.001 |
+|             ram_reg_0_15_14_14       |    <0.001 |
+|             ram_reg_0_15_15_15       |    <0.001 |
+|             ram_reg_0_15_16_16       |    <0.001 |
+|             ram_reg_0_15_17_17       |    <0.001 |
+|             ram_reg_0_15_18_18       |    <0.001 |
+|             ram_reg_0_15_19_19       |    <0.001 |
+|             ram_reg_0_15_1_1         |    <0.001 |
+|             ram_reg_0_15_20_20       |    <0.001 |
+|             ram_reg_0_15_21_21       |    <0.001 |
+|             ram_reg_0_15_22_22       |    <0.001 |
+|             ram_reg_0_15_23_23       |    <0.001 |
+|             ram_reg_0_15_24_24       |    <0.001 |
+|             ram_reg_0_15_25_25       |    <0.001 |
+|             ram_reg_0_15_26_26       |    <0.001 |
+|             ram_reg_0_15_27_27       |    <0.001 |
+|             ram_reg_0_15_28_28       |    <0.001 |
+|             ram_reg_0_15_29_29       |    <0.001 |
+|             ram_reg_0_15_2_2         |    <0.001 |
+|             ram_reg_0_15_30_30       |    <0.001 |
+|             ram_reg_0_15_31_31       |    <0.001 |
+|             ram_reg_0_15_32_32       |    <0.001 |
+|             ram_reg_0_15_33_33       |    <0.001 |
+|             ram_reg_0_15_34_34       |    <0.001 |
+|             ram_reg_0_15_35_35       |    <0.001 |
+|             ram_reg_0_15_36_36       |    <0.001 |
+|             ram_reg_0_15_37_37       |    <0.001 |
+|             ram_reg_0_15_38_38       |    <0.001 |
+|             ram_reg_0_15_39_39       |    <0.001 |
+|             ram_reg_0_15_3_3         |    <0.001 |
+|             ram_reg_0_15_40_40       |    <0.001 |
+|             ram_reg_0_15_41_41       |    <0.001 |
+|             ram_reg_0_15_42_42       |    <0.001 |
+|             ram_reg_0_15_43_43       |    <0.001 |
+|             ram_reg_0_15_44_44       |    <0.001 |
+|             ram_reg_0_15_45_45       |    <0.001 |
+|             ram_reg_0_15_46_46       |    <0.001 |
+|             ram_reg_0_15_47_47       |    <0.001 |
+|             ram_reg_0_15_48_48       |    <0.001 |
+|             ram_reg_0_15_49_49       |    <0.001 |
+|             ram_reg_0_15_4_4         |    <0.001 |
+|             ram_reg_0_15_50_50       |    <0.001 |
+|             ram_reg_0_15_51_51       |    <0.001 |
+|             ram_reg_0_15_52_52       |    <0.001 |
+|             ram_reg_0_15_53_53       |    <0.001 |
+|             ram_reg_0_15_54_54       |    <0.001 |
+|             ram_reg_0_15_55_55       |    <0.001 |
+|             ram_reg_0_15_56_56       |    <0.001 |
+|             ram_reg_0_15_57_57       |    <0.001 |
+|             ram_reg_0_15_58_58       |    <0.001 |
+|             ram_reg_0_15_59_59       |    <0.001 |
+|             ram_reg_0_15_5_5         |    <0.001 |
+|             ram_reg_0_15_60_60       |    <0.001 |
+|             ram_reg_0_15_61_61       |    <0.001 |
+|             ram_reg_0_15_62_62       |    <0.001 |
+|             ram_reg_0_15_63_63       |    <0.001 |
+|             ram_reg_0_15_6_6         |    <0.001 |
+|             ram_reg_0_15_7_7         |    <0.001 |
+|             ram_reg_0_15_8_8         |    <0.001 |
+|             ram_reg_0_15_9_9         |    <0.001 |
+|         group_tree_V_U               |    <0.001 |
+|           Ext_HTA_group_trecud_ram_U |    <0.001 |
+|         group_tree_mask_V_U          |    <0.001 |
+|           Ext_HTA_group_tredEe_rom_U |    <0.001 |
+|         mark_mask_V_U                |    <0.001 |
+|           Ext_HTA_mark_mask_V_rom_U  |    <0.001 |
+|         shift_constant_V_U           |    <0.001 |
+|           Ext_HTA_shift_coneOg_rom_U |    <0.001 |
+|     Ext_KWTA8k_0                     |     0.009 |
+|       inst                           |     0.009 |
+|         extra_mask_V_U               |    <0.001 |
+|           Ext_KWTA8k_extra_ibs_rom_U |    <0.001 |
+|         group_tree_V_U               |    <0.001 |
+|           Ext_KWTA8k_group_eOg_ram_U |    <0.001 |
+|         group_tree_mask_V_U          |    <0.001 |
+|           Ext_KWTA8k_group_fYi_rom_U |    <0.001 |
+|         heap_tree_V_0_U              |    <0.001 |
+|           Ext_KWTA8k_heap_tcud_ram_U |    <0.001 |
+|         heap_tree_V_1_U              |     0.002 |
+|           Ext_KWTA8k_heap_tcud_ram_U |     0.002 |
+|         maintain_mask_V_U            |    <0.001 |
+|           Ext_KWTA8k_maintabkb_rom_U |    <0.001 |
+|         mark_mask_V_U                |    <0.001 |
+|           Ext_KWTA8k_mark_mhbi_rom_U |    <0.001 |
+|         shift_constant_V_U           |    <0.001 |
+|           Ext_KWTA8k_shift_g8j_rom_U |    <0.001 |
+|     acc8kmau_0                       |     0.001 |
+|       inst                           |     0.001 |
+|         grp_HLS_free_1_s_fu_113      |    <0.001 |
+|         grp_HLS_malloc_1_s_fu_99     |    <0.001 |
+|     clk_wiz                          |     0.106 |
+|       inst                           |     0.106 |
+|     rst_clk_wiz_100M                 |    <0.001 |
+|       U0                             |    <0.001 |
+|         EXT_LPF                      |    <0.001 |
+|           ACTIVE_LOW_AUX.ACT_LO_AUX  |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT  |    <0.001 |
+|         SEQ                          |    <0.001 |
+|           SEQ_COUNTER                |    <0.001 |
++--------------------------------------+-----------+
+
+

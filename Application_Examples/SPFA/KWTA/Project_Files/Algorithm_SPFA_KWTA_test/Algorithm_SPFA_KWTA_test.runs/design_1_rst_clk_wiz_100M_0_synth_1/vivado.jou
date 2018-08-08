@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Aug  8 20:17:32 2018
+# Process ID: 22801
+# Current directory: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_rst_clk_wiz_100M_0_synth_1
+# Command line: vivado -log design_1_rst_clk_wiz_100M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_clk_wiz_100M_0.tcl
+# Log file: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_rst_clk_wiz_100M_0_synth_1/design_1_rst_clk_wiz_100M_0.vds
+# Journal file: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_rst_clk_wiz_100M_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_rst_clk_wiz_100M_0.tcl -notrace

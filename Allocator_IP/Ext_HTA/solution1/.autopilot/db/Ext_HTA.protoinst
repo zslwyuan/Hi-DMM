@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Ext_HTA": {
+			"proto_instances": {
+			}
+		}
+	}
+}

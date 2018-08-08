@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.914+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.909+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.892+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.890+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.884+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="FBTA64_test" solutionName="solution1" date="2018-07-27T02:45:27.879+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

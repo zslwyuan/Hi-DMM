@@ -1,0 +1,73 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_malloc_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_malloc_1_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_SPFA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_SPFA_p_heap0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_p_heap0_0_ram
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_p_heap0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_SPFA_mul_32s_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_mul_32s_bkb_MulnS_0
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_mul_32s_bkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_free_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_free_1_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/c071/hdl/verilog/HLS_SPFA_in_list.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_in_list_ram
+INFO: [VRFC 10-311] analyzing module HLS_SPFA_in_list
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_HLS_SPFA_0_0/sim/design_1_HLS_SPFA_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_HLS_SPFA_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_buddy_tdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tdEe_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tdEe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_mux_42_mb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_mux_42_mb6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_group_thbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_group_thbi_rom
+INFO: [VRFC 10-311] analyzing module HTA_theta_group_thbi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_mux_32_ncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_mux_32_ncg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_addr_lajbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_addr_lajbC_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_addr_lajbC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/log_2_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_2_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_buddy_teOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_teOg_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_teOg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_mark_malbW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_mark_malbW_rom
+INFO: [VRFC 10-311] analyzing module HTA_theta_mark_malbW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_addr_trkbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_addr_trkbM_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_addr_trkbM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_buddy_tbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tbkb_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tbkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_buddy_tcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tcud_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_buddy_tcud
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_group_tfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_group_tfYi_ram
+INFO: [VRFC 10-311] analyzing module HTA_theta_group_tfYi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/ipshared/4efb/hdl/verilog/HTA_theta_shift_cibs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HTA_theta_shift_cibs_rom
+INFO: [VRFC 10-311] analyzing module HTA_theta_shift_cibs
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_HTA_theta_0_0/sim/design_1_HTA_theta_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_HTA_theta_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_1_0/sim/design_1_blk_mem_gen_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/hdl/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_rst_clk_wiz_100M_0

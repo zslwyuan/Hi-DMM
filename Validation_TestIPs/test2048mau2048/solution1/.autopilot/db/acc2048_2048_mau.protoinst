@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"acc2048_2048_mau": {
+			"proto_instances": {
+			}
+		}
+	}
+}

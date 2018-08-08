@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_Ext_KWTA16k_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test16kmau/test16kmau.runs/design_1_Ext_KWTA16k_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_acc16kmau_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test16kmau/test16kmau.runs/design_1_acc16kmau_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

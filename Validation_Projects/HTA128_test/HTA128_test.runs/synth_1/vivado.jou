@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jul 30 02:56:35 2018
+# Process ID: 22836
+# Current directory: /home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/tingyuan/Temporary/vivado-outputs/HTA128_test/HTA128_test.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

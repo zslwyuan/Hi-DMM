@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="HLS_SPFA" xd:componentRef="HLS_SPFA" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="n" xd:originalName="n" xd:direction="in" xd:interfaceRef="n" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="alloc_1-&gt;size" xd:originalName="alloc_1" xd:direction="out" xd:interfaceRef="alloc_1_size" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="0"/>
+  <xd:arg xd:name="alloc_1-&gt;free_target" xd:originalName="alloc_1" xd:direction="out" xd:interfaceRef="alloc_1_free_target" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="0"/>
+  <xd:arg xd:name="alloc_1-&gt;addr" xd:originalName="alloc_1" xd:direction="in" xd:interfaceRef="alloc_1_addr" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="0"/>
+  <xd:arg xd:name="alloc_1-&gt;cmd" xd:originalName="alloc_1" xd:direction="out" xd:interfaceRef="alloc_1_cmd" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="8" xd:firstOut="0"/>
+  <xd:arg xd:name="map_r_q0" xd:originalName="map_r_q0" xd:direction="in" xd:interfaceRef="map_r_q0" xd:busTypeRef="ap_memory" xd:arraySize="20000" xd:dataWidth="32"/>
+  <xd:arg xd:name="map_r_q1" xd:originalName="map_r_q1" xd:direction="in" xd:interfaceRef="map_r_q1" xd:busTypeRef="ap_memory" xd:arraySize="20000" xd:dataWidth="32"/>
+  <xd:arg xd:name="dis_output_d0" xd:originalName="dis_output_d0" xd:direction="out" xd:interfaceRef="dis_output_d0" xd:busTypeRef="ap_memory" xd:arraySize="200" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="1802" xd:FF="1039" xd:BRAM="9" xd:DSP="3"/>
+</xd:acceleratorMap>

@@ -1,0 +1,52 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port ap_start -pg 1 -y -539 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y -200 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -y -260 -defaultsOSRD
+preplace port reset -pg 1 -y -220 -defaultsOSRD
+preplace portBus ap_return -pg 1 -y -450 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 3 -y -90 -defaultsOSRD
+preplace inst Ext_HTA_0 -pg 1 -lvl 1 -y -429 -defaultsOSRD
+preplace inst Ext_KWTA32k_0 -pg 1 -lvl 2 -y -490 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 4 -y -240 -defaultsOSRD
+preplace inst acc32kmau_0 -pg 1 -lvl 3 -y -420 -defaultsOSRD
+preplace netloc acc32kmau_0_ap_return 1 3 2 2170J -450 NJ
+preplace netloc Ext_KWTA32k_0_alloc_cmd_ap_ack 1 2 1 1480
+preplace netloc Ext_KWTA32k_0_alloc_free_target_ap_ack 1 2 1 1500
+preplace netloc Ext_KWTA32k_0_com_port_cmd_ap_vld 1 0 3 30 -189 NJ -189 1460
+preplace netloc clk_wiz_locked 1 3 1 2180
+preplace netloc acc32kmau_0_alloc_1_free_target_ap_vld 1 1 3 710 -710 NJ -710 2150
+preplace netloc acc32kmau_0_alloc_1_size 1 1 3 730 -270 NJ -270 2130
+preplace netloc Ext_HTA_0_alloc_allocated_addr_V_ap_vld 1 1 1 670
+preplace netloc acc32kmau_0_alloc_1_cmd_ap_vld 1 1 3 710 -209 NJ -209 2150
+preplace netloc Ext_KWTA32k_0_com_port_allocated_addr_V_ap_ack 1 0 3 30 -760 NJ -760 1460
+preplace netloc Ext_KWTA32k_0_com_port_cmd 1 0 3 80 -259 NJ -259 1430
+preplace netloc Ext_KWTA32k_0_com_port_target_V 1 0 3 50 -179 NJ -179 1450
+preplace netloc clk_in1_1 1 0 3 10J -169 NJ -169 1480J
+preplace netloc ap_start_1 1 0 3 20 -589 650 -700 1520
+preplace netloc acc32kmau_0_alloc_1_size_ap_vld 1 1 3 670 -720 NJ -720 2120
+preplace netloc Ext_KWTA32k_0_com_port_layer_V 1 0 3 60 -229 NJ -229 1440
+preplace netloc acc32kmau_0_alloc_1_cmd 1 1 3 740 -219 NJ -219 2120
+preplace netloc acc32kmau_0_alloc_1_addr_ap_ack 1 1 3 660 -730 NJ -730 2170
+preplace netloc Ext_KWTA32k_0_alloc_addr 1 2 1 1470
+preplace netloc Ext_HTA_0_alloc_allocated_addr_V 1 1 1 660
+preplace netloc Ext_KWTA32k_0_alloc_size_ap_ack 1 2 1 1510
+preplace netloc Ext_KWTA32k_0_com_port_target_V_ap_vld 1 0 3 80 -740 NJ -740 1430
+preplace netloc ext_reset_in_1 1 0 4 20J -239 NJ -239 1520J -260 NJ
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 5 70 -269 700 -280 1510 -280 2160J -340 2630
+preplace netloc Ext_KWTA32k_0_com_port_layer_V_ap_vld 1 0 3 70 -750 NJ -750 1440
+preplace netloc acc32kmau_0_alloc_1_free_target 1 1 3 720 -199 NJ -199 2140
+preplace netloc Ext_KWTA32k_0_alloc_addr_ap_vld 1 2 1 1490
+preplace netloc reset_1 1 0 3 20J -199 660J -100 NJ
+preplace netloc Ext_HTA_0_alloc_cmd_ap_ack 1 1 1 680
+preplace netloc Ext_HTA_0_alloc_target_V_ap_ack 1 1 1 660
+preplace netloc Ext_HTA_0_alloc_layer_V_ap_ack 1 1 1 650
+preplace netloc clk_wiz_clk_out1 1 0 4 40 -249 690 -249 1490 -249 2170
+levelinfo -pg 1 -10 380 1140 1880 2450 2650 -top -1110 -bot 240
+",
+}
+{
+   da_clkrst_cnt: "3",
+}

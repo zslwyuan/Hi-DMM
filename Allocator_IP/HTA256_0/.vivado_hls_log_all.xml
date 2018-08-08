@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:33.183+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:32.166+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:31.986+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:30.833+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (2) - this results in an unpipelined loop." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:29.809+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation (HTA256_0/solution1/top.cc:211) of variable 'r.V', HTA256_0/solution1/top.cc:211 on array 'buddy_tree_V_0' and 'load' operation ('buddy_tree_V_0_load_9', HTA256_0/solution1/top.cc:211) on array 'buddy_tree_V_0'." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:29.663+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-32] Invalid protocol: Cannot embed pipeline region inside protocol 'io_section4'." projectName="HTA256_0" solutionName="solution1" date="2018-07-30T00:24:29.659+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

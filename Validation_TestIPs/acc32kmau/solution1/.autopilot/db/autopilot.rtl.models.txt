@@ -1,0 +1,6 @@
+acc32kmau_req_cmd
+acc32kmau_req_list
+acc32kmau_req_size
+HLS_free_1_s
+HLS_malloc_1_s
+acc32kmau

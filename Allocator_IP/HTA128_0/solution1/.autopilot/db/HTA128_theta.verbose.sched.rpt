@@ -1,0 +1,1210 @@
+
+
+================================================================
+== Vivado HLS Report for 'HTA128_theta'
+================================================================
+* Date:           Mon Jul 30 02:51:25 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HTA128_0
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.749|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         2|          2|          1|     ?|    yes   |
+        |- Loop 2  |    6|    6|         2|          -|          -|     3|    no    |
+        |- Loop 3  |    ?|    ?|         3|          -|          -|     ?|    no    |
+        |- Loop 4  |    ?|    ?|         3|          -|          -|     ?|    no    |
+        |- Loop 5  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        |- Loop 6  |    ?|    ?|         3|          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 2, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 41
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 18 19 }
+  Pipeline-1 : II = 2, D = 2, States = { 35 36 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (!tmp)
+	25  / (tmp)
+4 --> 
+	5  / (tmp_6)
+	24  / (!tmp_6)
+5 --> 
+	6  / (!tmp_12)
+	14  / (tmp_12)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / (!tmp_25)
+	10  / (tmp_25)
+9 --> 
+	10  / true
+10 --> 
+	8  / (!tmp_25 & tmp_61)
+	11  / (tmp_25) | (!tmp_61)
+11 --> 
+	12  / (!tmp_115)
+	21  / (tmp_115)
+12 --> 
+	13  / true
+13 --> 
+	11  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	20  / (!tmp_20)
+	19  / (tmp_20)
+19 --> 
+	18  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / (tmp_12 & tmp_59)
+	24  / (!tmp_12) | (!tmp_59)
+22 --> 
+	23  / true
+23 --> 
+	21  / true
+24 --> 
+	38  / true
+25 --> 
+	26  / (!tmp_76)
+	27  / (tmp_76)
+26 --> 
+	28  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / (!tmp_22 & !tmp_98)
+	31  / (!tmp_22 & tmp_98)
+	38  / (tmp_22)
+30 --> 
+	34  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	39  / (tmp_110)
+	35  / (!tmp_110)
+35 --> 
+	37  / (!tmp_72)
+	36  / (tmp_72)
+36 --> 
+	35  / true
+37 --> 
+	38  / true
+38 --> 
+39 --> 
+	40  / true
+40 --> 
+	38  / (tmp_78)
+	41  / (!tmp_78)
+41 --> 
+	40  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%cmd = alloca i8, align 1"   --->   Operation 42 'alloca' 'cmd' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HTA128_0/solution1/top.cc:121]   --->   Operation 43 'wait' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (1.76ns)   --->   "store volatile i8 0, i8* %cmd, align 1" [HTA128_0/solution1/top.cc:125]   --->   Operation 44 'store' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.07>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_size), !map !288"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_addr), !map !292"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_free_target), !map !296"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_cmd), !map !300"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @HTA128_theta_str) nounwind"   --->   Operation 49 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([8 x i64]* @buddy_tree_V_0, [8 x i64]* @buddy_tree_V_1, [1 x i8]* @p_str, [13 x i8]* @p_str10, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [HTA128_0/solution1/top.cc:107]   --->   Operation 50 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_size, i32* %alloc_addr, i32* %alloc_free_target, i8* %alloc_cmd, [6 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:112]   --->   Operation 51 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 2, [1 x i8]* @p_str, [1 x i8]* @p_str, [12 x i8]* @p_str13, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:116]   --->   Operation 52 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str14)" [HTA128_0/solution1/top.cc:119]   --->   Operation 53 'specregionbegin' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:120]   --->   Operation 54 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str15)" [HTA128_0/solution1/top.cc:126]   --->   Operation 55 'specregionbegin' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:127]   --->   Operation 56 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%alloc_cmd_read = call i8 @_ssdm_op_Read.ap_hs.volatile.i8P(i8* %alloc_cmd)" [HTA128_0/solution1/top.cc:128]   --->   Operation 57 'read' 'alloc_cmd_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (1.76ns)   --->   "store volatile i8 %alloc_cmd_read, i8* %cmd, align 1" [HTA128_0/solution1/top.cc:128]   --->   Operation 58 'store' <Predicate = true> <Delay = 1.76>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%alloc_size_read = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_size)" [HTA128_0/solution1/top.cc:129]   --->   Operation 59 'read' 'alloc_size_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%size_V = trunc i32 %alloc_size_read to i16" [HTA128_0/solution1/top.cc:129]   --->   Operation 60 'trunc' 'size_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%alloc_free_target_re = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_free_target)" [HTA128_0/solution1/top.cc:130]   --->   Operation 61 'read' 'alloc_free_target_re' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%free_target_V = trunc i32 %alloc_free_target_re to i16" [HTA128_0/solution1/top.cc:130]   --->   Operation 62 'trunc' 'free_target_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (2.07ns)   --->   "%tmp_size_V = add i16 -1, %size_V" [HTA128_0/solution1/top.cc:131]   --->   Operation 63 'add' 'tmp_size_V' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_8 = call i16 @llvm.part.select.i16(i16 %tmp_size_V, i32 15, i32 0) nounwind" [HTA128_0/solution1/top.cc:132]   --->   Operation 64 'partselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str15, i32 %tmp_2)" [HTA128_0/solution1/top.cc:133]   --->   Operation 65 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.26>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%cmd_load = load volatile i8* %cmd, align 1"   --->   Operation 66 'load' 'cmd_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (1.55ns)   --->   "%tmp = icmp eq i8 %cmd_load, 2" [HTA128_0/solution1/top.cc:146]   --->   Operation 67 'icmp' 'tmp' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "br i1 %tmp, label %1, label %24" [HTA128_0/solution1/top.cc:146]   --->   Operation 68 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str16)" [HTA128_0/solution1/top.cc:149]   --->   Operation 69 'specregionbegin' 'tmp_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:150]   --->   Operation 70 'specprotocol' <Predicate = (tmp)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (2.42ns)   --->   "%tmp_s = icmp eq i16 %size_V, 1" [HTA128_0/solution1/top.cc:151]   --->   Operation 71 'icmp' 'tmp_s' <Predicate = (tmp)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (2.19ns)   --->   "br i1 %tmp_s, label %._crit_edge, label %2" [HTA128_0/solution1/top.cc:151]   --->   Operation 72 'br' <Predicate = (tmp)> <Delay = 2.19>
+ST_3 : Operation 73 [1/1] (2.07ns)   --->   "%rhs_V_1 = sub i16 0, %p_Result_8" [HTA128_0/solution1/top.cc:154]   --->   Operation 73 'sub' 'rhs_V_1' <Predicate = (tmp & !tmp_s)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [1/1] (0.99ns)   --->   "%r_V_21 = and i16 %p_Result_8, %rhs_V_1" [HTA128_0/solution1/top.cc:154]   --->   Operation 74 'and' 'r_V_21' <Predicate = (tmp & !tmp_s)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (2.19ns)   --->   "switch i16 %r_V_21, label %._crit_edge [
+    i16 -32768, label %17
+    i16 2, label %3
+    i16 4, label %4
+    i16 8, label %5
+    i16 16, label %6
+    i16 32, label %7
+    i16 64, label %8
+    i16 128, label %9
+    i16 256, label %10
+    i16 512, label %11
+    i16 1024, label %12
+    i16 2048, label %13
+    i16 4096, label %14
+    i16 8192, label %15
+    i16 16384, label %16
+  ]" [HTA128_0/solution1/top.cc:42->HTA128_0/solution1/top.cc:155]   --->   Operation 75 'switch' <Predicate = (tmp & !tmp_s)> <Delay = 2.19>
+ST_3 : Operation 76 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:58->HTA128_0/solution1/top.cc:155]   --->   Operation 76 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 16384)> <Delay = 2.19>
+ST_3 : Operation 77 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:57->HTA128_0/solution1/top.cc:155]   --->   Operation 77 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 8192)> <Delay = 2.19>
+ST_3 : Operation 78 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:56->HTA128_0/solution1/top.cc:155]   --->   Operation 78 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 4096)> <Delay = 2.19>
+ST_3 : Operation 79 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:55->HTA128_0/solution1/top.cc:155]   --->   Operation 79 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 2048)> <Delay = 2.19>
+ST_3 : Operation 80 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:54->HTA128_0/solution1/top.cc:155]   --->   Operation 80 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 1024)> <Delay = 2.19>
+ST_3 : Operation 81 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:53->HTA128_0/solution1/top.cc:155]   --->   Operation 81 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 512)> <Delay = 2.19>
+ST_3 : Operation 82 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:52->HTA128_0/solution1/top.cc:155]   --->   Operation 82 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 256)> <Delay = 2.19>
+ST_3 : Operation 83 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:51->HTA128_0/solution1/top.cc:155]   --->   Operation 83 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 128)> <Delay = 2.19>
+ST_3 : Operation 84 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:50->HTA128_0/solution1/top.cc:155]   --->   Operation 84 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 64)> <Delay = 2.19>
+ST_3 : Operation 85 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:49->HTA128_0/solution1/top.cc:155]   --->   Operation 85 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 32)> <Delay = 2.19>
+ST_3 : Operation 86 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:48->HTA128_0/solution1/top.cc:155]   --->   Operation 86 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 16)> <Delay = 2.19>
+ST_3 : Operation 87 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:47->HTA128_0/solution1/top.cc:155]   --->   Operation 87 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 8)> <Delay = 2.19>
+ST_3 : Operation 88 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:46->HTA128_0/solution1/top.cc:155]   --->   Operation 88 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 4)> <Delay = 2.19>
+ST_3 : Operation 89 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:45->HTA128_0/solution1/top.cc:155]   --->   Operation 89 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 2)> <Delay = 2.19>
+ST_3 : Operation 90 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA128_0/solution1/top.cc:59->HTA128_0/solution1/top.cc:155]   --->   Operation 90 'br' <Predicate = (tmp & !tmp_s & r_V_21 == 32768)> <Delay = 2.19>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%cmd_load_1 = load volatile i8* %cmd, align 1"   --->   Operation 91 'load' 'cmd_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (1.55ns)   --->   "%tmp_6 = icmp eq i8 %cmd_load_1, 3" [HTA128_0/solution1/top.cc:296]   --->   Operation 92 'icmp' 'tmp_6' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "br i1 %tmp_6, label %25, label %._crit_edge4964" [HTA128_0/solution1/top.cc:296]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_9 = zext i16 %free_target_V to i64" [HTA128_0/solution1/top.cc:300]   --->   Operation 94 'zext' 'tmp_9' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%addr_layer_map_V_add_1 = getelementptr [128 x i4]* @addr_layer_map_V, i64 0, i64 %tmp_9" [HTA128_0/solution1/top.cc:300]   --->   Operation 95 'getelementptr' 'addr_layer_map_V_add_1' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_4 : Operation 96 [2/2] (2.28ns)   --->   "%ans_V = load i4* %addr_layer_map_V_add_1, align 1" [HTA128_0/solution1/top.cc:300]   --->   Operation 96 'load' 'ans_V' <Predicate = (tmp_6)> <Delay = 2.28> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "%addr_tree_map_V_addr = getelementptr [128 x i8]* @addr_tree_map_V, i64 0, i64 %tmp_9" [HTA128_0/solution1/top.cc:309]   --->   Operation 97 'getelementptr' 'addr_tree_map_V_addr' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_4 : Operation 98 [2/2] (3.25ns)   --->   "%addr_tree_map_V_load = load i8* %addr_tree_map_V_addr, align 1" [HTA128_0/solution1/top.cc:309]   --->   Operation 98 'load' 'addr_tree_map_V_load' <Predicate = (tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+
+State 5 <SV = 4> <Delay = 6.51>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str20)" [HTA128_0/solution1/top.cc:298]   --->   Operation 99 'specregionbegin' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:299]   --->   Operation 100 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/2] (2.28ns)   --->   "%ans_V = load i4* %addr_layer_map_V_add_1, align 1" [HTA128_0/solution1/top.cc:300]   --->   Operation 101 'load' 'ans_V' <Predicate = true> <Delay = 2.28> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %ans_V, i32 3)" [HTA128_0/solution1/top.cc:307]   --->   Operation 102 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 103 [1/2] (3.25ns)   --->   "%addr_tree_map_V_load = load i8* %addr_tree_map_V_addr, align 1" [HTA128_0/solution1/top.cc:309]   --->   Operation 103 'load' 'addr_tree_map_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%loc1_V_10 = zext i8 %addr_tree_map_V_load to i13" [HTA128_0/solution1/top.cc:309]   --->   Operation 104 'zext' 'loc1_V_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%loc1_V_9_cast_cast = zext i8 %addr_tree_map_V_load to i11" [HTA128_0/solution1/top.cc:307]   --->   Operation 105 'zext' 'loc1_V_9_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "br i1 %tmp_12, label %_ifconv13, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit127_ifconv" [HTA128_0/solution1/top.cc:307]   --->   Operation 106 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%newIndex1 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %ans_V, i32 1, i32 3)" [HTA128_0/solution1/top.cc:300]   --->   Operation 107 'partselect' 'newIndex1' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%newIndex2 = zext i3 %newIndex1 to i64" [HTA128_0/solution1/top.cc:300]   --->   Operation 108 'zext' 'newIndex2' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex2" [HTA128_0/solution1/top.cc:312]   --->   Operation 109 'getelementptr' 'buddy_tree_V_1_addr' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_5 : Operation 110 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load = load i64* %buddy_tree_V_1_addr, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 110 'load' 'buddy_tree_V_1_load' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex2" [HTA128_0/solution1/top.cc:312]   --->   Operation 111 'getelementptr' 'buddy_tree_V_0_addr' <Predicate = (!tmp_12)> <Delay = 0.00>
+ST_5 : Operation 112 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load = load i64* %buddy_tree_V_0_addr, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 112 'load' 'buddy_tree_V_0_load' <Predicate = (!tmp_12)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_5 : Operation 113 [1/1] (0.97ns)   --->   "%r_V_1 = xor i4 %ans_V, -8" [HTA128_0/solution1/top.cc:359]   --->   Operation 113 'xor' 'r_V_1' <Predicate = (tmp_12)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_15 = zext i4 %r_V_1 to i64" [HTA128_0/solution1/top.cc:359]   --->   Operation 114 'zext' 'tmp_15' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%shift_constant_V_add_1 = getelementptr [5 x i5]* @shift_constant_V, i64 0, i64 %tmp_15" [HTA128_0/solution1/top.cc:359]   --->   Operation 115 'getelementptr' 'shift_constant_V_add_1' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_5 : Operation 116 [2/2] (3.25ns)   --->   "%shift_constant_V_loa_1 = load i5* %shift_constant_V_add_1, align 1" [HTA128_0/solution1/top.cc:359]   --->   Operation 116 'load' 'shift_constant_V_loa_1' <Predicate = (tmp_12)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+
+State 6 <SV = 5> <Delay = 7.98>
+ST_6 : Operation 117 [1/1] (0.00ns)   --->   "%i_assign = zext i8 %addr_tree_map_V_load to i32" [HTA128_0/solution1/top.cc:312]   --->   Operation 117 'zext' 'i_assign' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_71 = trunc i4 %ans_V to i1" [HTA128_0/solution1/top.cc:300]   --->   Operation 118 'trunc' 'tmp_71' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 119 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load = load i64* %buddy_tree_V_1_addr, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 119 'load' 'buddy_tree_V_1_load' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_6 : Operation 120 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load = load i64* %buddy_tree_V_0_addr, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 120 'load' 'buddy_tree_V_0_load' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_6 : Operation 121 [1/1] (1.48ns)   --->   "%p_Val2_1 = select i1 %tmp_71, i64 %buddy_tree_V_1_load, i64 %buddy_tree_V_0_load" [HTA128_0/solution1/top.cc:312]   --->   Operation 121 'select' 'p_Val2_1' <Predicate = true> <Delay = 1.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 122 [1/1] (0.00ns)   --->   "%p_Result_s = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_1, i32 %i_assign, i1 true)" [HTA128_0/solution1/top.cc:312]   --->   Operation 122 'bitset' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 123 [1/1] (0.00ns)   --->   "br i1 %tmp_71, label %branch25, label %branch24" [HTA128_0/solution1/top.cc:312]   --->   Operation 123 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 124 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_1 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex2" [HTA128_0/solution1/top.cc:312]   --->   Operation 124 'getelementptr' 'buddy_tree_V_0_addr_1' <Predicate = (!tmp_71)> <Delay = 0.00>
+ST_6 : Operation 125 [1/1] (3.25ns)   --->   "store i64 %p_Result_s, i64* %buddy_tree_V_0_addr_1, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 125 'store' <Predicate = (!tmp_71)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_6 : Operation 126 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1277982" [HTA128_0/solution1/top.cc:312]   --->   Operation 126 'br' <Predicate = (!tmp_71)> <Delay = 0.00>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_1 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex2" [HTA128_0/solution1/top.cc:312]   --->   Operation 127 'getelementptr' 'buddy_tree_V_1_addr_1' <Predicate = (tmp_71)> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (3.25ns)   --->   "store i64 %p_Result_s, i64* %buddy_tree_V_1_addr_1, align 8" [HTA128_0/solution1/top.cc:312]   --->   Operation 128 'store' <Predicate = (tmp_71)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1277982" [HTA128_0/solution1/top.cc:312]   --->   Operation 129 'br' <Predicate = (tmp_71)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 4.59>
+ST_7 : Operation 130 [1/1] (3.14ns)   --->   "%val_assign_2 = shl i32 1, %i_assign" [HTA128_0/solution1/top.cc:313]   --->   Operation 130 'shl' 'val_assign_2' <Predicate = true> <Delay = 3.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_V = sext i32 %val_assign_2 to i64" [HTA128_0/solution1/top.cc:313]   --->   Operation 131 'sext' 'tmp_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 132 [1/1] (0.00ns)   --->   "%p_Result_9 = call i13 @_ssdm_op_BitSet.i13.i13.i32.i1(i13 %loc1_V_10, i32 0, i1 false)" [HTA128_0/solution1/top.cc:315]   --->   Operation 132 'bitset' 'p_Result_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_21 = zext i13 %p_Result_9 to i64" [HTA128_0/solution1/top.cc:316]   --->   Operation 133 'zext' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 134 [1/1] (4.59ns)   --->   "%r_V_2 = lshr i64 %p_Result_s, %tmp_21" [HTA128_0/solution1/top.cc:316]   --->   Operation 134 'lshr' 'r_V_2' <Predicate = true> <Delay = 4.59> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 135 [1/1] (0.00ns)   --->   "%rec_bits_V = trunc i64 %r_V_2 to i2" [HTA128_0/solution1/top.cc:316]   --->   Operation 135 'trunc' 'rec_bits_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 136 [1/1] (1.76ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit111" [HTA128_0/solution1/top.cc:318]   --->   Operation 136 'br' <Predicate = true> <Delay = 1.76>
+
+State 8 <SV = 7> <Delay = 4.98>
+ST_8 : Operation 137 [1/1] (0.00ns)   --->   "%p_03220_8_in = phi i13 [ %p_Result_9, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1277982 ], [ %p_Result_10, %._crit_edge49658992 ]"   --->   Operation 137 'phi' 'p_03220_8_in' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 138 [1/1] (0.00ns)   --->   "%p_03232_1_in = phi i4 [ %ans_V, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1277982 ], [ %now1_V_1, %._crit_edge49658992 ]"   --->   Operation 138 'phi' 'p_03232_1_in' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 139 [1/1] (0.00ns)   --->   "%p_Val2_4 = phi i2 [ %rec_bits_V, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1277982 ], [ -1, %._crit_edge49658992 ]"   --->   Operation 139 'phi' 'p_Val2_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 140 [1/1] (0.00ns)   --->   "%loc1_V = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_03220_8_in, i32 1, i32 12)" [HTA128_0/solution1/top.cc:318]   --->   Operation 140 'partselect' 'loc1_V' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 141 [1/1] (0.00ns)   --->   "%loc1_V_11 = zext i12 %loc1_V to i13" [HTA128_0/solution1/top.cc:318]   --->   Operation 141 'zext' 'loc1_V_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_97 = trunc i4 %p_03232_1_in to i1" [HTA128_0/solution1/top.cc:300]   --->   Operation 142 'trunc' 'tmp_97' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 143 [1/1] (1.73ns)   --->   "%now1_V_1 = add i4 -1, %p_03232_1_in" [HTA128_0/solution1/top.cc:318]   --->   Operation 143 'add' 'now1_V_1' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 144 [1/1] (1.30ns)   --->   "%tmp_25 = icmp eq i4 %now1_V_1, 0" [HTA128_0/solution1/top.cc:318]   --->   Operation 144 'icmp' 'tmp_25' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 145 [1/1] (0.00ns)   --->   "br i1 %tmp_25, label %.loopexit, label %_ifconv" [HTA128_0/solution1/top.cc:318]   --->   Operation 145 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 146 [1/1] (0.00ns)   --->   "%newIndex9 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %now1_V_1, i32 1, i32 3)" [HTA128_0/solution1/top.cc:318]   --->   Operation 146 'partselect' 'newIndex9' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_8 : Operation 147 [1/1] (0.00ns)   --->   "%newIndex = zext i3 %newIndex9 to i64" [HTA128_0/solution1/top.cc:318]   --->   Operation 147 'zext' 'newIndex' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_8 : Operation 148 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_3 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex" [HTA128_0/solution1/top.cc:321]   --->   Operation 148 'getelementptr' 'buddy_tree_V_0_addr_3' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_8 : Operation 149 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_3 = load i64* %buddy_tree_V_0_addr_3, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 149 'load' 'buddy_tree_V_0_load_3' <Predicate = (!tmp_25)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_8 : Operation 150 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_3 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex" [HTA128_0/solution1/top.cc:321]   --->   Operation 150 'getelementptr' 'buddy_tree_V_1_addr_3' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_8 : Operation 151 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_3 = load i64* %buddy_tree_V_1_addr_3, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 151 'load' 'buddy_tree_V_1_load_3' <Predicate = (!tmp_25)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 9 <SV = 8> <Delay = 6.82>
+ST_9 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_99 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %p_Val2_4, i32 1)" [HTA128_0/solution1/top.cc:321]   --->   Operation 152 'bitselect' 'tmp_99' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_100 = trunc i2 %p_Val2_4 to i1" [HTA128_0/solution1/top.cc:321]   --->   Operation 153 'trunc' 'tmp_100' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_31 = and i1 %tmp_99, %tmp_100" [HTA128_0/solution1/top.cc:321]   --->   Operation 154 'and' 'tmp_31' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_32 = zext i1 %tmp_31 to i32" [HTA128_0/solution1/top.cc:321]   --->   Operation 155 'zext' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_34 = zext i12 %loc1_V to i32" [HTA128_0/solution1/top.cc:321]   --->   Operation 156 'zext' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%op2_assign_8 = shl i32 %tmp_32, %tmp_34" [HTA128_0/solution1/top.cc:321]   --->   Operation 157 'shl' 'op2_assign_8' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%tmp_35 = sext i32 %op2_assign_8 to i64" [HTA128_0/solution1/top.cc:321]   --->   Operation 158 'sext' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 159 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_3 = load i64* %buddy_tree_V_0_addr_3, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 159 'load' 'buddy_tree_V_0_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_9 : Operation 160 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_3 = load i64* %buddy_tree_V_1_addr_3, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 160 'load' 'buddy_tree_V_1_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_9 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node tmp_37)   --->   "%buddy_tree_V_load_1_s = select i1 %tmp_97, i64 %buddy_tree_V_0_load_3, i64 %buddy_tree_V_1_load_3" [HTA128_0/solution1/top.cc:321]   --->   Operation 161 'select' 'buddy_tree_V_load_1_s' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 162 [1/1] (3.56ns) (out node of the LUT)   --->   "%tmp_37 = or i64 %buddy_tree_V_load_1_s, %tmp_35" [HTA128_0/solution1/top.cc:321]   --->   Operation 162 'or' 'tmp_37' <Predicate = true> <Delay = 3.56> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 163 [1/1] (0.00ns)   --->   "br i1 %tmp_97, label %branch28, label %branch29" [HTA128_0/solution1/top.cc:321]   --->   Operation 163 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 5.57>
+ST_10 : Operation 164 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_5 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex" [HTA128_0/solution1/top.cc:321]   --->   Operation 164 'getelementptr' 'buddy_tree_V_1_addr_5' <Predicate = (!tmp_25 & !tmp_97)> <Delay = 0.00>
+ST_10 : Operation 165 [1/1] (3.25ns)   --->   "store i64 %tmp_37, i64* %buddy_tree_V_1_addr_5, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 165 'store' <Predicate = (!tmp_25 & !tmp_97)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_10 : Operation 166 [1/1] (0.00ns)   --->   "br label %._crit_edge49658992" [HTA128_0/solution1/top.cc:321]   --->   Operation 166 'br' <Predicate = (!tmp_25 & !tmp_97)> <Delay = 0.00>
+ST_10 : Operation 167 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_5 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex" [HTA128_0/solution1/top.cc:321]   --->   Operation 167 'getelementptr' 'buddy_tree_V_0_addr_5' <Predicate = (!tmp_25 & tmp_97)> <Delay = 0.00>
+ST_10 : Operation 168 [1/1] (3.25ns)   --->   "store i64 %tmp_37, i64* %buddy_tree_V_0_addr_5, align 8" [HTA128_0/solution1/top.cc:321]   --->   Operation 168 'store' <Predicate = (!tmp_25 & tmp_97)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_10 : Operation 169 [1/1] (0.00ns)   --->   "br label %._crit_edge49658992" [HTA128_0/solution1/top.cc:321]   --->   Operation 169 'br' <Predicate = (!tmp_25 & tmp_97)> <Delay = 0.00>
+ST_10 : Operation 170 [1/1] (0.00ns)   --->   "%p_Result_10 = call i13 @_ssdm_op_BitSet.i13.i13.i32.i1(i13 %loc1_V_11, i32 0, i1 false)" [HTA128_0/solution1/top.cc:322]   --->   Operation 170 'bitset' 'p_Result_10' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_10 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node tmp_61)   --->   "%tmp_60 = zext i13 %p_Result_10 to i64" [HTA128_0/solution1/top.cc:323]   --->   Operation 171 'zext' 'tmp_60' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_10 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node tmp_61)   --->   "%r_V_7 = lshr i64 %tmp_37, %tmp_60" [HTA128_0/solution1/top.cc:323]   --->   Operation 172 'lshr' 'r_V_7' <Predicate = (!tmp_25)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node tmp_61)   --->   "%rec_bits_V_1 = trunc i64 %r_V_7 to i2" [HTA128_0/solution1/top.cc:323]   --->   Operation 173 'trunc' 'rec_bits_V_1' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_10 : Operation 174 [1/1] (4.59ns) (out node of the LUT)   --->   "%tmp_61 = icmp eq i2 %rec_bits_V_1, -1" [HTA128_0/solution1/top.cc:324]   --->   Operation 174 'icmp' 'tmp_61' <Predicate = (!tmp_25)> <Delay = 4.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 175 [1/1] (0.00ns)   --->   "br i1 %tmp_61, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit111, label %.loopexit" [HTA128_0/solution1/top.cc:324]   --->   Operation 175 'br' <Predicate = (!tmp_25)> <Delay = 0.00>
+ST_10 : Operation 176 [1/1] (1.76ns)   --->   "br label %26" [HTA128_0/solution1/top.cc:327]   --->   Operation 176 'br' <Predicate = (tmp_25) | (!tmp_61)> <Delay = 1.76>
+
+State 11 <SV = 10> <Delay = 4.98>
+ST_11 : Operation 177 [1/1] (0.00ns)   --->   "%p_03228_2_in = phi i4 [ %ans_V, %.loopexit ], [ %p_Repl2_7, %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102 ]"   --->   Operation 177 'phi' 'p_03228_2_in' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 178 [1/1] (0.00ns)   --->   "%p_03212_3_in = phi i13 [ %loc1_V_10, %.loopexit ], [ %p_Repl2_s, %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102 ]"   --->   Operation 178 'phi' 'p_03212_3_in' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 179 [1/1] (0.00ns)   --->   "%TMP_0_V_3 = phi i64 [ %tmp_V, %.loopexit ], [ %r_V_24, %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102 ]"   --->   Operation 179 'phi' 'TMP_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 180 [1/1] (0.00ns)   --->   "%op2_assign_9 = phi i32 [ 1, %.loopexit ], [ %cnt, %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102 ]"   --->   Operation 180 'phi' 'op2_assign_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 181 [1/1] (0.00ns)   --->   "%p_Repl2_s = shl i13 %p_03212_3_in, 1" [HTA128_0/solution1/top.cc:327]   --->   Operation 181 'shl' 'p_Repl2_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 182 [1/1] (1.73ns)   --->   "%p_Repl2_7 = add i4 1, %p_03228_2_in" [HTA128_0/solution1/top.cc:327]   --->   Operation 182 'add' 'p_Repl2_7' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_115 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %p_Repl2_7, i32 3)" [HTA128_0/solution1/top.cc:327]   --->   Operation 183 'bitselect' 'tmp_115' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 184 [1/1] (0.00ns)   --->   "br i1 %tmp_115, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit53_ifconv.loopexit, label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit" [HTA128_0/solution1/top.cc:327]   --->   Operation 184 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 185 [1/1] (0.00ns)   --->   "%tmp_119 = trunc i32 %op2_assign_9 to i2" [HTA128_0/solution1/top.cc:327]   --->   Operation 185 'trunc' 'tmp_119' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 186 [1/1] (0.00ns)   --->   "%newIndex17_t = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %op2_assign_9, i32 2, i32 3)" [HTA128_0/solution1/top.cc:327]   --->   Operation 186 'partselect' 'newIndex17_t' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_120 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %op2_assign_9, i32 2)" [HTA128_0/solution1/top.cc:327]   --->   Operation 187 'bitselect' 'tmp_120' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 188 [1/1] (1.30ns)   --->   "switch i2 %tmp_119, label %branch7 [
+    i2 0, label %branch4
+    i2 1, label %branch5
+    i2 -2, label %branch6
+  ]" [HTA128_0/solution1/top.cc:329]   --->   Operation 188 'switch' <Predicate = (!tmp_115)> <Delay = 1.30>
+ST_11 : Operation 189 [1/1] (0.80ns)   --->   "%mask_V_load26_phi_ca = select i1 %tmp_120, i64 4294967295, i64 15" [HTA128_0/solution1/top.cc:329]   --->   Operation 189 'select' 'mask_V_load26_phi_ca' <Predicate = (!tmp_115 & tmp_119 == 2)> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 190 [1/1] (1.86ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit23_ifconv" [HTA128_0/solution1/top.cc:329]   --->   Operation 190 'br' <Predicate = (!tmp_115 & tmp_119 == 2)> <Delay = 1.86>
+ST_11 : Operation 191 [1/1] (1.77ns)   --->   "%tmp_74 = call i64 @_ssdm_op_Mux.ap_auto.3i64.i2(i64 3, i64 4294967295, i64 0, i2 %newIndex17_t)" [HTA128_0/solution1/top.cc:327]   --->   Operation 191 'mux' 'tmp_74' <Predicate = (!tmp_115 & tmp_119 == 1)> <Delay = 1.77> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 192 [1/1] (1.86ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit23_ifconv" [HTA128_0/solution1/top.cc:329]   --->   Operation 192 'br' <Predicate = (!tmp_115 & tmp_119 == 1)> <Delay = 1.86>
+ST_11 : Operation 193 [1/1] (1.77ns)   --->   "%tmp_73 = call i64 @_ssdm_op_Mux.ap_auto.3i64.i2(i64 1, i64 65535, i64 0, i2 %newIndex17_t)" [HTA128_0/solution1/top.cc:327]   --->   Operation 193 'mux' 'tmp_73' <Predicate = (!tmp_115 & tmp_119 == 0)> <Delay = 1.77> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 194 [1/1] (1.86ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit23_ifconv" [HTA128_0/solution1/top.cc:329]   --->   Operation 194 'br' <Predicate = (!tmp_115 & tmp_119 == 0)> <Delay = 1.86>
+ST_11 : Operation 195 [1/1] (0.96ns)   --->   "%mask_V_load27_phi_ca = select i1 %tmp_120, i64 -1, i64 255" [HTA128_0/solution1/top.cc:329]   --->   Operation 195 'select' 'mask_V_load27_phi_ca' <Predicate = (!tmp_115 & tmp_119 == 3)> <Delay = 0.96> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 196 [1/1] (1.86ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit23_ifconv" [HTA128_0/solution1/top.cc:329]   --->   Operation 196 'br' <Predicate = (!tmp_115 & tmp_119 == 3)> <Delay = 1.86>
+ST_11 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_124 = trunc i4 %p_03228_2_in to i1" [HTA128_0/solution1/top.cc:300]   --->   Operation 197 'trunc' 'tmp_124' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 198 [1/1] (0.00ns)   --->   "%newIndex14 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %p_Repl2_7, i32 1, i32 3)" [HTA128_0/solution1/top.cc:327]   --->   Operation 198 'partselect' 'newIndex14' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 199 [1/1] (0.00ns)   --->   "%newIndex15 = zext i3 %newIndex14 to i64" [HTA128_0/solution1/top.cc:327]   --->   Operation 199 'zext' 'newIndex15' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 200 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_8 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex15" [HTA128_0/solution1/top.cc:330]   --->   Operation 200 'getelementptr' 'buddy_tree_V_0_addr_8' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 201 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_7 = load i64* %buddy_tree_V_0_addr_8, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 201 'load' 'buddy_tree_V_0_load_7' <Predicate = (!tmp_115)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_11 : Operation 202 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_8 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex15" [HTA128_0/solution1/top.cc:330]   --->   Operation 202 'getelementptr' 'buddy_tree_V_1_addr_8' <Predicate = (!tmp_115)> <Delay = 0.00>
+ST_11 : Operation 203 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_6 = load i64* %buddy_tree_V_1_addr_8, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 203 'load' 'buddy_tree_V_1_load_6' <Predicate = (!tmp_115)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_11 : Operation 204 [1/1] (1.76ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit53_ifconv"   --->   Operation 204 'br' <Predicate = (tmp_115)> <Delay = 1.76>
+
+State 12 <SV = 11> <Delay = 6.07>
+ST_12 : Operation 205 [1/1] (0.00ns)   --->   "%mask_V_load_phi = phi i64 [ %tmp_73, %branch4 ], [ %tmp_74, %branch5 ], [ %mask_V_load26_phi_ca, %branch6 ], [ %mask_V_load27_phi_ca, %branch7 ]" [HTA128_0/solution1/top.cc:329]   --->   Operation 205 'phi' 'mask_V_load_phi' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 206 [1/1] (0.00ns)   --->   "%tmp_77 = zext i13 %p_Repl2_s to i64" [HTA128_0/solution1/top.cc:329]   --->   Operation 206 'zext' 'tmp_77' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 207 [1/1] (4.59ns)   --->   "%r_V_24 = shl i64 %mask_V_load_phi, %tmp_77" [HTA128_0/solution1/top.cc:329]   --->   Operation 207 'shl' 'r_V_24' <Predicate = true> <Delay = 4.59> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 208 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_7 = load i64* %buddy_tree_V_0_addr_8, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 208 'load' 'buddy_tree_V_0_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_12 : Operation 209 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_6 = load i64* %buddy_tree_V_1_addr_8, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 209 'load' 'buddy_tree_V_1_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_12 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node r_V_18)   --->   "%lhs_V_3 = select i1 %tmp_124, i64 %buddy_tree_V_0_load_7, i64 %buddy_tree_V_1_load_6" [HTA128_0/solution1/top.cc:330]   --->   Operation 210 'select' 'lhs_V_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 211 [1/1] (1.48ns) (out node of the LUT)   --->   "%r_V_18 = or i64 %lhs_V_3, %r_V_24" [HTA128_0/solution1/top.cc:330]   --->   Operation 211 'or' 'r_V_18' <Predicate = true> <Delay = 1.48> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 212 [1/1] (0.00ns)   --->   "br i1 %tmp_124, label %branch33, label %branch32" [HTA128_0/solution1/top.cc:330]   --->   Operation 212 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 3.25>
+ST_13 : Operation 213 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_4111119120 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex15" [HTA128_0/solution1/top.cc:330]   --->   Operation 213 'getelementptr' 'buddy_tree_V_1_addr_4111119120' <Predicate = (!tmp_124)> <Delay = 0.00>
+ST_13 : Operation 214 [1/1] (3.25ns)   --->   "store i64 %r_V_18, i64* %buddy_tree_V_1_addr_4111119120, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 214 'store' <Predicate = (!tmp_124)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_13 : Operation 215 [1/1] (0.00ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102" [HTA128_0/solution1/top.cc:330]   --->   Operation 215 'br' <Predicate = (!tmp_124)> <Delay = 0.00>
+ST_13 : Operation 216 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_4113117118 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex15" [HTA128_0/solution1/top.cc:330]   --->   Operation 216 'getelementptr' 'buddy_tree_V_0_addr_4113117118' <Predicate = (tmp_124)> <Delay = 0.00>
+ST_13 : Operation 217 [1/1] (3.25ns)   --->   "store i64 %r_V_18, i64* %buddy_tree_V_0_addr_4113117118, align 8" [HTA128_0/solution1/top.cc:330]   --->   Operation 217 'store' <Predicate = (tmp_124)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_13 : Operation 218 [1/1] (0.00ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit2399102" [HTA128_0/solution1/top.cc:330]   --->   Operation 218 'br' <Predicate = (tmp_124)> <Delay = 0.00>
+ST_13 : Operation 219 [1/1] (2.55ns)   --->   "%cnt = add nsw i32 %op2_assign_9, 1" [HTA128_0/solution1/top.cc:327]   --->   Operation 219 'add' 'cnt' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 220 [1/1] (0.00ns)   --->   "br label %26" [HTA128_0/solution1/top.cc:327]   --->   Operation 220 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 5> <Delay = 7.45>
+ST_14 : Operation 221 [1/1] (1.73ns)   --->   "%r_V_25 = sub i4 -8, %ans_V" [HTA128_0/solution1/top.cc:359]   --->   Operation 221 'sub' 'r_V_25' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %r_V_25, i32 3)" [HTA128_0/solution1/top.cc:359]   --->   Operation 222 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_11_cast = sext i4 %r_V_25 to i16" [HTA128_0/solution1/top.cc:359]   --->   Operation 223 'sext' 'tmp_11_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_12_cast = zext i16 %free_target_V to i23" [HTA128_0/solution1/top.cc:359]   --->   Operation 224 'zext' 'tmp_12_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 225 [1/1] (1.73ns)   --->   "%tmp_4 = sub i4 0, %r_V_25" [HTA128_0/solution1/top.cc:359]   --->   Operation 225 'sub' 'tmp_4' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_13_cast = zext i4 %tmp_4 to i23" [HTA128_0/solution1/top.cc:359]   --->   Operation 226 'zext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_8 = shl i23 %tmp_12_cast, %tmp_13_cast" [HTA128_0/solution1/top.cc:359]   --->   Operation 227 'shl' 'tmp_8' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_7 = lshr i16 %free_target_V, %tmp_11_cast" [HTA128_0/solution1/top.cc:359]   --->   Operation 228 'lshr' 'tmp_7' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_30 = trunc i23 %tmp_8 to i13" [HTA128_0/solution1/top.cc:359]   --->   Operation 229 'trunc' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 230 [1/1] (0.00ns) (grouped into LUT with out node tmp_10)   --->   "%tmp_33 = trunc i16 %tmp_7 to i13" [HTA128_0/solution1/top.cc:359]   --->   Operation 230 'trunc' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 231 [1/1] (3.98ns) (out node of the LUT)   --->   "%tmp_10 = select i1 %tmp_23, i13 %tmp_30, i13 %tmp_33" [HTA128_0/solution1/top.cc:359]   --->   Operation 231 'select' 'tmp_10' <Predicate = true> <Delay = 3.98> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 232 [1/1] (0.00ns)   --->   "%tmp_23_cast = zext i8 %addr_tree_map_V_load to i16" [HTA128_0/solution1/top.cc:359]   --->   Operation 232 'zext' 'tmp_23_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 233 [1/1] (1.73ns)   --->   "%tmp_11 = add i4 -7, %ans_V" [HTA128_0/solution1/top.cc:359]   --->   Operation 233 'add' 'tmp_11' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 234 [1/1] (0.00ns)   --->   "%tmp_28_cast = zext i4 %tmp_11 to i16" [HTA128_0/solution1/top.cc:359]   --->   Operation 234 'zext' 'tmp_28_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 235 [1/1] (3.14ns)   --->   "%tmp_13 = shl i16 %tmp_23_cast, %tmp_28_cast" [HTA128_0/solution1/top.cc:359]   --->   Operation 235 'shl' 'tmp_13' <Predicate = true> <Delay = 3.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 236 [1/1] (0.00ns)   --->   "%r_V = trunc i16 %tmp_13 to i13" [HTA128_0/solution1/top.cc:359]   --->   Operation 236 'trunc' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 237 [1/2] (3.25ns)   --->   "%shift_constant_V_loa_1 = load i5* %shift_constant_V_add_1, align 1" [HTA128_0/solution1/top.cc:359]   --->   Operation 237 'load' 'shift_constant_V_loa_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+
+State 15 <SV = 6> <Delay = 8.74>
+ST_15 : Operation 238 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_14 = sub i13 %tmp_10, %r_V" [HTA128_0/solution1/top.cc:359]   --->   Operation 238 'sub' 'tmp_14' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_16 = zext i5 %shift_constant_V_loa_1 to i13" [HTA128_0/solution1/top.cc:359]   --->   Operation 239 'zext' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 240 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%loc_tree_V_5 = add i13 %tmp_14, %tmp_16" [HTA128_0/solution1/top.cc:359]   --->   Operation 240 'add' 'loc_tree_V_5' <Predicate = true> <Delay = 3.81> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 241 [1/1] (0.00ns)   --->   "%lhs_V_3_cast = zext i13 %loc_tree_V_5 to i14" [HTA128_0/solution1/top.cc:362]   --->   Operation 241 'zext' 'lhs_V_3_cast' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 242 [1/1] (1.67ns)   --->   "%r_V_3 = add i14 14, %lhs_V_3_cast" [HTA128_0/solution1/top.cc:362]   --->   Operation 242 'add' 'r_V_3' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_17 = zext i14 %r_V_3 to i64" [HTA128_0/solution1/top.cc:362]   --->   Operation 243 'zext' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 244 [1/1] (0.00ns)   --->   "%newIndex5 = call i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8 %addr_tree_map_V_load, i32 1, i32 7)" [HTA128_0/solution1/top.cc:309]   --->   Operation 244 'partselect' 'newIndex5' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 245 [1/1] (0.00ns)   --->   "%newIndex6 = zext i7 %newIndex5 to i64" [HTA128_0/solution1/top.cc:309]   --->   Operation 245 'zext' 'newIndex6' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 246 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex6" [HTA128_0/solution1/top.cc:362]   --->   Operation 246 'getelementptr' 'group_tree_V_1_addr' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 247 [2/2] (2.32ns)   --->   "%group_tree_V_1_load = load i4* %group_tree_V_1_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 247 'load' 'group_tree_V_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_15 : Operation 248 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex6" [HTA128_0/solution1/top.cc:362]   --->   Operation 248 'getelementptr' 'group_tree_V_0_addr' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 249 [2/2] (2.32ns)   --->   "%group_tree_V_0_load = load i4* %group_tree_V_0_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 249 'load' 'group_tree_V_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_15 : Operation 250 [1/1] (0.00ns)   --->   "%mark_mask_V_addr = getelementptr [32 x i4]* @mark_mask_V, i64 0, i64 %tmp_17" [HTA128_0/solution1/top.cc:362]   --->   Operation 250 'getelementptr' 'mark_mask_V_addr' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 251 [2/2] (3.25ns)   --->   "%rhs_V_2 = load i4* %mark_mask_V_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 251 'load' 'rhs_V_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+
+State 16 <SV = 7> <Delay = 4.27>
+ST_16 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_57 = trunc i8 %addr_tree_map_V_load to i1" [HTA128_0/solution1/top.cc:309]   --->   Operation 252 'trunc' 'tmp_57' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 253 [1/2] (2.32ns)   --->   "%group_tree_V_1_load = load i4* %group_tree_V_1_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 253 'load' 'group_tree_V_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_16 : Operation 254 [1/2] (2.32ns)   --->   "%group_tree_V_0_load = load i4* %group_tree_V_0_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 254 'load' 'group_tree_V_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_16 : Operation 255 [1/1] (0.00ns) (grouped into LUT with out node r_V_4)   --->   "%lhs_V = select i1 %tmp_57, i4 %group_tree_V_1_load, i4 %group_tree_V_0_load" [HTA128_0/solution1/top.cc:362]   --->   Operation 255 'select' 'lhs_V' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 256 [1/2] (3.25ns)   --->   "%rhs_V_2 = load i4* %mark_mask_V_addr, align 1" [HTA128_0/solution1/top.cc:362]   --->   Operation 256 'load' 'rhs_V_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_16 : Operation 257 [1/1] (1.02ns) (out node of the LUT)   --->   "%r_V_4 = or i4 %rhs_V_2, %lhs_V" [HTA128_0/solution1/top.cc:362]   --->   Operation 257 'or' 'r_V_4' <Predicate = true> <Delay = 1.02> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 8> <Delay = 3.67>
+ST_17 : Operation 258 [1/1] (0.00ns)   --->   "%TMP_0_V_1 = zext i4 %r_V_4 to i64" [HTA128_0/solution1/top.cc:363]   --->   Operation 258 'zext' 'TMP_0_V_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 259 [1/1] (0.00ns)   --->   "%TMP_0_V_1_cast = zext i4 %r_V_4 to i13" [HTA128_0/solution1/top.cc:363]   --->   Operation 259 'zext' 'TMP_0_V_1_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 260 [1/1] (0.00ns)   --->   "%p_Result_11 = call i13 @_ssdm_op_BitSet.i13.i13.i32.i1(i13 %loc_tree_V_5, i32 0, i1 false)" [HTA128_0/solution1/top.cc:364]   --->   Operation 260 'bitset' 'p_Result_11' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 261 [1/1] (3.67ns)   --->   "%r_V_6 = lshr i13 %TMP_0_V_1_cast, %p_Result_11" [HTA128_0/solution1/top.cc:365]   --->   Operation 261 'lshr' 'r_V_6' <Predicate = true> <Delay = 3.67> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 262 [1/1] (0.00ns)   --->   "%r_V_12_cast = zext i13 %r_V_6 to i64" [HTA128_0/solution1/top.cc:365]   --->   Operation 262 'zext' 'r_V_12_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 263 [1/1] (1.76ns)   --->   "br label %27" [HTA128_0/solution1/top.cc:367]   --->   Operation 263 'br' <Predicate = true> <Delay = 1.76>
+
+State 18 <SV = 9> <Delay = 5.22>
+ST_18 : Operation 264 [1/1] (0.00ns)   --->   "%p_03232_2_in = phi i4 [ %ans_V, %_ifconv13 ], [ %now1_V_2, %_ZrsILi13ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 264 'phi' 'p_03232_2_in' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 265 [1/1] (0.00ns)   --->   "%p_03236_1_in = phi i64 [ %r_V_12_cast, %_ifconv13 ], [ %r_V_8, %_ZrsILi13ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 265 'phi' 'p_03236_1_in' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 266 [1/1] (0.00ns)   --->   "%p_03208_1_in_in = phi i13 [ %p_Result_11, %_ifconv13 ], [ %p_Result_12, %_ZrsILi13ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 266 'phi' 'p_03208_1_in_in' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 267 [1/1] (0.00ns)   --->   "%p_03180_4 = phi i64 [ %TMP_0_V_1, %_ifconv13 ], [ %TMP_0_V_4, %_ZrsILi13ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ]"   --->   Operation 267 'phi' 'p_03180_4' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 268 [1/1] (1.73ns)   --->   "%now1_V_2 = add i4 -1, %p_03232_2_in" [HTA128_0/solution1/top.cc:367]   --->   Operation 268 'add' 'now1_V_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 269 [1/1] (0.00ns)   --->   "%rec_bits_V_3 = trunc i64 %p_03236_1_in to i2" [HTA128_0/solution1/top.cc:365]   --->   Operation 269 'trunc' 'rec_bits_V_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 270 [1/1] (0.00ns)   --->   "%tmp_79 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %now1_V_2, i32 3)" [HTA128_0/solution1/top.cc:367]   --->   Operation 270 'bitselect' 'tmp_79' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 271 [1/1] (0.95ns)   --->   "%tmp_18 = icmp eq i2 %rec_bits_V_3, -1" [HTA128_0/solution1/top.cc:367]   --->   Operation 271 'icmp' 'tmp_18' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 272 [1/1] (0.97ns)   --->   "%tmp_20 = and i1 %tmp_79, %tmp_18" [HTA128_0/solution1/top.cc:367]   --->   Operation 272 'and' 'tmp_20' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 273 [1/1] (0.00ns)   --->   "br i1 %tmp_20, label %_ZrsILi13ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit, label %28" [HTA128_0/solution1/top.cc:367]   --->   Operation 273 'br' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 274 [1/1] (0.00ns)   --->   "%p_03208_1_in = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_03208_1_in_in, i32 1, i32 12)" [HTA128_0/solution1/top.cc:367]   --->   Operation 274 'partselect' 'p_03208_1_in' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_18 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_24 = zext i12 %p_03208_1_in to i13" [HTA128_0/solution1/top.cc:367]   --->   Operation 275 'zext' 'tmp_24' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_18 : Operation 276 [1/1] (1.54ns)   --->   "%loc_tree_V = add i13 %tmp_24, -1" [HTA128_0/solution1/top.cc:367]   --->   Operation 276 'add' 'loc_tree_V' <Predicate = (tmp_20)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 277 [1/1] (0.00ns) (grouped into LUT with out node TMP_0_V_4)   --->   "%tmp_27 = zext i13 %loc_tree_V to i32" [HTA128_0/solution1/top.cc:370]   --->   Operation 277 'zext' 'tmp_27' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_18 : Operation 278 [1/1] (0.00ns) (grouped into LUT with out node TMP_0_V_4)   --->   "%op2_assign_s = shl i32 1, %tmp_27" [HTA128_0/solution1/top.cc:370]   --->   Operation 278 'shl' 'op2_assign_s' <Predicate = (tmp_20)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 279 [1/1] (0.00ns) (grouped into LUT with out node TMP_0_V_4)   --->   "%tmp_28 = sext i32 %op2_assign_s to i64" [HTA128_0/solution1/top.cc:370]   --->   Operation 279 'sext' 'tmp_28' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_18 : Operation 280 [1/1] (3.67ns) (out node of the LUT)   --->   "%TMP_0_V_4 = or i64 %tmp_28, %p_03180_4" [HTA128_0/solution1/top.cc:370]   --->   Operation 280 'or' 'TMP_0_V_4' <Predicate = (tmp_20)> <Delay = 3.67> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 281 [1/1] (0.00ns)   --->   "%p_Result_12 = call i13 @_ssdm_op_BitSet.i13.i13.i32.i1(i13 %loc_tree_V, i32 0, i1 false)" [HTA128_0/solution1/top.cc:371]   --->   Operation 281 'bitset' 'p_Result_12' <Predicate = (tmp_20)> <Delay = 0.00>
+
+State 19 <SV = 10> <Delay = 6.53>
+ST_19 : Operation 282 [1/1] (0.00ns)   --->   "%tmp_26 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str21)" [HTA128_0/solution1/top.cc:368]   --->   Operation 282 'specregionbegin' 'tmp_26' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_19 : Operation 283 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:369]   --->   Operation 283 'specpipeline' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_19 : Operation 284 [1/1] (0.00ns)   --->   "%tmp_29 = zext i13 %p_Result_12 to i64" [HTA128_0/solution1/top.cc:372]   --->   Operation 284 'zext' 'tmp_29' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_19 : Operation 285 [1/1] (4.59ns)   --->   "%r_V_8 = lshr i64 %TMP_0_V_4, %tmp_29" [HTA128_0/solution1/top.cc:372]   --->   Operation 285 'lshr' 'r_V_8' <Predicate = (tmp_20)> <Delay = 4.59> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 286 [1/1] (0.00ns)   --->   "%empty_56 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str21, i32 %tmp_26)" [HTA128_0/solution1/top.cc:373]   --->   Operation 286 'specregionend' 'empty_56' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_19 : Operation 287 [1/1] (0.00ns)   --->   "br label %27" [HTA128_0/solution1/top.cc:367]   --->   Operation 287 'br' <Predicate = (tmp_20)> <Delay = 0.00>
+
+State 20 <SV = 10> <Delay = 2.32>
+ST_20 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_94 = trunc i64 %p_03180_4 to i4" [HTA128_0/solution1/top.cc:376]   --->   Operation 288 'trunc' 'tmp_94' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 289 [1/1] (0.00ns)   --->   "br i1 %tmp_57, label %branch49, label %branch48" [HTA128_0/solution1/top.cc:376]   --->   Operation 289 'br' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 290 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr_1 = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex6" [HTA128_0/solution1/top.cc:362]   --->   Operation 290 'getelementptr' 'group_tree_V_0_addr_1' <Predicate = (!tmp_57)> <Delay = 0.00>
+ST_20 : Operation 291 [1/1] (2.32ns)   --->   "store i4 %tmp_94, i4* %group_tree_V_0_addr_1, align 1" [HTA128_0/solution1/top.cc:376]   --->   Operation 291 'store' <Predicate = (!tmp_57)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_20 : Operation 292 [1/1] (0.00ns)   --->   "br label %29" [HTA128_0/solution1/top.cc:376]   --->   Operation 292 'br' <Predicate = (!tmp_57)> <Delay = 0.00>
+ST_20 : Operation 293 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr_1 = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex6" [HTA128_0/solution1/top.cc:362]   --->   Operation 293 'getelementptr' 'group_tree_V_1_addr_1' <Predicate = (tmp_57)> <Delay = 0.00>
+ST_20 : Operation 294 [1/1] (2.32ns)   --->   "store i4 %tmp_94, i4* %group_tree_V_1_addr_1, align 1" [HTA128_0/solution1/top.cc:376]   --->   Operation 294 'store' <Predicate = (tmp_57)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_20 : Operation 295 [1/1] (0.00ns)   --->   "br label %29" [HTA128_0/solution1/top.cc:376]   --->   Operation 295 'br' <Predicate = (tmp_57)> <Delay = 0.00>
+ST_20 : Operation 296 [1/1] (1.76ns)   --->   "br label %30" [HTA128_0/solution1/top.cc:382]   --->   Operation 296 'br' <Predicate = true> <Delay = 1.76>
+
+State 21 <SV = 11> <Delay = 3.25>
+ST_21 : Operation 297 [1/1] (0.00ns)   --->   "%p_Val2_12 = phi i11 [ %loc1_V_9_cast_cast, %29 ], [ %tmp_68, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit109112 ]" [HTA128_0/solution1/top.cc:307]   --->   Operation 297 'phi' 'p_Val2_12' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_21 : Operation 298 [1/1] (0.00ns)   --->   "%p_03232_3 = phi i4 [ 7, %29 ], [ %now1_V_3, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit109112 ]"   --->   Operation 298 'phi' 'p_03232_3' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_21 : Operation 299 [1/1] (0.00ns)   --->   "%p_Val2_3 = phi i2 [ %rec_bits_V_3, %29 ], [ %rec_bits_V_2, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit109112 ]"   --->   Operation 299 'phi' 'p_Val2_3' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_21 : Operation 300 [1/1] (0.95ns)   --->   "%tmp_58 = icmp eq i2 %p_Val2_3, -1" [HTA128_0/solution1/top.cc:382]   --->   Operation 300 'icmp' 'tmp_58' <Predicate = (tmp_12)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 301 [1/1] (1.30ns)   --->   "%not_s = icmp ne i4 %p_03232_3, 0" [HTA128_0/solution1/top.cc:382]   --->   Operation 301 'icmp' 'not_s' <Predicate = (tmp_12)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 302 [1/1] (0.97ns)   --->   "%tmp_59 = and i1 %tmp_58, %not_s" [HTA128_0/solution1/top.cc:382]   --->   Operation 302 'and' 'tmp_59' <Predicate = (tmp_12)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 303 [1/1] (0.00ns)   --->   "br i1 %tmp_59, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit_ifconv, label %31" [HTA128_0/solution1/top.cc:382]   --->   Operation 303 'br' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_21 : Operation 304 [1/1] (0.00ns)   --->   "%newIndex10 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %p_03232_3, i32 1, i32 3)" [HTA128_0/solution1/top.cc:382]   --->   Operation 304 'partselect' 'newIndex10' <Predicate = (tmp_12 & tmp_59)> <Delay = 0.00>
+ST_21 : Operation 305 [1/1] (0.00ns)   --->   "%newIndex11 = zext i3 %newIndex10 to i64" [HTA128_0/solution1/top.cc:382]   --->   Operation 305 'zext' 'newIndex11' <Predicate = (tmp_12 & tmp_59)> <Delay = 0.00>
+ST_21 : Operation 306 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_7 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex11" [HTA128_0/solution1/top.cc:384]   --->   Operation 306 'getelementptr' 'buddy_tree_V_1_addr_7' <Predicate = (tmp_12 & tmp_59)> <Delay = 0.00>
+ST_21 : Operation 307 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_4 = load i64* %buddy_tree_V_1_addr_7, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 307 'load' 'buddy_tree_V_1_load_4' <Predicate = (tmp_12 & tmp_59)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_21 : Operation 308 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_7 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex11" [HTA128_0/solution1/top.cc:384]   --->   Operation 308 'getelementptr' 'buddy_tree_V_0_addr_7' <Predicate = (tmp_12 & tmp_59)> <Delay = 0.00>
+ST_21 : Operation 309 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_4 = load i64* %buddy_tree_V_0_addr_7, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 309 'load' 'buddy_tree_V_0_load_4' <Predicate = (tmp_12 & tmp_59)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_21 : Operation 310 [1/1] (0.00ns)   --->   "%TMP_0_V_7 = zext i4 %tmp_94 to i64" [HTA128_0/solution1/top.cc:388]   --->   Operation 310 'zext' 'TMP_0_V_7' <Predicate = (tmp_12 & !tmp_59)> <Delay = 0.00>
+ST_21 : Operation 311 [1/1] (1.76ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit53_ifconv"   --->   Operation 311 'br' <Predicate = (tmp_12 & !tmp_59)> <Delay = 1.76>
+ST_21 : Operation 312 [2/2] (3.25ns)   --->   "%lhs_V_5 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:395]   --->   Operation 312 'load' 'lhs_V_5' <Predicate = (!tmp_12) | (!tmp_59)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 22 <SV = 12> <Delay = 6.61>
+ST_22 : Operation 313 [1/1] (0.00ns) (grouped into LUT with out node tmp_64)   --->   "%tmp_62 = zext i11 %p_Val2_12 to i32" [HTA128_0/solution1/top.cc:384]   --->   Operation 313 'zext' 'tmp_62' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node tmp_64)   --->   "%op2_assign_1 = shl i32 1, %tmp_62" [HTA128_0/solution1/top.cc:384]   --->   Operation 314 'shl' 'op2_assign_1' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node tmp_64)   --->   "%tmp_63 = sext i32 %op2_assign_1 to i64" [HTA128_0/solution1/top.cc:384]   --->   Operation 315 'sext' 'tmp_63' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 316 [1/1] (0.00ns)   --->   "%tmp_107 = trunc i4 %p_03232_3 to i1" [HTA128_0/solution1/top.cc:382]   --->   Operation 316 'trunc' 'tmp_107' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 317 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_4 = load i64* %buddy_tree_V_1_addr_7, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 317 'load' 'buddy_tree_V_1_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_22 : Operation 318 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_4 = load i64* %buddy_tree_V_0_addr_7, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 318 'load' 'buddy_tree_V_0_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_22 : Operation 319 [1/1] (0.00ns) (grouped into LUT with out node tmp_64)   --->   "%buddy_tree_V_load_4_s = select i1 %tmp_107, i64 %buddy_tree_V_1_load_4, i64 %buddy_tree_V_0_load_4" [HTA128_0/solution1/top.cc:384]   --->   Operation 319 'select' 'buddy_tree_V_load_4_s' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 320 [1/1] (3.35ns) (out node of the LUT)   --->   "%tmp_64 = or i64 %buddy_tree_V_load_4_s, %tmp_63" [HTA128_0/solution1/top.cc:384]   --->   Operation 320 'or' 'tmp_64' <Predicate = true> <Delay = 3.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 321 [1/1] (0.00ns)   --->   "br i1 %tmp_107, label %branch37, label %branch36" [HTA128_0/solution1/top.cc:384]   --->   Operation 321 'br' <Predicate = true> <Delay = 0.00>
+
+State 23 <SV = 13> <Delay = 4.59>
+ST_23 : Operation 322 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_3135143144 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex11" [HTA128_0/solution1/top.cc:384]   --->   Operation 322 'getelementptr' 'buddy_tree_V_0_addr_3135143144' <Predicate = (!tmp_107)> <Delay = 0.00>
+ST_23 : Operation 323 [1/1] (3.25ns)   --->   "store i64 %tmp_64, i64* %buddy_tree_V_0_addr_3135143144, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 323 'store' <Predicate = (!tmp_107)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_23 : Operation 324 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit109112" [HTA128_0/solution1/top.cc:384]   --->   Operation 324 'br' <Predicate = (!tmp_107)> <Delay = 0.00>
+ST_23 : Operation 325 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_3137141142 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex11" [HTA128_0/solution1/top.cc:384]   --->   Operation 325 'getelementptr' 'buddy_tree_V_1_addr_3137141142' <Predicate = (tmp_107)> <Delay = 0.00>
+ST_23 : Operation 326 [1/1] (3.25ns)   --->   "store i64 %tmp_64, i64* %buddy_tree_V_1_addr_3137141142, align 8" [HTA128_0/solution1/top.cc:384]   --->   Operation 326 'store' <Predicate = (tmp_107)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_23 : Operation 327 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit109112" [HTA128_0/solution1/top.cc:384]   --->   Operation 327 'br' <Predicate = (tmp_107)> <Delay = 0.00>
+ST_23 : Operation 328 [1/1] (0.00ns)   --->   "%p_Val2_15_cast8 = zext i11 %p_Val2_12 to i13" [HTA128_0/solution1/top.cc:382]   --->   Operation 328 'zext' 'p_Val2_15_cast8' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 329 [1/1] (0.00ns)   --->   "%p_Result_13 = call i13 @_ssdm_op_BitSet.i13.i13.i32.i1(i13 %p_Val2_15_cast8, i32 0, i1 false)" [HTA128_0/solution1/top.cc:385]   --->   Operation 329 'bitset' 'p_Result_13' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 330 [1/1] (0.00ns)   --->   "%tmp_67 = zext i13 %p_Result_13 to i64" [HTA128_0/solution1/top.cc:386]   --->   Operation 330 'zext' 'tmp_67' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 331 [1/1] (4.59ns)   --->   "%r_V_14 = lshr i64 %tmp_64, %tmp_67" [HTA128_0/solution1/top.cc:386]   --->   Operation 331 'lshr' 'r_V_14' <Predicate = true> <Delay = 4.59> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 332 [1/1] (0.00ns)   --->   "%rec_bits_V_2 = trunc i64 %r_V_14 to i2" [HTA128_0/solution1/top.cc:386]   --->   Operation 332 'trunc' 'rec_bits_V_2' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 333 [1/1] (1.73ns)   --->   "%now1_V_3 = add i4 -1, %p_03232_3" [HTA128_0/solution1/top.cc:382]   --->   Operation 333 'add' 'now1_V_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 334 [1/1] (0.00ns)   --->   "%tmp_113 = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %p_Val2_12, i32 1, i32 10)" [HTA128_0/solution1/top.cc:382]   --->   Operation 334 'partselect' 'tmp_113' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 335 [1/1] (0.00ns)   --->   "%tmp_68 = zext i10 %tmp_113 to i11" [HTA128_0/solution1/top.cc:382]   --->   Operation 335 'zext' 'tmp_68' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 336 [1/1] (0.00ns)   --->   "br label %30" [HTA128_0/solution1/top.cc:382]   --->   Operation 336 'br' <Predicate = true> <Delay = 0.00>
+
+State 24 <SV = 12> <Delay = 7.98>
+ST_24 : Operation 337 [1/1] (0.00ns)   --->   "%p_03208_2 = phi i8 [ %addr_tree_map_V_load, %31 ], [ 0, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit53_ifconv.loopexit ]" [HTA128_0/solution1/top.cc:309]   --->   Operation 337 'phi' 'p_03208_2' <Predicate = (tmp_6 & tmp_12)> <Delay = 0.00>
+ST_24 : Operation 338 [1/1] (0.00ns)   --->   "%rhs_V_3 = phi i64 [ %TMP_0_V_7, %31 ], [ %TMP_0_V_3, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit53_ifconv.loopexit ]"   --->   Operation 338 'phi' 'rhs_V_3' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_24 : Operation 339 [1/1] (0.00ns)   --->   "%tmp_122 = trunc i64 %rhs_V_3 to i2" [HTA128_0/solution1/top.cc:395]   --->   Operation 339 'trunc' 'tmp_122' <Predicate = (tmp_6 & tmp_12)> <Delay = 0.00>
+ST_24 : Operation 340 [1/2] (3.25ns)   --->   "%lhs_V_5 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:395]   --->   Operation 340 'load' 'lhs_V_5' <Predicate = (tmp_6)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_24 : Operation 341 [1/1] (0.00ns) (grouped into LUT with out node storemerge)   --->   "%r_V_15 = or i64 %lhs_V_5, %rhs_V_3" [HTA128_0/solution1/top.cc:395]   --->   Operation 341 'or' 'r_V_15' <Predicate = (tmp_6 & !tmp_12)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 342 [1/1] (0.00ns)   --->   "%i_assign_1 = zext i8 %p_03208_2 to i32" [HTA128_0/solution1/top.cc:399]   --->   Operation 342 'zext' 'i_assign_1' <Predicate = (tmp_6 & tmp_12)> <Delay = 0.00>
+ST_24 : Operation 343 [1/1] (0.95ns)   --->   "%p_Repl2_5 = icmp ne i2 %tmp_122, 0" [HTA128_0/solution1/top.cc:399]   --->   Operation 343 'icmp' 'p_Repl2_5' <Predicate = (tmp_6 & tmp_12)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 344 [1/1] (0.00ns)   --->   "%p_Result_5 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %lhs_V_5, i32 %i_assign_1, i1 %p_Repl2_5)" [HTA128_0/solution1/top.cc:399]   --->   Operation 344 'bitset' 'p_Result_5' <Predicate = (tmp_6 & tmp_12)> <Delay = 0.00>
+ST_24 : Operation 345 [1/1] (1.48ns) (out node of the LUT)   --->   "%storemerge = select i1 %tmp_12, i64 %p_Result_5, i64 %r_V_15" [HTA128_0/solution1/top.cc:307]   --->   Operation 345 'select' 'storemerge' <Predicate = (tmp_6)> <Delay = 1.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 346 [1/1] (3.25ns)   --->   "store i64 %storemerge, i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:399]   --->   Operation 346 'store' <Predicate = (tmp_6)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_24 : Operation 347 [1/1] (0.00ns)   --->   "%empty_57 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str20, i32 %tmp_5)" [HTA128_0/solution1/top.cc:403]   --->   Operation 347 'specregionend' 'empty_57' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_24 : Operation 348 [1/1] (0.00ns)   --->   "br label %._crit_edge4964" [HTA128_0/solution1/top.cc:405]   --->   Operation 348 'br' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_24 : Operation 349 [1/1] (0.00ns)   --->   "br label %32"   --->   Operation 349 'br' <Predicate = true> <Delay = 0.00>
+
+State 25 <SV = 3> <Delay = 3.25>
+ST_25 : Operation 350 [1/1] (0.00ns)   --->   "%p_s = phi i4 [ -8, %1 ], [ -7, %3 ], [ -6, %4 ], [ -5, %5 ], [ -4, %6 ], [ -3, %7 ], [ -2, %8 ], [ -1, %9 ], [ 0, %10 ], [ 1, %11 ], [ 2, %12 ], [ 3, %13 ], [ 4, %14 ], [ 5, %15 ], [ 6, %16 ], [ 7, %17 ], [ -8, %2 ]"   --->   Operation 350 'phi' 'p_s' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 351 [1/1] (0.00ns)   --->   "%p_4 = phi i16 [ 0, %1 ], [ %r_V_21, %3 ], [ %r_V_21, %4 ], [ %r_V_21, %5 ], [ %r_V_21, %6 ], [ %r_V_21, %7 ], [ %r_V_21, %8 ], [ %r_V_21, %9 ], [ %r_V_21, %10 ], [ %r_V_21, %11 ], [ %r_V_21, %12 ], [ %r_V_21, %13 ], [ %r_V_21, %14 ], [ %r_V_21, %15 ], [ %r_V_21, %16 ], [ %r_V_21, %17 ], [ %r_V_21, %2 ]"   --->   Operation 351 'phi' 'p_4' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 352 [1/1] (0.00ns)   --->   "%p_4_cast = zext i16 %p_4 to i64" [HTA128_0/solution1/top.cc:154]   --->   Operation 352 'zext' 'p_4_cast' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 353 [1/1] (0.00ns)   --->   "%tmp_76 = trunc i4 %p_s to i1"   --->   Operation 353 'trunc' 'tmp_76' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 354 [1/1] (0.00ns)   --->   "%newIndex3 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %p_s, i32 1, i32 3)"   --->   Operation 354 'partselect' 'newIndex3' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 355 [1/1] (0.00ns)   --->   "%newIndex4 = zext i3 %newIndex3 to i64"   --->   Operation 355 'zext' 'newIndex4' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 356 [1/1] (0.00ns)   --->   "br i1 %tmp_76, label %branch9, label %branch8" [HTA128_0/solution1/top.cc:163]   --->   Operation 356 'br' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 357 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_2 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 357 'getelementptr' 'buddy_tree_V_0_addr_2' <Predicate = (!tmp_76)> <Delay = 0.00>
+ST_25 : Operation 358 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_1 = load i64* %buddy_tree_V_0_addr_2, align 8" [HTA128_0/solution1/top.cc:163]   --->   Operation 358 'load' 'buddy_tree_V_0_load_1' <Predicate = (!tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_25 : Operation 359 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_2 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 359 'getelementptr' 'buddy_tree_V_1_addr_2' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_25 : Operation 360 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_1 = load i64* %buddy_tree_V_1_addr_2, align 8" [HTA128_0/solution1/top.cc:163]   --->   Operation 360 'load' 'buddy_tree_V_1_load_1' <Predicate = (tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 26 <SV = 4> <Delay = 3.25>
+ST_26 : Operation 361 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_1 = load i64* %buddy_tree_V_0_addr_2, align 8" [HTA128_0/solution1/top.cc:163]   --->   Operation 361 'load' 'buddy_tree_V_0_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_26 : Operation 362 [1/1] (1.76ns)   --->   "br label %._crit_edge44" [HTA128_0/solution1/top.cc:163]   --->   Operation 362 'br' <Predicate = true> <Delay = 1.76>
+
+State 27 <SV = 4> <Delay = 3.25>
+ST_27 : Operation 363 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_1 = load i64* %buddy_tree_V_1_addr_2, align 8" [HTA128_0/solution1/top.cc:163]   --->   Operation 363 'load' 'buddy_tree_V_1_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_27 : Operation 364 [1/1] (1.76ns)   --->   "br label %._crit_edge44" [HTA128_0/solution1/top.cc:163]   --->   Operation 364 'br' <Predicate = true> <Delay = 1.76>
+
+State 28 <SV = 5> <Delay = 4.51>
+ST_28 : Operation 365 [1/1] (0.00ns)   --->   "%buddy_tree_V_load_ph = phi i64 [ %buddy_tree_V_0_load_1, %branch8 ], [ %buddy_tree_V_1_load_1, %branch9 ]" [HTA128_0/solution1/top.cc:163]   --->   Operation 365 'phi' 'buddy_tree_V_load_ph' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 366 [1/1] (3.52ns)   --->   "%tmp_19 = sub i64 0, %buddy_tree_V_load_ph" [HTA128_0/solution1/top.cc:163]   --->   Operation 366 'sub' 'tmp_19' <Predicate = true> <Delay = 3.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 367 [1/1] (0.99ns)   --->   "%tmp_V_1 = and i64 %buddy_tree_V_load_ph, %tmp_19" [HTA128_0/solution1/top.cc:163]   --->   Operation 367 'and' 'tmp_V_1' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 6> <Delay = 8.35>
+ST_29 : Operation 368 [1/1] (8.35ns)   --->   "%op_V_assign = call fastcc i8 @log_2_64bit(i64 %tmp_V_1)" [HTA128_0/solution1/top.cc:164]   --->   Operation 368 'call' 'op_V_assign' <Predicate = true> <Delay = 8.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 369 [1/1] (2.77ns)   --->   "%tmp_22 = icmp eq i64 %tmp_V_1, 0" [HTA128_0/solution1/top.cc:168]   --->   Operation 369 'icmp' 'tmp_22' <Predicate = true> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 370 [1/1] (0.00ns)   --->   "br i1 %tmp_22, label %19, label %18" [HTA128_0/solution1/top.cc:168]   --->   Operation 370 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 371 [1/1] (0.00ns)   --->   "%tmp_98 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %p_s, i32 3)" [HTA128_0/solution1/top.cc:170]   --->   Operation 371 'bitselect' 'tmp_98' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_29 : Operation 372 [1/1] (0.00ns)   --->   "br i1 %tmp_98, label %_ifconv17, label %_ifconv21" [HTA128_0/solution1/top.cc:170]   --->   Operation 372 'br' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_29 : Operation 373 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_4 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 373 'getelementptr' 'buddy_tree_V_1_addr_4' <Predicate = (tmp_76 & !tmp_22 & !tmp_98)> <Delay = 0.00>
+ST_29 : Operation 374 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_2 = load i64* %buddy_tree_V_1_addr_4, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 374 'load' 'buddy_tree_V_1_load_2' <Predicate = (tmp_76 & !tmp_22 & !tmp_98)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_29 : Operation 375 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_4 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 375 'getelementptr' 'buddy_tree_V_0_addr_4' <Predicate = (!tmp_76 & !tmp_22 & !tmp_98)> <Delay = 0.00>
+ST_29 : Operation 376 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_2 = load i64* %buddy_tree_V_0_addr_4, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 376 'load' 'buddy_tree_V_0_load_2' <Predicate = (!tmp_76 & !tmp_22 & !tmp_98)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_29 : Operation 377 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 -1)" [HTA128_0/solution1/top.cc:195]   --->   Operation 377 'write' <Predicate = (tmp_22)> <Delay = 0.00>
+ST_29 : Operation 378 [1/1] (0.00ns)   --->   "br label %33" [HTA128_0/solution1/top.cc:196]   --->   Operation 378 'br' <Predicate = (tmp_22)> <Delay = 0.00>
+
+State 30 <SV = 7> <Delay = 7.98>
+ST_30 : Operation 379 [1/1] (1.73ns)   --->   "%r_V_23 = sub i4 -8, %p_s" [HTA128_0/solution1/top.cc:188]   --->   Operation 379 'sub' 'r_V_23' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 380 [1/1] (0.00ns)   --->   "%tmp_38_cast = zext i4 %r_V_23 to i16" [HTA128_0/solution1/top.cc:188]   --->   Operation 380 'zext' 'tmp_38_cast' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 381 [1/1] (0.00ns)   --->   "%tmp_39_cast = zext i8 %op_V_assign to i16" [HTA128_0/solution1/top.cc:188]   --->   Operation 381 'zext' 'tmp_39_cast' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 382 [1/1] (3.14ns)   --->   "%tmp_44 = shl i16 %tmp_39_cast, %tmp_38_cast" [HTA128_0/solution1/top.cc:188]   --->   Operation 382 'shl' 'tmp_44' <Predicate = true> <Delay = 3.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 383 [1/1] (0.00ns)   --->   "%r_V_13 = trunc i16 %tmp_44 to i13" [HTA128_0/solution1/top.cc:188]   --->   Operation 383 'trunc' 'r_V_13' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 384 [1/1] (0.00ns)   --->   "%output_addr_V = zext i13 %r_V_13 to i32" [HTA128_0/solution1/top.cc:188]   --->   Operation 384 'zext' 'output_addr_V' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 385 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 %output_addr_V)" [HTA128_0/solution1/top.cc:188]   --->   Operation 385 'write' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 386 [1/1] (0.99ns)   --->   "%TMP_0_V = xor i64 %tmp_V_1, -1" [HTA128_0/solution1/top.cc:189]   --->   Operation 386 'xor' 'TMP_0_V' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 387 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_2 = load i64* %buddy_tree_V_1_addr_4, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 387 'load' 'buddy_tree_V_1_load_2' <Predicate = (tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_30 : Operation 388 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_2 = load i64* %buddy_tree_V_0_addr_4, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 388 'load' 'buddy_tree_V_0_load_2' <Predicate = (!tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_30 : Operation 389 [1/1] (0.00ns) (grouped into LUT with out node tmp_56)   --->   "%buddy_tree_V_load_2_s = select i1 %tmp_76, i64 %buddy_tree_V_1_load_2, i64 %buddy_tree_V_0_load_2" [HTA128_0/solution1/top.cc:189]   --->   Operation 389 'select' 'buddy_tree_V_load_2_s' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 390 [1/1] (1.48ns) (out node of the LUT)   --->   "%tmp_56 = and i64 %buddy_tree_V_load_2_s, %TMP_0_V" [HTA128_0/solution1/top.cc:189]   --->   Operation 390 'and' 'tmp_56' <Predicate = true> <Delay = 1.48> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 391 [1/1] (0.00ns)   --->   "br i1 %tmp_76, label %branch13, label %branch12" [HTA128_0/solution1/top.cc:189]   --->   Operation 391 'br' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 392 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_6 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 392 'getelementptr' 'buddy_tree_V_0_addr_6' <Predicate = (!tmp_76)> <Delay = 0.00>
+ST_30 : Operation 393 [1/1] (3.25ns)   --->   "store i64 %tmp_56, i64* %buddy_tree_V_0_addr_6, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 393 'store' <Predicate = (!tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_30 : Operation 394 [1/1] (0.00ns)   --->   "br label %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit2504750" [HTA128_0/solution1/top.cc:189]   --->   Operation 394 'br' <Predicate = (!tmp_76)> <Delay = 0.00>
+ST_30 : Operation 395 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_6 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex4" [HTA128_0/solution1/top.cc:163]   --->   Operation 395 'getelementptr' 'buddy_tree_V_1_addr_6' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_30 : Operation 396 [1/1] (3.25ns)   --->   "store i64 %tmp_56, i64* %buddy_tree_V_1_addr_6, align 8" [HTA128_0/solution1/top.cc:189]   --->   Operation 396 'store' <Predicate = (tmp_76)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_30 : Operation 397 [1/1] (0.00ns)   --->   "br label %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit2504750" [HTA128_0/solution1/top.cc:189]   --->   Operation 397 'br' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_30 : Operation 398 [1/1] (1.76ns)   --->   "br label %20"   --->   Operation 398 'br' <Predicate = true> <Delay = 1.76>
+
+State 31 <SV = 7> <Delay = 4.22>
+ST_31 : Operation 399 [1/1] (0.97ns)   --->   "%r_V_5 = xor i4 %p_s, -8" [HTA128_0/solution1/top.cc:172]   --->   Operation 399 'xor' 'r_V_5' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 400 [1/1] (0.00ns)   --->   "%tmp_36 = zext i4 %r_V_5 to i64" [HTA128_0/solution1/top.cc:172]   --->   Operation 400 'zext' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 401 [1/1] (0.00ns)   --->   "%newIndex7 = call i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8 %op_V_assign, i32 1, i32 7)" [HTA128_0/solution1/top.cc:164]   --->   Operation 401 'partselect' 'newIndex7' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 402 [1/1] (0.00ns)   --->   "%newIndex8 = zext i7 %newIndex7 to i64" [HTA128_0/solution1/top.cc:164]   --->   Operation 402 'zext' 'newIndex8' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 403 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr_2 = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex8" [HTA128_0/solution1/top.cc:172]   --->   Operation 403 'getelementptr' 'group_tree_V_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 404 [2/2] (2.32ns)   --->   "%group_tree_V_1_load_1 = load i4* %group_tree_V_1_addr_2, align 1" [HTA128_0/solution1/top.cc:172]   --->   Operation 404 'load' 'group_tree_V_1_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_31 : Operation 405 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr_2 = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex8" [HTA128_0/solution1/top.cc:172]   --->   Operation 405 'getelementptr' 'group_tree_V_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 406 [2/2] (2.32ns)   --->   "%group_tree_V_0_load_1 = load i4* %group_tree_V_0_addr_2, align 1" [HTA128_0/solution1/top.cc:172]   --->   Operation 406 'load' 'group_tree_V_0_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_31 : Operation 407 [1/1] (0.00ns)   --->   "%group_tree_mask_V_ad = getelementptr [8 x i31]* @group_tree_mask_V, i64 0, i64 %tmp_36" [HTA128_0/solution1/top.cc:172]   --->   Operation 407 'getelementptr' 'group_tree_mask_V_ad' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 408 [2/2] (3.25ns)   --->   "%rhs_V = load i31* %group_tree_mask_V_ad, align 4" [HTA128_0/solution1/top.cc:172]   --->   Operation 408 'load' 'rhs_V' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_31 : Operation 409 [1/1] (0.00ns)   --->   "%shift_constant_V_add = getelementptr [5 x i5]* @shift_constant_V, i64 0, i64 %tmp_36" [HTA128_0/solution1/top.cc:175]   --->   Operation 409 'getelementptr' 'shift_constant_V_add' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 410 [2/2] (3.25ns)   --->   "%shift_constant_V_loa = load i5* %shift_constant_V_add, align 1" [HTA128_0/solution1/top.cc:175]   --->   Operation 410 'load' 'shift_constant_V_loa' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+
+State 32 <SV = 8> <Delay = 8.33>
+ST_32 : Operation 411 [1/1] (0.00ns)   --->   "%tmp_101 = trunc i8 %op_V_assign to i1" [HTA128_0/solution1/top.cc:164]   --->   Operation 411 'trunc' 'tmp_101' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 412 [1/2] (2.32ns)   --->   "%group_tree_V_1_load_1 = load i4* %group_tree_V_1_addr_2, align 1" [HTA128_0/solution1/top.cc:172]   --->   Operation 412 'load' 'group_tree_V_1_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_32 : Operation 413 [1/2] (2.32ns)   --->   "%group_tree_V_0_load_1 = load i4* %group_tree_V_0_addr_2, align 1" [HTA128_0/solution1/top.cc:172]   --->   Operation 413 'load' 'group_tree_V_0_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_32 : Operation 414 [1/1] (1.02ns)   --->   "%group_tree_V_load_ph = select i1 %tmp_101, i4 %group_tree_V_1_load_1, i4 %group_tree_V_0_load_1" [HTA128_0/solution1/top.cc:172]   --->   Operation 414 'select' 'group_tree_V_load_ph' <Predicate = true> <Delay = 1.02> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 415 [1/2] (3.25ns)   --->   "%rhs_V = load i31* %group_tree_mask_V_ad, align 4" [HTA128_0/solution1/top.cc:172]   --->   Operation 415 'load' 'rhs_V' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_32 : Operation 416 [1/1] (0.00ns)   --->   "%tmp_102 = trunc i31 %rhs_V to i4" [HTA128_0/solution1/top.cc:172]   --->   Operation 416 'trunc' 'tmp_102' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 417 [1/1] (0.97ns)   --->   "%TMP_1_V = and i4 %tmp_102, %group_tree_V_load_ph" [HTA128_0/solution1/top.cc:172]   --->   Operation 417 'and' 'TMP_1_V' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 418 [1/1] (1.73ns)   --->   "%p_5 = sub i4 0, %TMP_1_V" [HTA128_0/solution1/top.cc:173]   --->   Operation 418 'sub' 'p_5' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 419 [1/1] (0.97ns)   --->   "%TMP_1_V_1 = and i4 %TMP_1_V, %p_5" [HTA128_0/solution1/top.cc:173]   --->   Operation 419 'and' 'TMP_1_V_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 420 [1/1] (1.30ns)   --->   "%tmp_38 = icmp eq i4 %TMP_1_V_1, -8" [HTA128_0/solution1/top.cc:173]   --->   Operation 420 'icmp' 'tmp_38' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 421 [1/1] (1.30ns)   --->   "%tmp_39 = icmp eq i4 %TMP_1_V_1, 2" [HTA128_0/solution1/top.cc:173]   --->   Operation 421 'icmp' 'tmp_39' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 422 [1/1] (1.30ns)   --->   "%tmp_40 = icmp eq i4 %TMP_1_V_1, 4" [HTA128_0/solution1/top.cc:173]   --->   Operation 422 'icmp' 'tmp_40' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 423 [1/1] (0.00ns)   --->   "%tmp_73_cast = zext i8 %op_V_assign to i16" [HTA128_0/solution1/top.cc:175]   --->   Operation 423 'zext' 'tmp_73_cast' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 424 [1/1] (1.73ns)   --->   "%tmp_45 = add i4 -7, %p_s" [HTA128_0/solution1/top.cc:175]   --->   Operation 424 'add' 'tmp_45' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 425 [1/1] (0.00ns)   --->   "%tmp_78_cast = zext i4 %tmp_45 to i16" [HTA128_0/solution1/top.cc:175]   --->   Operation 425 'zext' 'tmp_78_cast' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 426 [1/1] (3.14ns)   --->   "%tmp_46 = shl i16 %tmp_73_cast, %tmp_78_cast" [HTA128_0/solution1/top.cc:175]   --->   Operation 426 'shl' 'tmp_46' <Predicate = true> <Delay = 3.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 427 [1/1] (0.00ns)   --->   "%r_V_9 = trunc i16 %tmp_46 to i13" [HTA128_0/solution1/top.cc:175]   --->   Operation 427 'trunc' 'r_V_9' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 428 [1/2] (3.25ns)   --->   "%shift_constant_V_loa = load i5* %shift_constant_V_add, align 1" [HTA128_0/solution1/top.cc:175]   --->   Operation 428 'load' 'shift_constant_V_loa' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_32 : Operation 429 [1/1] (0.00ns) (grouped into LUT with out node tmp_55)   --->   "%tmp26 = and i4 %group_tree_V_load_ph, %p_5" [HTA128_0/solution1/top.cc:177]   --->   Operation 429 'and' 'tmp26' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 430 [1/1] (0.00ns) (grouped into LUT with out node tmp_55)   --->   "%tmp_54 = and i4 %tmp26, %tmp_102" [HTA128_0/solution1/top.cc:177]   --->   Operation 430 'and' 'tmp_54' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 431 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_55 = xor i4 %tmp_54, %group_tree_V_load_ph" [HTA128_0/solution1/top.cc:177]   --->   Operation 431 'xor' 'tmp_55' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 9> <Delay = 8.48>
+ST_33 : Operation 432 [1/1] (0.00ns) (grouped into LUT with out node tmp_43)   --->   "%tmp_52_cast = select i1 %tmp_38, i2 -1, i2 0" [HTA128_0/solution1/top.cc:173]   --->   Operation 432 'select' 'tmp_52_cast' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 433 [1/1] (0.00ns) (grouped into LUT with out node tmp_43)   --->   "%tmp_41 = select i1 %tmp_40, i2 -2, i2 1" [HTA128_0/solution1/top.cc:173]   --->   Operation 433 'select' 'tmp_41' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 434 [1/1] (0.00ns) (grouped into LUT with out node tmp_43)   --->   "%tmp_42 = or i1 %tmp_40, %tmp_39" [HTA128_0/solution1/top.cc:173]   --->   Operation 434 'or' 'tmp_42' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 435 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_43 = select i1 %tmp_42, i2 %tmp_41, i2 %tmp_52_cast" [HTA128_0/solution1/top.cc:173]   --->   Operation 435 'select' 'tmp_43' <Predicate = true> <Delay = 0.99> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 436 [1/1] (0.00ns)   --->   "%loc_tree_V_2 = zext i2 %tmp_43 to i13" [HTA128_0/solution1/top.cc:174]   --->   Operation 436 'zext' 'loc_tree_V_2' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 437 [1/1] (0.00ns)   --->   "%tmp_47 = zext i5 %shift_constant_V_loa to i13" [HTA128_0/solution1/top.cc:175]   --->   Operation 437 'zext' 'tmp_47' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 438 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_48 = add i13 %r_V_9, %loc_tree_V_2" [HTA128_0/solution1/top.cc:175]   --->   Operation 438 'add' 'tmp_48' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_33 : Operation 439 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%new_loc1_V = sub i13 %tmp_48, %tmp_47" [HTA128_0/solution1/top.cc:175]   --->   Operation 439 'sub' 'new_loc1_V' <Predicate = true> <Delay = 3.81> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_33 : Operation 440 [1/1] (1.73ns)   --->   "%r_V_22 = sub i4 -8, %p_s" [HTA128_0/solution1/top.cc:176]   --->   Operation 440 'sub' 'r_V_22' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 441 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %r_V_22, i32 3)" [HTA128_0/solution1/top.cc:176]   --->   Operation 441 'bitselect' 'tmp_104' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 442 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_49 = sext i4 %r_V_22 to i32" [HTA128_0/solution1/top.cc:176]   --->   Operation 442 'sext' 'tmp_49' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 443 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_50 = zext i13 %new_loc1_V to i32" [HTA128_0/solution1/top.cc:176]   --->   Operation 443 'zext' 'tmp_50' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 444 [1/1] (1.73ns)   --->   "%tmp_51 = sub i4 0, %r_V_22" [HTA128_0/solution1/top.cc:176]   --->   Operation 444 'sub' 'tmp_51' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 445 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_87_cast = zext i4 %tmp_51 to i13" [HTA128_0/solution1/top.cc:176]   --->   Operation 445 'zext' 'tmp_87_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 446 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_52 = lshr i13 %new_loc1_V, %tmp_87_cast" [HTA128_0/solution1/top.cc:176]   --->   Operation 446 'lshr' 'tmp_52' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 447 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_53 = shl i32 %tmp_50, %tmp_49" [HTA128_0/solution1/top.cc:176]   --->   Operation 447 'shl' 'tmp_53' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 448 [1/1] (0.00ns) (grouped into LUT with out node r_V_11)   --->   "%tmp_105 = trunc i32 %tmp_53 to i13" [HTA128_0/solution1/top.cc:176]   --->   Operation 448 'trunc' 'tmp_105' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 449 [1/1] (3.67ns) (out node of the LUT)   --->   "%r_V_11 = select i1 %tmp_104, i13 %tmp_52, i13 %tmp_105" [HTA128_0/solution1/top.cc:176]   --->   Operation 449 'select' 'r_V_11' <Predicate = true> <Delay = 3.67> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 450 [1/1] (0.00ns)   --->   "%output_addr_V_1 = zext i13 %r_V_11 to i32" [HTA128_0/solution1/top.cc:176]   --->   Operation 450 'zext' 'output_addr_V_1' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 451 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_addr, i32 %output_addr_V_1)" [HTA128_0/solution1/top.cc:176]   --->   Operation 451 'write' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 452 [1/1] (0.00ns)   --->   "br i1 %tmp_101, label %branch41, label %branch40" [HTA128_0/solution1/top.cc:177]   --->   Operation 452 'br' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 453 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr_3 = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex8" [HTA128_0/solution1/top.cc:172]   --->   Operation 453 'getelementptr' 'group_tree_V_0_addr_3' <Predicate = (!tmp_101)> <Delay = 0.00>
+ST_33 : Operation 454 [1/1] (2.32ns)   --->   "store i4 %tmp_55, i4* %group_tree_V_0_addr_3, align 1" [HTA128_0/solution1/top.cc:177]   --->   Operation 454 'store' <Predicate = (!tmp_101)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_33 : Operation 455 [1/1] (0.00ns)   --->   "br label %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit260121" [HTA128_0/solution1/top.cc:177]   --->   Operation 455 'br' <Predicate = (!tmp_101)> <Delay = 0.00>
+ST_33 : Operation 456 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr_3 = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex8" [HTA128_0/solution1/top.cc:172]   --->   Operation 456 'getelementptr' 'group_tree_V_1_addr_3' <Predicate = (tmp_101)> <Delay = 0.00>
+ST_33 : Operation 457 [1/1] (2.32ns)   --->   "store i4 %tmp_55, i4* %group_tree_V_1_addr_3, align 1" [HTA128_0/solution1/top.cc:177]   --->   Operation 457 'store' <Predicate = (tmp_101)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_33 : Operation 458 [1/1] (0.00ns)   --->   "br label %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit260121" [HTA128_0/solution1/top.cc:177]   --->   Operation 458 'br' <Predicate = (tmp_101)> <Delay = 0.00>
+ST_33 : Operation 459 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_5 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_1, i64 0, i64 3), align 8" [HTA128_0/solution1/top.cc:178]   --->   Operation 459 'load' 'buddy_tree_V_1_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 34 <SV = 10> <Delay = 7.49>
+ST_34 : Operation 460 [1/1] (0.00ns) (grouped into LUT with out node tmp_65)   --->   "%op2_assign = xor i64 %tmp_V_1, -1" [HTA128_0/solution1/top.cc:178]   --->   Operation 460 'xor' 'op2_assign' <Predicate = (tmp_98)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 461 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_5 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_1, i64 0, i64 3), align 8" [HTA128_0/solution1/top.cc:178]   --->   Operation 461 'load' 'buddy_tree_V_1_load_5' <Predicate = (tmp_98)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_34 : Operation 462 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_65 = and i64 %buddy_tree_V_1_load_5, %op2_assign" [HTA128_0/solution1/top.cc:178]   --->   Operation 462 'and' 'tmp_65' <Predicate = (tmp_98)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 463 [1/1] (3.25ns)   --->   "store i64 %tmp_65, i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_1, i64 0, i64 3), align 8" [HTA128_0/solution1/top.cc:178]   --->   Operation 463 'store' <Predicate = (tmp_98)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_34 : Operation 464 [1/1] (1.76ns)   --->   "br label %20" [HTA128_0/solution1/top.cc:185]   --->   Operation 464 'br' <Predicate = (tmp_98)> <Delay = 1.76>
+ST_34 : Operation 465 [1/1] (0.00ns)   --->   "%p_7 = phi i2 [ %tmp_43, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit260121 ], [ 0, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit2504750 ]" [HTA128_0/solution1/top.cc:173]   --->   Operation 465 'phi' 'p_7' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 466 [1/1] (0.00ns)   --->   "%p_8 = phi i13 [ %r_V_11, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit260121 ], [ %r_V_13, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit2504750 ]"   --->   Operation 466 'phi' 'p_8' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 467 [1/1] (0.00ns)   --->   "%p_03180_1 = phi i64 [ %p_4_cast, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit260121 ], [ %TMP_0_V, %_ZNK11ap_int_baseILi13ELb0ELb1EElsILi33EEES0_RKS_IXT_ELb1EXleT_Li64EEE.exit2504750 ]"   --->   Operation 467 'phi' 'p_03180_1' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 468 [1/1] (0.00ns)   --->   "%tmp_66 = zext i13 %p_8 to i64" [HTA128_0/solution1/top.cc:198]   --->   Operation 468 'zext' 'tmp_66' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 469 [1/1] (0.00ns)   --->   "%addr_layer_map_V_add = getelementptr [128 x i4]* @addr_layer_map_V, i64 0, i64 %tmp_66" [HTA128_0/solution1/top.cc:198]   --->   Operation 469 'getelementptr' 'addr_layer_map_V_add' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 470 [1/1] (2.28ns)   --->   "store i4 %p_s, i4* %addr_layer_map_V_add, align 1" [HTA128_0/solution1/top.cc:198]   --->   Operation 470 'store' <Predicate = true> <Delay = 2.28> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_34 : Operation 471 [1/1] (0.00ns)   --->   "%addr_tree_map_V_addr_1 = getelementptr [128 x i8]* @addr_tree_map_V, i64 0, i64 %tmp_66" [HTA128_0/solution1/top.cc:199]   --->   Operation 471 'getelementptr' 'addr_tree_map_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 472 [1/1] (3.25ns)   --->   "store i8 %op_V_assign, i8* %addr_tree_map_V_addr_1, align 1" [HTA128_0/solution1/top.cc:199]   --->   Operation 472 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_34 : Operation 473 [1/1] (0.00ns)   --->   "%tmp_110 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %p_s, i32 3)" [HTA128_0/solution1/top.cc:206]   --->   Operation 473 'bitselect' 'tmp_110' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 474 [1/1] (0.00ns)   --->   "br i1 %tmp_110, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.preheader_ifconv, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit240" [HTA128_0/solution1/top.cc:206]   --->   Operation 474 'br' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 475 [1/1] (0.00ns)   --->   "%cnt_1 = alloca i32"   --->   Operation 475 'alloca' 'cnt_1' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 476 [1/1] (0.00ns)   --->   "%rhs_V_4 = alloca i64"   --->   Operation 476 'alloca' 'rhs_V_4' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 477 [1/1] (0.00ns)   --->   "%loc2_V = alloca i13"   --->   Operation 477 'alloca' 'loc2_V' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 478 [1/1] (0.00ns)   --->   "%loc1_V_7 = alloca i13"   --->   Operation 478 'alloca' 'loc1_V_7' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 479 [1/1] (1.73ns)   --->   "%now1_V_6 = add i4 %p_s, 1" [HTA128_0/solution1/top.cc:208]   --->   Operation 479 'add' 'now1_V_6' <Predicate = (!tmp_110)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 480 [1/1] (0.00ns)   --->   "%loc1_V_8 = call i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8 %op_V_assign, i32 1, i32 7)" [HTA128_0/solution1/top.cc:208]   --->   Operation 480 'partselect' 'loc1_V_8' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 481 [1/1] (0.00ns)   --->   "%loc1_V_8_cast = zext i7 %loc1_V_8 to i13" [HTA128_0/solution1/top.cc:208]   --->   Operation 481 'zext' 'loc1_V_8_cast' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 482 [1/1] (1.73ns)   --->   "%now2_V_3 = add i4 %p_s, -1" [HTA128_0/solution1/top.cc:208]   --->   Operation 482 'add' 'now2_V_3' <Predicate = (!tmp_110)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 483 [1/1] (0.00ns)   --->   "%loc2_V_3 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %op_V_assign, i1 false)" [HTA128_0/solution1/top.cc:208]   --->   Operation 483 'bitconcatenate' 'loc2_V_3' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 484 [1/1] (0.00ns)   --->   "%loc2_V_2_cast = zext i9 %loc2_V_3 to i13" [HTA128_0/solution1/top.cc:208]   --->   Operation 484 'zext' 'loc2_V_2_cast' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 485 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HTA128_0/solution1/top.cc:209]   --->   Operation 485 'wait' <Predicate = (!tmp_110)> <Delay = 0.00>
+ST_34 : Operation 486 [1/1] (1.76ns)   --->   "store i13 %loc1_V_8_cast, i13* %loc1_V_7" [HTA128_0/solution1/top.cc:208]   --->   Operation 486 'store' <Predicate = (!tmp_110)> <Delay = 1.76>
+ST_34 : Operation 487 [1/1] (1.76ns)   --->   "store i13 %loc2_V_2_cast, i13* %loc2_V" [HTA128_0/solution1/top.cc:208]   --->   Operation 487 'store' <Predicate = (!tmp_110)> <Delay = 1.76>
+ST_34 : Operation 488 [1/1] (1.76ns)   --->   "store i64 %p_03180_1, i64* %rhs_V_4" [HTA128_0/solution1/top.cc:189]   --->   Operation 488 'store' <Predicate = (!tmp_110)> <Delay = 1.76>
+ST_34 : Operation 489 [1/1] (1.76ns)   --->   "store i32 1, i32* %cnt_1"   --->   Operation 489 'store' <Predicate = (!tmp_110)> <Delay = 1.76>
+ST_34 : Operation 490 [1/1] (1.76ns)   --->   "br label %21" [HTA128_0/solution1/top.cc:210]   --->   Operation 490 'br' <Predicate = (!tmp_110)> <Delay = 1.76>
+ST_34 : Operation 491 [1/1] (0.00ns)   --->   "%tmp_69 = zext i2 %p_7 to i64" [HTA128_0/solution1/top.cc:234]   --->   Operation 491 'zext' 'tmp_69' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 492 [1/1] (0.00ns)   --->   "%mark_mask_V_addr_1 = getelementptr [32 x i4]* @mark_mask_V, i64 0, i64 %tmp_69" [HTA128_0/solution1/top.cc:234]   --->   Operation 492 'getelementptr' 'mark_mask_V_addr_1' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 493 [2/2] (3.25ns)   --->   "%mark_mask_V_load = load i4* %mark_mask_V_addr_1, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 493 'load' 'mark_mask_V_load' <Predicate = (tmp_110)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_34 : Operation 494 [1/1] (0.00ns)   --->   "%newIndex12 = call i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8 %op_V_assign, i32 1, i32 7)" [HTA128_0/solution1/top.cc:164]   --->   Operation 494 'partselect' 'newIndex12' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 495 [1/1] (0.00ns)   --->   "%newIndex13 = zext i7 %newIndex12 to i64" [HTA128_0/solution1/top.cc:164]   --->   Operation 495 'zext' 'newIndex13' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 496 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr_4 = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex13" [HTA128_0/solution1/top.cc:234]   --->   Operation 496 'getelementptr' 'group_tree_V_1_addr_4' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 497 [2/2] (2.32ns)   --->   "%group_tree_V_1_load_2 = load i4* %group_tree_V_1_addr_4, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 497 'load' 'group_tree_V_1_load_2' <Predicate = (tmp_110)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_34 : Operation 498 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr_4 = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex13" [HTA128_0/solution1/top.cc:234]   --->   Operation 498 'getelementptr' 'group_tree_V_0_addr_4' <Predicate = (tmp_110)> <Delay = 0.00>
+ST_34 : Operation 499 [2/2] (2.32ns)   --->   "%group_tree_V_0_load_2 = load i4* %group_tree_V_0_addr_4, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 499 'load' 'group_tree_V_0_load_2' <Predicate = (tmp_110)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+
+State 35 <SV = 11> <Delay = 7.32>
+ST_35 : Operation 500 [1/1] (0.00ns)   --->   "%p_1 = phi i4 [ %now1_V_6, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit240 ], [ %now1_V_5, %._crit_edge4963 ]"   --->   Operation 500 'phi' 'p_1' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 501 [1/1] (0.00ns)   --->   "%p_2 = phi i4 [ %now2_V_3, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit240 ], [ %now2_V_1, %._crit_edge4963 ]"   --->   Operation 501 'phi' 'p_2' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 502 [1/1] (0.00ns)   --->   "%tmp_121 = call i1 @_ssdm_op_BitSelect.i1.i4.i32(i4 %p_1, i32 3)" [HTA128_0/solution1/top.cc:210]   --->   Operation 502 'bitselect' 'tmp_121' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 503 [1/1] (0.00ns) (grouped into LUT with out node tmp_72)   --->   "%rev = xor i1 %tmp_121, true" [HTA128_0/solution1/top.cc:210]   --->   Operation 503 'xor' 'rev' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 504 [1/1] (1.30ns)   --->   "%op2_assign_7 = icmp ne i4 %p_2, 0" [HTA128_0/solution1/top.cc:210]   --->   Operation 504 'icmp' 'op2_assign_7' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 505 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_72 = or i1 %op2_assign_7, %rev" [HTA128_0/solution1/top.cc:210]   --->   Operation 505 'or' 'tmp_72' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 506 [1/1] (0.00ns)   --->   "br i1 %tmp_72, label %22, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit174" [HTA128_0/solution1/top.cc:210]   --->   Operation 506 'br' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 507 [1/1] (0.00ns)   --->   "%tmp_75 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str18)" [HTA128_0/solution1/top.cc:211]   --->   Operation 507 'specregionbegin' 'tmp_75' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_35 : Operation 508 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [HTA128_0/solution1/top.cc:213]   --->   Operation 508 'specpipeline' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_35 : Operation 509 [1/1] (0.00ns)   --->   "br i1 %tmp_121, label %._crit_edge4962, label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit193_ifconv" [HTA128_0/solution1/top.cc:214]   --->   Operation 509 'br' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_35 : Operation 510 [1/1] (0.00ns)   --->   "%cnt_1_load = load i32* %cnt_1"   --->   Operation 510 'load' 'cnt_1_load' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 511 [1/1] (0.00ns)   --->   "%loc2_V_load = load i13* %loc2_V" [HTA128_0/solution1/top.cc:216]   --->   Operation 511 'load' 'loc2_V_load' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 512 [1/1] (0.00ns)   --->   "%tmp_125 = trunc i32 %cnt_1_load to i2"   --->   Operation 512 'trunc' 'tmp_125' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 513 [1/1] (0.00ns)   --->   "%newIndex_t = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %cnt_1_load, i32 2, i32 3)"   --->   Operation 513 'partselect' 'newIndex_t' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 514 [1/1] (0.00ns)   --->   "%tmp_126 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %cnt_1_load, i32 2)"   --->   Operation 514 'bitselect' 'tmp_126' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 515 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp3)   --->   "%mask_V_load_114_phi_s = select i1 %tmp_126, i64 -1, i64 255" [HTA128_0/solution1/top.cc:216]   --->   Operation 515 'select' 'mask_V_load_114_phi_s' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_35 : Operation 516 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp3)   --->   "%tmp_80 = call i64 @_ssdm_op_Mux.ap_auto.3i64.i2(i64 1, i64 65535, i64 0, i2 %newIndex_t)"   --->   Operation 516 'mux' 'tmp_80' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 517 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp3)   --->   "%tmp_81 = call i64 @_ssdm_op_Mux.ap_auto.3i64.i2(i64 3, i64 4294967295, i64 0, i2 %newIndex_t)"   --->   Operation 517 'mux' 'tmp_81' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 518 [1/1] (0.00ns) (grouped into LUT with out node rhs_V_6)   --->   "%mask_V_load_113_phi_s = select i1 %tmp_126, i64 4294967295, i64 15" [HTA128_0/solution1/top.cc:216]   --->   Operation 518 'select' 'mask_V_load_113_phi_s' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_35 : Operation 519 [1/1] (0.95ns)   --->   "%sel_tmp = icmp eq i2 %tmp_125, 0" [HTA128_0/solution1/top.cc:216]   --->   Operation 519 'icmp' 'sel_tmp' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 520 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp3)   --->   "%sel_tmp1 = select i1 %sel_tmp, i64 %tmp_80, i64 %mask_V_load_114_phi_s" [HTA128_0/solution1/top.cc:216]   --->   Operation 520 'select' 'sel_tmp1' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_35 : Operation 521 [1/1] (0.95ns)   --->   "%sel_tmp2 = icmp eq i2 %tmp_125, 1" [HTA128_0/solution1/top.cc:216]   --->   Operation 521 'icmp' 'sel_tmp2' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 522 [1/1] (1.77ns) (out node of the LUT)   --->   "%sel_tmp3 = select i1 %sel_tmp2, i64 %tmp_81, i64 %sel_tmp1" [HTA128_0/solution1/top.cc:216]   --->   Operation 522 'select' 'sel_tmp3' <Predicate = (tmp_72 & !tmp_121)> <Delay = 1.77> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_35 : Operation 523 [1/1] (0.95ns)   --->   "%sel_tmp4 = icmp eq i2 %tmp_125, -2" [HTA128_0/solution1/top.cc:216]   --->   Operation 523 'icmp' 'sel_tmp4' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 524 [1/1] (0.00ns) (grouped into LUT with out node rhs_V_6)   --->   "%mask_V_load_1_phi = select i1 %sel_tmp4, i64 %mask_V_load_113_phi_s, i64 %sel_tmp3" [HTA128_0/solution1/top.cc:216]   --->   Operation 524 'select' 'mask_V_load_1_phi' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_35 : Operation 525 [1/1] (0.00ns) (grouped into LUT with out node rhs_V_6)   --->   "%tmp_82 = zext i13 %loc2_V_load to i64" [HTA128_0/solution1/top.cc:216]   --->   Operation 525 'zext' 'tmp_82' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 526 [1/1] (0.00ns) (grouped into LUT with out node rhs_V_6)   --->   "%r_V_19 = shl i64 %mask_V_load_1_phi, %tmp_82" [HTA128_0/solution1/top.cc:216]   --->   Operation 526 'shl' 'r_V_19' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 527 [1/1] (4.59ns) (out node of the LUT)   --->   "%rhs_V_6 = xor i64 %r_V_19, -1" [HTA128_0/solution1/top.cc:216]   --->   Operation 527 'xor' 'rhs_V_6' <Predicate = (tmp_72 & !tmp_121)> <Delay = 4.59> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 528 [1/1] (0.00ns)   --->   "%newIndex16 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %p_1, i32 1, i32 3)" [HTA128_0/solution1/top.cc:208]   --->   Operation 528 'partselect' 'newIndex16' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 529 [1/1] (0.00ns)   --->   "%newIndex17 = zext i3 %newIndex16 to i64" [HTA128_0/solution1/top.cc:208]   --->   Operation 529 'zext' 'newIndex17' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 530 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_9 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex17" [HTA128_0/solution1/top.cc:217]   --->   Operation 530 'getelementptr' 'buddy_tree_V_1_addr_9' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 531 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_7 = load i64* %buddy_tree_V_1_addr_9, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 531 'load' 'buddy_tree_V_1_load_7' <Predicate = (tmp_72 & !tmp_121)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_35 : Operation 532 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_9 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex17" [HTA128_0/solution1/top.cc:217]   --->   Operation 532 'getelementptr' 'buddy_tree_V_0_addr_9' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_35 : Operation 533 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_8 = load i64* %buddy_tree_V_0_addr_9, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 533 'load' 'buddy_tree_V_0_load_8' <Predicate = (tmp_72 & !tmp_121)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_35 : Operation 534 [1/1] (1.30ns)   --->   "%tmp_84 = icmp eq i4 %p_2, 0" [HTA128_0/solution1/top.cc:221]   --->   Operation 534 'icmp' 'tmp_84' <Predicate = (tmp_72)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 535 [1/1] (0.00ns)   --->   "br i1 %tmp_84, label %._crit_edge4963, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit182_ifconv" [HTA128_0/solution1/top.cc:221]   --->   Operation 535 'br' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_35 : Operation 536 [1/1] (0.00ns)   --->   "%tmp_132 = trunc i4 %p_2 to i1" [HTA128_0/solution1/top.cc:208]   --->   Operation 536 'trunc' 'tmp_132' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_35 : Operation 537 [1/1] (0.00ns)   --->   "%newIndex22 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %p_2, i32 1, i32 3)" [HTA128_0/solution1/top.cc:208]   --->   Operation 537 'partselect' 'newIndex22' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_35 : Operation 538 [1/1] (0.00ns)   --->   "%newIndex23 = zext i3 %newIndex22 to i64" [HTA128_0/solution1/top.cc:208]   --->   Operation 538 'zext' 'newIndex23' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_35 : Operation 539 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_13 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex23" [HTA128_0/solution1/top.cc:223]   --->   Operation 539 'getelementptr' 'buddy_tree_V_1_addr_13' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_35 : Operation 540 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_9 = load i64* %buddy_tree_V_1_addr_13, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 540 'load' 'buddy_tree_V_1_load_9' <Predicate = (tmp_72 & !tmp_84)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_35 : Operation 541 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_13 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex23" [HTA128_0/solution1/top.cc:223]   --->   Operation 541 'getelementptr' 'buddy_tree_V_0_addr_13' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_35 : Operation 542 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_11 = load i64* %buddy_tree_V_0_addr_13, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 542 'load' 'buddy_tree_V_0_load_11' <Predicate = (tmp_72 & !tmp_84)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 36 <SV = 12> <Delay = 7.98>
+ST_36 : Operation 543 [1/1] (0.00ns)   --->   "%tmp_127 = trunc i4 %p_1 to i1" [HTA128_0/solution1/top.cc:208]   --->   Operation 543 'trunc' 'tmp_127' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 544 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_7 = load i64* %buddy_tree_V_1_addr_9, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 544 'load' 'buddy_tree_V_1_load_7' <Predicate = (tmp_72 & !tmp_121)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 545 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_8 = load i64* %buddy_tree_V_0_addr_9, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 545 'load' 'buddy_tree_V_0_load_8' <Predicate = (tmp_72 & !tmp_121)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 546 [1/1] (0.00ns) (grouped into LUT with out node r_V_20)   --->   "%lhs_V_4 = select i1 %tmp_127, i64 %buddy_tree_V_1_load_7, i64 %buddy_tree_V_0_load_8" [HTA128_0/solution1/top.cc:217]   --->   Operation 546 'select' 'lhs_V_4' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_36 : Operation 547 [1/1] (1.48ns) (out node of the LUT)   --->   "%r_V_20 = and i64 %lhs_V_4, %rhs_V_6" [HTA128_0/solution1/top.cc:217]   --->   Operation 547 'and' 'r_V_20' <Predicate = (tmp_72 & !tmp_121)> <Delay = 1.48> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 548 [1/1] (0.00ns)   --->   "br i1 %tmp_127, label %branch17, label %branch16" [HTA128_0/solution1/top.cc:217]   --->   Operation 548 'br' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 549 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_12 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex17" [HTA128_0/solution1/top.cc:217]   --->   Operation 549 'getelementptr' 'buddy_tree_V_0_addr_12' <Predicate = (tmp_72 & !tmp_121 & !tmp_127)> <Delay = 0.00>
+ST_36 : Operation 550 [1/1] (3.25ns)   --->   "store i64 %r_V_20, i64* %buddy_tree_V_0_addr_12, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 550 'store' <Predicate = (tmp_72 & !tmp_121 & !tmp_127)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 551 [1/1] (0.00ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit193105962" [HTA128_0/solution1/top.cc:217]   --->   Operation 551 'br' <Predicate = (tmp_72 & !tmp_121 & !tmp_127)> <Delay = 0.00>
+ST_36 : Operation 552 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_12 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex17" [HTA128_0/solution1/top.cc:217]   --->   Operation 552 'getelementptr' 'buddy_tree_V_1_addr_12' <Predicate = (tmp_72 & !tmp_121 & tmp_127)> <Delay = 0.00>
+ST_36 : Operation 553 [1/1] (3.25ns)   --->   "store i64 %r_V_20, i64* %buddy_tree_V_1_addr_12, align 8" [HTA128_0/solution1/top.cc:217]   --->   Operation 553 'store' <Predicate = (tmp_72 & !tmp_121 & tmp_127)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 554 [1/1] (0.00ns)   --->   "br label %_ZlSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit193105962" [HTA128_0/solution1/top.cc:217]   --->   Operation 554 'br' <Predicate = (tmp_72 & !tmp_121 & tmp_127)> <Delay = 0.00>
+ST_36 : Operation 555 [1/1] (0.00ns)   --->   "%cnt_1_load_1 = load i32* %cnt_1" [HTA128_0/solution1/top.cc:219]   --->   Operation 555 'load' 'cnt_1_load_1' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 556 [1/1] (0.00ns)   --->   "%loc2_V_load_1 = load i13* %loc2_V" [HTA128_0/solution1/top.cc:218]   --->   Operation 556 'load' 'loc2_V_load_1' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 557 [1/1] (0.00ns)   --->   "%loc2_V_2 = shl i13 %loc2_V_load_1, 1" [HTA128_0/solution1/top.cc:218]   --->   Operation 557 'shl' 'loc2_V_2' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 558 [1/1] (2.55ns)   --->   "%cnt_2 = add nsw i32 1, %cnt_1_load_1" [HTA128_0/solution1/top.cc:219]   --->   Operation 558 'add' 'cnt_2' <Predicate = (tmp_72 & !tmp_121)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 559 [1/1] (1.76ns)   --->   "store i13 %loc2_V_2, i13* %loc2_V" [HTA128_0/solution1/top.cc:218]   --->   Operation 559 'store' <Predicate = (tmp_72 & !tmp_121)> <Delay = 1.76>
+ST_36 : Operation 560 [1/1] (1.76ns)   --->   "store i64 %rhs_V_6, i64* %rhs_V_4" [HTA128_0/solution1/top.cc:217]   --->   Operation 560 'store' <Predicate = (tmp_72 & !tmp_121)> <Delay = 1.76>
+ST_36 : Operation 561 [1/1] (1.76ns)   --->   "store i32 %cnt_2, i32* %cnt_1" [HTA128_0/solution1/top.cc:219]   --->   Operation 561 'store' <Predicate = (tmp_72 & !tmp_121)> <Delay = 1.76>
+ST_36 : Operation 562 [1/1] (0.00ns)   --->   "br label %._crit_edge4962" [HTA128_0/solution1/top.cc:220]   --->   Operation 562 'br' <Predicate = (tmp_72 & !tmp_121)> <Delay = 0.00>
+ST_36 : Operation 563 [1/1] (0.00ns)   --->   "%loc1_V_7_load = load i13* %loc1_V_7" [HTA128_0/solution1/top.cc:223]   --->   Operation 563 'load' 'loc1_V_7_load' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 564 [1/1] (0.00ns)   --->   "%i_assign_4 = zext i13 %loc1_V_7_load to i32" [HTA128_0/solution1/top.cc:223]   --->   Operation 564 'zext' 'i_assign_4' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 565 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_9 = load i64* %buddy_tree_V_1_addr_13, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 565 'load' 'buddy_tree_V_1_load_9' <Predicate = (tmp_72 & !tmp_84)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 566 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_11 = load i64* %buddy_tree_V_0_addr_13, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 566 'load' 'buddy_tree_V_0_load_11' <Predicate = (tmp_72 & !tmp_84)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 567 [1/1] (1.48ns)   --->   "%p_Val2_15 = select i1 %tmp_132, i64 %buddy_tree_V_1_load_9, i64 %buddy_tree_V_0_load_11" [HTA128_0/solution1/top.cc:223]   --->   Operation 567 'select' 'p_Val2_15' <Predicate = (tmp_72 & !tmp_84)> <Delay = 1.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_36 : Operation 568 [1/1] (0.00ns)   --->   "%p_Result_7 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_15, i32 %i_assign_4, i1 false)" [HTA128_0/solution1/top.cc:223]   --->   Operation 568 'bitset' 'p_Result_7' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 569 [1/1] (0.00ns)   --->   "br i1 %tmp_132, label %branch21, label %branch20" [HTA128_0/solution1/top.cc:223]   --->   Operation 569 'br' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 570 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_14 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex23" [HTA128_0/solution1/top.cc:223]   --->   Operation 570 'getelementptr' 'buddy_tree_V_0_addr_14' <Predicate = (tmp_72 & !tmp_84 & !tmp_132)> <Delay = 0.00>
+ST_36 : Operation 571 [1/1] (3.25ns)   --->   "store i64 %p_Result_7, i64* %buddy_tree_V_0_addr_14, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 571 'store' <Predicate = (tmp_72 & !tmp_84 & !tmp_132)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 572 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1826972" [HTA128_0/solution1/top.cc:223]   --->   Operation 572 'br' <Predicate = (tmp_72 & !tmp_84 & !tmp_132)> <Delay = 0.00>
+ST_36 : Operation 573 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_14 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex23" [HTA128_0/solution1/top.cc:223]   --->   Operation 573 'getelementptr' 'buddy_tree_V_1_addr_14' <Predicate = (tmp_72 & !tmp_84 & tmp_132)> <Delay = 0.00>
+ST_36 : Operation 574 [1/1] (3.25ns)   --->   "store i64 %p_Result_7, i64* %buddy_tree_V_1_addr_14, align 8" [HTA128_0/solution1/top.cc:223]   --->   Operation 574 'store' <Predicate = (tmp_72 & !tmp_84 & tmp_132)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_36 : Operation 575 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit1826972" [HTA128_0/solution1/top.cc:223]   --->   Operation 575 'br' <Predicate = (tmp_72 & !tmp_84 & tmp_132)> <Delay = 0.00>
+ST_36 : Operation 576 [1/1] (0.00ns)   --->   "%loc1_V_7_load_1 = load i13* %loc1_V_7" [HTA128_0/solution1/top.cc:224]   --->   Operation 576 'load' 'loc1_V_7_load_1' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 577 [1/1] (0.00ns)   --->   "%loc1_V_6 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %loc1_V_7_load_1, i32 1, i32 12)" [HTA128_0/solution1/top.cc:224]   --->   Operation 577 'partselect' 'loc1_V_6' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 578 [1/1] (0.00ns)   --->   "%loc1_V_9 = zext i12 %loc1_V_6 to i13" [HTA128_0/solution1/top.cc:224]   --->   Operation 578 'zext' 'loc1_V_9' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 579 [1/1] (1.76ns)   --->   "store i13 %loc1_V_9, i13* %loc1_V_7" [HTA128_0/solution1/top.cc:224]   --->   Operation 579 'store' <Predicate = (tmp_72 & !tmp_84)> <Delay = 1.76>
+ST_36 : Operation 580 [1/1] (0.00ns)   --->   "br label %._crit_edge4963" [HTA128_0/solution1/top.cc:225]   --->   Operation 580 'br' <Predicate = (tmp_72 & !tmp_84)> <Delay = 0.00>
+ST_36 : Operation 581 [1/1] (0.00ns)   --->   "%empty_52 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str18, i32 %tmp_75)" [HTA128_0/solution1/top.cc:226]   --->   Operation 581 'specregionend' 'empty_52' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_36 : Operation 582 [1/1] (1.30ns)   --->   "%op2_assign_6 = icmp ne i4 %p_1, -8" [HTA128_0/solution1/top.cc:210]   --->   Operation 582 'icmp' 'op2_assign_6' <Predicate = (tmp_72)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 583 [1/1] (0.00ns)   --->   "%tmp_85 = zext i1 %op2_assign_6 to i4" [HTA128_0/solution1/top.cc:210]   --->   Operation 583 'zext' 'tmp_85' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_36 : Operation 584 [1/1] (1.73ns)   --->   "%now1_V_5 = add i4 %tmp_85, %p_1" [HTA128_0/solution1/top.cc:210]   --->   Operation 584 'add' 'now1_V_5' <Predicate = (tmp_72)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 585 [1/1] (0.00ns)   --->   "%tmp_86 = zext i1 %op2_assign_7 to i4" [HTA128_0/solution1/top.cc:210]   --->   Operation 585 'zext' 'tmp_86' <Predicate = (tmp_72)> <Delay = 0.00>
+ST_36 : Operation 586 [1/1] (1.73ns)   --->   "%now2_V_1 = sub i4 %p_2, %tmp_86" [HTA128_0/solution1/top.cc:210]   --->   Operation 586 'sub' 'now2_V_1' <Predicate = (tmp_72)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 587 [1/1] (0.00ns)   --->   "br label %21" [HTA128_0/solution1/top.cc:210]   --->   Operation 587 'br' <Predicate = (tmp_72)> <Delay = 0.00>
+
+State 37 <SV = 12> <Delay = 3.25>
+ST_37 : Operation 588 [2/2] (3.25ns)   --->   "%lhs_V_2 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:229]   --->   Operation 588 'load' 'lhs_V_2' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 38 <SV = 13> <Delay = 7.49>
+ST_38 : Operation 589 [1/1] (0.00ns)   --->   "%rhs_V_4_load = load i64* %rhs_V_4" [HTA128_0/solution1/top.cc:229]   --->   Operation 589 'load' 'rhs_V_4_load' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 0.00>
+ST_38 : Operation 590 [1/2] (3.25ns)   --->   "%lhs_V_2 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:229]   --->   Operation 590 'load' 'lhs_V_2' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_38 : Operation 591 [1/1] (0.99ns)   --->   "%r_V_16 = and i64 %lhs_V_2, %rhs_V_4_load" [HTA128_0/solution1/top.cc:229]   --->   Operation 591 'and' 'r_V_16' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 592 [1/1] (3.25ns)   --->   "store i64 %r_V_16, i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:229]   --->   Operation 592 'store' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_38 : Operation 593 [1/1] (0.00ns)   --->   "%empty_53 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str16, i32 %tmp_3)" [HTA128_0/solution1/top.cc:294]   --->   Operation 593 'specregionend' 'empty_53' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 0.00>
+ST_38 : Operation 594 [1/1] (0.00ns)   --->   "br label %32" [HTA128_0/solution1/top.cc:295]   --->   Operation 594 'br' <Predicate = (tmp & !tmp_22 & !tmp_110)> <Delay = 0.00>
+ST_38 : Operation 595 [1/1] (0.00ns)   --->   "%i_assign_2 = zext i8 %op_V_assign to i32" [HTA128_0/solution1/top.cc:292]   --->   Operation 595 'zext' 'i_assign_2' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 0.00>
+ST_38 : Operation 596 [1/2] (3.25ns)   --->   "%p_Val2_14 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:292]   --->   Operation 596 'load' 'p_Val2_14' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_38 : Operation 597 [1/1] (0.00ns)   --->   "%p_Result_6 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %p_Val2_14, i32 %i_assign_2, i1 %p_Repl2_6)" [HTA128_0/solution1/top.cc:292]   --->   Operation 597 'bitset' 'p_Result_6' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 0.00>
+ST_38 : Operation 598 [1/1] (3.25ns)   --->   "store i64 %p_Result_6, i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:229]   --->   Operation 598 'store' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_38 : Operation 599 [1/1] (0.00ns)   --->   "%empty_55 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str16, i32 %tmp_3)" [HTA128_0/solution1/top.cc:294]   --->   Operation 599 'specregionend' 'empty_55' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 0.00>
+ST_38 : Operation 600 [1/1] (0.00ns)   --->   "br label %32" [HTA128_0/solution1/top.cc:295]   --->   Operation 600 'br' <Predicate = (tmp & !tmp_22 & tmp_110)> <Delay = 0.00>
+ST_38 : Operation 601 [1/1] (0.00ns)   --->   "%empty_58 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str14, i32 %tmp_1)" [HTA128_0/solution1/top.cc:406]   --->   Operation 601 'specregionend' 'empty_58' <Predicate = (!tmp) | (!tmp_22)> <Delay = 0.00>
+ST_38 : Operation 602 [1/1] (0.00ns)   --->   "br label %33" [HTA128_0/solution1/top.cc:432]   --->   Operation 602 'br' <Predicate = (!tmp) | (!tmp_22)> <Delay = 0.00>
+ST_38 : Operation 603 [1/1] (0.00ns)   --->   "%empty_59 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str14, i32 %tmp_1)" [HTA128_0/solution1/top.cc:119]   --->   Operation 603 'specregionend' 'empty_59' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 604 [1/1] (0.00ns)   --->   "ret void" [HTA128_0/solution1/top.cc:432]   --->   Operation 604 'ret' <Predicate = true> <Delay = 0.00>
+
+State 39 <SV = 11> <Delay = 6.64>
+ST_39 : Operation 605 [1/2] (3.25ns)   --->   "%mark_mask_V_load = load i4* %mark_mask_V_addr_1, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 605 'load' 'mark_mask_V_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 32> <ROM>
+ST_39 : Operation 606 [1/1] (0.00ns) (grouped into LUT with out node p_6_cast)   --->   "%tmp_116 = trunc i4 %mark_mask_V_load to i2" [HTA128_0/solution1/top.cc:234]   --->   Operation 606 'trunc' 'tmp_116' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 607 [1/1] (0.00ns) (grouped into LUT with out node p_6)   --->   "%rhs_i_i = xor i4 %mark_mask_V_load, -1" [HTA128_0/solution1/top.cc:234]   --->   Operation 607 'xor' 'rhs_i_i' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 608 [1/1] (0.00ns)   --->   "%tmp_117 = trunc i8 %op_V_assign to i1" [HTA128_0/solution1/top.cc:164]   --->   Operation 608 'trunc' 'tmp_117' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 609 [1/2] (2.32ns)   --->   "%group_tree_V_1_load_2 = load i4* %group_tree_V_1_addr_4, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 609 'load' 'group_tree_V_1_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_39 : Operation 610 [1/2] (2.32ns)   --->   "%group_tree_V_0_load_2 = load i4* %group_tree_V_0_addr_4, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 610 'load' 'group_tree_V_0_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_39 : Operation 611 [1/1] (1.02ns)   --->   "%group_tree_V_load_3_s = select i1 %tmp_117, i4 %group_tree_V_1_load_2, i4 %group_tree_V_0_load_2" [HTA128_0/solution1/top.cc:234]   --->   Operation 611 'select' 'group_tree_V_load_3_s' <Predicate = true> <Delay = 1.02> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 612 [1/1] (0.00ns) (grouped into LUT with out node p_6_cast)   --->   "%tmp_70 = xor i2 %tmp_116, -1" [HTA128_0/solution1/top.cc:234]   --->   Operation 612 'xor' 'tmp_70' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 613 [1/1] (0.00ns) (grouped into LUT with out node p_6_cast)   --->   "%tmp_118 = trunc i4 %group_tree_V_load_3_s to i2" [HTA128_0/solution1/top.cc:234]   --->   Operation 613 'trunc' 'tmp_118' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 614 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_6 = and i4 %group_tree_V_load_3_s, %rhs_i_i" [HTA128_0/solution1/top.cc:234]   --->   Operation 614 'and' 'p_6' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 615 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_6_cast = and i2 %tmp_118, %tmp_70" [HTA128_0/solution1/top.cc:234]   --->   Operation 615 'and' 'p_6_cast' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 616 [1/1] (0.00ns)   --->   "br i1 %tmp_117, label %branch45, label %branch44" [HTA128_0/solution1/top.cc:234]   --->   Operation 616 'br' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 617 [1/1] (0.00ns)   --->   "%group_tree_V_0_addr_5 = getelementptr [35 x i4]* @group_tree_V_0, i64 0, i64 %newIndex13" [HTA128_0/solution1/top.cc:234]   --->   Operation 617 'getelementptr' 'group_tree_V_0_addr_5' <Predicate = (!tmp_117)> <Delay = 0.00>
+ST_39 : Operation 618 [1/1] (2.32ns)   --->   "store i4 %p_6, i4* %group_tree_V_0_addr_5, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 618 'store' <Predicate = (!tmp_117)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_39 : Operation 619 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.preheader128131" [HTA128_0/solution1/top.cc:234]   --->   Operation 619 'br' <Predicate = (!tmp_117)> <Delay = 0.00>
+ST_39 : Operation 620 [1/1] (0.00ns)   --->   "%group_tree_V_1_addr_5 = getelementptr [35 x i4]* @group_tree_V_1, i64 0, i64 %newIndex13" [HTA128_0/solution1/top.cc:234]   --->   Operation 620 'getelementptr' 'group_tree_V_1_addr_5' <Predicate = (tmp_117)> <Delay = 0.00>
+ST_39 : Operation 621 [1/1] (2.32ns)   --->   "store i4 %p_6, i4* %group_tree_V_1_addr_5, align 1" [HTA128_0/solution1/top.cc:234]   --->   Operation 621 'store' <Predicate = (tmp_117)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 35> <RAM>
+ST_39 : Operation 622 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.preheader128131" [HTA128_0/solution1/top.cc:234]   --->   Operation 622 'br' <Predicate = (tmp_117)> <Delay = 0.00>
+ST_39 : Operation 623 [1/1] (1.76ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.0" [HTA128_0/solution1/top.cc:262]   --->   Operation 623 'br' <Predicate = true> <Delay = 1.76>
+
+State 40 <SV = 12> <Delay = 4.90>
+ST_40 : Operation 624 [1/1] (0.00ns)   --->   "%p_03220_5_in = phi i8 [ %tmp_83, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit151.0 ], [ %op_V_assign, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.preheader128131 ]" [HTA128_0/solution1/top.cc:262]   --->   Operation 624 'phi' 'p_03220_5_in' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 625 [1/1] (0.00ns)   --->   "%p_03228_1 = phi i3 [ %now2_V_s, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit151.0 ], [ -2, %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.preheader128131 ]" [HTA128_0/solution1/top.cc:262]   --->   Operation 625 'phi' 'p_03228_1' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 626 [1/1] (0.00ns)   --->   "%empty_54 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 626 'speclooptripcount' 'empty_54' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 627 [1/1] (1.13ns)   --->   "%tmp_78 = icmp eq i3 %p_03228_1, 0" [HTA128_0/solution1/top.cc:262]   --->   Operation 627 'icmp' 'tmp_78' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 628 [1/1] (0.00ns)   --->   "br i1 %tmp_78, label %23, label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit151.0" [HTA128_0/solution1/top.cc:262]   --->   Operation 628 'br' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 629 [1/1] (0.00ns)   --->   "%newIndex18 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %p_03228_1, i32 1, i32 2)" [HTA128_0/solution1/top.cc:262]   --->   Operation 629 'partselect' 'newIndex18' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 630 [1/1] (0.00ns)   --->   "%newIndex19 = zext i2 %newIndex18 to i64" [HTA128_0/solution1/top.cc:262]   --->   Operation 630 'zext' 'newIndex19' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 631 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_10 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex19" [HTA128_0/solution1/top.cc:262]   --->   Operation 631 'getelementptr' 'buddy_tree_V_0_addr_10' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 632 [2/2] (3.25ns)   --->   "%buddy_tree_V_0_load_10 = load i64* %buddy_tree_V_0_addr_10, align 16" [HTA128_0/solution1/top.cc:265]   --->   Operation 632 'load' 'buddy_tree_V_0_load_10' <Predicate = (!tmp_78)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_40 : Operation 633 [1/1] (1.65ns)   --->   "%now2_V = add i3 %p_03228_1, -1" [HTA128_0/solution1/top.cc:262]   --->   Operation 633 'add' 'now2_V' <Predicate = (!tmp_78)> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 634 [1/1] (0.00ns)   --->   "%newIndex20 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %now2_V, i32 1, i32 2)" [HTA128_0/solution1/top.cc:262]   --->   Operation 634 'partselect' 'newIndex20' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 635 [1/1] (0.00ns)   --->   "%newIndex21 = zext i2 %newIndex20 to i64" [HTA128_0/solution1/top.cc:262]   --->   Operation 635 'zext' 'newIndex21' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 636 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_10 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex21" [HTA128_0/solution1/top.cc:262]   --->   Operation 636 'getelementptr' 'buddy_tree_V_1_addr_10' <Predicate = (!tmp_78)> <Delay = 0.00>
+ST_40 : Operation 637 [2/2] (3.25ns)   --->   "%buddy_tree_V_1_load_8 = load i64* %buddy_tree_V_1_addr_10, align 8" [HTA128_0/solution1/top.cc:265]   --->   Operation 637 'load' 'buddy_tree_V_1_load_8' <Predicate = (!tmp_78)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_40 : Operation 638 [1/1] (1.65ns)   --->   "%now2_V_s = add i3 %p_03228_1, -2" [HTA128_0/solution1/top.cc:262]   --->   Operation 638 'add' 'now2_V_s' <Predicate = (!tmp_78)> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 639 [1/1] (0.95ns)   --->   "%p_Repl2_6 = icmp ne i2 %p_6_cast, 0" [HTA128_0/solution1/top.cc:292]   --->   Operation 639 'icmp' 'p_Repl2_6' <Predicate = (tmp_78)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 640 [2/2] (3.25ns)   --->   "%p_Val2_14 = load i64* getelementptr inbounds ([8 x i64]* @buddy_tree_V_0, i64 0, i64 4), align 16" [HTA128_0/solution1/top.cc:292]   --->   Operation 640 'load' 'p_Val2_14' <Predicate = (tmp_78)> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 41 <SV = 13> <Delay = 6.50>
+ST_41 : Operation 641 [1/1] (0.00ns)   --->   "%loc1_V_s = call i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8 %p_03220_5_in, i32 1, i32 7)" [HTA128_0/solution1/top.cc:262]   --->   Operation 641 'partselect' 'loc1_V_s' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 642 [1/1] (0.00ns)   --->   "%i_assign_3 = zext i7 %loc1_V_s to i32" [HTA128_0/solution1/top.cc:265]   --->   Operation 642 'zext' 'i_assign_3' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 643 [1/2] (3.25ns)   --->   "%buddy_tree_V_0_load_10 = load i64* %buddy_tree_V_0_addr_10, align 16" [HTA128_0/solution1/top.cc:265]   --->   Operation 643 'load' 'buddy_tree_V_0_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_41 : Operation 644 [1/1] (0.00ns)   --->   "%tmp_129 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %buddy_tree_V_0_load_10, i32 %i_assign_3, i1 false)" [HTA128_0/solution1/top.cc:265]   --->   Operation 644 'bitset' 'tmp_129' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 645 [1/1] (0.00ns)   --->   "%buddy_tree_V_0_addr_11 = getelementptr [8 x i64]* @buddy_tree_V_0, i64 0, i64 %newIndex19" [HTA128_0/solution1/top.cc:262]   --->   Operation 645 'getelementptr' 'buddy_tree_V_0_addr_11' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 646 [1/1] (3.25ns)   --->   "store i64 %tmp_129, i64* %buddy_tree_V_0_addr_11, align 16" [HTA128_0/solution1/top.cc:265]   --->   Operation 646 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_41 : Operation 647 [1/1] (0.00ns)   --->   "%loc1_V_7_1 = call i6 @_ssdm_op_PartSelect.i6.i8.i32.i32(i8 %p_03220_5_in, i32 2, i32 7)" [HTA128_0/solution1/top.cc:262]   --->   Operation 647 'partselect' 'loc1_V_7_1' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 648 [1/1] (0.00ns)   --->   "%tmp_83 = zext i6 %loc1_V_7_1 to i8" [HTA128_0/solution1/top.cc:262]   --->   Operation 648 'zext' 'tmp_83' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 649 [1/1] (0.00ns)   --->   "%i_assign_3_1 = zext i6 %loc1_V_7_1 to i32" [HTA128_0/solution1/top.cc:265]   --->   Operation 649 'zext' 'i_assign_3_1' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 650 [1/2] (3.25ns)   --->   "%buddy_tree_V_1_load_8 = load i64* %buddy_tree_V_1_addr_10, align 8" [HTA128_0/solution1/top.cc:265]   --->   Operation 650 'load' 'buddy_tree_V_1_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_41 : Operation 651 [1/1] (0.00ns)   --->   "%tmp_130 = call i64 @_ssdm_op_BitSet.i64.i64.i32.i1(i64 %buddy_tree_V_1_load_8, i32 %i_assign_3_1, i1 false)" [HTA128_0/solution1/top.cc:265]   --->   Operation 651 'bitset' 'tmp_130' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 652 [1/1] (0.00ns)   --->   "%buddy_tree_V_1_addr_11 = getelementptr [8 x i64]* @buddy_tree_V_1, i64 0, i64 %newIndex21" [HTA128_0/solution1/top.cc:262]   --->   Operation 652 'getelementptr' 'buddy_tree_V_1_addr_11' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 653 [1/1] (3.25ns)   --->   "store i64 %tmp_130, i64* %buddy_tree_V_1_addr_11, align 8" [HTA128_0/solution1/top.cc:265]   --->   Operation 653 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM_T2P_BRAM">   --->   Core 38 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_41 : Operation 654 [1/1] (0.00ns)   --->   "br label %_ZrSILi13ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit162.0" [HTA128_0/solution1/top.cc:262]   --->   Operation 654 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	'alloca' operation ('cmd') [19]  (0 ns)
+	'store' operation (HTA128_0/solution1/top.cc:125) of constant 0 on local variable 'cmd' [26]  (1.77 ns)
+
+ <State 2>: 2.08ns
+The critical path consists of the following:
+	wire read on port 'alloc_size' (HTA128_0/solution1/top.cc:129) [31]  (0 ns)
+	'add' operation ('tmp_size.V', HTA128_0/solution1/top.cc:131) [35]  (2.08 ns)
+
+ <State 3>: 5.27ns
+The critical path consists of the following:
+	'sub' operation ('i_op', HTA128_0/solution1/top.cc:154) [329]  (2.08 ns)
+	'and' operation ('r.V', HTA128_0/solution1/top.cc:154) [330]  (0.99 ns)
+	multiplexor before 'phi' operation ('p_s') [363]  (2.2 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('addr_tree_map_V_addr', HTA128_0/solution1/top.cc:309) [52]  (0 ns)
+	'load' operation ('addr_tree_map_V_load', HTA128_0/solution1/top.cc:309) on array 'addr_tree_map_V' [53]  (3.25 ns)
+
+ <State 5>: 6.52ns
+The critical path consists of the following:
+	'load' operation ('ans.V', HTA128_0/solution1/top.cc:300) on array 'addr_layer_map_V' [50]  (2.29 ns)
+	'xor' operation ('r.V', HTA128_0/solution1/top.cc:359) [200]  (0.975 ns)
+	'getelementptr' operation ('shift_constant_V_add_1', HTA128_0/solution1/top.cc:359) [202]  (0 ns)
+	'load' operation ('shift_constant_V_loa_1', HTA128_0/solution1/top.cc:359) on array 'shift_constant_V' [203]  (3.25 ns)
+
+ <State 6>: 7.99ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load', HTA128_0/solution1/top.cc:312) on array 'buddy_tree_V_1' [63]  (3.25 ns)
+	'select' operation ('__Val2__', HTA128_0/solution1/top.cc:312) [66]  (1.48 ns)
+	'store' operation (HTA128_0/solution1/top.cc:312) of variable '__Result__', HTA128_0/solution1/top.cc:312 on array 'buddy_tree_V_1' [75]  (3.25 ns)
+
+ <State 7>: 4.59ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', HTA128_0/solution1/top.cc:316) [82]  (4.59 ns)
+
+ <State 8>: 4.99ns
+The critical path consists of the following:
+	'phi' operation ('now1.V') with incoming values : ('ans.V', HTA128_0/solution1/top.cc:300) ('now1.V', HTA128_0/solution1/top.cc:318) [87]  (0 ns)
+	'add' operation ('now1.V', HTA128_0/solution1/top.cc:318) [92]  (1.74 ns)
+	'getelementptr' operation ('buddy_tree_V_0_addr_3', HTA128_0/solution1/top.cc:321) [105]  (0 ns)
+	'load' operation ('buddy_tree_V_0_load_3', HTA128_0/solution1/top.cc:321) on array 'buddy_tree_V_0' [106]  (3.25 ns)
+
+ <State 9>: 6.82ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_0_load_3', HTA128_0/solution1/top.cc:321) on array 'buddy_tree_V_0' [106]  (3.25 ns)
+	'select' operation ('buddy_tree_V_load_1_s', HTA128_0/solution1/top.cc:321) [109]  (0 ns)
+	'or' operation ('tmp_37', HTA128_0/solution1/top.cc:321) [110]  (3.57 ns)
+
+ <State 10>: 5.57ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_61', HTA128_0/solution1/top.cc:324) [125]  (4.59 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 11>: 4.99ns
+The critical path consists of the following:
+	'phi' operation ('t.V') with incoming values : ('ans.V', HTA128_0/solution1/top.cc:300) ('__Repl2__', HTA128_0/solution1/top.cc:327) [130]  (0 ns)
+	'add' operation ('__Repl2__', HTA128_0/solution1/top.cc:327) [135]  (1.74 ns)
+	'getelementptr' operation ('buddy_tree_V_1_addr_8', HTA128_0/solution1/top.cc:330) [164]  (0 ns)
+	'load' operation ('buddy_tree_V_1_load_6', HTA128_0/solution1/top.cc:330) on array 'buddy_tree_V_1' [165]  (3.25 ns)
+
+ <State 12>: 6.08ns
+The critical path consists of the following:
+	'phi' operation ('mask_V_load_phi', HTA128_0/solution1/top.cc:329) with incoming values : ('mask_V_load26_phi_ca', HTA128_0/solution1/top.cc:329) ('tmp_74', HTA128_0/solution1/top.cc:327) ('tmp_73', HTA128_0/solution1/top.cc:327) ('mask_V_load27_phi_ca', HTA128_0/solution1/top.cc:329) [156]  (0 ns)
+	'shl' operation ('r.V', HTA128_0/solution1/top.cc:329) [158]  (4.59 ns)
+	'or' operation ('r.V', HTA128_0/solution1/top.cc:330) [167]  (1.48 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('buddy_tree_V_1_addr_4111119120', HTA128_0/solution1/top.cc:330) [170]  (0 ns)
+	'store' operation (HTA128_0/solution1/top.cc:330) of variable 'r.V', HTA128_0/solution1/top.cc:330 on array 'buddy_tree_V_1' [171]  (3.25 ns)
+
+ <State 14>: 7.46ns
+The critical path consists of the following:
+	'sub' operation ('r.V', HTA128_0/solution1/top.cc:359) [183]  (1.74 ns)
+	'sub' operation ('tmp_4', HTA128_0/solution1/top.cc:359) [187]  (1.74 ns)
+	'shl' operation ('tmp_8', HTA128_0/solution1/top.cc:359) [189]  (0 ns)
+	'select' operation ('tmp_10', HTA128_0/solution1/top.cc:359) [193]  (3.99 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	'sub' operation ('tmp_14', HTA128_0/solution1/top.cc:359) [199]  (0 ns)
+	'add' operation ('loc_tree.V', HTA128_0/solution1/top.cc:359) [205]  (3.82 ns)
+	'add' operation ('r.V', HTA128_0/solution1/top.cc:362) [207]  (1.68 ns)
+	'getelementptr' operation ('mark_mask_V_addr', HTA128_0/solution1/top.cc:362) [217]  (0 ns)
+	'load' operation ('rhs.V', HTA128_0/solution1/top.cc:362) on array 'mark_mask_V' [218]  (3.25 ns)
+
+ <State 16>: 4.28ns
+The critical path consists of the following:
+	'load' operation ('rhs.V', HTA128_0/solution1/top.cc:362) on array 'mark_mask_V' [218]  (3.25 ns)
+	'or' operation ('r.V', HTA128_0/solution1/top.cc:362) [219]  (1.02 ns)
+
+ <State 17>: 3.67ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', HTA128_0/solution1/top.cc:365) [223]  (3.67 ns)
+
+ <State 18>: 5.22ns
+The critical path consists of the following:
+	'phi' operation ('__Result__') with incoming values : ('__Result__', HTA128_0/solution1/top.cc:364) ('__Result__', HTA128_0/solution1/top.cc:371) [229]  (0 ns)
+	'add' operation ('loc_tree.V', HTA128_0/solution1/top.cc:367) [240]  (1.55 ns)
+	'shl' operation ('op2', HTA128_0/solution1/top.cc:370) [244]  (0 ns)
+	'or' operation ('TMP_0.V', HTA128_0/solution1/top.cc:370) [246]  (3.67 ns)
+
+ <State 19>: 6.53ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', HTA128_0/solution1/top.cc:372) [249]  (4.59 ns)
+	'phi' operation ('r.V') with incoming values : ('r_V_12_cast', HTA128_0/solution1/top.cc:365) ('r.V', HTA128_0/solution1/top.cc:372) [228]  (0 ns)
+	'icmp' operation ('tmp_18', HTA128_0/solution1/top.cc:367) [234]  (0.959 ns)
+	'and' operation ('tmp_20', HTA128_0/solution1/top.cc:367) [235]  (0.978 ns)
+
+ <State 20>: 2.32ns
+The critical path consists of the following:
+	'store' operation (HTA128_0/solution1/top.cc:376) of variable 'tmp_94', HTA128_0/solution1/top.cc:376 on array 'group_tree_V_1' [261]  (2.32 ns)
+
+ <State 21>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('now1.V') with incoming values : ('now1.V', HTA128_0/solution1/top.cc:382) [267]  (0 ns)
+	'getelementptr' operation ('buddy_tree_V_0_addr_7', HTA128_0/solution1/top.cc:384) [282]  (0 ns)
+	'load' operation ('buddy_tree_V_0_load_4', HTA128_0/solution1/top.cc:384) on array 'buddy_tree_V_0' [283]  (3.25 ns)
+	blocking operation 0.004 ns on control path)
+
+ <State 22>: 6.61ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load_4', HTA128_0/solution1/top.cc:384) on array 'buddy_tree_V_1' [281]  (3.25 ns)
+	'select' operation ('buddy_tree_V_load_4_s', HTA128_0/solution1/top.cc:384) [284]  (0 ns)
+	'or' operation ('tmp_64', HTA128_0/solution1/top.cc:384) [285]  (3.36 ns)
+
+ <State 23>: 4.59ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', HTA128_0/solution1/top.cc:386) [299]  (4.59 ns)
+
+ <State 24>: 7.99ns
+The critical path consists of the following:
+	'load' operation ('lhs.V', HTA128_0/solution1/top.cc:395) on array 'buddy_tree_V_0' [312]  (3.25 ns)
+	'or' operation ('r.V', HTA128_0/solution1/top.cc:395) [313]  (0 ns)
+	'select' operation ('storemerge', HTA128_0/solution1/top.cc:307) [317]  (1.48 ns)
+	'store' operation (HTA128_0/solution1/top.cc:399) of variable 'storemerge', HTA128_0/solution1/top.cc:307 on array 'buddy_tree_V_0' [318]  (3.25 ns)
+
+ <State 25>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('p_s') [363]  (0 ns)
+	'getelementptr' operation ('buddy_tree_V_0_addr_2', HTA128_0/solution1/top.cc:163) [371]  (0 ns)
+	'load' operation ('buddy_tree_V_0_load_1', HTA128_0/solution1/top.cc:163) on array 'buddy_tree_V_0' [372]  (3.25 ns)
+
+ <State 26>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_0_load_1', HTA128_0/solution1/top.cc:163) on array 'buddy_tree_V_0' [372]  (3.25 ns)
+
+ <State 27>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load_1', HTA128_0/solution1/top.cc:163) on array 'buddy_tree_V_1' [376]  (3.25 ns)
+
+ <State 28>: 4.51ns
+The critical path consists of the following:
+	'phi' operation ('buddy_tree_V_load_ph', HTA128_0/solution1/top.cc:163) with incoming values : ('buddy_tree_V_0_load_1', HTA128_0/solution1/top.cc:163) ('buddy_tree_V_1_load_1', HTA128_0/solution1/top.cc:163) [379]  (0 ns)
+	'sub' operation ('tmp_19', HTA128_0/solution1/top.cc:163) [380]  (3.52 ns)
+	'and' operation ('tmp.V', HTA128_0/solution1/top.cc:163) [381]  (0.99 ns)
+
+ <State 29>: 8.36ns
+The critical path consists of the following:
+	'call' operation ('op_V_assign', HTA128_0/solution1/top.cc:164) to 'log_2_64bit' [382]  (8.36 ns)
+
+ <State 30>: 7.99ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load_2', HTA128_0/solution1/top.cc:189) on array 'buddy_tree_V_1' [398]  (3.25 ns)
+	'select' operation ('buddy_tree_V_load_2_s', HTA128_0/solution1/top.cc:189) [401]  (0 ns)
+	'and' operation ('tmp_56', HTA128_0/solution1/top.cc:189) [402]  (1.48 ns)
+	'store' operation (HTA128_0/solution1/top.cc:189) of variable 'tmp_56', HTA128_0/solution1/top.cc:189 on array 'buddy_tree_V_1' [410]  (3.25 ns)
+
+ <State 31>: 4.23ns
+The critical path consists of the following:
+	'xor' operation ('r.V', HTA128_0/solution1/top.cc:172) [415]  (0.975 ns)
+	'getelementptr' operation ('group_tree_mask_V_ad', HTA128_0/solution1/top.cc:172) [425]  (0 ns)
+	'load' operation ('rhs.V', HTA128_0/solution1/top.cc:172) on array 'group_tree_mask_V' [426]  (3.25 ns)
+
+ <State 32>: 8.33ns
+The critical path consists of the following:
+	'load' operation ('group_tree_V_1_load_1', HTA128_0/solution1/top.cc:172) on array 'group_tree_V_1' [421]  (2.32 ns)
+	'select' operation ('group_tree_V_load_ph', HTA128_0/solution1/top.cc:172) [424]  (1.02 ns)
+	'and' operation ('TMP_1.V', HTA128_0/solution1/top.cc:172) [428]  (0.975 ns)
+	'sub' operation ('p_5', HTA128_0/solution1/top.cc:173) [429]  (1.74 ns)
+	'and' operation ('TMP_1.V', HTA128_0/solution1/top.cc:173) [430]  (0.975 ns)
+	'icmp' operation ('tmp_38', HTA128_0/solution1/top.cc:173) [431]  (1.3 ns)
+
+ <State 33>: 8.48ns
+The critical path consists of the following:
+	'select' operation ('tmp_52_cast', HTA128_0/solution1/top.cc:173) [432]  (0 ns)
+	'select' operation ('tmp_43', HTA128_0/solution1/top.cc:173) [437]  (0.993 ns)
+	'add' operation ('tmp_48', HTA128_0/solution1/top.cc:175) [447]  (0 ns)
+	'sub' operation ('new_loc1.V', HTA128_0/solution1/top.cc:175) [448]  (3.82 ns)
+	'lshr' operation ('tmp_52', HTA128_0/solution1/top.cc:176) [455]  (0 ns)
+	'select' operation ('r.V', HTA128_0/solution1/top.cc:176) [458]  (3.67 ns)
+
+ <State 34>: 7.5ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load_5', HTA128_0/solution1/top.cc:178) on array 'buddy_tree_V_1' [475]  (3.25 ns)
+	'and' operation ('tmp_65', HTA128_0/solution1/top.cc:178) [476]  (0.99 ns)
+	'store' operation (HTA128_0/solution1/top.cc:178) of variable 'tmp_65', HTA128_0/solution1/top.cc:178 on array 'buddy_tree_V_1' [477]  (3.25 ns)
+
+ <State 35>: 7.33ns
+The critical path consists of the following:
+	'load' operation ('cnt_1_load') on local variable 'cnt' [520]  (0 ns)
+	'icmp' operation ('sel_tmp', HTA128_0/solution1/top.cc:216) [529]  (0.959 ns)
+	'select' operation ('sel_tmp1', HTA128_0/solution1/top.cc:216) [530]  (0 ns)
+	'select' operation ('sel_tmp3', HTA128_0/solution1/top.cc:216) [532]  (1.77 ns)
+	'select' operation ('mask_V_load_1_phi', HTA128_0/solution1/top.cc:216) [534]  (0 ns)
+	'shl' operation ('r.V', HTA128_0/solution1/top.cc:216) [536]  (0 ns)
+	'xor' operation ('val', HTA128_0/solution1/top.cc:216) [537]  (4.59 ns)
+
+ <State 36>: 7.99ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_1_load_7', HTA128_0/solution1/top.cc:217) on array 'buddy_tree_V_1' [542]  (3.25 ns)
+	'select' operation ('lhs.V', HTA128_0/solution1/top.cc:217) [545]  (0 ns)
+	'and' operation ('r.V', HTA128_0/solution1/top.cc:217) [546]  (1.48 ns)
+	'store' operation (HTA128_0/solution1/top.cc:217) of variable 'r.V', HTA128_0/solution1/top.cc:217 on array 'buddy_tree_V_0' [550]  (3.25 ns)
+
+ <State 37>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('lhs.V', HTA128_0/solution1/top.cc:229) on array 'buddy_tree_V_0' [605]  (3.25 ns)
+
+ <State 38>: 7.5ns
+The critical path consists of the following:
+	'load' operation ('lhs.V', HTA128_0/solution1/top.cc:229) on array 'buddy_tree_V_0' [605]  (3.25 ns)
+	'and' operation ('r.V', HTA128_0/solution1/top.cc:229) [606]  (0.99 ns)
+	'store' operation (HTA128_0/solution1/top.cc:229) of variable 'r.V', HTA128_0/solution1/top.cc:229 on array 'buddy_tree_V_0' [607]  (3.25 ns)
+
+ <State 39>: 6.64ns
+The critical path consists of the following:
+	'load' operation ('group_tree_V_1_load_2', HTA128_0/solution1/top.cc:234) on array 'group_tree_V_1' [620]  (2.32 ns)
+	'select' operation ('group_tree_V_load_3_s', HTA128_0/solution1/top.cc:234) [623]  (1.02 ns)
+	'and' operation ('p_6', HTA128_0/solution1/top.cc:234) [626]  (0.975 ns)
+	'store' operation (HTA128_0/solution1/top.cc:234) of variable 'p_6', HTA128_0/solution1/top.cc:234 on array 'group_tree_V_0' [631]  (2.32 ns)
+
+ <State 40>: 4.9ns
+The critical path consists of the following:
+	'phi' operation ('p_03228_1', HTA128_0/solution1/top.cc:262) with incoming values : ('now2_V_s', HTA128_0/solution1/top.cc:262) [641]  (0 ns)
+	'add' operation ('now2_V', HTA128_0/solution1/top.cc:262) [655]  (1.65 ns)
+	'getelementptr' operation ('buddy_tree_V_1_addr_10', HTA128_0/solution1/top.cc:262) [661]  (0 ns)
+	'load' operation ('buddy_tree_V_1_load_8', HTA128_0/solution1/top.cc:265) on array 'buddy_tree_V_1' [662]  (3.25 ns)
+
+ <State 41>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('buddy_tree_V_0_load_10', HTA128_0/solution1/top.cc:265) on array 'buddy_tree_V_0' [651]  (3.25 ns)
+	'store' operation (HTA128_0/solution1/top.cc:265) of variable 'tmp_129', HTA128_0/solution1/top.cc:265 on array 'buddy_tree_V_0' [654]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

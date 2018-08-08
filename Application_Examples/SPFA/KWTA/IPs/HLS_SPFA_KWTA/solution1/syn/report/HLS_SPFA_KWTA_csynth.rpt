@@ -1,0 +1,315 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_SPFA_KWTA'
+================================================================
+* Date:           Wed Aug  8 21:37:19 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HLS_SPFA_KWTA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 3     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 3.1  |    ?|    ?|  3 ~ 11  |          -|          -|     ?|    no    |
+        |- Loop 4     |    ?|    ?|         2|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      3|       0|   1201|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        9|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|    706|
+|Register         |        -|      -|    1060|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        9|      3|    1060|   1907|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        3|      1|   ~0   |      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |    Memory    |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |HTA_heap_0_U  |HLS_SPFA_KWTA_HTAbkb  |        4|  0|   0|  2000|   32|     1|        64000|
+    |HTA_heap_1_U  |HLS_SPFA_KWTA_HTAbkb  |        4|  0|   0|  2000|   32|     1|        64000|
+    |in_list_U     |HLS_SPFA_KWTA_in_dEe  |        1|  0|   0|   200|    1|     1|          200|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total         |                      |        9|  0|   0|  4200|   65|     3|       128200|
+    +--------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |tmp_6_fu_850_p2                  |     *    |      3|  0|  20|          32|          32|
+    |KWTA_heap_0_sum1_fu_778_p2       |     +    |      0|  0|  17|          11|          13|
+    |KWTA_heap_0_sum2_fu_1251_p2      |     +    |      0|  0|  17|          11|          13|
+    |KWTA_heap_0_sum3_fu_1300_p2      |     +    |      0|  0|  17|          11|          13|
+    |KWTA_heap_0_sum4_fu_1175_p2      |     +    |      0|  0|  17|          11|          13|
+    |KWTA_heap_0_sum5_fu_1099_p2      |     +    |      0|  0|  17|          11|          13|
+    |KWTA_heap_0_sum_fu_721_p2        |     +    |      0|  0|  17|          11|          13|
+    |grp_fu_553_p2                    |     +    |      0|  0|  17|          11|          13|
+    |i_4_fu_648_p2                    |     +    |      0|  0|  38|          31|           1|
+    |i_5_fu_692_p2                    |     +    |      0|  0|  38|          31|           1|
+    |i_6_fu_1438_p2                   |     +    |      0|  0|  38|          31|           1|
+    |i_7_fu_868_p2                    |     +    |      0|  0|  39|          32|           1|
+    |local_dis_0_sum1_fu_662_p2       |     +    |      0|  0|  17|          13|          13|
+    |local_dis_0_sum2_fu_820_p2       |     +    |      0|  0|  17|          13|          13|
+    |local_dis_0_sum6_fu_966_p2       |     +    |      0|  0|  17|          13|          13|
+    |local_dis_0_sum7_fu_992_p2       |     +    |      0|  0|  17|          13|          13|
+    |local_dis_0_sum_fu_1448_p2       |     +    |      0|  0|  17|          13|          13|
+    |p_sum2_fu_1321_p2                |     +    |      0|  0|  17|          11|          13|
+    |p_sum3_fu_910_p2                 |     +    |      0|  0|  17|          13|          11|
+    |p_sum4_fu_1341_p2                |     +    |      0|  0|  17|          11|          13|
+    |p_sum6_fu_1206_p2                |     +    |      0|  0|  17|          13|          11|
+    |p_sum8_fu_1130_p2                |     +    |      0|  0|  17|          13|          11|
+    |p_sum_fu_742_p2                  |     +    |      0|  0|  17|          11|          13|
+    |tmp_12_fu_890_p2                 |     +    |      0|  0|  39|          32|          32|
+    |tmp_14_fu_900_p2                 |     +    |      0|  0|  39|          32|          32|
+    |tmp_1_i_fu_580_p2                |     +    |      0|  0|  39|          32|           1|
+    |weight0_fu_949_p2                |     +    |      0|  0|  39|          32|          32|
+    |weight1_fu_954_p2                |     +    |      0|  0|  39|          32|          32|
+    |p_neg_fu_1381_p2                 |     -    |      0|  0|  39|           1|          32|
+    |p_neg_t_fu_1401_p2               |     -    |      0|  0|  39|           1|          32|
+    |brmerge_demorgan_fu_1073_p2      |    and   |      0|  0|   2|           1|           1|
+    |or_cond_fu_943_p2                |    and   |      0|  0|   2|           1|           1|
+    |update0_fu_1057_p2               |    and   |      0|  0|   2|           1|           1|
+    |update1_fu_1068_p2               |    and   |      0|  0|   2|           1|           1|
+    |tmp_10_fu_862_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_16_fu_931_p2                 |   icmp   |      0|  0|  18|          32|          14|
+    |tmp_17_fu_937_p2                 |   icmp   |      0|  0|  18|          32|          14|
+    |tmp_21_fu_1016_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_24_fu_1025_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_5_fu_643_p2                  |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_7_fu_768_p2                  |   icmp   |      0|  0|  18|          32|           2|
+    |tmp_8_fu_687_p2                  |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_s_fu_1433_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |ap_block_state16_io              |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state17_io              |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1_io               |    or    |      0|  0|   2|           1|           1|
+    |i1_fu_884_p2                     |    or    |      0|  0|  32|          32|           1|
+    |tmp_26_cast_fu_986_p2            |    or    |      0|  0|  13|          13|           1|
+    |dis_output_d0                    |  select  |      0|  0|  32|           1|          32|
+    |free_target_assign_fu_1421_p3    |  select  |      0|  0|  32|           1|          32|
+    |now_dis_fu_843_p3                |  select  |      0|  0|  32|           1|          32|
+    |now_fu_804_p3                    |  select  |      0|  0|  32|           1|          32|
+    |offset_next_fu_1366_p3           |  select  |      0|  0|  32|           1|          32|
+    |weight0_HTA_heap_loa_fu_1030_p3  |  select  |      0|  0|  32|           1|          32|
+    |weight1_1_fu_1037_p3             |  select  |      0|  0|  32|           1|          32|
+    |tmp_22_fu_1051_p2                |    xor   |      0|  0|   2|           1|           2|
+    |tmp_25_fu_1062_p2                |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      3|  0|1201|         882|         916|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |                     Name                     | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |HTA_heap_0_address0                           |   85|         17|   11|        187|
+    |HTA_heap_0_d0                                 |   44|          9|   32|        288|
+    |HTA_heap_1_address0                           |   65|         16|   11|        176|
+    |HTA_heap_1_d0                                 |   41|          8|   32|        256|
+    |alloc_HTA_addr_blk_n                          |    9|          2|    1|          2|
+    |alloc_HTA_cmd_blk_n                           |    9|          2|    1|          2|
+    |alloc_HTA_free_target_blk_n                   |    9|          2|    1|          2|
+    |alloc_HTA_size_blk_n                          |    9|          2|    1|          2|
+    |alloc_KWTA_addr_blk_n                         |    9|          2|    1|          2|
+    |alloc_KWTA_cmd                                |   15|          3|    8|         24|
+    |alloc_KWTA_cmd_blk_n                          |    9|          2|    1|          2|
+    |alloc_KWTA_free_target                        |   15|          3|   32|         96|
+    |alloc_KWTA_free_target_blk_n                  |    9|          2|    1|          2|
+    |alloc_KWTA_size                               |   15|          3|   32|         96|
+    |alloc_KWTA_size_blk_n                         |    9|          2|    1|          2|
+    |ap_NS_fsm                                     |  165|         37|    1|         37|
+    |ap_sig_ioackin_alloc_HTA_cmd_ap_ack           |    9|          2|    1|          2|
+    |ap_sig_ioackin_alloc_HTA_free_target_ap_ack   |    9|          2|    1|          2|
+    |ap_sig_ioackin_alloc_HTA_size_ap_ack          |    9|          2|    1|          2|
+    |ap_sig_ioackin_alloc_KWTA_cmd_ap_ack          |    9|          2|    1|          2|
+    |ap_sig_ioackin_alloc_KWTA_free_target_ap_ack  |    9|          2|    1|          2|
+    |ap_sig_ioackin_alloc_KWTA_size_ap_ack         |    9|          2|    1|          2|
+    |i_1_reg_506                                   |    9|          2|   31|         62|
+    |i_2_reg_527                                   |    9|          2|   32|         64|
+    |i_3_reg_538                                   |    9|          2|   31|         62|
+    |i_reg_495                                     |    9|          2|   31|         62|
+    |in_list_address0                              |   33|          6|    8|         48|
+    |in_list_address1                              |   21|          4|    8|         32|
+    |in_list_d0                                    |   15|          3|    1|          3|
+    |offset_head_reg_517                           |    9|          2|   32|         64|
+    |offset_tail_fu_124                            |   21|          4|   31|        124|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                         |  706|        151|  378|       1709|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+----+----+-----+-----------+
+    |                     Name                     | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------+----+----+-----+-----------+
+    |HTA_heap_0_addr_10_reg_1753                   |  11|   0|   11|          0|
+    |HTA_heap_0_addr_13_reg_1740                   |  11|   0|   11|          0|
+    |HTA_heap_0_addr_7_reg_1679                    |  11|   0|   11|          0|
+    |HTA_heap_0_addr_8_reg_1771                    |  11|   0|   11|          0|
+    |HTA_heap_0_addr_reg_1513                      |  11|   0|   11|          0|
+    |HTA_heap_1_addr_6_reg_1684                    |  11|   0|   11|          0|
+    |N_2                                           |  31|   0|   31|          0|
+    |ap_CS_fsm                                     |  36|   0|   36|          0|
+    |ap_reg_ioackin_alloc_HTA_cmd_ap_ack           |   1|   0|    1|          0|
+    |ap_reg_ioackin_alloc_HTA_free_target_ap_ack   |   1|   0|    1|          0|
+    |ap_reg_ioackin_alloc_HTA_size_ap_ack          |   1|   0|    1|          0|
+    |ap_reg_ioackin_alloc_KWTA_cmd_ap_ack          |   1|   0|    1|          0|
+    |ap_reg_ioackin_alloc_KWTA_free_target_ap_ack  |   1|   0|    1|          0|
+    |ap_reg_ioackin_alloc_KWTA_size_ap_ack         |   1|   0|    1|          0|
+    |brmerge_demorgan_reg_1736                     |   1|   0|    1|          0|
+    |free_target_assign_reg_1789                   |  32|   0|   32|          0|
+    |guard_variable_for_H                          |   1|   0|    1|          0|
+    |i0_reg_1631                                   |  31|   0|   32|          1|
+    |i1_reg_1637                                   |  31|   0|   32|          1|
+    |i_1_reg_506                                   |  31|   0|   31|          0|
+    |i_2_reg_527                                   |  32|   0|   32|          0|
+    |i_3_reg_538                                   |  31|   0|   31|          0|
+    |i_6_reg_1797                                  |  31|   0|   31|          0|
+    |i_7_reg_1621                                  |  32|   0|   32|          0|
+    |i_reg_495                                     |  31|   0|   31|          0|
+    |in_list_addr_3_reg_1694                       |   7|   0|    8|          1|
+    |in_list_addr_4_reg_1705                       |   7|   0|    8|          1|
+    |newIndex17_reg_1779                           |  12|   0|   12|          0|
+    |newIndex19_reg_1748                           |  12|   0|   12|          0|
+    |newIndex21_reg_1761                           |  12|   0|   12|          0|
+    |newIndex7_reg_1586                            |  12|   0|   12|          0|
+    |now_dis_reg_1606                              |  32|   0|   32|          0|
+    |now_reg_1575                                  |  32|   0|   32|          0|
+    |offset_head_reg_517                           |  32|   0|   32|          0|
+    |offset_next_reg_1784                          |  32|   0|   32|          0|
+    |offset_tail_fu_124                            |  31|   0|   32|          1|
+    |offset_tail_load_reg_1720                     |  31|   0|   32|          1|
+    |or_cond_reg_1663                              |   1|   0|    1|          0|
+    |reg_568                                       |  32|   0|   32|          0|
+    |reg_572                                       |  31|   0|   32|          1|
+    |status_6_reg_1498                             |  32|   0|   32|          0|
+    |tmp_21_reg_1689                               |   1|   0|    1|          0|
+    |tmp_24_reg_1700                               |   1|   0|    1|          0|
+    |tmp_27_reg_1555                               |  13|   0|   13|          0|
+    |tmp_28_reg_1570                               |   1|   0|    1|          0|
+    |tmp_32_cast_reg_1766                          |  12|   0|   13|          1|
+    |tmp_32_reg_1581                               |   1|   0|    1|          0|
+    |tmp_35_reg_1626                               |  12|   0|   12|          0|
+    |tmp_38_reg_1725                               |  12|   0|   13|          1|
+    |tmp_3_reg_1601                                |  64|   0|   64|          0|
+    |tmp_4_cast_reg_1504                           |  12|   0|   13|          1|
+    |tmp_6_reg_1612                                |  32|   0|   32|          0|
+    |weight0_HTA_heap_loa_reg_1710                 |  32|   0|   32|          0|
+    |weight0_reg_1667                              |  32|   0|   32|          0|
+    |weight1_1_reg_1715                            |  32|   0|   32|          0|
+    |weight1_reg_1673                              |  32|   0|   32|          0|
+    +----------------------------------------------+----+----+-----+-----------+
+    |Total                                         |1060|   0| 1070|         10|
+    +----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|ap_done                        | out |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs |      HLS_SPFA_KWTA     | return value |
+|n                              |  in |   32|   ap_none  |            n           |    scalar    |
+|map_r_address0                 | out |   15|  ap_memory |          map_r         |     array    |
+|map_r_ce0                      | out |    1|  ap_memory |          map_r         |     array    |
+|map_r_q0                       |  in |   32|  ap_memory |          map_r         |     array    |
+|map_r_address1                 | out |   15|  ap_memory |          map_r         |     array    |
+|map_r_ce1                      | out |    1|  ap_memory |          map_r         |     array    |
+|map_r_q1                       |  in |   32|  ap_memory |          map_r         |     array    |
+|dis_output_address0            | out |    8|  ap_memory |       dis_output       |     array    |
+|dis_output_ce0                 | out |    1|  ap_memory |       dis_output       |     array    |
+|dis_output_we0                 | out |    1|  ap_memory |       dis_output       |     array    |
+|dis_output_d0                  | out |   32|  ap_memory |       dis_output       |     array    |
+|alloc_HTA_size                 | out |   32|    ap_hs   |     alloc_HTA_size     |    pointer   |
+|alloc_HTA_size_ap_vld          | out |    1|    ap_hs   |     alloc_HTA_size     |    pointer   |
+|alloc_HTA_size_ap_ack          |  in |    1|    ap_hs   |     alloc_HTA_size     |    pointer   |
+|alloc_HTA_free_target          | out |   32|    ap_hs   |  alloc_HTA_free_target |    pointer   |
+|alloc_HTA_free_target_ap_vld   | out |    1|    ap_hs   |  alloc_HTA_free_target |    pointer   |
+|alloc_HTA_free_target_ap_ack   |  in |    1|    ap_hs   |  alloc_HTA_free_target |    pointer   |
+|alloc_HTA_addr                 |  in |   32|    ap_hs   |     alloc_HTA_addr     |    pointer   |
+|alloc_HTA_addr_ap_vld          |  in |    1|    ap_hs   |     alloc_HTA_addr     |    pointer   |
+|alloc_HTA_addr_ap_ack          | out |    1|    ap_hs   |     alloc_HTA_addr     |    pointer   |
+|alloc_HTA_cmd                  | out |    8|    ap_hs   |      alloc_HTA_cmd     |    pointer   |
+|alloc_HTA_cmd_ap_vld           | out |    1|    ap_hs   |      alloc_HTA_cmd     |    pointer   |
+|alloc_HTA_cmd_ap_ack           |  in |    1|    ap_hs   |      alloc_HTA_cmd     |    pointer   |
+|alloc_KWTA_size                | out |   32|    ap_hs   |     alloc_KWTA_size    |    pointer   |
+|alloc_KWTA_size_ap_vld         | out |    1|    ap_hs   |     alloc_KWTA_size    |    pointer   |
+|alloc_KWTA_size_ap_ack         |  in |    1|    ap_hs   |     alloc_KWTA_size    |    pointer   |
+|alloc_KWTA_free_target         | out |   32|    ap_hs   | alloc_KWTA_free_target |    pointer   |
+|alloc_KWTA_free_target_ap_vld  | out |    1|    ap_hs   | alloc_KWTA_free_target |    pointer   |
+|alloc_KWTA_free_target_ap_ack  |  in |    1|    ap_hs   | alloc_KWTA_free_target |    pointer   |
+|alloc_KWTA_addr                |  in |   32|    ap_hs   |     alloc_KWTA_addr    |    pointer   |
+|alloc_KWTA_addr_ap_vld         |  in |    1|    ap_hs   |     alloc_KWTA_addr    |    pointer   |
+|alloc_KWTA_addr_ap_ack         | out |    1|    ap_hs   |     alloc_KWTA_addr    |    pointer   |
+|alloc_KWTA_cmd                 | out |    8|    ap_hs   |     alloc_KWTA_cmd     |    pointer   |
+|alloc_KWTA_cmd_ap_vld          | out |    1|    ap_hs   |     alloc_KWTA_cmd     |    pointer   |
+|alloc_KWTA_cmd_ap_ack          |  in |    1|    ap_hs   |     alloc_KWTA_cmd     |    pointer   |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+

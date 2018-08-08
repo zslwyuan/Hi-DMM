@@ -1,0 +1,1260 @@
+
+*** Running vivado
+    with args -log design_1_HTA_theta_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_HTA_theta_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_HTA_theta_0_0.tcl -notrace
+Command: synth_design -top design_1_HTA_theta_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22745 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1352.570 ; gain = 82.887 ; free physical = 10428 ; free virtual = 27327
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_HTA_theta_0_0' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ip/design_1_HTA_theta_0_0/synth/design_1_HTA_theta_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 47'b00000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 47'b00000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 47'b00000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 47'b00000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 47'b00000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 47'b00000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 47'b00000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 47'b00000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 47'b00000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 47'b00000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 47'b00000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 47'b00000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 47'b00000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 47'b00000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 47'b00000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 47'b00000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 47'b00000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 47'b00000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 47'b00000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 47'b00000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 47'b00000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 47'b00000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 47'b00000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 47'b00000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 47'b00000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 47'b00000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 47'b00000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 47'b00000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 47'b00000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 47'b00000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 47'b00000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 47'b00000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 47'b00000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 47'b00000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 47'b00000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 47'b00000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 47'b00000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 47'b00000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 47'b00000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 47'b00000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 47'b00000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 47'b00000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 47'b00001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 47'b00010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 47'b00100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 47'b01000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 47'b10000000000000000000000000000000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:109]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tbkb' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 4 - type: integer 
+	Parameter AddressWidth bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tbkb_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+	Parameter MEM_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:25]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_buddy_tbkb_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tbkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tbkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tbkb.v:61]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tcud' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 4 - type: integer 
+	Parameter AddressWidth bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tcud_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+	Parameter MEM_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:25]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_buddy_tcud_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tcud_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tcud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tcud.v:61]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tdEe' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 4 - type: integer 
+	Parameter AddressWidth bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_tdEe_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+	Parameter MEM_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:25]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_buddy_tdEe_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tdEe_ram' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_tdEe' (6#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_tdEe.v:61]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_teOg' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 4 - type: integer 
+	Parameter AddressWidth bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_buddy_teOg_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+	Parameter MEM_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:25]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_buddy_teOg_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_teOg_ram' (7#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_buddy_teOg' (8#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_buddy_teOg.v:61]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_group_tfYi' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:49]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 35 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_group_tfYi_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 35 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:22]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_group_tfYi_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_group_tfYi_ram' (9#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_group_tfYi' (10#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_tfYi.v:49]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_group_thbi' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:43]
+	Parameter DataWidth bound to: 31 - type: integer 
+	Parameter AddressRange bound to: 8 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_group_thbi_rom' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:9]
+	Parameter DWIDTH bound to: 31 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:21]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_group_thbi_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_group_thbi_rom' (11#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_group_thbi' (12#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_group_thbi.v:43]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_shift_cibs' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:43]
+	Parameter DataWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_shift_cibs_rom' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:9]
+	Parameter DWIDTH bound to: 5 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:21]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_shift_cibs_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_shift_cibs_rom' (13#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_shift_cibs' (14#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_shift_cibs.v:43]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_addr_lajbC' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:49]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 2048 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_addr_lajbC_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:9]
+	Parameter DWIDTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:22]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_addr_lajbC_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_addr_lajbC_ram' (15#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_addr_lajbC' (16#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_lajbC.v:49]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_addr_trkbM' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:49]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 2048 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_addr_trkbM_ram' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:9]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:22]
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_addr_trkbM_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_addr_trkbM_ram' (17#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_addr_trkbM' (18#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_addr_trkbM.v:49]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_mark_malbW' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mark_malbW.v:43]
+	Parameter DataWidth bound to: 62 - type: integer 
+	Parameter AddressRange bound to: 128 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_mark_malbW_rom' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mark_malbW.v:9]
+	Parameter DWIDTH bound to: 62 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './HTA_theta_mark_malbW_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mark_malbW.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_mark_malbW_rom' (19#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mark_malbW.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_mark_malbW' (20#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mark_malbW.v:43]
+INFO: [Synth 8-6157] synthesizing module 'log_2_64bit' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/log_2_64bit.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'log_2_64bit' (21#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/log_2_64bit.v:10]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_mux_44_mb6' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_44_mb6.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_mux_44_mb6' (22#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_44_mb6.v:11]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_mux_48_ncg' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_48_ncg.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_mux_48_ncg' (23#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_48_ncg.v:11]
+INFO: [Synth 8-6157] synthesizing module 'HTA_theta_mux_32_ocq' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_32_ocq.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta_mux_32_ocq' (24#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta_mux_32_ocq.v:11]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2940]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2944]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2950]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2984]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2986]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2988]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2990]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2992]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3198]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3200]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3206]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3290]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3294]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3404]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_phi_mux_p_03566_1_in_phi_fu_1271_p4_reg' and it is trimmed from '64' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1895]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_phi_mux_p_7_phi_fu_1377_p4_reg' and it is trimmed from '13' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1949]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_phi_mux_p_6_phi_fu_1367_p4_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1941]
+INFO: [Synth 8-6155] done synthesizing module 'HTA_theta' (25#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_HTA_theta_0_0' (26#1) [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ip/design_1_HTA_theta_0_0/synth/design_1_HTA_theta_0_0.v:58]
+WARNING: [Synth 8-3331] design HTA_theta_mux_44_mb6 has unconnected port din4[3]
+WARNING: [Synth 8-3331] design HTA_theta_mux_44_mb6 has unconnected port din4[2]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[7]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[6]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[5]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[4]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[3]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[2]
+WARNING: [Synth 8-3331] design HTA_theta_mark_malbW has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_addr_trkbM has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_addr_lajbC has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_shift_cibs has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_group_thbi has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_group_tfYi has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_teOg has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tdEe has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tcud has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tbkb has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[16]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[31]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[30]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[29]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[28]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[27]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[26]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[25]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[24]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[23]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[22]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[21]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[20]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[19]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[18]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[17]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[16]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1412.195 ; gain = 142.512 ; free physical = 10431 ; free virtual = 27330
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1412.195 ; gain = 142.512 ; free physical = 10427 ; free virtual = 27326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1412.195 ; gain = 142.512 ; free physical = 10427 ; free virtual = 27326
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ip/design_1_HTA_theta_0_0/constraints/HTA_theta_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ip/design_1_HTA_theta_0_0/constraints/HTA_theta_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.runs/design_1_HTA_theta_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.runs/design_1_HTA_theta_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1786.406 ; gain = 0.000 ; free physical = 10144 ; free virtual = 27044
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10259 ; free virtual = 27159
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10259 ; free virtual = 27159
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.runs/design_1_HTA_theta_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10243 ; free virtual = 27143
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "ram" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'loc1_V_9_cast_cast_reg_3810_reg[7:0]' into 'loc1_V_10_reg_3804_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1455]
+INFO: [Synth 8-4471] merging register 'p_Repl2_3_reg_3940_reg[0:0]' into 'loc1_V_11_reg_3876_reg[12:12]' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3560]
+INFO: [Synth 8-4471] merging register 'TMP_0_V_1_cast_reg_4271_reg[63:62]' into 'arrayNo1_reg_4190_reg[3:2]' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3498]
+INFO: [Synth 8-4471] merging register 'newIndex19_reg_4542_reg[63:1]' into 'newIndex18_reg_4492_reg[63:1]' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:3618]
+INFO: [Synth 8-4471] merging register 'loc2_V_fu_322_reg[0:0]' into 'loc1_V_11_reg_3876_reg[12:12]' [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:2970]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1247]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1239]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03566_1_in_reg_1268_reg' and it is trimmed from '64' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1232]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex8_reg_4035_reg' and it is trimmed from '7' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1504]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_7_reg_1374_reg' and it is trimmed from '13' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1300]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_V_13_reg_4282_reg' and it is trimmed from '13' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1612]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex15_reg_4335_reg' and it is trimmed from '7' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1523]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex6_reg_4226_reg' and it is trimmed from '7' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1562]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_14_fu_2673_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_1649_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1692_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tmp_60_fu_1948_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_34_fu_2297_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_65_fu_2367_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_88_fu_3450_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1655_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cond_fu_3553_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cond1_fu_3609_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp4_fu_3071_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp2_fu_3057_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp_fu_3043_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_97_fu_3119_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "tmp_14_fu_2673_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_1649_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1692_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tmp_60_fu_1948_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_34_fu_2297_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_65_fu_2367_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_88_fu_3450_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1655_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cond_fu_3553_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cond1_fu_3609_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp4_fu_3071_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp2_fu_3057_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp_fu_3043_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_97_fu_3119_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "loc2_V_fu_322" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mask_V_load32_phi_ca_fu_2028_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mask_V_load31_phi_ca_fu_1996_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03538_1_in_in_reg_1277" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03550_5_in_reg_1412" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03550_8_in_reg_1176" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_5_reg_1118" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_1234" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_Result_15_reg_4105" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mask_V_load_118_phi_s_fu_3035_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mask_V_load_119_phi_s_fu_3003_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10232 ; free virtual = 27133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   4 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   4 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 10    
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 4     
+	   2 Input     62 Bit         XORs := 1     
+	   2 Input     30 Bit         XORs := 1     
+	   2 Input     14 Bit         XORs := 1     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 32    
+	               63 Bit    Registers := 1     
+	               62 Bit    Registers := 6     
+	               47 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 8     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 27    
++---RAMs : 
+	              16K Bit         RAMs := 1     
+	               8K Bit         RAMs := 1     
+	               2K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 58    
+	   3 Input     64 Bit        Muxes := 1     
+	   5 Input     64 Bit        Muxes := 1     
+	 129 Input     62 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	  48 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   3 Input     18 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 7     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	  17 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	   6 Input      4 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 24    
+	   2 Input      1 Bit        Muxes := 42    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HTA_theta_buddy_tbkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module HTA_theta_buddy_tcud_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module HTA_theta_buddy_tdEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module HTA_theta_buddy_teOg_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module HTA_theta_group_tfYi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module HTA_theta_group_thbi_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module HTA_theta_shift_cibs_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module HTA_theta_addr_lajbC_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module HTA_theta_addr_trkbM_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              16K Bit         RAMs := 1     
+Module HTA_theta_mark_malbW_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               62 Bit    Registers := 1     
++---Muxes : 
+	 129 Input     62 Bit        Muxes := 1     
+Module log_2_64bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---Muxes : 
+	  17 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HTA_theta_mux_44_mb6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+Module HTA_theta_mux_48_ncg 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+Module HTA_theta_mux_32_ocq 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+Module HTA_theta 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   4 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 10    
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 4     
+	   2 Input     62 Bit         XORs := 1     
+	   2 Input     30 Bit         XORs := 1     
+	   2 Input     14 Bit         XORs := 1     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 22    
+	               63 Bit    Registers := 1     
+	               62 Bit    Registers := 5     
+	               47 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 8     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 11    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 25    
+	   3 Input     64 Bit        Muxes := 1     
+	   5 Input     64 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	  48 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   3 Input     18 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 7     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 9     
+	   6 Input      4 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 24    
+	   2 Input      1 Bit        Muxes := 38    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03542_3_in_reg_1215_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/f80e/hdl/verilog/HTA_theta.v:1168]
+INFO: [Synth 8-5544] ROM "tmp_60_fu_1948_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_34_fu_2297_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data81" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_65_fu_2367_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_88_fu_3450_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_97_fu_3119_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cond_fu_3553_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp4_fu_3071_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp2_fu_3057_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp_fu_3043_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cond1_fu_3609_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1649_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1692_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1655_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_2673_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data81" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp4_fu_3071_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp2_fu_3057_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sel_tmp_fu_3043_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "tmp_fu_1649_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_1692_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1655_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_2673_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design HTA_theta_mux_44_mb6 has unconnected port din4[3]
+WARNING: [Synth 8-3331] design HTA_theta_mux_44_mb6 has unconnected port din4[2]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[7]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[6]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[5]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[4]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[3]
+WARNING: [Synth 8-3331] design HTA_theta_mux_48_ncg has unconnected port din4[2]
+WARNING: [Synth 8-3331] design HTA_theta_buddy_teOg has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tdEe has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tcud has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta_buddy_tbkb has unconnected port reset
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[31]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[30]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[29]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[28]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[27]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[26]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[25]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[24]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[23]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[22]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[21]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[20]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[19]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[18]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[17]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_size[16]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[31]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[30]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[29]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[28]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[27]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[26]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[25]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[24]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[23]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[22]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[21]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[20]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[19]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[18]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[17]
+WARNING: [Synth 8-3331] design HTA_theta has unconnected port alloc_free_target[16]
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[31]' (FDE) to 'inst/tmp_V_reg_3848_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[32]' (FDE) to 'inst/tmp_V_reg_3848_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[33]' (FDE) to 'inst/tmp_V_reg_3848_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[34]' (FDE) to 'inst/tmp_V_reg_3848_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[35]' (FDE) to 'inst/tmp_V_reg_3848_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[36]' (FDE) to 'inst/tmp_V_reg_3848_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[37]' (FDE) to 'inst/tmp_V_reg_3848_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[38]' (FDE) to 'inst/tmp_V_reg_3848_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[39]' (FDE) to 'inst/tmp_V_reg_3848_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[40]' (FDE) to 'inst/tmp_V_reg_3848_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[41]' (FDE) to 'inst/tmp_V_reg_3848_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[42]' (FDE) to 'inst/tmp_V_reg_3848_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[43]' (FDE) to 'inst/tmp_V_reg_3848_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[44]' (FDE) to 'inst/tmp_V_reg_3848_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[45]' (FDE) to 'inst/tmp_V_reg_3848_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[46]' (FDE) to 'inst/tmp_V_reg_3848_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[47]' (FDE) to 'inst/tmp_V_reg_3848_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[48]' (FDE) to 'inst/tmp_V_reg_3848_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[49]' (FDE) to 'inst/tmp_V_reg_3848_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[50]' (FDE) to 'inst/tmp_V_reg_3848_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[51]' (FDE) to 'inst/tmp_V_reg_3848_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[52]' (FDE) to 'inst/tmp_V_reg_3848_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[53]' (FDE) to 'inst/tmp_V_reg_3848_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[54]' (FDE) to 'inst/tmp_V_reg_3848_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[55]' (FDE) to 'inst/tmp_V_reg_3848_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[56]' (FDE) to 'inst/tmp_V_reg_3848_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[57]' (FDE) to 'inst/tmp_V_reg_3848_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[58]' (FDE) to 'inst/tmp_V_reg_3848_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[59]' (FDE) to 'inst/tmp_V_reg_3848_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[60]' (FDE) to 'inst/tmp_V_reg_3848_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[61]' (FDE) to 'inst/tmp_V_reg_3848_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_V_reg_3848_reg[62]' (FDE) to 'inst/tmp_V_reg_3848_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\newIndex18_reg_4492_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[34]' (FDE) to 'inst/tmp_92_reg_4251_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[35]' (FDE) to 'inst/tmp_92_reg_4251_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[16]' (FDE) to 'inst/tmp_92_reg_4251_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[17]' (FDE) to 'inst/tmp_92_reg_4251_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[18]' (FDE) to 'inst/tmp_92_reg_4251_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[19]' (FDE) to 'inst/tmp_92_reg_4251_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[20]' (FDE) to 'inst/tmp_92_reg_4251_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[21]' (FDE) to 'inst/tmp_92_reg_4251_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[22]' (FDE) to 'inst/tmp_92_reg_4251_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[23]' (FDE) to 'inst/tmp_92_reg_4251_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[24]' (FDE) to 'inst/tmp_92_reg_4251_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[25]' (FDE) to 'inst/tmp_92_reg_4251_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[26]' (FDE) to 'inst/tmp_92_reg_4251_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[27]' (FDE) to 'inst/tmp_92_reg_4251_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[28]' (FDE) to 'inst/tmp_92_reg_4251_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[29]' (FDE) to 'inst/tmp_92_reg_4251_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[30]' (FDE) to 'inst/tmp_92_reg_4251_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[31]' (FDE) to 'inst/tmp_92_reg_4251_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[32]' (FDE) to 'inst/tmp_92_reg_4251_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[33]' (FDE) to 'inst/tmp_92_reg_4251_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[0]' (FDE) to 'inst/tmp_92_reg_4251_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[1]' (FDE) to 'inst/tmp_92_reg_4251_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[2]' (FDE) to 'inst/tmp_92_reg_4251_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[3]' (FDE) to 'inst/tmp_92_reg_4251_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[4]' (FDE) to 'inst/tmp_92_reg_4251_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[5]' (FDE) to 'inst/tmp_92_reg_4251_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[6]' (FDE) to 'inst/tmp_92_reg_4251_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[7]' (FDE) to 'inst/tmp_92_reg_4251_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[8]' (FDE) to 'inst/tmp_92_reg_4251_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[9]' (FDE) to 'inst/tmp_92_reg_4251_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[10]' (FDE) to 'inst/tmp_92_reg_4251_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[11]' (FDE) to 'inst/tmp_92_reg_4251_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[12]' (FDE) to 'inst/tmp_92_reg_4251_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[13]' (FDE) to 'inst/tmp_92_reg_4251_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[14]' (FDE) to 'inst/tmp_92_reg_4251_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[15]' (FDE) to 'inst/tmp_92_reg_4251_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[52]' (FDE) to 'inst/tmp_92_reg_4251_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[53]' (FDE) to 'inst/tmp_92_reg_4251_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[54]' (FDE) to 'inst/tmp_92_reg_4251_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[55]' (FDE) to 'inst/tmp_92_reg_4251_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[56]' (FDE) to 'inst/tmp_92_reg_4251_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[57]' (FDE) to 'inst/tmp_92_reg_4251_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[58]' (FDE) to 'inst/tmp_92_reg_4251_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[59]' (FDE) to 'inst/tmp_92_reg_4251_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[60]' (FDE) to 'inst/tmp_92_reg_4251_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[61]' (FDE) to 'inst/tmp_92_reg_4251_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[36]' (FDE) to 'inst/tmp_92_reg_4251_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[37]' (FDE) to 'inst/tmp_92_reg_4251_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[38]' (FDE) to 'inst/tmp_92_reg_4251_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[39]' (FDE) to 'inst/tmp_92_reg_4251_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[40]' (FDE) to 'inst/tmp_92_reg_4251_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[41]' (FDE) to 'inst/tmp_92_reg_4251_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[42]' (FDE) to 'inst/tmp_92_reg_4251_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[43]' (FDE) to 'inst/tmp_92_reg_4251_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[44]' (FDE) to 'inst/tmp_92_reg_4251_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[45]' (FDE) to 'inst/tmp_92_reg_4251_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[46]' (FDE) to 'inst/tmp_92_reg_4251_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[47]' (FDE) to 'inst/tmp_92_reg_4251_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[48]' (FDE) to 'inst/tmp_92_reg_4251_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[49]' (FDE) to 'inst/tmp_92_reg_4251_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[50]' (FDE) to 'inst/tmp_92_reg_4251_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/lhs_V_1_reg_4246_reg[51]' (FDE) to 'inst/tmp_92_reg_4251_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[0]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_fu_326_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_10_reg_3804_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_10_reg_3804_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_10_reg_3804_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_10_reg_3804_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_10_reg_3804_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[7]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[6]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[5]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[4]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_10_reg_3804_reg[3]' (FDE) to 'inst/addr_tree_map_V_load_reg_3795_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_11_reg_1298_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_11_reg_1298_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_11_reg_1298_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\arrayNo1_reg_4190_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\arrayNo1_reg_4190_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Result_15_reg_4105_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03558_1_reg_1422_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\shift_constant_V_U/HTA_theta_shift_cibs_rom_U/q0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03550_8_in_reg_1176_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\reg_1587_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03550_8_in_reg_1176_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03550_8_in_reg_1176_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03550_8_in_reg_1176_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03550_8_in_reg_1176_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_11_reg_3876_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (p_03550_8_in_reg_1176_reg[8]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_03550_8_in_reg_1176_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (shift_constant_V_U/HTA_theta_shift_cibs_rom_U/q0_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1587_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (loc_tree_V_6_reg_4030_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_Result_15_reg_4105_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_03538_1_in_in_reg_1277_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_03558_1_reg_1422_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[31]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[30]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[29]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[28]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[27]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[26]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[25]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[24]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[23]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[22]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[21]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[20]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[19]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[18]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[17]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[16]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[15]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[14]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[13]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[12]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[11]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[10]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[9]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (reg_1234_reg[8]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_6_reg_1363_reg[7]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[29]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[28]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[27]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[26]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[25]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[24]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[23]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[22]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[21]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[20]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[19]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[18]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[17]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[16]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[15]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[14]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[13]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[12]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[11]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[10]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[9]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[8]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[7]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[6]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[5]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[4]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[3]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[2]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[1]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast1_reg_4464_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (p_03550_5_in_reg_1412_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast4_reg_4479_reg[1]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast4_reg_4479_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[5]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[4]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[3]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[2]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[1]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast3_reg_4474_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[13]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[12]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[11]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[10]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[9]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[8]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[7]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[6]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[5]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[4]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[3]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[2]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[1]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (r_V_38_cast2_reg_4469_reg[0]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (tmp_138_reg_4435_reg[1]) is unused and will be removed from module HTA_theta.
+WARNING: [Synth 8-3332] Sequential element (tmp_138_reg_4435_reg[0]) is unused and will be removed from module HTA_theta.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:00 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10176 ; free virtual = 27085
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|HTA_theta_group_thbi_rom | p_0_out    | 8x31          | LUT            | 
+|HTA_theta_shift_cibs_rom | p_0_out    | 8x5           | LUT            | 
+|HTA_theta                | p_0_out    | 8x5           | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HTA_theta_group_tfYi_ram: | ram_reg    | 64 x 64(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 2      | 0      | 
+|HTA_theta_group_tfYi_ram: | ram_reg    | 64 x 64(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 2      | 0      | 
+|HTA_theta_addr_lajbC_ram: | ram_reg    | 2 K x 4(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|HTA_theta_addr_trkbM_ram: | ram_reg    | 2 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+|Module Name           | RTL Object                         | Inference      | Size (Depth x Width) | Primitives      | 
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_0_U | HTA_theta_buddy_tbkb_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_1_U | HTA_theta_buddy_tcud_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_2_U | HTA_theta_buddy_tdEe_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_3_U | HTA_theta_buddy_teOg_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/i_/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/addr_layer_map_V_U/HTA_theta_addr_lajbC_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:11 . Memory (MB): peak = 1786.406 ; gain = 516.723 ; free physical = 10031 ; free virtual = 26933
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:17 . Memory (MB): peak = 1880.602 ; gain = 610.918 ; free physical = 9993 ; free virtual = 26902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HTA_theta_group_tfYi_ram: | ram_reg    | 64 x 64(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 2      | 0      | 
+|HTA_theta_group_tfYi_ram: | ram_reg    | 64 x 64(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 2      | 0      | 
+|HTA_theta_addr_lajbC_ram: | ram_reg    | 2 K x 4(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|HTA_theta_addr_trkbM_ram: | ram_reg    | 2 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+|Module Name           | RTL Object                         | Inference      | Size (Depth x Width) | Primitives      | 
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_0_U | HTA_theta_buddy_tbkb_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_1_U | HTA_theta_buddy_tcud_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_2_U | HTA_theta_buddy_tdEe_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
+|inst/buddy_tree_V_3_U | HTA_theta_buddy_teOg_ram_U/ram_reg | User Attribute | 4 x 64               | RAM16X1D x 64   | 
++----------------------+------------------------------------+----------------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_1_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_0_U/HTA_theta_group_tfYi_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/addr_layer_map_V_U/HTA_theta_addr_lajbC_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:22 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9990 ; free virtual = 26899
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:23 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 10000 ; free virtual = 26909
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:23 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9983 ; free virtual = 26892
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9983 ; free virtual = 26892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9983 ; free virtual = 26892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9982 ; free virtual = 26891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9982 ; free virtual = 26891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    56|
+|2     |LUT1       |    51|
+|3     |LUT2       |   231|
+|4     |LUT3       |  1021|
+|5     |LUT4       |   530|
+|6     |LUT5       |  1065|
+|7     |LUT6       |  2914|
+|8     |MUXF7      |    82|
+|9     |MUXF8      |     3|
+|10    |RAM16X1D   |   256|
+|11    |RAMB18E1   |     2|
+|12    |RAMB18E1_1 |     2|
+|13    |RAMB18E1_2 |     1|
+|14    |RAMB18E1_3 |     1|
+|15    |FDRE       |  2402|
+|16    |FDSE       |   143|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------------------+---------------------------+------+
+|      |Instance                         |Module                     |Cells |
++------+---------------------------------+---------------------------+------+
+|1     |top                              |                           |  8760|
+|2     |  inst                           |HTA_theta                  |  8760|
+|3     |    HTA_theta_mux_44_mb6_U11     |HTA_theta_mux_44_mb6       |    64|
+|4     |    HTA_theta_mux_44_mb6_U12     |HTA_theta_mux_44_mb6_0     |   338|
+|5     |    HTA_theta_mux_44_mb6_U2      |HTA_theta_mux_44_mb6_1     |   147|
+|6     |    HTA_theta_mux_44_mb6_U4      |HTA_theta_mux_44_mb6_2     |    64|
+|7     |    HTA_theta_mux_44_mb6_U7      |HTA_theta_mux_44_mb6_3     |    64|
+|8     |    HTA_theta_mux_44_mb6_U8      |HTA_theta_mux_44_mb6_4     |    64|
+|9     |    HTA_theta_mux_48_ncg_U3      |HTA_theta_mux_48_ncg       |    64|
+|10    |    addr_layer_map_V_U           |HTA_theta_addr_lajbC       |    21|
+|11    |      HTA_theta_addr_lajbC_ram_U |HTA_theta_addr_lajbC_ram   |    21|
+|12    |    addr_tree_map_V_U            |HTA_theta_addr_trkbM       |   345|
+|13    |      HTA_theta_addr_trkbM_ram_U |HTA_theta_addr_trkbM_ram   |   345|
+|14    |    buddy_tree_V_0_U             |HTA_theta_buddy_tbkb       |   907|
+|15    |      HTA_theta_buddy_tbkb_ram_U |HTA_theta_buddy_tbkb_ram   |   907|
+|16    |    buddy_tree_V_1_U             |HTA_theta_buddy_tcud       |   571|
+|17    |      HTA_theta_buddy_tcud_ram_U |HTA_theta_buddy_tcud_ram   |   571|
+|18    |    buddy_tree_V_2_U             |HTA_theta_buddy_tdEe       |   695|
+|19    |      HTA_theta_buddy_tdEe_ram_U |HTA_theta_buddy_tdEe_ram   |   695|
+|20    |    buddy_tree_V_3_U             |HTA_theta_buddy_teOg       |  1166|
+|21    |      HTA_theta_buddy_teOg_ram_U |HTA_theta_buddy_teOg_ram   |  1166|
+|22    |    group_tree_V_0_U             |HTA_theta_group_tfYi       |   143|
+|23    |      HTA_theta_group_tfYi_ram_U |HTA_theta_group_tfYi_ram_6 |   143|
+|24    |    group_tree_V_1_U             |HTA_theta_group_tfYi_5     |    69|
+|25    |      HTA_theta_group_tfYi_ram_U |HTA_theta_group_tfYi_ram   |    69|
+|26    |    group_tree_mask_V_U          |HTA_theta_group_thbi       |   150|
+|27    |      HTA_theta_group_thbi_rom_U |HTA_theta_group_thbi_rom   |   150|
+|28    |    mark_mask_V_U                |HTA_theta_mark_malbW       |   329|
+|29    |      HTA_theta_mark_malbW_rom_U |HTA_theta_mark_malbW_rom   |   329|
+|30    |    shift_constant_V_U           |HTA_theta_shift_cibs       |     5|
+|31    |      HTA_theta_shift_cibs_rom_U |HTA_theta_shift_cibs_rom   |     5|
++------+---------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.617 ; gain = 640.934 ; free physical = 9982 ; free virtual = 26891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 139 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 1910.617 ; gain = 266.723 ; free physical = 10040 ; free virtual = 26949
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:24 . Memory (MB): peak = 1910.625 ; gain = 640.934 ; free physical = 10040 ; free virtual = 26949
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 403 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 256 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 256 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+338 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:27 . Memory (MB): peak = 1910.625 ; gain = 652.508 ; free physical = 10114 ; free virtual = 27023
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.runs/design_1_HTA_theta_0_0_synth_1/design_1_HTA_theta_0_0.dcp' has been generated.

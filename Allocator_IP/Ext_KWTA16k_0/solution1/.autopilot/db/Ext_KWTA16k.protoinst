@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Ext_KWTA16k": {
+			"proto_instances": {
+			}
+		}
+	}
+}

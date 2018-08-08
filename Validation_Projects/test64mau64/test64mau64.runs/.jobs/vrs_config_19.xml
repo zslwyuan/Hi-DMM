@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_FBTA64_theta_0_0_synth_1" LaunchDir="/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/design_1_FBTA64_theta_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_FBTA64_theta_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_1_FBTA64_theta_0_0_synth_1"/>
+	</Run>
+</Runs>
+

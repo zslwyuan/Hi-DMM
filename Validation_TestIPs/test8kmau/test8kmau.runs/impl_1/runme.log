@@ -1,0 +1,35 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tingyuan/Temporary/vivado-outputs'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/tingyuan/Temporary/vivado-outputs' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.runs/impl_1'.)
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tingyuan/Temporary/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Ext_KWTA32k:1.0'. The one found in IP location '/home/tingyuan/Temporary/vivado-outputs/Ext_KWTA32k_0/solution1/impl/ip' will take precedence over the same IP in location /home/tingyuan/Temporary/vivado-outputs/Ext_KWTA32k_0 (backup)/solution1/impl/ip
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Ext_KWTA8k:1.0'. The one found in IP location '/home/tingyuan/Temporary/vivado-outputs/Ext_KWTA8k/solution1/impl/ip' will take precedence over the same IP in location /home/tingyuan/Temporary/vivado-outputs/Ext_KWTA8k (backup)/solution1/impl/ip
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Ext_KWTA16k:1.0'. The one found in IP location '/home/tingyuan/Temporary/vivado-outputs/Ext_KWTA16k/solution1/impl/ip' will take precedence over the same IP in location /home/tingyuan/Temporary/vivado-outputs/Ext_KWTA16k (backup)/solution1/impl/ip
+Command: link_design -top design_1_wrapper -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_HTA_0_0/design_1_Ext_HTA_0_0.dcp' for cell 'design_1_i/Ext_HTA_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_KWTA8k_0_0/design_1_Ext_KWTA8k_0_0.dcp' for cell 'design_1_i/Ext_KWTA8k_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_acc8kmau_0_0/design_1_acc8kmau_0_0.dcp' for cell 'design_1_i/acc8kmau_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.dcp' for cell 'design_1_i/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint '/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0.dcp' for cell 'design_1_i/rst_clk_wiz_100M'
+INFO: [Netlist 29-17] Analyzing 338 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_board.xdc] for cell 'design_1_i/clk_wiz/inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_board.xdc] for cell 'design_1_i/clk_wiz/inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test8kmau/test8kmau.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.xdc] for cell 'design_1_i/clk_wiz/inst'

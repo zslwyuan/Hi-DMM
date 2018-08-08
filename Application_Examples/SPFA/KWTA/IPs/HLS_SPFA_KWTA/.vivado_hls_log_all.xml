@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'N_2' is power-on initialization." projectName="HLS_SPFA_KWTA" solutionName="solution1" date="2018-08-08T21:37:18.699+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'guard_variable_for_H' is power-on initialization." projectName="HLS_SPFA_KWTA" solutionName="solution1" date="2018-08-08T21:37:18.692+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'HLS_SPFA_KWTA/map' to 'HLS_SPFA_KWTA/map_r' to avoid the conflict with HDL keywords or other object names." projectName="HLS_SPFA_KWTA" solutionName="solution1" date="2018-08-08T21:37:18.073+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

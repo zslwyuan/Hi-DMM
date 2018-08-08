@@ -1,0 +1,136 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Jul 29 01:50:25 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    66 |
+| Unused register locations in slices containing registers |   132 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |           11 |
+|     10 |            1 |
+|     12 |            3 |
+|     14 |            2 |
+|    16+ |           47 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             254 |           62 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             116 |           29 |
+| Yes          | No                    | No                     |            2662 |          602 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             532 |           83 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+
+|            Clock Signal           |                                                Enable Signal                                               |                                          Set/Reset Signal                                          | Slice Load Count | Bel Load Count |
++-----------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/cmd_fu_278[7]_i_2_n_0                                                      | design_1_i/HTA1024_theta_0/inst/cmd_fu_278[7]_i_1_n_0                                              |                1 |              4 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/addr_layer_map_V_U/HTA1024_theta_addhbi_ram_U/ap_CS_fsm_reg[13][0]         |                                                                                                    |                1 |              6 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state23                                                          | design_1_i/HTA1024_theta_0/inst/clear                                                              |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                            | design_1_i/rst_clk_wiz_100M/U0/EXT_LPF/lpf_int                                                     |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/tmp_149_reg_38130                                                          |                                                                                                    |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state5                                                           |                                                                                                    |                2 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/reg_12780                                                                  |                                                                                                    |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_03495_2_in_reg_914                                                       | design_1_i/HTA1024_theta_0/inst/p_03479_3_in_reg_923[11]_i_1_n_0                                   |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_Repl2_12_reg_3913[0]_i_1_n_0                                             |                                                                                                    |                3 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/buddy_tree_V_1_U/HTA1024_theta_budfYi_ram_U/tmp_72_reg_3207_reg[0]         |                                                                                                    |                4 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/buddy_tree_V_1_U/HTA1024_theta_budfYi_ram_U/ap_NS_fsm[1]                   |                                                                                                    |                4 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/cnt_1_fu_282[0]_i_2_n_0                                                    | design_1_i/HTA1024_theta_0/inst/loc2_V_fu_290[9]                                                   |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/shift_constant_V_U/HTA1024_theta_shieOg_rom_U/shift_constant_V_ce0         |                                                                                                    |                1 |              8 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_NS_fsm[39]                                                              |                                                                                                    |                1 |             10 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_NS_fsm[38]                                                              |                                                                                                    |                1 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/rec_bits_V_3_reg_3517[1]_i_1_n_0                                           |                                                                                                    |                2 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/rst_clk_wiz_100M/U0/SEQ/seq_cnt_en                                                              | design_1_i/rst_clk_wiz_100M/U0/SEQ/SEQ_COUNTER/clear                                               |                1 |             12 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/loc1_V_7_fu_294[6]_i_1_n_0                                                 |                                                                                                    |                3 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/buddy_tree_V_1_U/HTA1024_theta_budfYi_ram_U/ap_phi_mux_p_8_phi_fu_1091_p41 | design_1_i/HTA1024_theta_0/inst/buddy_tree_V_1_U/HTA1024_theta_budfYi_ram_U/ap_NS_fsm140_out       |                2 |             14 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state14                                                          | design_1_i/HTA1024_theta_0/inst/r_V_2_reg_3456[7]_i_1_n_0                                          |                3 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/sel                                                                        |                                                                                                    |                4 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state34                                                          | design_1_i/HTA1024_theta_0/inst/r_V_11_reg_3700[7]_i_1_n_0                                         |                2 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/reg_942[7]_i_2_n_0                                                         | design_1_i/HTA1024_theta_0/inst/reg_942[7]                                                         |                3 |             16 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/group_tree_V_0_U/HTA1024_theta_grobkb_ram_U/ap_NS_fsm139_out               |                                                                                                    |                3 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/reg_1035[7]_i_2_n_0                                                        | design_1_i/HTA1024_theta_0/inst/buddy_tree_V_1_U/HTA1024_theta_budfYi_ram_U/reg_1035_reg[0]_rep__0 |                5 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_Val2_2_reg_1026                                                          |                                                                                                    |                5 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_8_reg_1088[9]_i_1_n_0                                                    |                                                                                                    |                5 |             20 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/ap_CS_fsm_state2                                                        |                                                                                                    |                4 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/E[0]                                           | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_free_1_s_fu_95/SR[0]                                    |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_NS_fsm[11]                                                              |                                                                                                    |                2 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_NS_fsm[7]                                                               |                                                                                                    |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/ap_CS_fsm_state3                                                        |                                                                                                    |                3 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state32                                                          |                                                                                                    |                4 |             22 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state8                                                           |                                                                                                    |                3 |             26 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state11                                                          |                                                                                                    |                8 |             32 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state15                                                          |                                                                                                    |                7 |             36 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state14                                                          |                                                                                                    |               10 |             36 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state40                                                          |                                                                                                    |               10 |             60 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state9                                                           |                                                                                                    |               19 |             62 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_free_1_s_fu_95/r_fu_40_reg[1]                                   | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/r_fu_40_reg[1]                         |               10 |             62 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/rhs_V_4_reg_1047[63]_i_2_n_0                                               |                                                                                                    |                7 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state20                                                          |                                                                                                    |                7 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state22                                                          |                                                                                                    |               22 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/rhs_V_4_reg_1047[63]_i_2_n_0                                               | design_1_i/HTA1024_theta_0/inst/rhs_V_4_reg_1047[63]                                               |               10 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_03499_2_in_reg_967[3]_i_1_n_0                                            | design_1_i/HTA1024_theta_0/inst/p_03447_3_reg_994[33]                                              |                5 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/mark_mask_V_U/HTA1024_theta_marjbC_rom_U/mark_mask_V_ce0                   |                                                                                                    |               19 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/acc1024_1024_mau_0/inst/grp_HLS_malloc_1_s_fu_81/ap_NS_fsm[2]                                   |                                                                                                    |               14 |             64 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state16                                                          |                                                                                                    |               12 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state22                                                          | design_1_i/HTA1024_theta_0/inst/tmp_61_reg_3576[63]_i_1_n_0                                        |               19 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state9                                                           | design_1_i/HTA1024_theta_0/inst/tmp_40_reg_3362[63]_i_1_n_0                                        |               11 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/TMP_0_V_2_reg_35260                                                        | design_1_i/HTA1024_theta_0/inst/TMP_0_V_2_reg_3526[63]_i_1_n_0                                     |                5 |             66 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/alloc_size_ap_ack                                                          |                                                                                                    |               11 |             72 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state34                                                          |                                                                                                    |               20 |             74 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/TMP_0_V_2_reg_35260                                                        |                                                                                                    |               13 |             86 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_03499_2_in_reg_967[3]_i_1_n_0                                            |                                                                                                    |               11 |            100 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                            | design_1_i/rst_clk_wiz_100M/U0/peripheral_reset[0]                                                 |               27 |            108 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state29                                                          |                                                                                                    |               36 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/storemerge_reg_1058[63]_i_1_n_0                                            |                                                                                                    |               63 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_NS_fsm[27]                                                              |                                                                                                    |               27 |            128 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state33                                                          |                                                                                                    |               33 |            130 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/rhs_V_6_reg_37870                                                          |                                                                                                    |               24 |            134 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/rhs_V_3_fu_286                                                             |                                                                                                    |               50 |            148 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/p_03495_2_in_reg_914                                                       |                                                                                                    |               17 |            152 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state6                                                           |                                                                                                    |               34 |            192 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/HTA1024_theta_0/inst/ap_CS_fsm_state12                                                          |                                                                                                    |               68 |            256 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                            |                                                                                                    |               63 |            256 |
++-----------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

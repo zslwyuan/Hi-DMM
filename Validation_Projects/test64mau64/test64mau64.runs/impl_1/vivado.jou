@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jul 29 16:41:52 2018
+# Process ID: 19864
+# Current directory: /home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/tingyuan/Documents/SoSo/test64mau64/test64mau64.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

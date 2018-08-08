@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Thu Jul 26 17:39:02 UTC 2018
+VLNV: xilinx.com:hls:FBTA64_theta:1.0
+SynthRuntime: 65

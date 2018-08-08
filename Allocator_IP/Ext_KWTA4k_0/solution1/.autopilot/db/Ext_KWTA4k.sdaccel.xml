@@ -1,0 +1,319 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Ext_KWTA4k'" level="0">
+<item name = "Date">Tue Jul 31 01:55:42 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">Ext_KWTA4k_0</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.207</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, 1, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 1908</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">2, -, 37, 12</column>
+<column name="Multiplexer">-, -, -, 1164</column>
+<column name="Register">-, -, 1031, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 1, 5</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="group_tree_V_U">Ext_KWTA4k_group_dEe, 1, 0, 0, 2048, 4, 1, 8192</column>
+<column name="heap_tree_V_U">Ext_KWTA4k_heap_tcud, 1, 0, 0, 64, 32, 1, 2048</column>
+<column name="maintain_mask_V_U">Ext_KWTA4k_maintabkb, 0, 33, 4, 7, 33, 1, 231</column>
+<column name="mark_mask_V_U">Ext_KWTA4k_mark_meOg, 0, 4, 8, 128, 4, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="now1_V_fu_1222_p2">+, 0, 0, 13, 4, 2</column>
+<column name="phitmp3_fu_1242_p2">+, 0, 0, 23, 16, 2</column>
+<column name="tmp2_fu_1490_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp3_fu_1499_p2">+, 0, 0, 15, 7, 7</column>
+<column name="tmp_42_fu_1508_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_44_fu_1519_p2">+, 0, 0, 39, 2, 32</column>
+<column name="tmp_48_fu_1568_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp_52_fu_1623_p2">+, 0, 0, 10, 1, 2</column>
+<column name="tmp_size_V_fu_1040_p2">+, 0, 0, 23, 2, 16</column>
+<column name="tree_offset_V_fu_1599_p2">+, 0, 0, 17, 13, 13</column>
+<column name="p_not_fu_1111_p2">-, 0, 0, 71, 1, 64</column>
+<column name="p_s_fu_1061_p2">-, 0, 0, 23, 1, 16</column>
+<column name="r_V_3_fu_1759_p2">-, 0, 0, 13, 3, 4</column>
+<column name="r_V_5_fu_1743_p2">-, 0, 0, 13, 4, 4</column>
+<column name="r_V_7_fu_1338_p2">-, 0, 0, 13, 3, 4</column>
+<column name="r_V_9_fu_1322_p2">-, 0, 0, 13, 4, 4</column>
+<column name="tmp1_V_fu_1529_p2">-, 0, 0, 39, 32, 32</column>
+<column name="TMP_1_V_fu_1066_p2">and, 0, 0, 16, 16, 16</column>
+<column name="ap_block_state20_io">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1150">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_593">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_800">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_899">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_983">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op108_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op84_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op99_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="group_tree_tmp_maske_fu_1629_p2">and, 0, 0, 2, 2, 2</column>
+<column name="tmp0_V_6_fu_1412_p2">and, 0, 0, 64, 64, 64</column>
+<column name="tmp_19_fu_1831_p2">and, 0, 0, 64, 64, 64</column>
+<column name="tmp_23_fu_1789_p2">and, 0, 0, 32, 32, 32</column>
+<column name="tmp_31_fu_1182_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_45_fu_1525_p2">and, 0, 0, 32, 32, 32</column>
+<column name="cond_fu_1635_p2">icmp, 0, 0, 9, 2, 3</column>
+<column name="grp_fu_1013_p2">icmp, 0, 0, 11, 5, 3</column>
+<column name="grp_fu_980_p2">icmp, 0, 0, 11, 5, 4</column>
+<column name="not_s_fu_1176_p2">icmp, 0, 0, 9, 4, 1</column>
+<column name="p_Repl2_1_fu_1373_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="p_Repl2_2_fu_1272_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="p_Repl2_3_fu_1292_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="p_Repl2_4_fu_1675_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="p_Repl2_5_fu_1694_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="p_Repl2_s_fu_1798_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="tmp_30_fu_1170_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="tmp_32_fu_1460_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_39_fu_1313_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="tmp_40_fu_1470_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_41_fu_1476_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_46_fu_1548_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_47_fu_1558_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_49_fu_1573_p2">icmp, 0, 0, 29, 64, 1</column>
+<column name="tmp_4_fu_1071_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="tmp_50_fu_1578_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_6_fu_1080_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="tmp_9_fu_1450_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_fu_1056_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="r_V_11_fu_1216_p2">lshr, 0, 0, 182, 64, 64</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state21_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state27_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state7_io">or, 0, 0, 2, 1, 1</column>
+<column name="or_cond_fu_1582_p2">or, 0, 0, 2, 1, 1</column>
+<column name="r_V_14_fu_1661_p2">or, 0, 0, 4, 4, 4</column>
+<column name="r_V_17_cast_fu_1667_p2">or, 0, 0, 2, 2, 2</column>
+<column name="tmp_15_fu_1138_p2">or, 0, 0, 4, 4, 4</column>
+<column name="tmp_26_fu_1401_p2">or, 0, 0, 64, 64, 64</column>
+<column name="tmp_29_fu_1363_p2">or, 0, 0, 32, 32, 32</column>
+<column name="r_V_15_fu_1395_p2">shl, 0, 0, 182, 64, 64</column>
+<column name="r_V_16_fu_1357_p2">shl, 0, 0, 101, 32, 32</column>
+<column name="r_V_4_fu_1819_p2">shl, 0, 0, 182, 64, 64</column>
+<column name="r_V_6_fu_1777_p2">shl, 0, 0, 101, 32, 32</column>
+<column name="group_tree_tmp_V_fu_1617_p2">xor, 0, 0, 2, 2, 2</column>
+<column name="lhs_V_fu_1126_p2">xor, 0, 0, 32, 32, 2</column>
+<column name="tmp0_V_fu_1825_p2">xor, 0, 0, 64, 64, 2</column>
+<column name="tmp_14_fu_1132_p2">xor, 0, 0, 4, 4, 2</column>
+<column name="tmp_22_fu_1783_p2">xor, 0, 0, 32, 32, 2</column>
+<column name="tmp_36_fu_1256_p2">xor, 0, 0, 4, 4, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="alloc_addr">21, 4, 32, 128</column>
+<column name="alloc_addr_blk_n">9, 2, 1, 2</column>
+<column name="alloc_cmd_blk_n">9, 2, 1, 2</column>
+<column name="alloc_free_target_blk_n">9, 2, 1, 2</column>
+<column name="alloc_size_blk_n">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">149, 33, 1, 33</column>
+<column name="ap_phi_mux_p_0167_0_i1_phi_fu_601_p34">85, 17, 4, 68</column>
+<column name="ap_phi_mux_p_0252_0_i1_phi_fu_657_p34">89, 18, 5, 90</column>
+<column name="ap_phi_mux_p_061_0_i_phi_fu_843_p34">85, 17, 4, 68</column>
+<column name="ap_sig_ioackin_alloc_addr_ap_ack">9, 2, 1, 2</column>
+<column name="ap_sig_ioackin_com_port_cmd_ap_ack">9, 2, 1, 2</column>
+<column name="ap_sig_ioackin_com_port_layer_V_ap_ack">9, 2, 1, 2</column>
+<column name="ap_sig_ioackin_com_port_target_V_ap_ack">9, 2, 1, 2</column>
+<column name="com_port_allocated_addr_V_blk_n">9, 2, 1, 2</column>
+<column name="com_port_cmd">21, 4, 8, 32</column>
+<column name="com_port_cmd_blk_n">9, 2, 1, 2</column>
+<column name="com_port_layer_V">21, 4, 8, 32</column>
+<column name="com_port_layer_V_blk_n">9, 2, 1, 2</column>
+<column name="com_port_target_V">15, 3, 16, 48</column>
+<column name="com_port_target_V_blk_n">9, 2, 1, 2</column>
+<column name="group_tree_V_address0">27, 5, 11, 55</column>
+<column name="group_tree_V_d0">15, 3, 4, 12</column>
+<column name="heap_tree_V_address0">44, 9, 6, 54</column>
+<column name="heap_tree_V_d0">27, 5, 32, 160</column>
+<column name="layer0_V_reg_491">85, 17, 5, 85</column>
+<column name="loc_in_group_tree_V_2_reg_568">9, 2, 16, 32</column>
+<column name="maintain_mask_V_address0">27, 5, 3, 15</column>
+<column name="mark_mask_V_address0">15, 3, 7, 21</column>
+<column name="p_0102_0_i_reg_896">85, 17, 5, 85</column>
+<column name="p_01572_0_in_reg_559">9, 2, 64, 128</column>
+<column name="p_0244_0_i1_reg_767">85, 17, 5, 85</column>
+<column name="p_0248_0_i1_reg_710">85, 17, 5, 85</column>
+<column name="p_3_reg_548">9, 2, 4, 8</column>
+<column name="p_Val2_12_reg_579">9, 2, 64, 128</column>
+<column name="storemerge1_reg_969">15, 3, 64, 192</column>
+<column name="storemerge_reg_589">9, 2, 64, 128</column>
+<column name="top_heap_V_0">15, 3, 64, 192</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="addr_HTA_V_3_reg_2127">16, 0, 16, 0</column>
+<column name="alloc_cmd_read_reg_1842">8, 0, 8, 0</column>
+<column name="alloc_free_target_re_reg_1853">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">32, 0, 32, 0</column>
+<column name="ap_reg_ioackin_alloc_addr_ap_ack">1, 0, 1, 0</column>
+<column name="ap_reg_ioackin_com_port_cmd_ap_ack">1, 0, 1, 0</column>
+<column name="ap_reg_ioackin_com_port_layer_V_ap_ack">1, 0, 1, 0</column>
+<column name="ap_reg_ioackin_com_port_target_V_ap_ack">1, 0, 1, 0</column>
+<column name="cond_reg_2112">1, 0, 1, 0</column>
+<column name="group_tree_V_addr_1_reg_2092">11, 0, 11, 0</column>
+<column name="group_tree_V_addr_reg_1896">11, 0, 11, 0</column>
+<column name="heap_tree_V_addr_1_reg_1966">6, 0, 6, 0</column>
+<column name="heap_tree_V_addr_2_reg_1950">6, 0, 6, 0</column>
+<column name="heap_tree_V_addr_3_reg_2037">6, 0, 6, 0</column>
+<column name="heap_tree_V_addr_reg_2157">6, 0, 6, 0</column>
+<column name="layer0_V_reg_491">5, 0, 5, 0</column>
+<column name="lhs_V_1_reg_2102">4, 0, 4, 0</column>
+<column name="loc2_V_reg_2134">5, 0, 5, 0</column>
+<column name="loc_in_group_tree_V_2_reg_568">16, 0, 16, 0</column>
+<column name="or_cond_reg_2082">1, 0, 1, 0</column>
+<column name="p_0102_0_i_reg_896">5, 0, 5, 0</column>
+<column name="p_01572_0_in_reg_559">64, 0, 64, 0</column>
+<column name="p_0167_0_i1_cast_reg_2012">4, 0, 6, 2</column>
+<column name="p_0244_0_i1_reg_767">5, 0, 5, 0</column>
+<column name="p_0248_0_i1_reg_710">5, 0, 6, 1</column>
+<column name="p_0252_0_i1_cast_reg_2020">5, 0, 7, 2</column>
+<column name="p_061_0_i_cast_reg_2069">4, 0, 6, 2</column>
+<column name="p_3_reg_548">4, 0, 4, 0</column>
+<column name="p_Result_8_reg_1861">16, 0, 16, 0</column>
+<column name="p_Val2_11_reg_2042">32, 0, 32, 0</column>
+<column name="p_Val2_12_reg_579">64, 0, 64, 0</column>
+<column name="p_Val2_5_reg_1877">64, 0, 64, 0</column>
+<column name="p_not_reg_1910">64, 0, 64, 0</column>
+<column name="r_V_s_reg_2143">11, 0, 11, 0</column>
+<column name="reg_1019">16, 0, 16, 0</column>
+<column name="reg_1024">5, 0, 5, 0</column>
+<column name="reg_1028">11, 0, 11, 0</column>
+<column name="reg_1032">33, 0, 33, 0</column>
+<column name="size_V_reg_1848">16, 0, 16, 0</column>
+<column name="storemerge1_reg_969">64, 0, 64, 0</column>
+<column name="storemerge_reg_589">64, 0, 64, 0</column>
+<column name="tmp0_V_6_reg_1992">64, 0, 64, 0</column>
+<column name="tmp_23_reg_2167">32, 0, 32, 0</column>
+<column name="tmp_29_reg_1976">32, 0, 32, 0</column>
+<column name="tmp_38_reg_2139">1, 0, 1, 0</column>
+<column name="tmp_42_reg_2031">8, 0, 8, 0</column>
+<column name="tmp_44_reg_2050">32, 0, 32, 0</column>
+<column name="tmp_45_reg_2055">32, 0, 32, 0</column>
+<column name="tmp_48_reg_2077">6, 0, 6, 0</column>
+<column name="tmp_4_reg_1873">1, 0, 1, 0</column>
+<column name="tmp_5_reg_1906">1, 0, 1, 0</column>
+<column name="tmp_6_reg_1888">1, 0, 1, 0</column>
+<column name="tmp_70_reg_1944">2, 0, 2, 0</column>
+<column name="tmp_75_reg_2107">2, 0, 2, 0</column>
+<column name="tmp_s_reg_1892">1, 0, 1, 0</column>
+<column name="top_heap_V_0">64, 0, 64, 0</column>
+<column name="tree_offset_V_cast_reg_2097">13, 0, 16, 3</column>
+<column name="tree_offset_V_reg_2086">13, 0, 13, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Ext_KWTA4k, return value</column>
+<column name="alloc_size">in, 32, ap_hs, alloc_size, pointer</column>
+<column name="alloc_size_ap_vld">in, 1, ap_hs, alloc_size, pointer</column>
+<column name="alloc_size_ap_ack">out, 1, ap_hs, alloc_size, pointer</column>
+<column name="alloc_free_target">in, 32, ap_hs, alloc_free_target, pointer</column>
+<column name="alloc_free_target_ap_vld">in, 1, ap_hs, alloc_free_target, pointer</column>
+<column name="alloc_free_target_ap_ack">out, 1, ap_hs, alloc_free_target, pointer</column>
+<column name="alloc_addr">out, 32, ap_hs, alloc_addr, pointer</column>
+<column name="alloc_addr_ap_vld">out, 1, ap_hs, alloc_addr, pointer</column>
+<column name="alloc_addr_ap_ack">in, 1, ap_hs, alloc_addr, pointer</column>
+<column name="alloc_cmd">in, 8, ap_hs, alloc_cmd, pointer</column>
+<column name="alloc_cmd_ap_vld">in, 1, ap_hs, alloc_cmd, pointer</column>
+<column name="alloc_cmd_ap_ack">out, 1, ap_hs, alloc_cmd, pointer</column>
+<column name="com_port_layer_V">out, 8, ap_hs, com_port_layer_V, pointer</column>
+<column name="com_port_layer_V_ap_vld">out, 1, ap_hs, com_port_layer_V, pointer</column>
+<column name="com_port_layer_V_ap_ack">in, 1, ap_hs, com_port_layer_V, pointer</column>
+<column name="com_port_target_V">out, 16, ap_hs, com_port_target_V, pointer</column>
+<column name="com_port_target_V_ap_vld">out, 1, ap_hs, com_port_target_V, pointer</column>
+<column name="com_port_target_V_ap_ack">in, 1, ap_hs, com_port_target_V, pointer</column>
+<column name="com_port_allocated_addr_V">in, 16, ap_hs, com_port_allocated_addr_V, pointer</column>
+<column name="com_port_allocated_addr_V_ap_vld">in, 1, ap_hs, com_port_allocated_addr_V, pointer</column>
+<column name="com_port_allocated_addr_V_ap_ack">out, 1, ap_hs, com_port_allocated_addr_V, pointer</column>
+<column name="com_port_cmd">out, 8, ap_hs, com_port_cmd, pointer</column>
+<column name="com_port_cmd_ap_vld">out, 1, ap_hs, com_port_cmd, pointer</column>
+<column name="com_port_cmd_ap_ack">in, 1, ap_hs, com_port_cmd, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">8.21</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'tmp_45', Ext_KWTA4k_0/solution1/top.cc:260">and, 0.99, 0.99, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp1.V', Ext_KWTA4k_0/solution1/top.cc:260">sub, 2.55, 3.54, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'BB.V', Ext_KWTA4k_0/solution1/top.cc:113->Ext_KWTA4k_0/solution1/top.cc:261">partselect, 0.00, 3.54, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_47', Ext_KWTA4k_0/solution1/top.cc:115->Ext_KWTA4k_0/solution1/top.cc:261">icmp, 2.43, 5.97, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'p_0102_0_i'">phi, 2.23, 8.21, -, -, -, -, -, -, -, -, -, -, </column>
+</table>
+</item>
+</section>
+</profile>

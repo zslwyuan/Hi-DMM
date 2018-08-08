@@ -1,0 +1,401 @@
+
+*** Running vivado
+    with args -log design_1_HLS_SPFA_KWTA_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_HLS_SPFA_KWTA_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_HLS_SPFA_KWTA_0_0.tcl -notrace
+Command: synth_design -top design_1_HLS_SPFA_KWTA_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24642 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1353.570 ; gain = 81.887 ; free physical = 7614 ; free virtual = 28494
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_HLS_SPFA_KWTA_0_0' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/synth/design_1_HLS_SPFA_KWTA_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_SPFA_KWTA.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_SPFA_KWTA.v:118]
+INFO: [Synth 8-6157] synthesizing module 'HLS_malloc_1_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_malloc_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_malloc_1_s.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_malloc_1_s' (1#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_malloc_1_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA' (2#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/a5f5/hdl/verilog/HLS_SPFA_KWTA.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_HLS_SPFA_KWTA_0_0' (3#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/synth/design_1_HLS_SPFA_KWTA_0_0.v:58]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[31]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[30]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[29]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[28]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[27]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[26]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[25]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[24]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[23]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[22]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[21]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[20]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[19]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[18]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[17]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[16]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[15]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[14]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[13]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[12]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[11]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[10]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[9]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[8]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[7]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[6]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[5]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[4]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[3]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[2]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[1]
+WARNING: [Synth 8-3331] design HLS_malloc_1_s has unconnected port allocator_addr[0]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[31]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[30]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[29]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[28]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[27]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[26]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[25]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[24]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[23]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[22]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[21]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[20]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[19]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[18]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[17]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[16]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[15]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[14]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[13]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[12]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[11]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[10]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[9]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[8]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[7]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[6]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[5]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[4]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[3]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[2]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[1]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q0[0]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[31]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[30]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[29]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[28]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[27]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[26]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[25]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[24]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[23]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[22]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[21]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[20]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[19]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[18]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[17]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[16]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[15]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[14]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[13]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[12]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[11]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[10]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[9]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[8]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[7]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[6]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[5]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[4]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[3]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[2]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[1]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port map_r_q1[0]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port dis_output_q0[31]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port dis_output_q0[30]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port dis_output_q0[29]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port dis_output_q0[28]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1399.195 ; gain = 127.512 ; free physical = 7623 ; free virtual = 28503
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1399.195 ; gain = 127.512 ; free physical = 7623 ; free virtual = 28503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1399.195 ; gain = 127.512 ; free physical = 7623 ; free virtual = 28503
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/constraints/HLS_SPFA_KWTA_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/constraints/HLS_SPFA_KWTA_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1748.430 ; gain = 0.000 ; free physical = 7368 ; free virtual = 28247
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7448 ; free virtual = 28328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7448 ; free virtual = 28328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7454 ; free virtual = 28334
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7441 ; free virtual = 28322
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HLS_malloc_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_SPFA_KWTA 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7424 ; free virtual = 28305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7297 ; free virtual = 28178
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7302 ; free virtual = 28183
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7293 ; free virtual = 28175
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7299 ; free virtual = 28181
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7295 ; free virtual = 28177
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7291 ; free virtual = 28173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7291 ; free virtual = 28173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7291 ; free virtual = 28173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7291 ; free virtual = 28173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     2|
+|2     |LUT3 |     5|
+|3     |LUT4 |     5|
+|4     |LUT5 |     4|
+|5     |LUT6 |     3|
+|6     |FDRE |     7|
+|7     |FDSE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------------+---------------+------+
+|      |Instance                     |Module         |Cells |
++------+-----------------------------+---------------+------+
+|1     |top                          |               |    28|
+|2     |  inst                       |HLS_SPFA_KWTA  |    28|
+|3     |    grp_HLS_malloc_1_s_fu_52 |HLS_malloc_1_s |    24|
++------+-----------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.430 ; gain = 476.746 ; free physical = 7291 ; free virtual = 28173
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 268 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1748.430 ; gain = 127.512 ; free physical = 7359 ; free virtual = 28241
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1748.438 ; gain = 476.746 ; free physical = 7359 ; free virtual = 28241
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 1748.438 ; gain = 488.320 ; free physical = 7345 ; free virtual = 28226
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/design_1_HLS_SPFA_KWTA_0_0.dcp' has been generated.

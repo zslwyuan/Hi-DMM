@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA16k" solutionName="solution1" date="2018-07-31T00:45:54.467+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA16k" solutionName="solution1" date="2018-07-31T00:45:53.458+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA16k" solutionName="solution1" date="2018-07-31T00:45:53.260+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,39 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port clk_in1_0 -pg 1 -y -40 -defaultsOSRD
+preplace port ap_start_0 -pg 1 -y -400 -defaultsOSRD
+preplace port ext_reset_in_0 -pg 1 -y 90 -defaultsOSRD
+preplace port reset_0 -pg 1 -y -60 -defaultsOSRD
+preplace portBus ap_return_0 -pg 1 -y -150 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace inst acc2048_2048_mau_0 -pg 1 -lvl 2 -y -120 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -y 190 -defaultsOSRD
+preplace inst HTA2048_theta_0 -pg 1 -lvl 1 -y -180 -defaultsOSRD
+preplace netloc clk_wiz_locked 1 1 2 N 200 980
+preplace netloc acc2048_2048_mau_0_alloc_1_addr_ap_ack 1 0 3 -90 -410 NJ -410 980
+preplace netloc HTA2048_theta_0_alloc_free_target_ap_ack 1 1 1 410
+preplace netloc HTA2048_theta_0_alloc_addr 1 1 1 390
+preplace netloc HTA2048_theta_0_alloc_cmd_ap_ack 1 1 1 400
+preplace netloc acc2048_2048_mau_0_alloc_1_size_ap_vld 1 0 3 -70 -370 NJ -370 960
+preplace netloc HTA2048_theta_0_alloc_size_ap_ack 1 1 1 430
+preplace netloc ext_reset_in_0_1 1 0 3 NJ 90 NJ 90 980J
+preplace netloc acc2048_2048_mau_0_ap_return 1 2 2 1000J -150 NJ
+preplace netloc acc2048_2048_mau_0_alloc_1_cmd_ap_vld 1 0 3 -120 -400 NJ -400 990
+preplace netloc clk_in1_0_1 1 0 1 -130J
+preplace netloc ap_start_0_1 1 0 2 -130 -380 440
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 4 -80 20 430 80 N 80 1390
+preplace netloc acc2048_2048_mau_0_alloc_1_free_target 1 0 3 -100 70 NJ 70 970
+preplace netloc acc2048_2048_mau_0_alloc_1_cmd 1 0 3 -70 50 NJ 50 960
+preplace netloc acc2048_2048_mau_0_alloc_1_size 1 0 3 -110 60 NJ 60 980
+preplace netloc acc2048_2048_mau_0_alloc_1_free_target_ap_vld 1 0 3 -80 -390 NJ -390 970
+preplace netloc reset_0_1 1 0 1 -120J
+preplace netloc HTA2048_theta_0_alloc_addr_ap_vld 1 1 1 420
+preplace netloc clk_wiz_clk_out1 1 0 3 -90 10 410 150 N
+levelinfo -pg 1 -150 160 720 1210 1410 -top -630 -bot 340
+",
+}
+{
+   da_clkrst_cnt: "1",
+}

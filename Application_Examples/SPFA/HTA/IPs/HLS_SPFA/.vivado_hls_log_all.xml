@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'N_2' is power-on initialization." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.897+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'guard_variable_for_H' is power-on initialization." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.844+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.210+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.206+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.200+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.197+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'HLS_SPFA/map' to 'HLS_SPFA/map_r' to avoid the conflict with HDL keywords or other object names." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.192+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.189+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="HLS_SPFA" solutionName="solution1" date="2018-08-07T23:57:05.175+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

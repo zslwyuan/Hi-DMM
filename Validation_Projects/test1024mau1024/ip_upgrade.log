@@ -1,0 +1,58 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 03:04:42 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_acc1024_1024_mau_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_acc1024_1024_mau_0_0 (xilinx.com:hls:acc1024_1024_mau:1.0) from (Rev. 1807282238) to (Rev. 1807291531)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Jul 29 01:45:03 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA1024_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA1024_theta_0_0 (xilinx.com:hls:HTA1024_theta:1.0) from (Rev. 1807290138) to (Rev. 1807290144)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Jul 29 01:40:31 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA1024_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA1024_theta_0_0 (xilinx.com:hls:HTA1024_theta:1.0) from (Rev. 1807290034) to (Rev. 1807290138)
+

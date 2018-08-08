@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"acc128_128_mau": {
+			"proto_instances": {
+			}
+		}
+	}
+}

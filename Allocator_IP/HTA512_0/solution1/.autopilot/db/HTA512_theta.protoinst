@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"HTA512_theta": {
+			"proto_instances": {
+			}
+		}
+	}
+}

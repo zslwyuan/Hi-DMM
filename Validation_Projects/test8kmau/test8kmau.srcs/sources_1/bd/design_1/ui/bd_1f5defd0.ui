@@ -1,0 +1,52 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port ap_start -pg 1 -y -539 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y -200 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -y -260 -defaultsOSRD
+preplace port reset -pg 1 -y -220 -defaultsOSRD
+preplace portBus ap_return_0 -pg 1 -y -570 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 4 -y -10 -defaultsOSRD
+preplace inst Ext_HTA_0 -pg 1 -lvl 1 -y -429 -defaultsOSRD
+preplace inst acc8kmau_0 -pg 1 -lvl 3 -y -540 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 5 -y -240 -defaultsOSRD
+preplace inst Ext_KWTA8k_0 -pg 1 -lvl 2 -y -460 -defaultsOSRD
+preplace netloc Ext_KWTA8k_0_com_port_cmd 1 0 3 110 -180 NJ -180 1810
+preplace netloc clk_wiz_locked 1 4 1 2650
+preplace netloc Ext_KWTA8k_0_alloc_size_ap_ack 1 2 1 1900
+preplace netloc Ext_KWTA8k_0_com_port_target_V 1 0 3 50 -120 NJ -120 1850
+preplace netloc acc8kmau_0_ap_return 1 3 3 2440J -570 NJ -570 NJ
+preplace netloc acc8kmau_0_alloc_1_cmd 1 1 3 1150 -150 NJ -150 2420
+preplace netloc Ext_KWTA8k_0_com_port_cmd_ap_vld 1 0 3 70 -190 NJ -190 1820
+preplace netloc Ext_HTA_0_alloc_allocated_addr_V_ap_vld 1 1 1 1100
+preplace netloc clk_in1_1 1 0 4 NJ -200 1090J 0 NJ 0 NJ
+preplace netloc Ext_KWTA8k_0_alloc_addr_ap_vld 1 2 1 N
+preplace netloc ap_start_1 1 0 3 110 -589 1080 -670 1900
+preplace netloc Ext_KWTA8k_0_com_port_layer_V 1 0 3 80 -140 NJ -140 1840
+preplace netloc Ext_KWTA8k_0_com_port_layer_V_ap_vld 1 0 3 40 -170 NJ -170 1860
+preplace netloc Ext_HTA_0_alloc_allocated_addr_V 1 1 1 1090
+preplace netloc Ext_KWTA8k_0_alloc_cmd_ap_ack 1 2 1 1870
+preplace netloc Ext_KWTA8k_0_alloc_free_target_ap_ack 1 2 1 1890
+preplace netloc Ext_KWTA8k_0_com_port_allocated_addr_V_ap_ack 1 0 3 60 -210 NJ -210 1830
+preplace netloc ext_reset_in_1 1 0 5 20J -220 NJ -220 NJ -220 2440J -260 NJ
+preplace netloc acc8kmau_0_alloc_1_addr_ap_ack 1 1 3 1090 -730 NJ -730 2440
+preplace netloc acc8kmau_0_alloc_1_free_target 1 1 3 1170 -200 NJ -200 2400
+preplace netloc Ext_KWTA8k_0_alloc_addr 1 2 1 1900
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 6 100 -259 1130 -250 1890J -340 NJ -340 NJ -340 3020
+preplace netloc Ext_KWTA8k_0_com_port_target_V_ap_vld 1 0 3 30 -130 NJ -130 1870
+preplace netloc acc8kmau_0_alloc_1_size_ap_vld 1 1 3 1170 -710 NJ -710 2400
+preplace netloc acc8kmau_0_alloc_1_free_target_ap_vld 1 1 3 1140 -720 NJ -720 2430
+preplace netloc acc8kmau_0_alloc_1_cmd_ap_vld 1 1 3 1140 -160 NJ -160 2430
+preplace netloc reset_1 1 0 4 10J -20 NJ -20 NJ -20 NJ
+preplace netloc acc8kmau_0_alloc_1_size 1 1 3 1160 -230 NJ -230 2410
+preplace netloc Ext_HTA_0_alloc_cmd_ap_ack 1 1 1 1110
+preplace netloc Ext_HTA_0_alloc_target_V_ap_ack 1 1 1 1090
+preplace netloc Ext_HTA_0_alloc_layer_V_ap_ack 1 1 1 1080
+preplace netloc clk_wiz_clk_out1 1 0 5 90 -269 1120 -240 1880 -270 N -270 2640
+levelinfo -pg 1 -10 810 1520 2160 2540 2840 3040 -top -1340 -bot 240
+",
+}
+{
+   da_clkrst_cnt: "3",
+}

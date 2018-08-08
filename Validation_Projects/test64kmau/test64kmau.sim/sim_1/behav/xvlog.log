@@ -1,0 +1,88 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/acc64mau_req_cmd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc64mau_req_cmd_rom
+INFO: [VRFC 10-311] analyzing module acc64mau_req_cmd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/acc64mau_req_size.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc64mau_req_size_rom
+INFO: [VRFC 10-311] analyzing module acc64mau_req_size
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/HLS_malloc_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_malloc_1_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/acc64mau_req_addrbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc64mau_req_addrbkb_ram
+INFO: [VRFC 10-311] analyzing module acc64mau_req_addrbkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/acc64mau_req_list.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc64mau_req_list_rom
+INFO: [VRFC 10-311] analyzing module acc64mau_req_list
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/acc64mau.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc64mau
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/0bc7/hdl/verilog/HLS_free_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLS_free_1_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/ip/design_1_acc64mau_0_0/sim/design_1_acc64mau_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_acc64mau_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_mux_520_ocq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mux_520_ocq
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_mux_516_ncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mux_516_ncg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_group_tribs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_group_tribs_rom
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_group_tribs
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_mux_533_pcA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mux_533_pcA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_shift_cojbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_shift_cojbC_rom
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_shift_cojbC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_extra_malbW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_extra_malbW_rom
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_extra_malbW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_mark_maskbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mark_maskbM_rom
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mark_maskbM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_mux_53_6mb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_mux_53_6mb6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_heap_trecud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_heap_trecud_ram
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_heap_trecud
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_maintainbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_maintainbkb_rom
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_maintainbkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/dbfe/hdl/verilog/Ext_KWTA_group_trhbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_group_trhbi_ram
+INFO: [VRFC 10-311] analyzing module Ext_KWTA_group_trhbi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/ip/design_1_Ext_KWTA_0_0/sim/design_1_Ext_KWTA_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_Ext_KWTA_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_addr_treeeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_addr_treeeOg_ram
+INFO: [VRFC 10-311] analyzing module Ext_HTA_addr_treeeOg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_mark_mask_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_mark_mask_V_rom
+INFO: [VRFC 10-311] analyzing module Ext_HTA_mark_mask_V
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_shift_condEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_shift_condEe_rom
+INFO: [VRFC 10-311] analyzing module Ext_HTA_shift_condEe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_group_trebkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_group_trebkb_ram
+INFO: [VRFC 10-311] analyzing module Ext_HTA_group_trebkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_mux_104_6g8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_mux_104_6g8j
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/log_2_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_2_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_group_trecud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_group_trecud_rom
+INFO: [VRFC 10-311] analyzing module Ext_HTA_group_trecud
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/1412/hdl/verilog/Ext_HTA_mux_164_6fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext_HTA_mux_164_6fYi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/ip/design_1_Ext_HTA_0_0/sim/design_1_Ext_HTA_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_Ext_HTA_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.ip_user_files/bd/design_1/hdl/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:52.723+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:51.525+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:51.287+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V_3' is power-on initialization." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:50.030+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V_2' is power-on initialization." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:50.027+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V_1' is power-on initialization." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:50.021+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V_0' is power-on initialization." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:50.019+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:50.006+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - Loop 1 has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:49.223+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] Ext_KWTA32k_0/solution1/top.cc:274: variable-indexed range selection may cause suboptimal QoR." projectName="Ext_KWTA32k_0" solutionName="solution1" date="2018-07-31T00:20:45.820+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

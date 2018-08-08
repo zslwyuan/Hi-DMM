@@ -1,0 +1,10 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v,1532535697,verilog,,/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/sim/design_1.v,,design_1_clk_wiz_0,,,../../../../test1024mau1024.srcs/sources_1/bd/design_1/ipshared/b65a,,,,,
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v,1532535697,verilog,,/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v,,design_1_clk_wiz_0_clk_wiz,,,../../../../test1024mau1024.srcs/sources_1/bd/design_1/ipshared/b65a,,,,,
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd,1532535697,vhdl,,,,design_1_rst_clk_wiz_100m_0,,,,,,,,
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.ip_user_files/bd/design_1/sim/design_1.v,1532799906,verilog,,/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/ipshared/874d/hdl/verilog/acc1024_1024_mau_bkb.v,,design_1,,,../../../../test1024mau1024.srcs/sources_1/bd/design_1/ipshared/b65a,,,,,
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+/home/tingyuan/Temporary/vivado-outputs/test1024mau1024/test1024mau1024.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v,1532787715,verilog,,,,design_1_wrapper,,,../../../../test1024mau1024.srcs/sources_1/bd/design_1/ipshared/b65a,,,,,

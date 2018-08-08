@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"FBTA64_theta": {
+			"proto_instances": {
+			}
+		}
+	}
+}

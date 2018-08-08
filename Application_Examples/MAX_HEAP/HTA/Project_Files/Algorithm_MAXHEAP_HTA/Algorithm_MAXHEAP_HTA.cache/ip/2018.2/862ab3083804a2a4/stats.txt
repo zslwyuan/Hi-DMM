@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Jul 27 13:31:08 UTC 2018
+VLNV: xilinx.com:hls:HLS_MAXHEAP_HTA:1.0
+SynthRuntime: 65

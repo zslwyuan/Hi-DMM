@@ -1,0 +1,265 @@
+
+
+================================================================
+== Vivado HLS Report for 'log_2_64bit'
+================================================================
+* Date:           Sun Jul 29 15:50:42 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HTA512_0
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.357|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.35>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%tmp_V_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %tmp_V)"   --->   Operation 2 'read' 'tmp_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%AA_V = trunc i64 %tmp_V_read to i16" [HTA512_0/solution1/top.cc:70]   --->   Operation 3 'trunc' 'AA_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%BB_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp_V_read, i32 16, i32 31)" [HTA512_0/solution1/top.cc:70]   --->   Operation 4 'partselect' 'BB_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%CC_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp_V_read, i32 32, i32 47)" [HTA512_0/solution1/top.cc:70]   --->   Operation 5 'partselect' 'CC_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%DD_V = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %tmp_V_read, i32 48, i32 63)" [HTA512_0/solution1/top.cc:70]   --->   Operation 6 'partselect' 'DD_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (2.42ns)   --->   "%tmp_1 = icmp eq i16 %AA_V, 0" [HTA512_0/solution1/top.cc:71]   --->   Operation 7 'icmp' 'tmp_1' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (2.19ns)   --->   "br i1 %tmp_1, label %._crit_edge, label %1" [HTA512_0/solution1/top.cc:71]   --->   Operation 8 'br' <Predicate = true> <Delay = 2.19>
+ST_1 : Operation 9 [1/1] (2.19ns)   --->   "switch i16 %AA_V, label %._crit_edge [
+    i16 -32768, label %16
+    i16 2, label %2
+    i16 4, label %3
+    i16 8, label %4
+    i16 16, label %5
+    i16 32, label %6
+    i16 64, label %7
+    i16 128, label %8
+    i16 256, label %9
+    i16 512, label %10
+    i16 1024, label %11
+    i16 2048, label %12
+    i16 4096, label %13
+    i16 8192, label %14
+    i16 16384, label %15
+  ]" [HTA512_0/solution1/top.cc:42->HTA512_0/solution1/top.cc:71]   --->   Operation 9 'switch' <Predicate = (!tmp_1)> <Delay = 2.19>
+ST_1 : Operation 10 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:58->HTA512_0/solution1/top.cc:71]   --->   Operation 10 'br' <Predicate = (!tmp_1 & AA_V == 16384)> <Delay = 2.19>
+ST_1 : Operation 11 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:57->HTA512_0/solution1/top.cc:71]   --->   Operation 11 'br' <Predicate = (!tmp_1 & AA_V == 8192)> <Delay = 2.19>
+ST_1 : Operation 12 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:56->HTA512_0/solution1/top.cc:71]   --->   Operation 12 'br' <Predicate = (!tmp_1 & AA_V == 4096)> <Delay = 2.19>
+ST_1 : Operation 13 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:55->HTA512_0/solution1/top.cc:71]   --->   Operation 13 'br' <Predicate = (!tmp_1 & AA_V == 2048)> <Delay = 2.19>
+ST_1 : Operation 14 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:54->HTA512_0/solution1/top.cc:71]   --->   Operation 14 'br' <Predicate = (!tmp_1 & AA_V == 1024)> <Delay = 2.19>
+ST_1 : Operation 15 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:53->HTA512_0/solution1/top.cc:71]   --->   Operation 15 'br' <Predicate = (!tmp_1 & AA_V == 512)> <Delay = 2.19>
+ST_1 : Operation 16 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:52->HTA512_0/solution1/top.cc:71]   --->   Operation 16 'br' <Predicate = (!tmp_1 & AA_V == 256)> <Delay = 2.19>
+ST_1 : Operation 17 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:51->HTA512_0/solution1/top.cc:71]   --->   Operation 17 'br' <Predicate = (!tmp_1 & AA_V == 128)> <Delay = 2.19>
+ST_1 : Operation 18 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:50->HTA512_0/solution1/top.cc:71]   --->   Operation 18 'br' <Predicate = (!tmp_1 & AA_V == 64)> <Delay = 2.19>
+ST_1 : Operation 19 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:49->HTA512_0/solution1/top.cc:71]   --->   Operation 19 'br' <Predicate = (!tmp_1 & AA_V == 32)> <Delay = 2.19>
+ST_1 : Operation 20 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:48->HTA512_0/solution1/top.cc:71]   --->   Operation 20 'br' <Predicate = (!tmp_1 & AA_V == 16)> <Delay = 2.19>
+ST_1 : Operation 21 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:47->HTA512_0/solution1/top.cc:71]   --->   Operation 21 'br' <Predicate = (!tmp_1 & AA_V == 8)> <Delay = 2.19>
+ST_1 : Operation 22 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:46->HTA512_0/solution1/top.cc:71]   --->   Operation 22 'br' <Predicate = (!tmp_1 & AA_V == 4)> <Delay = 2.19>
+ST_1 : Operation 23 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:45->HTA512_0/solution1/top.cc:71]   --->   Operation 23 'br' <Predicate = (!tmp_1 & AA_V == 2)> <Delay = 2.19>
+ST_1 : Operation 24 [1/1] (2.19ns)   --->   "br label %._crit_edge" [HTA512_0/solution1/top.cc:59->HTA512_0/solution1/top.cc:71]   --->   Operation 24 'br' <Predicate = (!tmp_1 & AA_V == 32768)> <Delay = 2.19>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_s = phi i4 [ 0, %0 ], [ 1, %2 ], [ 2, %3 ], [ 3, %4 ], [ 4, %5 ], [ 5, %6 ], [ 6, %7 ], [ 7, %8 ], [ -8, %9 ], [ -7, %10 ], [ -6, %11 ], [ -5, %12 ], [ -4, %13 ], [ -3, %14 ], [ -2, %15 ], [ -1, %16 ], [ 0, %1 ]"   --->   Operation 25 'phi' 'p_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_cast = zext i4 %p_s to i6" [HTA512_0/solution1/top.cc:72]   --->   Operation 26 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (2.42ns)   --->   "%tmp_4 = icmp eq i16 %BB_V, 0" [HTA512_0/solution1/top.cc:72]   --->   Operation 27 'icmp' 'tmp_4' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (2.23ns)   --->   "br i1 %tmp_4, label %._crit_edge368, label %17" [HTA512_0/solution1/top.cc:72]   --->   Operation 28 'br' <Predicate = true> <Delay = 2.23>
+ST_1 : Operation 29 [1/1] (2.23ns)   --->   "switch i16 %BB_V, label %._crit_edge368 [
+    i16 -32768, label %32
+    i16 2, label %18
+    i16 4, label %19
+    i16 8, label %20
+    i16 16, label %21
+    i16 32, label %22
+    i16 64, label %23
+    i16 128, label %24
+    i16 256, label %25
+    i16 512, label %26
+    i16 1024, label %27
+    i16 2048, label %28
+    i16 4096, label %29
+    i16 8192, label %30
+    i16 16384, label %31
+  ]" [HTA512_0/solution1/top.cc:42->HTA512_0/solution1/top.cc:72]   --->   Operation 29 'switch' <Predicate = (!tmp_4)> <Delay = 2.23>
+ST_1 : Operation 30 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:58->HTA512_0/solution1/top.cc:72]   --->   Operation 30 'br' <Predicate = (!tmp_4 & BB_V == 16384)> <Delay = 2.23>
+ST_1 : Operation 31 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:57->HTA512_0/solution1/top.cc:72]   --->   Operation 31 'br' <Predicate = (!tmp_4 & BB_V == 8192)> <Delay = 2.23>
+ST_1 : Operation 32 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:56->HTA512_0/solution1/top.cc:72]   --->   Operation 32 'br' <Predicate = (!tmp_4 & BB_V == 4096)> <Delay = 2.23>
+ST_1 : Operation 33 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:55->HTA512_0/solution1/top.cc:72]   --->   Operation 33 'br' <Predicate = (!tmp_4 & BB_V == 2048)> <Delay = 2.23>
+ST_1 : Operation 34 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:54->HTA512_0/solution1/top.cc:72]   --->   Operation 34 'br' <Predicate = (!tmp_4 & BB_V == 1024)> <Delay = 2.23>
+ST_1 : Operation 35 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:53->HTA512_0/solution1/top.cc:72]   --->   Operation 35 'br' <Predicate = (!tmp_4 & BB_V == 512)> <Delay = 2.23>
+ST_1 : Operation 36 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:52->HTA512_0/solution1/top.cc:72]   --->   Operation 36 'br' <Predicate = (!tmp_4 & BB_V == 256)> <Delay = 2.23>
+ST_1 : Operation 37 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:51->HTA512_0/solution1/top.cc:72]   --->   Operation 37 'br' <Predicate = (!tmp_4 & BB_V == 128)> <Delay = 2.23>
+ST_1 : Operation 38 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:50->HTA512_0/solution1/top.cc:72]   --->   Operation 38 'br' <Predicate = (!tmp_4 & BB_V == 64)> <Delay = 2.23>
+ST_1 : Operation 39 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:49->HTA512_0/solution1/top.cc:72]   --->   Operation 39 'br' <Predicate = (!tmp_4 & BB_V == 32)> <Delay = 2.23>
+ST_1 : Operation 40 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:48->HTA512_0/solution1/top.cc:72]   --->   Operation 40 'br' <Predicate = (!tmp_4 & BB_V == 16)> <Delay = 2.23>
+ST_1 : Operation 41 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:47->HTA512_0/solution1/top.cc:72]   --->   Operation 41 'br' <Predicate = (!tmp_4 & BB_V == 8)> <Delay = 2.23>
+ST_1 : Operation 42 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:46->HTA512_0/solution1/top.cc:72]   --->   Operation 42 'br' <Predicate = (!tmp_4 & BB_V == 4)> <Delay = 2.23>
+ST_1 : Operation 43 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:45->HTA512_0/solution1/top.cc:72]   --->   Operation 43 'br' <Predicate = (!tmp_4 & BB_V == 2)> <Delay = 2.23>
+ST_1 : Operation 44 [1/1] (2.23ns)   --->   "br label %._crit_edge368" [HTA512_0/solution1/top.cc:59->HTA512_0/solution1/top.cc:72]   --->   Operation 44 'br' <Predicate = (!tmp_4 & BB_V == 32768)> <Delay = 2.23>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_1 = phi i5 [ 0, %._crit_edge ], [ -15, %18 ], [ -14, %19 ], [ -13, %20 ], [ -12, %21 ], [ -11, %22 ], [ -10, %23 ], [ -9, %24 ], [ -8, %25 ], [ -7, %26 ], [ -6, %27 ], [ -5, %28 ], [ -4, %29 ], [ -3, %30 ], [ -2, %31 ], [ -1, %32 ], [ -16, %17 ]"   --->   Operation 45 'phi' 'p_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_1_cast = zext i5 %p_1 to i6" [HTA512_0/solution1/top.cc:73]   --->   Operation 46 'zext' 'p_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (2.42ns)   --->   "%tmp_8 = icmp eq i16 %CC_V, 0" [HTA512_0/solution1/top.cc:73]   --->   Operation 47 'icmp' 'tmp_8' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (2.23ns)   --->   "br i1 %tmp_8, label %._crit_edge369, label %33" [HTA512_0/solution1/top.cc:73]   --->   Operation 48 'br' <Predicate = true> <Delay = 2.23>
+ST_1 : Operation 49 [1/1] (2.23ns)   --->   "switch i16 %CC_V, label %._crit_edge369 [
+    i16 -32768, label %48
+    i16 2, label %34
+    i16 4, label %35
+    i16 8, label %36
+    i16 16, label %37
+    i16 32, label %38
+    i16 64, label %39
+    i16 128, label %40
+    i16 256, label %41
+    i16 512, label %42
+    i16 1024, label %43
+    i16 2048, label %44
+    i16 4096, label %45
+    i16 8192, label %46
+    i16 16384, label %47
+  ]" [HTA512_0/solution1/top.cc:42->HTA512_0/solution1/top.cc:73]   --->   Operation 49 'switch' <Predicate = (!tmp_8)> <Delay = 2.23>
+ST_1 : Operation 50 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:58->HTA512_0/solution1/top.cc:73]   --->   Operation 50 'br' <Predicate = (!tmp_8 & CC_V == 16384)> <Delay = 2.23>
+ST_1 : Operation 51 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:57->HTA512_0/solution1/top.cc:73]   --->   Operation 51 'br' <Predicate = (!tmp_8 & CC_V == 8192)> <Delay = 2.23>
+ST_1 : Operation 52 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:56->HTA512_0/solution1/top.cc:73]   --->   Operation 52 'br' <Predicate = (!tmp_8 & CC_V == 4096)> <Delay = 2.23>
+ST_1 : Operation 53 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:55->HTA512_0/solution1/top.cc:73]   --->   Operation 53 'br' <Predicate = (!tmp_8 & CC_V == 2048)> <Delay = 2.23>
+ST_1 : Operation 54 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:54->HTA512_0/solution1/top.cc:73]   --->   Operation 54 'br' <Predicate = (!tmp_8 & CC_V == 1024)> <Delay = 2.23>
+ST_1 : Operation 55 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:53->HTA512_0/solution1/top.cc:73]   --->   Operation 55 'br' <Predicate = (!tmp_8 & CC_V == 512)> <Delay = 2.23>
+ST_1 : Operation 56 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:52->HTA512_0/solution1/top.cc:73]   --->   Operation 56 'br' <Predicate = (!tmp_8 & CC_V == 256)> <Delay = 2.23>
+ST_1 : Operation 57 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:51->HTA512_0/solution1/top.cc:73]   --->   Operation 57 'br' <Predicate = (!tmp_8 & CC_V == 128)> <Delay = 2.23>
+ST_1 : Operation 58 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:50->HTA512_0/solution1/top.cc:73]   --->   Operation 58 'br' <Predicate = (!tmp_8 & CC_V == 64)> <Delay = 2.23>
+ST_1 : Operation 59 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:49->HTA512_0/solution1/top.cc:73]   --->   Operation 59 'br' <Predicate = (!tmp_8 & CC_V == 32)> <Delay = 2.23>
+ST_1 : Operation 60 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:48->HTA512_0/solution1/top.cc:73]   --->   Operation 60 'br' <Predicate = (!tmp_8 & CC_V == 16)> <Delay = 2.23>
+ST_1 : Operation 61 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:47->HTA512_0/solution1/top.cc:73]   --->   Operation 61 'br' <Predicate = (!tmp_8 & CC_V == 8)> <Delay = 2.23>
+ST_1 : Operation 62 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:46->HTA512_0/solution1/top.cc:73]   --->   Operation 62 'br' <Predicate = (!tmp_8 & CC_V == 4)> <Delay = 2.23>
+ST_1 : Operation 63 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:45->HTA512_0/solution1/top.cc:73]   --->   Operation 63 'br' <Predicate = (!tmp_8 & CC_V == 2)> <Delay = 2.23>
+ST_1 : Operation 64 [1/1] (2.23ns)   --->   "br label %._crit_edge369" [HTA512_0/solution1/top.cc:59->HTA512_0/solution1/top.cc:73]   --->   Operation 64 'br' <Predicate = (!tmp_8 & CC_V == 32768)> <Delay = 2.23>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_2 = phi i6 [ 0, %._crit_edge368 ], [ -31, %34 ], [ -30, %35 ], [ -29, %36 ], [ -28, %37 ], [ -27, %38 ], [ -26, %39 ], [ -25, %40 ], [ -24, %41 ], [ -23, %42 ], [ -22, %43 ], [ -21, %44 ], [ -20, %45 ], [ -19, %46 ], [ -18, %47 ], [ -17, %48 ], [ -32, %33 ]"   --->   Operation 65 'phi' 'p_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_2_cast = zext i6 %p_2 to i7" [HTA512_0/solution1/top.cc:74]   --->   Operation 66 'zext' 'p_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (2.42ns)   --->   "%tmp_3 = icmp eq i16 %DD_V, 0" [HTA512_0/solution1/top.cc:74]   --->   Operation 67 'icmp' 'tmp_3' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (2.23ns)   --->   "br i1 %tmp_3, label %._crit_edge370, label %49" [HTA512_0/solution1/top.cc:74]   --->   Operation 68 'br' <Predicate = true> <Delay = 2.23>
+ST_1 : Operation 69 [1/1] (2.23ns)   --->   "switch i16 %DD_V, label %._crit_edge370 [
+    i16 -32768, label %64
+    i16 2, label %50
+    i16 4, label %51
+    i16 8, label %52
+    i16 16, label %53
+    i16 32, label %54
+    i16 64, label %55
+    i16 128, label %56
+    i16 256, label %57
+    i16 512, label %58
+    i16 1024, label %59
+    i16 2048, label %60
+    i16 4096, label %61
+    i16 8192, label %62
+    i16 16384, label %63
+  ]" [HTA512_0/solution1/top.cc:42->HTA512_0/solution1/top.cc:74]   --->   Operation 69 'switch' <Predicate = (!tmp_3)> <Delay = 2.23>
+ST_1 : Operation 70 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:58->HTA512_0/solution1/top.cc:74]   --->   Operation 70 'br' <Predicate = (!tmp_3 & DD_V == 16384)> <Delay = 2.23>
+ST_1 : Operation 71 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:57->HTA512_0/solution1/top.cc:74]   --->   Operation 71 'br' <Predicate = (!tmp_3 & DD_V == 8192)> <Delay = 2.23>
+ST_1 : Operation 72 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:56->HTA512_0/solution1/top.cc:74]   --->   Operation 72 'br' <Predicate = (!tmp_3 & DD_V == 4096)> <Delay = 2.23>
+ST_1 : Operation 73 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:55->HTA512_0/solution1/top.cc:74]   --->   Operation 73 'br' <Predicate = (!tmp_3 & DD_V == 2048)> <Delay = 2.23>
+ST_1 : Operation 74 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:54->HTA512_0/solution1/top.cc:74]   --->   Operation 74 'br' <Predicate = (!tmp_3 & DD_V == 1024)> <Delay = 2.23>
+ST_1 : Operation 75 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:53->HTA512_0/solution1/top.cc:74]   --->   Operation 75 'br' <Predicate = (!tmp_3 & DD_V == 512)> <Delay = 2.23>
+ST_1 : Operation 76 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:52->HTA512_0/solution1/top.cc:74]   --->   Operation 76 'br' <Predicate = (!tmp_3 & DD_V == 256)> <Delay = 2.23>
+ST_1 : Operation 77 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:51->HTA512_0/solution1/top.cc:74]   --->   Operation 77 'br' <Predicate = (!tmp_3 & DD_V == 128)> <Delay = 2.23>
+ST_1 : Operation 78 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:50->HTA512_0/solution1/top.cc:74]   --->   Operation 78 'br' <Predicate = (!tmp_3 & DD_V == 64)> <Delay = 2.23>
+ST_1 : Operation 79 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:49->HTA512_0/solution1/top.cc:74]   --->   Operation 79 'br' <Predicate = (!tmp_3 & DD_V == 32)> <Delay = 2.23>
+ST_1 : Operation 80 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:48->HTA512_0/solution1/top.cc:74]   --->   Operation 80 'br' <Predicate = (!tmp_3 & DD_V == 16)> <Delay = 2.23>
+ST_1 : Operation 81 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:47->HTA512_0/solution1/top.cc:74]   --->   Operation 81 'br' <Predicate = (!tmp_3 & DD_V == 8)> <Delay = 2.23>
+ST_1 : Operation 82 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:46->HTA512_0/solution1/top.cc:74]   --->   Operation 82 'br' <Predicate = (!tmp_3 & DD_V == 4)> <Delay = 2.23>
+ST_1 : Operation 83 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:45->HTA512_0/solution1/top.cc:74]   --->   Operation 83 'br' <Predicate = (!tmp_3 & DD_V == 2)> <Delay = 2.23>
+ST_1 : Operation 84 [1/1] (2.23ns)   --->   "br label %._crit_edge370" [HTA512_0/solution1/top.cc:59->HTA512_0/solution1/top.cc:74]   --->   Operation 84 'br' <Predicate = (!tmp_3 & DD_V == 32768)> <Delay = 2.23>
+ST_1 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node tmp1)   --->   "%p_3 = phi i5 [ 0, %._crit_edge369 ], [ -15, %50 ], [ -14, %51 ], [ -13, %52 ], [ -12, %53 ], [ -11, %54 ], [ -10, %55 ], [ -9, %56 ], [ -8, %57 ], [ -7, %58 ], [ -6, %59 ], [ -5, %60 ], [ -4, %61 ], [ -3, %62 ], [ -2, %63 ], [ -1, %64 ], [ -16, %49 ]"   --->   Operation 85 'phi' 'p_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node tmp1)   --->   "%p_3_cast2 = sext i5 %p_3 to i6" [HTA512_0/solution1/top.cc:75]   --->   Operation 86 'sext' 'p_3_cast2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node tmp1)   --->   "%p_3_cast = zext i6 %p_3_cast2 to i7" [HTA512_0/solution1/top.cc:75]   --->   Operation 87 'zext' 'p_3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (1.78ns)   --->   "%tmp = add i6 %p_1_cast, %p_cast" [HTA512_0/solution1/top.cc:75]   --->   Operation 88 'add' 'tmp' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_cast = zext i6 %tmp to i8" [HTA512_0/solution1/top.cc:75]   --->   Operation 89 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (1.82ns) (out node of the LUT)   --->   "%tmp1 = add i7 %p_2_cast, %p_3_cast" [HTA512_0/solution1/top.cc:75]   --->   Operation 90 'add' 'tmp1' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i7 %tmp1 to i8" [HTA512_0/solution1/top.cc:75]   --->   Operation 91 'zext' 'tmp1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (1.87ns)   --->   "%loc1_V = add i8 %tmp1_cast, %tmp_cast" [HTA512_0/solution1/top.cc:75]   --->   Operation 92 'add' 'loc1_V' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "ret i8 %loc1_V" [HTA512_0/solution1/top.cc:76]   --->   Operation 93 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.36ns
+The critical path consists of the following:
+	wire read on port 'tmp_V' [2]  (0 ns)
+	'icmp' operation ('tmp_8', HTA512_0/solution1/top.cc:73) [81]  (2.43 ns)
+	multiplexor before 'phi' operation ('p_2') [116]  (2.23 ns)
+	'phi' operation ('p_2') [116]  (0 ns)
+	'add' operation ('tmp1', HTA512_0/solution1/top.cc:75) [158]  (1.83 ns)
+	'add' operation ('loc1.V', HTA512_0/solution1/top.cc:75) [160]  (1.87 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

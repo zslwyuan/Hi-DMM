@@ -1,0 +1,570 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_malloc_1_s'
+================================================================
+* Date:           Fri Jul 27 02:45:28 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        FBTA64_test
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.000|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      2|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     84|
+|Register         |        -|      -|      38|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      38|     86|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1_io  |    or    |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |allocator_addr_blk_n                        |   9|          2|    1|          2|
+    |allocator_cmd_blk_n                         |   9|          2|    1|          2|
+    |allocator_free_targe_blk_n                  |   9|          2|    1|          2|
+    |allocator_size_blk_n                        |   9|          2|    1|          2|
+    |ap_NS_fsm                                   |  21|          4|    1|          4|
+    |ap_sig_ioackin_allocator_cmd_ap_ack         |   9|          2|    1|          2|
+    |ap_sig_ioackin_allocator_free_targe_ap_ack  |   9|          2|    1|          2|
+    |ap_sig_ioackin_allocator_size_ap_ack        |   9|          2|    1|          2|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       |  84|         18|    8|         18|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   3|   0|    3|          0|
+    |ap_reg_ioackin_allocator_cmd_ap_ack         |   1|   0|    1|          0|
+    |ap_reg_ioackin_allocator_free_targe_ap_ack  |   1|   0|    1|          0|
+    |ap_reg_ioackin_allocator_size_ap_ack        |   1|   0|    1|          0|
+    |status_reg_70                               |  32|   0|   32|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       |  38|   0|   38|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_done                      | out |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|ap_return                    | out |   32| ap_ctrl_hs |     HLS_malloc<1>    | return value |
+|size                         |  in |    6|   ap_none  |         size         |    scalar    |
+|allocator_size               | out |   32|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_size_ap_vld        | out |    1|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_size_ap_ack        |  in |    1|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_addr               |  in |   32|    ap_hs   |    allocator_addr    |    pointer   |
+|allocator_addr_ap_vld        |  in |    1|    ap_hs   |    allocator_addr    |    pointer   |
+|allocator_addr_ap_ack        | out |    1|    ap_hs   |    allocator_addr    |    pointer   |
+|allocator_free_targe         | out |   32|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_free_targe_ap_vld  | out |    1|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_free_targe_ap_ack  |  in |    1|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_cmd                | out |    8|    ap_hs   |     allocator_cmd    |    pointer   |
+|allocator_cmd_ap_vld         | out |    1|    ap_hs   |     allocator_cmd    |    pointer   |
+|allocator_cmd_ap_ack         |  in |    1|    ap_hs   |     allocator_cmd    |    pointer   |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%size_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %size)"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%size_cast = zext i6 %size_read to i32"   --->   Operation 5 'zext' 'size_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i8P(i8* %allocator_cmd, i8 2)" [FBTA64_test/.settings/top.cc:24]   --->   Operation 6 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_size, i32 %size_cast)" [FBTA64_test/.settings/top.cc:26]   --->   Operation 7 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_free_targe, i32 0)" [FBTA64_test/.settings/top.cc:27]   --->   Operation 8 'write' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [FBTA64_test/.settings/top.cc:28]   --->   Operation 9 'wait' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%status = call i32 @_ssdm_op_Read.ap_auto.volatile.i32P(i32* %allocator_addr)" [FBTA64_test/.settings/top.cc:29]   --->   Operation 10 'read' 'status' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str1) nounwind" [FBTA64_test/.settings/top.cc:23]   --->   Operation 11 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str1) nounwind" [FBTA64_test/.settings/top.cc:25]   --->   Operation 12 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [FBTA64_test/.settings/top.cc:30]   --->   Operation 13 'wait' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "ret i32 %status" [FBTA64_test/.settings/top.cc:31]   --->   Operation 14 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ size]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ allocator_size]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_hs:ce=0
+Port [ allocator_addr]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_hs:ce=0
+Port [ allocator_free_targe]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_hs:ce=0
+Port [ allocator_cmd]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_hs:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+size_read   (read        ) [ 0000]
+size_cast   (zext        ) [ 0000]
+StgValue_6  (write       ) [ 0000]
+StgValue_7  (write       ) [ 0000]
+StgValue_8  (write       ) [ 0000]
+StgValue_9  (wait        ) [ 0000]
+status      (read        ) [ 0001]
+StgValue_11 (specprotocol) [ 0000]
+StgValue_12 (specprotocol) [ 0000]
+StgValue_13 (wait        ) [ 0000]
+StgValue_14 (ret         ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="size">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="allocator_size">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="allocator_size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="allocator_addr">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="allocator_addr"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="allocator_free_targe">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="allocator_free_targe"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="allocator_cmd">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="allocator_cmd"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.volatile.i8P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.volatile.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.volatile.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecProtocol"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="size_read_read_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="6" slack="0"/>
+<pin id="32" dir="0" index="1" bw="6" slack="0"/>
+<pin id="33" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="size_read/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="StgValue_6_write_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="0" slack="0"/>
+<pin id="38" dir="0" index="1" bw="8" slack="0"/>
+<pin id="39" dir="0" index="2" bw="3" slack="0"/>
+<pin id="40" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_6/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="StgValue_7_write_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="0" slack="0"/>
+<pin id="46" dir="0" index="1" bw="32" slack="0"/>
+<pin id="47" dir="0" index="2" bw="6" slack="0"/>
+<pin id="48" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_7/1 "/>
+</bind>
+</comp>
+
+<comp id="51" class="1004" name="StgValue_8_write_fu_51">
+<pin_list>
+<pin id="52" dir="0" index="0" bw="0" slack="0"/>
+<pin id="53" dir="0" index="1" bw="32" slack="0"/>
+<pin id="54" dir="0" index="2" bw="1" slack="0"/>
+<pin id="55" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_8/1 "/>
+</bind>
+</comp>
+
+<comp id="59" class="1004" name="status_read_fu_59">
+<pin_list>
+<pin id="60" dir="0" index="0" bw="32" slack="0"/>
+<pin id="61" dir="0" index="1" bw="32" slack="0"/>
+<pin id="62" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="status/2 "/>
+</bind>
+</comp>
+
+<comp id="65" class="1004" name="size_cast_fu_65">
+<pin_list>
+<pin id="66" dir="0" index="0" bw="6" slack="0"/>
+<pin id="67" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="size_cast/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1005" name="status_reg_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="1"/>
+<pin id="72" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="status "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="34"><net_src comp="10" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="35"><net_src comp="0" pin="0"/><net_sink comp="30" pin=1"/></net>
+
+<net id="41"><net_src comp="12" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="42"><net_src comp="8" pin="0"/><net_sink comp="36" pin=1"/></net>
+
+<net id="43"><net_src comp="14" pin="0"/><net_sink comp="36" pin=2"/></net>
+
+<net id="49"><net_src comp="16" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="50"><net_src comp="2" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="56"><net_src comp="16" pin="0"/><net_sink comp="51" pin=0"/></net>
+
+<net id="57"><net_src comp="6" pin="0"/><net_sink comp="51" pin=1"/></net>
+
+<net id="58"><net_src comp="18" pin="0"/><net_sink comp="51" pin=2"/></net>
+
+<net id="63"><net_src comp="24" pin="0"/><net_sink comp="59" pin=0"/></net>
+
+<net id="64"><net_src comp="4" pin="0"/><net_sink comp="59" pin=1"/></net>
+
+<net id="68"><net_src comp="30" pin="2"/><net_sink comp="65" pin=0"/></net>
+
+<net id="69"><net_src comp="65" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="73"><net_src comp="59" pin="2"/><net_sink comp="70" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: allocator_size | {1 }
+	Port: allocator_addr | {}
+	Port: allocator_free_targe | {1 }
+	Port: allocator_cmd | {1 }
+ - Input state : 
+	Port: HLS_malloc<1> : size | {1 }
+	Port: HLS_malloc<1> : allocator_size | {}
+	Port: HLS_malloc<1> : allocator_addr | {2 }
+	Port: HLS_malloc<1> : allocator_free_targe | {}
+	Port: HLS_malloc<1> : allocator_cmd | {}
+  - Chain level:
+	State 1
+		StgValue_7 : 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------|
+| Operation|     Functional Unit    |
+|----------|------------------------|
+|   read   |  size_read_read_fu_30  |
+|          |    status_read_fu_59   |
+|----------|------------------------|
+|          | StgValue_6_write_fu_36 |
+|   write  | StgValue_7_write_fu_44 |
+|          | StgValue_8_write_fu_51 |
+|----------|------------------------|
+|   zext   |     size_cast_fu_65    |
+|----------|------------------------|
+|   Total  |                        |
+|----------|------------------------|
+
+Memories:
+N/A
+
+* Register list:
++-------------+--------+
+|             |   FF   |
++-------------+--------+
+|status_reg_70|   32   |
++-------------+--------+
+|    Total    |   32   |
++-------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+
+|           |   FF   |
++-----------+--------+
+|  Function |    -   |
+|   Memory  |    -   |
+|Multiplexer|    -   |
+|  Register |   32   |
++-----------+--------+
+|   Total   |   32   |
++-----------+--------+

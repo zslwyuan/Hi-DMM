@@ -1,0 +1,721 @@
+
+*** Running vivado
+    with args -log design_1_HLS_SPFA_KWTA_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_HLS_SPFA_KWTA_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_HLS_SPFA_KWTA_0_0.tcl -notrace
+Command: synth_design -top design_1_HLS_SPFA_KWTA_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 29807 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1354.574 ; gain = 81.887 ; free physical = 7115 ; free virtual = 28041
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_HLS_SPFA_KWTA_0_0' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/synth/design_1_HLS_SPFA_KWTA_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 40'b0000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 40'b0000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 40'b0000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 40'b0000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 40'b0000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 40'b0000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 40'b0000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 40'b0000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 40'b0000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 40'b0000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 40'b0000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 40'b0000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 40'b0000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 40'b0000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 40'b0000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 40'b0000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 40'b0000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 40'b0000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 40'b0000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 40'b0000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 40'b0000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 40'b0000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 40'b0000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 40'b0000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 40'b0000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 40'b0000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 40'b0000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 40'b0000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 40'b0000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 40'b0000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 40'b0000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 40'b0000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 40'b0000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 40'b0000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 40'b0000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 40'b0000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 40'b0001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 40'b0010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 40'b0100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 40'b1000000000000000000000000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:158]
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA_HTAbkb' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v:46]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 2000 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA_HTAbkb_ram' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v:9]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2000 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA_HTAbkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA_HTAbkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_HTAbkb.v:46]
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA_in_dEe' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v:66]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 200 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_SPFA_KWTA_in_dEe_ram' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v:9]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA_in_dEe_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA_in_dEe' (4#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA_in_dEe.v:66]
+INFO: [Synth 8-6157] synthesizing module 'HLS_free_1_s' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_free_1_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_free_1_s.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_free_1_s' (5#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_free_1_s.v:10]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1624]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1738]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1740]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1752]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1802]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1896]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1900]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_SPFA_KWTA' (6#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_HLS_SPFA_KWTA_0_0' (7#1) [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/synth/design_1_HLS_SPFA_KWTA_0_0.v:58]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA_in_dEe has unconnected port reset
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA_HTAbkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.199 ; gain = 128.512 ; free physical = 7130 ; free virtual = 28056
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1401.199 ; gain = 128.512 ; free physical = 7129 ; free virtual = 28055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1401.199 ; gain = 128.512 ; free physical = 7129 ; free virtual = 28055
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/constraints/HLS_SPFA_KWTA_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ip/design_1_HLS_SPFA_KWTA_0_0/constraints/HLS_SPFA_KWTA_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1765.441 ; gain = 0.000 ; free physical = 6793 ; free virtual = 27731
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1765.441 ; gain = 492.754 ; free physical = 6882 ; free virtual = 27820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1765.441 ; gain = 492.754 ; free physical = 6882 ; free virtual = 27820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1765.441 ; gain = 492.754 ; free physical = 6882 ; free virtual = 27820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4471] merging register 'tmp_4_cast_reg_1512_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1654]
+INFO: [Synth 8-4471] merging register 'i0_reg_1639_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1804]
+INFO: [Synth 8-4471] merging register 'in_list_addr_3_reg_1707_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1909]
+INFO: [Synth 8-4471] merging register 'in_list_addr_4_reg_1718_reg[0:0]' into 'i1_reg_1645_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1910]
+INFO: [Synth 8-4471] merging register 'offset_tail_load_reg_1734_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1852]
+INFO: [Synth 8-4471] merging register 'tmp_39_reg_1739_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1630]
+INFO: [Synth 8-4471] merging register 'tmp_33_cast_reg_1780_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1764]
+INFO: [Synth 8-4471] merging register 'offset_tail_fu_122_reg[0:0]' into 'reg_579_reg[0:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:1846]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex7_reg_1594_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:763]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_6_reg_1620_reg' and it is trimmed from '32' to '15' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:774]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex17_reg_1793_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:757]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex19_reg_1762_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:682]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex21_reg_1775_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:675]
+WARNING: [Synth 8-3936] Found unconnected internal register 'offset_tail_fu_122_reg' and it is trimmed from '31' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:662]
+WARNING: [Synth 8-3936] Found unconnected internal register 'status_6_reg_1506_reg' and it is trimmed from '32' to '20' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:798]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_7_fu_775_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element tmp_6_reg_1620_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:774]
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+INFO: [Synth 8-5545] ROM "tmp_7_fu_775_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_20_fu_986_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 1765.441 ; gain = 492.754 ; free physical = 6875 ; free virtual = 27814
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 11    
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 16    
+	               31 Bit    Registers := 5     
+	               20 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 10    
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---RAMs : 
+	              62K Bit         RAMs := 2     
+	              200 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 1     
+	  41 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 2     
+	   2 Input     37 Bit        Muxes := 2     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 10    
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 3     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HLS_SPFA_KWTA_HTAbkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              62K Bit         RAMs := 1     
+Module HLS_SPFA_KWTA_in_dEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              200 Bit         RAMs := 1     
+Module HLS_free_1_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module HLS_SPFA_KWTA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 11    
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 14    
+	               31 Bit    Registers := 5     
+	               20 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 10    
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 1     
+	  41 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 2     
+	   2 Input     37 Bit        Muxes := 2     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 10    
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 3     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'now_reg_1583_reg[31:0]' into 'now_reg_1583_reg[31:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:764]
+INFO: [Synth 8-4471] merging register 'i0_reg_1639_reg[31:1]' into 'i1_reg_1645_reg[31:1]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:726]
+INFO: [Synth 8-4471] merging register 'now_reg_1583_reg[31:0]' into 'now_reg_1583_reg[31:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:764]
+INFO: [Synth 8-4471] merging register 'in_list_addr_3_reg_1707_reg[7:1]' into 'in_list_addr_4_reg_1718_reg[7:1]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:746]
+INFO: [Synth 8-4471] merging register 'tmp_6_reg_1620_reg[14:0]' into 'tmp_6_reg_1620_reg[14:0]' [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:774]
+WARNING: [Synth 8-6014] Unused sequential element now_reg_1583_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:764]
+WARNING: [Synth 8-6014] Unused sequential element now_reg_1583_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:764]
+WARNING: [Synth 8-6014] Unused sequential element tmp_6_reg_1620_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:774]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_4_cast_reg_1512_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:705]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_36_reg_1634_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:728]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_33_cast_reg_1780_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:698]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_28_reg_1563_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:810]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_39_reg_1739_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:720]
+WARNING: [Synth 8-3936] Found unconnected internal register 'offset_tail_fu_122_reg' and it is trimmed from '12' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:662]
+WARNING: [Synth 8-3936] Found unconnected internal register 'reg_575_reg' and it is trimmed from '32' to '31' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:786]
+WARNING: [Synth 8-3936] Found unconnected internal register 'status_6_reg_1506_reg' and it is trimmed from '20' to '13' bits. [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:798]
+INFO: [Synth 8-5545] ROM "tmp_7_fu_775_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element tmp_6_reg_1620_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.srcs/sources_1/bd/design_1/ipshared/147f/hdl/verilog/HLS_SPFA_KWTA.v:774]
+WARNING: [Synth 8-6014] Unused sequential element C was removed. 
+INFO: [Synth 8-5545] ROM "tmp_7_fu_775_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "alloc_KWTA_size" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "alloc_KWTA_cmd" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+DSP Report: Generating DSP tmp_12_fu_897_p2, operation Mode is: C'+(A*B2)'.
+DSP Report: register now_reg_1583_reg is absorbed into DSP tmp_12_fu_897_p2.
+DSP Report: register C is absorbed into DSP tmp_12_fu_897_p2.
+DSP Report: register tmp_6_reg_1620_reg is absorbed into DSP tmp_12_fu_897_p2.
+DSP Report: operator tmp_12_fu_897_p2 is absorbed into DSP tmp_12_fu_897_p2.
+DSP Report: operator tmp_6_fu_857_p2 is absorbed into DSP tmp_12_fu_897_p2.
+DSP Report: Generating DSP tmp_14_fu_907_p2, operation Mode is: C+(A*B2)'.
+DSP Report: register now_reg_1583_reg is absorbed into DSP tmp_14_fu_907_p2.
+DSP Report: register tmp_6_reg_1620_reg is absorbed into DSP tmp_14_fu_907_p2.
+DSP Report: operator tmp_14_fu_907_p2 is absorbed into DSP tmp_14_fu_907_p2.
+DSP Report: operator tmp_6_fu_857_p2 is absorbed into DSP tmp_14_fu_907_p2.
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[31]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[30]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[29]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[28]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[27]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[26]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[25]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[24]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[23]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[22]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[21]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[20]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[19]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[18]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[17]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[16]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[15]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[14]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_HTA_addr[13]
+WARNING: [Synth 8-3331] design HLS_SPFA_KWTA has unconnected port alloc_KWTA_addr[31]
+INFO: [Synth 8-3971] The signal in_list_U/HLS_SPFA_KWTA_in_dEe_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'inst/tmp_33_reg_1589_reg[0]' (FDE) to 'inst/now_reg_1583_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\i1_reg_1645_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[1]' (FDE) to 'inst/tmp_36_reg_1634_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[2]' (FDE) to 'inst/tmp_36_reg_1634_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[3]' (FDE) to 'inst/tmp_36_reg_1634_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[4]' (FDE) to 'inst/tmp_36_reg_1634_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[5]' (FDE) to 'inst/tmp_36_reg_1634_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[6]' (FDE) to 'inst/tmp_36_reg_1634_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[7]' (FDE) to 'inst/tmp_36_reg_1634_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[8]' (FDE) to 'inst/tmp_36_reg_1634_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[9]' (FDE) to 'inst/tmp_36_reg_1634_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[10]' (FDE) to 'inst/tmp_36_reg_1634_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/i1_reg_1645_reg[11]' (FDE) to 'inst/tmp_36_reg_1634_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[0]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[0]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[1]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[1]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[2]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[2]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[3]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[3]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_33_cast_reg_1780_reg[1]' (FDE) to 'inst/HTA_heap_0_addr_8_reg_1785_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_33_cast_reg_1780_reg[2]' (FDE) to 'inst/HTA_heap_0_addr_8_reg_1785_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_33_cast_reg_1780_reg[3]' (FDE) to 'inst/HTA_heap_0_addr_8_reg_1785_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[0]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[1]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[2]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[3]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[4]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[5]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[6]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[7]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[8]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[9]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/HTA_heap_0_addr_reg_1521_reg[10]' (FDE) to 'inst/tmp_4_cast_reg_1512_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\reg_579_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[31]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[30]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[29]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[28]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[27]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[26]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[25]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[24]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[23]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[22]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[21]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[20]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[19]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[18]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[17]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[16]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[15]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[14]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[13]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[12]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[11]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[10]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[9]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (now_reg_1583_reg[8]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[31]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[30]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[29]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[28]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[27]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[26]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[25]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[24]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[23]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[22]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[21]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[20]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[19]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[18]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[17]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[16]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[15]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[14]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[13]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[12]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[11]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[10]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[9]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (tmp_3_reg_1609_reg[8]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (status_6_reg_1506_reg[12]) is unused and will be removed from module HLS_SPFA_KWTA.
+WARNING: [Synth 8-3332] Sequential element (status_6_reg_1506_reg[0]) is unused and will be removed from module HLS_SPFA_KWTA.
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[4]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[4]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[5]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[5]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[6]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[6]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[7]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[7]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[8]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[8]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[9]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[9]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex19_reg_1762_reg[10]' (FDE) to 'inst/HTA_heap_0_addr_13_reg_1754_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex21_reg_1775_reg[10]' (FDE) to 'inst/HTA_heap_0_addr_10_reg_1767_reg[10]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1765.441 ; gain = 492.754 ; free physical = 6835 ; free virtual = 27767
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HLS_SPFA_KWTA_HTAbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 2      | 
+|HLS_SPFA_KWTA_HTAbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 2      | 
+|HLS_SPFA_KWTA_in_dEe_ram: | ram_reg    | 256 x 1(WRITE_FIRST)   | W | R | 256 x 1(WRITE_FIRST)   | W | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|HLS_SPFA_KWTA | C'+(A*B2)'  | 15     | 15     | 15     | -      | 15     | 0    | 1    | 1    | -    | -     | 1    | 0    | 
+|HLS_SPFA_KWTA | C+(A*B2)'   | 15     | 15     | 15     | -      | 15     | 0    | 1    | 0    | -    | -     | 1    | 0    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_1/HTA_heap_0_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_1/HTA_heap_0_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_2/HTA_heap_1_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_2/HTA_heap_1_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_3/in_list_U/HLS_SPFA_KWTA_in_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_8_3/in_list_U/HLS_SPFA_KWTA_in_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:56 . Memory (MB): peak = 1775.441 ; gain = 502.754 ; free physical = 6606 ; free virtual = 27559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:00 . Memory (MB): peak = 1830.504 ; gain = 557.816 ; free physical = 6621 ; free virtual = 27574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|HLS_SPFA_KWTA_HTAbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 2      | 
+|HLS_SPFA_KWTA_HTAbkb_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 2      | 
+|HLS_SPFA_KWTA_in_dEe_ram: | ram_reg    | 256 x 1(WRITE_FIRST)   | W | R | 256 x 1(WRITE_FIRST)   | W | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_0_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/HTA_heap_1_U/HLS_SPFA_KWTA_HTAbkb_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/in_list_U/HLS_SPFA_KWTA_in_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/in_list_U/HLS_SPFA_KWTA_in_dEe_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6609 ; free virtual = 27562
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6613 ; free virtual = 27567
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6608 ; free virtual = 27561
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6607 ; free virtual = 27561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6607 ; free virtual = 27561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6614 ; free virtual = 27567
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6612 ; free virtual = 27565
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   129|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |    90|
+|5     |LUT2      |   230|
+|6     |LUT3      |   210|
+|7     |LUT4      |   262|
+|8     |LUT5      |   134|
+|9     |LUT6      |   261|
+|10    |RAMB18E1  |     1|
+|11    |RAMB36E1  |     4|
+|12    |FDRE      |   725|
+|13    |FDSE      |     2|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------------+---------------------------+------+
+|      |Instance                         |Module                     |Cells |
++------+---------------------------------+---------------------------+------+
+|1     |top                              |                           |  2050|
+|2     |  inst                           |HLS_SPFA_KWTA              |  2050|
+|3     |    HTA_heap_0_U                 |HLS_SPFA_KWTA_HTAbkb       |   385|
+|4     |      HLS_SPFA_KWTA_HTAbkb_ram_U |HLS_SPFA_KWTA_HTAbkb_ram_1 |   385|
+|5     |    HTA_heap_1_U                 |HLS_SPFA_KWTA_HTAbkb_0     |   329|
+|6     |      HLS_SPFA_KWTA_HTAbkb_ram_U |HLS_SPFA_KWTA_HTAbkb_ram   |   329|
+|7     |    grp_HLS_free_1_s_fu_546      |HLS_free_1_s               |    22|
+|8     |    in_list_U                    |HLS_SPFA_KWTA_in_dEe       |   161|
+|9     |      HLS_SPFA_KWTA_in_dEe_ram_U |HLS_SPFA_KWTA_in_dEe_ram   |   161|
++------+---------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1854.520 ; gain = 581.832 ; free physical = 6608 ; free virtual = 27561
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 92 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1854.520 ; gain = 217.590 ; free physical = 6683 ; free virtual = 27636
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1854.527 ; gain = 581.832 ; free physical = 6683 ; free virtual = 27636
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+148 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1854.527 ; gain = 593.406 ; free physical = 6708 ; free virtual = 27662
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA_KWTA_test/Algorithm_SPFA_KWTA_test.runs/design_1_HLS_SPFA_KWTA_0_0_synth_1/design_1_HLS_SPFA_KWTA_0_0.dcp' has been generated.

@@ -1,0 +1,2339 @@
+inserting a new node (id=0 val=1320 addr=128 PAid=0 PA_addr=-1)
+inserting a new node (id=1 val=1915 addr=136 PAid=0 PA_addr=128)
+insert as leftson
+begin bubbling up
+nowid=1 PAid=0 PA_addr=128
+PAval=1320 nowval=1915
+swap
+end bubbling up
+==================
+inserting a new node (id=2 val=494 addr=144 PAid=0 PA_addr=128)
+insert as rightson
+begin bubbling up
+nowid=2 PAid=0 PA_addr=128
+PAval=1915 nowval=494
+end bubbling up
+==================
+inserting a new node (id=3 val=956 addr=152 PAid=1 PA_addr=136)
+insert as leftson
+begin bubbling up
+nowid=3 PAid=1 PA_addr=136
+PAval=1320 nowval=956
+end bubbling up
+==================
+inserting a new node (id=4 val=1944 addr=160 PAid=1 PA_addr=136)
+insert as rightson
+begin bubbling up
+nowid=4 PAid=1 PA_addr=136
+PAval=1320 nowval=1944
+swap
+nowid=1 PAid=0 PA_addr=128
+PAval=1915 nowval=1944
+swap
+end bubbling up
+==================
+inserting a new node (id=5 val=1874 addr=168 PAid=2 PA_addr=144)
+insert as leftson
+begin bubbling up
+nowid=5 PAid=2 PA_addr=144
+PAval=494 nowval=1874
+swap
+nowid=2 PAid=0 PA_addr=128
+PAval=1944 nowval=1874
+end bubbling up
+==================
+inserting a new node (id=6 val=1789 addr=176 PAid=2 PA_addr=144)
+insert as rightson
+begin bubbling up
+nowid=6 PAid=2 PA_addr=144
+PAval=1874 nowval=1789
+end bubbling up
+==================
+inserting a new node (id=7 val=1469 addr=184 PAid=3 PA_addr=152)
+insert as leftson
+begin bubbling up
+nowid=7 PAid=3 PA_addr=152
+PAval=956 nowval=1469
+swap
+nowid=3 PAid=1 PA_addr=136
+PAval=1915 nowval=1469
+end bubbling up
+==================
+inserting a new node (id=8 val=1158 addr=192 PAid=3 PA_addr=152)
+insert as rightson
+begin bubbling up
+nowid=8 PAid=3 PA_addr=152
+PAval=1469 nowval=1158
+end bubbling up
+==================
+inserting a new node (id=9 val=1565 addr=200 PAid=4 PA_addr=160)
+insert as leftson
+begin bubbling up
+nowid=9 PAid=4 PA_addr=160
+PAval=1320 nowval=1565
+swap
+nowid=4 PAid=1 PA_addr=136
+PAval=1915 nowval=1565
+end bubbling up
+==================
+inserting a new node (id=10 val=577 addr=208 PAid=4 PA_addr=160)
+insert as rightson
+begin bubbling up
+nowid=10 PAid=4 PA_addr=160
+PAval=1565 nowval=577
+end bubbling up
+==================
+inserting a new node (id=11 val=2118 addr=216 PAid=5 PA_addr=168)
+insert as leftson
+begin bubbling up
+nowid=11 PAid=5 PA_addr=168
+PAval=494 nowval=2118
+swap
+nowid=5 PAid=2 PA_addr=144
+PAval=1874 nowval=2118
+swap
+nowid=2 PAid=0 PA_addr=128
+PAval=1944 nowval=2118
+swap
+end bubbling up
+==================
+inserting a new node (id=12 val=1714 addr=224 PAid=5 PA_addr=168)
+insert as rightson
+begin bubbling up
+nowid=12 PAid=5 PA_addr=168
+PAval=1874 nowval=1714
+end bubbling up
+==================
+inserting a new node (id=13 val=817 addr=232 PAid=6 PA_addr=176)
+insert as leftson
+begin bubbling up
+nowid=13 PAid=6 PA_addr=176
+PAval=1789 nowval=817
+end bubbling up
+==================
+inserting a new node (id=14 val=704 addr=240 PAid=6 PA_addr=176)
+insert as rightson
+begin bubbling up
+nowid=14 PAid=6 PA_addr=176
+PAval=1789 nowval=704
+end bubbling up
+==================
+inserting a new node (id=15 val=516 addr=248 PAid=7 PA_addr=184)
+insert as leftson
+begin bubbling up
+nowid=15 PAid=7 PA_addr=184
+PAval=956 nowval=516
+end bubbling up
+==================
+inserting a new node (id=16 val=2117 addr=256 PAid=7 PA_addr=184)
+insert as rightson
+begin bubbling up
+nowid=16 PAid=7 PA_addr=184
+PAval=956 nowval=2117
+swap
+nowid=7 PAid=3 PA_addr=152
+PAval=1469 nowval=2117
+swap
+nowid=3 PAid=1 PA_addr=136
+PAval=1915 nowval=2117
+swap
+nowid=1 PAid=0 PA_addr=128
+PAval=2118 nowval=2117
+end bubbling up
+==================
+inserting a new node (id=17 val=993 addr=264 PAid=8 PA_addr=192)
+insert as leftson
+begin bubbling up
+nowid=17 PAid=8 PA_addr=192
+PAval=1158 nowval=993
+end bubbling up
+==================
+inserting a new node (id=18 val=93 addr=272 PAid=8 PA_addr=192)
+insert as rightson
+begin bubbling up
+nowid=18 PAid=8 PA_addr=192
+PAval=1158 nowval=93
+end bubbling up
+==================
+inserting a new node (id=19 val=347 addr=280 PAid=9 PA_addr=200)
+insert as leftson
+begin bubbling up
+nowid=19 PAid=9 PA_addr=200
+PAval=1320 nowval=347
+end bubbling up
+==================
+inserting a new node (id=20 val=1537 addr=288 PAid=9 PA_addr=200)
+insert as rightson
+begin bubbling up
+nowid=20 PAid=9 PA_addr=200
+PAval=1320 nowval=1537
+swap
+nowid=9 PAid=4 PA_addr=160
+PAval=1565 nowval=1537
+end bubbling up
+==================
+inserting a new node (id=21 val=401 addr=296 PAid=10 PA_addr=208)
+insert as leftson
+begin bubbling up
+nowid=21 PAid=10 PA_addr=208
+PAval=577 nowval=401
+end bubbling up
+==================
+inserting a new node (id=22 val=1200 addr=304 PAid=10 PA_addr=208)
+insert as rightson
+begin bubbling up
+nowid=22 PAid=10 PA_addr=208
+PAval=577 nowval=1200
+swap
+nowid=10 PAid=4 PA_addr=160
+PAval=1565 nowval=1200
+end bubbling up
+==================
+inserting a new node (id=23 val=1838 addr=312 PAid=11 PA_addr=216)
+insert as leftson
+begin bubbling up
+nowid=23 PAid=11 PA_addr=216
+PAval=494 nowval=1838
+swap
+nowid=11 PAid=5 PA_addr=168
+PAval=1874 nowval=1838
+end bubbling up
+==================
+inserting a new node (id=24 val=812 addr=320 PAid=11 PA_addr=216)
+insert as rightson
+begin bubbling up
+nowid=24 PAid=11 PA_addr=216
+PAval=1838 nowval=812
+end bubbling up
+==================
+inserting a new node (id=25 val=1199 addr=328 PAid=12 PA_addr=224)
+insert as leftson
+begin bubbling up
+nowid=25 PAid=12 PA_addr=224
+PAval=1714 nowval=1199
+end bubbling up
+==================
+inserting a new node (id=26 val=765 addr=336 PAid=12 PA_addr=224)
+insert as rightson
+begin bubbling up
+nowid=26 PAid=12 PA_addr=224
+PAval=1714 nowval=765
+end bubbling up
+==================
+inserting a new node (id=27 val=2110 addr=344 PAid=13 PA_addr=232)
+insert as leftson
+begin bubbling up
+nowid=27 PAid=13 PA_addr=232
+PAval=817 nowval=2110
+swap
+nowid=13 PAid=6 PA_addr=176
+PAval=1789 nowval=2110
+swap
+nowid=6 PAid=2 PA_addr=144
+PAval=1944 nowval=2110
+swap
+nowid=2 PAid=0 PA_addr=128
+PAval=2118 nowval=2110
+end bubbling up
+==================
+inserting a new node (id=28 val=2034 addr=352 PAid=13 PA_addr=232)
+insert as rightson
+begin bubbling up
+nowid=28 PAid=13 PA_addr=232
+PAval=1789 nowval=2034
+swap
+nowid=13 PAid=6 PA_addr=176
+PAval=1944 nowval=2034
+swap
+nowid=6 PAid=2 PA_addr=144
+PAval=2110 nowval=2034
+end bubbling up
+==================
+inserting a new node (id=29 val=1165 addr=360 PAid=14 PA_addr=240)
+insert as leftson
+begin bubbling up
+nowid=29 PAid=14 PA_addr=240
+PAval=704 nowval=1165
+swap
+nowid=14 PAid=6 PA_addr=176
+PAval=2034 nowval=1165
+end bubbling up
+==================
+inserting a new node (id=30 val=356 addr=368 PAid=14 PA_addr=240)
+insert as rightson
+begin bubbling up
+nowid=30 PAid=14 PA_addr=240
+PAval=1165 nowval=356
+end bubbling up
+==================
+inserting a new node (id=31 val=1223 addr=376 PAid=15 PA_addr=248)
+insert as leftson
+begin bubbling up
+nowid=31 PAid=15 PA_addr=248
+PAval=516 nowval=1223
+swap
+nowid=15 PAid=7 PA_addr=184
+PAval=1469 nowval=1223
+end bubbling up
+==================
+inserting a new node (id=32 val=587 addr=384 PAid=15 PA_addr=248)
+insert as rightson
+begin bubbling up
+nowid=32 PAid=15 PA_addr=248
+PAval=1223 nowval=587
+end bubbling up
+==================
+inserting a new node (id=33 val=487 addr=392 PAid=16 PA_addr=256)
+insert as leftson
+begin bubbling up
+nowid=33 PAid=16 PA_addr=256
+PAval=956 nowval=487
+end bubbling up
+==================
+inserting a new node (id=34 val=1816 addr=400 PAid=16 PA_addr=256)
+insert as rightson
+begin bubbling up
+nowid=34 PAid=16 PA_addr=256
+PAval=956 nowval=1816
+swap
+nowid=16 PAid=7 PA_addr=184
+PAval=1469 nowval=1816
+swap
+nowid=7 PAid=3 PA_addr=152
+PAval=1915 nowval=1816
+end bubbling up
+==================
+inserting a new node (id=35 val=400 addr=408 PAid=17 PA_addr=264)
+insert as leftson
+begin bubbling up
+nowid=35 PAid=17 PA_addr=264
+PAval=993 nowval=400
+end bubbling up
+==================
+inserting a new node (id=36 val=230 addr=416 PAid=17 PA_addr=264)
+insert as rightson
+begin bubbling up
+nowid=36 PAid=17 PA_addr=264
+PAval=993 nowval=230
+end bubbling up
+==================
+inserting a new node (id=37 val=1474 addr=424 PAid=18 PA_addr=272)
+insert as leftson
+begin bubbling up
+nowid=37 PAid=18 PA_addr=272
+PAval=93 nowval=1474
+swap
+nowid=18 PAid=8 PA_addr=192
+PAval=1158 nowval=1474
+swap
+nowid=8 PAid=3 PA_addr=152
+PAval=1915 nowval=1474
+end bubbling up
+==================
+inserting a new node (id=38 val=1869 addr=432 PAid=18 PA_addr=272)
+insert as rightson
+begin bubbling up
+nowid=38 PAid=18 PA_addr=272
+PAval=1158 nowval=1869
+swap
+nowid=18 PAid=8 PA_addr=192
+PAval=1474 nowval=1869
+swap
+nowid=8 PAid=3 PA_addr=152
+PAval=1915 nowval=1869
+end bubbling up
+==================
+inserting a new node (id=39 val=1025 addr=440 PAid=19 PA_addr=280)
+insert as leftson
+begin bubbling up
+nowid=39 PAid=19 PA_addr=280
+PAval=347 nowval=1025
+swap
+nowid=19 PAid=9 PA_addr=200
+PAval=1537 nowval=1025
+end bubbling up
+==================
+inserting a new node (id=40 val=909 addr=448 PAid=19 PA_addr=280)
+insert as rightson
+begin bubbling up
+nowid=40 PAid=19 PA_addr=280
+PAval=1025 nowval=909
+end bubbling up
+==================
+inserting a new node (id=41 val=2084 addr=456 PAid=20 PA_addr=288)
+insert as leftson
+begin bubbling up
+nowid=41 PAid=20 PA_addr=288
+PAval=1320 nowval=2084
+swap
+nowid=20 PAid=9 PA_addr=200
+PAval=1537 nowval=2084
+swap
+nowid=9 PAid=4 PA_addr=160
+PAval=1565 nowval=2084
+swap
+nowid=4 PAid=1 PA_addr=136
+PAval=2117 nowval=2084
+end bubbling up
+==================
+inserting a new node (id=42 val=1012 addr=464 PAid=20 PA_addr=288)
+insert as rightson
+begin bubbling up
+nowid=42 PAid=20 PA_addr=288
+PAval=1537 nowval=1012
+end bubbling up
+==================
+inserting a new node (id=43 val=129 addr=472 PAid=21 PA_addr=296)
+insert as leftson
+begin bubbling up
+nowid=43 PAid=21 PA_addr=296
+PAval=401 nowval=129
+end bubbling up
+==================
+inserting a new node (id=44 val=407 addr=480 PAid=21 PA_addr=296)
+insert as rightson
+begin bubbling up
+nowid=44 PAid=21 PA_addr=296
+PAval=401 nowval=407
+swap
+nowid=21 PAid=10 PA_addr=208
+PAval=1200 nowval=407
+end bubbling up
+==================
+inserting a new node (id=45 val=1353 addr=488 PAid=22 PA_addr=304)
+insert as leftson
+begin bubbling up
+nowid=45 PAid=22 PA_addr=304
+PAval=577 nowval=1353
+swap
+nowid=22 PAid=10 PA_addr=208
+PAval=1200 nowval=1353
+swap
+nowid=10 PAid=4 PA_addr=160
+PAval=2084 nowval=1353
+end bubbling up
+==================
+inserting a new node (id=46 val=646 addr=496 PAid=22 PA_addr=304)
+insert as rightson
+begin bubbling up
+nowid=46 PAid=22 PA_addr=304
+PAval=1200 nowval=646
+end bubbling up
+==================
+inserting a new node (id=47 val=394 addr=504 PAid=23 PA_addr=312)
+insert as leftson
+begin bubbling up
+nowid=47 PAid=23 PA_addr=312
+PAval=494 nowval=394
+end bubbling up
+==================
+inserting a new node (id=48 val=1984 addr=512 PAid=23 PA_addr=312)
+insert as rightson
+begin bubbling up
+nowid=48 PAid=23 PA_addr=312
+PAval=494 nowval=1984
+swap
+nowid=23 PAid=11 PA_addr=216
+PAval=1838 nowval=1984
+swap
+nowid=11 PAid=5 PA_addr=168
+PAval=1874 nowval=1984
+swap
+nowid=5 PAid=2 PA_addr=144
+PAval=2110 nowval=1984
+end bubbling up
+==================
+inserting a new node (id=49 val=376 addr=520 PAid=24 PA_addr=320)
+insert as leftson
+begin bubbling up
+nowid=49 PAid=24 PA_addr=320
+PAval=812 nowval=376
+end bubbling up
+==================
+inserting a new node (id=50 val=378 addr=528 PAid=24 PA_addr=320)
+insert as rightson
+begin bubbling up
+nowid=50 PAid=24 PA_addr=320
+PAval=812 nowval=378
+end bubbling up
+==================
+inserting a new node (id=51 val=1390 addr=536 PAid=25 PA_addr=328)
+insert as leftson
+begin bubbling up
+nowid=51 PAid=25 PA_addr=328
+PAval=1199 nowval=1390
+swap
+nowid=25 PAid=12 PA_addr=224
+PAval=1714 nowval=1390
+end bubbling up
+==================
+inserting a new node (id=52 val=778 addr=544 PAid=25 PA_addr=328)
+insert as rightson
+begin bubbling up
+nowid=52 PAid=25 PA_addr=328
+PAval=1390 nowval=778
+end bubbling up
+==================
+inserting a new node (id=53 val=1578 addr=552 PAid=26 PA_addr=336)
+insert as leftson
+begin bubbling up
+nowid=53 PAid=26 PA_addr=336
+PAval=765 nowval=1578
+swap
+nowid=26 PAid=12 PA_addr=224
+PAval=1714 nowval=1578
+end bubbling up
+==================
+inserting a new node (id=54 val=735 addr=560 PAid=26 PA_addr=336)
+insert as rightson
+begin bubbling up
+nowid=54 PAid=26 PA_addr=336
+PAval=1578 nowval=735
+end bubbling up
+==================
+inserting a new node (id=55 val=1227 addr=568 PAid=27 PA_addr=344)
+insert as leftson
+begin bubbling up
+nowid=55 PAid=27 PA_addr=344
+PAval=817 nowval=1227
+swap
+nowid=27 PAid=13 PA_addr=232
+PAval=1944 nowval=1227
+end bubbling up
+==================
+inserting a new node (id=56 val=283 addr=576 PAid=27 PA_addr=344)
+insert as rightson
+begin bubbling up
+nowid=56 PAid=27 PA_addr=344
+PAval=1227 nowval=283
+end bubbling up
+==================
+inserting a new node (id=57 val=1500 addr=584 PAid=28 PA_addr=352)
+insert as leftson
+begin bubbling up
+nowid=57 PAid=28 PA_addr=352
+PAval=1789 nowval=1500
+end bubbling up
+==================
+inserting a new node (id=58 val=1207 addr=592 PAid=28 PA_addr=352)
+insert as rightson
+begin bubbling up
+nowid=58 PAid=28 PA_addr=352
+PAval=1789 nowval=1207
+end bubbling up
+==================
+inserting a new node (id=59 val=187 addr=600 PAid=29 PA_addr=360)
+insert as leftson
+begin bubbling up
+nowid=59 PAid=29 PA_addr=360
+PAval=704 nowval=187
+end bubbling up
+==================
+inserting a new node (id=60 val=171 addr=608 PAid=29 PA_addr=360)
+insert as rightson
+begin bubbling up
+nowid=60 PAid=29 PA_addr=360
+PAval=704 nowval=171
+end bubbling up
+==================
+inserting a new node (id=61 val=1200 addr=616 PAid=30 PA_addr=368)
+insert as leftson
+begin bubbling up
+nowid=61 PAid=30 PA_addr=368
+PAval=356 nowval=1200
+swap
+nowid=30 PAid=14 PA_addr=240
+PAval=1165 nowval=1200
+swap
+nowid=14 PAid=6 PA_addr=176
+PAval=2034 nowval=1200
+end bubbling up
+==================
+inserting a new node (id=62 val=1047 addr=624 PAid=30 PA_addr=368)
+insert as rightson
+begin bubbling up
+nowid=62 PAid=30 PA_addr=368
+PAval=1165 nowval=1047
+end bubbling up
+==================
+inserting a new node (id=63 val=758 addr=632 PAid=31 PA_addr=376)
+insert as leftson
+begin bubbling up
+nowid=63 PAid=31 PA_addr=376
+PAval=516 nowval=758
+swap
+nowid=31 PAid=15 PA_addr=248
+PAval=1223 nowval=758
+end bubbling up
+==================
+inserting a new node (id=64 val=1688 addr=640 PAid=31 PA_addr=376)
+insert as rightson
+begin bubbling up
+nowid=64 PAid=31 PA_addr=376
+PAval=758 nowval=1688
+swap
+nowid=31 PAid=15 PA_addr=248
+PAval=1223 nowval=1688
+swap
+nowid=15 PAid=7 PA_addr=184
+PAval=1816 nowval=1688
+end bubbling up
+==================
+inserting a new node (id=65 val=733 addr=648 PAid=32 PA_addr=384)
+insert as leftson
+begin bubbling up
+nowid=65 PAid=32 PA_addr=384
+PAval=587 nowval=733
+swap
+nowid=32 PAid=15 PA_addr=248
+PAval=1688 nowval=733
+end bubbling up
+==================
+inserting a new node (id=66 val=795 addr=656 PAid=32 PA_addr=384)
+insert as rightson
+begin bubbling up
+nowid=66 PAid=32 PA_addr=384
+PAval=733 nowval=795
+swap
+nowid=32 PAid=15 PA_addr=248
+PAval=1688 nowval=795
+end bubbling up
+==================
+inserting a new node (id=67 val=1555 addr=664 PAid=33 PA_addr=392)
+insert as leftson
+begin bubbling up
+nowid=67 PAid=33 PA_addr=392
+PAval=487 nowval=1555
+swap
+nowid=33 PAid=16 PA_addr=256
+PAval=1469 nowval=1555
+swap
+nowid=16 PAid=7 PA_addr=184
+PAval=1816 nowval=1555
+end bubbling up
+==================
+inserting a new node (id=68 val=76 addr=672 PAid=33 PA_addr=392)
+insert as rightson
+begin bubbling up
+nowid=68 PAid=33 PA_addr=392
+PAval=1469 nowval=76
+end bubbling up
+==================
+inserting a new node (id=69 val=171 addr=680 PAid=34 PA_addr=400)
+insert as leftson
+begin bubbling up
+nowid=69 PAid=34 PA_addr=400
+PAval=956 nowval=171
+end bubbling up
+==================
+inserting a new node (id=70 val=450 addr=688 PAid=34 PA_addr=400)
+insert as rightson
+begin bubbling up
+nowid=70 PAid=34 PA_addr=400
+PAval=956 nowval=450
+end bubbling up
+==================
+inserting a new node (id=71 val=622 addr=696 PAid=35 PA_addr=408)
+insert as leftson
+begin bubbling up
+nowid=71 PAid=35 PA_addr=408
+PAval=400 nowval=622
+swap
+nowid=35 PAid=17 PA_addr=264
+PAval=993 nowval=622
+end bubbling up
+==================
+inserting a new node (id=72 val=124 addr=704 PAid=35 PA_addr=408)
+insert as rightson
+begin bubbling up
+nowid=72 PAid=35 PA_addr=408
+PAval=622 nowval=124
+end bubbling up
+==================
+inserting a new node (id=73 val=1462 addr=712 PAid=36 PA_addr=416)
+insert as leftson
+begin bubbling up
+nowid=73 PAid=36 PA_addr=416
+PAval=230 nowval=1462
+swap
+nowid=36 PAid=17 PA_addr=264
+PAval=993 nowval=1462
+swap
+nowid=17 PAid=8 PA_addr=192
+PAval=1869 nowval=1462
+end bubbling up
+==================
+inserting a new node (id=74 val=389 addr=720 PAid=36 PA_addr=416)
+insert as rightson
+begin bubbling up
+nowid=74 PAid=36 PA_addr=416
+PAval=993 nowval=389
+end bubbling up
+==================
+inserting a new node (id=75 val=531 addr=728 PAid=37 PA_addr=424)
+insert as leftson
+begin bubbling up
+nowid=75 PAid=37 PA_addr=424
+PAval=93 nowval=531
+swap
+nowid=37 PAid=18 PA_addr=272
+PAval=1474 nowval=531
+end bubbling up
+==================
+inserting a new node (id=76 val=322 addr=736 PAid=37 PA_addr=424)
+insert as rightson
+begin bubbling up
+nowid=76 PAid=37 PA_addr=424
+PAval=531 nowval=322
+end bubbling up
+==================
+inserting a new node (id=77 val=1035 addr=744 PAid=38 PA_addr=432)
+insert as leftson
+begin bubbling up
+nowid=77 PAid=38 PA_addr=432
+PAval=1158 nowval=1035
+end bubbling up
+==================
+inserting a new node (id=78 val=562 addr=752 PAid=38 PA_addr=432)
+insert as rightson
+begin bubbling up
+nowid=78 PAid=38 PA_addr=432
+PAval=1158 nowval=562
+end bubbling up
+==================
+inserting a new node (id=79 val=175 addr=760 PAid=39 PA_addr=440)
+insert as leftson
+begin bubbling up
+nowid=79 PAid=39 PA_addr=440
+PAval=347 nowval=175
+end bubbling up
+==================
+inserting a new node (id=80 val=1411 addr=768 PAid=39 PA_addr=440)
+insert as rightson
+begin bubbling up
+nowid=80 PAid=39 PA_addr=440
+PAval=347 nowval=1411
+swap
+nowid=39 PAid=19 PA_addr=280
+PAval=1025 nowval=1411
+swap
+nowid=19 PAid=9 PA_addr=200
+PAval=1565 nowval=1411
+end bubbling up
+==================
+inserting a new node (id=81 val=578 addr=776 PAid=40 PA_addr=448)
+insert as leftson
+begin bubbling up
+nowid=81 PAid=40 PA_addr=448
+PAval=909 nowval=578
+end bubbling up
+==================
+inserting a new node (id=82 val=1202 addr=784 PAid=40 PA_addr=448)
+insert as rightson
+begin bubbling up
+nowid=82 PAid=40 PA_addr=448
+PAval=909 nowval=1202
+swap
+nowid=40 PAid=19 PA_addr=280
+PAval=1411 nowval=1202
+end bubbling up
+==================
+inserting a new node (id=83 val=1826 addr=792 PAid=41 PA_addr=456)
+insert as leftson
+begin bubbling up
+nowid=83 PAid=41 PA_addr=456
+PAval=1320 nowval=1826
+swap
+nowid=41 PAid=20 PA_addr=288
+PAval=1537 nowval=1826
+swap
+nowid=20 PAid=9 PA_addr=200
+PAval=1565 nowval=1826
+swap
+nowid=9 PAid=4 PA_addr=160
+PAval=2084 nowval=1826
+end bubbling up
+==================
+inserting a new node (id=84 val=25 addr=800 PAid=41 PA_addr=456)
+insert as rightson
+begin bubbling up
+nowid=84 PAid=41 PA_addr=456
+PAval=1537 nowval=25
+end bubbling up
+==================
+inserting a new node (id=85 val=1574 addr=808 PAid=42 PA_addr=464)
+insert as leftson
+begin bubbling up
+nowid=85 PAid=42 PA_addr=464
+PAval=1012 nowval=1574
+swap
+nowid=42 PAid=20 PA_addr=288
+PAval=1565 nowval=1574
+swap
+nowid=20 PAid=9 PA_addr=200
+PAval=1826 nowval=1574
+end bubbling up
+==================
+inserting a new node (id=86 val=560 addr=816 PAid=42 PA_addr=464)
+insert as rightson
+begin bubbling up
+nowid=86 PAid=42 PA_addr=464
+PAval=1565 nowval=560
+end bubbling up
+==================
+inserting a new node (id=87 val=2077 addr=824 PAid=43 PA_addr=472)
+insert as leftson
+begin bubbling up
+nowid=87 PAid=43 PA_addr=472
+PAval=129 nowval=2077
+swap
+nowid=43 PAid=21 PA_addr=296
+PAval=407 nowval=2077
+swap
+nowid=21 PAid=10 PA_addr=208
+PAval=1353 nowval=2077
+swap
+nowid=10 PAid=4 PA_addr=160
+PAval=2084 nowval=2077
+end bubbling up
+==================
+inserting a new node (id=88 val=943 addr=832 PAid=43 PA_addr=472)
+insert as rightson
+begin bubbling up
+nowid=88 PAid=43 PA_addr=472
+PAval=407 nowval=943
+swap
+nowid=43 PAid=21 PA_addr=296
+PAval=1353 nowval=943
+end bubbling up
+==================
+inserting a new node (id=89 val=1404 addr=840 PAid=44 PA_addr=480)
+insert as leftson
+begin bubbling up
+nowid=89 PAid=44 PA_addr=480
+PAval=401 nowval=1404
+swap
+nowid=44 PAid=21 PA_addr=296
+PAval=1353 nowval=1404
+swap
+nowid=21 PAid=10 PA_addr=208
+PAval=2077 nowval=1404
+end bubbling up
+==================
+inserting a new node (id=90 val=133 addr=848 PAid=44 PA_addr=480)
+insert as rightson
+begin bubbling up
+nowid=90 PAid=44 PA_addr=480
+PAval=1353 nowval=133
+end bubbling up
+==================
+inserting a new node (id=91 val=752 addr=856 PAid=45 PA_addr=488)
+insert as leftson
+begin bubbling up
+nowid=91 PAid=45 PA_addr=488
+PAval=577 nowval=752
+swap
+nowid=45 PAid=22 PA_addr=304
+PAval=1200 nowval=752
+end bubbling up
+==================
+inserting a new node (id=92 val=473 addr=864 PAid=45 PA_addr=488)
+insert as rightson
+begin bubbling up
+nowid=92 PAid=45 PA_addr=488
+PAval=752 nowval=473
+end bubbling up
+==================
+inserting a new node (id=93 val=1180 addr=872 PAid=46 PA_addr=496)
+insert as leftson
+begin bubbling up
+nowid=93 PAid=46 PA_addr=496
+PAval=646 nowval=1180
+swap
+nowid=46 PAid=22 PA_addr=304
+PAval=1200 nowval=1180
+end bubbling up
+==================
+inserting a new node (id=94 val=1147 addr=880 PAid=46 PA_addr=496)
+insert as rightson
+begin bubbling up
+nowid=94 PAid=46 PA_addr=496
+PAval=1180 nowval=1147
+end bubbling up
+==================
+inserting a new node (id=95 val=30 addr=888 PAid=47 PA_addr=504)
+insert as leftson
+begin bubbling up
+nowid=95 PAid=47 PA_addr=504
+PAval=394 nowval=30
+end bubbling up
+==================
+inserting a new node (id=96 val=1550 addr=896 PAid=47 PA_addr=504)
+insert as rightson
+begin bubbling up
+nowid=96 PAid=47 PA_addr=504
+PAval=394 nowval=1550
+swap
+nowid=47 PAid=23 PA_addr=312
+PAval=1838 nowval=1550
+end bubbling up
+==================
+inserting a new node (id=97 val=1943 addr=904 PAid=48 PA_addr=512)
+insert as leftson
+begin bubbling up
+nowid=97 PAid=48 PA_addr=512
+PAval=494 nowval=1943
+swap
+nowid=48 PAid=23 PA_addr=312
+PAval=1838 nowval=1943
+swap
+nowid=23 PAid=11 PA_addr=216
+PAval=1874 nowval=1943
+swap
+nowid=11 PAid=5 PA_addr=168
+PAval=1984 nowval=1943
+end bubbling up
+==================
+inserting a new node (id=98 val=1586 addr=912 PAid=48 PA_addr=512)
+insert as rightson
+begin bubbling up
+nowid=98 PAid=48 PA_addr=512
+PAval=1838 nowval=1586
+end bubbling up
+==================
+inserting a new node (id=99 val=1264 addr=920 PAid=49 PA_addr=520)
+insert as leftson
+begin bubbling up
+nowid=99 PAid=49 PA_addr=520
+PAval=376 nowval=1264
+swap
+nowid=49 PAid=24 PA_addr=320
+PAval=812 nowval=1264
+swap
+nowid=24 PAid=11 PA_addr=216
+PAval=1943 nowval=1264
+end bubbling up
+==================
+==================
+insertion done!
+
+==================
+output iteration 0
+                                            output[0]=2118
+nowid=99 tailid=99 tail_addr=920
+begin bubbling down
+nowid=0
+swap left(1)=(2117)<->now(0)=(376)
+nowid=1
+swap right(4)=(2084)<->now(1)=(376)
+nowid=4
+swap right(10)=(2077)<->now(4)=(376)
+nowid=10
+swap left(21)=(1404)<->now(10)=(376)
+nowid=21
+swap right(44)=(1353)<->now(21)=(376)
+nowid=44
+swap left(89)=(401)<->now(44)=(376)
+
+==================
+output iteration 1
+                                            output[1]=2117
+nowid=98 tailid=98 tail_addr=912
+begin bubbling down
+nowid=0
+swap right(2)=(2110)<->now(0)=(1586)
+nowid=2
+swap right(6)=(2034)<->now(2)=(1586)
+nowid=6
+swap left(13)=(1944)<->now(6)=(1586)
+nowid=13
+swap right(28)=(1789)<->now(13)=(1586)
+nowid=28
+
+==================
+output iteration 2
+                                            output[2]=2110
+nowid=97 tailid=97 tail_addr=904
+begin bubbling down
+nowid=0
+swap left(1)=(2084)<->now(0)=(494)
+nowid=1
+swap right(4)=(2077)<->now(1)=(494)
+nowid=4
+swap left(9)=(1826)<->now(4)=(494)
+nowid=9
+swap right(20)=(1574)<->now(9)=(494)
+nowid=20
+swap right(42)=(1565)<->now(20)=(494)
+nowid=42
+swap left(85)=(1012)<->now(42)=(494)
+
+==================
+output iteration 3
+                                            output[3]=2084
+nowid=96 tailid=96 tail_addr=896
+begin bubbling down
+nowid=0
+swap left(1)=(2077)<->now(0)=(394)
+nowid=1
+swap left(3)=(1915)<->now(1)=(394)
+nowid=3
+swap right(8)=(1869)<->now(3)=(394)
+nowid=8
+swap right(18)=(1474)<->now(8)=(394)
+nowid=18
+swap right(38)=(1158)<->now(18)=(394)
+nowid=38
+swap left(77)=(1035)<->now(38)=(394)
+
+==================
+output iteration 4
+                                            output[4]=2077
+nowid=95 tailid=95 tail_addr=888
+begin bubbling down
+nowid=0
+swap right(2)=(2034)<->now(0)=(30)
+nowid=2
+swap left(5)=(1984)<->now(2)=(30)
+nowid=5
+swap left(11)=(1943)<->now(5)=(30)
+nowid=11
+swap left(23)=(1874)<->now(11)=(30)
+nowid=23
+swap right(48)=(1838)<->now(23)=(30)
+
+==================
+output iteration 5
+                                            output[5]=2034
+nowid=94 tailid=94 tail_addr=880
+begin bubbling down
+nowid=0
+swap right(2)=(1984)<->now(0)=(1147)
+nowid=2
+swap right(6)=(1944)<->now(2)=(1147)
+nowid=6
+swap left(13)=(1789)<->now(6)=(1147)
+nowid=13
+swap right(28)=(1586)<->now(13)=(1147)
+nowid=28
+swap left(57)=(1500)<->now(28)=(1147)
+
+==================
+output iteration 6
+                                            output[6]=1984
+nowid=93 tailid=93 tail_addr=872
+begin bubbling down
+nowid=0
+swap right(2)=(1944)<->now(0)=(646)
+nowid=2
+swap left(5)=(1943)<->now(2)=(646)
+nowid=5
+swap left(11)=(1874)<->now(5)=(646)
+nowid=11
+swap left(23)=(1838)<->now(11)=(646)
+nowid=23
+swap left(47)=(1550)<->now(23)=(646)
+
+==================
+output iteration 7
+                                            output[7]=1944
+nowid=92 tailid=92 tail_addr=864
+begin bubbling down
+nowid=0
+swap right(2)=(1943)<->now(0)=(473)
+nowid=2
+swap left(5)=(1874)<->now(2)=(473)
+nowid=5
+swap left(11)=(1838)<->now(5)=(473)
+nowid=11
+swap left(23)=(1550)<->now(11)=(473)
+nowid=23
+swap left(47)=(646)<->now(23)=(473)
+
+==================
+output iteration 8
+                                            output[8]=1943
+nowid=91 tailid=91 tail_addr=856
+begin bubbling down
+nowid=0
+swap left(1)=(1915)<->now(0)=(577)
+nowid=1
+swap left(3)=(1869)<->now(1)=(577)
+nowid=3
+swap left(7)=(1816)<->now(3)=(577)
+nowid=7
+swap left(15)=(1688)<->now(7)=(577)
+nowid=15
+swap left(31)=(1223)<->now(15)=(577)
+nowid=31
+swap right(64)=(758)<->now(31)=(577)
+
+==================
+output iteration 9
+                                            output[9]=1915
+nowid=90 tailid=90 tail_addr=848
+begin bubbling down
+nowid=0
+swap right(2)=(1874)<->now(0)=(133)
+nowid=2
+swap left(5)=(1838)<->now(2)=(133)
+nowid=5
+swap right(12)=(1714)<->now(5)=(133)
+nowid=12
+swap right(26)=(1578)<->now(12)=(133)
+nowid=26
+swap left(53)=(765)<->now(26)=(133)
+
+==================
+output iteration 10
+                                            output[10]=1874
+nowid=89 tailid=89 tail_addr=840
+begin bubbling down
+nowid=0
+swap left(1)=(1869)<->now(0)=(376)
+nowid=1
+swap right(4)=(1826)<->now(1)=(376)
+nowid=4
+swap left(9)=(1574)<->now(4)=(376)
+nowid=9
+swap right(20)=(1565)<->now(9)=(376)
+nowid=20
+swap left(41)=(1537)<->now(20)=(376)
+nowid=41
+swap left(83)=(1320)<->now(41)=(376)
+
+==================
+output iteration 11
+                                            output[11]=1869
+nowid=88 tailid=88 tail_addr=832
+begin bubbling down
+nowid=0
+swap right(2)=(1838)<->now(0)=(407)
+nowid=2
+swap right(6)=(1789)<->now(2)=(407)
+nowid=6
+swap left(13)=(1586)<->now(6)=(407)
+nowid=13
+swap right(28)=(1500)<->now(13)=(407)
+nowid=28
+swap right(58)=(1207)<->now(28)=(407)
+
+==================
+output iteration 12
+                                            output[12]=1838
+nowid=87 tailid=87 tail_addr=824
+begin bubbling down
+nowid=0
+swap left(1)=(1826)<->now(0)=(129)
+nowid=1
+swap left(3)=(1816)<->now(1)=(129)
+nowid=3
+swap left(7)=(1688)<->now(3)=(129)
+nowid=7
+swap right(16)=(1555)<->now(7)=(129)
+nowid=16
+swap left(33)=(1469)<->now(16)=(129)
+nowid=33
+swap left(67)=(487)<->now(33)=(129)
+
+==================
+output iteration 13
+                                            output[13]=1826
+nowid=86 tailid=86 tail_addr=816
+begin bubbling down
+nowid=0
+swap left(1)=(1816)<->now(0)=(560)
+nowid=1
+swap left(3)=(1688)<->now(1)=(560)
+nowid=3
+swap left(7)=(1555)<->now(3)=(560)
+nowid=7
+swap right(16)=(1469)<->now(7)=(560)
+nowid=16
+swap right(34)=(956)<->now(16)=(560)
+nowid=34
+
+==================
+output iteration 14
+                                            output[14]=1816
+nowid=85 tailid=85 tail_addr=808
+begin bubbling down
+nowid=0
+swap right(2)=(1789)<->now(0)=(494)
+nowid=2
+swap left(5)=(1714)<->now(2)=(494)
+nowid=5
+swap right(12)=(1578)<->now(5)=(494)
+nowid=12
+swap left(25)=(1390)<->now(12)=(494)
+nowid=25
+swap left(51)=(1199)<->now(25)=(494)
+
+==================
+output iteration 15
+                                            output[15]=1789
+nowid=84 tailid=84 tail_addr=800
+begin bubbling down
+nowid=0
+swap right(2)=(1714)<->now(0)=(25)
+nowid=2
+swap right(6)=(1586)<->now(2)=(25)
+nowid=6
+swap left(13)=(1500)<->now(6)=(25)
+nowid=13
+swap left(27)=(1227)<->now(13)=(25)
+nowid=27
+swap left(55)=(817)<->now(27)=(25)
+
+==================
+output iteration 16
+                                            output[16]=1714
+nowid=83 tailid=83 tail_addr=792
+begin bubbling down
+nowid=0
+swap left(1)=(1688)<->now(0)=(376)
+nowid=1
+swap right(4)=(1574)<->now(1)=(376)
+nowid=4
+swap left(9)=(1565)<->now(4)=(376)
+nowid=9
+swap right(20)=(1537)<->now(9)=(376)
+nowid=20
+swap left(41)=(1320)<->now(20)=(376)
+
+==================
+output iteration 17
+                                            output[17]=1688
+nowid=82 tailid=82 tail_addr=784
+begin bubbling down
+nowid=0
+swap right(2)=(1586)<->now(0)=(909)
+nowid=2
+swap left(5)=(1578)<->now(2)=(909)
+nowid=5
+swap left(11)=(1550)<->now(5)=(909)
+nowid=11
+swap right(24)=(1264)<->now(11)=(909)
+nowid=24
+
+==================
+output iteration 18
+                                            output[18]=1586
+nowid=81 tailid=81 tail_addr=776
+begin bubbling down
+nowid=0
+swap right(2)=(1578)<->now(0)=(578)
+nowid=2
+swap left(5)=(1550)<->now(2)=(578)
+nowid=5
+swap right(12)=(1390)<->now(5)=(578)
+nowid=12
+swap left(25)=(1199)<->now(12)=(578)
+nowid=25
+swap right(52)=(778)<->now(25)=(578)
+
+==================
+output iteration 19
+                                            output[19]=1578
+nowid=80 tailid=80 tail_addr=768
+begin bubbling down
+nowid=0
+swap left(1)=(1574)<->now(0)=(347)
+nowid=1
+swap right(4)=(1565)<->now(1)=(347)
+nowid=4
+swap left(9)=(1537)<->now(4)=(347)
+nowid=9
+swap left(19)=(1411)<->now(9)=(347)
+nowid=19
+swap right(40)=(1202)<->now(19)=(347)
+
+==================
+output iteration 20
+                                            output[20]=1574
+nowid=79 tailid=79 tail_addr=760
+begin bubbling down
+nowid=0
+swap left(1)=(1565)<->now(0)=(175)
+nowid=1
+swap left(3)=(1555)<->now(1)=(175)
+nowid=3
+swap right(8)=(1474)<->now(3)=(175)
+nowid=8
+swap left(17)=(1462)<->now(8)=(175)
+nowid=17
+swap right(36)=(993)<->now(17)=(175)
+nowid=36
+swap right(74)=(389)<->now(36)=(175)
+
+==================
+output iteration 21
+                                            output[21]=1565
+nowid=78 tailid=78 tail_addr=752
+begin bubbling down
+nowid=0
+swap left(1)=(1555)<->now(0)=(562)
+nowid=1
+swap right(4)=(1537)<->now(1)=(562)
+nowid=4
+swap left(9)=(1411)<->now(4)=(562)
+nowid=9
+swap right(20)=(1320)<->now(9)=(562)
+nowid=20
+swap right(42)=(1012)<->now(20)=(562)
+
+==================
+output iteration 22
+                                            output[22]=1555
+nowid=77 tailid=77 tail_addr=744
+begin bubbling down
+nowid=0
+swap right(2)=(1550)<->now(0)=(394)
+nowid=2
+swap right(6)=(1500)<->now(2)=(394)
+nowid=6
+swap left(13)=(1227)<->now(6)=(394)
+nowid=13
+swap right(28)=(1207)<->now(13)=(394)
+nowid=28
+swap left(57)=(1147)<->now(28)=(394)
+
+==================
+output iteration 23
+                                            output[23]=1550
+nowid=76 tailid=76 tail_addr=736
+begin bubbling down
+nowid=0
+swap left(1)=(1537)<->now(0)=(322)
+nowid=1
+swap left(3)=(1474)<->now(1)=(322)
+nowid=3
+swap left(7)=(1469)<->now(3)=(322)
+nowid=7
+swap left(15)=(1223)<->now(7)=(322)
+nowid=15
+swap right(32)=(795)<->now(15)=(322)
+nowid=32
+swap right(66)=(733)<->now(32)=(322)
+
+==================
+output iteration 24
+                                            output[24]=1537
+nowid=75 tailid=75 tail_addr=728
+begin bubbling down
+nowid=0
+swap right(2)=(1500)<->now(0)=(93)
+nowid=2
+swap left(5)=(1390)<->now(2)=(93)
+nowid=5
+swap left(11)=(1264)<->now(5)=(93)
+nowid=11
+swap right(24)=(909)<->now(11)=(93)
+nowid=24
+swap left(49)=(812)<->now(24)=(93)
+
+==================
+output iteration 25
+                                            output[25]=1500
+nowid=74 tailid=74 tail_addr=720
+begin bubbling down
+nowid=0
+swap left(1)=(1474)<->now(0)=(175)
+nowid=1
+swap left(3)=(1469)<->now(1)=(175)
+nowid=3
+swap right(8)=(1462)<->now(3)=(175)
+nowid=8
+swap right(18)=(1158)<->now(8)=(175)
+nowid=18
+swap right(38)=(1035)<->now(18)=(175)
+
+==================
+output iteration 26
+                                            output[26]=1474
+nowid=73 tailid=73 tail_addr=712
+begin bubbling down
+nowid=0
+swap left(1)=(1469)<->now(0)=(230)
+nowid=1
+swap left(3)=(1462)<->now(1)=(230)
+nowid=3
+swap left(7)=(1223)<->now(3)=(230)
+nowid=7
+swap right(16)=(956)<->now(7)=(230)
+nowid=16
+swap right(34)=(560)<->now(16)=(230)
+nowid=34
+swap right(70)=(450)<->now(34)=(230)
+
+==================
+output iteration 27
+                                            output[27]=1469
+nowid=72 tailid=72 tail_addr=704
+begin bubbling down
+nowid=0
+swap left(1)=(1462)<->now(0)=(124)
+nowid=1
+swap right(4)=(1411)<->now(1)=(124)
+nowid=4
+swap right(10)=(1404)<->now(4)=(124)
+nowid=10
+swap left(21)=(1353)<->now(10)=(124)
+nowid=21
+swap left(43)=(943)<->now(21)=(124)
+
+==================
+output iteration 28
+                                            output[28]=1462
+nowid=71 tailid=71 tail_addr=696
+begin bubbling down
+nowid=0
+swap left(1)=(1411)<->now(0)=(400)
+nowid=1
+swap right(4)=(1404)<->now(1)=(400)
+nowid=4
+swap right(10)=(1353)<->now(4)=(400)
+nowid=10
+swap right(22)=(1200)<->now(10)=(400)
+nowid=22
+swap right(46)=(1180)<->now(22)=(400)
+
+==================
+output iteration 29
+                                            output[29]=1411
+nowid=70 tailid=70 tail_addr=688
+begin bubbling down
+nowid=0
+swap left(1)=(1404)<->now(0)=(230)
+nowid=1
+swap right(4)=(1353)<->now(1)=(230)
+nowid=4
+swap left(9)=(1320)<->now(4)=(230)
+nowid=9
+swap left(19)=(1202)<->now(9)=(230)
+nowid=19
+swap left(39)=(1025)<->now(19)=(230)
+
+==================
+output iteration 30
+                                            output[30]=1404
+nowid=69 tailid=69 tail_addr=680
+begin bubbling down
+nowid=0
+swap right(2)=(1390)<->now(0)=(171)
+nowid=2
+swap left(5)=(1264)<->now(2)=(171)
+nowid=5
+swap right(12)=(1199)<->now(5)=(171)
+nowid=12
+swap left(25)=(778)<->now(12)=(171)
+nowid=25
+swap right(52)=(578)<->now(25)=(171)
+
+==================
+output iteration 31
+                                            output[31]=1390
+nowid=68 tailid=68 tail_addr=672
+begin bubbling down
+nowid=0
+swap left(1)=(1353)<->now(0)=(76)
+nowid=1
+swap right(4)=(1320)<->now(1)=(76)
+nowid=4
+swap left(9)=(1202)<->now(4)=(76)
+nowid=9
+swap left(19)=(1025)<->now(9)=(76)
+nowid=19
+swap right(40)=(347)<->now(19)=(76)
+
+==================
+output iteration 32
+                                            output[32]=1353
+nowid=67 tailid=67 tail_addr=664
+begin bubbling down
+nowid=0
+swap left(1)=(1320)<->now(0)=(129)
+nowid=1
+swap left(3)=(1223)<->now(1)=(129)
+nowid=3
+swap right(8)=(1158)<->now(3)=(129)
+nowid=8
+swap right(18)=(1035)<->now(8)=(129)
+nowid=18
+swap left(37)=(531)<->now(18)=(129)
+
+==================
+output iteration 33
+                                            output[33]=1320
+nowid=66 tailid=66 tail_addr=656
+begin bubbling down
+nowid=0
+swap right(2)=(1264)<->now(0)=(322)
+nowid=2
+swap right(6)=(1227)<->now(2)=(322)
+nowid=6
+swap left(13)=(1207)<->now(6)=(322)
+nowid=13
+swap right(28)=(1147)<->now(13)=(322)
+nowid=28
+swap right(58)=(407)<->now(28)=(322)
+
+==================
+output iteration 34
+                                            output[34]=1264
+nowid=65 tailid=65 tail_addr=648
+begin bubbling down
+nowid=0
+swap right(2)=(1227)<->now(0)=(587)
+nowid=2
+swap right(6)=(1207)<->now(2)=(587)
+nowid=6
+swap right(14)=(1200)<->now(6)=(587)
+nowid=14
+swap right(30)=(1165)<->now(14)=(587)
+nowid=30
+swap right(62)=(1047)<->now(30)=(587)
+
+==================
+output iteration 35
+                                            output[35]=1227
+nowid=64 tailid=64 tail_addr=640
+begin bubbling down
+nowid=0
+swap left(1)=(1223)<->now(0)=(577)
+nowid=1
+swap right(4)=(1202)<->now(1)=(577)
+nowid=4
+swap right(10)=(1200)<->now(4)=(577)
+nowid=10
+swap right(22)=(1180)<->now(10)=(577)
+nowid=22
+swap left(45)=(752)<->now(22)=(577)
+
+==================
+output iteration 36
+                                            output[36]=1223
+nowid=63 tailid=63 tail_addr=632
+begin bubbling down
+nowid=0
+swap right(2)=(1207)<->now(0)=(516)
+nowid=2
+swap right(6)=(1200)<->now(2)=(516)
+nowid=6
+swap right(14)=(1165)<->now(6)=(516)
+nowid=14
+swap right(30)=(1047)<->now(14)=(516)
+nowid=30
+swap right(62)=(587)<->now(30)=(516)
+
+==================
+output iteration 37
+                                            output[37]=1207
+nowid=62 tailid=62 tail_addr=624
+begin bubbling down
+nowid=0
+swap left(1)=(1202)<->now(0)=(516)
+nowid=1
+swap right(4)=(1200)<->now(1)=(516)
+nowid=4
+swap right(10)=(1180)<->now(4)=(516)
+nowid=10
+swap left(21)=(943)<->now(10)=(516)
+nowid=21
+
+==================
+output iteration 38
+                                            output[38]=1202
+nowid=61 tailid=61 tail_addr=616
+begin bubbling down
+nowid=0
+swap right(2)=(1200)<->now(0)=(356)
+nowid=2
+swap left(5)=(1199)<->now(2)=(356)
+nowid=5
+swap left(11)=(909)<->now(5)=(356)
+nowid=11
+swap right(24)=(812)<->now(11)=(356)
+nowid=24
+swap right(50)=(378)<->now(24)=(356)
+
+==================
+output iteration 39
+                                            output[39]=1200
+nowid=60 tailid=60 tail_addr=608
+begin bubbling down
+nowid=0
+swap left(1)=(1200)<->now(0)=(171)
+nowid=1
+swap right(4)=(1180)<->now(1)=(171)
+nowid=4
+swap left(9)=(1025)<->now(4)=(171)
+nowid=9
+swap right(20)=(1012)<->now(9)=(171)
+nowid=20
+swap right(42)=(562)<->now(20)=(171)
+
+==================
+output iteration 40
+                                            output[40]=1200
+nowid=59 tailid=59 tail_addr=600
+begin bubbling down
+nowid=0
+swap right(2)=(1199)<->now(0)=(187)
+nowid=2
+swap right(6)=(1165)<->now(2)=(187)
+nowid=6
+swap left(13)=(1147)<->now(6)=(187)
+nowid=13
+swap left(27)=(817)<->now(13)=(187)
+nowid=27
+swap right(56)=(283)<->now(27)=(187)
+
+==================
+output iteration 41
+                                            output[41]=1199
+nowid=58 tailid=58 tail_addr=592
+begin bubbling down
+nowid=0
+swap left(1)=(1180)<->now(0)=(322)
+nowid=1
+swap left(3)=(1158)<->now(1)=(322)
+nowid=3
+swap right(8)=(1035)<->now(3)=(322)
+nowid=8
+swap left(17)=(993)<->now(8)=(322)
+nowid=17
+swap left(35)=(622)<->now(17)=(322)
+
+==================
+output iteration 42
+                                            output[42]=1180
+nowid=57 tailid=57 tail_addr=584
+begin bubbling down
+nowid=0
+swap right(2)=(1165)<->now(0)=(394)
+nowid=2
+swap right(6)=(1147)<->now(2)=(394)
+nowid=6
+swap right(14)=(1047)<->now(6)=(394)
+nowid=14
+swap left(29)=(704)<->now(14)=(394)
+
+==================
+output iteration 43
+                                            output[43]=1165
+nowid=56 tailid=56 tail_addr=576
+begin bubbling down
+nowid=0
+swap left(1)=(1158)<->now(0)=(187)
+nowid=1
+swap left(3)=(1035)<->now(1)=(187)
+nowid=3
+swap right(8)=(993)<->now(3)=(187)
+nowid=8
+swap left(17)=(622)<->now(8)=(187)
+nowid=17
+swap right(36)=(389)<->now(17)=(187)
+
+==================
+output iteration 44
+                                            output[44]=1158
+nowid=55 tailid=55 tail_addr=568
+begin bubbling down
+nowid=0
+swap right(2)=(1147)<->now(0)=(25)
+nowid=2
+swap right(6)=(1047)<->now(2)=(25)
+nowid=6
+swap left(13)=(817)<->now(6)=(25)
+nowid=13
+swap right(28)=(407)<->now(13)=(25)
+
+==================
+output iteration 45
+                                            output[45]=1147
+nowid=54 tailid=54 tail_addr=560
+begin bubbling down
+nowid=0
+swap right(2)=(1047)<->now(0)=(735)
+nowid=2
+swap left(5)=(909)<->now(2)=(735)
+nowid=5
+swap left(11)=(812)<->now(5)=(735)
+nowid=11
+
+==================
+output iteration 46
+                                            output[46]=1047
+nowid=53 tailid=53 tail_addr=552
+begin bubbling down
+nowid=0
+swap left(1)=(1035)<->now(0)=(133)
+nowid=1
+swap right(4)=(1025)<->now(1)=(133)
+nowid=4
+swap left(9)=(1012)<->now(4)=(133)
+nowid=9
+swap right(20)=(562)<->now(9)=(133)
+nowid=20
+swap left(41)=(376)<->now(20)=(133)
+
+==================
+output iteration 47
+                                            output[47]=1035
+nowid=52 tailid=52 tail_addr=544
+begin bubbling down
+nowid=0
+swap left(1)=(1025)<->now(0)=(171)
+nowid=1
+swap right(4)=(1012)<->now(1)=(171)
+nowid=4
+swap right(10)=(943)<->now(4)=(171)
+nowid=10
+swap right(22)=(752)<->now(10)=(171)
+nowid=22
+swap left(45)=(577)<->now(22)=(171)
+
+==================
+output iteration 48
+                                            output[48]=1025
+nowid=51 tailid=51 tail_addr=536
+begin bubbling down
+nowid=0
+swap left(1)=(1012)<->now(0)=(494)
+nowid=1
+swap left(3)=(993)<->now(1)=(494)
+nowid=3
+swap left(7)=(956)<->now(3)=(494)
+nowid=7
+swap left(15)=(795)<->now(7)=(494)
+nowid=15
+swap left(31)=(758)<->now(15)=(494)
+
+==================
+output iteration 49
+                                            output[49]=1012
+nowid=50 tailid=50 tail_addr=528
+begin bubbling down
+nowid=0
+swap left(1)=(993)<->now(0)=(356)
+nowid=1
+swap left(3)=(956)<->now(1)=(356)
+nowid=3
+swap left(7)=(795)<->now(3)=(356)
+nowid=7
+swap left(15)=(758)<->now(7)=(356)
+nowid=15
+swap right(32)=(733)<->now(15)=(356)
+
+==================
+output iteration 50
+                                            output[50]=993
+nowid=49 tailid=49 tail_addr=520
+begin bubbling down
+nowid=0
+swap left(1)=(956)<->now(0)=(93)
+nowid=1
+swap right(4)=(943)<->now(1)=(93)
+nowid=4
+swap right(10)=(752)<->now(4)=(93)
+nowid=10
+swap right(22)=(577)<->now(10)=(93)
+nowid=22
+swap right(46)=(400)<->now(22)=(93)
+
+==================
+output iteration 51
+                                            output[51]=956
+nowid=48 tailid=48 tail_addr=512
+begin bubbling down
+nowid=0
+swap left(1)=(943)<->now(0)=(30)
+nowid=1
+swap left(3)=(795)<->now(1)=(30)
+nowid=3
+swap left(7)=(758)<->now(3)=(30)
+nowid=7
+swap left(15)=(733)<->now(7)=(30)
+nowid=15
+swap left(31)=(494)<->now(15)=(30)
+
+==================
+output iteration 52
+                                            output[52]=943
+nowid=47 tailid=47 tail_addr=504
+begin bubbling down
+nowid=0
+swap right(2)=(909)<->now(0)=(473)
+nowid=2
+swap right(6)=(817)<->now(2)=(473)
+nowid=6
+swap right(14)=(704)<->now(6)=(473)
+nowid=14
+swap right(30)=(587)<->now(14)=(473)
+
+==================
+output iteration 53
+                                            output[53]=909
+nowid=46 tailid=46 tail_addr=496
+begin bubbling down
+nowid=0
+swap right(2)=(817)<->now(0)=(93)
+nowid=2
+swap left(5)=(812)<->now(2)=(93)
+nowid=5
+swap right(12)=(778)<->now(5)=(93)
+nowid=12
+swap right(26)=(765)<->now(12)=(93)
+
+==================
+output iteration 54
+                                            output[54]=817
+nowid=45 tailid=45 tail_addr=488
+begin bubbling down
+nowid=0
+swap right(2)=(812)<->now(0)=(171)
+nowid=2
+swap left(5)=(778)<->now(2)=(171)
+nowid=5
+swap right(12)=(765)<->now(5)=(171)
+nowid=12
+swap left(25)=(578)<->now(12)=(171)
+
+==================
+output iteration 55
+                                            output[55]=812
+nowid=44 tailid=44 tail_addr=480
+begin bubbling down
+nowid=0
+swap left(1)=(795)<->now(0)=(401)
+nowid=1
+swap left(3)=(758)<->now(1)=(401)
+nowid=3
+swap left(7)=(733)<->now(3)=(401)
+nowid=7
+swap right(16)=(560)<->now(7)=(401)
+nowid=16
+swap left(33)=(487)<->now(16)=(401)
+
+==================
+output iteration 56
+                                            output[56]=795
+nowid=43 tailid=43 tail_addr=472
+begin bubbling down
+nowid=0
+swap right(2)=(778)<->now(0)=(124)
+nowid=2
+swap left(5)=(765)<->now(2)=(124)
+nowid=5
+swap left(11)=(735)<->now(5)=(124)
+nowid=11
+swap left(23)=(646)<->now(11)=(124)
+
+==================
+output iteration 57
+                                            output[57]=778
+nowid=42 tailid=42 tail_addr=464
+begin bubbling down
+nowid=0
+swap right(2)=(765)<->now(0)=(171)
+nowid=2
+swap left(5)=(735)<->now(2)=(171)
+nowid=5
+swap left(11)=(646)<->now(5)=(171)
+nowid=11
+swap right(24)=(378)<->now(11)=(171)
+
+==================
+output iteration 58
+                                            output[58]=765
+nowid=41 tailid=41 tail_addr=456
+begin bubbling down
+nowid=0
+swap left(1)=(758)<->now(0)=(133)
+nowid=1
+swap right(4)=(752)<->now(1)=(133)
+nowid=4
+swap right(10)=(577)<->now(4)=(133)
+nowid=10
+swap left(21)=(516)<->now(10)=(133)
+
+==================
+output iteration 59
+                                            output[59]=758
+nowid=40 tailid=40 tail_addr=448
+begin bubbling down
+nowid=0
+swap left(1)=(752)<->now(0)=(76)
+nowid=1
+swap left(3)=(733)<->now(1)=(76)
+nowid=3
+swap right(8)=(622)<->now(3)=(76)
+nowid=8
+swap right(18)=(531)<->now(8)=(76)
+nowid=18
+swap right(38)=(175)<->now(18)=(76)
+
+==================
+output iteration 60
+                                            output[60]=752
+nowid=39 tailid=39 tail_addr=440
+begin bubbling down
+nowid=0
+swap right(2)=(735)<->now(0)=(230)
+nowid=2
+swap right(6)=(704)<->now(2)=(230)
+nowid=6
+swap right(14)=(587)<->now(6)=(230)
+nowid=14
+swap right(30)=(473)<->now(14)=(230)
+
+==================
+output iteration 61
+                                            output[61]=735
+nowid=38 tailid=38 tail_addr=432
+begin bubbling down
+nowid=0
+swap left(1)=(733)<->now(0)=(76)
+nowid=1
+swap left(3)=(622)<->now(1)=(76)
+nowid=3
+swap left(7)=(560)<->now(3)=(76)
+nowid=7
+swap left(15)=(494)<->now(7)=(76)
+nowid=15
+swap right(32)=(356)<->now(15)=(76)
+
+==================
+output iteration 62
+                                            output[62]=733
+nowid=37 tailid=37 tail_addr=424
+begin bubbling down
+nowid=0
+swap right(2)=(704)<->now(0)=(129)
+nowid=2
+swap left(5)=(646)<->now(2)=(129)
+nowid=5
+swap right(12)=(578)<->now(5)=(129)
+nowid=12
+swap left(25)=(171)<->now(12)=(129)
+
+==================
+output iteration 63
+                                            output[63]=704
+nowid=36 tailid=36 tail_addr=416
+begin bubbling down
+nowid=0
+swap right(2)=(646)<->now(0)=(187)
+nowid=2
+swap right(6)=(587)<->now(2)=(187)
+nowid=6
+swap right(14)=(473)<->now(6)=(187)
+nowid=14
+swap left(29)=(394)<->now(14)=(187)
+
+==================
+output iteration 64
+                                            output[64]=646
+nowid=35 tailid=35 tail_addr=408
+begin bubbling down
+nowid=0
+swap left(1)=(622)<->now(0)=(322)
+nowid=1
+swap right(4)=(577)<->now(1)=(322)
+nowid=4
+swap left(9)=(562)<->now(4)=(322)
+nowid=9
+swap right(20)=(376)<->now(9)=(322)
+
+==================
+output iteration 65
+                                            output[65]=622
+nowid=34 tailid=34 tail_addr=400
+begin bubbling down
+nowid=0
+swap right(2)=(587)<->now(0)=(450)
+nowid=2
+swap left(5)=(578)<->now(2)=(450)
+nowid=5
+
+==================
+output iteration 66
+                                            output[66]=587
+nowid=33 tailid=33 tail_addr=392
+begin bubbling down
+nowid=0
+swap right(2)=(578)<->now(0)=(401)
+nowid=2
+swap right(6)=(473)<->now(2)=(401)
+nowid=6
+swap left(13)=(407)<->now(6)=(401)
+nowid=13
+
+==================
+output iteration 67
+                                            output[67]=578
+nowid=32 tailid=32 tail_addr=384
+begin bubbling down
+nowid=0
+swap left(1)=(577)<->now(0)=(76)
+nowid=1
+swap right(4)=(562)<->now(1)=(76)
+nowid=4
+swap right(10)=(516)<->now(4)=(76)
+nowid=10
+swap right(22)=(400)<->now(10)=(76)
+
+==================
+output iteration 68
+                                            output[68]=577
+nowid=31 tailid=31 tail_addr=376
+begin bubbling down
+nowid=0
+swap left(1)=(562)<->now(0)=(30)
+nowid=1
+swap left(3)=(560)<->now(1)=(30)
+nowid=3
+swap right(8)=(531)<->now(3)=(30)
+nowid=8
+swap left(17)=(389)<->now(8)=(30)
+
+==================
+output iteration 69
+                                            output[69]=562
+nowid=30 tailid=30 tail_addr=368
+begin bubbling down
+nowid=0
+swap left(1)=(560)<->now(0)=(230)
+nowid=1
+swap left(3)=(531)<->now(1)=(230)
+nowid=3
+swap left(7)=(494)<->now(3)=(230)
+nowid=7
+swap right(16)=(487)<->now(7)=(230)
+
+==================
+output iteration 70
+                                            output[70]=560
+nowid=29 tailid=29 tail_addr=360
+begin bubbling down
+nowid=0
+swap left(1)=(531)<->now(0)=(187)
+nowid=1
+swap right(4)=(516)<->now(1)=(187)
+nowid=4
+swap right(10)=(400)<->now(4)=(187)
+nowid=10
+
+==================
+output iteration 71
+                                            output[71]=531
+nowid=28 tailid=28 tail_addr=352
+begin bubbling down
+nowid=0
+swap left(1)=(516)<->now(0)=(25)
+nowid=1
+swap left(3)=(494)<->now(1)=(25)
+nowid=3
+swap left(7)=(487)<->now(3)=(25)
+nowid=7
+swap left(15)=(356)<->now(7)=(25)
+
+==================
+output iteration 72
+                                            output[72]=516
+nowid=27 tailid=27 tail_addr=344
+begin bubbling down
+nowid=0
+swap left(1)=(494)<->now(0)=(283)
+nowid=1
+swap left(3)=(487)<->now(1)=(283)
+nowid=3
+swap right(8)=(389)<->now(3)=(283)
+nowid=8
+
+==================
+output iteration 73
+                                            output[73]=494
+nowid=26 tailid=26 tail_addr=336
+begin bubbling down
+nowid=0
+swap left(1)=(487)<->now(0)=(93)
+nowid=1
+swap right(4)=(400)<->now(1)=(93)
+nowid=4
+swap left(9)=(376)<->now(4)=(93)
+nowid=9
+swap left(19)=(347)<->now(9)=(93)
+
+==================
+output iteration 74
+                                            output[74]=487
+nowid=25 tailid=25 tail_addr=328
+begin bubbling down
+nowid=0
+swap right(2)=(473)<->now(0)=(129)
+nowid=2
+swap left(5)=(450)<->now(2)=(129)
+nowid=5
+swap left(11)=(378)<->now(5)=(129)
+nowid=11
+swap right(24)=(171)<->now(11)=(129)
+
+==================
+output iteration 75
+                                            output[75]=473
+nowid=24 tailid=24 tail_addr=320
+begin bubbling down
+nowid=0
+swap right(2)=(450)<->now(0)=(129)
+nowid=2
+swap right(6)=(407)<->now(2)=(129)
+nowid=6
+swap left(13)=(401)<->now(6)=(129)
+
+==================
+output iteration 76
+                                            output[76]=450
+nowid=23 tailid=23 tail_addr=312
+begin bubbling down
+nowid=0
+swap right(2)=(407)<->now(0)=(124)
+nowid=2
+swap right(6)=(401)<->now(2)=(124)
+nowid=6
+swap right(14)=(394)<->now(6)=(124)
+
+==================
+output iteration 77
+                                            output[77]=407
+nowid=22 tailid=22 tail_addr=304
+begin bubbling down
+nowid=0
+swap right(2)=(401)<->now(0)=(76)
+nowid=2
+swap right(6)=(394)<->now(2)=(76)
+nowid=6
+swap left(13)=(129)<->now(6)=(76)
+
+==================
+output iteration 78
+                                            output[78]=401
+nowid=21 tailid=21 tail_addr=296
+begin bubbling down
+nowid=0
+swap left(1)=(400)<->now(0)=(133)
+nowid=1
+swap left(3)=(389)<->now(1)=(133)
+nowid=3
+swap left(7)=(356)<->now(3)=(133)
+nowid=7
+swap right(16)=(230)<->now(7)=(133)
+
+==================
+output iteration 79
+                                            output[79]=400
+nowid=20 tailid=20 tail_addr=288
+begin bubbling down
+nowid=0
+swap right(2)=(394)<->now(0)=(322)
+nowid=2
+swap left(5)=(378)<->now(2)=(322)
+nowid=5
+
+==================
+output iteration 80
+                                            output[80]=394
+nowid=19 tailid=19 tail_addr=280
+begin bubbling down
+nowid=0
+swap left(1)=(389)<->now(0)=(93)
+nowid=1
+swap right(4)=(376)<->now(1)=(93)
+nowid=4
+swap left(9)=(347)<->now(4)=(93)
+
+==================
+output iteration 81
+                                            output[81]=389
+nowid=18 tailid=18 tail_addr=272
+begin bubbling down
+nowid=0
+swap right(2)=(378)<->now(0)=(175)
+nowid=2
+swap left(5)=(322)<->now(2)=(175)
+nowid=5
+
+==================
+output iteration 82
+                                            output[82]=378
+nowid=17 tailid=17 tail_addr=264
+begin bubbling down
+nowid=0
+swap left(1)=(376)<->now(0)=(30)
+nowid=1
+swap left(3)=(356)<->now(1)=(30)
+nowid=3
+swap right(8)=(283)<->now(3)=(30)
+
+==================
+output iteration 83
+                                            output[83]=376
+nowid=16 tailid=16 tail_addr=256
+begin bubbling down
+nowid=0
+swap left(1)=(356)<->now(0)=(133)
+nowid=1
+swap right(4)=(347)<->now(1)=(133)
+nowid=4
+swap right(10)=(187)<->now(4)=(133)
+
+==================
+output iteration 84
+                                            output[84]=356
+nowid=15 tailid=15 tail_addr=248
+begin bubbling down
+nowid=0
+swap left(1)=(347)<->now(0)=(25)
+nowid=1
+swap left(3)=(283)<->now(1)=(25)
+nowid=3
+swap left(7)=(230)<->now(3)=(25)
+
+==================
+output iteration 85
+                                            output[85]=347
+nowid=14 tailid=14 tail_addr=240
+begin bubbling down
+nowid=0
+swap right(2)=(322)<->now(0)=(124)
+nowid=2
+swap left(5)=(175)<->now(2)=(124)
+nowid=5
+swap right(12)=(171)<->now(5)=(124)
+
+==================
+output iteration 86
+                                            output[86]=322
+nowid=13 tailid=13 tail_addr=232
+begin bubbling down
+nowid=0
+swap left(1)=(283)<->now(0)=(76)
+nowid=1
+swap left(3)=(230)<->now(1)=(76)
+nowid=3
+
+==================
+output iteration 87
+                                            output[87]=283
+nowid=12 tailid=12 tail_addr=224
+begin bubbling down
+nowid=0
+swap left(1)=(230)<->now(0)=(124)
+nowid=1
+swap right(4)=(187)<->now(1)=(124)
+nowid=4
+swap right(10)=(133)<->now(4)=(124)
+
+==================
+output iteration 88
+                                            output[88]=230
+nowid=11 tailid=11 tail_addr=216
+begin bubbling down
+nowid=0
+swap left(1)=(187)<->now(0)=(171)
+nowid=1
+
+==================
+output iteration 89
+                                            output[89]=187
+nowid=10 tailid=10 tail_addr=208
+begin bubbling down
+nowid=0
+swap right(2)=(175)<->now(0)=(124)
+nowid=2
+swap left(5)=(171)<->now(2)=(124)
+
+==================
+output iteration 90
+                                            output[90]=175
+nowid=9 tailid=9 tail_addr=200
+begin bubbling down
+nowid=0
+swap right(2)=(171)<->now(0)=(93)
+nowid=2
+swap right(6)=(129)<->now(2)=(93)
+
+==================
+output iteration 91
+                                            output[91]=171
+nowid=8 tailid=8 tail_addr=192
+begin bubbling down
+nowid=0
+swap left(1)=(171)<->now(0)=(30)
+nowid=1
+swap right(4)=(133)<->now(1)=(30)
+
+==================
+output iteration 92
+                                            output[92]=171
+nowid=7 tailid=7 tail_addr=184
+begin bubbling down
+nowid=0
+swap left(1)=(133)<->now(0)=(25)
+nowid=1
+swap left(3)=(76)<->now(1)=(25)
+
+==================
+output iteration 93
+                                            output[93]=133
+nowid=6 tailid=6 tail_addr=176
+begin bubbling down
+nowid=0
+swap right(2)=(129)<->now(0)=(93)
+nowid=2
+swap left(5)=(124)<->now(2)=(93)
+
+==================
+output iteration 94
+                                            output[94]=129
+nowid=5 tailid=5 tail_addr=168
+begin bubbling down
+nowid=0
+swap right(2)=(124)<->now(0)=(93)
+
+==================
+output iteration 95
+                                            output[95]=124
+nowid=4 tailid=4 tail_addr=160
+begin bubbling down
+nowid=0
+swap right(2)=(93)<->now(0)=(30)
+
+==================
+output iteration 96
+                                            output[96]=93
+nowid=3 tailid=3 tail_addr=152
+begin bubbling down
+nowid=0
+swap left(1)=(76)<->now(0)=(25)
+
+==================
+output iteration 97
+                                            output[97]=76
+nowid=2 tailid=2 tail_addr=144
+begin bubbling down
+nowid=0
+
+==================
+output iteration 98
+                                            output[98]=30
+nowid=1 tailid=1 tail_addr=136
+begin bubbling down
+
+==================
+output iteration 99
+                                            output[99]=25
+nowid=0 tailid=0 tail_addr=128
+begin bubbling down
+2118 2117 2110 2084 2077 2034 1984 1944 1943 1915 1874 1869 1838 1826 1816 1789 1714 1688 1586 1578 1574 1565 1555 1550 1537 1500 1474 1469 1462 1411 1404 1390 1353 1320 1264 1227 1223 1207 1202 1200 1200 1199 1180 1165 1158 1147 1047 1035 1025 1012 993 956 943 909 817 812 795 778 765 758 752 735 733 704 646 622 587 578 577 562 560 531 516 494 487 473 450 407 401 400 394 389 378 376 356 347 322 283 230 187 175 171 171 133 129 124 93 76 30 25 

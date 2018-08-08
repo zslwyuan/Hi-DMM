@@ -1,0 +1,958 @@
+
+*** Running vivado
+    with args -log design_1_Ext_HTA_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Ext_HTA_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_Ext_HTA_0_0.tcl -notrace
+Command: synth_design -top design_1_Ext_HTA_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3917 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1351.566 ; gain = 81.887 ; free physical = 18436 ; free virtual = 32488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_Ext_HTA_0_0' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_HTA_0_0/synth/design_1_Ext_HTA_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 76'b0000000000000000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 76'b0000000000000000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 76'b0000000000000000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 76'b0000000000000000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 76'b0000000000000000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 76'b0000000000000000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 76'b0000000000000000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 76'b0000000000000000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 76'b0000000000000000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 76'b0000000000000000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 76'b0000000000000000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 76'b0000000000000000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 76'b0000000000000000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 76'b0000000000000000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 76'b0000000000000000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 76'b0000000000000000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 76'b0000000000000000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 76'b0000000000000000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 76'b0000000000000000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 76'b0000000000000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 76'b0000000000000000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 76'b0000000000000000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 76'b0000000000000000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 76'b0000000000000000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 76'b0000000000000000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 76'b0000000000000000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 76'b0000000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 76'b0000000000000000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 76'b0000000000000000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 76'b0000000000000000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 76'b0000000000000000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 76'b0000000000000000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 76'b0000000000000000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 76'b0000000000000000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state49 bound to: 76'b0000000000000000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state50 bound to: 76'b0000000000000000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state51 bound to: 76'b0000000000000000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state52 bound to: 76'b0000000000000000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state53 bound to: 76'b0000000000000000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state54 bound to: 76'b0000000000000000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state55 bound to: 76'b0000000000000000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state56 bound to: 76'b0000000000000000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state57 bound to: 76'b0000000000000000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state58 bound to: 76'b0000000000000000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state59 bound to: 76'b0000000000000000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state60 bound to: 76'b0000000000000000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state61 bound to: 76'b0000000000000001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state62 bound to: 76'b0000000000000010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state63 bound to: 76'b0000000000000100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state64 bound to: 76'b0000000000001000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state65 bound to: 76'b0000000000010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state66 bound to: 76'b0000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state67 bound to: 76'b0000000001000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state68 bound to: 76'b0000000010000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state69 bound to: 76'b0000000100000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state70 bound to: 76'b0000001000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state71 bound to: 76'b0000010000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state72 bound to: 76'b0000100000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state73 bound to: 76'b0001000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state74 bound to: 76'b0010000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state75 bound to: 76'b0100000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state76 bound to: 76'b1000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_const_lv64_0 bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:141]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_buddy_trebkb' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:61]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 16 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_buddy_trebkb_ram' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 4 - type: integer 
+	Parameter MEM_SIZE bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:25]
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_buddy_trebkb_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_buddy_trebkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_buddy_trebkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_buddy_trebkb.v:61]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_group_trecud' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:49]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 70 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_group_trecud_ram' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:9]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 70 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:22]
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_group_trecud_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_group_trecud_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_group_trecud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_trecud.v:49]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_group_tredEe' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:43]
+	Parameter DataWidth bound to: 31 - type: integer 
+	Parameter AddressRange bound to: 8 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_group_tredEe_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:9]
+	Parameter DWIDTH bound to: 31 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:21]
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_group_tredEe_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_group_tredEe_rom' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_group_tredEe' (6#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_group_tredEe.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_shift_coneOg' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:43]
+	Parameter DataWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_shift_coneOg_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:9]
+	Parameter DWIDTH bound to: 5 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:21]
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_shift_coneOg_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_shift_coneOg_rom' (7#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_shift_coneOg' (8#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_shift_coneOg.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_addr_treefYi' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:49]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 2048 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_addr_treefYi_ram' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:9]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:22]
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_addr_treefYi_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_addr_treefYi_ram' (9#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_addr_treefYi' (10#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_addr_treefYi.v:49]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_mark_mask_V' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mark_mask_V.v:43]
+	Parameter DataWidth bound to: 62 - type: integer 
+	Parameter AddressRange bound to: 128 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_mark_mask_V_rom' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mark_mask_V.v:9]
+	Parameter DWIDTH bound to: 62 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Ext_HTA_mark_mask_V_rom.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mark_mask_V.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_mark_mask_V_rom' (11#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mark_mask_V.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_mark_mask_V' (12#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mark_mask_V.v:43]
+INFO: [Synth 8-6157] synthesizing module 'log_2_64bit' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/log_2_64bit.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'log_2_64bit' (13#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/log_2_64bit.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Ext_HTA_mux_164_6g8j' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mux_164_6g8j.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 64 - type: integer 
+	Parameter din5_WIDTH bound to: 64 - type: integer 
+	Parameter din6_WIDTH bound to: 64 - type: integer 
+	Parameter din7_WIDTH bound to: 64 - type: integer 
+	Parameter din8_WIDTH bound to: 64 - type: integer 
+	Parameter din9_WIDTH bound to: 64 - type: integer 
+	Parameter din10_WIDTH bound to: 64 - type: integer 
+	Parameter din11_WIDTH bound to: 64 - type: integer 
+	Parameter din12_WIDTH bound to: 64 - type: integer 
+	Parameter din13_WIDTH bound to: 64 - type: integer 
+	Parameter din14_WIDTH bound to: 64 - type: integer 
+	Parameter din15_WIDTH bound to: 64 - type: integer 
+	Parameter din16_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA_mux_164_6g8j' (14#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA_mux_164_6g8j.v:11]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:2691]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:2873]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_phi_mux_p_03578_2_phi_fu_784_p4_reg' and it is trimmed from '17' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1601]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_phi_mux_p_03598_2_phi_fu_774_p4_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1617]
+INFO: [Synth 8-6155] done synthesizing module 'Ext_HTA' (15#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Ext_HTA_0_0' (16#1) [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_HTA_0_0/synth/design_1_Ext_HTA_0_0.v:58]
+WARNING: [Synth 8-3331] design Ext_HTA_mark_mask_V has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA_addr_treefYi has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA_shift_coneOg has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA_group_tredEe has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA_group_trecud has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA_buddy_trebkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1407.191 ; gain = 137.512 ; free physical = 18378 ; free virtual = 32436
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1407.191 ; gain = 137.512 ; free physical = 18342 ; free virtual = 32401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1407.191 ; gain = 137.512 ; free physical = 18342 ; free virtual = 32401
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_HTA_0_0/constraints/Ext_HTA_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ip/design_1_Ext_HTA_0_0/constraints/Ext_HTA_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_HTA_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_HTA_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1786.402 ; gain = 0.000 ; free physical = 17375 ; free virtual = 31563
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1786.402 ; gain = 516.723 ; free physical = 17373 ; free virtual = 31571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1786.402 ; gain = 516.723 ; free physical = 17372 ; free virtual = 31570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_HTA_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1786.402 ; gain = 516.723 ; free physical = 17357 ; free virtual = 31555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "ram" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'loc1_V_11_cast_cast_reg_2713_reg[7:0]' into 'loc1_V_5_reg_2707_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1157]
+INFO: [Synth 8-4471] merging register 'p_Repl2_2_reg_2791_reg[0:0]' into 'output_addr_V_cast_reg_2690_reg[16:16]' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:2979]
+INFO: [Synth 8-4471] merging register 'p_Repl2_11_reg_3097_reg[0:0]' into 'output_addr_V_cast_reg_2690_reg[16:16]' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:3005]
+INFO: [Synth 8-4471] merging register 'loc1_V_4_reg_3132_reg[10:10]' into 'output_addr_V_cast_reg_2690_reg[16:16]' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:3041]
+INFO: [Synth 8-4471] merging register 'loc1_V_1_cast_reg_2979_reg[10:8]' into 'p_Val2_2_reg_653_reg[10:8]' [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:3038]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03626_1_in_reg_595_reg' and it is trimmed from '64' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:993]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03598_2_reg_771_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:913]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_37_reg_2831_reg' and it is trimmed from '8' to '7' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1428]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03578_2_reg_781_reg' and it is trimmed from '17' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:897]
+WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_layer_V_read_reg_2645_reg' and it is trimmed from '8' to '4' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1166]
+WARNING: [Synth 8-3936] Found unconnected internal register 'output_addr_V_cast_reg_2690_reg' and it is trimmed from '16' to '11' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:1281]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_1050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1060_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1787_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_52_fu_1261_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_88_fu_2215_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_47_fu_1469_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_65_fu_1541_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_23_fu_1182_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_fu_1050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1060_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1787_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_52_fu_1261_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_88_fu_2215_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_47_fu_1469_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_65_fu_1541_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_23_fu_1182_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03598_3_in_in_reg_613" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03602_1_in_reg_812" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_03610_8_in_reg_546" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_583" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_Result_18_reg_2743" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:45 . Memory (MB): peak = 1786.402 ; gain = 516.723 ; free physical = 17408 ; free virtual = 31611
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   4 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   4 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 10    
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 7     
+	   2 Input     62 Bit         XORs := 1     
+	   2 Input     30 Bit         XORs := 1     
+	   2 Input     14 Bit         XORs := 1     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	               76 Bit    Registers := 1     
+	               64 Bit    Registers := 42    
+	               62 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 11    
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 15    
++---RAMs : 
+	              16K Bit         RAMs := 1     
+	               4K Bit         RAMs := 1     
++---Muxes : 
+	   3 Input     76 Bit        Muxes := 1     
+	  77 Input     76 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 50    
+	 129 Input     62 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   4 Input     47 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 4     
+	   2 Input     13 Bit        Muxes := 7     
+	   3 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 6     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 3     
+	  17 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 30    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Ext_HTA_buddy_trebkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module Ext_HTA_group_trecud_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+Module Ext_HTA_group_tredEe_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module Ext_HTA_shift_coneOg_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module Ext_HTA_addr_treefYi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              16K Bit         RAMs := 1     
+Module Ext_HTA_mark_mask_V_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               62 Bit    Registers := 1     
++---Muxes : 
+	 129 Input     62 Bit        Muxes := 1     
+Module log_2_64bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---Muxes : 
+	  17 Input      6 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module Ext_HTA_mux_164_6g8j 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 15    
+Module Ext_HTA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   4 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 10    
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 7     
+	   2 Input     62 Bit         XORs := 1     
+	   2 Input     30 Bit         XORs := 1     
+	   2 Input     14 Bit         XORs := 1     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	               76 Bit    Registers := 1     
+	               64 Bit    Registers := 39    
+	               62 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 11    
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   3 Input     76 Bit        Muxes := 1     
+	  77 Input     76 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 19    
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   4 Input     47 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 4     
+	   2 Input     13 Bit        Muxes := 7     
+	   3 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 6     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 26    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_1_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_444_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_424_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_434_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_03602_3_in_reg_564_reg' and it is trimmed from '13' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.srcs/sources_1/bd/design_1/ipshared/4319/hdl/verilog/Ext_HTA.v:945]
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "tmp_fu_1050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1060_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1787_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "tmp_fu_1050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_1060_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_14_fu_1787_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-3331] design Ext_HTA_buddy_trebkb has unconnected port reset
+WARNING: [Synth 8-3331] design Ext_HTA has unconnected port alloc_layer_V[7]
+WARNING: [Synth 8-3331] design Ext_HTA has unconnected port alloc_layer_V[6]
+WARNING: [Synth 8-3331] design Ext_HTA has unconnected port alloc_layer_V[5]
+WARNING: [Synth 8-3331] design Ext_HTA has unconnected port alloc_layer_V[4]
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[6]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[7]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[8]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[9]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[5]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[4]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[3]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[2]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[1]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_reg_2707_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_reg_2707_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_reg_2707_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_reg_2707_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_5_reg_2707_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\TMP_0_V_1_cast_reg_3032_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\TMP_0_V_1_cast_reg_3032_reg[63] )
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[0]' (FDE) to 'inst/tmp_8_reg_3075_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[1]' (FDE) to 'inst/tmp_8_reg_3075_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[2]' (FDE) to 'inst/tmp_8_reg_3075_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[3]' (FDE) to 'inst/tmp_8_reg_3075_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[4]' (FDE) to 'inst/tmp_8_reg_3075_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[5]' (FDE) to 'inst/tmp_8_reg_3075_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_V_addr_reg_3087_reg[6]' (FDE) to 'inst/tmp_8_reg_3075_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[6]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[7]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[0]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[5]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[4]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[3]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[2]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_5_reg_2707_reg[1]' (FDE) to 'inst/addr_tree_map_V_load_reg_2699_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_18_reg_2743_reg[8]' (FDE) to 'inst/p_Result_18_reg_2743_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_18_reg_2743_reg[9]' (FDE) to 'inst/p_Result_18_reg_2743_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_18_reg_2743_reg[10]' (FDE) to 'inst/p_Result_18_reg_2743_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_18_reg_2743_reg[11]' (FDE) to 'inst/p_Result_18_reg_2743_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[0]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[2]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[3]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[4]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[6]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[7]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[8]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[9]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[10]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[11]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[12]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[14]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[15]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[16]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[17]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[18]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[19]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[20]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[21]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[22]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[23]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[24]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[25]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[26]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[27]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[28]' (FDE) to 'inst/group_tree_mask_V_U/Ext_HTA_group_tredEe_rom_U/q0_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\i_assign_6_reg_2947_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\output_addr_V_cast_reg_2690_reg[16] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_4_reg_3132_reg[0]' (FDE) to 'inst/loc1_V_8_reg_3127_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_2_reg_653_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_2_reg_653_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Val2_2_reg_653_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\shift_constant_V_U/Ext_HTA_shift_coneOg_rom_U/q0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_Result_18_reg_2743_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\shift_constant_V_loa_reg_3027_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_s_reg_2757_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03610_8_in_reg_546_reg[11] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_s_reg_2757_reg[11]' (FDE) to 'inst/loc1_V_s_reg_2757_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_s_reg_2757_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/p_03610_8_in_reg_546_reg[11]' (FDE) to 'inst/p_03610_8_in_reg_546_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03610_8_in_reg_546_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_s_reg_2757_reg[10]' (FDE) to 'inst/loc1_V_s_reg_2757_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_s_reg_2757_reg[9] )
+INFO: [Synth 8-3886] merging instance 'inst/p_03610_8_in_reg_546_reg[10]' (FDE) to 'inst/p_03610_8_in_reg_546_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03610_8_in_reg_546_reg[9] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_s_reg_2757_reg[9]' (FDE) to 'inst/loc1_V_s_reg_2757_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_s_reg_2757_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/p_03610_8_in_reg_546_reg[9]' (FDE) to 'inst/p_03610_8_in_reg_546_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_03610_8_in_reg_546_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/loc1_V_s_reg_2757_reg[8]' (FDE) to 'inst/loc1_V_s_reg_2757_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\loc1_V_s_reg_2757_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (p_Result_18_reg_2743_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_Result_18_reg_2743_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03610_8_in_reg_546_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03610_8_in_reg_546_reg[8]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03610_8_in_reg_546_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (loc1_V_s_reg_2757_reg[7]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (shift_constant_V_U/Ext_HTA_shift_coneOg_rom_U/q0_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03598_3_in_in_reg_613_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[31]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[30]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[29]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[28]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[27]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[26]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[25]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[24]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[23]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[22]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[21]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[20]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[19]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[18]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[17]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[16]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[15]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[14]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[13]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[11]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[10]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[9]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (reg_583_reg[8]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (shift_constant_V_loa_reg_3027_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03578_0_in_reg_708_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03578_0_in_reg_708_reg[11]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_Val2_3_reg_738_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_Val2_3_reg_738_reg[11]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03602_1_in_reg_812_reg[12]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03610_2_in_reg_853_reg[0]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_5_reg_697_reg[7]) is unused and will be removed from module Ext_HTA.
+WARNING: [Synth 8-3332] Sequential element (p_03598_1_reg_726_reg[7]) is unused and will be removed from module Ext_HTA.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:12 . Memory (MB): peak = 1790.402 ; gain = 520.723 ; free physical = 18310 ; free virtual = 32530
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|Ext_HTA_group_tredEe_rom | p_0_out    | 8x31          | LUT            | 
+|Ext_HTA_shift_coneOg_rom | p_0_out    | 8x5           | LUT            | 
+|Ext_HTA                  | p_0_out    | 8x5           | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Ext_HTA_group_trecud_ram: | ram_reg    | 128 x 64(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 2      | 0      | 
+|Ext_HTA_addr_treefYi_ram: | ram_reg    | 2 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+|Module Name         | RTL Object                         | Inference      | Size (Depth x Width) | Primitives      | 
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_U | Ext_HTA_buddy_trebkb_ram_U/ram_reg | User Attribute | 16 x 64              | RAM16X1D x 64   | 
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/i_0/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:23 . Memory (MB): peak = 1790.402 ; gain = 520.723 ; free physical = 18240 ; free virtual = 32460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:31 . Memory (MB): peak = 1894.082 ; gain = 624.402 ; free physical = 18100 ; free virtual = 32331
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Ext_HTA_group_trecud_ram: | ram_reg    | 128 x 64(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 2      | 0      | 
+|Ext_HTA_addr_treefYi_ram: | ram_reg    | 2 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+|Module Name         | RTL Object                         | Inference      | Size (Depth x Width) | Primitives      | 
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+|inst/buddy_tree_V_U | Ext_HTA_buddy_trebkb_ram_U/ram_reg | User Attribute | 16 x 64              | RAM16X1D x 64   | 
++--------------------+------------------------------------+----------------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/group_tree_V_U/Ext_HTA_group_trecud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:36 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17928 ; free virtual = 32159
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:37 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17920 ; free virtual = 32151
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:37 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17921 ; free virtual = 32152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:37 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17920 ; free virtual = 32150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:37 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17920 ; free virtual = 32150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:38 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17917 ; free virtual = 32148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:38 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17917 ; free virtual = 32148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    48|
+|2     |LUT1       |    81|
+|3     |LUT2       |   706|
+|4     |LUT3       |   705|
+|5     |LUT4       |   547|
+|6     |LUT5       |   942|
+|7     |LUT6       |  2896|
+|8     |MUXF7      |    94|
+|9     |MUXF8      |    11|
+|10    |RAM16X1D   |    64|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB18E1_3 |     1|
+|14    |FDRE       |  3411|
+|15    |FDSE       |    18|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------------------+-------------------------+------+
+|      |Instance                         |Module                   |Cells |
++------+---------------------------------+-------------------------+------+
+|1     |top                              |                         |  9526|
+|2     |  inst                           |Ext_HTA                  |  9526|
+|3     |    Ext_HTA_mux_164_6g8j_U2      |Ext_HTA_mux_164_6g8j     |     4|
+|4     |    Ext_HTA_mux_164_6g8j_U3      |Ext_HTA_mux_164_6g8j_0   |     8|
+|5     |    addr_tree_map_V_U            |Ext_HTA_addr_treefYi     |   307|
+|6     |      Ext_HTA_addr_treefYi_ram_U |Ext_HTA_addr_treefYi_ram |   307|
+|7     |    buddy_tree_V_U               |Ext_HTA_buddy_trebkb     |  2939|
+|8     |      Ext_HTA_buddy_trebkb_ram_U |Ext_HTA_buddy_trebkb_ram |  2939|
+|9     |    group_tree_V_U               |Ext_HTA_group_trecud     |   269|
+|10    |      Ext_HTA_group_trecud_ram_U |Ext_HTA_group_trecud_ram |   269|
+|11    |    group_tree_mask_V_U          |Ext_HTA_group_tredEe     |    89|
+|12    |      Ext_HTA_group_tredEe_rom_U |Ext_HTA_group_tredEe_rom |    89|
+|13    |    mark_mask_V_U                |Ext_HTA_mark_mask_V      |   362|
+|14    |      Ext_HTA_mark_mask_V_rom_U  |Ext_HTA_mark_mask_V_rom  |   362|
+|15    |    shift_constant_V_U           |Ext_HTA_shift_coneOg     |    15|
+|16    |      Ext_HTA_shift_coneOg_rom_U |Ext_HTA_shift_coneOg_rom |    15|
++------+---------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:38 . Memory (MB): peak = 1921.098 ; gain = 651.418 ; free physical = 17917 ; free virtual = 32148
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 1921.098 ; gain = 272.207 ; free physical = 17970 ; free virtual = 32201
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:38 . Memory (MB): peak = 1921.105 ; gain = 651.418 ; free physical = 17970 ; free virtual = 32201
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 64 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+253 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:41 . Memory (MB): peak = 1921.105 ; gain = 662.992 ; free physical = 18050 ; free virtual = 32281
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test64kmau/test64kmau.runs/design_1_Ext_HTA_0_0_synth_1/design_1_Ext_HTA_0_0.dcp' has been generated.

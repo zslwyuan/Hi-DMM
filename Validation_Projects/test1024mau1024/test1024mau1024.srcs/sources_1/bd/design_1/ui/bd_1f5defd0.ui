@@ -1,0 +1,39 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port clk_in1_0 -pg 1 -y -40 -defaultsOSRD
+preplace port ap_start_0 -pg 1 -y -400 -defaultsOSRD
+preplace port ext_reset_in_0 -pg 1 -y 90 -defaultsOSRD
+preplace port reset_0 -pg 1 -y -60 -defaultsOSRD
+preplace portBus ap_return_0 -pg 1 -y -50 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 270 -defaultsOSRD
+preplace inst HTA1024_theta_0 -pg 1 -lvl 1 -y -230 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -y 270 -defaultsOSRD
+preplace inst acc1024_1024_mau_0 -pg 1 -lvl 2 -y -60 -defaultsOSRD
+preplace netloc acc1024_1024_mau_0_alloc_1_size 1 0 3 -80 120 NJ 120 1090
+preplace netloc clk_wiz_locked 1 1 1 480
+preplace netloc acc1024_1024_mau_0_alloc_1_free_target 1 0 3 -70 110 NJ 110 1070
+preplace netloc acc1024_1024_mau_0_alloc_1_cmd_ap_vld 1 0 3 -90 90 NJ 90 1080
+preplace netloc HTA1024_theta_0_alloc_addr 1 1 1 450
+preplace netloc acc1024_1024_mau_0_alloc_1_size_ap_vld 1 0 3 -40 -390 NJ -390 1060
+preplace netloc HTA1024_theta_0_alloc_free_target_ap_ack 1 1 1 470
+preplace netloc acc1024_1024_mau_0_ap_return 1 2 1 N
+preplace netloc ext_reset_in_0_1 1 0 2 -120J 200 450J
+preplace netloc acc1024_1024_mau_0_alloc_1_free_target_ap_vld 1 0 3 -100 100 NJ 100 1100
+preplace netloc HTA1024_theta_0_alloc_cmd_ap_ack 1 1 1 460
+preplace netloc clk_in1_0_1 1 0 1 -130J
+preplace netloc HTA1024_theta_0_alloc_size_ap_ack 1 1 1 490
+preplace netloc ap_start_0_1 1 0 2 -130 -400 500
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 3 -50 0 490 130 1060
+preplace netloc HTA1024_theta_0_alloc_addr_ap_vld 1 1 1 480
+preplace netloc acc1024_1024_mau_0_alloc_1_cmd 1 0 3 -40 80 NJ 80 1060
+preplace netloc acc1024_1024_mau_0_alloc_1_addr_ap_ack 1 0 3 -50 -410 NJ -410 1100
+preplace netloc reset_0_1 1 0 1 -110J
+preplace netloc clk_wiz_clk_out1 1 0 2 -60 -20 470
+levelinfo -pg 1 -150 220 820 1120 -top -610 -bot 420
+",
+}
+{
+   da_clkrst_cnt: "1",
+}

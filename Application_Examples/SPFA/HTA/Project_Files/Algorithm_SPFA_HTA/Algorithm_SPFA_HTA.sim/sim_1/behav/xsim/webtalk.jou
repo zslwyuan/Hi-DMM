@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Aug  8 01:01:16 2018
+# Process ID: 30448
+# Current directory: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/xsim/xsim.dir/design_1_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/tingyuan/Temporary/vivado-outputs/Algorithm_SPFA/Algorithm_SPFA.sim/sim_1/behav/xsim/xsim.dir/design_1_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="HTA512_theta" xd:componentRef="HTA512_theta" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="alloc-&gt;size" xd:originalName="alloc" xd:direction="in" xd:interfaceRef="alloc_size" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32"/>
+  <xd:arg xd:name="alloc-&gt;addr" xd:originalName="alloc" xd:direction="out" xd:interfaceRef="alloc_addr" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="5"/>
+  <xd:arg xd:name="alloc-&gt;free_target" xd:originalName="alloc" xd:direction="in" xd:interfaceRef="alloc_free_target" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="5"/>
+  <xd:arg xd:name="alloc-&gt;cmd" xd:originalName="alloc" xd:direction="in" xd:interfaceRef="alloc_cmd" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="8" xd:firstOut="5"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="6950" xd:FF="1910" xd:BRAM="10" xd:DSP="0"/>
+</xd:acceleratorMap>

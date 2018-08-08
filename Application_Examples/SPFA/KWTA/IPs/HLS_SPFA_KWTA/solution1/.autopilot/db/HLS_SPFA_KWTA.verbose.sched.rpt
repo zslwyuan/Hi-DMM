@@ -1,0 +1,838 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_SPFA_KWTA'
+================================================================
+* Date:           Wed Aug  8 21:37:18 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        HLS_SPFA_KWTA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 3     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 3.1  |    ?|    ?|  3 ~ 11  |          -|          -|     ?|    no    |
+        |- Loop 4     |    ?|    ?|         2|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 36
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	4  / (tmp_5)
+	5  / (!tmp_5)
+5 --> 
+	6  / (!tmp_8)
+	5  / (tmp_8)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / (!tmp_7)
+	35  / (tmp_7)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / (tmp_10)
+	32  / (!tmp_10)
+14 --> 
+	15  / (!or_cond)
+	31  / (or_cond)
+15 --> 
+	16  / true
+16 --> 
+	25  / (brmerge_demorgan)
+	21  / (!brmerge_demorgan & update0)
+	17  / (!brmerge_demorgan & !update0 & update1)
+	31  / (!brmerge_demorgan & !update0 & !update1)
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	31  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	31  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	13  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	9  / true
+35 --> 
+	36  / (tmp_s)
+36 --> 
+	35  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.55>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %n), !map !32"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([20000 x i32]* %map_r), !map !38"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([200 x i32]* %dis_output), !map !44"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_size), !map !50"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_free_target), !map !54"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_HTA_addr), !map !58"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_HTA_cmd), !map !62"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_KWTA_size), !map !66"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_KWTA_free_target), !map !70"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_KWTA_addr), !map !74"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_KWTA_cmd), !map !78"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @HLS_SPFA_KWTA_str) nounwind"   --->   Operation 48 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%n_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %n)"   --->   Operation 49 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%HTA_heap_0 = alloca [2000 x i32], align 4" [HLS_SPFA_KWTA/solution1/top.cpp:63]   --->   Operation 50 'alloca' 'HTA_heap_0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%HTA_heap_1 = alloca [2000 x i32], align 4" [HLS_SPFA_KWTA/solution1/top.cpp:63]   --->   Operation 51 'alloca' 'HTA_heap_1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%in_list = alloca [200 x i1], align 16" [HLS_SPFA_KWTA/solution1/top.cpp:72]   --->   Operation 52 'alloca' 'in_list' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([20000 x i32]* %map_r, [1 x i8]* @p_str, [12 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 53 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_HTA_size, i32* %alloc_HTA_free_target, i32* %alloc_HTA_addr, i8* %alloc_HTA_cmd, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:61]   --->   Operation 54 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_KWTA_size, i32* %alloc_KWTA_free_target, i32* %alloc_KWTA_addr, i8* %alloc_KWTA_cmd, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:62]   --->   Operation 55 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%guard_variable_for_H_1 = load i1* @guard_variable_for_H, align 1"   --->   Operation 56 'load' 'guard_variable_for_H_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "br i1 %guard_variable_for_H_1, label %._crit_edge, label %codeRepl1" [HLS_SPFA_KWTA/solution1/top.cpp:69]   --->   Operation 57 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (2.55ns)   --->   "%tmp_1_i = add nsw i32 %n_read, 1" [HLS_SPFA_KWTA/solution1/top.cpp:69]   --->   Operation 58 'add' 'tmp_1_i' <Predicate = (!guard_variable_for_H_1)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_2 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %tmp_1_i, i32 1, i32 31)" [HLS_SPFA_KWTA/solution1/top.cpp:69]   --->   Operation 59 'partselect' 'tmp_2' <Predicate = (!guard_variable_for_H_1)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "store i31 %tmp_2, i31* @N_2, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:69]   --->   Operation 60 'store' <Predicate = (!guard_variable_for_H_1)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "store i1 true, i1* @guard_variable_for_H, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:69]   --->   Operation 61 'store' <Predicate = (!guard_variable_for_H_1)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "br label %._crit_edge"   --->   Operation 62 'br' <Predicate = (!guard_variable_for_H_1)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%rbegin1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 63 'specregionbegin' 'rbegin1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 64 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_HTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 65 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_HTA_size, i32 %n_read)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 66 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_HTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 67 'write' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 68 'wait' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%status_6 = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_HTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 69 'read' 'status_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%rend45 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin1) nounwind"   --->   Operation 70 'specregionend' 'rend45' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:79]   --->   Operation 71 'wait' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%tmp = call i12 @_ssdm_op_PartSelect.i12.i32.i32.i32(i32 %status_6, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 72 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_4_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:82]   --->   Operation 73 'bitconcatenate' 'tmp_4_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%newIndex1 = call i19 @_ssdm_op_PartSelect.i19.i32.i32.i32(i32 %status_6, i32 1, i32 19)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 74 'partselect' 'newIndex1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%newIndex2 = zext i19 %newIndex1 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:78]   --->   Operation 75 'zext' 'newIndex2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex2" [HLS_SPFA_KWTA/solution1/top.cpp:82]   --->   Operation 76 'getelementptr' 'HTA_heap_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (1.76ns)   --->   "br label %1" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 77 'br' <Predicate = true> <Delay = 1.76>
+
+State 4 <SV = 3> <Delay = 4.93>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%i = phi i31 [ 0, %._crit_edge ], [ %i_4, %3 ]"   --->   Operation 78 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%i_cast = zext i31 %i to i32" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 79 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (2.47ns)   --->   "%tmp_5 = icmp slt i32 %i_cast, %n_read" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 80 'icmp' 'tmp_5' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (2.52ns)   --->   "%i_4 = add i31 %i, 1" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 81 'add' 'i_4' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %2, label %branch46" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 82 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i31 %i to i13" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 83 'trunc' 'tmp_1' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_4 = trunc i31 %i to i1" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 84 'trunc' 'tmp_4' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (1.67ns)   --->   "%local_dis_0_sum1 = add i13 %tmp_1, %tmp_4_cast" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 85 'add' 'local_dis_0_sum1' <Predicate = (tmp_5)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%newIndex3 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %local_dis_0_sum1, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 86 'partselect' 'newIndex3' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%newIndex3_cast = zext i12 %newIndex3 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 87 'zext' 'newIndex3_cast' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_1 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex3_cast" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 88 'getelementptr' 'HTA_heap_0_addr_1' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex3_cast" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 89 'getelementptr' 'HTA_heap_1_addr' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %branch45, label %branch44" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 90 'br' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (3.25ns)   --->   "store i32 10000, i32* %HTA_heap_0_addr_1, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 91 'store' <Predicate = (tmp_5 & !tmp_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "br label %3" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 92 'br' <Predicate = (tmp_5 & !tmp_4)> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (3.25ns)   --->   "store i32 10000, i32* %HTA_heap_1_addr, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 93 'store' <Predicate = (tmp_5 & tmp_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "br label %3" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 94 'br' <Predicate = (tmp_5 & tmp_4)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "br label %1" [HLS_SPFA_KWTA/solution1/top.cpp:84]   --->   Operation 95 'br' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (3.25ns)   --->   "store i32 0, i32* %HTA_heap_0_addr, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:86]   --->   Operation 96 'store' <Predicate = (!tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_4 : Operation 97 [1/1] (1.76ns)   --->   "br label %4" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 97 'br' <Predicate = (!tmp_5)> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 2.52>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%i_1 = phi i31 [ 0, %branch46 ], [ %i_5, %5 ]"   --->   Operation 98 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%i_1_cast = zext i31 %i_1 to i32" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 99 'zext' 'i_1_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (2.47ns)   --->   "%tmp_8 = icmp slt i32 %i_1_cast, %n_read" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 100 'icmp' 'tmp_8' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 101 [1/1] (2.52ns)   --->   "%i_5 = add i31 %i_1, 1" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 101 'add' 'i_5' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %5, label %branch42" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 102 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_9 = zext i31 %i_1 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 103 'zext' 'tmp_9' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%in_list_addr = getelementptr inbounds [200 x i1]* %in_list, i64 0, i64 %tmp_9" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 104 'getelementptr' 'in_list_addr' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_5 : Operation 105 [1/1] (2.27ns)   --->   "store i1 false, i1* %in_list_addr, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 105 'store' <Predicate = (tmp_8)> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "br label %4" [HLS_SPFA_KWTA/solution1/top.cpp:88]   --->   Operation 106 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%offset_tail = alloca i32"   --->   Operation 107 'alloca' 'offset_tail' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%in_list_addr_1 = getelementptr inbounds [200 x i1]* %in_list, i64 0, i64 0" [HLS_SPFA_KWTA/solution1/top.cpp:90]   --->   Operation 108 'getelementptr' 'in_list_addr_1' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 109 [1/1] (2.27ns)   --->   "store i1 true, i1* %in_list_addr_1, align 16" [HLS_SPFA_KWTA/solution1/top.cpp:90]   --->   Operation 109 'store' <Predicate = (!tmp_8)> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%rbegin2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 110 'specregionbegin' 'rbegin2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 111 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 112 'write' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 1)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 113 'write' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 114 'write' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 115 'wait' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%status = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_KWTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 116 'read' 'status' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%rend42 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin2) nounwind"   --->   Operation 117 'specregionend' 'rend42' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 4.93>
+ST_8 : Operation 118 [1/1] (0.00ns)   --->   "%offset_head_3 = shl i32 %status, 1" [HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 118 'shl' 'offset_head_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_26 = trunc i32 %status to i12" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 119 'trunc' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_26, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:95]   --->   Operation 120 'bitconcatenate' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 121 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum = add i13 2000, %tmp_cast" [HLS_SPFA_KWTA/solution1/top.cpp:95]   --->   Operation 121 'add' 'KWTA_heap_0_sum' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%newIndex4 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:95]   --->   Operation 122 'partselect' 'newIndex4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%newIndex4_cast = zext i12 %newIndex4 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:95]   --->   Operation 123 'zext' 'newIndex4_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_2 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex4_cast" [HLS_SPFA_KWTA/solution1/top.cpp:95]   --->   Operation 124 'getelementptr' 'HTA_heap_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 125 [1/1] (3.25ns)   --->   "store i32 0, i32* %HTA_heap_0_addr_2, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:96]   --->   Operation 125 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_8 : Operation 126 [1/1] (1.67ns)   --->   "%p_sum = add i13 2001, %tmp_cast" [HLS_SPFA_KWTA/solution1/top.cpp:97]   --->   Operation 126 'add' 'p_sum' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%newIndex5 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:97]   --->   Operation 127 'partselect' 'newIndex5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%newIndex5_cast = zext i12 %newIndex5 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:97]   --->   Operation 128 'zext' 'newIndex5_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_1 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex5_cast" [HLS_SPFA_KWTA/solution1/top.cpp:97]   --->   Operation 129 'getelementptr' 'HTA_heap_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 130 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_1, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:97]   --->   Operation 130 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_8 : Operation 131 [1/1] (1.86ns)   --->   "store i32 %offset_head_3, i32* %offset_tail" [HLS_SPFA_KWTA/solution1/top.cpp:98]   --->   Operation 131 'store' <Predicate = true> <Delay = 1.86>
+ST_8 : Operation 132 [1/1] (1.76ns)   --->   "br label %6" [HLS_SPFA_KWTA/solution1/top.cpp:118]   --->   Operation 132 'br' <Predicate = true> <Delay = 1.76>
+
+State 9 <SV = 8> <Delay = 4.93>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%offset_head = phi i32 [ %offset_head_3, %branch42 ], [ %offset_next, %_ifconv1 ]"   --->   Operation 133 'phi' 'offset_head' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (2.47ns)   --->   "%tmp_7 = icmp eq i32 %offset_head, -1" [HLS_SPFA_KWTA/solution1/top.cpp:118]   --->   Operation 134 'icmp' 'tmp_7' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "br i1 %tmp_7, label %.preheader.preheader, label %_ifconv" [HLS_SPFA_KWTA/solution1/top.cpp:118]   --->   Operation 135 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_27 = trunc i32 %offset_head to i13" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 136 'trunc' 'tmp_27' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum1 = add i13 2000, %tmp_27" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 137 'add' 'KWTA_heap_0_sum1' <Predicate = (!tmp_7)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%newIndex6 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum1, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 138 'partselect' 'newIndex6' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "%newIndex6_cast = zext i12 %newIndex6 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 139 'zext' 'newIndex6_cast' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_3 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex6_cast" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 140 'getelementptr' 'HTA_heap_0_addr_3' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_2 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex6_cast" [HLS_SPFA_KWTA/solution1/top.cpp:120]   --->   Operation 141 'getelementptr' 'HTA_heap_1_addr_2' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_9 : Operation 142 [2/2] (3.25ns)   --->   "%HTA_heap_1_load = load i32* %HTA_heap_1_addr_2, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 142 'load' 'HTA_heap_1_load' <Predicate = (!tmp_7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_9 : Operation 143 [2/2] (3.25ns)   --->   "%HTA_heap_0_load = load i32* %HTA_heap_0_addr_3, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 143 'load' 'HTA_heap_0_load' <Predicate = (!tmp_7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_9 : Operation 144 [1/1] (1.76ns)   --->   "br label %.preheader" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 144 'br' <Predicate = (tmp_7)> <Delay = 1.76>
+
+State 10 <SV = 9> <Delay = 5.63>
+ST_10 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i32 %offset_head to i1" [HLS_SPFA_KWTA/solution1/top.cpp:93]   --->   Operation 145 'trunc' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 146 [1/2] (3.25ns)   --->   "%HTA_heap_1_load = load i32* %HTA_heap_1_addr_2, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 146 'load' 'HTA_heap_1_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_10 : Operation 147 [1/2] (3.25ns)   --->   "%HTA_heap_0_load = load i32* %HTA_heap_0_addr_3, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 147 'load' 'HTA_heap_0_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_10 : Operation 148 [1/1] (0.69ns)   --->   "%now = select i1 %tmp_28, i32 %HTA_heap_1_load, i32 %HTA_heap_0_load" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 148 'select' 'now' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i32 %now to i13" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 149 'trunc' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_32 = trunc i32 %now to i1" [HLS_SPFA_KWTA/solution1/top.cpp:129]   --->   Operation 150 'trunc' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (1.67ns)   --->   "%local_dis_0_sum2 = add i13 %tmp_4_cast, %tmp_31" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 151 'add' 'local_dis_0_sum2' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%newIndex7 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %local_dis_0_sum2, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 152 'partselect' 'newIndex7' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 3.25>
+ST_11 : Operation 153 [1/1] (0.00ns)   --->   "%newIndex7_cast = zext i12 %newIndex7 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 153 'zext' 'newIndex7_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 154 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_5 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex7_cast" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 154 'getelementptr' 'HTA_heap_0_addr_5' <Predicate = (!tmp_32)> <Delay = 0.00>
+ST_11 : Operation 155 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_4 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex7_cast" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 155 'getelementptr' 'HTA_heap_1_addr_4' <Predicate = (tmp_32)> <Delay = 0.00>
+ST_11 : Operation 156 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_2 = load i32* %HTA_heap_1_addr_4, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 156 'load' 'HTA_heap_1_load_2' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_11 : Operation 157 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_2 = load i32* %HTA_heap_0_addr_5, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 157 'load' 'HTA_heap_0_load_2' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+
+State 12 <SV = 11> <Delay = 8.51>
+ST_12 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_3 = sext i32 %now to i64" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 158 'sext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 159 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_2 = load i32* %HTA_heap_1_addr_4, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 159 'load' 'HTA_heap_1_load_2' <Predicate = (tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_12 : Operation 160 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_2 = load i32* %HTA_heap_0_addr_5, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 160 'load' 'HTA_heap_0_load_2' <Predicate = (!tmp_32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_12 : Operation 161 [1/1] (0.69ns)   --->   "%now_dis = select i1 %tmp_32, i32 %HTA_heap_1_load_2, i32 %HTA_heap_0_load_2" [HLS_SPFA_KWTA/solution1/top.cpp:132]   --->   Operation 161 'select' 'now_dis' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 162 [1/1] (8.51ns)   --->   "%tmp_6 = mul nsw i32 %n_read, %now" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 162 'mul' 'tmp_6' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 163 [1/1] (1.76ns)   --->   "br label %._crit_edge26" [HLS_SPFA_KWTA/solution1/top.cpp:134]   --->   Operation 163 'br' <Predicate = true> <Delay = 1.76>
+
+State 13 <SV = 12> <Delay = 5.80>
+ST_13 : Operation 164 [1/1] (0.00ns)   --->   "%i_2 = phi i32 [ 0, %_ifconv ], [ %i_7, %._crit_edge26.backedge ]"   --->   Operation 164 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 165 [1/1] (0.00ns)   --->   "%N_2_load = load i31* @N_2, align 4"   --->   Operation 165 'load' 'N_2_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 166 [1/1] (0.00ns)   --->   "%extLd = sext i31 %N_2_load to i32"   --->   Operation 166 'sext' 'extLd' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 167 [1/1] (2.47ns)   --->   "%tmp_10 = icmp slt i32 %i_2, %extLd" [HLS_SPFA_KWTA/solution1/top.cpp:134]   --->   Operation 167 'icmp' 'tmp_10' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 168 [1/1] (2.55ns)   --->   "%i_7 = add nsw i32 %i_2, 1" [HLS_SPFA_KWTA/solution1/top.cpp:134]   --->   Operation 168 'add' 'i_7' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 169 [1/1] (0.00ns)   --->   "br i1 %tmp_10, label %7, label %_ifconv1" [HLS_SPFA_KWTA/solution1/top.cpp:134]   --->   Operation 169 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i32 %i_2 to i12" [HLS_SPFA_KWTA/solution1/top.cpp:134]   --->   Operation 170 'trunc' 'tmp_35' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 171 [1/1] (0.00ns)   --->   "%i0 = shl i32 %i_2, 1" [HLS_SPFA_KWTA/solution1/top.cpp:140]   --->   Operation 171 'shl' 'i0' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 172 [1/1] (0.00ns)   --->   "%i1 = or i32 %i0, 1" [HLS_SPFA_KWTA/solution1/top.cpp:141]   --->   Operation 172 'or' 'i1' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 173 [1/1] (2.55ns)   --->   "%tmp_12 = add nsw i32 %tmp_6, %i0" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 173 'add' 'tmp_12' <Predicate = (tmp_10)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_13 = sext i32 %tmp_12 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 174 'sext' 'tmp_13' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 175 [1/1] (0.00ns)   --->   "%map_addr = getelementptr [20000 x i32]* %map_r, i64 0, i64 %tmp_13" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 175 'getelementptr' 'map_addr' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 176 [2/2] (3.25ns)   --->   "%m0 = load i32* %map_addr, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 176 'load' 'm0' <Predicate = (tmp_10)> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_13 : Operation 177 [1/1] (2.55ns)   --->   "%tmp_14 = add nsw i32 %tmp_6, %i1" [HLS_SPFA_KWTA/solution1/top.cpp:143]   --->   Operation 177 'add' 'tmp_14' <Predicate = (tmp_10)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_15 = sext i32 %tmp_14 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:143]   --->   Operation 178 'sext' 'tmp_15' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 179 [1/1] (0.00ns)   --->   "%map_addr_1 = getelementptr [20000 x i32]* %map_r, i64 0, i64 %tmp_15" [HLS_SPFA_KWTA/solution1/top.cpp:143]   --->   Operation 179 'getelementptr' 'map_addr_1' <Predicate = (tmp_10)> <Delay = 0.00>
+ST_13 : Operation 180 [2/2] (3.25ns)   --->   "%m1 = load i32* %map_addr_1, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:143]   --->   Operation 180 'load' 'm1' <Predicate = (tmp_10)> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_13 : Operation 181 [1/1] (1.67ns)   --->   "%p_sum3 = add i13 %tmp_27, 2001" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 181 'add' 'p_sum3' <Predicate = (!tmp_10)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 182 [1/1] (0.00ns)   --->   "%newIndex8 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum3, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 182 'partselect' 'newIndex8' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_13 : Operation 183 [1/1] (0.00ns)   --->   "%newIndex8_cast = zext i12 %newIndex8 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 183 'zext' 'newIndex8_cast' <Predicate = (!tmp_10)> <Delay = 0.00>
+ST_13 : Operation 184 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_5 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex8_cast" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 184 'getelementptr' 'HTA_heap_1_addr_5' <Predicate = (!tmp_10 & !tmp_28)> <Delay = 0.00>
+ST_13 : Operation 185 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_6 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex8_cast" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 185 'getelementptr' 'HTA_heap_0_addr_6' <Predicate = (!tmp_10 & tmp_28)> <Delay = 0.00>
+ST_13 : Operation 186 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_4 = load i32* %HTA_heap_0_addr_6, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 186 'load' 'HTA_heap_0_load_4' <Predicate = (!tmp_10 & tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_13 : Operation 187 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_3 = load i32* %HTA_heap_1_addr_5, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 187 'load' 'HTA_heap_1_load_3' <Predicate = (!tmp_10 & !tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+
+State 14 <SV = 13> <Delay = 6.70>
+ST_14 : Operation 188 [1/2] (3.25ns)   --->   "%m0 = load i32* %map_addr, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:142]   --->   Operation 188 'load' 'm0' <Predicate = true> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_14 : Operation 189 [1/2] (3.25ns)   --->   "%m1 = load i32* %map_addr_1, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:143]   --->   Operation 189 'load' 'm1' <Predicate = true> <Delay = 3.25> <Core = "ROM_2P_BRAM">   --->   Core 54 'ROM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 2> <Width = 32> <Depth = 20000> <ROM>
+ST_14 : Operation 190 [1/1] (2.47ns)   --->   "%tmp_16 = icmp sgt i32 %m0, 9999" [HLS_SPFA_KWTA/solution1/top.cpp:146]   --->   Operation 190 'icmp' 'tmp_16' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 191 [1/1] (2.47ns)   --->   "%tmp_17 = icmp sgt i32 %m1, 9999" [HLS_SPFA_KWTA/solution1/top.cpp:146]   --->   Operation 191 'icmp' 'tmp_17' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 192 [1/1] (0.97ns)   --->   "%or_cond = and i1 %tmp_16, %tmp_17" [HLS_SPFA_KWTA/solution1/top.cpp:146]   --->   Operation 192 'and' 'or_cond' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 193 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %._crit_edge26.backedge, label %branch34_ifconv" [HLS_SPFA_KWTA/solution1/top.cpp:146]   --->   Operation 193 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 194 [1/1] (2.55ns)   --->   "%weight0 = add nsw i32 %now_dis, %m0" [HLS_SPFA_KWTA/solution1/top.cpp:148]   --->   Operation 194 'add' 'weight0' <Predicate = (!or_cond)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 195 [1/1] (2.55ns)   --->   "%weight1 = add nsw i32 %now_dis, %m1" [HLS_SPFA_KWTA/solution1/top.cpp:149]   --->   Operation 195 'add' 'weight1' <Predicate = (!or_cond)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_23_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_35, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 196 'bitconcatenate' 'tmp_23_cast' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 197 [1/1] (1.67ns)   --->   "%local_dis_0_sum6 = add i13 %tmp_4_cast, %tmp_23_cast" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 197 'add' 'local_dis_0_sum6' <Predicate = (!or_cond)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 198 [1/1] (0.00ns)   --->   "%newIndex9 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %local_dis_0_sum6, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 198 'partselect' 'newIndex9' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 199 [1/1] (0.00ns)   --->   "%newIndex9_cast = zext i12 %newIndex9 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 199 'zext' 'newIndex9_cast' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 200 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_7 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex9_cast" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 200 'getelementptr' 'HTA_heap_0_addr_7' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 201 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_3 = load i32* %HTA_heap_0_addr_7, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 201 'load' 'HTA_heap_0_load_3' <Predicate = (!or_cond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_14 : Operation 202 [1/1] (0.00ns) (grouped into LUT with out node local_dis_0_sum7)   --->   "%tmp_26_cast = or i13 %tmp_23_cast, 1" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 202 'or' 'tmp_26_cast' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 203 [1/1] (1.67ns) (out node of the LUT)   --->   "%local_dis_0_sum7 = add i13 %tmp_4_cast, %tmp_26_cast" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 203 'add' 'local_dis_0_sum7' <Predicate = (!or_cond)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 204 [1/1] (0.00ns)   --->   "%newIndex10 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %local_dis_0_sum7, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 204 'partselect' 'newIndex10' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 205 [1/1] (0.00ns)   --->   "%newIndex10_cast = zext i12 %newIndex10 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 205 'zext' 'newIndex10_cast' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 206 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_6 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex10_cast" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 206 'getelementptr' 'HTA_heap_1_addr_6' <Predicate = (!or_cond)> <Delay = 0.00>
+ST_14 : Operation 207 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_4 = load i32* %HTA_heap_1_addr_6, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 207 'load' 'HTA_heap_1_load_4' <Predicate = (!or_cond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+
+State 15 <SV = 14> <Delay = 6.42>
+ST_15 : Operation 208 [1/1] (0.00ns)   --->   "%tmp_20 = sext i32 %i0 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 208 'sext' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 209 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_3 = load i32* %HTA_heap_0_addr_7, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 209 'load' 'HTA_heap_0_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_15 : Operation 210 [1/1] (2.47ns)   --->   "%tmp_21 = icmp slt i32 %weight0, %HTA_heap_0_load_3" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 210 'icmp' 'tmp_21' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 211 [1/1] (0.00ns)   --->   "%in_list_addr_3 = getelementptr inbounds [200 x i1]* %in_list, i64 0, i64 %tmp_20" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 211 'getelementptr' 'in_list_addr_3' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 212 [2/2] (2.27ns)   --->   "%in_list_load = load i1* %in_list_addr_3, align 2" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 212 'load' 'in_list_load' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_15 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_23 = sext i32 %i1 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 213 'sext' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 214 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_4 = load i32* %HTA_heap_1_addr_6, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 214 'load' 'HTA_heap_1_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_15 : Operation 215 [1/1] (2.47ns)   --->   "%tmp_24 = icmp slt i32 %weight1, %HTA_heap_1_load_4" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 215 'icmp' 'tmp_24' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 216 [1/1] (0.00ns)   --->   "%in_list_addr_4 = getelementptr inbounds [200 x i1]* %in_list, i64 0, i64 %tmp_23" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 216 'getelementptr' 'in_list_addr_4' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 217 [2/2] (2.27ns)   --->   "%in_list_load_1 = load i1* %in_list_addr_4, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 217 'load' 'in_list_load_1' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_15 : Operation 218 [1/1] (0.69ns)   --->   "%weight0_HTA_heap_loa = select i1 %tmp_21, i32 %weight0, i32 %HTA_heap_0_load_3" [HLS_SPFA_KWTA/solution1/top.cpp:171]   --->   Operation 218 'select' 'weight0_HTA_heap_loa' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 219 [1/1] (0.69ns)   --->   "%weight1_1 = select i1 %tmp_24, i32 %weight1, i32 %HTA_heap_1_load_4" [HLS_SPFA_KWTA/solution1/top.cpp:172]   --->   Operation 219 'select' 'weight1_1' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 4.23>
+ST_16 : Operation 220 [1/1] (0.00ns)   --->   "%offset_tail_load = load i32* %offset_tail" [HLS_SPFA_KWTA/solution1/top.cpp:148]   --->   Operation 220 'load' 'offset_tail_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_38 = trunc i32 %offset_tail_load to i13" [HLS_SPFA_KWTA/solution1/top.cpp:148]   --->   Operation 221 'trunc' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 222 [1/2] (2.27ns)   --->   "%in_list_load = load i1* %in_list_addr_3, align 2" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 222 'load' 'in_list_load' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_16 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node update0)   --->   "%tmp_22 = xor i1 %in_list_load, true" [HLS_SPFA_KWTA/solution1/top.cpp:150]   --->   Operation 223 'xor' 'tmp_22' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 224 [1/1] (0.97ns) (out node of the LUT)   --->   "%update0 = and i1 %tmp_21, %tmp_22" [HLS_SPFA_KWTA/solution1/top.cpp:71]   --->   Operation 224 'and' 'update0' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 225 [1/2] (2.27ns)   --->   "%in_list_load_1 = load i1* %in_list_addr_4, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 225 'load' 'in_list_load_1' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_16 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node update1)   --->   "%tmp_25 = xor i1 %in_list_load_1, true" [HLS_SPFA_KWTA/solution1/top.cpp:151]   --->   Operation 226 'xor' 'tmp_25' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 227 [1/1] (0.97ns) (out node of the LUT)   --->   "%update1 = and i1 %tmp_24, %tmp_25" [HLS_SPFA_KWTA/solution1/top.cpp:71]   --->   Operation 227 'and' 'update1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 228 [1/1] (3.25ns)   --->   "store i32 %weight0_HTA_heap_loa, i32* %HTA_heap_0_addr_7, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:171]   --->   Operation 228 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_16 : Operation 229 [1/1] (3.25ns)   --->   "store i32 %weight1_1, i32* %HTA_heap_1_addr_6, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:172]   --->   Operation 229 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_16 : Operation 230 [1/1] (0.97ns)   --->   "%brmerge_demorgan = and i1 %update0, %update1" [HLS_SPFA_KWTA/solution1/top.cpp:186]   --->   Operation 230 'and' 'brmerge_demorgan' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 231 [1/1] (0.00ns)   --->   "br i1 %brmerge_demorgan, label %8, label %9" [HLS_SPFA_KWTA/solution1/top.cpp:186]   --->   Operation 231 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 232 [1/1] (0.00ns)   --->   "br i1 %update0, label %10, label %11" [HLS_SPFA_KWTA/solution1/top.cpp:223]   --->   Operation 232 'br' <Predicate = (!brmerge_demorgan)> <Delay = 0.00>
+ST_16 : Operation 233 [1/1] (0.00ns)   --->   "br i1 %update1, label %12, label %._crit_edge26.backedge" [HLS_SPFA_KWTA/solution1/top.cpp:243]   --->   Operation 233 'br' <Predicate = (!brmerge_demorgan & !update0)> <Delay = 0.00>
+ST_16 : Operation 234 [1/1] (0.00ns)   --->   "%offset_tail_load_2 = load i32* %offset_tail"   --->   Operation 234 'load' 'offset_tail_load_2' <Predicate = (!brmerge_demorgan & !update0 & update1)> <Delay = 0.00>
+ST_16 : Operation 235 [1/1] (0.00ns)   --->   "%offset_tail_load_1 = load i32* %offset_tail"   --->   Operation 235 'load' 'offset_tail_load_1' <Predicate = (!brmerge_demorgan & update0)> <Delay = 0.00>
+ST_16 : Operation 236 [1/1] (0.00ns)   --->   "%rbegin4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 236 'specregionbegin' 'rbegin4' <Predicate = (brmerge_demorgan)> <Delay = 0.00>
+ST_16 : Operation 237 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 237 'specprotocol' <Predicate = (brmerge_demorgan)> <Delay = 0.00>
+ST_16 : Operation 238 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 238 'write' <Predicate = (brmerge_demorgan)> <Delay = 0.00>
+ST_16 : Operation 239 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 1)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 239 'write' <Predicate = (brmerge_demorgan)> <Delay = 0.00>
+ST_16 : Operation 240 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 240 'write' <Predicate = (brmerge_demorgan)> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 241 [1/1] (0.00ns)   --->   "%rbegin = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 241 'specregionbegin' 'rbegin' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 242 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 242 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 243 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 243 'write' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 244 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 1)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 244 'write' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 245 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 245 'write' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 246 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 246 'wait' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 247 [1/1] (0.00ns)   --->   "%status_5 = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_KWTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 247 'read' 'status_5' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 248 [1/1] (0.00ns)   --->   "%rend = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin) nounwind"   --->   Operation 248 'specregionend' 'rend' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 4.93>
+ST_19 : Operation 249 [1/1] (0.00ns)   --->   "%offset_new_node1 = shl i32 %status_5, 1" [HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 249 'shl' 'offset_new_node1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_48 = trunc i32 %status_5 to i12" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:248]   --->   Operation 250 'trunc' 'tmp_48' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 251 [1/1] (0.00ns)   --->   "%tmp_35_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_48, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:260]   --->   Operation 251 'bitconcatenate' 'tmp_35_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 252 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum5 = add i13 2000, %tmp_35_cast" [HLS_SPFA_KWTA/solution1/top.cpp:260]   --->   Operation 252 'add' 'KWTA_heap_0_sum5' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 253 [1/1] (0.00ns)   --->   "%newIndex18 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum5, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:260]   --->   Operation 253 'partselect' 'newIndex18' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 254 [1/1] (0.00ns)   --->   "%newIndex18_cast = zext i12 %newIndex18 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:260]   --->   Operation 254 'zext' 'newIndex18_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 255 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_13 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex18_cast" [HLS_SPFA_KWTA/solution1/top.cpp:260]   --->   Operation 255 'getelementptr' 'HTA_heap_0_addr_13' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 256 [1/1] (1.67ns)   --->   "%p_sum7 = add i13 2001, %tmp_38" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 256 'add' 'p_sum7' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 257 [1/1] (0.00ns)   --->   "%tmp_49 = trunc i32 %offset_tail_load_2 to i1"   --->   Operation 257 'trunc' 'tmp_49' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 258 [1/1] (0.00ns)   --->   "%newIndex20 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum7, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 258 'partselect' 'newIndex20' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 259 [1/1] (0.00ns)   --->   "%newIndex20_cast = zext i12 %newIndex20 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 259 'zext' 'newIndex20_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 260 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_11 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex20_cast" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 260 'getelementptr' 'HTA_heap_1_addr_11' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 261 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_14 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex20_cast" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 261 'getelementptr' 'HTA_heap_0_addr_14' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 262 [1/1] (0.00ns)   --->   "br i1 %tmp_49, label %branch7, label %branch6" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 262 'br' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 263 [1/1] (3.25ns)   --->   "store i32 %offset_new_node1, i32* %HTA_heap_1_addr_11, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 263 'store' <Predicate = (!tmp_49)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_19 : Operation 264 [1/1] (0.00ns)   --->   "br label %branch8" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 264 'br' <Predicate = (!tmp_49)> <Delay = 0.00>
+ST_19 : Operation 265 [1/1] (3.25ns)   --->   "store i32 %offset_new_node1, i32* %HTA_heap_0_addr_14, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 265 'store' <Predicate = (tmp_49)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_19 : Operation 266 [1/1] (0.00ns)   --->   "br label %branch8" [HLS_SPFA_KWTA/solution1/top.cpp:263]   --->   Operation 266 'br' <Predicate = (tmp_49)> <Delay = 0.00>
+ST_19 : Operation 267 [1/1] (1.67ns)   --->   "%p_sum8 = add i13 %tmp_35_cast, 2001" [HLS_SPFA_KWTA/solution1/top.cpp:275]   --->   Operation 267 'add' 'p_sum8' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 268 [1/1] (0.00ns)   --->   "%newIndex19 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum8, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:275]   --->   Operation 268 'partselect' 'newIndex19' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 269 [1/1] (1.86ns)   --->   "store i32 %offset_new_node1, i32* %offset_tail" [HLS_SPFA_KWTA/solution1/top.cpp:277]   --->   Operation 269 'store' <Predicate = true> <Delay = 1.86>
+
+State 20 <SV = 19> <Delay = 3.25>
+ST_20 : Operation 270 [1/1] (3.25ns)   --->   "store i32 %i1, i32* %HTA_heap_0_addr_13, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:274]   --->   Operation 270 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_20 : Operation 271 [1/1] (0.00ns)   --->   "%newIndex19_cast = zext i12 %newIndex19 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:275]   --->   Operation 271 'zext' 'newIndex19_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 272 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_13 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex19_cast" [HLS_SPFA_KWTA/solution1/top.cpp:275]   --->   Operation 272 'getelementptr' 'HTA_heap_1_addr_13' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 273 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_13, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:275]   --->   Operation 273 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_20 : Operation 274 [1/1] (2.27ns)   --->   "store i1 true, i1* %in_list_addr_4, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:278]   --->   Operation 274 'store' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_20 : Operation 275 [1/1] (0.00ns)   --->   "br label %._crit_edge26.backedge" [HLS_SPFA_KWTA/solution1/top.cpp:292]   --->   Operation 275 'br' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 16> <Delay = 0.00>
+ST_21 : Operation 276 [1/1] (0.00ns)   --->   "%rbegin6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 276 'specregionbegin' 'rbegin6' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 277 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 277 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 278 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 278 'write' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 279 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 1)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 279 'write' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 280 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 280 'write' <Predicate = true> <Delay = 0.00>
+
+State 22 <SV = 17> <Delay = 0.00>
+ST_22 : Operation 281 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 281 'wait' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 282 [1/1] (0.00ns)   --->   "%status_3 = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_KWTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 282 'read' 'status_3' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 283 [1/1] (0.00ns)   --->   "%rend33 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin6) nounwind"   --->   Operation 283 'specregionend' 'rend33' <Predicate = true> <Delay = 0.00>
+
+State 23 <SV = 18> <Delay = 4.93>
+ST_23 : Operation 284 [1/1] (0.00ns)   --->   "%offset_new_node0_2 = shl i32 %status_3, 1" [HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 284 'shl' 'offset_new_node0_2' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 285 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i32 %status_3 to i12" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:226]   --->   Operation 285 'trunc' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 286 [1/1] (0.00ns)   --->   "%tmp_34_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_43, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:227]   --->   Operation 286 'bitconcatenate' 'tmp_34_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 287 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum4 = add i13 2000, %tmp_34_cast" [HLS_SPFA_KWTA/solution1/top.cpp:227]   --->   Operation 287 'add' 'KWTA_heap_0_sum4' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 288 [1/1] (0.00ns)   --->   "%newIndex13 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum4, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:227]   --->   Operation 288 'partselect' 'newIndex13' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 289 [1/1] (0.00ns)   --->   "%newIndex13_cast = zext i12 %newIndex13 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:227]   --->   Operation 289 'zext' 'newIndex13_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 290 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_10 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex13_cast" [HLS_SPFA_KWTA/solution1/top.cpp:227]   --->   Operation 290 'getelementptr' 'HTA_heap_0_addr_10' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 291 [1/1] (1.67ns)   --->   "%p_sum5 = add i13 2001, %tmp_38" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 291 'add' 'p_sum5' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 292 [1/1] (0.00ns)   --->   "%tmp_44 = trunc i32 %offset_tail_load_1 to i1"   --->   Operation 292 'trunc' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 293 [1/1] (0.00ns)   --->   "%newIndex14 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum5, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 293 'partselect' 'newIndex14' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 294 [1/1] (0.00ns)   --->   "%newIndex14_cast = zext i12 %newIndex14 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 294 'zext' 'newIndex14_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 295 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_8 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex14_cast" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 295 'getelementptr' 'HTA_heap_1_addr_8' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 296 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_11 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex14_cast" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 296 'getelementptr' 'HTA_heap_0_addr_11' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 297 [1/1] (0.00ns)   --->   "br i1 %tmp_44, label %branch13, label %branch12" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 297 'br' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 298 [1/1] (3.25ns)   --->   "store i32 %offset_new_node0_2, i32* %HTA_heap_1_addr_8, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 298 'store' <Predicate = (!tmp_44)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_23 : Operation 299 [1/1] (0.00ns)   --->   "br label %branch14" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 299 'br' <Predicate = (!tmp_44)> <Delay = 0.00>
+ST_23 : Operation 300 [1/1] (3.25ns)   --->   "store i32 %offset_new_node0_2, i32* %HTA_heap_0_addr_11, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 300 'store' <Predicate = (tmp_44)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_23 : Operation 301 [1/1] (0.00ns)   --->   "br label %branch14" [HLS_SPFA_KWTA/solution1/top.cpp:230]   --->   Operation 301 'br' <Predicate = (tmp_44)> <Delay = 0.00>
+ST_23 : Operation 302 [1/1] (1.67ns)   --->   "%p_sum6 = add i13 %tmp_34_cast, 2001" [HLS_SPFA_KWTA/solution1/top.cpp:235]   --->   Operation 302 'add' 'p_sum6' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 303 [1/1] (0.00ns)   --->   "%newIndex21 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum6, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:235]   --->   Operation 303 'partselect' 'newIndex21' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 304 [1/1] (1.86ns)   --->   "store i32 %offset_new_node0_2, i32* %offset_tail" [HLS_SPFA_KWTA/solution1/top.cpp:237]   --->   Operation 304 'store' <Predicate = true> <Delay = 1.86>
+
+State 24 <SV = 19> <Delay = 3.25>
+ST_24 : Operation 305 [1/1] (3.25ns)   --->   "store i32 %i0, i32* %HTA_heap_0_addr_10, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:234]   --->   Operation 305 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_24 : Operation 306 [1/1] (0.00ns)   --->   "%newIndex21_cast = zext i12 %newIndex21 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:235]   --->   Operation 306 'zext' 'newIndex21_cast' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 307 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_12 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex21_cast" [HLS_SPFA_KWTA/solution1/top.cpp:235]   --->   Operation 307 'getelementptr' 'HTA_heap_1_addr_12' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 308 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_12, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:235]   --->   Operation 308 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_24 : Operation 309 [1/1] (2.27ns)   --->   "store i1 true, i1* %in_list_addr_3, align 2" [HLS_SPFA_KWTA/solution1/top.cpp:238]   --->   Operation 309 'store' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_24 : Operation 310 [1/1] (0.00ns)   --->   "br label %._crit_edge26.backedge" [HLS_SPFA_KWTA/solution1/top.cpp:241]   --->   Operation 310 'br' <Predicate = true> <Delay = 0.00>
+
+State 25 <SV = 16> <Delay = 0.00>
+ST_25 : Operation 311 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 311 'wait' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 312 [1/1] (0.00ns)   --->   "%status_2 = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_KWTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 312 'read' 'status_2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 313 [1/1] (0.00ns)   --->   "%rend39 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin4) nounwind"   --->   Operation 313 'specregionend' 'rend39' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 17> <Delay = 4.93>
+ST_26 : Operation 314 [1/1] (0.00ns)   --->   "%offset_new_node0 = shl i32 %status_2, 1" [HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 314 'shl' 'offset_new_node0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 315 [1/1] (0.00ns)   --->   "%tmp_40 = trunc i32 %status_2 to i12" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:192]   --->   Operation 315 'trunc' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 316 [1/1] (0.00ns)   --->   "%tmp_32_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_40, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:193]   --->   Operation 316 'bitconcatenate' 'tmp_32_cast' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 317 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum2 = add i13 2000, %tmp_32_cast" [HLS_SPFA_KWTA/solution1/top.cpp:193]   --->   Operation 317 'add' 'KWTA_heap_0_sum2' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 318 [1/1] (0.00ns)   --->   "%newIndex11 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum2, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:193]   --->   Operation 318 'partselect' 'newIndex11' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 319 [1/1] (0.00ns)   --->   "%newIndex11_cast = zext i12 %newIndex11 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:193]   --->   Operation 319 'zext' 'newIndex11_cast' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 320 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_8 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex11_cast" [HLS_SPFA_KWTA/solution1/top.cpp:193]   --->   Operation 320 'getelementptr' 'HTA_heap_0_addr_8' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 321 [1/1] (1.67ns)   --->   "%p_sum1 = add i13 2001, %tmp_38" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 321 'add' 'p_sum1' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 322 [1/1] (0.00ns)   --->   "%tmp_41 = trunc i32 %offset_tail_load to i1" [HLS_SPFA_KWTA/solution1/top.cpp:148]   --->   Operation 322 'trunc' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 323 [1/1] (0.00ns)   --->   "%newIndex12 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum1, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 323 'partselect' 'newIndex12' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 324 [1/1] (0.00ns)   --->   "%newIndex12_cast = zext i12 %newIndex12 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 324 'zext' 'newIndex12_cast' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 325 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_7 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex12_cast" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 325 'getelementptr' 'HTA_heap_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 326 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_9 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex12_cast" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 326 'getelementptr' 'HTA_heap_0_addr_9' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 327 [1/1] (0.00ns)   --->   "br i1 %tmp_41, label %branch23, label %branch22" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 327 'br' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 328 [1/1] (3.25ns)   --->   "store i32 %offset_new_node0, i32* %HTA_heap_1_addr_7, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 328 'store' <Predicate = (!tmp_41)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_26 : Operation 329 [1/1] (0.00ns)   --->   "br label %branch24" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 329 'br' <Predicate = (!tmp_41)> <Delay = 0.00>
+ST_26 : Operation 330 [1/1] (3.25ns)   --->   "store i32 %offset_new_node0, i32* %HTA_heap_0_addr_9, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 330 'store' <Predicate = (tmp_41)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_26 : Operation 331 [1/1] (0.00ns)   --->   "br label %branch24" [HLS_SPFA_KWTA/solution1/top.cpp:198]   --->   Operation 331 'br' <Predicate = (tmp_41)> <Delay = 0.00>
+
+State 27 <SV = 18> <Delay = 3.25>
+ST_27 : Operation 332 [1/1] (3.25ns)   --->   "store i32 %i0, i32* %HTA_heap_0_addr_8, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:199]   --->   Operation 332 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+
+State 28 <SV = 19> <Delay = 0.00>
+ST_28 : Operation 333 [1/1] (0.00ns)   --->   "%rbegin5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @HLS_malloc_MD_1_OD_s) nounwind"   --->   Operation 333 'specregionbegin' 'rbegin5' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 334 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:25->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 334 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 335 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 2)" [HLS_SPFA_KWTA/solution1/top.cpp:26->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 335 'write' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 336 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 1)" [HLS_SPFA_KWTA/solution1/top.cpp:28->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 336 'write' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 337 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:29->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 337 'write' <Predicate = true> <Delay = 0.00>
+
+State 29 <SV = 20> <Delay = 0.00>
+ST_29 : Operation 338 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Wait(i32 1) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:30->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 338 'wait' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 339 [1/1] (0.00ns)   --->   "%status_4 = call i32 @_ssdm_op_Read.ap_hs.volatile.i32P(i32* %alloc_KWTA_addr)" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 339 'read' 'status_4' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 340 [1/1] (0.00ns)   --->   "%rend36 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @HLS_malloc_MD_1_OD_s, i32 %rbegin5) nounwind"   --->   Operation 340 'specregionend' 'rend36' <Predicate = true> <Delay = 0.00>
+
+State 30 <SV = 21> <Delay = 4.93>
+ST_30 : Operation 341 [1/1] (0.00ns)   --->   "%offset_new_node1_1 = shl i32 %status_4, 1" [HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 341 'shl' 'offset_new_node1_1' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 342 [1/1] (0.00ns)   --->   "%tmp_46 = trunc i32 %status_4 to i12" [HLS_SPFA_KWTA/solution1/top.cpp:31->HLS_SPFA_KWTA/solution1/top.cpp:205]   --->   Operation 342 'trunc' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 343 [1/1] (0.00ns)   --->   "%tmp_33_cast = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_46, i1 false)" [HLS_SPFA_KWTA/solution1/top.cpp:206]   --->   Operation 343 'bitconcatenate' 'tmp_33_cast' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 344 [1/1] (1.67ns)   --->   "%KWTA_heap_0_sum3 = add i13 2000, %tmp_33_cast" [HLS_SPFA_KWTA/solution1/top.cpp:206]   --->   Operation 344 'add' 'KWTA_heap_0_sum3' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 345 [1/1] (0.00ns)   --->   "%newIndex15 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %KWTA_heap_0_sum3, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:206]   --->   Operation 345 'partselect' 'newIndex15' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 346 [1/1] (0.00ns)   --->   "%newIndex15_cast = zext i12 %newIndex15 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:206]   --->   Operation 346 'zext' 'newIndex15_cast' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 347 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_12 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex15_cast" [HLS_SPFA_KWTA/solution1/top.cpp:206]   --->   Operation 347 'getelementptr' 'HTA_heap_0_addr_12' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 348 [1/1] (1.67ns)   --->   "%p_sum2 = add i13 2001, %tmp_32_cast" [HLS_SPFA_KWTA/solution1/top.cpp:207]   --->   Operation 348 'add' 'p_sum2' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 349 [1/1] (0.00ns)   --->   "%newIndex16 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum2, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:207]   --->   Operation 349 'partselect' 'newIndex16' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 350 [1/1] (0.00ns)   --->   "%newIndex16_cast = zext i12 %newIndex16 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:207]   --->   Operation 350 'zext' 'newIndex16_cast' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 351 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_9 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex16_cast" [HLS_SPFA_KWTA/solution1/top.cpp:207]   --->   Operation 351 'getelementptr' 'HTA_heap_1_addr_9' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 352 [1/1] (3.25ns)   --->   "store i32 %offset_new_node1_1, i32* %HTA_heap_1_addr_9, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:207]   --->   Operation 352 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_30 : Operation 353 [1/1] (3.25ns)   --->   "store i32 %i1, i32* %HTA_heap_0_addr_12, align 8" [HLS_SPFA_KWTA/solution1/top.cpp:208]   --->   Operation 353 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_30 : Operation 354 [1/1] (1.67ns)   --->   "%p_sum4 = add i13 2001, %tmp_33_cast" [HLS_SPFA_KWTA/solution1/top.cpp:209]   --->   Operation 354 'add' 'p_sum4' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 355 [1/1] (0.00ns)   --->   "%newIndex17 = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %p_sum4, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:209]   --->   Operation 355 'partselect' 'newIndex17' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 356 [1/1] (2.27ns)   --->   "store i1 true, i1* %in_list_addr_3, align 2" [HLS_SPFA_KWTA/solution1/top.cpp:214]   --->   Operation 356 'store' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_30 : Operation 357 [1/1] (2.27ns)   --->   "store i1 true, i1* %in_list_addr_4, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:215]   --->   Operation 357 'store' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_30 : Operation 358 [1/1] (1.86ns)   --->   "store i32 %offset_new_node1_1, i32* %offset_tail" [HLS_SPFA_KWTA/solution1/top.cpp:213]   --->   Operation 358 'store' <Predicate = true> <Delay = 1.86>
+
+State 31 <SV = 22> <Delay = 3.25>
+ST_31 : Operation 359 [1/1] (0.00ns)   --->   "%newIndex17_cast = zext i12 %newIndex17 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:209]   --->   Operation 359 'zext' 'newIndex17_cast' <Predicate = (!or_cond & brmerge_demorgan)> <Delay = 0.00>
+ST_31 : Operation 360 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_10 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex17_cast" [HLS_SPFA_KWTA/solution1/top.cpp:209]   --->   Operation 360 'getelementptr' 'HTA_heap_1_addr_10' <Predicate = (!or_cond & brmerge_demorgan)> <Delay = 0.00>
+ST_31 : Operation 361 [1/1] (3.25ns)   --->   "store i32 -1, i32* %HTA_heap_1_addr_10, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:209]   --->   Operation 361 'store' <Predicate = (!or_cond & brmerge_demorgan)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_31 : Operation 362 [1/1] (0.00ns)   --->   "br label %._crit_edge26.backedge" [HLS_SPFA_KWTA/solution1/top.cpp:221]   --->   Operation 362 'br' <Predicate = (!or_cond & brmerge_demorgan)> <Delay = 0.00>
+ST_31 : Operation 363 [1/1] (0.00ns)   --->   "br label %._crit_edge26"   --->   Operation 363 'br' <Predicate = true> <Delay = 0.00>
+
+State 32 <SV = 13> <Delay = 5.77>
+ST_32 : Operation 364 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_4 = load i32* %HTA_heap_0_addr_6, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 364 'load' 'HTA_heap_0_load_4' <Predicate = (tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_32 : Operation 365 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_3 = load i32* %HTA_heap_1_addr_5, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 365 'load' 'HTA_heap_1_load_3' <Predicate = (!tmp_28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_32 : Operation 366 [1/1] (0.69ns)   --->   "%offset_next = select i1 %tmp_28, i32 %HTA_heap_0_load_4, i32 %HTA_heap_1_load_3" [HLS_SPFA_KWTA/solution1/top.cpp:303]   --->   Operation 366 'select' 'offset_next' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 367 [1/1] (0.00ns)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %offset_head, i32 31)" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 367 'bitselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 368 [1/1] (2.55ns)   --->   "%p_neg = sub i32 0, %offset_head" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 368 'sub' 'p_neg' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 369 [1/1] (0.00ns)   --->   "%p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31)" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 369 'partselect' 'p_lshr' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 370 [1/1] (0.00ns)   --->   "%tmp_18 = zext i31 %p_lshr to i32" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 370 'zext' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 371 [1/1] (2.52ns)   --->   "%p_neg_t = sub i32 0, %tmp_18" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 371 'sub' 'p_neg_t' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 372 [1/1] (0.00ns)   --->   "%p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %offset_head, i32 1, i32 31)" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 372 'partselect' 'p_lshr_f' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 373 [1/1] (0.00ns)   --->   "%tmp_19 = zext i31 %p_lshr_f to i32" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 373 'zext' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 374 [1/1] (0.69ns)   --->   "%free_target_assign = select i1 %tmp_37, i32 %p_neg_t, i32 %tmp_19" [HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 374 'select' 'free_target_assign' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 33 <SV = 14> <Delay = 0.00>
+ST_33 : Operation 375 [1/1] (0.00ns)   --->   "%rbegin3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @HLS_free_MD_1_OD_OC) nounwind"   --->   Operation 375 'specregionbegin' 'rbegin3' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 376 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:44->HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 376 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 377 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i8P(i8* %alloc_KWTA_cmd, i8 3)" [HLS_SPFA_KWTA/solution1/top.cpp:45->HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 377 'write' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 378 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str) nounwind" [HLS_SPFA_KWTA/solution1/top.cpp:46->HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 378 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 379 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_size, i32 0)" [HLS_SPFA_KWTA/solution1/top.cpp:47->HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 379 'write' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 380 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_hs.volatile.i32P(i32* %alloc_KWTA_free_target, i32 %free_target_assign)" [HLS_SPFA_KWTA/solution1/top.cpp:48->HLS_SPFA_KWTA/solution1/top.cpp:305]   --->   Operation 380 'write' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 381 [1/1] (0.00ns)   --->   "%rend48 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @HLS_free_MD_1_OD_OC, i32 %rbegin3) nounwind"   --->   Operation 381 'specregionend' 'rend48' <Predicate = true> <Delay = 0.00>
+
+State 34 <SV = 15> <Delay = 2.27>
+ST_34 : Operation 382 [1/1] (0.00ns)   --->   "%in_list_addr_2 = getelementptr inbounds [200 x i1]* %in_list, i64 0, i64 %tmp_3" [HLS_SPFA_KWTA/solution1/top.cpp:313]   --->   Operation 382 'getelementptr' 'in_list_addr_2' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 383 [1/1] (2.27ns)   --->   "store i1 false, i1* %in_list_addr_2, align 1" [HLS_SPFA_KWTA/solution1/top.cpp:313]   --->   Operation 383 'store' <Predicate = true> <Delay = 2.27> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_34 : Operation 384 [1/1] (0.00ns)   --->   "br label %6" [HLS_SPFA_KWTA/solution1/top.cpp:314]   --->   Operation 384 'br' <Predicate = true> <Delay = 0.00>
+
+State 35 <SV = 9> <Delay = 4.93>
+ST_35 : Operation 385 [1/1] (0.00ns)   --->   "%i_3 = phi i31 [ %i_6, %_ifconv2 ], [ 0, %.preheader.preheader ]"   --->   Operation 385 'phi' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 386 [1/1] (0.00ns)   --->   "%i_3_cast = zext i31 %i_3 to i32" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 386 'zext' 'i_3_cast' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 387 [1/1] (2.47ns)   --->   "%tmp_s = icmp slt i32 %i_3_cast, %n_read" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 387 'icmp' 'tmp_s' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 388 [1/1] (2.52ns)   --->   "%i_6 = add i31 %i_3, 1" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 388 'add' 'i_6' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 389 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %_ifconv2, label %13" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 389 'br' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 390 [1/1] (0.00ns)   --->   "%tmp_33 = trunc i31 %i_3 to i13" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 390 'trunc' 'tmp_33' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_35 : Operation 391 [1/1] (1.67ns)   --->   "%local_dis_0_sum = add i13 %tmp_33, %tmp_4_cast" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 391 'add' 'local_dis_0_sum' <Predicate = (tmp_s)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 392 [1/1] (0.00ns)   --->   "%newIndex = call i12 @_ssdm_op_PartSelect.i12.i13.i32.i32(i13 %local_dis_0_sum, i32 1, i32 12)" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 392 'partselect' 'newIndex' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_35 : Operation 393 [1/1] (0.00ns)   --->   "%newIndex_cast = zext i12 %newIndex to i64" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 393 'zext' 'newIndex_cast' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_35 : Operation 394 [1/1] (0.00ns)   --->   "%HTA_heap_0_addr_4 = getelementptr [2000 x i32]* %HTA_heap_0, i64 0, i64 %newIndex_cast" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 394 'getelementptr' 'HTA_heap_0_addr_4' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_35 : Operation 395 [1/1] (0.00ns)   --->   "%HTA_heap_1_addr_3 = getelementptr [2000 x i32]* %HTA_heap_1, i64 0, i64 %newIndex_cast" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 395 'getelementptr' 'HTA_heap_1_addr_3' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_35 : Operation 396 [2/2] (3.25ns)   --->   "%HTA_heap_1_load_1 = load i32* %HTA_heap_1_addr_3, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 396 'load' 'HTA_heap_1_load_1' <Predicate = (tmp_s)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_35 : Operation 397 [2/2] (3.25ns)   --->   "%HTA_heap_0_load_1 = load i32* %HTA_heap_0_addr_4, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 397 'load' 'HTA_heap_0_load_1' <Predicate = (tmp_s)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_35 : Operation 398 [1/1] (0.00ns)   --->   "ret void" [HLS_SPFA_KWTA/solution1/top.cpp:321]   --->   Operation 398 'ret' <Predicate = (!tmp_s)> <Delay = 0.00>
+
+State 36 <SV = 10> <Delay = 7.20>
+ST_36 : Operation 399 [1/1] (0.00ns)   --->   "%tmp_11 = zext i31 %i_3 to i64" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 399 'zext' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 400 [1/1] (0.00ns)   --->   "%tmp_34 = trunc i31 %i_3 to i1" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 400 'trunc' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 401 [1/2] (3.25ns)   --->   "%HTA_heap_1_load_1 = load i32* %HTA_heap_1_addr_3, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 401 'load' 'HTA_heap_1_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_36 : Operation 402 [1/2] (3.25ns)   --->   "%HTA_heap_0_load_1 = load i32* %HTA_heap_0_addr_4, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 402 'load' 'HTA_heap_0_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_36 : Operation 403 [1/1] (0.69ns)   --->   "%HTA_heap_load_phi = select i1 %tmp_34, i32 %HTA_heap_1_load_1, i32 %HTA_heap_0_load_1" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 403 'select' 'HTA_heap_load_phi' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_36 : Operation 404 [1/1] (0.00ns)   --->   "%dis_output_addr = getelementptr [200 x i32]* %dis_output, i64 0, i64 %tmp_11" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 404 'getelementptr' 'dis_output_addr' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 405 [1/1] (3.25ns)   --->   "store i32 %HTA_heap_load_phi, i32* %dis_output_addr, align 4" [HLS_SPFA_KWTA/solution1/top.cpp:319]   --->   Operation 405 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 200> <RAM>
+ST_36 : Operation 406 [1/1] (0.00ns)   --->   "br label %.preheader" [HLS_SPFA_KWTA/solution1/top.cpp:317]   --->   Operation 406 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.55ns
+The critical path consists of the following:
+	wire read on port 'n' [26]  (0 ns)
+	'add' operation ('tmp_1_i', HLS_SPFA_KWTA/solution1/top.cpp:69) [36]  (2.55 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', HLS_SPFA_KWTA/solution1/top.cpp:84) [58]  (1.77 ns)
+
+ <State 4>: 4.93ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_SPFA_KWTA/solution1/top.cpp:84) [58]  (0 ns)
+	'add' operation ('local_dis_0_sum1', HLS_SPFA_KWTA/solution1/top.cpp:84) [66]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_0_addr_1', HLS_SPFA_KWTA/solution1/top.cpp:84) [69]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:84) of constant 10000 on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [73]  (3.25 ns)
+
+ <State 5>: 2.52ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_SPFA_KWTA/solution1/top.cpp:88) [84]  (0 ns)
+	'add' operation ('i', HLS_SPFA_KWTA/solution1/top.cpp:88) [87]  (2.52 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum', HLS_SPFA_KWTA/solution1/top.cpp:97) [114]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_1', HLS_SPFA_KWTA/solution1/top.cpp:97) [117]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:97) of constant 4294967295 on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [118]  (3.25 ns)
+
+ <State 9>: 4.93ns
+The critical path consists of the following:
+	'phi' operation ('offset_next') with incoming values : ('offset_head', HLS_SPFA_KWTA/solution1/top.cpp:93) ('offset_next', HLS_SPFA_KWTA/solution1/top.cpp:303) [122]  (0 ns)
+	'add' operation ('KWTA_heap_0_sum1', HLS_SPFA_KWTA/solution1/top.cpp:120) [127]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_2', HLS_SPFA_KWTA/solution1/top.cpp:120) [132]  (0 ns)
+	'load' operation ('HTA_heap_1_load', HLS_SPFA_KWTA/solution1/top.cpp:129) on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [133]  (3.25 ns)
+
+ <State 10>: 5.63ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load', HLS_SPFA_KWTA/solution1/top.cpp:129) on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [133]  (3.25 ns)
+	'select' operation ('now', HLS_SPFA_KWTA/solution1/top.cpp:129) [135]  (0.698 ns)
+	'add' operation ('local_dis_0_sum2', HLS_SPFA_KWTA/solution1/top.cpp:132) [139]  (1.68 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('HTA_heap_1_addr_4', HLS_SPFA_KWTA/solution1/top.cpp:132) [143]  (0 ns)
+	'load' operation ('HTA_heap_1_load_2', HLS_SPFA_KWTA/solution1/top.cpp:132) on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [144]  (3.25 ns)
+
+ <State 12>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_6', HLS_SPFA_KWTA/solution1/top.cpp:142) [147]  (8.51 ns)
+
+ <State 13>: 5.81ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_SPFA_KWTA/solution1/top.cpp:134) [150]  (0 ns)
+	'shl' operation ('i0', HLS_SPFA_KWTA/solution1/top.cpp:140) [158]  (0 ns)
+	'or' operation ('i1', HLS_SPFA_KWTA/solution1/top.cpp:141) [159]  (0 ns)
+	'add' operation ('tmp_14', HLS_SPFA_KWTA/solution1/top.cpp:143) [164]  (2.55 ns)
+	'getelementptr' operation ('map_addr_1', HLS_SPFA_KWTA/solution1/top.cpp:143) [166]  (0 ns)
+	'load' operation ('m1', HLS_SPFA_KWTA/solution1/top.cpp:143) on array 'map_r' [167]  (3.25 ns)
+
+ <State 14>: 6.71ns
+The critical path consists of the following:
+	'load' operation ('m0', HLS_SPFA_KWTA/solution1/top.cpp:142) on array 'map_r' [163]  (3.25 ns)
+	'icmp' operation ('tmp_16', HLS_SPFA_KWTA/solution1/top.cpp:146) [168]  (2.47 ns)
+	'and' operation ('or_cond', HLS_SPFA_KWTA/solution1/top.cpp:146) [170]  (0.978 ns)
+
+ <State 15>: 6.43ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_0_load_3', HLS_SPFA_KWTA/solution1/top.cpp:150) on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [183]  (3.25 ns)
+	'icmp' operation ('tmp_21', HLS_SPFA_KWTA/solution1/top.cpp:150) [184]  (2.47 ns)
+	'select' operation ('weight0_HTA_heap_loa', HLS_SPFA_KWTA/solution1/top.cpp:171) [201]  (0.698 ns)
+
+ <State 16>: 4.23ns
+The critical path consists of the following:
+	'load' operation ('in_list_load', HLS_SPFA_KWTA/solution1/top.cpp:150) on array 'in_list', HLS_SPFA_KWTA/solution1/top.cpp:72 [186]  (2.28 ns)
+	'xor' operation ('tmp_22', HLS_SPFA_KWTA/solution1/top.cpp:150) [187]  (0 ns)
+	'and' operation ('update0', HLS_SPFA_KWTA/solution1/top.cpp:71) [188]  (0.978 ns)
+	'and' operation ('brmerge_demorgan', HLS_SPFA_KWTA/solution1/top.cpp:186) [205]  (0.978 ns)
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum7', HLS_SPFA_KWTA/solution1/top.cpp:263) [228]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_11', HLS_SPFA_KWTA/solution1/top.cpp:263) [232]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:263) of variable 'offset_new_node1', HLS_SPFA_KWTA/solution1/top.cpp:248 on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [236]  (3.25 ns)
+
+ <State 20>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:274) of variable 'i1', HLS_SPFA_KWTA/solution1/top.cpp:141 on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [242]  (3.25 ns)
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum5', HLS_SPFA_KWTA/solution1/top.cpp:230) [268]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_8', HLS_SPFA_KWTA/solution1/top.cpp:230) [272]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:230) of variable 'offset_new_node0', HLS_SPFA_KWTA/solution1/top.cpp:226 on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [276]  (3.25 ns)
+
+ <State 24>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:234) of variable 'i0', HLS_SPFA_KWTA/solution1/top.cpp:140 on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [282]  (3.25 ns)
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+ <State 26>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('p_sum1', HLS_SPFA_KWTA/solution1/top.cpp:198) [307]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_7', HLS_SPFA_KWTA/solution1/top.cpp:198) [311]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:198) of variable 'offset_new_node0', HLS_SPFA_KWTA/solution1/top.cpp:192 on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [315]  (3.25 ns)
+
+ <State 27>: 3.25ns
+The critical path consists of the following:
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:199) of variable 'i0', HLS_SPFA_KWTA/solution1/top.cpp:140 on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [321]  (3.25 ns)
+
+ <State 28>: 0ns
+The critical path consists of the following:
+
+ <State 29>: 0ns
+The critical path consists of the following:
+
+ <State 30>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('KWTA_heap_0_sum3', HLS_SPFA_KWTA/solution1/top.cpp:206) [333]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_0_addr_12', HLS_SPFA_KWTA/solution1/top.cpp:206) [336]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:208) of variable 'i1', HLS_SPFA_KWTA/solution1/top.cpp:141 on array 'HTA_heap[0]', HLS_SPFA_KWTA/solution1/top.cpp:63 [342]  (3.25 ns)
+
+ <State 31>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('HTA_heap_1_addr_10', HLS_SPFA_KWTA/solution1/top.cpp:209) [346]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:209) of constant 4294967295 on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [347]  (3.25 ns)
+
+ <State 32>: 5.77ns
+The critical path consists of the following:
+	'sub' operation ('p_neg', HLS_SPFA_KWTA/solution1/top.cpp:305) [364]  (2.55 ns)
+	'sub' operation ('p_neg_t', HLS_SPFA_KWTA/solution1/top.cpp:305) [367]  (2.52 ns)
+	'select' operation ('free_target', HLS_SPFA_KWTA/solution1/top.cpp:305) [370]  (0.698 ns)
+
+ <State 33>: 0ns
+The critical path consists of the following:
+
+ <State 34>: 2.28ns
+The critical path consists of the following:
+	'getelementptr' operation ('in_list_addr_2', HLS_SPFA_KWTA/solution1/top.cpp:313) [378]  (0 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:313) of constant 0 on array 'in_list', HLS_SPFA_KWTA/solution1/top.cpp:72 [379]  (2.28 ns)
+
+ <State 35>: 4.93ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_SPFA_KWTA/solution1/top.cpp:317) [384]  (0 ns)
+	'add' operation ('local_dis_0_sum', HLS_SPFA_KWTA/solution1/top.cpp:319) [393]  (1.68 ns)
+	'getelementptr' operation ('HTA_heap_1_addr_3', HLS_SPFA_KWTA/solution1/top.cpp:319) [397]  (0 ns)
+	'load' operation ('HTA_heap_1_load_1', HLS_SPFA_KWTA/solution1/top.cpp:319) on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [398]  (3.25 ns)
+
+ <State 36>: 7.21ns
+The critical path consists of the following:
+	'load' operation ('HTA_heap_1_load_1', HLS_SPFA_KWTA/solution1/top.cpp:319) on array 'HTA_heap[1]', HLS_SPFA_KWTA/solution1/top.cpp:63 [398]  (3.25 ns)
+	'select' operation ('HTA_heap_load_phi', HLS_SPFA_KWTA/solution1/top.cpp:319) [400]  (0.698 ns)
+	'store' operation (HLS_SPFA_KWTA/solution1/top.cpp:319) of variable 'HTA_heap_load_phi', HLS_SPFA_KWTA/solution1/top.cpp:319 on array 'dis_output' [402]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

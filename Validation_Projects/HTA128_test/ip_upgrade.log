@@ -1,0 +1,261 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:53:14 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300243) to (Rev. 1807300252)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_HTA128_theta_0_0'.
+
+
+-Upgrade has removed interface 'port1_V'
+
+-Upgrade has removed interface 'port2_V'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_HTA128_theta_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'port1_V'
+
+-Upgrade has removed port 'port1_V_ap_vld'
+
+-Upgrade has removed port 'port2_V'
+
+-Upgrade has removed port 'port2_V_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:46:29 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300230) to (Rev. 1807300243)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:31:43 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300216) to (Rev. 1807300230)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:17:52 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300208) to (Rev. 1807300216)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_HTA128_theta_0_0'.
+
+
+-Upgrade has added interface 'port1_V' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'port2_V' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_HTA128_theta_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'port1_V'
+
+-Upgrade has added port 'port1_V_ap_vld'
+
+-Upgrade has added port 'port2_V'
+
+-Upgrade has added port 'port2_V_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:09:33 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300200) to (Rev. 1807300208)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 02:00:36 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300155) to (Rev. 1807300200)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 01:55:58 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300144) to (Rev. 1807300155)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 01:45:19 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300136) to (Rev. 1807300144)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 01:37:37 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300131) to (Rev. 1807300136)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul 30 01:31:57 2018
+| Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HTA128_theta_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HTA128_theta_0_0 (xilinx.com:hls:HTA128_theta:1.0) from (Rev. 1807300118) to (Rev. 1807300131)
+

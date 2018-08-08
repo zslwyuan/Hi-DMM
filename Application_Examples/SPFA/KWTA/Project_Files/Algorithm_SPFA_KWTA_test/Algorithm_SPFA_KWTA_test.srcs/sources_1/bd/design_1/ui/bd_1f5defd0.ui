@@ -1,0 +1,68 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port ap_start_0 -pg 1 -y 440 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y -670 -defaultsOSRD
+preplace port clka_0 -pg 1 -y -80 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -y -630 -defaultsOSRD
+preplace port reset -pg 1 -y -650 -defaultsOSRD
+preplace portBus n_0 -pg 1 -y 190 -defaultsOSRD
+preplace portBus douta_0 -pg 1 -y 630 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y -630 -defaultsOSRD
+preplace inst HLS_SPFA_KWTA_0 -pg 1 -lvl 2 -y 310 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -y -10 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 3 -y 670 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -y -610 -defaultsOSRD
+preplace inst KWTA_theta_0 -pg 1 -lvl 1 -y 450 -defaultsOSRD
+preplace inst HTA2048_theta_0 -pg 1 -lvl 1 -y -140 -defaultsOSRD
+preplace netloc clk_wiz_locked 1 1 1 550
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_free_target_ap_vld 1 0 3 -40 610 NJ 610 1270
+preplace netloc HLS_SPFA_KWTA_0_map_r_ce0 1 2 1 1370
+preplace netloc HTA2048_theta_0_alloc_free_target_ap_ack 1 1 1 520
+preplace netloc blk_mem_gen_1_douta 1 2 2 1400 550 1620J
+preplace netloc clka_0_1 1 0 3 -150J 20 NJ 20 1390J
+preplace netloc KWTA_theta_0_alloc_size_ap_ack 1 1 1 510
+preplace netloc HLS_SPFA_KWTA_0_map_r_ce1 1 2 1 1380
+preplace netloc HLS_SPFA_KWTA_0_dis_output_d0 1 2 1 1340
+preplace netloc HTA2048_theta_0_alloc_addr 1 1 1 500
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_free_target 1 0 3 -30 720 NJ 720 1230
+preplace netloc HTA2048_theta_0_alloc_cmd_ap_ack 1 1 1 510
+preplace netloc HLS_SPFA_KWTA_0_map_r_address0 1 2 1 1360
+preplace netloc HLS_SPFA_KWTA_0_dis_output_address0 1 2 1 1380
+preplace netloc HLS_SPFA_KWTA_0_map_r_address1 1 2 1 1400
+preplace netloc HLS_SPFA_KWTA_0_dis_output_we0 1 2 1 1350
+preplace netloc KWTA_theta_0_alloc_addr 1 1 1 570
+preplace netloc HTA2048_theta_0_alloc_size_ap_ack 1 1 1 550
+preplace netloc ext_reset_in_0_1 1 0 2 -140J -700 550J
+preplace netloc KWTA_theta_0_alloc_free_target_ap_ack 1 1 1 520
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_cmd_ap_vld 1 0 3 -70 640 NJ 640 1250
+preplace netloc n_0_1 1 0 2 NJ 190 490J
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_addr_ap_ack 1 0 3 -80 620 NJ 620 1260
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_size 1 0 3 -110 690 NJ 690 1240
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_size 1 0 3 -90 740 NJ 740 1300
+preplace netloc clk_in1_0_1 1 0 1 0J
+preplace netloc HLS_SPFA_KWTA_0_dis_output_ce0 1 2 1 1370
+preplace netloc KWTA_theta_0_alloc_cmd_ap_ack 1 1 1 530
+preplace netloc KWTA_theta_0_alloc_addr_ap_vld 1 1 1 480
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_size_ap_vld 1 0 3 -130 670 NJ 670 1320
+preplace netloc blk_mem_gen_0_douta 1 1 2 560 -40 NJ
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 3 0 290 470 580 1280
+preplace netloc ap_start_0_1 1 0 2 -140 170 N
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_addr_ap_ack 1 0 3 -10 680 NJ 680 1290
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_free_target_ap_vld 1 0 3 -100 710 NJ 710 1310
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_size_ap_vld 1 0 3 -120 730 NJ 730 1330
+preplace netloc blk_mem_gen_0_doutb 1 1 2 570 40 1380J
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_free_target 1 0 3 -50 660 NJ 660 1220
+preplace netloc HLS_SPFA_KWTA_0_alloc_HTA_cmd 1 0 3 -20 650 NJ 650 1200
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_cmd 1 0 3 0 700 NJ 700 1210
+preplace netloc HLS_SPFA_KWTA_0_alloc_KWTA_cmd_ap_vld 1 0 3 10 630 530J 600 1190
+preplace netloc reset_0_1 1 0 1 -130J
+preplace netloc HTA2048_theta_0_alloc_addr_ap_vld 1 1 1 530
+preplace netloc clk_wiz_clk_out1 1 0 2 -60 -300 540
+levelinfo -pg 1 -170 240 920 1510 1640 -top -720 -bot 890
+",
+}
+{
+   da_clkrst_cnt: "1",
+}
