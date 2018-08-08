@@ -22,7 +22,18 @@ Hi-DMM is an open-source tool, coupled with VivadoHLS, a HLS platform developed 
     table and mini-heap are involved to minimize memory
     allocation latency.
     
-    
+
+
+![image](https://github.com/zslwyuan/Hi-DMM/blob/master/Images/COMPILATION.pdf)
+
+
+![image](https://github.com/zslwyuan/Hi-DMM/blob/master/Images/original.png)
+
+
+![image](https://github.com/zslwyuan/Hi-DMM/blob/master/Images/post_HiDMM.png)
+
+
+
 Hi-DMM was presented in the International Conference on Compilers,
 Architecture, and Synthesis for Embedded Systems (CASES) 2018 and
 appears as part of the ESWEEK-TCAD special issue.
