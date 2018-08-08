@@ -1,0 +1,919 @@
+
+================== Diagnostics ================
+[{'severity': 2, 'location': <SourceLocation file 'preHiDMM_mask.cc', line 574, column 13>, 'spelling': "address of stack memory associated with local variable 'size' returned", 'ranges': <clang.cindex.Diagnostic.ranges.<locals>.RangeIterator object at 0x7fddbaa34390>, 'fixits': <clang.cindex.Diagnostic.fixits.<locals>.FixItIterator object at 0x7fddbaa343c8>}]
+========== Declaration of Pointers ==============
+name:hhh   loc:609   type:int *   pointee:int
+name:ttt   loc:609   type:int *   pointee:int
+name:uuu   loc:609   type:int *   pointee:int
+name:hasdhh   loc:610   type:float *   pointee:float
+name:struct_tmp   loc:611   type:user_d_type *   pointee:user_d_type
+name:struct_tmp11   loc:611   type:user_d_type *   pointee:user_d_type
+name:struct0_tmp   loc:612   type:user_d_type_aa *   pointee:user_d_type_aa
+name:oo   loc:613   type:ap_int<5> *   pointee:ap_int<5>
+name:qq   loc:613   type:ap_int<5> *   pointee:ap_int<5>
+name:ootest   loc:614   type:ap_int<8> *   pointee:ap_int<8>
+name:ooooootest   loc:615   type:ap_uint<13> *   pointee:ap_uint<13>
+name:real_right   loc:616   type:ap_uint<16> *   pointee:ap_uint<16>
+name:ppppp   loc:656   type:ap_fixed<2, 3, 6, 222> *   pointee:ap_fixed<2, 3, 6, 222>
+
+=======================================
+{'id': 437, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38112@F@top#I#I#I#@hhh', 'spelling': 'hhh', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 10>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 13>, 'is_definition': True, 'definition id': 437}
+{'id': 439, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38112@F@top#I#I#I#@ttt', 'spelling': 'ttt', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 21>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 24>, 'is_definition': False, 'definition id': 439}
+{'id': 440, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38112@F@top#I#I#I#@uuu', 'spelling': 'uuu', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 27>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 27>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 609, column 30>, 'is_definition': False, 'definition id': 440}
+{'id': 443, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38143@F@top#I#I#I#@hasdhh', 'spelling': 'hasdhh', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 610, column 17>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 610, column 17>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 610, column 23>, 'is_definition': False, 'definition id': 443}
+{'id': 447, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38172@F@top#I#I#I#@struct_tmp', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 28>, 'is_definition': True, 'definition id': 447}
+{'id': 448, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38172@F@top#I#I#I#@struct_tmp11', 'spelling': 'struct_tmp11', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 31>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 31>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 43>, 'is_definition': False, 'definition id': 448}
+{'id': 451, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38216@F@top#I#I#I#@struct0_tmp', 'spelling': 'struct0_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 32>, 'is_definition': True, 'definition id': 451}
+{'id': 455, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38249@F@top#I#I#I#@oo', 'spelling': 'oo', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 16>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 18>, 'is_definition': True, 'definition id': 455}
+{'id': 457, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38249@F@top#I#I#I#@qq', 'spelling': 'qq', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 21>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 613, column 23>, 'is_definition': False, 'definition id': 457}
+{'id': 461, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38273@F@top#I#I#I#@ootest', 'spelling': 'ootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 614, column 16>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 614, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 614, column 22>, 'is_definition': True, 'definition id': 461}
+{'id': 465, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38296@F@top#I#I#I#@ooooootest', 'spelling': 'ooooootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 615, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 615, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 615, column 28>, 'is_definition': True, 'definition id': 465}
+{'id': 469, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38325@F@top#I#I#I#@real_right', 'spelling': 'real_right', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 616, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 616, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 616, column 28>, 'is_definition': True, 'definition id': 469}
+{'id': 765, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@39608@F@top#I#I#I#@ppppp', 'spelling': 'ppppp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 656, column 37>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 656, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 656, column 42>, 'is_definition': True, 'definition id': 765}
+hhh(0)----ttt(1)----uuu(2)----hasdhh(3)----struct_tmp(4)----struct_tmp11(5)----struct0_tmp(6)----oo(7)----qq(8)----ootest(9)----ooooootest(10)----real_right(11)----ppppp(12)----
+
+========== Allocation of Pointers ==============
+{'id': 493, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 47>, 'is_definition': False, 'definition id': None}
+{'id': 507, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 45>, 'is_definition': False, 'definition id': None}
+{'id': 520, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 60>, 'is_definition': False, 'definition id': None}
+{'id': 532, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 56>, 'is_definition': False, 'definition id': None}
+{'id': 541, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 58>, 'is_definition': False, 'definition id': None}
+{'id': 550, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 60>, 'is_definition': False, 'definition id': None}
+{'id': 560, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 56>, 'is_definition': False, 'definition id': None}
+{'id': 783, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 70>, 'is_definition': False, 'definition id': None}
+{'id': 797, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 54>, 'is_definition': False, 'definition id': None}
+{'id': 811, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 54>, 'is_definition': False, 'definition id': None}
+{'id': 825, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 58>, 'is_definition': False, 'definition id': None}
+{'id': 839, 'kind': CursorKind.BINARY_OPERATOR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 64>, 'is_definition': False, 'definition id': None}
+
+========== Access of Pointers ==============
+{'id': 561, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 19>, 'is_definition': False, 'definition id': 447}
+{'id': 571, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 30>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 30>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 629, column 40>, 'is_definition': False, 'definition id': 447}
+{'id': 579, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct0_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 20>, 'is_definition': False, 'definition id': 451}
+{'id': 589, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct0_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 31>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 31>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 630, column 42>, 'is_definition': False, 'definition id': 451}
+{'id': 669, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ttt', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 18>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 21>, 'is_definition': False, 'definition id': 439}
+{'id': 675, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'hhh', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 27>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 27>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 30>, 'is_definition': False, 'definition id': 437}
+{'id': 683, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 23>, 'is_definition': False, 'definition id': 447}
+{'id': 692, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 34>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 34>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 643, column 44>, 'is_definition': False, 'definition id': 447}
+{'id': 699, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ttt', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 16>, 'is_definition': False, 'definition id': 439}
+{'id': 700, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ttt', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 19>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 19>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 644, column 22>, 'is_definition': False, 'definition id': 439}
+{'id': 855, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ppppp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 18>, 'is_definition': False, 'definition id': 765}
+{'id': 862, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ppppp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 25>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 25>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 30>, 'is_definition': False, 'definition id': 765}
+{'id': 875, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'oo', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 18>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 20>, 'is_definition': False, 'definition id': 455}
+{'id': 884, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 27>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 27>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 33>, 'is_definition': False, 'definition id': 461}
+{'id': 903, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'oo', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 21>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 23>, 'is_definition': False, 'definition id': 455}
+{'id': 912, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 29>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 29>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 35>, 'is_definition': False, 'definition id': 461}
+{'id': 926, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ooooootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 23>, 'is_definition': False, 'definition id': 465}
+{'id': 937, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ooooootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 36>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 36>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 46>, 'is_definition': False, 'definition id': 465}
+{'id': 947, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 23>, 'is_definition': False, 'definition id': 447}
+{'id': 955, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ooooootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 35>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 35>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 45>, 'is_definition': False, 'definition id': 465}
+{'id': 1017, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'oo', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 15>, 'is_definition': False, 'definition id': 455}
+{'id': 1018, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'qq', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 18>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 684, column 20>, 'is_definition': False, 'definition id': 457}
+{'id': 1027, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 23>, 'is_definition': False, 'definition id': 447}
+{'id': 1030, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp11', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 32>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 32>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 686, column 44>, 'is_definition': False, 'definition id': 448}
+{'id': 1033, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 23>, 'is_definition': False, 'definition id': 447}
+{'id': 1034, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp11', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 26>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 26>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 688, column 38>, 'is_definition': False, 'definition id': 448}
+
+========== Access of Pointers with ArraySubscription ==============
+{'id': 673, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 18>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 24>, 'is_definition': False, 'definition id': None}
+{'id': 679, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 27>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 27>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 642, column 33>, 'is_definition': False, 'definition id': None}
+{'id': 858, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 22>, 'is_definition': False, 'definition id': None}
+{'id': 865, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 25>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 25>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 665, column 34>, 'is_definition': False, 'definition id': None}
+{'id': 878, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 18>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 24>, 'is_definition': False, 'definition id': None}
+{'id': 887, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 27>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 27>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 666, column 37>, 'is_definition': False, 'definition id': None}
+{'id': 907, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 21>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 26>, 'is_definition': False, 'definition id': None}
+{'id': 918, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 29>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 29>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 670, column 42>, 'is_definition': False, 'definition id': None}
+{'id': 930, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 27>, 'is_definition': False, 'definition id': None}
+{'id': 941, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 36>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 36>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 673, column 50>, 'is_definition': False, 'definition id': None}
+{'id': 959, 'kind': CursorKind.ARRAY_SUBSCRIPT_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 35>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 35>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 674, column 49>, 'is_definition': False, 'definition id': None}
+
+========== Allocation Arguments of Pointers ==============
+{'id': 487, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': '', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 29>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 29>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 32>, 'is_definition': False, 'definition id': None}
+{'id': 501, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 29>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 29>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 30>, 'is_definition': False, 'definition id': 434}
+{'id': 514, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 44>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 44>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 45>, 'is_definition': False, 'definition id': 434}
+{'id': 777, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 54>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 54>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 55>, 'is_definition': False, 'definition id': 434}
+{'id': 791, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 38>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 38>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 39>, 'is_definition': False, 'definition id': 434}
+{'id': 805, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 38>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 38>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 39>, 'is_definition': False, 'definition id': 434}
+{'id': 819, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 42>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 42>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 43>, 'is_definition': False, 'definition id': 434}
+{'id': 833, 'kind': CursorKind.UNEXPOSED_EXPR, 'usr': '', 'spelling': 'b', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 48>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 48>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 49>, 'is_definition': False, 'definition id': 434}
+
+========== Structure ==============
+{'structname': 'user_d_type', 'basetype': 'ap_uint<16>'}
+{'id': 409, 'kind': CursorKind.TYPEDEF_DECL, 'usr': 'c:preHiDMM_mask.cc@T@user_d_type', 'spelling': 'user_d_type', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 590, column 3>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 583, column 1>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 590, column 14>, 'is_definition': True, 'definition id': 409}
+{'id': 397, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@aaaaaaaaaaaaaaa@FI@a', 'spelling': 'a', 'type': 'ap_uint<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 585, column 17>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 585, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 585, column 18>, 'is_definition': True, 'definition id': 397}
+{'id': 400, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@aaaaaaaaaaaaaaa@FI@b', 'spelling': 'b', 'type': 'ap_uint<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 586, column 17>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 586, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 586, column 18>, 'is_definition': True, 'definition id': 400}
+{'id': 403, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@aaaaaaaaaaaaaaa@FI@c', 'spelling': 'c', 'type': 'ap_uint<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 587, column 17>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 587, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 587, column 18>, 'is_definition': True, 'definition id': 403}
+{'id': 406, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@aaaaaaaaaaaaaaa@FI@left', 'spelling': 'left', 'type': 'aaaaaaaaaaaaaaa *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 588, column 22>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 588, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 588, column 26>, 'is_definition': True, 'definition id': 406}
+{'id': 408, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@aaaaaaaaaaaaaaa@FI@right', 'spelling': 'right', 'type': 'aaaaaaaaaaaaaaa *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 589, column 22>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 589, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 589, column 27>, 'is_definition': True, 'definition id': 408}
+{'structname': 'user_d_type_aa', 'basetype': 'ap_int<16>'}
+{'id': 424, 'kind': CursorKind.TYPEDEF_DECL, 'usr': 'c:preHiDMM_mask.cc@T@user_d_type_aa', 'spelling': 'user_d_type_aa', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 599, column 3>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 592, column 1>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 599, column 17>, 'is_definition': True, 'definition id': 424}
+{'id': 412, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@ttttttt@FI@a', 'spelling': 'a', 'type': 'ap_int<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 594, column 16>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 594, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 594, column 17>, 'is_definition': True, 'definition id': 412}
+{'id': 415, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@ttttttt@FI@b', 'spelling': 'b', 'type': 'ap_int<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 595, column 16>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 595, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 595, column 17>, 'is_definition': True, 'definition id': 415}
+{'id': 418, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@ttttttt@FI@c', 'spelling': 'c', 'type': 'ap_int<16>', 'type kind': 'TypeKind.UNEXPOSED', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 596, column 16>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 596, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 596, column 17>, 'is_definition': True, 'definition id': 418}
+{'id': 421, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@ttttttt@FI@left', 'spelling': 'left', 'type': 'ttttttt *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 597, column 14>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 597, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 597, column 18>, 'is_definition': True, 'definition id': 421}
+{'id': 423, 'kind': CursorKind.FIELD_DECL, 'usr': 'c:@S@ttttttt@FI@right', 'spelling': 'right', 'type': 'ttttttt *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 598, column 14>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 598, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 598, column 19>, 'is_definition': True, 'definition id': 423}
+
+========== Struct Pointers  ==============
+{'id': 447, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38172@F@top#I#I#I#@struct_tmp', 'spelling': 'struct_tmp', 'type': 'user_d_type *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 18>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 28>, 'is_definition': True, 'definition id': 447}
+sons:['TypeKind.UNEXPOSED--a', 'TypeKind.UNEXPOSED--b', 'TypeKind.UNEXPOSED--c', 'TypeKind.POINTER--left', 'TypeKind.POINTER--right']
+{'id': 448, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38172@F@top#I#I#I#@struct_tmp11', 'spelling': 'struct_tmp11', 'type': 'user_d_type *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 31>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 31>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 611, column 43>, 'is_definition': False, 'definition id': 448}
+sons:['TypeKind.UNEXPOSED--a', 'TypeKind.UNEXPOSED--b', 'TypeKind.UNEXPOSED--c', 'TypeKind.POINTER--left', 'TypeKind.POINTER--right']
+{'id': 451, 'kind': CursorKind.VAR_DECL, 'usr': 'c:preHiDMM_mask.cc@38216@F@top#I#I#I#@struct0_tmp', 'spelling': 'struct0_tmp', 'type': 'user_d_type_aa *', 'type kind': 'TypeKind.POINTER', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 21>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 5>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 612, column 32>, 'is_definition': True, 'definition id': 451}
+sons:['TypeKind.UNEXPOSED--a', 'TypeKind.UNEXPOSED--b', 'TypeKind.UNEXPOSED--c', 'TypeKind.POINTER--left', 'TypeKind.POINTER--right']
+
+========== Access of Structure Pointers ==============
+{'member': 'a', 'struct_var': 'struct_tmp', 'line': 629}
+{'member': 'b', 'struct_var': 'struct_tmp', 'line': 629}
+{'member': 'a', 'struct_var': 'struct0_tmp', 'line': 630}
+{'member': 'b', 'struct_var': 'struct0_tmp', 'line': 630}
+{'member': 'a', 'struct_var': 'struct_tmp', 'line': 643}
+{'member': 'b', 'struct_var': 'struct_tmp', 'line': 643}
+{'member': 'a', 'struct_var': 'struct_tmp', 'line': 674}
+{'member': 'left', 'struct_var': 'struct_tmp', 'line': 686}
+
+========== Types of  Pointers ==============
+---int---
+['hhh', 'ttt', 'uuu']
+---float---
+['hasdhh']
+---user_d_type---
+['struct_tmp', 'struct_tmp11']
+---user_d_type_aa---
+['struct0_tmp']
+---ap_int<5>---
+['oo', 'qq']
+---ap_int<8>---
+['ootest']
+---ap_uint<13>---
+['ooooootest']
+---ap_uint<16>---
+['real_right']
+---ap_fixed<2, 3, 6, 222>---
+['ppppp']
+
+========== Assignment of  Pointers ==============
+
+========== Pointers with Allocation  ==============
+{'id': 483, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ttt', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 620, column 12>, 'is_definition': False, 'definition id': 439, 'type': 'int *', 'type kind': 'TypeKind.POINTER'}
+{'id': 496, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'hhh', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 622, column 12>, 'is_definition': False, 'definition id': 437, 'type': 'int *', 'type kind': 'TypeKind.POINTER'}
+{'id': 508, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 623, column 19>, 'is_definition': False, 'definition id': 447, 'type': 'user_d_type *', 'type kind': 'TypeKind.POINTER'}
+{'id': 524, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 625, column 19>, 'is_definition': False, 'definition id': 447, 'type': 'user_d_type *', 'type kind': 'TypeKind.POINTER'}
+{'id': 533, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct_tmp11', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 626, column 21>, 'is_definition': False, 'definition id': 448, 'type': 'user_d_type *', 'type kind': 'TypeKind.POINTER'}
+{'id': 542, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'struct0_tmp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 627, column 20>, 'is_definition': False, 'definition id': 451, 'type': 'user_d_type_aa *', 'type kind': 'TypeKind.POINTER'}
+{'id': 551, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'real_right', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 9>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 9>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 628, column 19>, 'is_definition': False, 'definition id': 469, 'type': 'ap_uint<16> *', 'type kind': 'TypeKind.POINTER'}
+{'id': 767, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ppppp', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 657, column 18>, 'is_definition': False, 'definition id': 765, 'type': 'ap_fixed<2, 3, 6, 222> *', 'type kind': 'TypeKind.POINTER'}
+{'id': 784, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'oo', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 658, column 15>, 'is_definition': False, 'definition id': 455, 'type': 'ap_int<5> *', 'type kind': 'TypeKind.POINTER'}
+{'id': 798, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'qq', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 659, column 15>, 'is_definition': False, 'definition id': 457, 'type': 'ap_int<5> *', 'type kind': 'TypeKind.POINTER'}
+{'id': 812, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 660, column 19>, 'is_definition': False, 'definition id': 461, 'type': 'ap_int<8> *', 'type kind': 'TypeKind.POINTER'}
+{'id': 826, 'kind': CursorKind.DECL_REF_EXPR, 'usr': '', 'spelling': 'ooooootest', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 661, column 23>, 'is_definition': False, 'definition id': 465, 'type': 'ap_uint<13> *', 'type kind': 'TypeKind.POINTER'}
+
+========== Freeing of Pointers ==============
+free pointer:oo
+{'id': 1016, 'kind': CursorKind.CALL_EXPR, 'usr': '', 'spelling': 'free', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 682, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 682, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 682, column 41>, 'is_definition': False, 'definition id': 391}
+free pointer:ooooootest
+{'id': 1042, 'kind': CursorKind.CALL_EXPR, 'usr': '', 'spelling': 'free', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 690, column 13>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 690, column 13>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 690, column 49>, 'is_definition': False, 'definition id': 391}
+
+========== Assigment Expression of Pointers ==============
+ttt = ttt + b;-----has_pointer_in_struct: False
+oo = qq + tb + m;-----has_pointer_in_struct: False
+struct_tmp->left = struct_tmp11;-----has_pointer_in_struct: True
+struct_tmp = struct_tmp11;-----has_pointer_in_struct: False
+
+============== static_array ================
+{'id': 394, 'kind': CursorKind.VAR_DECL, 'typekind': 'TypeKind.CONSTANTARRAY', 'typename': 'unsigned long long [100][100]', 'usr': 'c:@array', 'spelling': 'array', 'displayname': 'array', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 581, column 20>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 581, column 1>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 581, column 35>, 'is_definition': True, 'definition id': 394}
+{'name': 'array', 'type': 'unsigned long long', 'width': 64, 'depth': 10000}
+{'id': 426, 'kind': CursorKind.VAR_DECL, 'typekind': 'TypeKind.CONSTANTARRAY', 'typename': 'int [10000]', 'usr': 'c:@dynamic_heap', 'spelling': 'dynamic_heap', 'displayname': 'dynamic_heap', 'location': <SourceLocation file 'preHiDMM_mask.cc', line 601, column 5>, 'extent.start': <SourceLocation file 'preHiDMM_mask.cc', line 601, column 1>, 'extent.end': <SourceLocation file 'preHiDMM_mask.cc', line 601, column 24>, 'is_definition': True, 'definition id': 426}
+{'name': 'dynamic_heap', 'type': 'int', 'width': 32, 'depth': 10000}
+
+==============  BRAM cost EVAL ================
+name:array  width:64  depth:10000  partition_factor:1  BRAM_cost:64
+name:dynamic_heap  width:32  depth:10000  partition_factor:4  BRAM_cost:32
+
+============== Total 18K BRAM cost =96 ================
+
+==============  Heap Assignment ================
+{'group_num': 9,
+ 'heap_in_attempt': [{'BRAM_cost': 224,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 242,
+                      'allocator_capability': 57344,
+                      'comp_num': 3,
+                      'depth': 114688,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 20.0,
+                      'tmp_heap_comp_list': [0, 1, 2],
+                      'tmp_heap_comp_list_string': ['hhh', 'ttt', 'uuu'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hasdhh'],
+                      'var_type': 1,
+                      'var_type_string': 'float',
+                      'width': 32},
+                     {'BRAM_cost': 176,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 181,
+                      'allocator_capability': 180224,
+                      'comp_num': 2,
+                      'depth': 180224,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 15.0,
+                      'tmp_heap_comp_list': [0, 1],
+                      'tmp_heap_comp_list_string': ['struct_tmp',
+                                                    'struct_tmp11'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct0_tmp'],
+                      'var_type': 3,
+                      'var_type_string': 'user_d_type_aa',
+                      'width': 16},
+                     {'BRAM_cost': 105,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 86016,
+                      'comp_num': 2,
+                      'depth': 344064,
+                      'partiton_factor': 7,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0, 1],
+                      'tmp_heap_comp_list_string': ['oo', 'qq'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 73728,
+                      'comp_num': 1,
+                      'depth': 147456,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ootest'],
+                      'var_type': 5,
+                      'var_type_string': 'ap_int<8>',
+                      'width': 8},
+                     {'BRAM_cost': 65,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 40960,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ooooootest'],
+                      'var_type': 6,
+                      'var_type_string': 'ap_uint<13>',
+                      'width': 13},
+                     {'BRAM_cost': 64,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 65536,
+                      'comp_num': 1,
+                      'depth': 65536,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['real_right'],
+                      'var_type': 7,
+                      'var_type_string': 'ap_uint<16>',
+                      'width': 16},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 589824,
+                      'comp_num': 1,
+                      'depth': 589824,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ppppp'],
+                      'var_type': 8,
+                      'var_type_string': 'ap_fixed<2, 3, 6, 222>',
+                      'width': 2}]}
+{'group_num': 10,
+ 'heap_in_attempt': [{'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 1,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hhh'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hasdhh'],
+                      'var_type': 1,
+                      'var_type_string': 'float',
+                      'width': 32},
+                     {'BRAM_cost': 176,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 181,
+                      'allocator_capability': 180224,
+                      'comp_num': 2,
+                      'depth': 180224,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 15.0,
+                      'tmp_heap_comp_list': [0, 1],
+                      'tmp_heap_comp_list_string': ['struct_tmp',
+                                                    'struct_tmp11'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct0_tmp'],
+                      'var_type': 3,
+                      'var_type_string': 'user_d_type_aa',
+                      'width': 16},
+                     {'BRAM_cost': 105,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 86016,
+                      'comp_num': 2,
+                      'depth': 344064,
+                      'partiton_factor': 7,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0, 1],
+                      'tmp_heap_comp_list_string': ['oo', 'qq'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 73728,
+                      'comp_num': 1,
+                      'depth': 147456,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ootest'],
+                      'var_type': 5,
+                      'var_type_string': 'ap_int<8>',
+                      'width': 8},
+                     {'BRAM_cost': 65,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 40960,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ooooootest'],
+                      'var_type': 6,
+                      'var_type_string': 'ap_uint<13>',
+                      'width': 13},
+                     {'BRAM_cost': 64,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 65536,
+                      'comp_num': 1,
+                      'depth': 65536,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['real_right'],
+                      'var_type': 7,
+                      'var_type_string': 'ap_uint<16>',
+                      'width': 16},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 589824,
+                      'comp_num': 1,
+                      'depth': 589824,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ppppp'],
+                      'var_type': 8,
+                      'var_type_string': 'ap_fixed<2, 3, 6, 222>',
+                      'width': 2},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 2,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [1, 2],
+                      'tmp_heap_comp_list_string': ['ttt', 'uuu'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32}]}
+{'group_num': 11,
+ 'heap_in_attempt': [{'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 1,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hhh'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hasdhh'],
+                      'var_type': 1,
+                      'var_type_string': 'float',
+                      'width': 32},
+                     {'BRAM_cost': 176,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 181,
+                      'allocator_capability': 180224,
+                      'comp_num': 2,
+                      'depth': 180224,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 15.0,
+                      'tmp_heap_comp_list': [0, 1],
+                      'tmp_heap_comp_list_string': ['struct_tmp',
+                                                    'struct_tmp11'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct0_tmp'],
+                      'var_type': 3,
+                      'var_type_string': 'user_d_type_aa',
+                      'width': 16},
+                     {'BRAM_cost': 35,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 28672,
+                      'comp_num': 1,
+                      'depth': 114688,
+                      'partiton_factor': 7,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['oo'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 73728,
+                      'comp_num': 1,
+                      'depth': 147456,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ootest'],
+                      'var_type': 5,
+                      'var_type_string': 'ap_int<8>',
+                      'width': 8},
+                     {'BRAM_cost': 65,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 40960,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ooooootest'],
+                      'var_type': 6,
+                      'var_type_string': 'ap_uint<13>',
+                      'width': 13},
+                     {'BRAM_cost': 64,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 65536,
+                      'comp_num': 1,
+                      'depth': 65536,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['real_right'],
+                      'var_type': 7,
+                      'var_type_string': 'ap_uint<16>',
+                      'width': 16},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 589824,
+                      'comp_num': 1,
+                      'depth': 589824,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ppppp'],
+                      'var_type': 8,
+                      'var_type_string': 'ap_fixed<2, 3, 6, 222>',
+                      'width': 2},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 2,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [1, 2],
+                      'tmp_heap_comp_list_string': ['ttt', 'uuu'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 60,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 49152,
+                      'comp_num': 1,
+                      'depth': 196608,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['qq'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5}]}
+{'group_num': 12,
+ 'heap_in_attempt': [{'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 1,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hhh'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hasdhh'],
+                      'var_type': 1,
+                      'var_type_string': 'float',
+                      'width': 32},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['struct_tmp11'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct0_tmp'],
+                      'var_type': 3,
+                      'var_type_string': 'user_d_type_aa',
+                      'width': 16},
+                     {'BRAM_cost': 35,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 28672,
+                      'comp_num': 1,
+                      'depth': 114688,
+                      'partiton_factor': 7,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['oo'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 73728,
+                      'comp_num': 1,
+                      'depth': 147456,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ootest'],
+                      'var_type': 5,
+                      'var_type_string': 'ap_int<8>',
+                      'width': 8},
+                     {'BRAM_cost': 65,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 40960,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ooooootest'],
+                      'var_type': 6,
+                      'var_type_string': 'ap_uint<13>',
+                      'width': 13},
+                     {'BRAM_cost': 64,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 65536,
+                      'comp_num': 1,
+                      'depth': 65536,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['real_right'],
+                      'var_type': 7,
+                      'var_type_string': 'ap_uint<16>',
+                      'width': 16},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 589824,
+                      'comp_num': 1,
+                      'depth': 589824,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ppppp'],
+                      'var_type': 8,
+                      'var_type_string': 'ap_fixed<2, 3, 6, 222>',
+                      'width': 2},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 2,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [1, 2],
+                      'tmp_heap_comp_list_string': ['ttt', 'uuu'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 60,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 49152,
+                      'comp_num': 1,
+                      'depth': 196608,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['qq'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 96,
+                      'allocator_capability': 98304,
+                      'comp_num': 1,
+                      'depth': 98304,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 8.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct_tmp'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16}]}
+{'group_num': 13,
+ 'heap_in_attempt': [{'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 1,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hhh'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['hasdhh'],
+                      'var_type': 1,
+                      'var_type_string': 'float',
+                      'width': 32},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['struct_tmp11'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 80,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 84,
+                      'allocator_capability': 81920,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 7.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct0_tmp'],
+                      'var_type': 3,
+                      'var_type_string': 'user_d_type_aa',
+                      'width': 16},
+                     {'BRAM_cost': 35,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 28672,
+                      'comp_num': 1,
+                      'depth': 114688,
+                      'partiton_factor': 7,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['oo'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 73728,
+                      'comp_num': 1,
+                      'depth': 147456,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ootest'],
+                      'var_type': 5,
+                      'var_type_string': 'ap_int<8>',
+                      'width': 8},
+                     {'BRAM_cost': 65,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 40960,
+                      'comp_num': 1,
+                      'depth': 81920,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ooooootest'],
+                      'var_type': 6,
+                      'var_type_string': 'ap_uint<13>',
+                      'width': 13},
+                     {'BRAM_cost': 64,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 65536,
+                      'comp_num': 1,
+                      'depth': 65536,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['real_right'],
+                      'var_type': 7,
+                      'var_type_string': 'ap_uint<16>',
+                      'width': 16},
+                     {'BRAM_cost': 72,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 72,
+                      'allocator_capability': 589824,
+                      'comp_num': 1,
+                      'depth': 589824,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 6.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['ppppp'],
+                      'var_type': 8,
+                      'var_type_string': 'ap_fixed<2, 3, 6, 222>',
+                      'width': 2},
+                     {'BRAM_cost': 0,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 0,
+                      'allocator_capability': 0,
+                      'comp_num': 1,
+                      'depth': 0,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 0,
+                      'tmp_heap_comp_list': [2],
+                      'tmp_heap_comp_list_string': ['uuu'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32},
+                     {'BRAM_cost': 60,
+                      'MAU_size': 4,
+                      'allocated_BRAM': 60,
+                      'allocator_capability': 49152,
+                      'comp_num': 1,
+                      'depth': 196608,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 5.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['qq'],
+                      'var_type': 4,
+                      'var_type_string': 'ap_int<5>',
+                      'width': 5},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 1,
+                      'allocated_BRAM': 96,
+                      'allocator_capability': 98304,
+                      'comp_num': 1,
+                      'depth': 98304,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 8.0,
+                      'tmp_heap_comp_list': [0],
+                      'tmp_heap_comp_list_string': ['struct_tmp'],
+                      'var_type': 2,
+                      'var_type_string': 'user_d_type',
+                      'width': 16},
+                     {'BRAM_cost': 96,
+                      'MAU_size': 2,
+                      'allocated_BRAM': 121,
+                      'allocator_capability': 24576,
+                      'comp_num': 1,
+                      'depth': 49152,
+                      'partiton_factor': 1,
+                      'priority_accumulate': 10.0,
+                      'tmp_heap_comp_list': [1],
+                      'tmp_heap_comp_list_string': ['ttt'],
+                      'var_type': 0,
+                      'var_type_string': 'int',
+                      'width': 32}]}
+
+========== Transformation ==============

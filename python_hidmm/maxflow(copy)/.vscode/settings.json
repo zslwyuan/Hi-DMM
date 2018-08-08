@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "limits": "cpp"
+    }
+}

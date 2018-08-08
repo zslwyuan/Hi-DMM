@@ -1,0 +1,12 @@
+ttt int 32 10 2
+hhh int 32 10 2 
+struct_tmp user_d_type 16 8 1
+ggggggg int 32 8 1
+struct_tmp11 user_d_type 16 7 1
+struct0_tmp user_d_type_aa 16 7 1
+real_right ap_uint<16> 16 6 1
+ppppp ap_fixed<2,3,6,222> 2 6 1
+oo ap_int<5> 5 5 4
+qq ap_int<5> 5 5 4
+ootest ap_int<8> 8 6 2
+ooooootest ap_uint<13> 13 6 2

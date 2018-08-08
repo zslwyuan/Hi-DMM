@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "limits": "cpp",
+        "functional": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "initializer_list": "cpp"
+    }
+}

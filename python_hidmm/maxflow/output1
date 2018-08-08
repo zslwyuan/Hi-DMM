@@ -1,0 +1,817 @@
+==================== group_num = 5 ===================
+var_type:0  graph_id:0  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:4  graph_id:4  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+==================== group_num = 6 ===================
+var_type:0  graph_id:0  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:4  graph_id:4  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+==================== group_num = 7 ===================
+var_type:0  graph_id:0  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:4  graph_id:4  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+==================== group_num = 8 ===================
+var_type:0  graph_id:0  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:4  graph_id:4  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+==================== group_num = 9 ===================
+var_type:0  graph_id:0  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:4  graph_id:4  num_node:5
+best cut:38
+0 1 2 3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+==================== group_num = 10 ===================
+var_type:0  graph_id:0  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:1  graph_id:1  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:4  graph_id:4  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+==================== group_num = 11 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:2  graph_id:2  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:4  graph_id:4  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+==================== group_num = 12 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:3  graph_id:3  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:4  graph_id:4  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+==================== group_num = 13 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:4  graph_id:4  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+==================== group_num = 14 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+==================== group_num = 15 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+==================== group_num = 16 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:1  graph_id:6  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:0  graph_id:15  num_node:2
+best cut:0
+0 2 
+-------------------------
+==================== group_num = 17 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:1  graph_id:6  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:2  graph_id:7  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:0  graph_id:15  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:1  graph_id:16  num_node:2
+best cut:0
+0 2 
+-------------------------
+==================== group_num = 18 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:1  graph_id:6  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:2  graph_id:7  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:3  graph_id:8  num_node:2
+best cut:3
+3 4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:0  graph_id:15  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:1  graph_id:16  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:2  graph_id:17  num_node:1
+best cut:0
+1 
+-------------------------
+==================== group_num = 19 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:1  graph_id:6  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:2  graph_id:7  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:3  graph_id:8  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:4  graph_id:9  num_node:3
+best cut:3
+0 1 2 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:0  graph_id:15  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:1  graph_id:16  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:2  graph_id:17  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:3  graph_id:18  num_node:1
+best cut:0
+3 
+-------------------------
+==================== group_num = 20 ===================
+var_type:0  graph_id:0  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:1  graph_id:1  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:2  graph_id:2  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:3  graph_id:3  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:4  graph_id:4  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:0  graph_id:5  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:1  graph_id:6  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:2  graph_id:7  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:3  graph_id:8  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:4  graph_id:9  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:0  graph_id:10  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:1  graph_id:11  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:2  graph_id:12  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:3  graph_id:13  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:4  graph_id:14  num_node:1
+best cut:0
+4 
+-------------------------
+var_type:0  graph_id:15  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:1  graph_id:16  num_node:2
+best cut:0
+0 2 
+-------------------------
+var_type:2  graph_id:17  num_node:1
+best cut:0
+1 
+-------------------------
+var_type:3  graph_id:18  num_node:1
+best cut:0
+3 
+-------------------------
+var_type:4  graph_id:19  num_node:2
+best cut:0
+0 2 
+-------------------------
+==================== gr

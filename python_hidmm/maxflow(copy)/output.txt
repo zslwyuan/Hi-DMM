@@ -1,0 +1,90 @@
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+==== result for graph #0: (dest=1) ====
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+0	1	0
+0	2	0
+0	3	0
+0	4	0
+1	0	0
+1	2	0
+1	3	0
+1	4	0
+2	0	0
+2	1	0
+2	3	0
+2	4	0
+3	0	0
+3	1	0
+3	2	0
+3	4	0
+4	0	0
+4	1	0
+4	2	0
+4	3	0
+Min-Cut capacity:
+0
+0	
+1	
+Flow Value for graph #0:
+0
+======================================
+==== result for graph #1: single node in graph====
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+==== result for graph #2: (dest=1) ====
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+0	1	0
+1	0	0
+Min-Cut capacity:
+0
+0	
+1	
+Flow Value for graph #2:
+0
+======================================
+==== result for graph #3: single node in graph====
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+==== result for graph #4: (dest=1) ====
+Total Number of Augmented Paths Needed:
+0
+Flow Value:
+0
+0	1	0
+1	0	0
+Min-Cut capacity:
+0
+0	
+1	
+Flow Value for graph #4:
+0
+======================================
+==== result for graph #5: single node in graph====
+==== result for graph #6: single node in graph====
+==== result for graph #7: single node in graph====
+==== result for graph #8: single node in graph====
