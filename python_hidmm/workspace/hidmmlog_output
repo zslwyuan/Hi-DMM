@@ -1,6 +1,6 @@
 
 ================== Diagnostics ================
-[{'severity': 2, 'location': <SourceLocation file 'preHiDMM_mask.cc', line 574, column 13>, 'spelling': "address of stack memory associated with local variable 'size' returned", 'ranges': <clang.cindex.Diagnostic.ranges.<locals>.RangeIterator object at 0x7f181dd47400>, 'fixits': <clang.cindex.Diagnostic.fixits.<locals>.FixItIterator object at 0x7f181dd47438>}]
+[{'severity': 2, 'location': <SourceLocation file 'preHiDMM_mask.cc', line 574, column 13>, 'spelling': "address of stack memory associated with local variable 'size' returned", 'ranges': <clang.cindex.Diagnostic.ranges.<locals>.RangeIterator object at 0x7fa4164a2400>, 'fixits': <clang.cindex.Diagnostic.fixits.<locals>.FixItIterator object at 0x7fa4164a2438>}]
 
 ============== AST ================
 ('nodes',

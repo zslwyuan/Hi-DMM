@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.414+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.394+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.388+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.385+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.379+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="testKWTA16" solutionName="solution1" date="2018-08-11T01:41:53.369+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

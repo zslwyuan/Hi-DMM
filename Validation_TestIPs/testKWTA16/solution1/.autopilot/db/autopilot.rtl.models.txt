@@ -1,0 +1,5 @@
+checkKWTA_mini16_bkb
+checkKWTA_mini16_cud
+HLS_free_1_s
+HLS_malloc_1_s
+checkKWTA_mini16

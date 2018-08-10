@@ -1,0 +1,3 @@
+KWTA_mini16_thetabkb
+KWTA_mini16_thetacud
+KWTA_mini16_theta

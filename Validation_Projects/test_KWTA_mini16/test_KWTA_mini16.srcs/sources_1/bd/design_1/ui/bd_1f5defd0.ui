@@ -1,0 +1,40 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port clk_in1_0 -pg 1 -y -670 -defaultsOSRD
+preplace port ap_start_1 -pg 1 -y -530 -defaultsOSRD
+preplace port ext_reset_in_0 -pg 1 -y -730 -defaultsOSRD
+preplace port reset_0 -pg 1 -y -690 -defaultsOSRD
+preplace portBus ap_return_0 -pg 1 -y -90 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y -680 -defaultsOSRD
+preplace inst checkKWTA_mini16_0 -pg 1 -lvl 2 -y -80 -defaultsOSRD
+preplace inst address_display_0 -pg 1 -lvl 2 -y -400 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -y -710 -defaultsOSRD
+preplace inst KWTA_mini16_theta_0 -pg 1 -lvl 1 -y -460 -defaultsOSRD
+preplace netloc clk_wiz_locked 1 1 1 N
+preplace netloc checkKWTA_mini16_0_ap_return 1 2 1 1170
+preplace netloc KWTA_mini16_theta_0_alloc_cmd_ap_ack 1 1 1 540
+preplace netloc ap_start_1_1 1 0 2 -10 -250 550
+preplace netloc checkKWTA_mini16_0_alloc_1_cmd_ap_vld 1 0 3 50 -240 NJ -240 1130
+preplace netloc checkKWTA_mini16_0_alloc_1_cmd 1 0 3 70 -230 NJ -230 1140
+preplace netloc checkKWTA_mini16_0_alloc_1_size 1 0 3 20 -780 610J -600 1160
+preplace netloc ext_reset_in_0_1 1 0 2 -10J -760 600J
+preplace netloc KWTA_theta_0_alloc_addr 1 1 1 530
+preplace netloc checkKWTA_mini16_0_alloc_1_free_target 1 0 3 0 -790 620J -590 1150
+preplace netloc clk_in1_0_1 1 0 1 NJ
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 3 70 -750 560 -610 1110
+preplace netloc KWTA_theta_0_alloc_addr_ap_vld 1 1 1 570
+preplace netloc KWTA_mini16_theta_0_alloc_free_target_ap_ack 1 1 1 580
+preplace netloc KWTA_mini16_theta_0_alloc_size_ap_ack 1 1 1 610
+preplace netloc checkKWTA_mini16_0_alloc_1_addr_ap_ack 1 0 3 10 -220 NJ -220 1110
+preplace netloc checkKWTA_mini16_0_alloc_1_free_target_ap_vld 1 0 3 30 -810 NJ -810 1170
+preplace netloc checkKWTA_mini16_0_alloc_1_size_ap_vld 1 0 3 40 -260 NJ -260 1120
+preplace netloc reset_0_1 1 0 1 NJ
+preplace netloc clk_wiz_clk_out1 1 0 2 60 -770 590
+levelinfo -pg 1 -30 300 870 1200 -top -820 -bot 260
+",
+}
+{
+   da_clkrst_cnt: "1",
+}

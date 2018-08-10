@@ -1527,6 +1527,10 @@ def main():
     [str1_array.append(str(attempt['BRAM_cost'])) for attempt in heap_attempts]
     str2_array = ["Heap Number"]
     [str2_array.append(str(attempt['group_num'])) for attempt in heap_attempts]
+    print("The BRAM costs of different numbers of heaps are listed as below.\n" + 
+        "Note that though in some cases, with different number of heaps, the BRAM cost\n" + 
+        "will not change too much, the LUT cost will be increased significantly when the\n" + 
+        "number of heaps increases.\n")
     print_table.print_table([ str1_array ],
             header= str2_array,
             wrap=True, max_col_width=12, wrap_style='wrap',
