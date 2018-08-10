@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_KWTA_mini8_theta_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini8/test_KWTA_mini8.runs/design_1_KWTA_mini8_theta_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_checkKWTA_mini8_0_0_synth_1" LaunchDir="/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini8/test_KWTA_mini8.runs/design_1_checkKWTA_mini8_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

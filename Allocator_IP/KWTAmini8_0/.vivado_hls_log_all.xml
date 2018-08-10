@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_loc2_V' is power-on initialization." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.513+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_loc1_V' is power-on initialization." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.508+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_addr_V' is power-on initialization." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.504+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_offset_V' is power-on initialization." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.500+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V' is power-on initialization." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.495+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'io_section4'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:25.252+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('heap_tree_V_load', KWTAmini8_0/top.cc:155) on array 'heap_tree_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.919+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:142) on array 'heap_tree_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.915+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:138) on array 'used_free_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.910+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:157) on array 'used_free_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.906+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'io_section0'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.903+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('heap_tree_V_load', KWTAmini8_0/top.cc:155) on array 'heap_tree_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.900+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:142) on array 'heap_tree_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.896+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:138) on array 'used_free_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.878+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:173) on array 'used_free_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.876+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:157) on array 'used_free_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.873+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini8_0/top.cc:176) on array 'heap_tree_V'." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:24.870+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] KWTAmini8_0/top.cc:142: variable-indexed range selection may cause suboptimal QoR." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:23.601+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-604] Allocation directive (KWTAmini8_0/top.cc:105) on function 'log_2_64bit'' (KWTAmini8_0/top.cc:85) will be discarded since the function is inlined." projectName="KWTAmini8_0" solutionName="solution1" date="2018-08-11T02:37:23.423+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

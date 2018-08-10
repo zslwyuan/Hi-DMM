@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Aug 10 18:50:10 UTC 2018
+VLNV: xilinx.com:hls:checkKWTA_mini8:1.0
+SynthRuntime: 51
