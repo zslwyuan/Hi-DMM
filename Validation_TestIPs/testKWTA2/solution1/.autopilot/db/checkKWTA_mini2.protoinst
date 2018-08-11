@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"checkKWTA_mini2": {
+			"proto_instances": {
+			}
+		}
+	}
+}

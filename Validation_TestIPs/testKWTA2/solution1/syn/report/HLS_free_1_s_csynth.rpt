@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vivado HLS Report for 'HLS_free_1_s'
+================================================================
+* Date:           Sat Aug 11 20:58:23 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        testKWTA2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.000|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      2|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     69|
+|Register         |        -|      -|       5|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       5|     71|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1_io  |    or    |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |allocator_cmd_blk_n                         |   9|          2|    1|          2|
+    |allocator_free_targe_blk_n                  |   9|          2|    1|          2|
+    |allocator_size_blk_n                        |   9|          2|    1|          2|
+    |ap_NS_fsm                                   |  15|          3|    1|          3|
+    |ap_sig_ioackin_allocator_cmd_ap_ack         |   9|          2|    1|          2|
+    |ap_sig_ioackin_allocator_free_targe_ap_ack  |   9|          2|    1|          2|
+    |ap_sig_ioackin_allocator_size_ap_ack        |   9|          2|    1|          2|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       |  69|         15|    7|         15|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+---+----+-----+-----------+
+    |                    Name                    | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                   |  2|   0|    2|          0|
+    |ap_reg_ioackin_allocator_cmd_ap_ack         |  1|   0|    1|          0|
+    |ap_reg_ioackin_allocator_free_targe_ap_ack  |  1|   0|    1|          0|
+    |ap_reg_ioackin_allocator_size_ap_ack        |  1|   0|    1|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+    |Total                                       |  5|   0|    5|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|ap_done                      | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
+|free_target                  |  in |    9|   ap_none  |      free_target     |    scalar    |
+|allocator_size               | out |   32|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_size_ap_vld        | out |    1|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_size_ap_ack        |  in |    1|    ap_hs   |    allocator_size    |    pointer   |
+|allocator_free_targe         | out |   32|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_free_targe_ap_vld  | out |    1|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_free_targe_ap_ack  |  in |    1|    ap_hs   | allocator_free_targe |    pointer   |
+|allocator_cmd                | out |    8|    ap_hs   |     allocator_cmd    |    pointer   |
+|allocator_cmd_ap_vld         | out |    1|    ap_hs   |     allocator_cmd    |    pointer   |
+|allocator_cmd_ap_ack         |  in |    1|    ap_hs   |     allocator_cmd    |    pointer   |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+

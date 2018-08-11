@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vivado HLS Report for 'checkKWTA_mini2'
+================================================================
+* Date:           Sat Aug 11 20:58:23 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        testKWTA2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.213|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|   3 ~ 5  |          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (tmp_1) | (tmp_3) | (!tmp_4)
+4 --> 
+	2  / (tmp_1) | (tmp_3) | (!tmp_4)
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%r = alloca i32"   --->   Operation 5 'alloca' 'r' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_1_size), !map !32"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_1_addr), !map !36"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %alloc_1_free_target), !map !40"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %alloc_1_cmd), !map !44"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !48"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @checkKWTA_mini2_str) nounwind"   --->   Operation 11 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [testKWTA2/top.cc:64]   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.76ns)   --->   "br label %._crit_edge" [testKWTA2/top.cc:68]   --->   Operation 13 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %0 ], [ %i_1, %._crit_edge.backedge ]"   --->   Operation 14 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = sext i32 %i to i64" [testKWTA2/top.cc:70]   --->   Operation 15 'sext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%req_cmd_addr = getelementptr [8192 x i2]* @req_cmd, i64 0, i64 %tmp" [testKWTA2/top.cc:70]   --->   Operation 16 'getelementptr' 'req_cmd_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [2/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA2/top.cc:70]   --->   Operation 17 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 9> <Depth = 8192> <ROM>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%req_list_addr = getelementptr [8192 x i9]* @req_list, i64 0, i64 %tmp" [testKWTA2/top.cc:71]   --->   Operation 18 'getelementptr' 'req_list_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [2/2] (3.25ns)   --->   "%size = load i9* %req_list_addr, align 2" [testKWTA2/top.cc:71]   --->   Operation 19 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 9> <Depth = 8192> <ROM>
+ST_2 : Operation 20 [1/1] (2.55ns)   --->   "%i_1 = add nsw i32 %i, 1" [testKWTA2/top.cc:68]   --->   Operation 20 'add' 'i_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.21>
+ST_3 : Operation 21 [1/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA2/top.cc:70]   --->   Operation 21 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 9> <Depth = 8192> <ROM>
+ST_3 : Operation 22 [1/2] (3.25ns)   --->   "%size = load i9* %req_list_addr, align 2" [testKWTA2/top.cc:71]   --->   Operation 22 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 9> <Depth = 8192> <ROM>
+ST_3 : Operation 23 [1/1] (0.95ns)   --->   "%tmp_1 = icmp eq i2 %cmd, -2" [testKWTA2/top.cc:72]   --->   Operation 23 'icmp' 'tmp_1' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %1, label %2" [testKWTA2/top.cc:72]   --->   Operation 24 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.95ns)   --->   "%tmp_3 = icmp eq i2 %cmd, -1" [testKWTA2/top.cc:76]   --->   Operation 25 'icmp' 'tmp_3' <Predicate = (!tmp_1)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %3, label %4" [testKWTA2/top.cc:76]   --->   Operation 26 'br' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.95ns)   --->   "%tmp_4 = icmp eq i2 %cmd, 0" [testKWTA2/top.cc:81]   --->   Operation 27 'icmp' 'tmp_4' <Predicate = (!tmp_1 & !tmp_3)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %5, label %._crit_edge.backedge" [testKWTA2/top.cc:81]   --->   Operation 28 'br' <Predicate = (!tmp_1 & !tmp_3)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%r_load = load i32* %r" [testKWTA2/top.cc:83]   --->   Operation 29 'load' 'r_load' <Predicate = (!tmp_1 & !tmp_3 & tmp_4)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "ret i32 %r_load" [testKWTA2/top.cc:83]   --->   Operation 30 'ret' <Predicate = (!tmp_1 & !tmp_3 & tmp_4)> <Delay = 0.00>
+ST_3 : Operation 31 [2/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i9 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA2/top.cc:79]   --->   Operation 31 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 32 [1/1] (1.76ns)   --->   "store i32 1, i32* %r"   --->   Operation 32 'store' <Predicate = (!tmp_1 & tmp_3)> <Delay = 1.76>
+ST_3 : Operation 33 [2/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i9 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA2/top.cc:74]   --->   Operation 33 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 34 [1/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i9 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA2/top.cc:79]   --->   Operation 34 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "br label %._crit_edge.backedge" [testKWTA2/top.cc:80]   --->   Operation 35 'br' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00>
+ST_4 : Operation 36 [1/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i9 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA2/top.cc:74]   --->   Operation 36 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 37 [1/1] (1.76ns)   --->   "store i32 %r_1, i32* %r" [testKWTA2/top.cc:74]   --->   Operation 37 'store' <Predicate = (tmp_1)> <Delay = 1.76>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "br label %._crit_edge.backedge" [testKWTA2/top.cc:75]   --->   Operation 38 'br' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "br label %._crit_edge"   --->   Operation 39 'br' <Predicate = (tmp_1) | (tmp_3) | (!tmp_4)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', testKWTA2/top.cc:68) [17]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', testKWTA2/top.cc:68) [17]  (0 ns)
+	'getelementptr' operation ('req_list_addr', testKWTA2/top.cc:71) [21]  (0 ns)
+	'load' operation ('size', testKWTA2/top.cc:71) on array 'req_list' [22]  (3.25 ns)
+
+ <State 3>: 4.21ns
+The critical path consists of the following:
+	'load' operation ('cmd', testKWTA2/top.cc:70) on array 'req_cmd' [20]  (3.25 ns)
+	'icmp' operation ('tmp_3', testKWTA2/top.cc:76) [27]  (0.959 ns)
+
+ <State 4>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('r', testKWTA2/top.cc:74) to 'HLS_malloc<1>' [40]  (0 ns)
+	'store' operation (testKWTA2/top.cc:74) of variable 'r', testKWTA2/top.cc:74 on local variable 'r' [41]  (1.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
