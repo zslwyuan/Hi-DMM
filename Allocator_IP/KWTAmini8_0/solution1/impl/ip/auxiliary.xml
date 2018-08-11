@@ -6,5 +6,5 @@
   <xd:arg xd:name="alloc-&gt;addr" xd:originalName="alloc" xd:direction="out" xd:interfaceRef="alloc_addr" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="1"/>
   <xd:arg xd:name="alloc-&gt;cmd" xd:originalName="alloc" xd:direction="in" xd:interfaceRef="alloc_cmd" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="8" xd:firstOut="1"/>
   <xd:latencyEstimates xd:best-case="2" xd:worst-case="8" xd:average-case="5"/>
-  <xd:resourceEstimates xd:LUT="1665" xd:FF="584" xd:BRAM="10" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="1682" xd:FF="615" xd:BRAM="10" xd:DSP="0"/>
 </xd:acceleratorMap>

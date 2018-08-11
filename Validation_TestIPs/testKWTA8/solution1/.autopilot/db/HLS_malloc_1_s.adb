@@ -28,7 +28,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>11</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -172,7 +172,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>11</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>

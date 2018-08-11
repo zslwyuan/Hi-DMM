@@ -238,8 +238,8 @@
         },
         "Area": {
           "BRAM_18K": "10",
-          "FF": "584",
-          "LUT": "1665",
+          "FF": "615",
+          "LUT": "1682",
           "DSP48E": "0"
         }
       }}
@@ -251,7 +251,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-11 02:37:26 CST",
+    "Time": "2018-08-11 15:17:16 CST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

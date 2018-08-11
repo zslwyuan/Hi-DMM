@@ -579,7 +579,7 @@ void checkKWTA_mini8::thread_i_1_fu_113_p2() {
 }
 
 void checkKWTA_mini8::thread_req_cmd_address0() {
-    req_cmd_address0 =  (sc_lv<11>) (tmp_fu_107_p1.read());
+    req_cmd_address0 =  (sc_lv<12>) (tmp_fu_107_p1.read());
 }
 
 void checkKWTA_mini8::thread_req_cmd_ce0() {
@@ -591,7 +591,7 @@ void checkKWTA_mini8::thread_req_cmd_ce0() {
 }
 
 void checkKWTA_mini8::thread_req_list_address0() {
-    req_list_address0 =  (sc_lv<11>) (tmp_fu_107_p1.read());
+    req_list_address0 =  (sc_lv<12>) (tmp_fu_107_p1.read());
 }
 
 void checkKWTA_mini8::thread_req_list_ce0() {

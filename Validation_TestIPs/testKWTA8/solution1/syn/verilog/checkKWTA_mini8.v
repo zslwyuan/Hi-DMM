@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="checkKWTA_mini8,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.213000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=159,HLS_SYN_LUT=369,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="checkKWTA_mini8,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.213000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=160,HLS_SYN_LUT=369,HLS_VERSION=2018_2}" *)
 
 module checkKWTA_mini8 (
         ap_clk,
@@ -69,16 +69,16 @@ reg alloc_1_cmd_ap_vld;
 
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [10:0] req_cmd_address0;
+wire   [11:0] req_cmd_address0;
 reg    req_cmd_ce0;
 wire   [1:0] req_cmd_q0;
-wire   [10:0] req_list_address0;
+wire   [11:0] req_list_address0;
 reg    req_list_ce0;
-wire   [10:0] req_list_q0;
+wire   [11:0] req_list_q0;
 wire    ap_CS_fsm_state2;
 wire   [31:0] i_1_fu_113_p2;
 reg   [31:0] i_1_reg_167;
-reg   [10:0] size_reg_172;
+reg   [11:0] size_reg_172;
 wire    ap_CS_fsm_state3;
 wire   [0:0] tmp_1_fu_119_p2;
 reg   [0:0] tmp_1_reg_178;
@@ -127,8 +127,8 @@ end
 
 checkKWTA_mini8_rbkb #(
     .DataWidth( 2 ),
-    .AddressRange( 2048 ),
-    .AddressWidth( 11 ))
+    .AddressRange( 4096 ),
+    .AddressWidth( 12 ))
 req_cmd_U(
     .clk(ap_clk),
     .reset(ap_rst),
@@ -138,9 +138,9 @@ req_cmd_U(
 );
 
 checkKWTA_mini8_rcud #(
-    .DataWidth( 11 ),
-    .AddressRange( 2048 ),
-    .AddressWidth( 11 ))
+    .DataWidth( 12 ),
+    .AddressRange( 4096 ),
+    .AddressWidth( 12 ))
 req_list_U(
     .clk(ap_clk),
     .reset(ap_rst),

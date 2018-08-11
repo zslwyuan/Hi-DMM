@@ -215,9 +215,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="11" op_0_bw="2" op_1_bw="64" op_2_bw="64">
+<Node id="19" bw="12" op_0_bw="2" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-._crit_edge:2  %req_cmd_addr = getelementptr [2048 x i2]* @req_cmd, i64 0, i64 %tmp
+._crit_edge:2  %req_cmd_addr = getelementptr [4096 x i2]* @req_cmd, i64 0, i64 %tmp
 
 ]]></Node>
 <StgValue><ssdm name="req_cmd_addr"/></StgValue>
@@ -230,7 +230,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="2" op_0_bw="11">
+<Node id="20" bw="2" op_0_bw="12">
 <![CDATA[
 ._crit_edge:3  %cmd = load i2* %req_cmd_addr, align 1
 
@@ -245,9 +245,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="11" op_0_bw="11" op_1_bw="64" op_2_bw="64">
+<Node id="21" bw="12" op_0_bw="12" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-._crit_edge:4  %req_list_addr = getelementptr [2048 x i11]* @req_list, i64 0, i64 %tmp
+._crit_edge:4  %req_list_addr = getelementptr [4096 x i12]* @req_list, i64 0, i64 %tmp
 
 ]]></Node>
 <StgValue><ssdm name="req_list_addr"/></StgValue>
@@ -260,9 +260,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="11" op_0_bw="11">
+<Node id="22" bw="12" op_0_bw="12">
 <![CDATA[
-._crit_edge:5  %size = load i11* %req_list_addr, align 2
+._crit_edge:5  %size = load i12* %req_list_addr, align 2
 
 ]]></Node>
 <StgValue><ssdm name="size"/></StgValue>
@@ -293,7 +293,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="2" op_0_bw="11">
+<Node id="20" bw="2" op_0_bw="12">
 <![CDATA[
 ._crit_edge:3  %cmd = load i2* %req_cmd_addr, align 1
 
@@ -308,9 +308,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="11" op_0_bw="11">
+<Node id="22" bw="12" op_0_bw="12">
 <![CDATA[
-._crit_edge:5  %size = load i11* %req_list_addr, align 2
+._crit_edge:5  %size = load i12* %req_list_addr, align 2
 
 ]]></Node>
 <StgValue><ssdm name="size"/></StgValue>
@@ -457,9 +457,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="0" op_0_bw="0" op_1_bw="11" op_2_bw="32" op_3_bw="32" op_4_bw="8">
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="32" op_3_bw="32" op_4_bw="8">
 <![CDATA[
-:0  call fastcc void @"HLS_free<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
+:0  call fastcc void @"HLS_free<1>"(i12 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -490,9 +490,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="11" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
+<Node id="40" bw="32" op_0_bw="32" op_1_bw="12" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
 <![CDATA[
-:0  %r_1 = call fastcc i32 @"HLS_malloc<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
+:0  %r_1 = call fastcc i32 @"HLS_malloc<1>"(i12 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
 
 ]]></Node>
 <StgValue><ssdm name="r_1"/></StgValue>
@@ -510,9 +510,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="0" op_0_bw="0" op_1_bw="11" op_2_bw="32" op_3_bw="32" op_4_bw="8">
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="32" op_3_bw="32" op_4_bw="8">
 <![CDATA[
-:0  call fastcc void @"HLS_free<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
+:0  call fastcc void @"HLS_free<1>"(i12 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -543,9 +543,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="11" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
+<Node id="40" bw="32" op_0_bw="32" op_1_bw="12" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
 <![CDATA[
-:0  %r_1 = call fastcc i32 @"HLS_malloc<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
+:0  %r_1 = call fastcc i32 @"HLS_malloc<1>"(i12 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)
 
 ]]></Node>
 <StgValue><ssdm name="r_1"/></StgValue>

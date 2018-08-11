@@ -208,7 +208,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3e1c7047</spirit:value>
+            <spirit:value>6a1d00b2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -224,7 +224,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3953c292</spirit:value>
+            <spirit:value>7dd075ff</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -240,7 +240,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>534d5a64</spirit:value>
+            <spirit:value>44f15c38</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -256,7 +256,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>aeb684e8</spirit:value>
+            <spirit:value>4799a01c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -637,7 +637,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/vhdl/KWTA_mini8_theta.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a6e56ed0</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_bfd84f17</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -727,13 +727,13 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </xilinx:taxonomies>
       <xilinx:displayName>Kwta_mini8_theta</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1808110237</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-08-10T18:38:00Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1808111518</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-08-11T07:18:15Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0fa6f240"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="827773ff"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3e0e4e5e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c76a14cb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="6aca7894"/>
     </xilinx:packagingInfo>

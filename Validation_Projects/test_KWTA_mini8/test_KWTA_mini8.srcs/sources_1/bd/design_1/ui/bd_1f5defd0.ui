@@ -13,25 +13,25 @@ preplace inst checkKWTA_mini8_0 -pg 1 -lvl 3 -y -270 -defaultsOSRD
 preplace inst address_display_0 -pg 1 -lvl 2 -y -500 -defaultsOSRD
 preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -y -710 -defaultsOSRD
 preplace netloc clk_wiz_locked 1 1 2 N -670 N
-preplace netloc KWTA_mini8_theta_0_alloc_free_target_ap_ack 1 1 2 530J -390 940
-preplace netloc checkKWTA_mini8_0_alloc_1_free_target_ap_vld 1 0 4 60 -610 NJ -610 NJ -610 1480
-preplace netloc KWTA_mini8_theta_0_alloc_cmd_ap_ack 1 1 2 NJ -430 960
-preplace netloc checkKWTA_mini8_0_alloc_1_size 1 0 4 30 -60 NJ -60 NJ -60 1500
-preplace netloc checkKWTA_mini8_0_alloc_1_free_target 1 0 4 60 -90 NJ -90 NJ -90 1470
-preplace netloc ap_start_1_1 1 0 3 -10 -290 540 -360 N
+preplace netloc KWTA_mini8_theta_0_alloc_free_target_ap_ack 1 1 2 540J -420 940
+preplace netloc checkKWTA_mini8_0_alloc_1_free_target_ap_vld 1 0 4 50 -610 NJ -610 NJ -610 1480
+preplace netloc KWTA_mini8_theta_0_alloc_cmd_ap_ack 1 1 2 NJ -430 950
+preplace netloc checkKWTA_mini8_0_alloc_1_size 1 0 4 10 -90 NJ -90 NJ -90 1500
+preplace netloc checkKWTA_mini8_0_alloc_1_free_target 1 0 4 30 -100 NJ -100 NJ -100 1480
+preplace netloc ap_start_1_1 1 0 3 -10 -290 540 -330 N
 preplace netloc checkKWTA_mini8_0_ap_return 1 3 1 N
 preplace netloc ext_reset_in_0_1 1 0 3 -10J -760 560J -730 NJ
-preplace netloc KWTA_theta_0_alloc_addr 1 1 2 550 -410 930
-preplace netloc checkKWTA_mini8_0_alloc_1_cmd_ap_vld 1 0 4 20 -80 NJ -80 NJ -80 1490
-preplace netloc checkKWTA_mini8_0_alloc_1_size_ap_vld 1 0 4 20 -750 550J -600 NJ -600 1470
+preplace netloc KWTA_theta_0_alloc_addr 1 1 2 560 -340 930
+preplace netloc checkKWTA_mini8_0_alloc_1_cmd_ap_vld 1 0 4 20 -120 NJ -120 NJ -120 1490
+preplace netloc checkKWTA_mini8_0_alloc_1_size_ap_vld 1 0 4 20 -750 540J -600 NJ -600 1470
 preplace netloc clk_in1_0_1 1 0 1 NJ
-preplace netloc checkKWTA_mini8_0_alloc_1_cmd 1 0 4 50 -70 NJ -70 NJ -70 1480
+preplace netloc checkKWTA_mini8_0_alloc_1_cmd 1 0 4 50 -110 NJ -110 NJ -110 1470
 preplace netloc checkKWTA_mini8_0_alloc_1_addr_ap_ack 1 0 4 0 -810 NJ -810 NJ -810 1500
-preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 4 40 -280 N -280 920 -100 1510
-preplace netloc KWTA_theta_0_alloc_addr_ap_vld 1 1 2 560 -400 950
-preplace netloc KWTA_mini8_theta_0_alloc_size_ap_ack 1 1 2 540J -420 980
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 4 40 -280 N -280 920 -130 1510
+preplace netloc KWTA_theta_0_alloc_addr_ap_vld 1 1 2 550 -290 N
+preplace netloc KWTA_mini8_theta_0_alloc_size_ap_ack 1 1 2 530J -310 N
 preplace netloc reset_0_1 1 0 1 NJ
-preplace netloc clk_wiz_clk_out1 1 0 3 10 -770 530 -740 970
+preplace netloc clk_wiz_clk_out1 1 0 3 10 -770 530 -740 960
 levelinfo -pg 1 -30 300 810 1230 1530 -top -820 -bot 260
 ",
 }

@@ -17,7 +17,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    size : IN STD_LOGIC_VECTOR (10 downto 0);
+    size : IN STD_LOGIC_VECTOR (11 downto 0);
     allocator_size : OUT STD_LOGIC_VECTOR (31 downto 0);
     allocator_size_ap_vld : OUT STD_LOGIC;
     allocator_size_ap_ack : IN STD_LOGIC;

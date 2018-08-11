@@ -234,7 +234,7 @@ void HLS_free_1_s::thread_allocator_cmd_blk_n() {
 }
 
 void HLS_free_1_s::thread_allocator_free_targe() {
-    allocator_free_targe = esl_zext<32,11>(free_target.read());
+    allocator_free_targe = esl_zext<32,12>(free_target.read());
 }
 
 void HLS_free_1_s::thread_allocator_free_targe_ap_vld() {

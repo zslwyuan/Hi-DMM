@@ -303,7 +303,7 @@ void HLS_malloc_1_s::thread_allocator_free_targe_blk_n() {
 }
 
 void HLS_malloc_1_s::thread_allocator_size() {
-    allocator_size = esl_zext<32,11>(size.read());
+    allocator_size = esl_zext<32,12>(size.read());
 }
 
 void HLS_malloc_1_s::thread_allocator_size_ap_vld() {

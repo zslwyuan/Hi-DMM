@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'HLS_malloc_1_s'
 ================================================================
-* Date:           Sat Aug 11 02:44:33 2018
+* Date:           Sat Aug 11 15:35:37 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        testKWTA8
@@ -130,7 +130,7 @@
 |ap_idle                      | out |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
 |ap_ready                     | out |    1| ap_ctrl_hs |     HLS_malloc<1>    | return value |
 |ap_return                    | out |   32| ap_ctrl_hs |     HLS_malloc<1>    | return value |
-|size                         |  in |   11|   ap_none  |         size         |    scalar    |
+|size                         |  in |   12|   ap_none  |         size         |    scalar    |
 |allocator_size               | out |   32|    ap_hs   |    allocator_size    |    pointer   |
 |allocator_size_ap_vld        | out |    1|    ap_hs   |    allocator_size    |    pointer   |
 |allocator_size_ap_ack        |  in |    1|    ap_hs   |    allocator_size    |    pointer   |

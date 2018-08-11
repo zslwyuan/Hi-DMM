@@ -266,11 +266,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 10 18:49:09 UTC 2018</spirit:value>
+            <spirit:value>Sat Aug 11 07:38:15 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:741c6581</spirit:value>
+            <spirit:value>8:523cea8c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -286,11 +286,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 10 18:49:09 UTC 2018</spirit:value>
+            <spirit:value>Sat Aug 11 07:38:15 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:741c6581</spirit:value>
+            <spirit:value>8:523cea8c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -306,11 +306,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 10 18:49:09 UTC 2018</spirit:value>
+            <spirit:value>Sat Aug 11 07:38:15 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2aef09af</spirit:value>
+            <spirit:value>8:845a7e02</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -326,11 +326,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 10 18:49:09 UTC 2018</spirit:value>
+            <spirit:value>Sat Aug 11 07:38:15 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2aef09af</spirit:value>
+            <spirit:value>8:845a7e02</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -344,11 +344,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 10 18:50:11 UTC 2018</spirit:value>
+            <spirit:value>Sat Aug 11 07:39:15 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:741c6581</spirit:value>
+            <spirit:value>8:523cea8c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,7 +632,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8_rbkb.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8_rbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -640,7 +640,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8_rcud.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8_rcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -648,15 +648,15 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/HLS_free_1_s.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/HLS_free_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/HLS_malloc_1_s.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/HLS_malloc_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -671,7 +671,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8_rbkb.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8_rbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -680,7 +680,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8_rcud.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8_rcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -689,17 +689,17 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/HLS_free_1_s.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/HLS_free_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/HLS_malloc_1_s.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/HLS_malloc_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c43b/hdl/verilog/checkKWTA_mini8.v</spirit:name>
+        <spirit:name>../../ipshared/15d6/hdl/verilog/checkKWTA_mini8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -815,25 +815,17 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <xilinx:coreExtensions>
       <xilinx:displayName>Checkkwta_mini8</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1808110246</xilinx:coreRevision>
+      <xilinx:coreRevision>1808111535</xilinx:coreRevision>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ALLOC_1_ADDR.LAYERED_METADATA" xilinx:valueSource="constant"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ALLOC_1_CMD.LAYERED_METADATA" xilinx:valueSource="constant"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ALLOC_1_FREE_TARGET.LAYERED_METADATA" xilinx:valueSource="constant"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ALLOC_1_SIZE.LAYERED_METADATA" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.LAYERED_METADATA" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CTRL.LAYERED_METADATA" xilinx:valueSource="constant"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_RETURN.LAYERED_METADATA" xilinx:valueSource="constant"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_RST.LAYERED_METADATA" xilinx:valueSource="constant"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b9133784"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0996af96"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8d2a5de8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e0bdb71d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="b240c7f3"/>
     </xilinx:packagingInfo>

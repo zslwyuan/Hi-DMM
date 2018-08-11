@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Sat Aug 11 02:50:27 2018
+-- Date        : Sat Aug 11 15:20:03 2018
 -- Host        : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini8/test_KWTA_mini8.srcs/sources_1/bd/design_1/ip/design_1_KWTA_mini8_theta_0_0/design_1_KWTA_mini8_theta_0_0_stub.vhdl

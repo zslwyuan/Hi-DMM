@@ -18,7 +18,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_size \
     op interface \
-    ports { size { I 11 vector } } \
+    ports { size { I 12 vector } } \
 } "
 }
 

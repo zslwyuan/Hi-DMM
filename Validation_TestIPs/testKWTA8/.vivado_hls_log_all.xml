@@ -12,12 +12,12 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.987+0800" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.985+0800" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.968+0800" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.965+0800" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.956+0800" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T02:44:32.953+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.202+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_malloc&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.200+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.188+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-31] Invalid protocol: Begin anchor missing in region 'HLS_free&lt;1>'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.177+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_malloc&lt;1>' to 'HLS_malloc_1_s'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.169+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'HLS_free&lt;1>' to 'HLS_free_1_s'." projectName="testKWTA8" solutionName="solution1" date="2018-08-11T15:35:37.163+0800" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

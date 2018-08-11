@@ -10,8 +10,8 @@ module checkKWTA_mini8_rbkb_rom (
 addr0, ce0, q0, clk);
 
 parameter DWIDTH = 2;
-parameter AWIDTH = 11;
-parameter MEM_SIZE = 2048;
+parameter AWIDTH = 12;
+parameter MEM_SIZE = 4096;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -48,8 +48,8 @@ module checkKWTA_mini8_rbkb(
     q0);
 
 parameter DataWidth = 32'd2;
-parameter AddressRange = 32'd2048;
-parameter AddressWidth = 32'd11;
+parameter AddressRange = 32'd4096;
+parameter AddressWidth = 32'd12;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

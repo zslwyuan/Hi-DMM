@@ -7,5 +7,5 @@
   <xd:arg xd:name="alloc_1-&gt;free_target" xd:originalName="alloc_1" xd:direction="out" xd:interfaceRef="alloc_1_free_target" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="32" xd:firstOut="0"/>
   <xd:arg xd:name="alloc_1-&gt;cmd" xd:originalName="alloc_1" xd:direction="out" xd:interfaceRef="alloc_1_cmd" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="8" xd:firstOut="0"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="369" xd:FF="159" xd:BRAM="3" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="369" xd:FF="160" xd:BRAM="4" xd:DSP="0"/>
 </xd:acceleratorMap>

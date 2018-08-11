@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'KWTA_mini8_theta'" level="0">
-<item name = "Date">Sat Aug 11 02:37:25 2018
+<item name = "Date">Sat Aug 11 15:17:15 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">KWTAmini8_0</item>
@@ -45,12 +45,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 695</column>
+<column name="Expression">-, -, 0, 712</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">10, -, 0, 0</column>
 <column name="Multiplexer">-, -, -, 970</column>
-<column name="Register">-, -, 584, -</column>
+<column name="Register">-, -, 615, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">3, 0, ~0, 3</specialColumn>
 </table>
@@ -77,19 +77,19 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="loc1_V_fu_1238_p2">+, 0, 0, 15, 8, 8</column>
-<column name="loc2_V_fu_1361_p2">+, 0, 0, 15, 8, 8</column>
-<column name="loc_V_2_trunc_fu_980_p2">+, 0, 0, 15, 5, 1</column>
-<column name="loc_V_trunc_fu_1065_p2">+, 0, 0, 15, 5, 1</column>
-<column name="r_V_1_fu_1385_p2">+, 0, 0, 15, 9, 9</column>
-<column name="tmp2_fu_1220_p2">+, 0, 0, 15, 6, 6</column>
-<column name="tmp3_fu_1229_p2">+, 0, 0, 15, 7, 7</column>
-<column name="tmp5_fu_1341_p2">+, 0, 0, 15, 7, 7</column>
-<column name="tmp6_fu_1351_p2">+, 0, 0, 15, 7, 7</column>
-<column name="tmp_31_fu_1444_p2">+, 0, 0, 17, 2, 13</column>
-<column name="tmp_6_fu_1034_p2">+, 0, 0, 27, 20, 1</column>
-<column name="p_not1_fu_1255_p2">-, 0, 0, 71, 1, 64</column>
-<column name="p_not_fu_964_p2">-, 0, 0, 71, 1, 64</column>
+<column name="loc_V_2_trunc_fu_976_p2">+, 0, 0, 15, 5, 1</column>
+<column name="loc_V_trunc_fu_1061_p2">+, 0, 0, 15, 5, 1</column>
+<column name="tmp2_fu_1216_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp3_fu_1225_p2">+, 0, 0, 15, 7, 7</column>
+<column name="tmp4_fu_1337_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp5_fu_1347_p2">+, 0, 0, 15, 7, 7</column>
+<column name="tmp_22_fu_1234_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_28_fu_1357_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_29_fu_1379_p2">+, 0, 0, 19, 14, 14</column>
+<column name="tmp_33_fu_1438_p2">+, 0, 0, 25, 18, 2</column>
+<column name="tmp_9_fu_1030_p2">+, 0, 0, 27, 20, 1</column>
+<column name="p_not1_fu_1251_p2">-, 0, 0, 71, 1, 64</column>
+<column name="p_not_fu_960_p2">-, 0, 0, 71, 1, 64</column>
 <column name="ap_block_state15_io">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_1009">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_496">and, 0, 0, 2, 1, 1</column>
@@ -97,30 +97,30 @@
 <column name="ap_condition_680">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_845">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_927">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op335_write_state15">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op334_write_state15">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op38_write_state2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op60_write_state2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op65_write_state2">and, 0, 0, 2, 1, 1</column>
-<column name="p_Val2_2_fu_1142_p2">and, 0, 0, 64, 64, 64</column>
-<column name="p_Val2_7_fu_1261_p2">and, 0, 0, 64, 64, 64</column>
-<column name="tmp_11_fu_1059_p2">icmp, 0, 0, 11, 5, 3</column>
-<column name="tmp_12_fu_1180_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_16_fu_1118_p2">icmp, 0, 0, 29, 64, 1</column>
-<column name="tmp_19_fu_1190_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_1_fu_924_p2">icmp, 0, 0, 29, 64, 1</column>
-<column name="tmp_20_fu_1200_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_21_fu_1206_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_23_fu_1301_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_24_fu_1310_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_25_fu_1319_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_26_fu_1328_p2">icmp, 0, 0, 13, 16, 1</column>
-<column name="tmp_3_fu_887_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="tmp_fu_878_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="tmp_s_fu_974_p2">icmp, 0, 0, 11, 5, 3</column>
+<column name="p_Val2_2_fu_1138_p2">and, 0, 0, 64, 64, 64</column>
+<column name="p_Val2_7_fu_1257_p2">and, 0, 0, 64, 64, 64</column>
+<column name="tmp_11_fu_1055_p2">icmp, 0, 0, 11, 5, 3</column>
+<column name="tmp_12_fu_1176_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_16_fu_1114_p2">icmp, 0, 0, 29, 64, 1</column>
+<column name="tmp_19_fu_1186_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_1_fu_920_p2">icmp, 0, 0, 29, 64, 1</column>
+<column name="tmp_20_fu_1196_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_21_fu_1202_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_24_fu_1297_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_25_fu_1306_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_26_fu_1315_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_27_fu_1324_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="tmp_3_fu_883_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="tmp_7_fu_970_p2">icmp, 0, 0, 11, 5, 3</column>
+<column name="tmp_fu_874_p2">icmp, 0, 0, 11, 8, 2</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
-<column name="or_cond_fu_937_p2">or, 0, 0, 2, 1, 1</column>
-<column name="phitmp_fu_1425_p2">or, 0, 0, 12, 12, 1</column>
+<column name="or_cond_fu_933_p2">or, 0, 0, 2, 1, 1</column>
+<column name="phitmp_fu_1419_p2">or, 0, 0, 17, 17, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -131,20 +131,20 @@
 <column name="alloc_free_target_blk_n">9, 2, 1, 2</column>
 <column name="alloc_size_blk_n">9, 2, 1, 2</column>
 <column name="ap_NS_fsm">65, 16, 1, 16</column>
-<column name="ap_phi_mux_p_0167_0_i1_phi_fu_415_p34">85, 17, 4, 68</column>
-<column name="ap_phi_mux_p_0167_0_i_phi_fu_657_p34">85, 17, 4, 68</column>
-<column name="ap_phi_mux_p_0244_0_i_phi_fu_825_p34">89, 18, 5, 90</column>
-<column name="ap_phi_mux_p_0248_0_i_phi_fu_769_p34">89, 18, 6, 108</column>
-<column name="ap_phi_mux_p_0252_0_i1_phi_fu_471_p34">89, 18, 5, 90</column>
-<column name="ap_phi_mux_p_0252_0_i_phi_fu_713_p34">89, 18, 5, 90</column>
+<column name="ap_phi_mux_p_0167_0_i1_phi_fu_411_p34">85, 17, 4, 68</column>
+<column name="ap_phi_mux_p_0167_0_i_phi_fu_653_p34">85, 17, 4, 68</column>
+<column name="ap_phi_mux_p_0244_0_i_phi_fu_821_p34">89, 18, 5, 90</column>
+<column name="ap_phi_mux_p_0248_0_i_phi_fu_765_p34">89, 18, 6, 108</column>
+<column name="ap_phi_mux_p_0252_0_i1_phi_fu_467_p34">89, 18, 5, 90</column>
+<column name="ap_phi_mux_p_0252_0_i_phi_fu_709_p34">89, 18, 5, 90</column>
 <column name="ap_sig_ioackin_alloc_addr_ap_ack">9, 2, 1, 2</column>
 <column name="heap_tree_V_address0">33, 6, 6, 36</column>
 <column name="heap_tree_V_d0">15, 3, 64, 192</column>
 <column name="last_addr_V">9, 2, 20, 40</column>
 <column name="last_offset_V">9, 2, 20, 40</column>
-<column name="p_0244_0_i1_reg_581">85, 17, 5, 85</column>
-<column name="p_0248_0_i1_reg_524">85, 17, 5, 85</column>
-<column name="storemerge_reg_400">9, 2, 32, 64</column>
+<column name="p_0244_0_i1_reg_577">85, 17, 5, 85</column>
+<column name="p_0248_0_i1_reg_520">85, 17, 5, 85</column>
+<column name="storemerge_reg_396">9, 2, 32, 64</column>
 <column name="top_heap_V">9, 2, 64, 128</column>
 <column name="used_free_V_address0">38, 7, 12, 84</column>
 <column name="used_free_V_d0">21, 4, 32, 128</column>
@@ -152,44 +152,44 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="AA_V_1_reg_1626">16, 0, 16, 0</column>
-<column name="BB_V_1_reg_1631">16, 0, 16, 0</column>
-<column name="CC_V_1_reg_1636">16, 0, 16, 0</column>
-<column name="DD_V_1_reg_1641">16, 0, 16, 0</column>
-<column name="alloc_cmd_read_reg_1455">8, 0, 8, 0</column>
-<column name="alloc_free_target_re_reg_1466">32, 0, 32, 0</column>
-<column name="alloc_size_read_reg_1461">32, 0, 32, 0</column>
+<column name="AA_V_1_reg_1620">16, 0, 16, 0</column>
+<column name="BB_V_1_reg_1625">16, 0, 16, 0</column>
+<column name="CC_V_1_reg_1630">16, 0, 16, 0</column>
+<column name="DD_V_1_reg_1635">16, 0, 16, 0</column>
+<column name="alloc_cmd_read_reg_1449">8, 0, 8, 0</column>
+<column name="alloc_free_target_re_reg_1460">32, 0, 32, 0</column>
+<column name="alloc_size_read_reg_1455">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">15, 0, 15, 0</column>
 <column name="ap_reg_ioackin_alloc_addr_ap_ack">1, 0, 1, 0</column>
 <column name="last_addr_V">20, 0, 20, 0</column>
 <column name="last_loc1_V">8, 0, 8, 0</column>
-<column name="last_loc1_V_load_reg_1564">8, 0, 8, 0</column>
+<column name="last_loc1_V_load_reg_1558">8, 0, 8, 0</column>
 <column name="last_loc2_V">8, 0, 8, 0</column>
 <column name="last_offset_V">20, 0, 20, 0</column>
-<column name="loc1_V_reg_1616">8, 0, 8, 0</column>
-<column name="loc2_V_reg_1658">8, 0, 8, 0</column>
-<column name="or_cond_reg_1509">1, 0, 1, 0</column>
-<column name="p_0167_0_i1_cast_reg_1597">4, 0, 6, 2</column>
-<column name="p_0244_0_i1_reg_581">5, 0, 5, 0</column>
-<column name="p_0248_0_i1_reg_524">5, 0, 6, 1</column>
-<column name="p_0252_0_i1_cast_reg_1605">5, 0, 7, 2</column>
-<column name="p_Result_6_reg_1488">7, 0, 7, 0</column>
-<column name="p_Result_7_reg_1493">6, 0, 6, 0</column>
-<column name="p_Val2_5_reg_1477">64, 0, 64, 0</column>
-<column name="p_Val2_s_reg_1513">20, 0, 20, 0</column>
-<column name="p_not_reg_1527">64, 0, 64, 0</column>
-<column name="phitmp_reg_1679">9, 0, 12, 3</column>
-<column name="r_V_1_reg_1663">9, 0, 9, 0</column>
-<column name="storemerge_reg_400">32, 0, 32, 0</column>
-<column name="tmp_11_reg_1560">1, 0, 1, 0</column>
-<column name="tmp_13_reg_1540">6, 0, 64, 58</column>
-<column name="tmp_15_reg_1569">8, 0, 64, 56</column>
-<column name="tmp_28_reg_1669">9, 0, 64, 55</column>
-<column name="tmp_32_reg_1518">1, 0, 1, 0</column>
-<column name="tmp_3_reg_1484">1, 0, 1, 0</column>
-<column name="tmp_7_reg_1550">20, 0, 64, 44</column>
-<column name="tmp_8_reg_1499">10, 0, 64, 54</column>
-<column name="tmp_reg_1473">1, 0, 1, 0</column>
+<column name="or_cond_reg_1503">1, 0, 1, 0</column>
+<column name="p_0167_0_i1_cast_reg_1591">4, 0, 6, 2</column>
+<column name="p_0244_0_i1_reg_577">5, 0, 5, 0</column>
+<column name="p_0248_0_i1_reg_520">5, 0, 6, 1</column>
+<column name="p_0252_0_i1_cast_reg_1599">5, 0, 7, 2</column>
+<column name="p_Result_6_reg_1482">6, 0, 6, 0</column>
+<column name="p_Result_7_reg_1487">11, 0, 11, 0</column>
+<column name="p_Val2_5_reg_1471">64, 0, 64, 0</column>
+<column name="p_Val2_s_reg_1507">20, 0, 20, 0</column>
+<column name="p_not_reg_1521">64, 0, 64, 0</column>
+<column name="phitmp_reg_1673">14, 0, 17, 3</column>
+<column name="storemerge_reg_396">32, 0, 32, 0</column>
+<column name="tmp_11_reg_1554">1, 0, 1, 0</column>
+<column name="tmp_13_reg_1534">11, 0, 64, 53</column>
+<column name="tmp_15_reg_1563">8, 0, 64, 56</column>
+<column name="tmp_22_reg_1610">8, 0, 8, 0</column>
+<column name="tmp_28_reg_1652">8, 0, 8, 0</column>
+<column name="tmp_29_reg_1657">14, 0, 14, 0</column>
+<column name="tmp_30_reg_1663">14, 0, 64, 50</column>
+<column name="tmp_34_reg_1512">1, 0, 1, 0</column>
+<column name="tmp_3_reg_1478">1, 0, 1, 0</column>
+<column name="tmp_5_reg_1493">17, 0, 64, 47</column>
+<column name="tmp_reg_1467">1, 0, 1, 0</column>
+<column name="tmp_s_reg_1544">20, 0, 64, 44</column>
 <column name="top_heap_V">64, 0, 64, 0</column>
 </table>
 </item>
@@ -226,13 +226,13 @@
 <item name = "Max Delay">8.36</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'tmp_24', KWTAmini8_0/top.cc:92->KWTAmini8_0/top.cc:155">icmp, 2.43, 2.43, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'p_0252_0_i'">phi, 2.23, 4.66, -, -, -, -, -, -, -, -, -, -, </column>
-<column name="'p_0252_0_i'">phi, 0.00, 4.66, -, -, -, -, -, -, -, -, -, -, </column>
-<column name="'p_0252_0_i_cast', KWTAmini8_0/top.cc:93->KWTAmini8_0/top.cc:155">zext, 0.00, 4.66, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_26', KWTAmini8_0/top.cc:93->KWTAmini8_0/top.cc:155">icmp, 2.43, 2.43, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'p_0248_0_i'">phi, 2.23, 4.66, -, -, -, -, -, -, -, -, -, -, </column>
+<column name="'p_0248_0_i'">phi, 0.00, 4.66, -, -, -, -, -, -, -, -, -, -, </column>
+<column name="'p_0248_0_i_cast', KWTAmini8_0/top.cc:94->KWTAmini8_0/top.cc:155">zext, 0.00, 4.66, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'tmp5', KWTAmini8_0/top.cc:95->KWTAmini8_0/top.cc:155">add, 1.83, 6.49, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'tmp5_cast', KWTAmini8_0/top.cc:95->KWTAmini8_0/top.cc:155">zext, 0.00, 6.49, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'loc2.V', KWTAmini8_0/top.cc:95->KWTAmini8_0/top.cc:155">add, 1.87, 8.36, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_28', KWTAmini8_0/top.cc:95->KWTAmini8_0/top.cc:155">add, 1.87, 8.36, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

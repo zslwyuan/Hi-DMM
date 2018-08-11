@@ -230,7 +230,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0d031dd1</spirit:value>
+            <spirit:value>1242e18d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -246,7 +246,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>28842c2d</spirit:value>
+            <spirit:value>348e6089</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -262,7 +262,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>39972fe2</spirit:value>
+            <spirit:value>8c4cb52a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -278,7 +278,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7dbbfc1e</spirit:value>
+            <spirit:value>f3f78bd4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -702,7 +702,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/vhdl/checkKWTA_mini8.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_29baf050</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_975f1eb9</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -802,13 +802,13 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </xilinx:taxonomies>
       <xilinx:displayName>Checkkwta_mini8</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1808110246</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-08-10T18:46:21Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1808111535</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-08-11T07:36:08Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b9133784"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0996af96"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8d2a5de8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e0bdb71d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="b240c7f3"/>
     </xilinx:packagingInfo>

@@ -79,7 +79,7 @@ static ap_uint<20> last_offset=-1;
 static ap_uint<20> last_addr;
 static ap_uint<64> last_tmp;
 static ap_uint<9> shifer0;
-static ap_uint<8> last_loc1,last_loc2;
+static ap_uint<20> last_loc1,last_loc2;
 static ap_uint<1> INIT;
 
 ap_uint<8> log_2_64bit(ap_uint<64> tmp)
@@ -109,7 +109,7 @@ volatile void KWTA_mini8_theta(volatile allocator_port *alloc)//, volatile ap_ui
 		  #pragma HLS protocol fixed
 			volatile int status = 0;   //receiving the cmd and size from ACCELERATOR
 			ap_uint<20> free_target = 0, cmd = 0;
-			ap_uint<8> loc1 = 0, loc2 = 0;
+			ap_uint<20> loc1 = 0, loc2 = 0;
 			static ap_uint<5> cur_used=0,cur_free=0;
 			static ap_uint<20> offset=-1;
 			ap_uint<2> size;
@@ -166,10 +166,10 @@ volatile void KWTA_mini8_theta(volatile allocator_port *alloc)//, volatile ap_ui
 			}
 			else if (cmd == 3)  // executing the free request
 			{
-				ap_uint<10> tmp_loc1,tmp_loc2,tmp_offset;
-				tmp_loc2 = free_target(9,3);//miniheap
-				tmp_loc1 = free_target(15,10);//miniheap
-				tmp_offset = free_target(15,3);//miniheap
+				ap_uint<20> tmp_loc1,tmp_loc2,tmp_offset;
+				tmp_loc2 = free_target(8,3);//miniheap
+				tmp_loc1 = free_target(20,9);//miniheap
+				tmp_offset = free_target(20,3);//miniheap
 				cur_free = used_free[tmp_offset].range(4,0);
 				if (cur_free==7)//miniheap
 				{

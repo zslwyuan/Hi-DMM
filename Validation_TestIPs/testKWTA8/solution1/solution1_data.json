@@ -323,8 +323,8 @@
             "PipelineDepth": "3 ~ 5"
           }],
         "Area": {
-          "BRAM_18K": "3",
-          "FF": "159",
+          "BRAM_18K": "4",
+          "FF": "160",
           "LUT": "369",
           "DSP48E": "0"
         }
@@ -338,7 +338,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-11 02:44:33 CST",
+    "Time": "2018-08-11 15:35:38 CST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

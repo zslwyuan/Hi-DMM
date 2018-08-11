@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Aug 11 02:50:27 2018
+| Date         : Sat Aug 11 15:20:03 2018
 | Host         : tingyuan-OptiPlex-9010 running 64-bit Ubuntu 18.04 LTS
 | Command      : report_utilization -file design_1_KWTA_mini8_theta_0_0_utilization_synth.rpt -pb design_1_KWTA_mini8_theta_0_0_utilization_synth.pb
 | Design       : design_1_KWTA_mini8_theta_0_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1075 |     0 |     53200 |  2.02 |
-|   LUT as Logic          | 1075 |     0 |     53200 |  2.02 |
+| Slice LUTs*             | 1059 |     0 |     53200 |  1.99 |
+|   LUT as Logic          | 1059 |     0 |     53200 |  1.99 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  446 |     0 |    106400 |  0.42 |
-|   Register as Flip Flop |  446 |     0 |    106400 |  0.42 |
+| Slice Registers         |  472 |     0 |    106400 |  0.44 |
+|   Register as Flip Flop |  472 |     0 |    106400 |  0.44 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 10    |          Yes |         Set |            - |
-| 436   |          Yes |       Reset |            - |
+| 13    |          Yes |         Set |            - |
+| 459   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,15 +148,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  436 |        Flop & Latch |
-| LUT6     |  430 |                 LUT |
-| LUT5     |  291 |                 LUT |
-| LUT2     |  164 |                 LUT |
-| LUT1     |  131 |                 LUT |
+| FDRE     |  459 |        Flop & Latch |
+| LUT6     |  444 |                 LUT |
+| LUT5     |  245 |                 LUT |
+| LUT2     |  161 |                 LUT |
+| LUT1     |  132 |                 LUT |
 | LUT4     |  114 |                 LUT |
-| LUT3     |   91 |                 LUT |
-| CARRY4   |   45 |          CarryLogic |
-| FDSE     |   10 |        Flop & Latch |
+| LUT3     |  103 |                 LUT |
+| CARRY4   |   48 |          CarryLogic |
+| FDSE     |   13 |        Flop & Latch |
 | RAMB36E1 |    2 |        Block Memory |
 | RAMB18E1 |    2 |        Block Memory |
 +----------+------+---------------------+

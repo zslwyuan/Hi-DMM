@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:KWTA_mini8_theta:1.0
-// IP Revision: 1808110237
+// IP Revision: 1808111518
 
 (* X_CORE_INFO = "KWTA_mini8_theta,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_KWTA_mini8_theta_0_0,KWTA_mini8_theta,{}" *)
-(* CORE_GENERATION_INFO = "design_1_KWTA_mini8_theta_0_0,KWTA_mini8_theta,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=KWTA_mini8_theta,x_ipVersion=1.0,x_ipCoreRevision=1808110237,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_KWTA_mini8_theta_0_0,KWTA_mini8_theta,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=KWTA_mini8_theta,x_ipVersion=1.0,x_ipCoreRevision=1808111518,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_KWTA_mini8_theta_0_0 (

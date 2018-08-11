@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'HLS_malloc_1_s'
 ================================================================
-* Date:           Sat Aug 11 02:44:32 2018
+* Date:           Sat Aug 11 15:35:37 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        testKWTA8
@@ -79,8 +79,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%size_read = call i11 @_ssdm_op_Read.ap_auto.i11(i11 %size)"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%size_cast = zext i11 %size_read to i32"   --->   Operation 5 'zext' 'size_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%size_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %size)"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%size_cast = zext i12 %size_read to i32"   --->   Operation 5 'zext' 'size_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i8P(i8* %allocator_cmd, i8 2)" [testKWTA8/top.cc:24]   --->   Operation 6 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_size, i32 %size_cast)" [testKWTA8/top.cc:26]   --->   Operation 7 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_free_targe, i32 0)" [testKWTA8/top.cc:27]   --->   Operation 8 'write' <Predicate = true> <Delay = 0.00>
@@ -184,7 +184,7 @@ StgValue_14 (ret         ) [ 0000]
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i11"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i12"/></StgValue>
 </bind>
 </comp>
 
@@ -271,9 +271,9 @@ StgValue_14 (ret         ) [ 0000]
 
 <comp id="30" class="1004" name="size_read_read_fu_30">
 <pin_list>
-<pin id="31" dir="0" index="0" bw="11" slack="0"/>
-<pin id="32" dir="0" index="1" bw="11" slack="0"/>
-<pin id="33" dir="1" index="2" bw="11" slack="0"/>
+<pin id="31" dir="0" index="0" bw="12" slack="0"/>
+<pin id="32" dir="0" index="1" bw="12" slack="0"/>
+<pin id="33" dir="1" index="2" bw="12" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -298,7 +298,7 @@ StgValue_14 (ret         ) [ 0000]
 <pin_list>
 <pin id="45" dir="0" index="0" bw="0" slack="0"/>
 <pin id="46" dir="0" index="1" bw="32" slack="0"/>
-<pin id="47" dir="0" index="2" bw="11" slack="0"/>
+<pin id="47" dir="0" index="2" bw="12" slack="0"/>
 <pin id="48" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -334,7 +334,7 @@ StgValue_14 (ret         ) [ 0000]
 
 <comp id="65" class="1004" name="size_cast_fu_65">
 <pin_list>
-<pin id="66" dir="0" index="0" bw="11" slack="0"/>
+<pin id="66" dir="0" index="0" bw="12" slack="0"/>
 <pin id="67" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
