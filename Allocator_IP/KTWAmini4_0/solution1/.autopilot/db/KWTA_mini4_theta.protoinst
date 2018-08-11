@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"KWTA_mini4_theta": {
+			"proto_instances": {
+			}
+		}
+	}
+}
