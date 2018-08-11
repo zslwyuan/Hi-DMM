@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:checkKWTA_mini16:1.0
-// IP Revision: 1808110142
+// IP Revision: 1808111643
 
 (* X_CORE_INFO = "checkKWTA_mini16,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_checkKWTA_mini16_0_0,checkKWTA_mini16,{}" *)
-(* CORE_GENERATION_INFO = "design_1_checkKWTA_mini16_0_0,checkKWTA_mini16,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=checkKWTA_mini16,x_ipVersion=1.0,x_ipCoreRevision=1808110142,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_checkKWTA_mini16_0_0,checkKWTA_mini16,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=checkKWTA_mini16,x_ipVersion=1.0,x_ipCoreRevision=1808111643,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_checkKWTA_mini16_0_0 (

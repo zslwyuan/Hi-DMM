@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Aug 11 01:44:59 2018
-# Process ID: 23201
+# Start of session at: Sat Aug 11 16:44:25 2018
+# Process ID: 19364
 # Current directory: /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_checkKWTA_mini16_0_0_synth_1
 # Command line: vivado -log design_1_checkKWTA_mini16_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_checkKWTA_mini16_0_0.tcl
 # Log file: /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_checkKWTA_mini16_0_0_synth_1/design_1_checkKWTA_mini16_0_0.vds

@@ -40,7 +40,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [10:0] size;
+input  [12:0] size;
 output  [31:0] allocator_size;
 output   allocator_size_ap_vld;
 input   allocator_size_ap_ack;

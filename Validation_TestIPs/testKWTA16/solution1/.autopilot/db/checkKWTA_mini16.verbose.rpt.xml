@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'checkKWTA_mini16'" level="0">
-<item name = "Date">Sat Aug 11 01:41:53 2018
+<item name = "Date">Sat Aug 11 16:43:15 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">testKWTA16</item>
@@ -53,11 +53,11 @@
 <column name="Expression">-, -, 0, 68</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, 43, 157</column>
-<column name="Memory">3, -, 0, 0</column>
+<column name="Memory">8, -, 0, 0</column>
 <column name="Multiplexer">-, -, -, 144</column>
-<column name="Register">-, -, 116, -</column>
+<column name="Register">-, -, 118, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, ~0, ~0</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, ~0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -74,8 +74,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="req_cmd_U">checkKWTA_mini16_bkb, 1, 0, 0, 2048, 2, 1, 4096</column>
-<column name="req_list_U">checkKWTA_mini16_cud, 2, 0, 0, 2048, 11, 1, 22528</column>
+<column name="req_cmd_U">checkKWTA_mini16_bkb, 1, 0, 0, 8192, 2, 1, 16384</column>
+<column name="req_list_U">checkKWTA_mini16_cud, 7, 0, 0, 8192, 13, 1, 106496</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -114,7 +114,7 @@
 <column name="i_1_reg_167">32, 0, 32, 0</column>
 <column name="i_reg_70">32, 0, 32, 0</column>
 <column name="r_fu_40">32, 0, 32, 0</column>
-<column name="size_reg_172">11, 0, 11, 0</column>
+<column name="size_reg_172">13, 0, 13, 0</column>
 <column name="tmp_1_reg_178">1, 0, 1, 0</column>
 <column name="tmp_3_reg_182">1, 0, 1, 0</column>
 <column name="tmp_4_reg_186">1, 0, 1, 0</column>

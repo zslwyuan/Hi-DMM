@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:KWTA_mini16_theta:1.0
-// IP Revision: 1808110157
+// IP Revision: 1808111637
 
 `timescale 1ns/1ps
 

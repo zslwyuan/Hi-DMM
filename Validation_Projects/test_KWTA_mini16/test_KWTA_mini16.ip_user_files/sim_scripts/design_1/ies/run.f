@@ -5,11 +5,11 @@
   "/opt/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/13fb/hdl/verilog/checkKWTA_mini16_bkb.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/13fb/hdl/verilog/checkKWTA_mini16_cud.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/13fb/hdl/verilog/HLS_free_1_s.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/13fb/hdl/verilog/HLS_malloc_1_s.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/13fb/hdl/verilog/checkKWTA_mini16.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/7d58/hdl/verilog/checkKWTA_mini16_bkb.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/7d58/hdl/verilog/checkKWTA_mini16_cud.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/7d58/hdl/verilog/HLS_free_1_s.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/7d58/hdl/verilog/HLS_malloc_1_s.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/7d58/hdl/verilog/checkKWTA_mini16.v" \
   "../../../bd/design_1/ip/design_1_checkKWTA_mini16_0_0/sim/design_1_checkKWTA_mini16_0_0.v" \
   "../../../bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v" \
   "../../../bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v" \
@@ -27,9 +27,9 @@
   "../../../bd/design_1/sim/design_1.v" \
   "../../../bd/design_1/ipshared/bce8/address_display.v" \
   "../../../bd/design_1/ip/design_1_address_display_0_0/sim/design_1_address_display_0_0.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v" \
-  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v" \
+  "../../../../test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v" \
   "../../../bd/design_1/ip/design_1_KWTA_mini16_theta_0_0/sim/design_1_KWTA_mini16_theta_0_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

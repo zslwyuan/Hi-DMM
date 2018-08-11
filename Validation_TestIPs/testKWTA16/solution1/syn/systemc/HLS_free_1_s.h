@@ -22,7 +22,7 @@ struct HLS_free_1_s : public sc_module {
     sc_out< sc_logic > ap_done;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_in< sc_lv<11> > free_target;
+    sc_in< sc_lv<13> > free_target;
     sc_out< sc_lv<32> > allocator_size;
     sc_out< sc_logic > allocator_size_ap_vld;
     sc_in< sc_logic > allocator_size_ap_ack;

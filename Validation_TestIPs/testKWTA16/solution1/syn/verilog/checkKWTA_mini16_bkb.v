@@ -10,8 +10,8 @@ module checkKWTA_mini16_bkb_rom (
 addr0, ce0, q0, clk);
 
 parameter DWIDTH = 2;
-parameter AWIDTH = 11;
-parameter MEM_SIZE = 2048;
+parameter AWIDTH = 13;
+parameter MEM_SIZE = 8192;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -48,8 +48,8 @@ module checkKWTA_mini16_bkb(
     q0);
 
 parameter DataWidth = 32'd2;
-parameter AddressRange = 32'd2048;
-parameter AddressWidth = 32'd11;
+parameter AddressRange = 32'd8192;
+parameter AddressWidth = 32'd13;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

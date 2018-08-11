@@ -18,7 +18,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_free_target \
     op interface \
-    ports { free_target { I 11 vector } } \
+    ports { free_target { I 13 vector } } \
 } "
 }
 

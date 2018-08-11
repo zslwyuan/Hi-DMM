@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_loc2_V' is power-on initialization." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.321+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_loc1_V' is power-on initialization." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.318+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_addr_V' is power-on initialization." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.313+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_offset_V' is power-on initialization." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.304+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V' is power-on initialization." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.297+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'io_section4'." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:37.046+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('heap_tree_V_load', KWTAmini16_0/top.cc:155) on array 'heap_tree_V'." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:36.741+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini16_0/top.cc:142) on array 'heap_tree_V'." projectName="KWTAmini16_0" solutionName="solution1" date="2018-08-11T16:54:36.737+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

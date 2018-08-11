@@ -12,14 +12,14 @@ set isEnableWaveformDebug 1
 set C_modelName {HLS_malloc<1>}
 set C_modelType { int 32 }
 set C_modelArgList {
-	{ size int 11 regular  }
+	{ size int 13 regular  }
 	{ allocator_size int 32 regular {pointer 1 volatile }  }
 	{ allocator_addr int 32 regular {pointer 0 volatile }  }
 	{ allocator_free_targe int 32 regular {pointer 1 volatile }  }
 	{ allocator_cmd int 8 regular {pointer 1 volatile }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "size", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
+	{ "Name" : "size", "interface" : "wire", "bitwidth" : 13, "direction" : "READONLY"} , 
  	{ "Name" : "allocator_size", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "allocator_addr", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "allocator_free_targe", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
@@ -34,7 +34,7 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ size sc_in sc_lv 11 signal 0 } 
+	{ size sc_in sc_lv 13 signal 0 } 
 	{ allocator_size sc_out sc_lv 32 signal 1 } 
 	{ allocator_size_ap_vld sc_out sc_logic 1 outvld 1 } 
 	{ allocator_size_ap_ack sc_in sc_logic 1 outacc 1 } 
@@ -56,7 +56,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "size", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "size", "role": "default" }} , 
+ 	{ "name": "size", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "size", "role": "default" }} , 
  	{ "name": "allocator_size", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "allocator_size", "role": "default" }} , 
  	{ "name": "allocator_size_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "allocator_size", "role": "ap_vld" }} , 
  	{ "name": "allocator_size_ap_ack", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "allocator_size", "role": "ap_ack" }} , 
@@ -120,7 +120,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	size { ap_none {  { size in_data 0 11 } } }
+	size { ap_none {  { size in_data 0 13 } } }
 	allocator_size { ap_hs {  { allocator_size out_data 1 32 }  { allocator_size_ap_vld out_vld 1 1 }  { allocator_size_ap_ack out_acc 0 1 } } }
 	allocator_addr { ap_hs {  { allocator_addr in_data 0 32 }  { allocator_addr_ap_vld in_vld 0 1 }  { allocator_addr_ap_ack in_acc 1 1 } } }
 	allocator_free_targe { ap_hs {  { allocator_free_targe out_data 1 32 }  { allocator_free_targe_ap_vld out_vld 1 1 }  { allocator_free_targe_ap_ack out_acc 0 1 } } }

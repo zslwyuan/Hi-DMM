@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'HLS_malloc_1_s'" level="0">
-<item name = "Date">Sat Aug 11 01:41:53 2018
+<item name = "Date">Sat Aug 11 16:43:14 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">testKWTA16</item>
@@ -115,7 +115,7 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, HLS_malloc&lt;1&gt;, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, HLS_malloc&lt;1&gt;, return value</column>
 <column name="ap_return">out, 32, ap_ctrl_hs, HLS_malloc&lt;1&gt;, return value</column>
-<column name="size">in, 11, ap_none, size, scalar</column>
+<column name="size">in, 13, ap_none, size, scalar</column>
 <column name="allocator_size">out, 32, ap_hs, allocator_size, pointer</column>
 <column name="allocator_size_ap_vld">out, 1, ap_hs, allocator_size, pointer</column>
 <column name="allocator_size_ap_ack">in, 1, ap_hs, allocator_size, pointer</column>

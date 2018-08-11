@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sat Aug 11 08:45:39 UTC 2018
+VLNV: xilinx.com:hls:KWTA_mini16_theta:1.0
+SynthRuntime: 67

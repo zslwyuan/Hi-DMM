@@ -36,7 +36,7 @@
             <spirit:value>xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="const_prop"/>
+                <bd:configElementInfo bd:valueSource="default"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -202,13 +202,6 @@
     <spirit:version>1.00.a</spirit:version>
     <spirit:componentInstances>
       <spirit:componentInstance>
-        <spirit:instanceName>checkKWTA_mini16_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="hls" spirit:name="checkKWTA_mini16" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_checkKWTA_mini16_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>clk_wiz</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="6.0"/>
         <spirit:configurableElementValues>
@@ -236,19 +229,26 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_KWTA_mini16_theta_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>checkKWTA_mini16_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="checkKWTA_mini16" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_checkKWTA_mini16_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
         <spirit:name>KWTA_theta_0_alloc_addr_ap_vld</spirit:name>
         <spirit:internalPortReference spirit:componentRef="KWTA_mini16_theta_0" spirit:portRef="alloc_addr_ap_vld"/>
-        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="alloc_1_addr_ap_vld"/>
         <spirit:internalPortReference spirit:componentRef="address_display_0" spirit:portRef="addr_vld"/>
+        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="alloc_1_addr_ap_vld"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>KWTA_theta_0_alloc_addr</spirit:name>
         <spirit:internalPortReference spirit:componentRef="KWTA_mini16_theta_0" spirit:portRef="alloc_addr"/>
-        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="alloc_1_addr"/>
         <spirit:internalPortReference spirit:componentRef="address_display_0" spirit:portRef="address"/>
+        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="alloc_1_addr"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>checkKWTA_mini16_0_ap_return</spirit:name>
@@ -258,15 +258,15 @@
       <spirit:adHocConnection>
         <spirit:name>ap_start_1_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="ap_start_1"/>
-        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_start"/>
         <spirit:internalPortReference spirit:componentRef="KWTA_mini16_theta_0" spirit:portRef="ap_start"/>
+        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_start"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_100M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="KWTA_mini16_theta_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_locked</spirit:name>
@@ -276,8 +276,8 @@
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_100M_peripheral_reset</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_100M" spirit:portRef="peripheral_reset"/>
-        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_rst"/>
         <spirit:internalPortReference spirit:componentRef="KWTA_mini16_theta_0" spirit:portRef="ap_rst"/>
+        <spirit:internalPortReference spirit:componentRef="checkKWTA_mini16_0" spirit:portRef="ap_rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>reset_0_1</spirit:name>

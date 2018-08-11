@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'checkKWTA_mini16'
 ================================================================
-* Date:           Sat Aug 11 01:41:53 2018
+* Date:           Sat Aug 11 16:43:15 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        testKWTA16
@@ -63,15 +63,15 @@
 |Expression       |        -|      -|       0|     68|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      -|      43|    157|
-|Memory           |        3|      -|       0|      0|
+|Memory           |        8|      -|       0|      0|
 |Multiplexer      |        -|      -|       -|    144|
-|Register         |        -|      -|     116|      -|
+|Register         |        -|      -|     118|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        3|      0|     159|    369|
+|Total            |        8|      0|     161|    369|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        1|      0|   ~0   |   ~0  |
+|Utilization (%)  |        2|      0|   ~0   |   ~0  |
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -92,10 +92,10 @@
     +------------+----------------------+---------+---+----+------+-----+------+-------------+
     |   Memory   |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
     +------------+----------------------+---------+---+----+------+-----+------+-------------+
-    |req_cmd_U   |checkKWTA_mini16_bkb  |        1|  0|   0|  2048|    2|     1|         4096|
-    |req_list_U  |checkKWTA_mini16_cud  |        2|  0|   0|  2048|   11|     1|        22528|
+    |req_cmd_U   |checkKWTA_mini16_bkb  |        1|  0|   0|  8192|    2|     1|        16384|
+    |req_list_U  |checkKWTA_mini16_cud  |        7|  0|   0|  8192|   13|     1|       106496|
     +------------+----------------------+---------+---+----+------+-----+------+-------------+
-    |Total       |                      |        3|  0|   0|  4096|   13|     2|        26624|
+    |Total       |                      |        8|  0|   0| 16384|   15|     2|       122880|
     +------------+----------------------+---------+---+----+------+-----+------+-------------+
 
     * FIFO: 
@@ -143,12 +143,12 @@
     |i_1_reg_167                            |  32|   0|   32|          0|
     |i_reg_70                               |  32|   0|   32|          0|
     |r_fu_40                                |  32|   0|   32|          0|
-    |size_reg_172                           |  11|   0|   11|          0|
+    |size_reg_172                           |  13|   0|   13|          0|
     |tmp_1_reg_178                          |   1|   0|    1|          0|
     |tmp_3_reg_182                          |   1|   0|    1|          0|
     |tmp_4_reg_186                          |   1|   0|    1|          0|
     +---------------------------------------+----+----+-----+-----------+
-    |Total                                  | 116|   0|  116|          0|
+    |Total                                  | 118|   0|  118|          0|
     +---------------------------------------+----+----+-----+-----------+
 
 
@@ -237,15 +237,15 @@ ST_1 : Operation 13 [1/1] (1.76ns)   --->   "br label %._crit_edge" [testKWTA16/
 State 2 <SV = 1> <Delay = 3.25>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %0 ], [ %i_1, %._crit_edge.backedge ]"   --->   Operation 14 'phi' 'i' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = sext i32 %i to i64" [testKWTA16/top.cc:70]   --->   Operation 15 'sext' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%req_cmd_addr = getelementptr [2048 x i2]* @req_cmd, i64 0, i64 %tmp" [testKWTA16/top.cc:70]   --->   Operation 16 'getelementptr' 'req_cmd_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [2/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA16/top.cc:70]   --->   Operation 17 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 2048> <ROM>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%req_list_addr = getelementptr [2048 x i11]* @req_list, i64 0, i64 %tmp" [testKWTA16/top.cc:71]   --->   Operation 18 'getelementptr' 'req_list_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [2/2] (3.25ns)   --->   "%size = load i11* %req_list_addr, align 2" [testKWTA16/top.cc:71]   --->   Operation 19 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 2048> <ROM>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%req_cmd_addr = getelementptr [8192 x i2]* @req_cmd, i64 0, i64 %tmp" [testKWTA16/top.cc:70]   --->   Operation 16 'getelementptr' 'req_cmd_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [2/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA16/top.cc:70]   --->   Operation 17 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 8192> <ROM>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%req_list_addr = getelementptr [8192 x i13]* @req_list, i64 0, i64 %tmp" [testKWTA16/top.cc:71]   --->   Operation 18 'getelementptr' 'req_list_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [2/2] (3.25ns)   --->   "%size = load i13* %req_list_addr, align 2" [testKWTA16/top.cc:71]   --->   Operation 19 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 8192> <ROM>
 ST_2 : Operation 20 [1/1] (2.55ns)   --->   "%i_1 = add nsw i32 %i, 1" [testKWTA16/top.cc:68]   --->   Operation 20 'add' 'i_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 3 <SV = 2> <Delay = 4.21>
-ST_3 : Operation 21 [1/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA16/top.cc:70]   --->   Operation 21 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 2048> <ROM>
-ST_3 : Operation 22 [1/2] (3.25ns)   --->   "%size = load i11* %req_list_addr, align 2" [testKWTA16/top.cc:71]   --->   Operation 22 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 2048> <ROM>
+ST_3 : Operation 21 [1/2] (3.25ns)   --->   "%cmd = load i2* %req_cmd_addr, align 1" [testKWTA16/top.cc:70]   --->   Operation 21 'load' 'cmd' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 8192> <ROM>
+ST_3 : Operation 22 [1/2] (3.25ns)   --->   "%size = load i13* %req_list_addr, align 2" [testKWTA16/top.cc:71]   --->   Operation 22 'load' 'size' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 8192> <ROM>
 ST_3 : Operation 23 [1/1] (0.95ns)   --->   "%tmp_1 = icmp eq i2 %cmd, -2" [testKWTA16/top.cc:72]   --->   Operation 23 'icmp' 'tmp_1' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %1, label %2" [testKWTA16/top.cc:72]   --->   Operation 24 'br' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 25 [1/1] (0.95ns)   --->   "%tmp_3 = icmp eq i2 %cmd, -1" [testKWTA16/top.cc:76]   --->   Operation 25 'icmp' 'tmp_3' <Predicate = (!tmp_1)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -254,14 +254,14 @@ ST_3 : Operation 27 [1/1] (0.95ns)   --->   "%tmp_4 = icmp eq i2 %cmd, 0" [testK
 ST_3 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %5, label %._crit_edge.backedge" [testKWTA16/top.cc:81]   --->   Operation 28 'br' <Predicate = (!tmp_1 & !tmp_3)> <Delay = 0.00>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%r_load = load i32* %r" [testKWTA16/top.cc:83]   --->   Operation 29 'load' 'r_load' <Predicate = (!tmp_1 & !tmp_3 & tmp_4)> <Delay = 0.00>
 ST_3 : Operation 30 [1/1] (0.00ns)   --->   "ret i32 %r_load" [testKWTA16/top.cc:83]   --->   Operation 30 'ret' <Predicate = (!tmp_1 & !tmp_3 & tmp_4)> <Delay = 0.00>
-ST_3 : Operation 31 [2/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:79]   --->   Operation 31 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 31 [2/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i13 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:79]   --->   Operation 31 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_3 : Operation 32 [1/1] (1.76ns)   --->   "store i32 1, i32* %r"   --->   Operation 32 'store' <Predicate = (!tmp_1 & tmp_3)> <Delay = 1.76>
-ST_3 : Operation 33 [2/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:74]   --->   Operation 33 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 33 [2/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i13 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:74]   --->   Operation 33 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 1.76>
-ST_4 : Operation 34 [1/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:79]   --->   Operation 34 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 34 [1/2] (0.00ns)   --->   "call fastcc void @"HLS_free<1>"(i13 %size, i32* %alloc_1_size, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:79]   --->   Operation 34 'call' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 35 [1/1] (0.00ns)   --->   "br label %._crit_edge.backedge" [testKWTA16/top.cc:80]   --->   Operation 35 'br' <Predicate = (!tmp_1 & tmp_3)> <Delay = 0.00>
-ST_4 : Operation 36 [1/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i11 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:74]   --->   Operation 36 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 36 [1/2] (0.00ns)   --->   "%r_1 = call fastcc i32 @"HLS_malloc<1>"(i13 %size, i32* %alloc_1_size, i32* %alloc_1_addr, i32* %alloc_1_free_target, i8* %alloc_1_cmd)" [testKWTA16/top.cc:74]   --->   Operation 36 'call' 'r_1' <Predicate = (tmp_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 37 [1/1] (1.76ns)   --->   "store i32 %r_1, i32* %r" [testKWTA16/top.cc:74]   --->   Operation 37 'store' <Predicate = (tmp_1)> <Delay = 1.76>
 ST_4 : Operation 38 [1/1] (0.00ns)   --->   "br label %._crit_edge.backedge" [testKWTA16/top.cc:75]   --->   Operation 38 'br' <Predicate = (tmp_1)> <Delay = 0.00>
 ST_4 : Operation 39 [1/1] (0.00ns)   --->   "br label %._crit_edge"   --->   Operation 39 'br' <Predicate = (tmp_1) | (tmp_3) | (!tmp_4)> <Delay = 0.00>
@@ -524,7 +524,7 @@ StgValue_39   (br           ) [ 01111]
 <pin id="45" dir="0" index="0" bw="2" slack="0"/>
 <pin id="46" dir="0" index="1" bw="1" slack="0"/>
 <pin id="47" dir="0" index="2" bw="32" slack="0"/>
-<pin id="48" dir="1" index="3" bw="11" slack="0"/>
+<pin id="48" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -534,7 +534,7 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="51" class="1004" name="grp_access_fu_51">
 <pin_list>
-<pin id="52" dir="0" index="0" bw="11" slack="0"/>
+<pin id="52" dir="0" index="0" bw="13" slack="0"/>
 <pin id="53" dir="0" index="1" bw="2" slack="2147483647"/>
 <pin id="54" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="55" dir="1" index="3" bw="2" slack="0"/>
@@ -547,10 +547,10 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="57" class="1004" name="req_list_addr_gep_fu_57">
 <pin_list>
-<pin id="58" dir="0" index="0" bw="11" slack="0"/>
+<pin id="58" dir="0" index="0" bw="13" slack="0"/>
 <pin id="59" dir="0" index="1" bw="1" slack="0"/>
 <pin id="60" dir="0" index="2" bw="32" slack="0"/>
-<pin id="61" dir="1" index="3" bw="11" slack="0"/>
+<pin id="61" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -560,10 +560,10 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="64" class="1004" name="grp_access_fu_64">
 <pin_list>
-<pin id="65" dir="0" index="0" bw="11" slack="0"/>
-<pin id="66" dir="0" index="1" bw="11" slack="2147483647"/>
+<pin id="65" dir="0" index="0" bw="13" slack="0"/>
+<pin id="66" dir="0" index="1" bw="13" slack="2147483647"/>
 <pin id="67" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="68" dir="1" index="3" bw="11" slack="0"/>
+<pin id="68" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -598,7 +598,7 @@ StgValue_39   (br           ) [ 01111]
 <comp id="81" class="1004" name="grp_HLS_malloc_1_s_fu_81">
 <pin_list>
 <pin id="82" dir="0" index="0" bw="32" slack="0"/>
-<pin id="83" dir="0" index="1" bw="11" slack="0"/>
+<pin id="83" dir="0" index="1" bw="13" slack="0"/>
 <pin id="84" dir="0" index="2" bw="32" slack="0"/>
 <pin id="85" dir="0" index="3" bw="32" slack="0"/>
 <pin id="86" dir="0" index="4" bw="32" slack="0"/>
@@ -614,7 +614,7 @@ StgValue_39   (br           ) [ 01111]
 <comp id="95" class="1004" name="grp_HLS_free_1_s_fu_95">
 <pin_list>
 <pin id="96" dir="0" index="0" bw="0" slack="0"/>
-<pin id="97" dir="0" index="1" bw="11" slack="0"/>
+<pin id="97" dir="0" index="1" bw="13" slack="0"/>
 <pin id="98" dir="0" index="2" bw="32" slack="0"/>
 <pin id="99" dir="0" index="3" bw="32" slack="0"/>
 <pin id="100" dir="0" index="4" bw="8" slack="0"/>
@@ -732,8 +732,8 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="157" class="1005" name="req_cmd_addr_reg_157">
 <pin_list>
-<pin id="158" dir="0" index="0" bw="11" slack="1"/>
-<pin id="159" dir="1" index="1" bw="11" slack="1"/>
+<pin id="158" dir="0" index="0" bw="13" slack="1"/>
+<pin id="159" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="req_cmd_addr "/>
@@ -742,8 +742,8 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="162" class="1005" name="req_list_addr_reg_162">
 <pin_list>
-<pin id="163" dir="0" index="0" bw="11" slack="1"/>
-<pin id="164" dir="1" index="1" bw="11" slack="1"/>
+<pin id="163" dir="0" index="0" bw="13" slack="1"/>
+<pin id="164" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="req_list_addr "/>
@@ -762,8 +762,8 @@ StgValue_39   (br           ) [ 01111]
 
 <comp id="172" class="1005" name="size_reg_172">
 <pin_list>
-<pin id="173" dir="0" index="0" bw="11" slack="1"/>
-<pin id="174" dir="1" index="1" bw="11" slack="1"/>
+<pin id="173" dir="0" index="0" bw="13" slack="1"/>
+<pin id="174" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="size "/>
@@ -965,9 +965,9 @@ Memories:
 |        |  BRAM  |   FF   |   LUT  |
 +--------+--------+--------+--------+
 | req_cmd|    1   |    0   |    0   |
-|req_list|    2   |    0   |    0   |
+|req_list|    7   |    0   |    0   |
 +--------+--------+--------+--------+
-|  Total |    3   |    0   |    0   |
+|  Total |    8   |    0   |    0   |
 +--------+--------+--------+--------+
 
 * Register list:
@@ -977,26 +977,26 @@ Memories:
 |     i_1_reg_167     |   32   |
 |       i_reg_70      |   32   |
 |      r_reg_150      |   32   |
-| req_cmd_addr_reg_157|   11   |
-|req_list_addr_reg_162|   11   |
-|     size_reg_172    |   11   |
+| req_cmd_addr_reg_157|   13   |
+|req_list_addr_reg_162|   13   |
+|     size_reg_172    |   13   |
 |    tmp_1_reg_178    |    1   |
 |    tmp_3_reg_182    |    1   |
 |    tmp_4_reg_186    |    1   |
 +---------------------+--------+
-|        Total        |   132  |
+|        Total        |   138  |
 +---------------------+--------+
 
 * Multiplexer (MUX) list: 
 |--------------------------|------|------|------|--------||---------||---------|
 |           Comp           |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |--------------------------|------|------|------|--------||---------||---------|
-|     grp_access_fu_51     |  p0  |   2  |  11  |   22   ||    9    |
-|     grp_access_fu_64     |  p0  |   2  |  11  |   22   ||    9    |
-| grp_HLS_malloc_1_s_fu_81 |  p1  |   2  |  11  |   22   ||    9    |
-|  grp_HLS_free_1_s_fu_95  |  p1  |   2  |  11  |   22   ||    9    |
+|     grp_access_fu_51     |  p0  |   2  |  13  |   26   ||    9    |
+|     grp_access_fu_64     |  p0  |   2  |  13  |   26   ||    9    |
+| grp_HLS_malloc_1_s_fu_81 |  p1  |   2  |  13  |   26   ||    9    |
+|  grp_HLS_free_1_s_fu_95  |  p1  |   2  |  13  |   26   ||    9    |
 |--------------------------|------|------|------|--------||---------||---------|
-|           Total          |      |      |      |   88   ||  7.076  ||    36   |
+|           Total          |      |      |      |   104  ||  7.076  ||    36   |
 |--------------------------|------|------|------|--------||---------||---------|
 
 
@@ -1006,9 +1006,9 @@ Memories:
 |           |  BRAM  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
 |  Function |    -   |    -   |   32   |   63   |
-|   Memory  |    3   |    -   |    0   |    0   |
+|   Memory  |    8   |    -   |    0   |    0   |
 |Multiplexer|    -   |    7   |    -   |   36   |
-|  Register |    -   |    -   |   132  |    -   |
+|  Register |    -   |    -   |   138  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    3   |    7   |   164  |   99   |
+|   Total   |    8   |    7   |   170  |   99   |
 +-----------+--------+--------+--------+--------+

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Aug 11 02:03:12 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Aug 11 16:44:22 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -11,8 +11,8 @@
     </PORT>
     <PORT DIR="I" NAME="ap_start_1" SIGIS="undef" SIGNAME="External_Ports_ap_start_1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_start"/>
         <CONNECTION INSTANCE="KWTA_mini16_theta_0" PORT="ap_start"/>
+        <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_start"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="reset_0" SIGIS="rst" SIGNAME="External_Ports_reset_0">
@@ -69,8 +69,8 @@
         </PORT>
         <PORT DIR="O" NAME="alloc_addr_ap_vld" SIGIS="undef" SIGNAME="KWTA_mini16_theta_0_alloc_addr_ap_vld">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="alloc_1_addr_ap_vld"/>
             <CONNECTION INSTANCE="address_display_0" PORT="addr_vld"/>
+            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="alloc_1_addr_ap_vld"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="alloc_addr_ap_ack" SIGIS="undef" SIGNAME="checkKWTA_mini16_0_alloc_1_addr_ap_ack">
@@ -118,8 +118,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="alloc_addr" RIGHT="0" SIGIS="data" SIGNAME="KWTA_mini16_theta_0_alloc_addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="alloc_1_addr"/>
             <CONNECTION INSTANCE="address_display_0" PORT="address"/>
+            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="alloc_1_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="alloc_cmd" RIGHT="0" SIGIS="data" SIGNAME="checkKWTA_mini16_0_alloc_1_cmd">
@@ -850,9 +850,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="KWTA_mini16_theta_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
@@ -904,8 +904,8 @@
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_rst"/>
             <CONNECTION INSTANCE="KWTA_mini16_theta_0" PORT="ap_rst"/>
+            <CONNECTION INSTANCE="checkKWTA_mini16_0" PORT="ap_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>

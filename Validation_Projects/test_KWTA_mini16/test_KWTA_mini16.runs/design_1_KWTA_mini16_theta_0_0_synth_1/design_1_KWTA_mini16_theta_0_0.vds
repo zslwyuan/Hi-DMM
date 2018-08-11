@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Aug 11 02:03:14 2018
-# Process ID: 25764
+# Start of session at: Sat Aug 11 16:44:25 2018
+# Process ID: 19365
 # Current directory: /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_KWTA_mini16_theta_0_0_synth_1
 # Command line: vivado -log design_1_KWTA_mini16_theta_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_KWTA_mini16_theta_0_0.tcl
 # Log file: /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_KWTA_mini16_theta_0_0_synth_1/design_1_KWTA_mini16_theta_0_0.vds
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25823 
+INFO: Helper process launched with PID 19557 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1352.562 ; gain = 80.887 ; free physical = 3220 ; free virtual = 28704
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1353.562 ; gain = 81.887 ; free physical = 706 ; free virtual = 27808
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_KWTA_mini16_theta_0_0' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ip/design_1_KWTA_mini16_theta_0_0/synth/design_1_KWTA_mini16_theta_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_theta' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:12]
+INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_theta' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:12]
 	Parameter ap_ST_fsm_state1 bound to: 15'b000000000000001 
 	Parameter ap_ST_fsm_state2 bound to: 15'b000000000000010 
 	Parameter ap_ST_fsm_state3 bound to: 15'b000000000000100 
@@ -36,37 +36,37 @@ INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_theta' [/home/tingyuan/Tem
 	Parameter ap_ST_fsm_state13 bound to: 15'b001000000000000 
 	Parameter ap_ST_fsm_state14 bound to: 15'b010000000000000 
 	Parameter ap_ST_fsm_state15 bound to: 15'b100000000000000 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:77]
-INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetabkb' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:49]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:77]
+INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetabkb' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:49]
 	Parameter DataWidth bound to: 32 - type: integer 
 	Parameter AddressRange bound to: 4096 - type: integer 
 	Parameter AddressWidth bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetabkb_ram' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:9]
+INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetabkb_ram' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:9]
 	Parameter DWIDTH bound to: 32 - type: integer 
 	Parameter AWIDTH bound to: 12 - type: integer 
 	Parameter MEM_SIZE bound to: 4096 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:22]
-INFO: [Synth 8-3876] $readmem data file './KWTA_mini16_thetabkb_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetabkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetabkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetabkb.v:49]
-INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetacud' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:49]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:22]
+INFO: [Synth 8-3876] $readmem data file './KWTA_mini16_thetabkb_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetabkb_ram' (1#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetabkb' (2#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetabkb.v:49]
+INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetacud' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:49]
 	Parameter DataWidth bound to: 64 - type: integer 
 	Parameter AddressRange bound to: 64 - type: integer 
 	Parameter AddressWidth bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetacud_ram' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:9]
+INFO: [Synth 8-6157] synthesizing module 'KWTA_mini16_thetacud_ram' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:9]
 	Parameter DWIDTH bound to: 64 - type: integer 
 	Parameter AWIDTH bound to: 6 - type: integer 
 	Parameter MEM_SIZE bound to: 64 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:22]
-INFO: [Synth 8-3876] $readmem data file './KWTA_mini16_thetacud_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetacud_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetacud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_thetacud.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_theta' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:12]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:22]
+INFO: [Synth 8-3876] $readmem data file './KWTA_mini16_thetacud_ram.dat' is read successfully [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetacud_ram' (3#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_thetacud' (4#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_thetacud.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'KWTA_mini16_theta' (5#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_KWTA_mini16_theta_0_0' (6#1) [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ip/design_1_KWTA_mini16_theta_0_0/synth/design_1_KWTA_mini16_theta_0_0.v:58]
 WARNING: [Synth 8-3331] design KWTA_mini16_thetacud has unconnected port reset
 WARNING: [Synth 8-3331] design KWTA_mini16_thetabkb has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.188 ; gain = 129.512 ; free physical = 3223 ; free virtual = 28707
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1402.188 ; gain = 130.512 ; free physical = 897 ; free virtual = 28000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +79,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.188 ; gain = 129.512 ; free physical = 3220 ; free virtual = 28705
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1402.188 ; gain = 130.512 ; free physical = 877 ; free virtual = 27980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.188 ; gain = 129.512 ; free physical = 3220 ; free virtual = 28705
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1402.188 ; gain = 130.512 ; free physical = 877 ; free virtual = 27980
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -98,64 +98,67 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1765.438 ; gain = 0.000 ; free physical = 2950 ; free virtual = 28442
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1765.445 ; gain = 0.000 ; free physical = 432 ; free virtual = 27535
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 3011 ; free virtual = 28504
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 511 ; free virtual = 27614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 3011 ; free virtual = 28504
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 511 ; free virtual = 27614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_KWTA_mini16_theta_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 3030 ; free virtual = 28523
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 512 ; free virtual = 27616
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'loc1_V_reg_1610_reg[7:0]' into 'last_loc1_V_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:506]
-INFO: [Synth 8-4471] merging register 'loc2_V_reg_1652_reg[7:0]' into 'last_loc2_V_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:520]
-INFO: [Synth 8-4471] merging register 'p_0252_0_i1_cast_reg_1599_reg[6:5]' into 'p_0167_0_i1_cast_reg_1591_reg[5:4]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:1309]
-WARNING: [Synth 8-6014] Unused sequential element loc1_V_reg_1610_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:506]
-WARNING: [Synth 8-6014] Unused sequential element loc2_V_reg_1652_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:520]
-WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_7_reg_1544_reg' and it is trimmed from '20' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:598]
-WARNING: [Synth 8-3936] Found unconnected internal register 'p_Val2_s_reg_1507_reg' and it is trimmed from '20' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:554]
-WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_15_reg_1563_reg' and it is trimmed from '8' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:513]
-WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_free_target_re_reg_1460_reg' and it is trimmed from '32' to '16' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:498]
-WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_size_read_reg_1455_reg' and it is trimmed from '32' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/9c17/hdl/verilog/KWTA_mini16_theta.v:499]
+INFO: [Synth 8-4471] merging register 'tmp_22_reg_1606_reg[7:0]' into 'last_loc1_V_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:505]
+INFO: [Synth 8-4471] merging register 'tmp_28_reg_1648_reg[7:0]' into 'last_loc2_V_reg[7:0]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:519]
+INFO: [Synth 8-4471] merging register 'p_0252_0_i1_cast_reg_1595_reg[6:5]' into 'p_0167_0_i1_cast_reg_1587_reg[5:4]' [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:1302]
+WARNING: [Synth 8-6014] Unused sequential element tmp_22_reg_1606_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:505]
+WARNING: [Synth 8-6014] Unused sequential element tmp_28_reg_1648_reg was removed.  [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:519]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_30_reg_1659_reg' and it is trimmed from '14' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:585]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_s_reg_1540_reg' and it is trimmed from '20' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:597]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_Val2_s_reg_1503_reg' and it is trimmed from '20' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:553]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_15_reg_1559_reg' and it is trimmed from '8' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:512]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_13_reg_1530_reg' and it is trimmed from '10' to '6' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:578]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_5_reg_1489_reg' and it is trimmed from '16' to '12' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:540]
+WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_free_target_re_reg_1456_reg' and it is trimmed from '32' to '20' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:497]
+WARNING: [Synth 8-3936] Found unconnected internal register 'alloc_size_read_reg_1451_reg' and it is trimmed from '32' to '2' bits. [/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ipshared/1461/hdl/verilog/KWTA_mini16_theta.v:498]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5545] ROM "tmp_1_fu_918_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_fu_872_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_3_fu_881_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_s_fu_968_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_11_fu_1053_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_21_fu_1200_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_20_fu_1194_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_16_fu_1112_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_23_fu_1295_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_26_fu_1322_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_24_fu_1304_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_25_fu_1313_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_12_fu_1174_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_19_fu_1184_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_1_fu_918_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_fu_872_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_3_fu_881_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_s_fu_968_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_11_fu_1053_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_21_fu_1200_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_20_fu_1194_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_16_fu_1112_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_23_fu_1295_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_26_fu_1322_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_24_fu_1304_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_25_fu_1313_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_12_fu_1174_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_19_fu_1184_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_1_fu_916_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_870_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_879_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_7_fu_966_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_11_fu_1051_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_1198_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_fu_1192_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1110_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1302_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_24_fu_1293_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1320_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_26_fu_1311_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_12_fu_1172_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_19_fu_1182_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_1_fu_916_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_870_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_879_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_7_fu_966_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_11_fu_1051_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_1198_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_fu_1192_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1110_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1302_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_24_fu_1293_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1320_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_26_fu_1311_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_12_fu_1172_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_19_fu_1182_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -164,7 +167,7 @@ INFO: [Synth 8-5544] ROM "last_addr_V" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5544] ROM "last_offset_V" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "last_offset_V" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 3002 ; free virtual = 28493
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 483 ; free virtual = 27590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,8 +181,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 1     
 	   4 Input      8 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
@@ -187,17 +190,15 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               64 Bit    Registers := 4     
-	               55 Bit    Registers := 1     
-	               54 Bit    Registers := 1     
 	               32 Bit    Registers := 2     
-	               20 Bit    Registers := 2     
-	               16 Bit    Registers := 5     
+	               20 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
 	               15 Bit    Registers := 1     
-	               12 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 4     
-	                6 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
@@ -212,7 +213,8 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit        Muxes := 2     
 	   2 Input     15 Bit        Muxes := 2     
 	  16 Input     15 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
 	  17 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	  15 Input      6 Bit        Muxes := 1     
@@ -247,8 +249,8 @@ Module KWTA_mini16_theta
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 1     
 	   4 Input      8 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
@@ -256,17 +258,15 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               64 Bit    Registers := 3     
-	               55 Bit    Registers := 1     
-	               54 Bit    Registers := 1     
 	               32 Bit    Registers := 1     
-	               20 Bit    Registers := 2     
-	               16 Bit    Registers := 5     
+	               20 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
 	               15 Bit    Registers := 1     
-	               12 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 4     
-	                6 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
@@ -278,7 +278,8 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit        Muxes := 2     
 	   2 Input     15 Bit        Muxes := 2     
 	  16 Input     15 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
 	  17 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	  15 Input      6 Bit        Muxes := 1     
@@ -306,30 +307,30 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "tmp_3_fu_881_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_25_fu_1313_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_26_fu_1322_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_24_fu_1304_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_23_fu_1295_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_16_fu_1112_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_fu_872_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_1_fu_918_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_19_fu_1184_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_21_fu_1200_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_12_fu_1174_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_20_fu_1194_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_3_fu_881_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_25_fu_1313_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_26_fu_1322_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_24_fu_1304_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_23_fu_1295_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_16_fu_1112_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_fu_872_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "tmp_1_fu_918_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "tmp_19_fu_1184_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_21_fu_1200_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_12_fu_1174_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_20_fu_1194_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_879_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_26_fu_1311_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_24_fu_1293_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1320_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1302_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1110_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_870_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_1_fu_916_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_19_fu_1182_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_1198_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_12_fu_1172_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_fu_1192_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_879_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_26_fu_1311_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_24_fu_1293_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1320_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_25_fu_1302_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_16_fu_1110_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_fu_870_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_1_fu_916_p2" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tmp_19_fu_1182_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_21_fu_1198_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_12_fu_1172_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_fu_1192_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "last_offset_V" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_size[31]
@@ -374,120 +375,49 @@ WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free
 WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[22]
 WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[21]
 WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[20]
-WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[19]
-WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[18]
-WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[17]
-WARNING: [Synth 8-3331] design KWTA_mini16_theta has unconnected port alloc_free_target[16]
-INFO: [Synth 8-3886] merging instance 'inst/last_offset_V_reg[9]' (FDRE) to 'inst/last_offset_V_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/last_offset_V_reg[10]' (FDRE) to 'inst/last_offset_V_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/last_offset_V_reg[11]' (FDRE) to 'inst/last_offset_V_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[5]' (FDE) to 'inst/tmp_8_reg_1493_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[4]' (FDE) to 'inst/tmp_8_reg_1493_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[3]' (FDE) to 'inst/tmp_8_reg_1493_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[2]' (FDE) to 'inst/tmp_8_reg_1493_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[1]' (FDE) to 'inst/tmp_8_reg_1493_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1482_reg[0]' (FDE) to 'inst/tmp_8_reg_1493_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[0]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[1]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[2]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[3]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[4]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1563_reg[5]' (FDE) to 'inst/last_loc1_V_load_reg_1558_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_0248_0_i1_reg_518_reg[4] )
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[63]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[62]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[61]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[60]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[59]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[58]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[57]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[56]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[55]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[54]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[53]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[52]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[51]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[50]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[49]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[48]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[47]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[46]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[45]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[44]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[43]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[42]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[41]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[40]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[39]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[38]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[37]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[36]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[35]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[34]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[33]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[32]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[31]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[30]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[29]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[28]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[27]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[26]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[25]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[24]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[23]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[22]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[21]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[20]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[19]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[18]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[17]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[16]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[15]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[14]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[13]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_8_reg_1493_reg[12]' (FD) to 'inst/p_0167_0_i1_cast_reg_1591_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/p_0167_0_i1_cast_reg_1591_reg[5]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[63]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[62]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[61]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[60]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[59]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[58]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[57]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[56]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[55]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[54]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[53]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[52]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[51]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[50]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[49]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[48]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[47]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[46]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[45]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[44]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[43]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[42]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[41]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[40]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[39]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[38]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[37]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[36]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[35]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[34]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[33]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/tmp_28_reg_1663_reg[32]' (FD) to 'inst/tmp_8_reg_1493_reg[11]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\phitmp_reg_1673_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\phitmp_reg_1673_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (p_0248_0_i1_reg_518_reg[4]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1460_reg[3]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1460_reg[2]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1460_reg[1]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1460_reg[0]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (alloc_size_read_reg_1455_reg[0]) is unused and will be removed from module KWTA_mini16_theta.
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[5]' (FDE) to 'inst/tmp_5_reg_1489_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[4]' (FDE) to 'inst/tmp_5_reg_1489_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[3]' (FDE) to 'inst/tmp_5_reg_1489_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[2]' (FDE) to 'inst/tmp_5_reg_1489_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[1]' (FDE) to 'inst/tmp_5_reg_1489_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/p_Result_6_reg_1478_reg[0]' (FDE) to 'inst/tmp_5_reg_1489_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[0]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[1]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[2]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[3]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[4]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_15_reg_1559_reg[5]' (FDE) to 'inst/last_loc1_V_load_reg_1554_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_0248_0_i1_reg_516_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/p_0167_0_i1_cast_reg_1587_reg[5]' (FD) to 'inst/p_0167_0_i1_cast_reg_1587_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/p_0167_0_i1_cast_reg_1587_reg[4]' (FD) to 'inst/phitmp_reg_1669_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[0]' (FDE) to 'inst/tmp_29_reg_1653_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[1]' (FDE) to 'inst/tmp_29_reg_1653_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[2]' (FDE) to 'inst/tmp_29_reg_1653_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[3]' (FDE) to 'inst/tmp_29_reg_1653_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[4]' (FDE) to 'inst/tmp_29_reg_1653_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[5]' (FDE) to 'inst/tmp_29_reg_1653_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[6]' (FDE) to 'inst/p_Result_7_reg_1483_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[6]' (FDE) to 'inst/tmp_29_reg_1653_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[7]' (FDE) to 'inst/p_Result_7_reg_1483_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[7]' (FDE) to 'inst/tmp_29_reg_1653_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[8]' (FDE) to 'inst/p_Result_7_reg_1483_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[8]' (FDE) to 'inst/tmp_29_reg_1653_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[9]' (FDE) to 'inst/p_Result_7_reg_1483_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[9]' (FDE) to 'inst/tmp_29_reg_1653_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[10]' (FDE) to 'inst/p_Result_7_reg_1483_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[10]' (FDE) to 'inst/tmp_29_reg_1653_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_5_reg_1489_reg[11]' (FDE) to 'inst/p_Result_7_reg_1483_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_30_reg_1659_reg[11]' (FDE) to 'inst/tmp_29_reg_1653_reg[11]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\phitmp_reg_1669_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/phitmp_reg_1669_reg[1]' (FD) to 'inst/phitmp_reg_1669_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/phitmp_reg_1669_reg[2]' (FD) to 'inst/phitmp_reg_1669_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\phitmp_reg_1669_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (p_0248_0_i1_reg_516_reg[4]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1456_reg[3]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1456_reg[2]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1456_reg[1]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (alloc_free_target_re_reg_1456_reg[0]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (alloc_size_read_reg_1451_reg[0]) is unused and will be removed from module KWTA_mini16_theta.
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[18]) is unused and will be removed from module KWTA_mini16_theta.
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[17]) is unused and will be removed from module KWTA_mini16_theta.
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[16]) is unused and will be removed from module KWTA_mini16_theta.
@@ -495,22 +425,22 @@ WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[15]) is unused and
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[14]) is unused and will be removed from module KWTA_mini16_theta.
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[13]) is unused and will be removed from module KWTA_mini16_theta.
 WARNING: [Synth 8-3332] Sequential element (last_offset_V_reg[12]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[31]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[30]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[29]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[28]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[27]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[26]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[25]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[24]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[23]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[22]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[21]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[20]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[19]) is unused and will be removed from module KWTA_mini16_theta.
-WARNING: [Synth 8-3332] Sequential element (storemerge_reg_394_reg[18]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[31]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[30]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[29]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[28]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[27]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[26]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[25]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[24]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[23]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[22]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[21]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[20]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[19]) is unused and will be removed from module KWTA_mini16_theta.
+WARNING: [Synth 8-3332] Sequential element (storemerge_reg_392_reg[18]) is unused and will be removed from module KWTA_mini16_theta.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 2969 ; free virtual = 28462
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 388 ; free virtual = 27499
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -544,13 +474,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1765.438 ; gain = 493.762 ; free physical = 2838 ; free virtual = 28336
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 1765.445 ; gain = 493.770 ; free physical = 824 ; free virtual = 27973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 1818.336 ; gain = 546.660 ; free physical = 2804 ; free virtual = 28301
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 1827.094 ; gain = 555.418 ; free physical = 765 ; free virtual = 27914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -583,7 +513,7 @@ INFO: [Synth 8-4480] The timing for the instance inst/heap_tree_V_U/KWTA_mini16_
 INFO: [Synth 8-4480] The timing for the instance inst/heap_tree_V_U/KWTA_mini16_thetacud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance inst/heap_tree_V_U/KWTA_mini16_thetacud_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2783 ; free virtual = 28281
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:00 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 774 ; free virtual = 27923
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -607,7 +537,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -620,7 +550,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -632,25 +562,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -666,39 +596,39 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |CARRY4     |    45|
-|2     |LUT1       |   131|
-|3     |LUT2       |   159|
-|4     |LUT3       |    96|
-|5     |LUT4       |   104|
-|6     |LUT5       |   295|
-|7     |LUT6       |   407|
+|1     |CARRY4     |    48|
+|2     |LUT1       |   132|
+|3     |LUT2       |   163|
+|4     |LUT3       |    86|
+|5     |LUT4       |    98|
+|6     |LUT5       |   316|
+|7     |LUT6       |   426|
 |8     |RAMB18E1   |     1|
 |9     |RAMB18E1_1 |     1|
 |10    |RAMB36E1   |     2|
-|11    |FDRE       |   434|
-|12    |FDSE       |    10|
+|11    |FDRE       |   457|
+|12    |FDSE       |    13|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+---------------------------------+-------------------------+------+
 |      |Instance                         |Module                   |Cells |
 +------+---------------------------------+-------------------------+------+
-|1     |top                              |                         |  1685|
-|2     |  inst                           |KWTA_mini16_theta        |  1685|
-|3     |    heap_tree_V_U                |KWTA_mini16_thetacud     |   384|
-|4     |      KWTA_mini16_thetacud_ram_U |KWTA_mini16_thetacud_ram |   384|
-|5     |    used_free_V_U                |KWTA_mini16_thetabkb     |    93|
-|6     |      KWTA_mini16_thetabkb_ram_U |KWTA_mini16_thetabkb_ram |    93|
+|1     |top                              |                         |  1743|
+|2     |  inst                           |KWTA_mini16_theta        |  1743|
+|3     |    heap_tree_V_U                |KWTA_mini16_thetacud     |   388|
+|4     |      KWTA_mini16_thetacud_ram_U |KWTA_mini16_thetacud_ram |   388|
+|5     |    used_free_V_U                |KWTA_mini16_thetabkb     |    94|
+|6     |      KWTA_mini16_thetabkb_ram_U |KWTA_mini16_thetabkb_ram |    94|
 +------+---------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.344 ; gain = 554.668 ; free physical = 2800 ; free virtual = 28297
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.109 ; gain = 564.434 ; free physical = 777 ; free virtual = 27925
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1826.344 ; gain = 190.418 ; free physical = 2860 ; free virtual = 28358
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1826.352 ; gain = 554.668 ; free physical = 2860 ; free virtual = 28358
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1836.109 ; gain = 201.176 ; free physical = 837 ; free virtual = 27986
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1836.117 ; gain = 564.434 ; free physical = 837 ; free virtual = 27986
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -706,9 +636,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-210 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1826.352 ; gain = 566.242 ; free physical = 2889 ; free virtual = 28386
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 1836.117 ; gain = 576.008 ; free physical = 873 ; free virtual = 28022
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_KWTA_mini16_theta_0_0_synth_1/design_1_KWTA_mini16_theta_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.srcs/sources_1/bd/design_1/ip/design_1_KWTA_mini16_theta_0_0/design_1_KWTA_mini16_theta_0_0.xci
@@ -716,5 +646,5 @@ INFO: [Coretcl 2-1174] Renamed 5 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/tingyuan/Temporary/vivado-outputs/test_KWTA_mini16/test_KWTA_mini16.runs/design_1_KWTA_mini16_theta_0_0_synth_1/design_1_KWTA_mini16_theta_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_KWTA_mini16_theta_0_0_utilization_synth.rpt -pb design_1_KWTA_mini16_theta_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1850.355 ; gain = 0.000 ; free physical = 2871 ; free virtual = 28371
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 11 02:04:28 2018...
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1860.121 ; gain = 0.000 ; free physical = 871 ; free virtual = 28022
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 11 16:45:41 2018...

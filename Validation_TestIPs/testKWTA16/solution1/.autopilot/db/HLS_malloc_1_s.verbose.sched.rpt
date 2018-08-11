@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'HLS_malloc_1_s'
 ================================================================
-* Date:           Sat Aug 11 01:41:53 2018
+* Date:           Sat Aug 11 16:43:14 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        testKWTA16
@@ -79,8 +79,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%size_read = call i11 @_ssdm_op_Read.ap_auto.i11(i11 %size)"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%size_cast = zext i11 %size_read to i32"   --->   Operation 5 'zext' 'size_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%size_read = call i13 @_ssdm_op_Read.ap_auto.i13(i13 %size)"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%size_cast = zext i13 %size_read to i32"   --->   Operation 5 'zext' 'size_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i8P(i8* %allocator_cmd, i8 2)" [testKWTA16/top.cc:24]   --->   Operation 6 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_size, i32 %size_cast)" [testKWTA16/top.cc:26]   --->   Operation 7 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %allocator_free_targe, i32 0)" [testKWTA16/top.cc:27]   --->   Operation 8 'write' <Predicate = true> <Delay = 0.00>

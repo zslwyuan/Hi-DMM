@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'HLS_free_1_s'
 ================================================================
-* Date:           Sat Aug 11 01:41:53 2018
+* Date:           Sat Aug 11 16:43:14 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        testKWTA16
@@ -127,7 +127,7 @@
 |ap_done                      | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
 |ap_idle                      | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
 |ap_ready                     | out |    1| ap_ctrl_hs |      HLS_free<1>     | return value |
-|free_target                  |  in |   11|   ap_none  |      free_target     |    scalar    |
+|free_target                  |  in |   13|   ap_none  |      free_target     |    scalar    |
 |allocator_size               | out |   32|    ap_hs   |    allocator_size    |    pointer   |
 |allocator_size_ap_vld        | out |    1|    ap_hs   |    allocator_size    |    pointer   |
 |allocator_size_ap_ack        |  in |    1|    ap_hs   |    allocator_size    |    pointer   |

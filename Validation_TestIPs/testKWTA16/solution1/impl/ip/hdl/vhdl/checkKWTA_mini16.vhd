@@ -36,7 +36,7 @@ end;
 architecture behav of checkKWTA_mini16 is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "checkKWTA_mini16,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.213000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=159,HLS_SYN_LUT=369,HLS_VERSION=2018_2}";
+    "checkKWTA_mini16,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.213000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=0,HLS_SYN_FF=161,HLS_SYN_LUT=369,HLS_VERSION=2018_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
@@ -60,17 +60,17 @@ architecture behav of checkKWTA_mini16 is
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal req_cmd_address0 : STD_LOGIC_VECTOR (10 downto 0);
+    signal req_cmd_address0 : STD_LOGIC_VECTOR (12 downto 0);
     signal req_cmd_ce0 : STD_LOGIC;
     signal req_cmd_q0 : STD_LOGIC_VECTOR (1 downto 0);
-    signal req_list_address0 : STD_LOGIC_VECTOR (10 downto 0);
+    signal req_list_address0 : STD_LOGIC_VECTOR (12 downto 0);
     signal req_list_ce0 : STD_LOGIC;
-    signal req_list_q0 : STD_LOGIC_VECTOR (10 downto 0);
+    signal req_list_q0 : STD_LOGIC_VECTOR (12 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal i_1_fu_113_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal i_1_reg_167 : STD_LOGIC_VECTOR (31 downto 0);
-    signal size_reg_172 : STD_LOGIC_VECTOR (10 downto 0);
+    signal size_reg_172 : STD_LOGIC_VECTOR (12 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal tmp_1_fu_119_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -120,7 +120,7 @@ architecture behav of checkKWTA_mini16 is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        size : IN STD_LOGIC_VECTOR (10 downto 0);
+        size : IN STD_LOGIC_VECTOR (12 downto 0);
         allocator_size : OUT STD_LOGIC_VECTOR (31 downto 0);
         allocator_size_ap_vld : OUT STD_LOGIC;
         allocator_size_ap_ack : IN STD_LOGIC;
@@ -145,7 +145,7 @@ architecture behav of checkKWTA_mini16 is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        free_target : IN STD_LOGIC_VECTOR (10 downto 0);
+        free_target : IN STD_LOGIC_VECTOR (12 downto 0);
         allocator_size : OUT STD_LOGIC_VECTOR (31 downto 0);
         allocator_size_ap_vld : OUT STD_LOGIC;
         allocator_size_ap_ack : IN STD_LOGIC;
@@ -166,7 +166,7 @@ architecture behav of checkKWTA_mini16 is
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (10 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (12 downto 0);
         ce0 : IN STD_LOGIC;
         q0 : OUT STD_LOGIC_VECTOR (1 downto 0) );
     end component;
@@ -180,9 +180,9 @@ architecture behav of checkKWTA_mini16 is
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (10 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (12 downto 0);
         ce0 : IN STD_LOGIC;
-        q0 : OUT STD_LOGIC_VECTOR (10 downto 0) );
+        q0 : OUT STD_LOGIC_VECTOR (12 downto 0) );
     end component;
 
 
@@ -191,8 +191,8 @@ begin
     req_cmd_U : component checkKWTA_mini16_bkb
     generic map (
         DataWidth => 2,
-        AddressRange => 2048,
-        AddressWidth => 11)
+        AddressRange => 8192,
+        AddressWidth => 13)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -202,9 +202,9 @@ begin
 
     req_list_U : component checkKWTA_mini16_cud
     generic map (
-        DataWidth => 11,
-        AddressRange => 2048,
-        AddressWidth => 11)
+        DataWidth => 13,
+        AddressRange => 8192,
+        AddressWidth => 13)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -540,7 +540,7 @@ begin
     grp_HLS_free_1_s_fu_95_ap_start <= grp_HLS_free_1_s_fu_95_ap_start_reg;
     grp_HLS_malloc_1_s_fu_81_ap_start <= grp_HLS_malloc_1_s_fu_81_ap_start_reg;
     i_1_fu_113_p2 <= std_logic_vector(signed(i_reg_70) + signed(ap_const_lv32_1));
-    req_cmd_address0 <= tmp_fu_107_p1(11 - 1 downto 0);
+    req_cmd_address0 <= tmp_fu_107_p1(13 - 1 downto 0);
 
     req_cmd_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -551,7 +551,7 @@ begin
         end if; 
     end process;
 
-    req_list_address0 <= tmp_fu_107_p1(11 - 1 downto 0);
+    req_list_address0 <= tmp_fu_107_p1(13 - 1 downto 0);
 
     req_list_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin

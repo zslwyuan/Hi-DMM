@@ -29,9 +29,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="11" op_0_bw="11" op_1_bw="11">
+<Node id="6" bw="13" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-:0  %size_read = call i11 @_ssdm_op_Read.ap_auto.i11(i11 %size)
+:0  %size_read = call i13 @_ssdm_op_Read.ap_auto.i13(i13 %size)
 
 ]]></Node>
 <StgValue><ssdm name="size_read"/></StgValue>
@@ -44,9 +44,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="32" op_0_bw="11">
+<Node id="7" bw="32" op_0_bw="13">
 <![CDATA[
-:1  %size_cast = zext i11 %size_read to i32
+:1  %size_cast = zext i13 %size_read to i32
 
 ]]></Node>
 <StgValue><ssdm name="size_cast"/></StgValue>
@@ -216,7 +216,7 @@
 
 
 <dataflows>
-<dataflow id="23" from="_ssdm_op_Read.ap_auto.i11" to="size_read" fromId="22" toId="4">
+<dataflow id="23" from="_ssdm_op_Read.ap_auto.i13" to="size_read" fromId="22" toId="4">
 </dataflow>
 <dataflow id="24" from="size" to="size_read" fromId="17" toId="4">
 </dataflow>

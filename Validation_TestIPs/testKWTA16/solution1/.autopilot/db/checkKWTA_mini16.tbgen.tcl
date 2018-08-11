@@ -92,19 +92,19 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "alloc_1_size", "Type" : "HS", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_size"},
-					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_size"}]},
+					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_size"},
+					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_size"}]},
 			{"Name" : "alloc_1_addr", "Type" : "HS", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_addr"}]},
 			{"Name" : "alloc_1_free_target", "Type" : "HS", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_free_targe"},
-					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_free_targe"}]},
+					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_free_targe"},
+					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_free_targe"}]},
 			{"Name" : "alloc_1_cmd", "Type" : "HS", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_cmd"},
-					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_cmd"}]},
+					{"ID" : "3", "SubInstance" : "grp_HLS_malloc_1_s_fu_81", "Port" : "allocator_cmd"},
+					{"ID" : "4", "SubInstance" : "grp_HLS_free_1_s_fu_95", "Port" : "allocator_cmd"}]},
 			{"Name" : "req_cmd", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "req_list", "Type" : "Memory", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.req_cmd_U", "Parent" : "0"},
