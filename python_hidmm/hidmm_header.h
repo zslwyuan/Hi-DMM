@@ -3,10 +3,10 @@ int size;
 int addr;
 int free_target;
 char cmd;
-} allocator_port;
+} hidmm_alloc_port;
 
 template <int unused>
-volatile int HLS_malloc(int size,volatile allocator_port *allocator)
+volatile int HLS_malloc(int size,volatile hidmm_alloc_port *allocator)
 {
 #pragma HLS INLINE
 	int status;
@@ -27,7 +27,7 @@ volatile int HLS_malloc(int size,volatile allocator_port *allocator)
 }
 
 template <int unused>
-volatile int HLS_free(int free_target, int free_size, volatile allocator_port *allocator)
+volatile int HLS_free(int free_target, int free_size, volatile hidmm_alloc_port *allocator)
 {
 #pragma HLS INLINE
 	int status;

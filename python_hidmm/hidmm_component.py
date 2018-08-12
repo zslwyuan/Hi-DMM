@@ -602,6 +602,7 @@ def main():
     replacement = []
     pointer_assign = dict()
     pointer_allocator = dict()
+    struct_comp_map = dict()
     heap_type = ["int", "int"]
     heap_size = [10000, 10000]
     heap = ["hidmm_dynamic_heap0", "hidmm_dynamic_heap1"]
@@ -971,6 +972,7 @@ def main():
     find_pointer_struct_decl(tu.cursor, 0, struct_list)
     print("\n========== Structure ==============", file=logfile)
     struct_comps = dict()
+
     for node in struct_list:
         print(
             {
@@ -978,6 +980,7 @@ def main():
                 'basetype': node['basetype']
             },
             file=logfile)
+        struct_comp_map[node['struct'].spelling] = node['basetype']
         print(
             {
                 'id': get_cursor_id(node['struct']),
@@ -1586,9 +1589,14 @@ def main():
             heap_size_map["Hi_DMM_dynamic_heap_"
                         + str(tmp_heap_id)] = attempt_selection[
                             'heap_in_attempt'][tmp_heap_id]['depth']
-            heap_type_map["Hi_DMM_dynamic_heap_"
-                        + str(tmp_heap_id)] = attempt_selection[
-                            'heap_in_attempt'][tmp_heap_id]['var_type_string']
+            if (attempt_selection['heap_in_attempt'][tmp_heap_id]['var_type_string'] in struct_comp_map.keys()):
+                heap_type_map["Hi_DMM_dynamic_heap_"
+                            + str(tmp_heap_id)] = struct_comp_map[attempt_selection[
+                                'heap_in_attempt'][tmp_heap_id]['var_type_string']]            
+            else:    
+                heap_type_map["Hi_DMM_dynamic_heap_"
+                            + str(tmp_heap_id)] = attempt_selection[
+                                'heap_in_attempt'][tmp_heap_id]['var_type_string']
             heap_MAU_map["Hi_DMM_dynamic_heap_"
                         + str(tmp_heap_id)] = attempt_selection[
                             'heap_in_attempt'][tmp_heap_id]['MAU_size']

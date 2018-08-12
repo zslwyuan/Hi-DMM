@@ -1,3 +1,6 @@
+#define NULL __null
+
+
 template <int unused> struct ap_int
 {
     int val;
