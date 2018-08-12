@@ -727,6 +727,7 @@ def main():
     if (args[0].find('/')):
         file_path_change = True
         ori_file_pathname = args[0]
+        print("------------------  shell command  -------------------\ncp " + ori_file_pathname + " .")
         os.system("cp " + ori_file_pathname + " .")
         tmp_array = ori_file_pathname.split('/')
         args[0] = tmp_array[len(tmp_array) - 1]
@@ -737,7 +738,15 @@ def main():
             clang-format is a useful tool to make the format of 
             code nice for reading and analyzing
     """
+    print(
+        "------------------  shell command  -------------------\nclang-format " + sys.path[0] +
+        "/hidmm_helper_ori.cc -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
+        + sys.path[0] + "/hidmm_helper.cc")
 
+    print(
+        "------------------  shell command  -------------------\nclang-format " + args[0] +
+        " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
+        + args[0])
     os.system(
         "clang-format " + sys.path[0] +
         "/hidmm_helper_ori.cc -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
@@ -748,6 +757,11 @@ def main():
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
         + args[0])
     if (opts.FormatCorrect):
+        print("------------------  shell command  -------------------\ncp " + args[0] + " backup_" + args[0])
+        print(
+            "------------------  shell command  -------------------\nclang-format _" + args[0] +
+            " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
+            + args[0])
         os.system("cp " + args[0] + " backup_" + args[0])
         os.system(
             "clang-format _" + args[0] +
@@ -834,6 +848,12 @@ def main():
         pprint(('nodes', get_info(tu.cursor)), logfile)
     else:
         get_info(tu.cursor)
+
+
+    print(
+        "------------------  shell command  -------------------\nclang-format _" + args[0] +
+        " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
+        + file_name)
     os.system(
         "clang-format _" + args[0] +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
@@ -1192,14 +1212,14 @@ def main():
                 " *", "")
             pointer_priority_map[node.spelling] = 0
             pointer_MAU_map[node.spelling] = 0
-    print(tmp_string + "------------------------\n")
+    print(tmp_string + "---------------------  shell command  -------------------\n")
     print(
         "Otherwise, MAU size of each of them will be 1 and the priority of them will be equal."
     )
     print(
         "if necessary, you can indicate the user defined list by inserting an argument --user_define_list=xxx."
     )
-    print("------------------------\n")
+    print("---------------------  shell command  -------------------\n")
     tot_priority = 0
     if (opts.user_define_list != ""):
         print(
@@ -1226,7 +1246,7 @@ def main():
         for node in pointers_with_alloc:
             pointer_priority_map[node.spelling] = 1
             pointer_MAU_map[node.spelling] = 1
-    print("------------------------\n")
+    print("---------------------  shell command  -------------------\n")
     for node in pointers_with_alloc:
         tot_priority = tot_priority + pointer_priority_map[node.spelling]
 
@@ -1551,7 +1571,7 @@ def main():
     print('---------------------')
     attempt_selection_id = -1
     while(attempt_selection_id<0):
-        heap_number_input = int(input("The evaluation of heap number has been output to the file ("+str(opts.heapeval)+"), please check and input the proper number of heaps in the termianl:"))
+        heap_number_input = int((input("The evaluation of heap number has been output to the file ("+str(opts.heapeval)+"), please check and input the proper number of heaps in the termianl:")).replace(" ",""))
         print(heap_number_input)
         for attempt_id,attempt in enumerate(heap_attempts):
             if (attempt['group_num']==heap_number_input):
@@ -1582,7 +1602,8 @@ def main():
         tmp_heap_id = attempt_selection['pt_heap_map'][node.spelling]
         pointer_assign[str(
             node.spelling)] = "Hi_DMM_dynamic_heap_" + str(tmp_heap_id)
-        
+        if (pt_KWTA_suggestion[str(node.spelling)]):
+            print("Hi-DMM suggests user to use KWTA for the allocation of pointer ("+str(node.spelling) +")")
         if (not (("Hi_DMM_dynamic_heap_" + str(tmp_heap_id)) in heap_set.keys())):
             heap_set["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)] = 0
 
@@ -1600,8 +1621,7 @@ def main():
             heap_MAU_map["Hi_DMM_dynamic_heap_"
                         + str(tmp_heap_id)] = attempt_selection[
                             'heap_in_attempt'][tmp_heap_id]['MAU_size']
-            if (pt_KWTA_suggestion[str(node.spelling)]):
-                print("Hi-DMM suggests user to use KWTA for the allocation of pointer ("+str(node.spelling) +")")
+
           #  if (not (("Hi_DMM_allocator_" + str(tmp_heap_id)) in heap_allocator_capability_map.keys())):
             heap_allocator_capability_tmp = ceiling_division(attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
                                     attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'])
@@ -1943,7 +1963,8 @@ def main():
                             #" = HLS_malloc<" + str(malloc_cnt) + ">(" +
                             "1" + ", " +
                             pointer_allocator[str(children[0].spelling)] +
-                            ");"
+                            ") * SIZE_" +
+                            struct_var['struct'].spelling+";"
                         })
                         malloc_replace_done = True
                         insert_after.append({
@@ -1959,8 +1980,9 @@ def main():
                         flag_args = True
                         break
             
+        # some allocations like " (ap_uint<16> *)malloc(sizeof(ap_uint<16>));  ", which do not involve any struct.
         if (not flag_args and file_content[node.location.line-1][file_content[node.location.line-1].find("*")+1:].find("*")<0):
-
+            #print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+file_content[node.location.line-1])
             tmp_str = "1"
             insert_before.append({
                 'line':
@@ -2204,10 +2226,16 @@ def main():
             make the workspace clean and copy the generated code back to the specified path
     """
 
+    print(
+        "------------------  shell command  -------------------\nclang-format " + file_name.replace("preHiDMM_", "postHiDMM_") +
+        " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
+        + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     os.system(
         "clang-format " + file_name.replace("preHiDMM_", "postHiDMM_") +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
         + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+    print(("------------------  shell command  -------------------\nsed -i \"s/    /\\t/g\" "
+               ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     os.system(("sed -i \"s/    /\\t/g\" "
                ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     # os.system(("rm ") + file_name.replace("preHiDMM_", "_preHiDMM_"))
@@ -2218,14 +2246,20 @@ def main():
         ori_file_pathname = ""
         for i in range(len(tmp_array) - 1):
             ori_file_pathname += tmp_array[i] + "/"
-        os.system("cp " + file_name.replace("preHiDMM_", "decent_postHiDMM_") +
-                  " " + ori_file_pathname +
-                  file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-        os.system(
-            "cp *_" + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
-        # os.system("rm *_" + tmp_array[len(tmp_array) - 1])
-        # if (tmp_array[len(tmp_array) - 1].find("hidmm_") < 0):
-        #     os.system("rm " + tmp_array[len(tmp_array) - 1])
+        if (ori_file_pathname!=""):
+            print("------------------  shell command  -------------------\ncp " + file_name.replace("preHiDMM_", "decent_postHiDMM_") +
+                    " " + ori_file_pathname +
+                    file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+            os.system("cp " + file_name.replace("preHiDMM_", "decent_postHiDMM_") +
+                    " " + ori_file_pathname +
+                    file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+            print(
+                "------------------  shell command  -------------------\ncp *_" + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
+            os.system(
+                "cp *_" + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
+            # os.system("rm *_" + tmp_array[len(tmp_array) - 1])
+            # if (tmp_array[len(tmp_array) - 1].find("hidmm_") < 0):
+            #     os.system("rm " + tmp_array[len(tmp_array) - 1])
 
 
 if __name__ == '__main__':
