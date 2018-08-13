@@ -9,6 +9,7 @@ from clang.cindex import CursorKind
 import re
 import time
 import print_table
+from unionfind import unionfind
 #Config.set_library_file("/usr/lib/llvm-6.0/lib/libclang-6.0.so.1")
 Config.set_library_file("/usr/local/lib/libclang.so.7")
 index = clang.cindex.Index.create()
@@ -26,21 +27,31 @@ pointer_priority_map = dict()
 pointer_MAU_map = dict()
 logfile = None
 allocator_definition_name = [
-    'FBTA64', 'HTA128', 'HTA256', 'HTA512', 'HTA1024', 'HTA2048',
-    'Super_HTA4k', 'Super_HTA8k', 'Super_HTA16k', 'Super_HTA32k',
-    'Super_HTA64k'#'KWTA should be treated individually'
+    'FBTA64',
+    'HTA128',
+    'HTA256',
+    'HTA512',
+    'HTA1024',
+    'HTA2048',
+    'Super_HTA4k',
+    'Super_HTA8k',
+    'Super_HTA16k',
+    'Super_HTA32k',
+    'Super_HTA64k'  #'KWTA should be treated individually'
 ]
 allocator_capability_upper_bound = [
     64, 128, 356, 512, 1024, 2048, 4096, 8192, 16 * 1024, 32 * 1024, 64 * 1024
     #'KWTA should be treated individually' --- 1048576
 ]  #Theoratically, there is no capability limitation for KWTA. Here we just set a large value for it.
-allocator_BRAM_cost = [1,2,3,4,5,6,7,8,9,10,11,12]
+allocator_BRAM_cost = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
 
 def find_available_allocator(expected_cap):
     global allocator_definition_name
     global allocator_capability_upper_bound
-    for name,size in zip(allocator_definition_name,allocator_capability_upper_bound):
-        if (size>expected_cap):
+    for name, size in zip(allocator_definition_name,
+                          allocator_capability_upper_bound):
+        if (size > expected_cap):
             return name
     return ""
 
@@ -297,6 +308,18 @@ def has_pointer_in_struct(node):
     return False
 
 
+def get_pointer_in_struct(node):
+    if (str(node.type.kind) == "TypeKind.POINTER"
+            and node.kind == CursorKind.MEMBER_REF_EXPR):
+        for c in node.get_children():
+            if (str(c.type.kind) == "TypeKind.POINTER"):
+                return [c.spelling + "->" + node.spelling]
+    ans = []
+    for c in node.get_children():
+        ans += get_pointer_in_struct(c)
+    return ans
+
+
 def find_pointer_assignexpr(node,
                             depth=0,
                             pointer_assignexpr_list=[],
@@ -313,8 +336,8 @@ def find_pointer_assignexpr(node,
         if (str(node.type.kind) == "TypeKind.POINTER"):
             if (len(children) >= 2):
                 target = children[0]
-                if (file_content[node.location.line
-                                 - 1][target.extent.end.column] == '='):
+                if (file_content[node.location.line -
+                                 1][target.extent.end.column] == '='):
                     if (file_content[node.location.line - 1].find("malloc") <
                             0):
                         tmp = has_pointer_in_struct(node)
@@ -322,7 +345,9 @@ def find_pointer_assignexpr(node,
                             'node':
                             node,
                             'has_pointer_in_struct':
-                            tmp
+                            tmp,
+                            'pointers_in_struct':
+                            get_pointer_in_struct(node)
                         })
                         print(
                             file_content[node.location.line - 1].replace(
@@ -330,8 +355,8 @@ def find_pointer_assignexpr(node,
                             'has_pointer_in_struct: ' + str(tmp),
                             file=logfile)
                 else:
-                    if (file_content[node.location.line
-                                     - 1][target.extent.end.column] == ' '):
+                    if (file_content[node.location.line -
+                                     1][target.extent.end.column] == ' '):
                         print("wrong", file=logfile)
 
 
@@ -564,6 +589,22 @@ def ceiling_division(VarA, VarB):
     return res
 
 
+def find_pointer_name_in_line(line, obj):
+    ans = (line.find(" " + obj + " ") > 0)
+    ans = ans or (line.find(" " + obj + ";") > 0)
+    ans = ans or (line.find(" " + obj + ")") > 0)
+    ans = ans or (line.find(" " + obj + "]") > 0)
+    ans = ans or (line.find("(" + obj + " ") > 0)
+    ans = ans or (line.find("[" + obj + " ") > 0)
+    return ans
+
+
+def extractStructName(tmp):
+    if (tmp.find("->") > 0):
+        return tmp[:tmp.find("->")]
+    return tmp
+
+
 def main():
     from clang.cindex import Index
     from pprint import pprint
@@ -658,7 +699,8 @@ def main():
         "",
         "--heapeval",
         dest="heapeval",
-        help="where to print out the result of evaluation of different number of heaps",
+        help=
+        "where to print out the result of evaluation of different number of heaps",
         metavar="Heapeval",
         type="string",
         default="heapeval")
@@ -694,7 +736,6 @@ def main():
         action="store_true",
         default=False)
 
-    
     parser.disable_interspersed_args()
 
     file_path_change = False
@@ -705,7 +746,6 @@ def main():
     global logfile
 
     logfile = open(opts.logoutput, "w")
-    
 
     if len(args) == 0:
         parser.error('invalid number arguments')
@@ -727,7 +767,8 @@ def main():
     if (args[0].find('/')):
         file_path_change = True
         ori_file_pathname = args[0]
-        print("------------------  shell command  -------------------\ncp " + ori_file_pathname + " .")
+        print("------------------  shell command  -------------------\ncp " +
+              ori_file_pathname + " .")
         os.system("cp " + ori_file_pathname + " .")
         tmp_array = ori_file_pathname.split('/')
         args[0] = tmp_array[len(tmp_array) - 1]
@@ -739,12 +780,14 @@ def main():
             code nice for reading and analyzing
     """
     print(
-        "------------------  shell command  -------------------\nclang-format " + sys.path[0] +
+        "------------------  shell command  -------------------\nclang-format "
+        + sys.path[0] +
         "/hidmm_helper_ori.cc -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
         + sys.path[0] + "/hidmm_helper.cc")
 
     print(
-        "------------------  shell command  -------------------\nclang-format " + args[0] +
+        "------------------  shell command  -------------------\nclang-format "
+        + args[0] +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
         + args[0])
     os.system(
@@ -757,9 +800,11 @@ def main():
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
         + args[0])
     if (opts.FormatCorrect):
-        print("------------------  shell command  -------------------\ncp " + args[0] + " backup_" + args[0])
+        print("------------------  shell command  -------------------\ncp " +
+              args[0] + " backup_" + args[0])
         print(
-            "------------------  shell command  -------------------\nclang-format _" + args[0] +
+            "------------------  shell command  -------------------\nclang-format _"
+            + args[0] +
             " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
             + args[0])
         os.system("cp " + args[0] + " backup_" + args[0])
@@ -849,9 +894,9 @@ def main():
     else:
         get_info(tu.cursor)
 
-
     print(
-        "------------------  shell command  -------------------\nclang-format _" + args[0] +
+        "------------------  shell command  -------------------\nclang-format _"
+        + args[0] +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
         + file_name)
     os.system(
@@ -1021,8 +1066,8 @@ def main():
             'line':
             1,
             'string':
-            "#define SIZE_" + node['struct'].spelling + " " +
-            str(len(node['comp']))
+            "#define SIZE_" + node['struct'].spelling + " " + str(
+                len(node['comp']))
         })
         comp_id = 0
         struct_comps[node['struct'].spelling] = node['comp']
@@ -1046,8 +1091,8 @@ def main():
                 'line':
                 1,
                 'string':
-                "#define OFFSET_" + node['struct'].spelling + "_" +
-                c.spelling + " " + str(comp_id)
+                "#define OFFSET_" + node['struct'].spelling + "_" + c.spelling
+                + " " + str(comp_id)
             })
             comp_id = comp_id + 1
 
@@ -1212,7 +1257,8 @@ def main():
                 " *", "")
             pointer_priority_map[node.spelling] = 0
             pointer_MAU_map[node.spelling] = 0
-    print(tmp_string + "---------------------  shell command  -------------------\n")
+    print(tmp_string +
+          "---------------------  shell command  -------------------\n")
     print(
         "Otherwise, MAU size of each of them will be 1 and the priority of them will be equal."
     )
@@ -1335,8 +1381,7 @@ def main():
                 if (extractVar(line) == node['name']):
                     partition_factor_for_the_array = extractFactor(line)
                     break
-        real_depth_for_one_partition = node[
-            'depth'] // partition_factor_for_the_array
+        real_depth_for_one_partition = node['depth'] // partition_factor_for_the_array
         if ((node['depth'] % partition_factor_for_the_array) > 0):
             real_depth_for_one_partition = real_depth_for_one_partition + 1
         print(
@@ -1356,54 +1401,143 @@ def main():
         file=logfile)
 
     BRAM_for_hidmm = (opts.available_bram_num - BRAM_cnt) // 10 * 9
+    """
+        now, Hi-DMM starts to assign pointers to heaps.
+    """
+    pointer_name_id_map = dict()
+    pointer_name_cursorid_map = dict()
+    for pt in pointer_list:
+        pointer_name_id_map[pt.spelling] = pointer_id_map[str(
+            get_cursor_id(pt.get_definition()))]
+        pointer_name_cursorid_map[pt.spelling] = get_cursor_id(
+            pt.get_definition())
+    #print(pointer_name_id_map)
 
-    pointer_co_matrix = [[0 for iii in range(len(pointer_list))]
-                         for jjj in range(len(pointer_list))]
+    graph_union = unionfind(len(pointer_list))
+    for line_num in has_pt_assign.keys():
+        if (
+                len(access_dict[(line_num)]) >= 2
+        ):  #maybe it is an assignment which gives an address of static structure to an pointer
+            #therefore, there is no transformation for the expressions
+            pointer_mark_id = -1
+            tmp_obj = ""
+            line = file_content[int(line_num) - 1]
+            for obj in (access_dict[(line_num)] +
+                        has_pt_assign[line_num]['pointers_in_struct']):
+                if (find_pointer_name_in_line(line, obj)):
+                    tmp_obj = obj
+                    break
+            assert (tmp_obj != "")
+            for obj in (access_dict[(line_num)] +
+                        has_pt_assign[line_num]['pointers_in_struct']):
+                if (obj != tmp_obj):
+                    if (find_pointer_name_in_line(line, obj)):
+                        graph_union.unite(
+                            pointer_name_id_map[extractStructName(tmp_obj)],
+                            pointer_name_id_map[extractStructName(obj)])
+        # print(str(graph_union.index()))
+
+    print(
+        "\n============== Pointers have to be in one heap due to special expression in source code"
+        + " ================",
+        file=logfile)
+    print(
+        "============== like int *a,*b;xxxxx;a=b;, so they are re-grouped as below:"
+        + " ================",
+        file=logfile)
+    pointer_re_groups = dict()
+    pointer_id_re_map = dict()
+    for i, pt in enumerate(pointer_list):
+        print(
+            pt.spelling + "-->" + str(
+                graph_union.index(pointer_name_id_map[pt.spelling])),
+            file=logfile)
+        pointer_id_re_map[str(get_cursor_id(
+            pt.get_definition()))] = (graph_union.index(
+                pointer_name_id_map[pt.spelling]))
+        if (not (str(graph_union.index(pointer_name_id_map[pt.spelling])) in
+                 pointer_re_groups.keys())):
+            pointer_re_groups[str(
+                graph_union.index(pointer_name_id_map[pt.spelling]))] = [(i,
+                                                                          pt)]
+        else:
+            pointer_re_groups[str(
+                graph_union.index(pointer_name_id_map[pt.spelling]))].append(
+                    (i, pt))
+
+    pointer_co_matrix = [[0 for iii in range(len(pointer_re_groups))]
+                         for jjj in range(len(pointer_re_groups))]
 
     for line in access_node_dict.keys():
         for nodeA in access_node_dict[line]:
             for nodeB in access_node_dict[line]:
-                idA = pointer_id_map[str(
+                idA = pointer_id_re_map[str(
                     get_cursor_id(nodeA.get_definition()))]
-                idB = pointer_id_map[str(
+                idB = pointer_id_re_map[str(
                     get_cursor_id(nodeB.get_definition()))]
                 pointer_co_matrix[idA][idB] = pointer_co_matrix[idA][idB] + 1
 
-    for jjj in range(len(pointer_list)):
+    for jjj in range(len(pointer_re_groups)):
         pointer_co_matrix[jjj][jjj] = 0
 
     for node in struct_pointer:
         pt_struct = node['var_name']
-        iii = pointer_id_map[str(get_cursor_id(pt_struct.get_definition()))]
-        for jjj in range(len(pointer_list)):
+        iii = pointer_id_re_map[str(get_cursor_id(pt_struct.get_definition()))]
+        for jjj in range(len(pointer_re_groups)):
             pointer_co_matrix[iii][jjj] = 0
             pointer_co_matrix[jjj][iii] = 0
 
+    print("writing to " + sys.path[0] + "/mtx.txt")
     mtx_file = open(sys.path[0] + "/mtx.txt", "w")
     print(
-        str(len(type_pointers.keys())) + " " + str(len(pointer_list)),
+        str(len(type_pointers.keys())) + " " + str(len(pointer_re_groups)),
         file=mtx_file)
     print("\n", file=mtx_file)
 
+    type_idreverse_list = []
+    type_idreverse_idcorrect = []
     for key in type_pointers.keys():
         tmp_list = type_pointers[key]
+        tmp_id = [
+            pointer_id_re_map[str(get_cursor_id(tmp_node.get_definition()))]
+            for tmp_node in tmp_list
+        ]
+        type_idreverse_list.append([(id) for id in (tmp_id)])
+        # print([str((tmp_node.spelling)) for tmp_node in tmp_list])
+        tmp_list = [
+            pointer_id_re_map[str(get_cursor_id(tmp_node.get_definition()))]
+            for tmp_node in tmp_list
+        ]
+        #print(tmp_list)
+        tmp_list = sorted(set(tmp_list), key=tmp_list.index)
+        reverse_map_tmp = dict()
+        for IA, after_group in enumerate(tmp_list):
+            for IB, before_group in enumerate(tmp_id):
+                if (after_group == before_group):
+                    if (not (str(IA) in reverse_map_tmp.keys())):
+                        reverse_map_tmp[str(IA)] = [IB]
+                    else:
+                        reverse_map_tmp[str(IA)].append(IB)
+        type_idreverse_idcorrect.append(reverse_map_tmp)
+        #print(tmp_list)
         print(len(tmp_list), file=mtx_file)
         for nodeA in tmp_list:
             print(
-                [
-                    pointer_co_matrix[pointer_id_map[str(
-                        get_cursor_id(
-                            nodeA.get_definition()))]][pointer_id_map[str(
-                                get_cursor_id(nodeB.get_definition()))]]
-                    for nodeB in tmp_list
-                ],
+                [pointer_co_matrix[nodeA][nodeB] for nodeB in tmp_list],
                 file=mtx_file)
         print(" ", file=mtx_file)
 
     mtx_file.close()
+
+    print(
+        "------------------  shell command  -------------------\nsed -i \"s/[^0-9\s]/ /g\" "
+        + sys.path[0] + "/mtx.txt")
     os.system(("sed -i \"s/[^0-9\s]/ /g\" ") + sys.path[0] + "/mtx.txt")
 
     print("\n==============  Heap Assignment ================", file=logfile)
+
+    print("------------------  shell command  -------------------\n" +
+          sys.path[0] + "/max_cut " + sys.path[0] + " >forcheck")
     os.system(sys.path[0] + "/max_cut " + sys.path[0] + " >forcheck")
 
     mtx_input_file = open(sys.path[0] + "/cutoutput.txt", "r")
@@ -1430,8 +1564,15 @@ def main():
                 str(node.spelling)
                 for node in type_pointers[type_list[var_type]]
             ]
+            #print(type_idreverse_idcorrect[var_type])
             for tmp_id in range(0, comp_num):
-                tmp_heap_comp_list.append(int(mtx_result.pop(0)))
+                immediate_id = int(mtx_result.pop(0))
+                #print(immediate_id)
+                for ori_id in (
+                        type_idreverse_idcorrect[var_type][str(immediate_id)]):
+                    tmp_heap_comp_list.append(ori_id)
+            #print("^^^^^^^^^^^^^^^^^^^")
+            assert (len(tmp_heap_comp_list) > 0)
             tmp_heap_comp_list_string = []
             priority_accumulate = 0
             MAU_size_tmp = 1000000
@@ -1535,7 +1676,8 @@ def main():
                 'allocator_capability':
                 ceiling_division(depth_for_heap_tmp, MAU_size_tmp)
             }
-            total_BRAM_cost_tmp = total_BRAM_cost_tmp + bramEval(width_tmp, depth_for_heap_tmp)
+            total_BRAM_cost_tmp = total_BRAM_cost_tmp + bramEval(
+                width_tmp, depth_for_heap_tmp)
             heap_in_attempt.append(tmp_dict)
             heap_id_cnt = heap_id_cnt + 1
 
@@ -1550,15 +1692,20 @@ def main():
     [str1_array.append(str(attempt['BRAM_cost'])) for attempt in heap_attempts]
     str2_array = ["Heap Number"]
     [str2_array.append(str(attempt['group_num'])) for attempt in heap_attempts]
-    print("The BRAM costs of different numbers of heaps are listed as below.\n" + 
-        "Note that though in some cases, with different number of heaps, the BRAM cost\n" + 
-        "will not change too much, the LUT cost will be increased significantly when the\n" + 
-        "number of heaps increases.\n")
-    print_table.print_table([ str1_array ],
-            header= str2_array,
-            wrap=True, max_col_width=12, wrap_style='wrap',
-            row_line=True, fix_col_width=False)
-
+    print(
+        "The BRAM costs of different numbers of heaps are listed as below.\n" +
+        "Note that though in some cases, with different number of heaps, the BRAM cost\n"
+        +
+        "will not change too much, the LUT cost will be increased significantly when the\n"
+        + "number of heaps increases.\n")
+    print_table.print_table(
+        [str1_array],
+        header=str2_array,
+        wrap=True,
+        max_col_width=12,
+        wrap_style='wrap',
+        row_line=True,
+        fix_col_width=False)
 
     for attempt in heap_attempts:
         pprint(attempt, logfile)
@@ -1570,18 +1717,29 @@ def main():
 
     print('---------------------')
     attempt_selection_id = -1
-    while(attempt_selection_id<0):
-        heap_number_input = int((input("The evaluation of heap number has been output to the file ("+str(opts.heapeval)+"), please check and input the proper number of heaps in the termianl:")).replace(" ",""))
+    while (attempt_selection_id < 0):
+        heap_number_input = int((input(
+            "The evaluation of heap number has been output to the file (" +
+            str(opts.heapeval) +
+            "), please check and input the proper number of heaps in the termianl:"
+        )).replace(" ", ""))
         print(heap_number_input)
-        for attempt_id,attempt in enumerate(heap_attempts):
-            if (attempt['group_num']==heap_number_input):
+        for attempt_id, attempt in enumerate(heap_attempts):
+            if (attempt['group_num'] == heap_number_input):
                 attempt_selection_id = attempt_id
-        if (attempt_selection_id<0):
-            print("Error: the selected heap number is out of the legal range provided by Hi-DMM, please input a number in the range ("+str(heap_attempts[0]['group_num'])+"~"+str(heap_attempts[-1]['group_num'])+").")
+        if (attempt_selection_id < 0):
+            print(
+                "Error: the selected heap number is out of the legal range provided by Hi-DMM, please input a number in the range ("
+                + str(heap_attempts[0]['group_num']) + "~" +
+                str(heap_attempts[-1]['group_num']) + ").")
         else:
-            yesno = (input("Do you want to print the assignment of pointers you selected: (Y/N)"))
-            if (yesno=='Y' or yesno=='y'):
-                print("According to user selection, the assignment of pointers is presented as below:")
+            yesno = (input(
+                "Do you want to print the assignment of pointers you selected: (Y/N)"
+            ))
+            if (yesno == 'Y' or yesno == 'y'):
+                print(
+                    "According to user selection, the assignment of pointers is presented as below:"
+                )
                 pprint(heap_attempts[attempt_selection_id])
 
     attempt_selection = heap_attempts[attempt_selection_id]
@@ -1595,60 +1753,79 @@ def main():
     heap_allocator_capability_map = dict()
     heap_allocator_map = dict()
     allocator_heap_map = dict()
-    
+
     print('---------------------')
     for node in pointer_list:
-        
+
         tmp_heap_id = attempt_selection['pt_heap_map'][node.spelling]
         pointer_assign[str(
             node.spelling)] = "Hi_DMM_dynamic_heap_" + str(tmp_heap_id)
         if (pt_KWTA_suggestion[str(node.spelling)]):
-            print("Hi-DMM suggests user to use KWTA for the allocation of pointer ("+str(node.spelling) +")")
-        if (not (("Hi_DMM_dynamic_heap_" + str(tmp_heap_id)) in heap_set.keys())):
+            print(
+                "Hi-DMM suggests user to use KWTA for the allocation of pointer ("
+                + str(node.spelling) + ")")
+        if (not (
+            ("Hi_DMM_dynamic_heap_" + str(tmp_heap_id)) in heap_set.keys())):
             heap_set["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)] = 0
 
-            heap_size_map["Hi_DMM_dynamic_heap_"
-                        + str(tmp_heap_id)] = attempt_selection[
-                            'heap_in_attempt'][tmp_heap_id]['depth']
-            if (attempt_selection['heap_in_attempt'][tmp_heap_id]['var_type_string'] in struct_comp_map.keys()):
-                heap_type_map["Hi_DMM_dynamic_heap_"
-                            + str(tmp_heap_id)] = struct_comp_map[attempt_selection[
-                                'heap_in_attempt'][tmp_heap_id]['var_type_string']]            
-            else:    
-                heap_type_map["Hi_DMM_dynamic_heap_"
-                            + str(tmp_heap_id)] = attempt_selection[
-                                'heap_in_attempt'][tmp_heap_id]['var_type_string']
-            heap_MAU_map["Hi_DMM_dynamic_heap_"
-                        + str(tmp_heap_id)] = attempt_selection[
-                            'heap_in_attempt'][tmp_heap_id]['MAU_size']
+            heap_size_map["Hi_DMM_dynamic_heap_" +
+                          str(tmp_heap_id)] = attempt_selection[
+                              'heap_in_attempt'][tmp_heap_id]['depth']
+            if (attempt_selection['heap_in_attempt'][tmp_heap_id][
+                    'var_type_string'] in struct_comp_map.keys()):
+                heap_type_map["Hi_DMM_dynamic_heap_" + str(
+                    tmp_heap_id)] = struct_comp_map[attempt_selection[
+                        'heap_in_attempt'][tmp_heap_id]['var_type_string']]
+            else:
+                heap_type_map["Hi_DMM_dynamic_heap_" + str(
+                    tmp_heap_id)] = attempt_selection['heap_in_attempt'][
+                        tmp_heap_id]['var_type_string']
+            heap_MAU_map["Hi_DMM_dynamic_heap_" +
+                         str(tmp_heap_id)] = attempt_selection[
+                             'heap_in_attempt'][tmp_heap_id]['MAU_size']
 
-          #  if (not (("Hi_DMM_allocator_" + str(tmp_heap_id)) in heap_allocator_capability_map.keys())):
-            heap_allocator_capability_tmp = ceiling_division(attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
-                                    attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'])
+            #  if (not (("Hi_DMM_allocator_" + str(tmp_heap_id)) in heap_allocator_capability_map.keys())):
+            heap_allocator_capability_tmp = ceiling_division(
+                attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
+                attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'])
             if (pt_KWTA_suggestion[str(node.spelling)] and not non_KWTA):
                 allocator_attempt = "KWTA"
             else:
-                allocator_attempt = find_available_allocator(heap_allocator_capability_tmp)#!!!!!!!!!!!!!!!!!!!!!!here need further modify
+                allocator_attempt = find_available_allocator(
+                    heap_allocator_capability_tmp
+                )  #!!!!!!!!!!!!!!!!!!!!!!here need further modify
             MAU_cnt = 1
-            while (allocator_attempt==""):
+            while (allocator_attempt == ""):
                 MAU_cnt = MAU_cnt + 1
-                heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)] = attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'] * MAU_cnt
-                assert(attempt_selection['heap_in_attempt'][tmp_heap_id]['depth']>heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
-                heap_allocator_capability_tmp = ceiling_division(attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
-                                    heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
-                allocator_attempt = find_available_allocator(heap_allocator_capability_tmp)
-            assert(allocator_attempt!="KWTA" or pt_KWTA_suggestion[str(node.spelling)])
-            heap_allocator_capability_map["Hi_DMM_allocator_" + str(tmp_heap_id)+"_"+allocator_attempt] = heap_allocator_capability_tmp
+                heap_MAU_map["Hi_DMM_dynamic_heap_" + str(
+                    tmp_heap_id
+                )] = attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'] * MAU_cnt
+                assert (
+                    attempt_selection['heap_in_attempt'][tmp_heap_id]['depth']
+                    > heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
+                heap_allocator_capability_tmp = ceiling_division(
+                    attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
+                    heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
+                allocator_attempt = find_available_allocator(
+                    heap_allocator_capability_tmp)
+            assert (allocator_attempt != "KWTA"
+                    or pt_KWTA_suggestion[str(node.spelling)])
+            heap_allocator_capability_map[
+                "Hi_DMM_allocator_" + str(tmp_heap_id) + "_" +
+                allocator_attempt] = heap_allocator_capability_tmp
 
-            allocator_set["Hi_DMM_allocator_" + str(tmp_heap_id)+"_"+allocator_attempt] = 0
-            pointer_allocator[str(
-                node.spelling)] = "Hi_DMM_allocator_" + str(tmp_heap_id)+"_"+allocator_attempt
+            allocator_set["Hi_DMM_allocator_" + str(tmp_heap_id) + "_" +
+                          allocator_attempt] = 0
+            pointer_allocator[str(node.spelling)] = "Hi_DMM_allocator_" + str(
+                tmp_heap_id) + "_" + allocator_attempt
             heap_allocator_map[pointer_assign[str(
                 node.spelling)]] = pointer_allocator[str(node.spelling)]
             allocator_heap_map[pointer_allocator[str(
                 node.spelling)]] = pointer_assign[str(node.spelling)]
         else:
-            pointer_allocator[str(node.spelling)] =  heap_allocator_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)] 
+            pointer_allocator[str(
+                node.spelling)] = heap_allocator_map["Hi_DMM_dynamic_heap_" +
+                                                     str(tmp_heap_id)]
 
         if (not (("Hi_DMM_dynamic_heap_" +
                   str(tmp_heap_id)) in heap_pt_name_map.keys())):
@@ -1673,8 +1850,8 @@ def main():
         modify the top function interface
     """
     need_replacement[top_function_node.location.line] = True
-    top_function_line = file_content[top_function_node.location.line
-                                     - 1].replace(")\n", "")
+    top_function_line = file_content[top_function_node.location.line -
+                                     1].replace(")\n", "")
     if (top_function_line.find('()') < 0):
         top_function_line += ','
     top_function_line += " hidmm_alloc_port *" + allocator_name_list[0]
@@ -1685,8 +1862,8 @@ def main():
         "#pragma HLS interface ap_hs port=" + allocator_name_list[0]
     })
     for i in range(len(allocator_name_list) - 1):
-        top_function_line += ", hidmm_alloc_port *" + allocator_name_list[i
-                                                                          + 1]
+        top_function_line += ", hidmm_alloc_port *" + allocator_name_list[i +
+                                                                          1]
         insert_before.append({
             'line':
             top_function_node.location.line + 2,
@@ -1708,10 +1885,10 @@ def main():
                 'line':
                 node.location.line,
                 'string':
-                node.spelling + " = " + pointer_assign[str(node.spelling)] +
-                " + offset_" + node.spelling +
-                ";  //HI-DMM insert: stress offset of pointer " +
-                node.spelling + "\n"
+                node.spelling + " = " + pointer_assign[str(
+                    node.spelling)] + " + offset_" + node.spelling +
+                ";  //HI-DMM insert: stress offset of pointer " + node.spelling
+                + "\n"
             })
 
     print("\n========== Freeing of Pointers ==============", file=logfile)
@@ -1730,8 +1907,8 @@ def main():
             "HLS_free<" + str(free_cnt) + ">(offset_" +
             free_target_list[target_cnt].spelling + ", size_" +
             free_target_list[target_cnt].spelling + "," +
-            pointer_allocator[str(free_target_list[target_cnt].spelling)] +
-            ");"
+            pointer_allocator[str(
+                free_target_list[target_cnt].spelling)] + ");"
         })
         target_cnt = target_cnt + 1
         free_cnt = free_cnt + 1
@@ -1759,7 +1936,7 @@ def main():
         need_replacement[node.location.line] = True
 
         flag_args = False
-        
+
         pointeree = children[0].type.get_pointee().spelling
         struct_size_string = ""
 
@@ -1784,8 +1961,8 @@ def main():
                         'line':
                         node.location.line,
                         'string':
-                        "size_" + children[0].spelling + " = " +
-                        args.spelling + struct_size_string +
+                        "size_" + children[0].spelling + " = " + args.spelling
+                        + struct_size_string +
                         ";  //HI-DMM insert: set size of pointer " +
                         node.spelling + "\n"
                     })
@@ -1797,22 +1974,26 @@ def main():
                             'line':
                             node.location.line,
                             'string':
-                            "offset_" + children[0].spelling +
-                            " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">((" +                            
+                            "offset_" + children[0].spelling + " = HLS_malloc<"
+                            + str(
+                                heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">((" +
                             #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
                             args.spelling + struct_size_string + "+" +
                             MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                            pointer_allocator[str(children[0].spelling)] +
-                            ")*" + MAU_size_string + ";"
+                            pointer_allocator[str(children[0].spelling)] + ")*"
+                            + MAU_size_string + ";"
                         })
                     else:
                         replacement.append({
                             'line':
                             node.location.line,
                             'string':
-                            "offset_" + children[0].spelling +
-                            " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">(" +
-                          #  " = HLS_malloc<" + str(malloc_cnt) + ">(" +
+                            "offset_" + children[0].spelling + " = HLS_malloc<"
+                            + str(
+                                heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">(" +
+                            #  " = HLS_malloc<" + str(malloc_cnt) + ">(" +
                             args.spelling + struct_size_string + ", " +
                             pointer_allocator[str(children[0].spelling)] + ");"
                         })
@@ -1827,13 +2008,13 @@ def main():
                         ";  //HI-DMM insert: stress offset of pointer " +
                         children[0].spelling + "\n"
                     })
-                   # print("i am here")
+                    # print("i am here")
                     flag_args = True
                     break
-                    
+
                 else:  # the size parameter is a constant number (CCGA)
-                    tmp_str = file_content[args.location.line
-                                           - 1][args.location.column - 1:]
+                    tmp_str = file_content[args.location.line -
+                                           1][args.location.column - 1:]
                     tmp_str = tmp_str[:tmp_str.find("*")]
                     insert_before.append({
                         'line':
@@ -1852,21 +2033,25 @@ def main():
                             'line':
                             node.location.line,
                             'string':
-                            "offset_" + children[0].spelling +
-                            " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">((" +                            
+                            "offset_" + children[0].spelling + " = HLS_malloc<"
+                            + str(
+                                heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">((" +
                             #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
                             tmp_str + struct_size_string + "+" +
                             MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                            pointer_allocator[str(children[0].spelling)] +
-                            ")*" + MAU_size_string + ";"
+                            pointer_allocator[str(children[0].spelling)] + ")*"
+                            + MAU_size_string + ";"
                         })
                     else:
                         replacement.append({
                             'line':
                             node.location.line,
                             'string':
-                            "offset_" + children[0].spelling +
-                            " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">(" +                            
+                            "offset_" + children[0].spelling + " = HLS_malloc<"
+                            + str(
+                                heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">(" +
                             #" = HLS_malloc<" + str(malloc_cnt) + ">(" +
                             tmp_str + struct_size_string + ", " +
                             pointer_allocator[str(children[0].spelling)] + ");"
@@ -1884,10 +2069,11 @@ def main():
                     })
                 flag_args = True
                 break
-       # print(pointer_allocator[str(children[0].spelling)])
-       # print(str(children[0].spelling))
-        if (not flag_args):  
-            if ((pointer_allocator[str(children[0].spelling)].find('KWTA')<0)):# malloc for single user-defined struct without KWTA
+    # print(pointer_allocator[str(children[0].spelling)])
+    # print(str(children[0].spelling))
+        if (not flag_args):
+            if ((pointer_allocator[str(children[0].spelling)].find('KWTA') <
+                 0)):  # malloc for single user-defined struct without KWTA
                 for struct_var in struct_list:
                     if (pointeree == struct_var['struct'].spelling):
                         insert_before.append({
@@ -1908,12 +2094,16 @@ def main():
                                 node.location.line,
                                 'string':
                                 "offset_" + children[0].spelling +
-                                " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">((" +           
+                                " = HLS_malloc<" +
+                                str(heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0]
+                                    .spelling)]]) + ">((" +
                                 #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
                                 "SIZE_" + struct_var['struct'].spelling + "+" +
-                                MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] +
-                                ")*" + MAU_size_string +
+                                MAU_size_string + "-1)/" + MAU_size_string +
+                                ", " + pointer_allocator[str(
+                                    children[0].spelling)] + ")*" +
+                                MAU_size_string +
                                 ";// Please note that Hi-DMM recommands user to enable KWTA for this allocation, to improve efficiency."
                             })
                         else:
@@ -1922,10 +2112,14 @@ def main():
                                 node.location.line,
                                 'string':
                                 "offset_" + children[0].spelling +
-                                " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">(" +           
+                                " = HLS_malloc<" +
+                                str(heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0]
+                                    .spelling)]]) + ">(" +
                                 #" = HLS_malloc<" + str(malloc_cnt) + ">(" +
-                                "SIZE_" + struct_var['struct'].spelling + ", " +
-                                pointer_allocator[str(children[0].spelling)] +
+                                "SIZE_" + struct_var['struct'].spelling + ", "
+                                + pointer_allocator[str(
+                                    children[0].spelling)] +
                                 ");// Please note that Hi-DMM recommands user to enable KWTA for this allocation, to improve efficiency."
                             })
                         malloc_replace_done = True
@@ -1941,7 +2135,7 @@ def main():
                         })
                         flag_args = True
                         break
-            else:# malloc for single user-defined struct with KWTA
+            else:  # malloc for single user-defined struct with KWTA
                 for struct_var in struct_list:
                     if (pointeree == struct_var['struct'].spelling):
                         insert_before.append({
@@ -1953,18 +2147,21 @@ def main():
                             ";  //HI-DMM insert: set size of pointer " +
                             node.spelling + "\n"
                         })
-                        assert(heap_MAU_size==1) # for the allocation with KWTA, the size of MAU has to be 1.
+                        assert (
+                            heap_MAU_size == 1
+                        )  # for the allocation with KWTA, the size of MAU has to be 1.
                         replacement.append({
                             'line':
                             node.location.line,
                             'string':
-                            "offset_" + children[0].spelling +
-                            " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">(" +           
+                            "offset_" + children[0].spelling + " = HLS_malloc<"
+                            + str(
+                                heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">(" +
                             #" = HLS_malloc<" + str(malloc_cnt) + ">(" +
-                            "1" + ", " +
-                            pointer_allocator[str(children[0].spelling)] +
-                            ") * SIZE_" +
-                            struct_var['struct'].spelling+";"
+                            "1" + ", " + pointer_allocator[str(
+                                children[0].spelling)] + ") * SIZE_" +
+                            struct_var['struct'].spelling + ";"
                         })
                         malloc_replace_done = True
                         insert_after.append({
@@ -1979,9 +2176,11 @@ def main():
                         })
                         flag_args = True
                         break
-            
+
         # some allocations like " (ap_uint<16> *)malloc(sizeof(ap_uint<16>));  ", which do not involve any struct.
-        if (not flag_args and file_content[node.location.line-1][file_content[node.location.line-1].find("*")+1:].find("*")<0):
+        if (not flag_args and file_content[node.location.line - 1]
+            [file_content[node.location.line - 1].find("*") + 1:].find("*") <
+                0):
             #print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+file_content[node.location.line-1])
             tmp_str = "1"
             insert_before.append({
@@ -1990,8 +2189,8 @@ def main():
                 'string':
                 "size_" + children[0].spelling + " = " + tmp_str +
                 struct_size_string +
-                ";  //HI-DMM insert: set size of pointer  " +
-                node.spelling + "\n"
+                ";  //HI-DMM insert: set size of pointer  " + node.spelling +
+                "\n"
             })
 
             if (
@@ -2001,21 +2200,22 @@ def main():
                     'line':
                     node.location.line,
                     'string':
-                    "offset_" + children[0].spelling +
-                    " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">((" +           
+                    "offset_" + children[0].spelling + " = HLS_malloc<" + str(
+                        heap_allocator_capability_map[pointer_allocator[str(
+                            children[0].spelling)]]) + ">((" +
                     #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
-                    tmp_str + struct_size_string + "+" +
-                    MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                    pointer_allocator[str(children[0].spelling)] +
-                    ")*" + MAU_size_string + ";"
+                    tmp_str + struct_size_string + "+" + MAU_size_string +
+                    "-1)/" + MAU_size_string + ", " + pointer_allocator[str(
+                        children[0].spelling)] + ")*" + MAU_size_string + ";"
                 })
             else:
                 replacement.append({
                     'line':
                     node.location.line,
                     'string':
-                    "offset_" + children[0].spelling +
-                    " = HLS_malloc<" + str(heap_allocator_capability_map[pointer_allocator[str(children[0].spelling)]]) + ">(" +           
+                    "offset_" + children[0].spelling + " = HLS_malloc<" + str(
+                        heap_allocator_capability_map[pointer_allocator[str(
+                            children[0].spelling)]]) + ">(" +
                     #" = HLS_malloc<" + str(malloc_cnt) + ">(" +
                     tmp_str + struct_size_string + ", " +
                     pointer_allocator[str(children[0].spelling)] + ");"
@@ -2165,6 +2365,7 @@ def main():
 
                     if (has_pt_assign[str(line_num)]['has_pointer_in_struct']):
                         for obj in access_dict[str(line_num)]:
+                            #  print(">>>>"+str(line_num)+obj)
                             tmp1 = tmp1.replace(" " + obj + " ",
                                                 " offset_" + obj + " ")
                             tmp1 = tmp1.replace(" " + obj + ";",
@@ -2181,6 +2382,7 @@ def main():
                     else:
                         tmp3 = tmp1
                         for obj in access_dict[str(line_num)]:
+                            # print(">>>>"+str(line_num)+obj)
                             tmp3 = tmp3.replace(" " + obj + " ",
                                                 " offset_" + obj + " ")
                             tmp3 = tmp3.replace(" " + obj + ";",
@@ -2227,17 +2429,19 @@ def main():
     """
 
     print(
-        "------------------  shell command  -------------------\nclang-format " + file_name.replace("preHiDMM_", "postHiDMM_") +
+        "------------------  shell command  -------------------\nclang-format "
+        + file_name.replace("preHiDMM_", "postHiDMM_") +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
         + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     os.system(
         "clang-format " + file_name.replace("preHiDMM_", "postHiDMM_") +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
         + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-    print(("------------------  shell command  -------------------\nsed -i \"s/    /\\t/g\" "
-               ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-    os.system(("sed -i \"s/    /\\t/g\" "
-               ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+    print((
+        "------------------  shell command  -------------------\nsed -i \"s/    /\\t/g\" "
+    ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+    os.system(("sed -i \"s/    /\\t/g\" ") +
+              file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     # os.system(("rm ") + file_name.replace("preHiDMM_", "_preHiDMM_"))
     # os.system(("rm ") + file_name.replace("preHiDMM_", "postHiDMM_"))
 
@@ -2246,17 +2450,20 @@ def main():
         ori_file_pathname = ""
         for i in range(len(tmp_array) - 1):
             ori_file_pathname += tmp_array[i] + "/"
-        if (ori_file_pathname!=""):
-            print("------------------  shell command  -------------------\ncp " + file_name.replace("preHiDMM_", "decent_postHiDMM_") +
-                    " " + ori_file_pathname +
-                    file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-            os.system("cp " + file_name.replace("preHiDMM_", "decent_postHiDMM_") +
-                    " " + ori_file_pathname +
-                    file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+        if (ori_file_pathname != ""):
+            print("------------------  shell command  -------------------\ncp "
+                  + file_name.replace("preHiDMM_", "decent_postHiDMM_") + " " +
+                  ori_file_pathname +
+                  file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+            os.system("cp " +
+                      file_name.replace("preHiDMM_", "decent_postHiDMM_") +
+                      " " + ori_file_pathname +
+                      file_name.replace("preHiDMM_", "decent_postHiDMM_"))
             print(
-                "------------------  shell command  -------------------\ncp *_" + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
-            os.system(
-                "cp *_" + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
+                "------------------  shell command  -------------------\ncp *_"
+                + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
+            os.system("cp *_" + tmp_array[len(tmp_array) - 1] + " " +
+                      ori_file_pathname)
             # os.system("rm *_" + tmp_array[len(tmp_array) - 1])
             # if (tmp_array[len(tmp_array) - 1].find("hidmm_") < 0):
             #     os.system("rm " + tmp_array[len(tmp_array) - 1])

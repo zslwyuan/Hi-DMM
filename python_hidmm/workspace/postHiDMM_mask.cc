@@ -58,14 +58,17 @@ volatile int HLS_free(int free_target, int free_size, volatile hidmm_alloc_port 
 
 }
 
-#define MAU_size_Hi_DMM_dynamic_heap_0 3 
+#define MAU_size_Hi_DMM_dynamic_heap_10 2 
+#define MAU_size_Hi_DMM_dynamic_heap_9 2 
 #define MAU_size_Hi_DMM_dynamic_heap_4 8 
 #define MAU_size_Hi_DMM_dynamic_heap_5 4 
 #define MAU_size_Hi_DMM_dynamic_heap_6 2 
 #define MAU_size_Hi_DMM_dynamic_heap_7 2 
 #define MAU_size_Hi_DMM_dynamic_heap_8 9 
 
-int Hi_DMM_dynamic_heap_0[147456];  //['hhh', 'ttt', 'uuu', 'ggggggg', 'hhhhhhh']---MAU_size=3---Allocator Management Capability Required: 49152
+int Hi_DMM_dynamic_heap_10[49152];  //['hhh']---MAU_size=2---Allocator Management Capability Required: 24576
+int Hi_DMM_dynamic_heap_9[49152];  //['ttt', 'uuu']---MAU_size=2---Allocator Management Capability Required: 24576
+int Hi_DMM_dynamic_heap_0[32768];  //['ggggggg', 'hhhhhhh']---MAU_size=1---Allocator Management Capability Required: 32768
 ap_uint<16> Hi_DMM_dynamic_heap_2[163840];  //['struct_tmp', 'struct_tmp11']---MAU_size=1---Allocator Management Capability Required: 163840
 ap_int<16> Hi_DMM_dynamic_heap_3[65536];  //['struct0_tmp']---MAU_size=1---Allocator Management Capability Required: 65536
 ap_int<5> Hi_DMM_dynamic_heap_4[344064];  //['oo', 'qq']---MAU_size=8---Allocator Management Capability Required: 43008
@@ -81,8 +84,10 @@ unsigned long long array[100][100];
 int dynamic_heap[10000];
 
 //HI-DMM replace: void top(int nouse, int just, int a_test)
-void top(int nouse, int just, int a_test, hidmm_alloc_port *Hi_DMM_allocator_0_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_2_KWTA, hidmm_alloc_port *Hi_DMM_allocator_3_KWTA, hidmm_alloc_port *Hi_DMM_allocator_4_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_5_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_6_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_7_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_8_Super_HTA64k)
+void top(int nouse, int just, int a_test, hidmm_alloc_port *Hi_DMM_allocator_10_Super_HTA32k, hidmm_alloc_port *Hi_DMM_allocator_9_Super_HTA32k, hidmm_alloc_port *Hi_DMM_allocator_0_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_2_KWTA, hidmm_alloc_port *Hi_DMM_allocator_3_KWTA, hidmm_alloc_port *Hi_DMM_allocator_4_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_5_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_6_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_7_Super_HTA64k, hidmm_alloc_port *Hi_DMM_allocator_8_Super_HTA64k)
 {
+#pragma HLS interface ap_hs port=Hi_DMM_allocator_10_Super_HTA32k
+#pragma HLS interface ap_hs port=Hi_DMM_allocator_9_Super_HTA32k
 #pragma HLS interface ap_hs port=Hi_DMM_allocator_0_Super_HTA64k
 #pragma HLS interface ap_hs port=Hi_DMM_allocator_2_KWTA
 #pragma HLS interface ap_hs port=Hi_DMM_allocator_3_KWTA
@@ -143,20 +148,20 @@ void top(int nouse, int just, int a_test, hidmm_alloc_port *Hi_DMM_allocator_0_S
         m = 2;
         size_ttt = 123 ;  //HI-DMM insert: set size of pointer  
 //HI-DMM replace:         ttt = (int *)malloc(123 * sizeof(int));
-        offset_ttt = HLS_malloc<49152>((123 +MAU_size_Hi_DMM_dynamic_heap_0-1)/MAU_size_Hi_DMM_dynamic_heap_0, Hi_DMM_allocator_0_Super_HTA64k)*MAU_size_Hi_DMM_dynamic_heap_0;
-        ttt = Hi_DMM_dynamic_heap_0 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
+        offset_ttt = HLS_malloc<24576>((123 +MAU_size_Hi_DMM_dynamic_heap_9-1)/MAU_size_Hi_DMM_dynamic_heap_9, Hi_DMM_allocator_9_Super_HTA32k)*MAU_size_Hi_DMM_dynamic_heap_9;
+        ttt = Hi_DMM_dynamic_heap_9 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
         int tb;
         size_hhh = b;  //HI-DMM insert: set size of pointer 
 //HI-DMM replace:         hhh = (int *)malloc(b * sizeof(int));
-        offset_hhh = HLS_malloc<49152>((b+MAU_size_Hi_DMM_dynamic_heap_0-1)/MAU_size_Hi_DMM_dynamic_heap_0, Hi_DMM_allocator_0_Super_HTA64k)*MAU_size_Hi_DMM_dynamic_heap_0;
-        hhh = Hi_DMM_dynamic_heap_0 + offset_hhh;  //HI-DMM insert: stress offset of pointer hhh
+        offset_hhh = HLS_malloc<24576>((b+MAU_size_Hi_DMM_dynamic_heap_10-1)/MAU_size_Hi_DMM_dynamic_heap_10, Hi_DMM_allocator_10_Super_HTA32k)*MAU_size_Hi_DMM_dynamic_heap_10;
+        hhh = Hi_DMM_dynamic_heap_10 + offset_hhh;  //HI-DMM insert: stress offset of pointer hhh
         size_struct_tmp = b * SIZE_user_d_type;  //HI-DMM insert: set size of pointer 
 //HI-DMM replace:         struct_tmp = (user_d_type *)malloc(b * sizeof(user_d_type));
         offset_struct_tmp = HLS_malloc<163840>(b * SIZE_user_d_type, Hi_DMM_allocator_2_KWTA);
         struct_tmp = Hi_DMM_dynamic_heap_2 + offset_struct_tmp;  //HI-DMM insert: stress offset of pointer struct_tmp
         size_ggggggg = b;  //HI-DMM insert: set size of pointer 
 //HI-DMM replace:         ggggggg = (int *)malloc(b * sizeof(int));
-        offset_ggggggg = HLS_malloc<49152>((b+MAU_size_Hi_DMM_dynamic_heap_0-1)/MAU_size_Hi_DMM_dynamic_heap_0, Hi_DMM_allocator_0_Super_HTA64k)*MAU_size_Hi_DMM_dynamic_heap_0;
+        offset_ggggggg = HLS_malloc<32768>(b, Hi_DMM_allocator_0_Super_HTA64k);
         ggggggg = Hi_DMM_dynamic_heap_0 + offset_ggggggg;  //HI-DMM insert: stress offset of pointer ggggggg
         hhhhhhh = Hi_DMM_dynamic_heap_0 + offset_hhhhhhh;  //HI-DMM insert: stress offset of pointer hhhhhhh
         ggggggg = Hi_DMM_dynamic_heap_0 + offset_ggggggg;  //HI-DMM insert: stress offset of pointer ggggggg
@@ -198,13 +203,13 @@ size_hhhhhhh=size_ggggggg
             //    printf("%d,%d\n",a,b);
             array[a][b] = 1;
 
-            ttt = Hi_DMM_dynamic_heap_0 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
-            hhh = Hi_DMM_dynamic_heap_0 + offset_hhh;  //HI-DMM insert: stress offset of pointer hhh
+            ttt = Hi_DMM_dynamic_heap_9 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
+            hhh = Hi_DMM_dynamic_heap_10 + offset_hhh;  //HI-DMM insert: stress offset of pointer hhh
             tb = ttt[b] + hhh[b];
             struct_tmp = Hi_DMM_dynamic_heap_2 + offset_struct_tmp;  //HI-DMM insert: stress offset of pointer struct_tmp
 //HI-DMM replace:             struct_tmp->a = tb + struct_tmp->b;
                         struct_tmp[OFFSET_user_d_type_a] = tb + struct_tmp[OFFSET_user_d_type_b];
-            ttt = Hi_DMM_dynamic_heap_0 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
+            ttt = Hi_DMM_dynamic_heap_9 + offset_ttt;  //HI-DMM insert: stress offset of pointer ttt
             ttt = ttt + b;
 //HI-DMM insert for:             ttt = ttt + b;
             offset_ttt = offset_ttt + b;
