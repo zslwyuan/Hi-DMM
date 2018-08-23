@@ -11,15 +11,17 @@ import time
 import print_table
 from unionfind import unionfind
 
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
+    RUNNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
 
 #Config.set_library_file("/usr/lib/llvm-6.0/lib/libclang-6.0.so.1")
 Config.set_library_file("/usr/local/lib/libclang.so.7")
@@ -615,42 +617,56 @@ def extractStructName(tmp):
         return tmp[:tmp.find("->")]
     return tmp
 
+
 def find_proper_size_for_mini_heap(mini_heap_file):
-    candidate_lines_tmp = [candidate_line for candidate_line in mini_heap_file.readlines()]
+    candidate_lines_tmp = [
+        candidate_line for candidate_line in mini_heap_file.readlines()
+    ]
     while (1):
         candidate_lines = candidate_lines_tmp
-        continuous_factor = (input("Please input your expected average number of continuous requests for the KWTA dynamic heap:(1,2,..,16,1 by default)").replace(" ",""))
-        if (continuous_factor==""):
+        continuous_factor = (input(
+            bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+            "Please input your expected average number of continuous requests for the KWTA dynamic heap:(1,2,..,16,1 by default)"
+        ).replace(" ", ""))
+        if (continuous_factor == ""):
             continuous_factor = 1
         else:
             continuous_factor = int(continuous_factor)
-        print("According to your input, the candidates of the size of mini-heap are listed as below:")
+        print(
+            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+            "According to your input, the candidates of the size of mini-heap are listed as below:"
+        )
         for candidate_line in candidate_lines:
-            candidates_line = candidate_line.replace("\n","")
+            candidates_line = candidate_line.replace("\n", "")
             candidate_array = candidates_line.split(" ")
-            assert(len(candidate_array) == 4)
-            if (int(candidate_array[1])==continuous_factor):
-                print("size_miniheap="+candidate_array[0]+" --->req_avg="+candidate_array[1]+" util="+candidate_array[2]+" reuse="+candidate_array[3])
+            assert (len(candidate_array) == 4)
+            if (int(candidate_array[1]) == continuous_factor):
+                print("size_miniheap=" + candidate_array[0] + " --->req_avg=" +
+                      candidate_array[1] + " util=" + candidate_array[2] +
+                      " reuse=" + candidate_array[3])
         yesno = (input(
-                "Does the average number of continuous requests meet your design?: (Y/N)"
-            ))      
+            bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+            "Does the average number of continuous requests meet your design?: (Y/N)"
+        ))
         if (yesno == 'Y' or yesno == 'y'):
             break
-    expected_reuse = (input("Please input your expected reuse_factor for the KWTA dynamic heap and Hi-DMM will find proper size of mini-heaps:(10.0 by default)").replace(" ",""))
-    if (expected_reuse==""):
+    expected_reuse = (input(
+        "Please input your expected reuse_factor for the KWTA dynamic heap and Hi-DMM will find proper size of mini-heaps:(10.0 by default)"
+    ).replace(" ", ""))
+    if (expected_reuse == ""):
         expected_reuse = 10.0
     else:
         expected_reuse = float(expected_reuse)
     max_size = -1
     for candidate_line in candidate_lines:
-        candidates_line = candidate_line.replace("\n","")
+        candidates_line = candidate_line.replace("\n", "")
         candidate_array = candidates_line.split(" ")
-        assert(len(candidate_array) == 4)
-        if (int(candidate_array[1])==continuous_factor and float(candidate_array[3])>expected_reuse):
-            if (max_size<(int(candidate_array[0]))):
+        assert (len(candidate_array) == 4)
+        if (int(candidate_array[1]) == continuous_factor
+                and float(candidate_array[3]) > expected_reuse):
+            if (max_size < (int(candidate_array[0]))):
                 max_size = (int(candidate_array[0]))
     return max_size
-                  
 
 
 def main():
@@ -787,7 +803,8 @@ def main():
         "",
         "--mini_heap_eval",
         dest="mini_heap_eval",
-        help="indicate whether let Hi-DMM evaluates different size of mini-heap for KWTA",
+        help=
+        "indicate whether let Hi-DMM evaluates different size of mini-heap for KWTA",
         action="store_true",
         default=False)
     parser.disable_interspersed_args()
@@ -821,8 +838,9 @@ def main():
     if (args[0].find('/')):
         file_path_change = True
         ori_file_pathname = args[0]
-        print("------------------  shell command  -------------------\ncp " +
-              ori_file_pathname + " .")
+        print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+              "  shell command  -------------------\ncp " + ori_file_pathname +
+              " .")
         os.system("cp " + ori_file_pathname + " .")
         tmp_array = ori_file_pathname.split('/')
         args[0] = tmp_array[len(tmp_array) - 1]
@@ -834,14 +852,14 @@ def main():
             code nice for reading and analyzing
     """
     print(
-        "------------------  shell command  -------------------\nclang-format "
-        + sys.path[0] +
+        bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+        "  shell command  -------------------\nclang-format " + sys.path[0] +
         "/hidmm_helper_ori.cc -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
         + sys.path[0] + "/hidmm_helper.cc")
 
     print(
-        "------------------  shell command  -------------------\nclang-format "
-        + args[0] +
+        bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+        "  shell command  -------------------\nclang-format " + args[0] +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
         + args[0])
     os.system(
@@ -854,11 +872,12 @@ def main():
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > _"
         + args[0])
     if (opts.FormatCorrect):
-        print("------------------  shell command  -------------------\ncp " +
-              args[0] + " backup_" + args[0])
+        print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+              "  shell command  -------------------\ncp " + args[0] +
+              " backup_" + args[0])
         print(
-            "------------------  shell command  -------------------\nclang-format _"
-            + args[0] +
+            bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+            "  shell command  -------------------\nclang-format _" + args[0] +
             " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
             + args[0])
         os.system("cp " + args[0] + " backup_" + args[0])
@@ -949,8 +968,8 @@ def main():
         get_info(tu.cursor)
 
     print(
-        "------------------  shell command  -------------------\nclang-format _"
-        + args[0] +
+        bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+        "  shell command  -------------------\nclang-format _" + args[0] +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:    10000,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false  }\" > "
         + file_name)
     os.system(
@@ -1123,7 +1142,7 @@ def main():
             "#define SIZE_" + node['struct'].spelling + " " + str(
                 len(node['comp']))
         })
-        
+
         comp_id = 0
         struct_comps[node['struct'].spelling] = node['comp']
         for c in node['comp']:
@@ -1162,7 +1181,7 @@ def main():
                 p0,
                 'comps': [p2 for p2 in struct_comps[node['struct'].spelling]]
             })
-            
+
             pt_KWTA_suggestion[p0.spelling] = True
             print(
                 {
@@ -1179,7 +1198,8 @@ def main():
                     'definition id': get_cursor_id(p0.get_definition())
                 },
                 file=logfile)
-            struct_size_map[p0.spelling] = len(struct_pointer[(len(struct_pointer) - 1)]['comps'])
+            struct_size_map[p0.spelling] = len(
+                struct_pointer[(len(struct_pointer) - 1)]['comps'])
             print(
                 "sons:" + str([
                     str(cc.type.kind) + "--" + cc.spelling
@@ -1191,7 +1211,7 @@ def main():
             pt_KWTA_suggestion[p0.spelling] = False
 
     find_pointer_struct_access(tu.cursor, 0, struct_access_list, pointer_list)
-   # print(struct_size_map)
+    # print(struct_size_map)
     print(
         "\n========== Access of Structure Pointers ==============",
         file=logfile)
@@ -1285,6 +1305,7 @@ def main():
     print(
         "\n========== Pointers with Allocation  ==============", file=logfile)
     print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
         "Please make sure that the information required by the following pointers has been included in the file of user define constrain (Priority and MAU size)."
     )
     print("------------------------------------")
@@ -1315,18 +1336,20 @@ def main():
                 " *", "")
             pointer_priority_map[node.spelling] = 0
             pointer_MAU_map[node.spelling] = 0
-    print(tmp_string +
-          "---------------------  shell command  -------------------\n")
+    print(tmp_string + "----------------------------------------\n")
     print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
         "Otherwise, MAU size of each of them will be 1 and the priority of them will be equal."
     )
     print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
         "if necessary, you can indicate the user defined list by inserting an argument --user_define_list=xxx."
     )
-    print("---------------------  shell command  -------------------\n")
+    print("----------------------------------------\n")
     tot_priority = 0
     if (opts.user_define_list != ""):
         print(
+            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
             "User indicates user define list. MAU size and the priority will be set according to the file "
             + opts.user_define_list + ".")
         UDL_file = open(opts.user_define_list, "r")
@@ -1345,12 +1368,14 @@ def main():
             assert (pointer_MAU_map[node.spelling] > 0)
     else:
         print(
+            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
             "User indicates no user define list. MAU size will be 1 and the priority will be equal."
         )
         for node in pointers_with_alloc:
             pointer_priority_map[node.spelling] = 1
             pointer_MAU_map[node.spelling] = 1
-    print("---------------------  shell command  -------------------\n")
+    print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+          "  shell command  -------------------\n")
     for node in pointers_with_alloc:
         tot_priority = tot_priority + pointer_priority_map[node.spelling]
 
@@ -1587,15 +1612,16 @@ def main():
 
     mtx_file.close()
 
-    print(
-        "------------------  shell command  -------------------\nsed -i \"s/[^0-9\s]/ /g\" "
-        + sys.path[0] + "/mtx.txt")
+    print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+          "  shell command  -------------------\nsed -i \"s/[^0-9\s]/ /g\" " +
+          sys.path[0] + "/mtx.txt")
     os.system(("sed -i \"s/[^0-9\s]/ /g\" ") + sys.path[0] + "/mtx.txt")
 
     print("\n==============  Heap Assignment ================", file=logfile)
 
-    print("------------------  shell command  -------------------\n" +
-          sys.path[0] + "/max_cut " + sys.path[0] + " >forcheck")
+    print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+          "  shell command  -------------------\n" + sys.path[0] +
+          "/max_cut " + sys.path[0] + " >forcheck")
     os.system(sys.path[0] + "/max_cut " + sys.path[0] + " >forcheck")
 
     mtx_input_file = open(sys.path[0] + "/cutoutput.txt", "r")
@@ -1658,9 +1684,13 @@ def main():
                             else:
                                 ERROR_OCCUR = True
                                 print(
+                                    bcolors.FAIL + "Hi-DMM-ERROR: " +
+                                    bcolors.ENDC +
                                     "ERROR: Dynamic allocated memories in a heap have different partition factor."
                                 )
                                 print(
+                                    bcolors.FAIL + "Hi-DMM-ERROR: " +
+                                    bcolors.ENDC +
                                     "Corresponding heap assignment scheme will be abandoned."
                                 )
                         break
@@ -1751,6 +1781,7 @@ def main():
     str2_array = ["Heap Number"]
     [str2_array.append(str(attempt['group_num'])) for attempt in heap_attempts]
     print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
         "The BRAM costs of different numbers of heaps are listed as below.\n" +
         "Note that though in some cases, with different number of heaps, the BRAM cost\n"
         +
@@ -1777,6 +1808,7 @@ def main():
     attempt_selection_id = -1
     while (attempt_selection_id < 0):
         heap_number_input = int((input(
+            bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
             "The evaluation of heap number has been output to the file (" +
             str(opts.heapeval) +
             "), please check and input the proper number of heaps in the termianl:"
@@ -1787,15 +1819,18 @@ def main():
                 attempt_selection_id = attempt_id
         if (attempt_selection_id < 0):
             print(
+                bcolors.FAIL + "Hi-DMM-ERROR: " + bcolors.ENDC +
                 "Error: the selected heap number is out of the legal range provided by Hi-DMM, please input a number in the range ("
                 + str(heap_attempts[0]['group_num']) + "~" +
                 str(heap_attempts[-1]['group_num']) + ").")
         else:
             yesno = (input(
+                bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
                 "Do you want to print the assignment of pointers you selected: (Y/N)"
             ))
             if (yesno == 'Y' or yesno == 'y'):
                 print(
+                    bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
                     "According to user selection, the assignment of pointers is presented as below:"
                 )
                 pprint(heap_attempts[attempt_selection_id])
@@ -1814,7 +1849,6 @@ def main():
     heap_struct_map = dict()
     print('---------------------')
 
-    
     # mini_heap_file = open(sys.path[0] + "/hidmm_header.h", "r")
     # minisize_continuous_util
     # for attempt in heap_attempts:
@@ -1828,6 +1862,7 @@ def main():
             node.spelling)] = "Hi_DMM_dynamic_heap_" + str(tmp_heap_id)
         if (pt_KWTA_suggestion[str(node.spelling)]):
             print(
+                bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
                 "Hi-DMM suggests user to use KWTA for the allocation of pointer ("
                 + str(node.spelling) + ")")
         if (not (
@@ -1851,10 +1886,8 @@ def main():
                              'heap_in_attempt'][tmp_heap_id]['MAU_size']
 
             #  if (not (("Hi_DMM_allocator_" + str(tmp_heap_id)) in heap_allocator_capability_map.keys())):
-            heap_struct_map["Hi_DMM_dynamic_heap_" +
-                          str(tmp_heap_id)] = -1
+            heap_struct_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)] = -1
 
-            
             heap_allocator_capability_tmp = ceiling_division(
                 attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
                 attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'])
@@ -1862,53 +1895,111 @@ def main():
                 heap_allocator_capability_tmp = ceiling_division(
                     attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
                     struct_size_map[str(node.spelling)])
-                heap_struct_map["Hi_DMM_dynamic_heap_" +
-                            str(tmp_heap_id)] = heap_allocator_capability_tmp
+                heap_struct_map["Hi_DMM_dynamic_heap_" + str(
+                    tmp_heap_id)] = heap_allocator_capability_tmp
                 if (opts.mini_heap_eval):
                     print('---------------------')
-                    print("Handling the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+") and related pointers. ")
-                    print("------------------  shell command  ------ will take about 1~2 minute -------------\n"+sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                    os.system(sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
+                    print(bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                          "Handling the KWTA (SIZE:" +
+                          str(heap_allocator_capability_tmp) + ") managing (" +
+                          node.spelling + ") and related pointers. ")
+                    print(
+                        bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+                        "  shell command  ------ will take about 1~2 minute -------------\n"
+                        + sys.path[0] + "/parallel_randomtest " +
+                        str(heap_allocator_capability_tmp) +
+                        " > KWTA_random_test")
+                    os.system(sys.path[0] + "/parallel_randomtest " +
+                              str(heap_allocator_capability_tmp) +
+                              " > KWTA_random_test")
                     mini_heap_file = open("KWTA_random_test", "r")
-                    print("KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size.")
-                    print("In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse).")
+                    print(
+                        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                        "KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size."
+                    )
+                    print(
+                        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                        "In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse)."
+                    )
                     print('---------------------')
-                    print("Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,")
-                    print("which handles the pointer ("+str(node.spelling)+") and its related pointers.")
-                    mini_heap_size = find_proper_size_for_mini_heap(mini_heap_file)     
-                    print("For the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+"), "+"The optimal size of mini-heap is "+str(mini_heap_size))         
+                    print(
+                        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                        "Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,"
+                    )
+                    print(bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                          "which handles the pointer (" + str(node.spelling) +
+                          ") and its related pointers.")
+                    mini_heap_size = find_proper_size_for_mini_heap(
+                        mini_heap_file)
+                    print(bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                          "For the KWTA (SIZE:" +
+                          str(heap_allocator_capability_tmp) + ") managing (" +
+                          node.spelling + "), " +
+                          "The optimal size of mini-heap is " +
+                          str(mini_heap_size))
                     mini_heap_file.close()
                 else:
                     yesno = (input(
-                            "Handling the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+") and related pointers. "+"Do you want Hi-DMM evaluates the size of mini-heap for you?: (Y/N)"
-                        ))
+                        bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+                        "Handling the KWTA (SIZE:" +
+                        str(heap_allocator_capability_tmp) + ") managing (" +
+                        node.spelling + ") and related pointers. " +
+                        "Do you want Hi-DMM evaluates the size of mini-heap for you?: (Y/N)"
+                    ))
                     if (yesno == 'Y' or yesno == 'y'):
-                        print("------------------  shell command  ------ will take about 1~2 minute -------------\n"+sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                        os.system(sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
+                        print(
+                            bcolors.RUNNING + "Hi-DMM-RUNNING: " +
+                            bcolors.ENDC +
+                            "  shell command  ------ will take about 1~2 minute -------------\n"
+                            + sys.path[0] + "/parallel_randomtest " +
+                            str(heap_allocator_capability_tmp) +
+                            " > KWTA_random_test")
+                        os.system(sys.path[0] + "/parallel_randomtest " +
+                                  str(heap_allocator_capability_tmp) +
+                                  " > KWTA_random_test")
                         mini_heap_file = open("KWTA_random_test", "r")
-                        print("KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size.")
-                        print("In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse).")
+                        print(
+                            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                            "KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size."
+                        )
+                        print(
+                            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                            "In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse)."
+                        )
                         print('---------------------')
-                        print("Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,")
-                        print("which handles the pointer ("+str(node.spelling)+") and its related pointers.")
-                        mini_heap_size = find_proper_size_for_mini_heap(mini_heap_file)              
-                        print("For the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+"), "+"The optimal size of mini-heap is "+str(mini_heap_size))  
+                        print(
+                            bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+                            "Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,"
+                        )
+                        print(bcolors.OKGREEN + "Hi-DMM-INFO: " +
+                              bcolors.ENDC + "which handles the pointer (" +
+                              str(node.spelling) +
+                              ") and its related pointers.")
+                        mini_heap_size = find_proper_size_for_mini_heap(
+                            mini_heap_file)
+                        print(bcolors.OKGREEN + "Hi-DMM-INFO: " +
+                              bcolors.ENDC + "For the KWTA (SIZE:" +
+                              str(heap_allocator_capability_tmp) +
+                              ") managing (" + node.spelling + "), " +
+                              "The optimal size of mini-heap is " +
+                              str(mini_heap_size))
                         mini_heap_file.close()
                     else:
                         mini_heap_size = (input(
-                                "User decides to set mini-heap to (1,2,4,8,16) (16 by default):"
-                            ))       
-                        if (mini_heap_size==""):
+                            bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+                            "User decides to set mini-heap to (1,2,4,8,16) (16 by default):"
+                        ))
+                        if (mini_heap_size == ""):
                             mini_heap_size = 16
                         else:
-                            mini_heap_size = int(mini_heap_size.replace(" ",""))
+                            mini_heap_size = int(
+                                mini_heap_size.replace(" ", ""))
                 allocator_attempt = "KWTA_mini"
 
                 allocator_attempt = allocator_attempt + str(mini_heap_size)
             else:
                 allocator_attempt = find_available_allocator(
-                    heap_allocator_capability_tmp
-                ) 
+                    heap_allocator_capability_tmp)
             MAU_cnt = 1
             while (allocator_attempt == ""):
                 MAU_cnt = MAU_cnt + 1
@@ -1923,7 +2014,7 @@ def main():
                     heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
                 allocator_attempt = find_available_allocator(
                     heap_allocator_capability_tmp)
-            assert ((allocator_attempt.find("KWTA")<0)
+            assert ((allocator_attempt.find("KWTA") < 0)
                     or pt_KWTA_suggestion[str(node.spelling)])
             heap_allocator_capability_map[
                 "Hi_DMM_allocator_" + str(tmp_heap_id) + "_" +
@@ -2082,8 +2173,12 @@ def main():
                         node.spelling + "\n"
                     })
 
-                    if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):      
-                        print(bcolors.FAIL +"CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"+ bcolors.ENDC)
+                    if ((not non_KWTA)
+                            and pt_KWTA_suggestion[children[0].spelling]):
+                        print(
+                            bcolors.FAIL +
+                            "CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"
+                            + bcolors.ENDC)
 
                     if (
                             heap_MAU_size != 1
@@ -2102,17 +2197,20 @@ def main():
                             pointer_allocator[str(children[0].spelling)] + ")*"
                             + MAU_size_string + ";"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
+                        if ((not non_KWTA)
+                                and pt_KWTA_suggestion[children[0].spelling]):
                             #print("CRITICAL WARNING: For KWTA, size of MAU must be 1 since it is a fixed-size allocator!! The following code violating this rule is generated:")
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">((" +
+                            print(
+                                "offset_" + children[0].spelling +
+                                " = HLS_malloc<" +
+                                str(heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">((" +
                                 #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
                                 args.spelling + struct_size_string + "+" +
-                                MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ")*"
-                                + MAU_size_string + ";")
+                                MAU_size_string + "-1)/" + MAU_size_string +
+                                ", " +
+                                pointer_allocator[str(children[0].spelling)] +
+                                ")*" + MAU_size_string + ";")
                     else:
                         replacement.append({
                             'line':
@@ -2126,15 +2224,18 @@ def main():
                             args.spelling + struct_size_string + ", " +
                             pointer_allocator[str(children[0].spelling)] + ");"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
+                        if ((not non_KWTA)
+                                and pt_KWTA_suggestion[children[0].spelling]):
                             #print("CRITICAL WARNING: For KWTA, size of MAU must be 1 since it is a fixed-size allocator!! The following code violating this rule is generated:")
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">(" +
+                            print(
+                                "offset_" + children[0].spelling +
+                                " = HLS_malloc<" +
+                                str(heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">(" +
                                 #  " = HLS_malloc<" + str(malloc_cnt) + ">(" +
                                 args.spelling + struct_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ");")
+                                pointer_allocator[str(children[0].spelling)] +
+                                ");")
 
                     malloc_replace_done = True
                     insert_after.append({
@@ -2182,17 +2283,23 @@ def main():
                             pointer_allocator[str(children[0].spelling)] + ")*"
                             + MAU_size_string + ";"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
-                            print(bcolors.FAIL +"CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"+ bcolors.ENDC)
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">((" +
+                        if ((not non_KWTA)
+                                and pt_KWTA_suggestion[children[0].spelling]):
+                            print(
+                                bcolors.FAIL +
+                                "CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"
+                                + bcolors.ENDC)
+                            print(
+                                "offset_" + children[0].spelling +
+                                " = HLS_malloc<" +
+                                str(heap_allocator_capability_map[pointer_allocator[str(
+                                    children[0].spelling)]]) + ">((" +
                                 #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
                                 tmp_str + struct_size_string + "+" +
-                                MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ")*"
-                                + MAU_size_string + ";")
+                                MAU_size_string + "-1)/" + MAU_size_string +
+                                ", " +
+                                pointer_allocator[str(children[0].spelling)] +
+                                ")*" + MAU_size_string + ";")
                     else:
                         replacement.append({
                             'line':
@@ -2415,7 +2522,7 @@ def main():
     insert_before.append({'line': 1, 'string': "\n"})
     for it in heap_name_list:
         if (heap_size_map[it] != 0):
-            if (heap_struct_map[it]>0):
+            if (heap_struct_map[it] > 0):
                 cap_tmp_str = str(heap_struct_map[it])
             else:
                 cap_tmp_str = str(
@@ -2583,17 +2690,18 @@ def main():
     """
 
     print(
-        "------------------  shell command  -------------------\nclang-format "
-        + file_name.replace("preHiDMM_", "postHiDMM_") +
+        bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+        "  shell command  -------------------\nclang-format " +
+        file_name.replace("preHiDMM_", "postHiDMM_") +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
         + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     os.system(
         "clang-format " + file_name.replace("preHiDMM_", "postHiDMM_") +
         " -style=\"{BreakBeforeBraces: Allman ,BinPackParameters: true,IndentWidth: 4,TabWidth: 4,ColumnLimit:  220,AllowShortBlocksOnASingleLine:  false,AllowShortFunctionsOnASingleLine:   false,AllowShortIfStatementsOnASingleLine:    false ,AllowShortLoopsOnASingleLine:   false }\" > "
         + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-    print((
-        "------------------  shell command  -------------------\nsed -i \"s/    /\\t/g\" "
-    ) + file_name.replace("preHiDMM_", "decent_postHiDMM_"))
+    print((bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+           "  shell command  -------------------\nsed -i \"s/    /\\t/g\" ") +
+          file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     os.system(("sed -i \"s/    /\\t/g\" ") +
               file_name.replace("preHiDMM_", "decent_postHiDMM_"))
     # os.system(("rm ") + file_name.replace("preHiDMM_", "_preHiDMM_"))
@@ -2605,17 +2713,18 @@ def main():
         for i in range(len(tmp_array) - 1):
             ori_file_pathname += tmp_array[i] + "/"
         if (ori_file_pathname != ""):
-            print("------------------  shell command  -------------------\ncp "
-                  + file_name.replace("preHiDMM_", "decent_postHiDMM_") + " " +
+            print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+                  "  shell command  -------------------\ncp " +
+                  file_name.replace("preHiDMM_", "decent_postHiDMM_") + " " +
                   ori_file_pathname +
                   file_name.replace("preHiDMM_", "decent_postHiDMM_"))
             os.system("cp " +
                       file_name.replace("preHiDMM_", "decent_postHiDMM_") +
                       " " + ori_file_pathname +
                       file_name.replace("preHiDMM_", "decent_postHiDMM_"))
-            print(
-                "------------------  shell command  -------------------\ncp *_"
-                + tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
+            print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+                  "  shell command  -------------------\ncp *_" +
+                  tmp_array[len(tmp_array) - 1] + " " + ori_file_pathname)
             os.system("cp *_" + tmp_array[len(tmp_array) - 1] + " " +
                       ori_file_pathname)
             # os.system("rm *_" + tmp_array[len(tmp_array) - 1])
