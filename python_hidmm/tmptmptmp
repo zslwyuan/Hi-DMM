@@ -10,17 +10,6 @@ import re
 import time
 import print_table
 from unionfind import unionfind
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
 #Config.set_library_file("/usr/lib/llvm-6.0/lib/libclang-6.0.so.1")
 Config.set_library_file("/usr/local/lib/libclang.so.7")
 index = clang.cindex.Index.create()
@@ -51,7 +40,7 @@ allocator_definition_name = [
     'Super_HTA64k'  #'KWTA should be treated individually'
 ]
 allocator_capability_upper_bound = [
-    64, 128, 256, 512, 1024, 2048, 4096, 8192, 16 * 1024, 32 * 1024, 64 * 1024
+    64, 128, 356, 512, 1024, 2048, 4096, 8192, 16 * 1024, 32 * 1024, 64 * 1024
     #'KWTA should be treated individually' --- 1048576
 ]  #Theoratically, there is no capability limitation for KWTA. Here we just set a large value for it.
 allocator_BRAM_cost = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -62,7 +51,7 @@ def find_available_allocator(expected_cap):
     global allocator_capability_upper_bound
     for name, size in zip(allocator_definition_name,
                           allocator_capability_upper_bound):
-        if (size >= expected_cap):
+        if (size > expected_cap):
             return name
     return ""
 
@@ -615,43 +604,6 @@ def extractStructName(tmp):
         return tmp[:tmp.find("->")]
     return tmp
 
-def find_proper_size_for_mini_heap(mini_heap_file):
-    candidate_lines_tmp = [candidate_line for candidate_line in mini_heap_file.readlines()]
-    while (1):
-        candidate_lines = candidate_lines_tmp
-        continuous_factor = (input("Please input your expected average number of continuous requests for the KWTA dynamic heap:(1,2,..,16,1 by default)").replace(" ",""))
-        if (continuous_factor==""):
-            continuous_factor = 1
-        else:
-            continuous_factor = int(continuous_factor)
-        print("According to your input, the candidates of the size of mini-heap are listed as below:")
-        for candidate_line in candidate_lines:
-            candidates_line = candidate_line.replace("\n","")
-            candidate_array = candidates_line.split(" ")
-            assert(len(candidate_array) == 4)
-            if (int(candidate_array[1])==continuous_factor):
-                print("size_miniheap="+candidate_array[0]+" --->req_avg="+candidate_array[1]+" util="+candidate_array[2]+" reuse="+candidate_array[3])
-        yesno = (input(
-                "Does the average number of continuous requests meet your design?: (Y/N)"
-            ))      
-        if (yesno == 'Y' or yesno == 'y'):
-            break
-    expected_reuse = (input("Please input your expected reuse_factor for the KWTA dynamic heap and Hi-DMM will find proper size of mini-heaps:(10.0 by default)").replace(" ",""))
-    if (expected_reuse==""):
-        expected_reuse = 10.0
-    else:
-        expected_reuse = float(expected_reuse)
-    max_size = -1
-    for candidate_line in candidate_lines:
-        candidates_line = candidate_line.replace("\n","")
-        candidate_array = candidates_line.split(" ")
-        assert(len(candidate_array) == 4)
-        if (int(candidate_array[1])==continuous_factor and float(candidate_array[3])>expected_reuse):
-            if (max_size<(int(candidate_array[0]))):
-                max_size = (int(candidate_array[0]))
-    return max_size
-                  
-
 
 def main():
     from clang.cindex import Index
@@ -780,16 +732,10 @@ def main():
         "",
         "--KWTA",
         dest="KWTA",
-        help="indicate whether let Hi-DMM applis KWTA for user-defined struct",
+        help="indicate the model number of FPGA device",
         action="store_true",
         default=False)
-    parser.add_option(
-        "",
-        "--mini_heap_eval",
-        dest="mini_heap_eval",
-        help="indicate whether let Hi-DMM evaluates different size of mini-heap for KWTA",
-        action="store_true",
-        default=False)
+
     parser.disable_interspersed_args()
 
     file_path_change = False
@@ -1091,7 +1037,7 @@ def main():
     find_pointer_struct_decl(tu.cursor, 0, struct_list)
     print("\n========== Structure ==============", file=logfile)
     struct_comps = dict()
-    struct_size_map = dict()
+
     for node in struct_list:
         print(
             {
@@ -1123,7 +1069,6 @@ def main():
             "#define SIZE_" + node['struct'].spelling + " " + str(
                 len(node['comp']))
         })
-        
         comp_id = 0
         struct_comps[node['struct'].spelling] = node['comp']
         for c in node['comp']:
@@ -1162,7 +1107,6 @@ def main():
                 p0,
                 'comps': [p2 for p2 in struct_comps[node['struct'].spelling]]
             })
-            
             pt_KWTA_suggestion[p0.spelling] = True
             print(
                 {
@@ -1179,7 +1123,6 @@ def main():
                     'definition id': get_cursor_id(p0.get_definition())
                 },
                 file=logfile)
-            struct_size_map[p0.spelling] = len(struct_pointer[(len(struct_pointer) - 1)]['comps'])
             print(
                 "sons:" + str([
                     str(cc.type.kind) + "--" + cc.spelling
@@ -1191,7 +1134,6 @@ def main():
             pt_KWTA_suggestion[p0.spelling] = False
 
     find_pointer_struct_access(tu.cursor, 0, struct_access_list, pointer_list)
-   # print(struct_size_map)
     print(
         "\n========== Access of Structure Pointers ==============",
         file=logfile)
@@ -1811,16 +1753,8 @@ def main():
     heap_allocator_capability_map = dict()
     heap_allocator_map = dict()
     allocator_heap_map = dict()
-    heap_struct_map = dict()
+
     print('---------------------')
-
-    
-    # mini_heap_file = open(sys.path[0] + "/hidmm_header.h", "r")
-    # minisize_continuous_util
-    # for attempt in heap_attempts:
-    #     pprint(attempt, heapeval)
-    # mini_heap_file.close()
-
     for node in pointer_list:
 
         tmp_heap_id = attempt_selection['pt_heap_map'][node.spelling]
@@ -1851,64 +1785,15 @@ def main():
                              'heap_in_attempt'][tmp_heap_id]['MAU_size']
 
             #  if (not (("Hi_DMM_allocator_" + str(tmp_heap_id)) in heap_allocator_capability_map.keys())):
-            heap_struct_map["Hi_DMM_dynamic_heap_" +
-                          str(tmp_heap_id)] = -1
-
-            
             heap_allocator_capability_tmp = ceiling_division(
                 attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
                 attempt_selection['heap_in_attempt'][tmp_heap_id]['MAU_size'])
             if (pt_KWTA_suggestion[str(node.spelling)] and not non_KWTA):
-                heap_allocator_capability_tmp = ceiling_division(
-                    attempt_selection['heap_in_attempt'][tmp_heap_id]['depth'],
-                    struct_size_map[str(node.spelling)])
-                heap_struct_map["Hi_DMM_dynamic_heap_" +
-                            str(tmp_heap_id)] = heap_allocator_capability_tmp
-                if (opts.mini_heap_eval):
-                    print('---------------------')
-                    print("Handling the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+") and related pointers. ")
-                    print("------------------  shell command  ------ will take about 1~2 minute -------------\n"+sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                    os.system(sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                    mini_heap_file = open("KWTA_random_test", "r")
-                    print("KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size.")
-                    print("In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse).")
-                    print('---------------------')
-                    print("Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,")
-                    print("which handles the pointer ("+str(node.spelling)+") and its related pointers.")
-                    mini_heap_size = find_proper_size_for_mini_heap(mini_heap_file)     
-                    print("For the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+"), "+"The optimal size of mini-heap is "+str(mini_heap_size))         
-                    mini_heap_file.close()
-                else:
-                    yesno = (input(
-                            "Handling the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+") and related pointers. "+"Do you want Hi-DMM evaluates the size of mini-heap for you?: (Y/N)"
-                        ))
-                    if (yesno == 'Y' or yesno == 'y'):
-                        print("------------------  shell command  ------ will take about 1~2 minute -------------\n"+sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                        os.system(sys.path[0]+"/parallel_randomtest "+str(heap_allocator_capability_tmp)+" > KWTA_random_test")
-                        mini_heap_file = open("KWTA_random_test", "r")
-                        print("KWTA test results are shown in file (KWTA_random_test), user can look into the file to determine mini-heap size.")
-                        print("In file (KWTA_random_test), there are 4 columns (mini-heap size | average continuous request | utilization | reuse).")
-                        print('---------------------')
-                        print("Now, the Hi-DMM compiler is trying to find the proper size of mini-heap for KWTA,")
-                        print("which handles the pointer ("+str(node.spelling)+") and its related pointers.")
-                        mini_heap_size = find_proper_size_for_mini_heap(mini_heap_file)              
-                        print("For the KWTA (SIZE:"+str(heap_allocator_capability_tmp)+") managing ("+node.spelling+"), "+"The optimal size of mini-heap is "+str(mini_heap_size))  
-                        mini_heap_file.close()
-                    else:
-                        mini_heap_size = (input(
-                                "User decides to set mini-heap to (1,2,4,8,16) (16 by default):"
-                            ))       
-                        if (mini_heap_size==""):
-                            mini_heap_size = 16
-                        else:
-                            mini_heap_size = int(mini_heap_size.replace(" ",""))
-                allocator_attempt = "KWTA_mini"
-
-                allocator_attempt = allocator_attempt + str(mini_heap_size)
+                allocator_attempt = "KWTA"
             else:
                 allocator_attempt = find_available_allocator(
                     heap_allocator_capability_tmp
-                ) 
+                )  #!!!!!!!!!!!!!!!!!!!!!!here need further modify
             MAU_cnt = 1
             while (allocator_attempt == ""):
                 MAU_cnt = MAU_cnt + 1
@@ -1923,7 +1808,7 @@ def main():
                     heap_MAU_map["Hi_DMM_dynamic_heap_" + str(tmp_heap_id)])
                 allocator_attempt = find_available_allocator(
                     heap_allocator_capability_tmp)
-            assert ((allocator_attempt.find("KWTA")<0)
+            assert (allocator_attempt != "KWTA"
                     or pt_KWTA_suggestion[str(node.spelling)])
             heap_allocator_capability_map[
                 "Hi_DMM_allocator_" + str(tmp_heap_id) + "_" +
@@ -2082,9 +1967,6 @@ def main():
                         node.spelling + "\n"
                     })
 
-                    if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):      
-                        print(bcolors.FAIL +"CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"+ bcolors.ENDC)
-
                     if (
                             heap_MAU_size != 1
                     ):  #we need to consider whether we should insert the string of MAU into the malloc function
@@ -2102,17 +1984,6 @@ def main():
                             pointer_allocator[str(children[0].spelling)] + ")*"
                             + MAU_size_string + ";"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
-                            #print("CRITICAL WARNING: For KWTA, size of MAU must be 1 since it is a fixed-size allocator!! The following code violating this rule is generated:")
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">((" +
-                                #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
-                                args.spelling + struct_size_string + "+" +
-                                MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ")*"
-                                + MAU_size_string + ";")
                     else:
                         replacement.append({
                             'line':
@@ -2126,16 +1997,6 @@ def main():
                             args.spelling + struct_size_string + ", " +
                             pointer_allocator[str(children[0].spelling)] + ");"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
-                            #print("CRITICAL WARNING: For KWTA, size of MAU must be 1 since it is a fixed-size allocator!! The following code violating this rule is generated:")
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">(" +
-                                #  " = HLS_malloc<" + str(malloc_cnt) + ">(" +
-                                args.spelling + struct_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ");")
-
                     malloc_replace_done = True
                     insert_after.append({
                         'line':
@@ -2182,17 +2043,6 @@ def main():
                             pointer_allocator[str(children[0].spelling)] + ")*"
                             + MAU_size_string + ";"
                         })
-                        if ((not non_KWTA) and pt_KWTA_suggestion[children[0].spelling]):
-                            print(bcolors.FAIL +"CRITICAL WARNING: KWTA is a fixed-size allocator! The following code violating the rule is generated:"+ bcolors.ENDC)
-                            print("offset_" + children[0].spelling + " = HLS_malloc<"
-                                + str(
-                                    heap_allocator_capability_map[pointer_allocator[str(
-                                        children[0].spelling)]]) + ">((" +
-                                #" = HLS_malloc<" + str(malloc_cnt) + ">((" +
-                                tmp_str + struct_size_string + "+" +
-                                MAU_size_string + "-1)/" + MAU_size_string + ", " +
-                                pointer_allocator[str(children[0].spelling)] + ")*"
-                                + MAU_size_string + ";")
                     else:
                         replacement.append({
                             'line':
@@ -2415,11 +2265,6 @@ def main():
     insert_before.append({'line': 1, 'string': "\n"})
     for it in heap_name_list:
         if (heap_size_map[it] != 0):
-            if (heap_struct_map[it]>0):
-                cap_tmp_str = str(heap_struct_map[it])
-            else:
-                cap_tmp_str = str(
-                    ceiling_division(heap_size_map[it], heap_MAU_map[it]))
             insert_before.append({
                 'line':
                 1,
@@ -2427,7 +2272,8 @@ def main():
                 heap_type_map[it] + " " + it + "[" + str(heap_size_map[it]) +
                 "];  //" + str(heap_pt_name_map[it]) + "---MAU_size=" + str(
                     heap_MAU_map[it]) +
-                "---Allocator Management Capability Required: " + cap_tmp_str +
+                "---Allocator Management Capability Required: " + str(
+                    ceiling_division(heap_size_map[it], heap_MAU_map[it])) +
                 "\n"  #!!!!!!!!!!heap_size_map/heap_MAU_map
             })
 
@@ -2625,3 +2471,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

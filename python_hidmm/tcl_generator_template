@@ -1,0 +1,5 @@
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  /home/tingyuan/Temporary/vivado-outputs [current_project]
+update_ip_catalog
+create_bd_cell -type ip -vlnv xilinx.com:hls:HLS_MAXHEAP_HTA_example:1.0 HLS_MAXHEAP_HTA_exam_0

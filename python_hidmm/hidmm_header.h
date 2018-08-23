@@ -5,7 +5,7 @@ int free_target;
 char cmd;
 } hidmm_alloc_port;
 
-template <int unused>
+template <int limit>
 volatile int HLS_malloc(int size,volatile hidmm_alloc_port *allocator)
 {
 #pragma HLS INLINE
