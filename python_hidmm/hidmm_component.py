@@ -40,18 +40,30 @@ pointer_priority_map = dict()
 pointer_MAU_map = dict()
 logfile = None
 allocator_definition_name = [
-    'FBTA64',
-    'HTA128',
-    'HTA256',
-    'HTA512',
-    'HTA1024',
-    'HTA2048',
-    'Super_HTA4k',
-    'Super_HTA8k',
-    'Super_HTA16k',
-    'Super_HTA32k',
-    'Super_HTA64k'  #'KWTA should be treated individually'
+    'FBTA64', 'HTA128', 'HTA256', 'HTA512', 'HTA1024', 'HTA2048',
+    'Super_HTA4k', 'Super_HTA8k', 'Super_HTA16k', 'Super_HTA32k',
+    'Super_HTA64k'
 ]
+
+allocator_port_ip_map = dict()
+
+allocator_port_ip_map['FBTA64'] = 'FBTA64_theta'
+allocator_port_ip_map['HTA128'] = 'HTA128_theta'
+allocator_port_ip_map['HTA256'] = 'HTA256_theta'
+allocator_port_ip_map['HTA512'] = 'HTA512_theta'
+allocator_port_ip_map['HTA1024'] = 'HTA1024_theta'
+allocator_port_ip_map['HTA2048'] = 'HTA2048_theta'
+allocator_port_ip_map['Super_HTA4k'] = 'Ext_KWTA4k'
+allocator_port_ip_map['Super_HTA8k'] = 'Ext_KWTA8k'
+allocator_port_ip_map['Super_HTA16k'] = 'Ext_KWTA16k'
+allocator_port_ip_map['Super_HTA32k'] = 'Ext_KWTA32k'
+allocator_port_ip_map['Super_HTA64k'] = 'Ext_KWTA64k'
+allocator_port_ip_map['KWTA_mini1'] = 'KWTA_mini1_theta'
+allocator_port_ip_map['KWTA_mini2'] = 'KWTA_mini2_theta'
+allocator_port_ip_map['KWTA_mini4'] = 'KWTA_mini4_theta'
+allocator_port_ip_map['KWTA_mini8'] = 'KWTA_mini8_theta'
+allocator_port_ip_map['KWTA_mini16'] = 'KWTA_mini16_theta'
+
 allocator_capability_upper_bound = [
     64, 128, 256, 512, 1024, 2048, 4096, 8192, 16 * 1024, 32 * 1024, 64 * 1024
     #'KWTA should be treated individually' --- 1048576
@@ -712,6 +724,7 @@ def main():
     heap_size = [10000, 10000]
     heap = ["hidmm_dynamic_heap0", "hidmm_dynamic_heap1"]
     allocator = ["HIDMM_ALLOCATOR0", "HIDMM_ALLOCATOR1"]
+    port_ip_map = dict()
 
     parser = OptionParser("usage: %prog [options] {filename} [clang-args*]")
     parser.add_option(
@@ -807,6 +820,15 @@ def main():
         "indicate whether let Hi-DMM evaluates different size of mini-heap for KWTA",
         action="store_true",
         default=False)
+    parser.add_option(
+        "",
+        "--tcloutput",
+        dest="tcloutput",
+        help=
+        "where to print out tcl script for generating DMM project in Xilinx Vivado",
+        metavar="Heapeval",
+        type="string",
+        default="tcloutput.tcl")
     parser.disable_interspersed_args()
 
     file_path_change = False
@@ -2028,6 +2050,10 @@ def main():
                 node.spelling)]] = pointer_allocator[str(node.spelling)]
             allocator_heap_map[pointer_allocator[str(
                 node.spelling)]] = pointer_assign[str(node.spelling)]
+            port_ip_map["Hi_DMM_allocator_" + str(tmp_heap_id) + "_" +
+                        allocator_attempt] = allocator_port_ip_map[
+                            allocator_attempt]
+
         else:
             pointer_allocator[str(
                 node.spelling)] = heap_allocator_map["Hi_DMM_dynamic_heap_" +
@@ -2730,6 +2756,115 @@ def main():
             # os.system("rm *_" + tmp_array[len(tmp_array) - 1])
             # if (tmp_array[len(tmp_array) - 1].find("hidmm_") < 0):
             #     os.system("rm " + tmp_array[len(tmp_array) - 1])
+
+    ############################################################################################################
+    """
+        Tcl generation for Xilinx Vivado project
+    """
+    print(bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
+          "  generating tcl file for Xilinx Vivado to implement a DMM Project")
+    tclfile = open(opts.tcloutput, 'w')
+    vivado_prjname = input(
+        bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+        "please input the expected name of Vivado Project: (Default: " +
+        "HiDMM_" + top_function_name + ")")
+    if (vivado_prjname == ""):
+        vivado_prjname = "HiDMM_" + top_function_name
+    designname = input(
+        bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+        "please input the expected name of block design: (Default: design_1)")
+    if (designname == ""):
+        designname = "design_1"
+    env_dist = os.environ
+    ippath = input(bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+                   "please input the path for IPs searching: (Default: /home/"
+                   + env_dist['USER'] + "/Temporary/vivado-outputs)")
+    if (ippath == ""):
+        ippath = "/home/" + env_dist['USER'] + "/Temporary/vivado-outputs"
+    devicename = input(
+        bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+        "please input the number of FPGA device: (Default: xc7z020clg484-1, which is for Zedboard)"
+    )
+    if (devicename == ""):
+        devicename = "xc7z020clg484-1"
+
+    tclfile.write("set origin_dir \".\"" + "\n")
+    tclfile.write(
+        "if { [info exists ::origin_dir_loc] } {\n  set origin_dir $::origin_dir_loc\n}"
+        + "\n")
+    tclfile.write("set _xil_proj_name_ \"" + vivado_prjname + "\"" + "\n")
+    tclfile.write(
+        "if { [info exists ::user_project_name] } {\n  set _xil_proj_name_ $::user_project_name\n}"
+        + "\n")
+    tclfile.write("variable script_file\nset script_file \"" + opts.tcloutput +
+                  "\"" + "\n")
+    tclfile.write(
+        "create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part " +
+        devicename + "\n")
+
+    tcl_define_file = open(sys.path[0] + "/tcldefine", 'r')
+    for line in tcl_define_file.readlines():  #12:--------
+        tclfile.write(line)
+    tcl_define_file.close()
+
+    tclfile.write("create_bd_design \"" + designname + "\"" + "\n")
+    tclfile.write("update_compile_order -fileset sources_1" + "\n")
+    tclfile.write("set_property  ip_repo_paths  " + ippath +
+                  " [current_project]" + "\n")
+    tclfile.write("update_ip_catalog -rebuild" + "\n")
+    tclfile.write("create_bd_cell -type ip -vlnv xilinx.com:hls:" +
+                  top_function_name + " " + top_function_name + "_dmm_0" +
+                  "\n")
+
+    appname = top_function_name + "_dmm_0"
+    tcl_generator_template_file = open(sys.path[0] + "/tcl_generator_template",
+                                       'r')
+    tcl_generator_template = []
+    for line in tcl_generator_template_file.readlines():  #12:--------
+        tcl_generator_template.append(line.replace("\n", ""))
+    tcl_generator_template_file.close()
+    allocator_id_cnt = 0
+
+    for port in port_ip_map.keys():
+        tclfile.write("\n")
+        tclfile.write("create_bd_cell -type ip -vlnv xilinx.com:hls:" +
+                      port_ip_map[port] + " " + port_ip_map[port] + "_" +
+                      str(allocator_id_cnt) + "\n")
+        allocator_ip_name = port_ip_map[port] + "_" + str(allocator_id_cnt)
+        for line in tcl_generator_template[:12]:
+            tclfile.write(
+                line.replace("APPIPNAME", appname).replace(
+                    "HIDMMAPPPORTNAME", port).replace(
+                        "HIDMMALLOCATORNAME", allocator_ip_name) + "\n")
+        if (port.find("Super") > 0):
+            tclfile.write("\n")
+            tclfile.write(
+                "create_bd_cell -type ip -vlnv xilinx.com:hls:Ext_HTA " +
+                allocator_ip_name + "_Ext_HTA" + "_" + str(allocator_id_cnt) +
+                "\n")
+            ext_tmp_name = allocator_ip_name + "_Ext_HTA" + "_" + str(
+                allocator_id_cnt)
+            for line in tcl_generator_template[14:]:
+                tclfile.write(
+                    line.replace("HIDMMEXTHTANAME", ext_tmp_name).replace(
+                        "HIDMMEXTKWTANAME", allocator_ip_name) + "\n")
+        allocator_id_cnt = allocator_id_cnt + 1
+    yesno = input(
+        bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
+        "Do you want Vivado open GUI after project generation?:(Y/N)")
+    if (yesno == "y" or yesno == "Y"):
+        tclfile.write("save_bd_design\n\nstart_gui\n")
+    else:
+        tclfile.write("save_bd_design\n\nexit\n")
+    tclfile.close()
+    print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC +
+        "The compilation and project generation have been finished by Hi-DMM. Users can type: (vivado -mode tcl -source "
+        + opts.tcloutput + ") to generate the final project thet need.")
+    print(
+        bcolors.OKGREEN + "Hi-DMM-INFO: " + bcolors.ENDC + bcolors.RUNNING +
+        "In Vivado, click IP INTEGRATOR->Open Block Design, user can find the diagram of design. Hope Hi-DMM helps and enjoy your design time!"
+        + bcolors.ENDC)
 
 
 if __name__ == '__main__':

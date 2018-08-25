@@ -1,5 +1,26 @@
-create_bd_design "design_1"
-update_compile_order -fileset sources_1
-set_property  ip_repo_paths  /home/tingyuan/Temporary/vivado-outputs [current_project]
-update_ip_catalog
-create_bd_cell -type ip -vlnv xilinx.com:hls:HLS_MAXHEAP_HTA_example:1.0 HLS_MAXHEAP_HTA_exam_0
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_cmd] [get_bd_pins HIDMMALLOCATORNAME/alloc_cmd]
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_free_target] [get_bd_pins HIDMMALLOCATORNAME/alloc_free_target]
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_size] [get_bd_pins HIDMMALLOCATORNAME/alloc_size]
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_size_ap_vld] [get_bd_pins HIDMMALLOCATORNAME/alloc_size_ap_vld]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_free_target_ap_vld] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_free_target_ap_vld]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_addr_ap_ack] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_addr_ap_ack]
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_cmd_ap_vld] [get_bd_pins HIDMMALLOCATORNAME/alloc_cmd_ap_vld]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_size_ap_ack] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_size_ap_ack]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_free_target_ap_ack] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_free_target_ap_ack]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_addr_ap_vld] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_addr_ap_vld]
+connect_bd_net [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_cmd_ap_ack] [get_bd_pins HIDMMALLOCATORNAME/alloc_cmd_ap_ack]
+connect_bd_net [get_bd_pins HIDMMALLOCATORNAME/alloc_addr] [get_bd_pins APPIPNAME/HIDMMAPPPORTNAME_addr]
+-------------------------------------------------------------------------------------------------------
+create_bd_cell -type ip -vlnv xilinx.com:hls:Ext_HTA HIDMMEXTHTANAME
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_cmd] [get_bd_pins HIDMMEXTHTANAME/alloc_cmd]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_target_V] [get_bd_pins HIDMMEXTHTANAME/alloc_target_V]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_layer_V] [get_bd_pins HIDMMEXTHTANAME/alloc_layer_V]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_allocated_addr_V] [get_bd_pins HIDMMEXTHTANAME/alloc_allocated_addr_V]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_cmd_ap_vld] [get_bd_pins HIDMMEXTHTANAME/alloc_cmd_ap_vld]
+connect_bd_net [get_bd_pins HIDMMEXTHTANAME/alloc_allocated_addr_V_ap_ack] [get_bd_pins HIDMMEXTKWTANAME/com_port_allocated_addr_V_ap_ack]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_target_V_ap_vld] [get_bd_pins HIDMMEXTHTANAME/alloc_target_V_ap_vld]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_layer_V_ap_vld] [get_bd_pins HIDMMEXTHTANAME/alloc_layer_V_ap_vld]
+connect_bd_net [get_bd_pins HIDMMEXTHTANAME/alloc_layer_V_ap_ack] [get_bd_pins HIDMMEXTKWTANAME/com_port_layer_V_ap_ack]
+connect_bd_net [get_bd_pins HIDMMEXTHTANAME/alloc_target_V_ap_ack] [get_bd_pins HIDMMEXTKWTANAME/com_port_target_V_ap_ack]
+connect_bd_net [get_bd_pins HIDMMEXTKWTANAME/com_port_allocated_addr_V_ap_vld] [get_bd_pins HIDMMEXTHTANAME/alloc_allocated_addr_V_ap_vld]
+connect_bd_net [get_bd_pins HIDMMEXTHTANAME/alloc_cmd_ap_ack] [get_bd_pins HIDMMEXTKWTANAME/com_port_cmd_ap_ack]
