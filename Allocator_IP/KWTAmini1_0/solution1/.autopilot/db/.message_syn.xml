@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;KWTAmini1_0/top.cc&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 10462 ; free virtual = 29504"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 375.676 ; gain = 0.113 ; free physical = 10462 ; free virtual = 29504"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (KWTAmini1_0/top.cc:91)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (KWTAmini1_0/top.cc:90)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (KWTAmini1_0/top.cc:89)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_16bit&apos; into &apos;log_2_64bit&apos; (KWTAmini1_0/top.cc:88)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-604]" key="XFORM_INLINE_CONFLICT_FUNC_ALLOC_222" tag="" content="Allocation directive (KWTAmini1_0/top.cc:102) on function &apos;log_2_64bit&apos;&apos; (KWTAmini1_0/top.cc:82) will be discarded since the function is inlined."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_64bit&apos; into &apos;KWTA_mini1_theta&apos; (KWTAmini1_0/top.cc:130)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;log_2_64bit&apos; into &apos;KWTA_mini1_theta&apos; (KWTAmini1_0/top.cc:129)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 503.562 ; gain = 128.000 ; free physical = 10438 ; free virtual = 29487"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="WARNING" prefix="[SYNCHK 200-23]" key="SYNCHK_VAR_INDEX_RANGE_359" tag="" content="KWTAmini1_0/top.cc:136: variable-indexed range selection may cause suboptimal QoR."/>
+	<Message severity="INFO" prefix="[SYNCHK 200-10]" key="SYNCHK_SYNCHK_SUMMARY_377" tag="" content="0 error(s), 1 warning(s)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 504.172 ; gain = 128.609 ; free physical = 10443 ; free virtual = 29494"/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;KWTA_mini1_theta&apos; (KWTAmini1_0/top.cc:95)...6 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 504.172 ; gain = 128.609 ; free physical = 10393 ; free virtual = 29446"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 504.172 ; gain = 128.609 ; free physical = 10407 ; free virtual = 29461"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;KWTA_mini1_theta&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;KWTA_mini1_theta&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="WARNING" prefix="[SCHED 204-36]" key="SCHED_WAIT_MISSING_IN_PROTOCOL_28" tag="SCHEDULE" content="Invalid protocol &apos;io_section0&apos;: additional &apos;wait&apos;(s) required after the multi-cycle operation:
+   &apos;load&apos; operation (&apos;__Val2__&apos;, KWTAmini1_0/top.cc:151) on array &apos;heap_tree_V&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-36]" key="SCHED_WAIT_MISSING_IN_PROTOCOL_28" tag="SCHEDULE" content="Invalid protocol &apos;io_section0&apos;: additional &apos;wait&apos;(s) required after the multi-cycle operation:
+   &apos;load&apos; operation (&apos;__Val2__&apos;, KWTAmini1_0/top.cc:130) on array &apos;heap_tree_V&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-36]" key="SCHED_WAIT_MISSING_IN_PROTOCOL_26" tag="SCHEDULE" content="Unable to schedule the protocol specified by region &apos;io_section0&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-36]" key="SCHED_WAIT_MISSING_IN_PROTOCOL_28" tag="SCHEDULE" content="Invalid protocol &apos;io_section4&apos;: additional &apos;wait&apos;(s) required after the multi-cycle operation:
+   &apos;load&apos; operation (&apos;__Val2__&apos;, KWTAmini1_0/top.cc:130) on array &apos;heap_tree_V&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-36]" key="SCHED_WAIT_MISSING_IN_PROTOCOL_26" tag="SCHEDULE" content="Unable to schedule the protocol specified by region &apos;io_section4&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 20.26 seconds; current allocated memory: 109.481 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.08 seconds; current allocated memory: 110.352 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;KWTA_mini1_theta&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KWTA_mini1_theta/alloc_size&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KWTA_mini1_theta/alloc_free_target&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KWTA_mini1_theta/alloc_addr&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KWTA_mini1_theta/alloc_cmd&apos; to &apos;ap_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;KWTA_mini1_theta&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;top_heap_V&apos; is power-on initialization."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KWTA_mini1_theta_heap_tree_V&apos; to &apos;KWTA_mini1_theta_bkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;KWTA_mini1_theta&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.17 seconds; current allocated memory: 112.114 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;KWTA_mini1_theta_bkb_ram (RAM_T2P_BRAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 504.172 ; gain = 128.609 ; free physical = 10372 ; free virtual = 29435"/>
+	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for KWTA_mini1_theta."/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for KWTA_mini1_theta."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for KWTA_mini1_theta."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 21.32 seconds; peak allocated memory: 112.114 MB."/>
+</Messages>

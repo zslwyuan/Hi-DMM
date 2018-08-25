@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'top_heap_V' is power-on initialization." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:56.518+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'io_section4'." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:56.306+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section4': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini1_0/top.cc:130) on array 'heap_tree_V'." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:55.975+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'io_section0'." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:55.971+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini1_0/top.cc:130) on array 'heap_tree_V'." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:55.955+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-36] Invalid protocol 'io_section0': additional 'wait'(s) required after the multi-cycle operation:&#xA;   'load' operation ('__Val2__', KWTAmini1_0/top.cc:151) on array 'heap_tree_V'." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:55.940+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] KWTAmini1_0/top.cc:136: variable-indexed range selection may cause suboptimal QoR." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:54.743+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-604] Allocation directive (KWTAmini1_0/top.cc:102) on function 'log_2_64bit'' (KWTAmini1_0/top.cc:82) will be discarded since the function is inlined." projectName="KWTAmini1_0" solutionName="solution1" date="2018-08-25T21:49:54.568+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

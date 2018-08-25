@@ -3,13 +3,13 @@
         <value string="false"/>
     </checksum>
     <downStreamTool>
-        <DownStreamTool name="vivado"/>
+        <DownStreamTool name=""/>
     </downStreamTool>
     <clockList>
-        <clock default="false" name="default" period="10"/>
+        <clock name="default" period="10"/>
     </clockList>
     <config>
-        <schedule model="KWTA_mini16_theta"/>
+        <schedule model="KWTA_mini1_theta"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="ZedBoard Zynq Evaluation and Development Kit (xc7z020clg484-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -61,7 +61,7 @@
         <value string="solution1"/>
     </name>
     <project>
-        <value string="KWTAmini16_0"/>
+        <value string="KWTAmini1_0"/>
     </project>
     <targetInfo>
         <TargetInfo value="xc7z020:clg484:-1"/>
