@@ -20,3 +20,5 @@ Hi-DMM is an open-source tool, coupled with VivadoHLS, a HLS platform developed 
 Authors:
 Tingyuan Liang, Jieru Zhao, Liang Feng, 
 Sharad Sinha,and Wei Zhang
+
+If you have questions or suggestions, please feel free to email us! (tliang at ust dot hk)
