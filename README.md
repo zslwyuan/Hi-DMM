@@ -1,7 +1,7 @@
 # Hi-DMM
-Hi-DMM: High-Performance Dynamic Memory Management in High-Level Synthesis
+## High-Performance Dynamic Memory Management in High-Level Synthesis
 
-If user involves Hi-DMM in their work, please cite our paper: “Hi-DMM: High-Performance Dynamic Memory Management in High-Level Synthesis” (DOI 10.1109/TCAD.2018.2857040)
+**If user involves Hi-DMM in their work, please cite our paper: “Hi-DMM: High-Performance Dynamic Memory Management in High-Level Synthesis” (DOI 10.1109/TCAD.2018.2857040)**
 
 This work was supported by the Hong Kong Research Grants Council General Research Funds under Grant 16245116. This article was presented in the International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES) 2018 and appears as part of the ESWEEK-TCAD special issue.
 
