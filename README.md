@@ -18,9 +18,7 @@ Hi-DMM is an open-source tool, coupled with VivadoHLS, a HLS platform developed 
 
 <img src="https://github.com/zslwyuan/Hi-DMM/blob/master/Images/original.png" width="400">
 
-
-![image](https://github.com/zslwyuan/Hi-DMM/blob/master/Images/post_HiDMM.png | width=100)
-
+<img src="https://github.com/zslwyuan/Hi-DMM/blob/master/Images/post_HiDMM.png" width="400">
 
 
 Authors:
