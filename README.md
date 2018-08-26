@@ -14,7 +14,7 @@ Hi-DMM is an open-source tool, coupled with VivadoHLS, a HLS platform developed 
 • It achieves high-performance memory allocation. The buddy-tree allocators search the allocable addresses by using bit-vector (BV) computation and maintain the information in parallel. Pre-allocation scheme, look-up table and mini-heap are involved to minimize memory allocation latency.
     
 
-
+<img src="https://github.com/zslwyuan/Hi-DMM/blob/master/Images/compilation.png" width="48">
 
 ![image](https://github.com/zslwyuan/Hi-DMM/blob/master/Images/compilation.png | width=100)
 
