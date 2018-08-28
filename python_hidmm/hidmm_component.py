@@ -662,7 +662,7 @@ def find_proper_size_for_mini_heap(mini_heap_file):
         ))
         if (yesno == 'Y' or yesno == 'y'):
             break
-    expected_reuse = (input(
+    expected_reuse = (input(bcolors.OKBLUE + "Hi-DMM-INPUT: " + bcolors.ENDC +
         "Please input your expected reuse_factor for the KWTA dynamic heap and Hi-DMM will find proper size of mini-heaps:(10.0 by default)"
     ).replace(" ", ""))
     if (expected_reuse == ""):
