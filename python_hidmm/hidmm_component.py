@@ -29,6 +29,7 @@ index = clang.cindex.Index.create()
 
 top_function_name = ""
 top_function_node = None
+find_top_function_name = False
 line_filter = []
 bypass_line = []
 static_arrays = []
@@ -109,6 +110,7 @@ def get_info(node, depth=0, inside_top=False):
 
     global top_function_node
     global top_function_name
+    global find_top_function_name
     global bypass_line
     global static_arrays
     if (node.kind == CursorKind.FUNCTION_DECL
@@ -116,6 +118,7 @@ def get_info(node, depth=0, inside_top=False):
         assert (top_function_node == None)
         top_function_node = node
         inside_top = True
+        find_top_function_name = True
 
     if opts.maxDepth is not None and depth >= opts.maxDepth:
         children = None
@@ -698,7 +701,7 @@ def main():
 
     global opts
     global line_filter
-
+    global top_function_node
     pointer_list = []
     access_list = []
     alloc_list = []
@@ -989,6 +992,13 @@ def main():
     else:
         get_info(tu.cursor)
 
+    global find_top_function_name
+    if (not find_top_function_name):
+        print(bcolors.FAIL +
+                            "Hi-DMM-FAILURE: Cannot find the specified top function ("+opts.top+") in the source code"
+            + bcolors.ENDC)
+        assert(find_top_function_name)
+
     print(
         bcolors.RUNNING + "Hi-DMM-RUNNING: " + bcolors.ENDC +
         "  shell command  -------------------\nclang-format _" + args[0] +
@@ -1195,6 +1205,7 @@ def main():
     print("\n========== Struct Pointers  ==============", file=logfile)
     struct_pointer = []
     pt_KWTA_suggestion = dict()
+    var_struct_map = dict()
     for p0 in pointer_list:
         pointer_type = p0.type.get_pointee().spelling
         if (pointer_type in [p1['struct'].spelling for p1 in struct_list]):
@@ -1205,6 +1216,7 @@ def main():
             })
 
             pt_KWTA_suggestion[p0.spelling] = True
+            var_struct_map[p0.spelling] = p0.type.spelling.replace(" *","")
             print(
                 {
                     'id': get_cursor_id(p0),
@@ -2078,9 +2090,14 @@ def main():
     for it in heap_size_map.keys():
         if (heap_size_map[it] != 0):
             heap_name_list.append(it)
+
     """
         modify the top function interface
     """
+
+
+
+
     need_replacement[top_function_node.location.line] = True
     top_function_line = file_content[top_function_node.location.line -
                                      1].replace(")\n", "")
@@ -2132,16 +2149,28 @@ def main():
             "free pointer:" + free_target_list[target_cnt].spelling,
             file=logfile)
         need_replacement[node.location.line] = True
-        replacement.append({
-            'line':
-            node.location.line,
-            'string':
-            "HLS_free<" + str(free_cnt) + ">(offset_" +
-            free_target_list[target_cnt].spelling + ", size_" +
-            free_target_list[target_cnt].spelling + "," +
-            pointer_allocator[str(
-                free_target_list[target_cnt].spelling)] + ");"
-        })
+        if (pointer_allocator[str(
+                free_target_list[target_cnt].spelling)].find("KWTA")>=0):
+            replacement.append({
+                'line':
+                node.location.line,
+                'string':
+                "HLS_free<" + str(free_cnt) + ">(offset_" +
+                free_target_list[target_cnt].spelling + ", 1," +
+                pointer_allocator[str(
+                    free_target_list[target_cnt].spelling)] + ");"
+            })
+        else:
+            replacement.append({
+                'line':
+                node.location.line,
+                'string':
+                "HLS_free<" + str(free_cnt) + ">(offset_" +
+                free_target_list[target_cnt].spelling + ", size_" +
+                free_target_list[target_cnt].spelling + "," +
+                pointer_allocator[str(
+                    free_target_list[target_cnt].spelling)] + ");"
+            })
         target_cnt = target_cnt + 1
         free_cnt = free_cnt + 1
         print(
@@ -2639,6 +2668,10 @@ def main():
                     offset_p=offset_q;
                     size_p=size_q;
             """
+
+
+            tmp4 = ""
+
             if (str(line_num) in has_pt_assign.keys()):
                 if (
                         len(access_dict[str(line_num)]) >= 2
@@ -2649,6 +2682,17 @@ def main():
                     else:
                         tmp2 = ("//HI-DMM replace: " + ((line.replace(
                             "\t", "    ")).replace("\n", "")) + "\n")
+
+
+                    for obj in access_dict[str(line_num)]:
+                        if (tmp1.find(obj+" =")>=0):
+                            tmp4 = (
+                                    obj + " = " + pointer_assign[str(
+                                        obj)] + " + offset_" + obj +
+                                    ";  //HI-DMM insert: stress offset of pointer " + obj
+                                    + " after pointer assignment \n"
+                                )
+                            break
 
                     if (has_pt_assign[str(line_num)]['has_pointer_in_struct']):
                         for obj in access_dict[str(line_num)]:
@@ -2668,6 +2712,7 @@ def main():
                         tmp2 = ""
                     else:
                         tmp3 = tmp1
+
                         for obj in access_dict[str(line_num)]:
                             # print(">>>>"+str(line_num)+obj)
                             tmp3 = tmp3.replace(" " + obj + " ",
@@ -2685,15 +2730,26 @@ def main():
                         size_tmp_line = tmp3.replace(";", "")
                         size_tmp_array = size_tmp_line.split(" ")
 
-                        for size_ele in (size_tmp_array):
-                            if (size_ele.find("offset_") >= 0):
-                                size_rs += size_ele.replace("offset_", "size_")
-                            if (size_ele.find("=") >= 0):
-                                size_rs += size_ele
-                        size_rs += ";"
+                        flag_struct_size = False
+                        for obj in access_dict[str(line_num)]:
+                            if (tmp1.find(obj+" =")>=0):
+                                if (obj in var_struct_map.keys()):
+                                    size_rs = "size_"+obj+" = SIZE_"+var_struct_map[obj]+";";
+                                    flag_struct_size = True
+                                    break
+
+                        if (not flag_struct_size):
+                            for size_ele in (size_tmp_array):
+                                if (size_ele.find("offset_") >= 0):
+                                    size_rs += size_ele.replace("offset_", "size_")
+                                if (size_ele.find("=") >= 0):
+                                    size_rs += size_ele
+                            size_rs += ";"
+                        
+                            
 
                     tmp2 = tmp2.replace("replace", "insert for")
-            outf.write(tmp0 + tmp1 + tmp2 + tmp3)
+            outf.write(tmp0 + tmp1 + tmp2 + tmp3 + tmp4)
 
             if (size_rs != ""):
                 outf.write(size_rs)
