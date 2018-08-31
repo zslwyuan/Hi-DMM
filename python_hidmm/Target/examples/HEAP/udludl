@@ -1,0 +1,4 @@
+local_dis int 32 1 2
+test_struct_array LIST 32 1 2
+head LIST 32 1 2
+new_node LIST 32 1 2

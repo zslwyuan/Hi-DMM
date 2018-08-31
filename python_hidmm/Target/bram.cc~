@@ -1,0 +1,35 @@
+#include <algorithm>
+#include <cstdio>
+#include <iostream>
+
+unsigned long long array[100][100];
+
+typedef struct aaaaaaaaaaaaaaa
+{
+    ap_uint<16> a;
+    ap_uint<16> b;
+    ap_uint<16> c;
+    aaaaaaaaaaaaaaa *left;
+    aaaaaaaaaaaaaaa *right;
+} user_d_type;
+
+typedef struct ttttttt
+{
+    ap_int<16> a;
+    ap_int<16> b;
+    ap_int<16> c;
+    ttttttt *left;
+    ttttttt *right;
+} user_d_type_aa;
+
+int bramcheck1[100000];
+
+void top(int nouse,int just, int a_test)
+{
+    int bramcheck2[100000];
+    ap_int<5> *oo, *qq;
+    oo = (ap_int<5> *)malloc(b * sizeof(ap_int<5>));
+    qq = (ap_int<5> *)malloc(b * sizeof(ap_int<5>));
+    oo[5] = qq[6] + 3 + bramcheck2[33];    
+    free(qq);
+}
