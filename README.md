@@ -9,7 +9,7 @@
 ***
 
 
-This work was supported by the Hong Kong Research Grants Council General Research Funds under Grant 16245116. This article was presented in the International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES) 2018 and appears as part of the ESWEEK-TCAD special issue.
+This work was supported by the Hong Kong Research Grants Council General Research Funds under Grant 16245116. This article was presented in the International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES) 2018, as one of the Best Paper canditates in CASES 2018, and appears as part of the ESWEEK-TCAD special issue.
 
 Hi-DMM is an open-source tool, coupled with VivadoHLS, a HLS platform developed by Xilinx. Hi-DMM can automatically analyze the source code of HLS module and transform it, equipping the HLS-generated accelerator with high-performance DMM allocators, which are based on buddy tree allocation scheme and its proposed variants. The highlights of Hi-DMM are as follows:
 
