@@ -1,7 +1,7 @@
 # Hi-DMM
 ## High-Performance Dynamic Memory Management in High-Level Synthesis
 
-**If user involves Hi-DMM in their work, please cite our paper: “Hi-DMM: High-Performance Dynamic Memory Management in High-Level Synthesis” (DOI 10.1109/TCAD.2018.2857040)**
+**If user involves Hi-DMM in their work, please cite our paper: [“Hi-DMM: High-Performance Dynamic Memory Management in High-Level Synthesis” (DOI 10.1109/TCAD.2018.2857040)](https://ieeexplore.ieee.org/document/8493498)**
 
 **Detailed user manual and explanation of implementation can be found in [Wiki of Hi-DMM](https://github.com/zslwyuan/Hi-DMM/wiki)**
 
